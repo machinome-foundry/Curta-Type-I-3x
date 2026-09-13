@@ -4,6 +4,12 @@ Status: ratified by the pilot, 2026-09-13 ("ratify, go on"). No repair was
 implemented at ratification. This is a project-owned prerequisite in the existing Curta
 `open-run-simulation` worktree, not a framework/viewer change or a shop sprint.
 
+Seat-edge revision also approved on 2026-09-13: "yes, and then try, you don't
+need so many confirmations from me". The pilot authorizes the bounded
+exception below and continued fitting/verification without repeated approval
+of routine implementation steps. No broader moving-part or support redesign
+is authorized.
+
 The source assembly and the operating layer share the STEP's millimetre world
 frame and vertical Z axis. The frame remains fixed. Define lever drop `d` as
 millimetres downward from the raised endpoint: `0 <= d <= 4.2`; the existing
@@ -137,21 +143,53 @@ station's own transforms. Record named permitted-removal regions and their
 dimensions independently of the implementation cutter. Map and protect guide
 seating/registering lands, the M4 fastening features, structural support and
 nut seats, main-shaft/bearing surfaces, and all non-selected station passages.
+Apply the explicitly approved seat-edge exception below when defining the
+remaining protected registration lands.
 Do not use a whole-station box, full annular groove or total mass budget as a
 substitute for these spatial bounds.
 
 Acceptance requires one valid connected frame solid, no added material, no
 removed material outside the permitted regions, and unchanged protected
-features and assembly placements. A cutter derived from an already fitted
+features outside that exception and unchanged assembly placements. A cutter derived from an already fitted
 frame would be circular evidence. Gap checks need independent upper and lower
 bounds in the documented local normal directions, not merely a nonzero
 distance or an endpoint volume total.
 
-If the required envelope/gap reaches a protected seat, breaks continuity,
+If the required envelope/gap reaches a protected seat outside the approved
+edge exception, breaks continuity,
 requires relocating a support, exceeds a local passage fit, or requires a
 moving-part change, stop and return the measured conflict to the pilot.
 Ratifying this plan authorizes measuring/dimensioning a fit within those
 bounds, not choosing a different repair when they fail.
+
+#### Approved seat-edge exception
+
+The [native gate report](../../../simulation/docs/carry-frame-gate-2026-09-13.md)
+measures a 20.43 mm² guide/frame registration land at each station. At the
+raised and lowered endpoints the slider meets its boundary; even a 0.025 mm
+clearance witness occupies a 0.03675 mm² strip of that land at each end.
+Preserving every point of the land and providing a real local gap are
+therefore incompatible at these edges. The pilot has approved local
+frame-side edge relief, not a relocation or change of the guide.
+
+Independently bound permitted seat changes around the measured contact
+segments: first-station X = 52.8, Y = -7.89 to -6.42, at Z = -21.6 and -16.8
+mm. Account for adjacent corner faces where the running gap wraps around
+the segment endpoints. Dimension the bounds from these source features and
+the declared gap; do not exempt a whole face or station. Require unchanged
+geometry and native support contact on the remaining land, and report the
+actual removed/retained seating area. A trial fit that overreaches this
+exception fails its preservation tests and is corrected before acceptance.
+
+The 0.05 mm target is measured in the named local relief directions; it is
+not a claim that every pre-existing noncontact passage elsewhere in the
+station already has at least 0.05 mm play. Positive-volume intersection is
+still forbidden everywhere on the supported path. Record any smaller
+unchanged clearances honestly.
+
+Dimensioning and reversible fit trials proceed under this approval. Keep
+the unsampled-path proof as an acceptance gate: trial geometry is not a
+verified correction until that bound and all preservation checks pass.
 
 ### 3. Prove motion clearance, not just endpoint clearance
 
@@ -203,7 +241,8 @@ change's accepted result, not infer that the whole Curta is validated.
 ## Risks / Trade-offs
 
 - A local frame pocket may disturb an unmeasured support → map and protect
-  source seating and fastening features before fitting; stop on a conflict.
+  source seating and fastening features before fitting; preserve the remaining
+  land under the approved edge exception and stop on a materially broader conflict.
 - Preserving current spring geometry may leave an unsuitable shape → retain
   wire, seating and hook tests plus the full sweep; change the design only
   with explicit evidence and pilot approval.
@@ -239,7 +278,8 @@ and its wiring as a normal reviewed change, not resetting the worktree.
 ## Open Questions
 
 - Do the complete spring and slider envelopes admit the proposed 0.05 mm
-  local gaps without touching any protected support? Dimensioning is the
+  local gaps within the approved seat-edge exception and without touching any
+  other protected support? Dimensioning is the
   first gated implementation step, not an already measured clearance claim.
 - Which conservative native/interval envelope gives a defensible unsampled
   clearance bound for the existing fitted spring? Failure to establish one
@@ -248,3 +288,5 @@ and its wiring as a normal reviewed change, not resetting the worktree.
 The pilot ratified the frame-only repair direction, its two-station scope,
 0.05 mm gap target and these stop conditions on 2026-09-13. Neither a different
 spring mounting nor a guide/slider redesign is bundled into that decision.
+The later seat-edge approval changes only the frame-side preservation boundary
+described above; the other stop conditions and acceptance obligations remain.

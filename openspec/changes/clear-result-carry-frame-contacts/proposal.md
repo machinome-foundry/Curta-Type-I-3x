@@ -11,6 +11,10 @@ operation and must be resolved before this slice can validate a running engine.
 The pilot ratified this bounded correction and authorized continuation on
 2026-09-13: "ratify, go on". This authorizes the frame-only implementation
 below, including its protected-feature stop conditions, not the running model.
+The pilot subsequently approved the measured seat-edge exception and directed
+implementation to continue: "yes, and then try, you don't need so many
+confirmations from me". This revision records that authorization; routine
+dimensioning, fitting and verification do not require another confirmation.
 
 - Establish a verified frame interface for the first and second result-carry
   stations, retaining their installed supports, springs, sliders, coupled
@@ -18,8 +22,10 @@ below, including its protected-feature stop conditions, not the running model.
 - Add bounded, stationary frame reliefs at those two stations within the
   simulation layer. Preserve the spring installation, guide placement,
   measured 4.2 mm stroke and working pin, detent, fork/sleeve and reset-cam
-  interfaces. Return any need to change a protected seat or moving part to
-  the pilot rather than treating it as the same repair.
+  interfaces. Permit tightly bounded frame-side relief at the two measured
+  slider-contact seat edges per station, preserving the remaining registration
+  land and the guides themselves. Other protected-seat or moving-part changes
+  remain outside this correction.
 - Add named red-first frame-contact and fit-preservation contracts, then verify
   the initial `099` preload, full lever travel and both trip/reset transitions.
 - Retain source comparisons, bounded correction dimensions, negative controls
