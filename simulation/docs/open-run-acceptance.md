@@ -1,12 +1,14 @@
-# Open-run Curta: acceptance slice for the second validation project
+# Open-run Curta: acceptance slice for the third validation project
 
-**Current disposition, 2026-09-13:** second validation project, deferred behind
-the completed Pascaline's running migration by explicit pilot direction.
+**Current disposition, 2026-09-13:** third validation project by explicit pilot
+direction: `Calculators/Pascaline-module` develops and validates the first
+feature increment, followed by the full historical Pascaline, then Curta.
+The latter two projects stress-test the module-developed feature.
 Curta remains paused. This document preserves the ratified scope and unfinished
 acceptance obligations; it is not an instruction to resume the previous work.
 The [checkpoint handoff](open-run-handoff-2026-09-13.md) at `d7bf44b` is the
 latest mechanical status. Neither the selected-input fit nor the running slice
-is delivered, and neither is a prerequisite for Pascaline validation.
+is delivered, and neither is a prerequisite for either Pascaline project.
 
 The framework's active `workflow/open-run-simulation/roadmap.md` records the
 new sequence. Its `curta-roadmap-2026-09-13.md` preserves the previous roadmap
