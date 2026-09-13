@@ -321,8 +321,13 @@ still-latched second carry. Both fixtures show eight intersecting pairs at the
 ten seated settings and nine with half-detents included. Housing-slot/window
 and installed ball/spring/follower findings are separate from the completed
 frame fit. See the [selector evidence and bounded next-step recommendation](open-run-selector-evidence-2026-09-13.md).
-No selector geometry or running code is changed; the additional correction
-scope is not ratified. These counterexamples keep the readiness gate open.
+No selector geometry or running code is changed. The pilot subsequently
+approved preparing the bounded selector correction; its complete
+[fit-selected-input-selector plan](../../openspec/changes/fit-selected-input-selector/proposal.md)
+now passes strict validation. The pilot ratified its complete fit/fidelity
+choices on 2026-09-13 ("ratify, go on"). All 22 implementation tasks remain
+open at ratification. These counterexamples keep
+the readiness gate open.
 
 Next: review the selected-selector prerequisite, then close the remaining home-window,
 continuous-neighbour, initial-setup and outgoing-boundary evidence gaps;

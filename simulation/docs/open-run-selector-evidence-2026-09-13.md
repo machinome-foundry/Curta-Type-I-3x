@@ -176,7 +176,17 @@ retained in the evidence JSON. The final lightweight command passes 16 Python
 tests (four probe, six arithmetic, six cycle), and all five existing calculator
 JavaScript tests pass. These do not turn the geometric failures green.
 
-## Recommended next step — not ratified
+## Recommended next step — correction ratified
+
+The pilot subsequently approved expanding preparation to this bounded scope
+("yes, go on", 2026-09-13). The separate
+[fit-selected-input-selector proposal](../../openspec/changes/fit-selected-input-selector/proposal.md)
+now has its design, six requirements and 22 implementation tasks;
+strict validation passes. The pilot then ratified the full hardware,
+installed-detent, fixed-seat and bounded fitting choices ("ratify, go on").
+No geometry or production code changed while preparing it. The recommendation
+below is its evidence basis; ratification does not claim the correction is
+already implemented or verified.
 
 Open a separate **Curta-owned, selected-selector fit and detent** proposal.
 Resolve the installed ball size/seat and spring compression against the manual;
@@ -189,8 +199,8 @@ An explicit fixed-seat inventory is a design choice to review, not permission
 to exempt moving contacts or globally ignore the nine pairs.
 
 The approved carry/frame correction did not authorize these changes. The
-selector correction therefore needs its own reviewed scope before production
-geometry changes. Keep the existing framework law/interface direction and
+selector correction now has its own ratified scope, which must be committed
+before production geometry changes. Keep the existing framework law/interface direction and
 the selected 0–9 acceptance requirement; do not shrink the input to zero/one,
 hide the housing, or substitute a cosmetic normalized selector.
 
