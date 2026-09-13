@@ -1,13 +1,22 @@
 ## Context
 
+**Current checkpoint, 2026-09-13:** paused at the pilot's request to steer
+project direction. Revision `da432fb` is committed, tasks 1.1 and 1.3 are
+complete (2/22), and the latest native diagnostic suite is 4 passing guards
+and 19 expected red failures. No operating geometry has changed. The
+[handoff](../../../simulation/docs/open-run-handoff-2026-09-13.md) and
+implementation record §§5–7 supersede the historical progress counts below.
+The ratified design remains recorded, but work does not resume automatically.
+
 This is the next Curta-owned prerequisite after the completed two-station
 carry/frame fit, not the running-engine implementation. Preparation scope was
 approved on 2026-09-13; the pilot then ratified the original design
-("ratify, go on"), planning commit `aec7ca4`. Task 1.1 is now complete;
+("ratify, go on"), planning commit `aec7ca4`. Task 1.1 was then complete;
 measurements paused implementation at the detent/guide alignment conflict.
 The pilot approved revising the plan ("yes, go on"), then ratified this
 alignment revision ("ratify, go o") on 2026-09-13, including its explicit local
-reconstruction exception. Record it separately before resuming implementation;
+reconstruction exception. It was separately committed as `da432fb` before
+measurements resumed;
 ratification has not changed operating geometry or proved the fit. The pilot
 retains the explicit solid-node feature-start gate.
 
@@ -28,8 +37,9 @@ already established a corrected assembly or a continuous safe path.
 The later [implementation record](../../../simulation/docs/selector-fit-implementation-2026-09-13.md)
 and `simulation/docs/evidence/selector-fit-measurements-2026-09-13.json`
 retain 115 native support measurements and the new independent retention
-failure. Twenty-one native contracts now produce three passing guards and
-18 expected red failures, including the source guide's misindexed seat.
+failure. At that earlier checkpoint twenty-one native contracts produced three
+passing guards and 18 expected red failures, including the source guide's
+misindexed seat.
 The original source/fixture evidence and completed task remain historical
 evidence, not passing acceptance for the proposed alignment.
 
@@ -338,15 +348,16 @@ restore the complete root publication after any inspection-only build.
 ## Migration Plan
 
 The original planning-only commit is `aec7ca4`, based on `dd98104`.
-The pilot ratified this complete alignment revision on 2026-09-13.
-Validate and commit the revised
-planning artifacts separately before resuming implementation. Keep the existing
-red probes and evidence uncommitted with the implementation; do not absorb
-them into a planning-only commit or check off their unfinished acceptance work.
+The pilot ratified this complete alignment revision on 2026-09-13; the revised
+planning artifacts were separately validated and committed as `da432fb` before
+measurements resumed. The current pilot-requested checkpoint commits the
+diagnostic probes and evidence separately, without calling them completed
+implementation or checking off unfinished acceptance work.
 The earlier planning commit/evidence remain traceable rather than being silently
 relabelled as approval of the reconstruction exception.
 
-Resume at task 1.2: complete source measurements, then map/protect the corrected
+If the pilot elects to resume this scope, the unfinished sequence begins at
+task 1.2: complete source measurements, then map/protect the corrected
 guide, mouth and back-seat region and prove the geometric wall/support bounds.
 Reuse the retained red contracts, add the new alignment/guidance/restoration
 mutations, prove the installed detent and then local housing/follower fits,
@@ -368,8 +379,8 @@ the bounded local fill-and-rebore exception and moved guide-mouth/back-seat
 footprint. Final dimensions and their adequacy remain to be proved, not
 accepted by ratification alone.
 
-Routine implementation must determine spring dimensions/seating, actual follower
-path and play, all ten retention basins, fixed-seat regions, separate permitted
+The unfinished work includes spring seating, actual follower
+path and play, all ten retention basins, separate permitted
 restoration/removal coordinates, residual wall/seat/support bounds, numerical
 fit values and complete continuous-path bounds. The ratified source-parallel
 guide and source axial seat plane are the bounded alignment to evaluate, not
@@ -377,4 +388,7 @@ a blanket allowance for any convenient offset or spring path. Any need for
 external knob growth, different guide direction or axial seat depth, changed
 ball/spring hardware, shaft detents/groove, protected thread/support/fork
 modification, another station, a broader inventory or different fidelity
-requires a specific revised proposal.
+requires a specific revised proposal. The two fixed-seat regions and relative
+poses have since been classified with nine rejected mutations (task 1.3);
+later fitted geometry must still preserve them. No new project direction is
+selected by this checkpoint.

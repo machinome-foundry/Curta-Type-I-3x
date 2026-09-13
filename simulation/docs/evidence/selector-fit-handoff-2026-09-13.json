@@ -1,0 +1,3675 @@
+{
+  "kind": "selected-input-pilot-requested-checkpoint",
+  "date": "2026-09-13",
+  "status": "Paused for pilot project direction; incomplete, not archived or delivered",
+  "pilot_direction": "wrap this up and commit, leaving Curta in a documented state, I want to steer the project direction.",
+  "planning_commits": {
+    "original": "aec7ca4877c58820c6c02a32c44d8c6c206c9e9b",
+    "alignment": "da432fbdc7fe0e7f89e308237f281e9c3d368754"
+  },
+  "progress": {
+    "change": "fit-selected-input-selector",
+    "complete": 2,
+    "total": 22,
+    "completed_tasks": [
+      "1.1",
+      "1.3"
+    ],
+    "original_simulation_change": {
+      "name": "simulate-the-curta",
+      "complete": 7,
+      "total": 17
+    }
+  },
+  "framework_content_commit": "6e41f2da132a8604f9b68895967247fb8876fc4d",
+  "execution_context": {
+    "cwd": "/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation",
+    "python": "/home/asa/devel/libresolid-studio/.venv/bin/python",
+    "solid": "/home/asa/devel/libresolid-studio/.venv/bin/solid",
+    "environment": {
+      "PYTHONPATH": "/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation:/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation",
+      "SOLID_BUILD_DIR": "_build_open_run_evidence",
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    },
+    "cad_resource_guard": {
+      "address_space_kib": 8388608,
+      "timeout_s": 600,
+      "kill_after_s": 10,
+      "heavy_jobs": "sequential"
+    },
+    "note": "CAD results below predate the pilot-requested closeout. Closeout rechecks only record consistency, source hashes and lightweight tests."
+  },
+  "sources_sha256": {
+    "simulation/selector_fit.py": "b21013dbf1dda11f25712fe219a7b4323d57c44d0a2d7801d5720fa0f30495bc",
+    "simulation/test_selector_fit.py": "3360781f5f4166b67249d37440dd3bd4a9eb2e83522aebea4255d9921c940def",
+    "simulation/tools/selector_fit_alignment.py": "3300e3bb7c81b6f7853c117886b4459b10b3d20cadd6c5f2c639b49c1d69d381",
+    "simulation/tools/selector_fit_contacts.py": "75661edf54af59a9421d89ad0e10c32bece70083ee16cf0d319d0f37c81a5277",
+    "simulation/tools/selector_fit_fixed_seats.py": "4ac2c866dbca8ddb1d0dac719dd935e9f0d424fcdbbd979444674418502e3bbb",
+    "simulation/tools/selector_fit_indexing.py": "575b6463eb573de037aa5a7b12ff37dd37ff295d0d35c2bf77494477cf02e52c",
+    "simulation/tools/selector_fit_measurements.py": "911fe8eebef1a890a0812bd6e6ceac5a3ac45f8c53d0ec204ec42cf90b32e03c",
+    "simulation/tools/selector_fit_spring_source.py": "d3e3a00c176575a9125818926be523fbfa156e8ea6a00bc638256835a33fb30d",
+    "simulation/tools/selector_fit_working_play.py": "c6a74a3ba07178a0b6ac50fb04e66bf59cdaf778c8a8a1716f5d1ab46db906ce"
+  },
+  "evidence_sha256": {
+    "simulation/docs/evidence/selector-fit-measurements-2026-09-13.json": "3bba5386babae27ce5d8ccdb76c132f497970b6e34be9fe57a9e8aa5b13700f7",
+    "simulation/docs/evidence/selector-fit-alignment-gates-2026-09-13.json": "284da8244851565adf7b5f8a4b729e2af96ca36b0df277808beff490df04937d",
+    "simulation/docs/evidence/open-run-selector-2026-09-13.json": "eea2287ed271fb6d9a8870e20d70bad10927ccfe554c42c19be4e3aff7676dba",
+    "simulation/docs/evidence/carry-frame-regression-2026-09-13.json": "b6a28d9c768f5af7f1414c02a6b9ce14434302d15b380574c829f3386ea4e0fb"
+  },
+  "full_root_publication": {
+    "path": "_build_open_run_evidence/viewer.json",
+    "sha256": "6e8b0eb44a3ba79475767e56597a77a2b3b4641789b7aa4cd27f2d78820ddee2",
+    "status": "Existing full-root publication unchanged; not rebuilt for closeout",
+    "schema": 4,
+    "bindings": 9969,
+    "drivers": 8,
+    "instructions": 7,
+    "physical_bodies": 428
+  },
+  "measurements": {
+    "capture": {
+      "command": "python -m simulation.tools.selector_fit_working_play capture",
+      "raw_file": "_build_evidence/selector-fit-capture-play.json",
+      "raw_sha256": "1477eaeb19609fd6fd2951519c35f1c16db6b758e05a76fc47760dd1ff6da144",
+      "log": "_build_evidence/selector-fit-capture-play-complete.log",
+      "log_sha256": "9e9a569b7cc74012082310aa5f17ff9b7c8da16ce0e653e5a5256737a6940ebc",
+      "resources": {
+        "wall_s": 215.05,
+        "rss_kib": 631984,
+        "exit": 0
+      },
+      "result": {
+        "kind": "selected-input-working-play-localization",
+        "measurements": {
+          "follower": [
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    2.0108220153269282e-14,
+                    [
+                      54.956903975102506,
+                      -1.0485683374752541,
+                      -71.5085271553046
+                    ],
+                    [
+                      54.95690397510252,
+                      -1.0485683374752535,
+                      -71.50852715530462
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.00044764600032549544,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.4210854715202004e-14,
+                    [
+                      54.98448431867535,
+                      1.1376179034985532,
+                      -70.54312851208142
+                    ],
+                    [
+                      54.98448431867535,
+                      1.137617903498539,
+                      -70.54312851208142
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    7.136584070361083e-15,
+                    [
+                      54.98987149078036,
+                      1.1541329424132536,
+                      -70.59640080162232
+                    ],
+                    [
+                      54.98987149078035,
+                      1.154132942413253,
+                      -70.59640080162232
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    7.105427357601002e-15,
+                    [
+                      54.99269062459205,
+                      1.1626718991940386,
+                      -70.62802473229388
+                    ],
+                    [
+                      54.99269062459204,
+                      1.1626718991940386,
+                      -70.62802473229388
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    7.119291619286993e-15,
+                    [
+                      54.92507860302441,
+                      0.9343243577291823,
+                      -70.17198031855425
+                    ],
+                    [
+                      54.9250786030244,
+                      0.9343243577291828,
+                      -70.17198031855425
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.011336302930967044,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    7.119291619286993e-15,
+                    [
+                      54.9962466360025,
+                      -1.1733445207083122,
+                      -71.9265202177147
+                    ],
+                    [
+                      54.996246636002496,
+                      -1.1733445207083117,
+                      -71.9265202177147
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0002210081915224192,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.4281059035287965e-13,
+                    [
+                      54.97295958020931,
+                      1.10136773021668,
+                      -71.19856581606895
+                    ],
+                    [
+                      54.972959580209306,
+                      1.1013677302165439,
+                      -71.19856581606899
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    1.0607139570433834e-12,
+                    [
+                      54.99187224499331,
+                      1.1602002648472847,
+                      -71.36851083475386
+                    ],
+                    [
+                      54.99187224499332,
+                      1.160200264848284,
+                      -71.36851083475351
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    7.136584070361083e-15,
+                    [
+                      54.964141558730425,
+                      1.0727208785619369,
+                      -71.13716138278973
+                    ],
+                    [
+                      54.96414155873043,
+                      1.0727208785619375,
+                      -71.13716138278973
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    1.5902176704146846e-14,
+                    [
+                      55.00516973341988,
+                      1.1996609553518052,
+                      -71.6464760332742
+                    ],
+                    [
+                      55.0051697334199,
+                      1.1996609553518052,
+                      -71.64647603327421
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.011916325127307231,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.125
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    2.5437436142574095e-14,
+                    [
+                      54.993671430285076,
+                      -1.1656264243748808,
+                      -72.71015749005379
+                    ],
+                    [
+                      54.99367143028508,
+                      -1.1656264243748564,
+                      -72.71015749005379
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    2.220446049250313e-16,
+                    [
+                      54.967169577892584,
+                      1.0826514714497781,
+                      -71.90744204630576
+                    ],
+                    [
+                      54.967169577892584,
+                      1.0826514714497784,
+                      -71.90744204630576
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    7.108895957933346e-15,
+                    [
+                      54.96354585075891,
+                      1.0707553643645558,
+                      -71.88325890455107
+                    ],
+                    [
+                      54.963545850758905,
+                      1.0707553643645555,
+                      -71.88325890455107
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    8.041111685240169e-14,
+                    [
+                      54.99643182060234,
+                      1.1738973602117917,
+                      -72.1760718953832
+                    ],
+                    [
+                      54.996431820602346,
+                      1.1738973602117129,
+                      -72.17607189538322
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.00023858420030897206,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    0,
+                    [
+                      55.00525025705274,
+                      1.199895509688237,
+                      -72.40916398354624
+                    ],
+                    [
+                      55.00525025705273,
+                      1.1998955096882369,
+                      -72.40916398354622
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.013304537886205165,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.25
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    4.440892098500626e-16,
+                    [
+                      54.96922664363452,
+                      -1.0893413174848747,
+                      -73.67832401310501
+                    ],
+                    [
+                      54.96922664363452,
+                      -1.0893413174848752,
+                      -73.67832401310501
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.3376321589127914e-13,
+                    [
+                      54.99552860346621,
+                      1.1711982030709325,
+                      -72.91366689198006
+                    ],
+                    [
+                      54.99552860346621,
+                      1.1711982030708057,
+                      -72.9136668919801
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.00016449866186554052,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    2.010208941128915e-14,
+                    [
+                      54.99701038540801,
+                      1.1756227116131643,
+                      -72.93435202802623
+                    ],
+                    [
+                      54.997010385408025,
+                      1.1756227116131648,
+                      -72.93435202802624
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0003087325466471756,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    1.7897676701916007e-14,
+                    [
+                      54.998233423425866,
+                      1.1792607189202473,
+                      -72.95286412400488
+                    ],
+                    [
+                      54.998233423425866,
+                      1.1792607189202364,
+                      -72.95286412400486
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0005078268957517541,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    2.220446049250313e-16,
+                    [
+                      55.00528341764629,
+                      1.1999920870664127,
+                      -73.1706417070742
+                    ],
+                    [
+                      55.00528341764629,
+                      1.1999920870664125,
+                      -73.1706417070742
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.01497666003462355,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.375
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    7.136584070361083e-15,
+                    [
+                      54.990064169884285,
+                      -1.1547187832844483,
+                      -74.25153369100904
+                    ],
+                    [
+                      54.99006416988428,
+                      -1.154718783284449,
+                      -74.25153369100904
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    9.32248925599804e-14,
+                    [
+                      54.958476196796155,
+                      1.0538662872208309,
+                      -73.35109552966591
+                    ],
+                    [
+                      54.95847619679615,
+                      1.0538662872207483,
+                      -73.35109552966595
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.00032323825824042096,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    8.881784197001252e-15,
+                    [
+                      54.99815008864441,
+                      1.1790132307734462,
+                      -73.70155427196426
+                    ],
+                    [
+                      54.998150088644415,
+                      1.179013230773441,
+                      -73.70155427196426
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0005264794122997829,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    7.108895957933346e-15,
+                    [
+                      54.999178619301,
+                      1.1820637294328915,
+                      -73.71829848353502
+                    ],
+                    [
+                      54.999178619301006,
+                      1.1820637294328913,
+                      -73.71829848353502
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0007886135691670127,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    0,
+                    [
+                      54.91960703827886,
+                      0.913132651731294,
+                      -73.1464183226115
+                    ],
+                    [
+                      54.91960703827886,
+                      0.9131326517312864,
+                      -73.14641832261151
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.01633396360446266,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.5
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    1.5902176704146846e-14,
+                    [
+                      54.99318276412976,
+                      -1.164155433867602,
+                      -74.96610457919554
+                    ],
+                    [
+                      54.99318276412977,
+                      -1.1641554338676026,
+                      -74.96610457919556
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    3.690218337223113e-14,
+                    [
+                      54.95722042535201,
+                      1.049637025574608,
+                      -74.09339651517672
+                    ],
+                    [
+                      54.95722042535202,
+                      1.0496370255745746,
+                      -74.09339651517674
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": -0.05,
+                  "signed_volume_mm3": 0.0003555453112271497,
+                  "valid": false
+                },
+                {
+                  "closest": [
+                    7.105427357601002e-15,
+                    [
+                      54.95454883771269,
+                      1.0405772704780853,
+                      -74.0773383424061
+                    ],
+                    [
+                      54.9545488377127,
+                      1.0405772704780853,
+                      -74.0773383424061
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0005678160296600729,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    2.220446049250313e-16,
+                    [
+                      54.99904096310297,
+                      1.1816559659939245,
+                      -74.46598000724826
+                    ],
+                    [
+                      54.99904096310297,
+                      1.1816559659939248,
+                      -74.46598000724826
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.000839039867602095,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    1.4210854715202004e-14,
+                    [
+                      54.91860422785762,
+                      0.9091915767761837,
+                      -73.89181972146397
+                    ],
+                    [
+                      54.91860422785763,
+                      0.9091915767761755,
+                      -73.89181972146399
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.016539666253373633,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.625
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    1.589442370446406e-14,
+                    [
+                      54.95539660555288,
+                      -1.0434614396679702,
+                      -76.01761093093673
+                    ],
+                    [
+                      54.95539660555287,
+                      -1.0434614396679698,
+                      -76.01761093093671
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": -1,
+                  "signed_volume_mm3": 0.0004393791698654282,
+                  "valid": false
+                },
+                {
+                  "closest": [
+                    7.108895957933346e-15,
+                    [
+                      54.99430572567884,
+                      1.167532721165369,
+                      -75.14774996323078
+                    ],
+                    [
+                      54.994305725678835,
+                      1.1675327211653692,
+                      -75.14774996323078
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": -0.05,
+                  "signed_volume_mm3": 0.00016044526887894515,
+                  "valid": false
+                },
+                {
+                  "closest": [
+                    1.4217791915866692e-14,
+                    [
+                      54.95694526917198,
+                      1.048707859395181,
+                      -74.84172277080752
+                    ],
+                    [
+                      54.956945269171996,
+                      1.0487078593951806,
+                      -74.84172277080752
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": 0,
+                  "signed_volume_mm3": 0.0003001832047197798,
+                  "valid": false
+                },
+                {
+                  "closest": [
+                    0,
+                    [
+                      54.954200621228374,
+                      1.0393900930366817,
+                      -74.82527610597866
+                    ],
+                    [
+                      54.954200621228374,
+                      1.0393900930366817,
+                      -74.82527610597866
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": 0.05,
+                  "signed_volume_mm3": 0.0004929429245478708,
+                  "valid": false
+                },
+                {
+                  "closest": [
+                    0,
+                    [
+                      54.91928573320814,
+                      0.9118718877085626,
+                      -74.64494209849761
+                    ],
+                    [
+                      54.919285733208135,
+                      0.9118718877085623,
+                      -74.64494209849761
+                    ]
+                  ],
+                  "kernel_refusal": true,
+                  "phase_delta_deg": 1,
+                  "signed_volume_mm3": 0.014615991416696856,
+                  "valid": false
+                }
+              ],
+              "setting": 0.75
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    4.440892098500626e-16,
+                    [
+                      54.99825078143639,
+                      -1.179312261569895,
+                      -76.39686121642548
+                    ],
+                    [
+                      54.99825078143639,
+                      -1.1793122615698954,
+                      -76.39686121642548
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0005861229801812559,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.4762209355896038e-14,
+                    [
+                      54.98845160085287,
+                      1.1498055663664366,
+                      -75.83156521111043
+                    ],
+                    [
+                      54.98845160085287,
+                      1.1498055663664326,
+                      -75.83156521111042
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    1.4217791915866692e-14,
+                    [
+                      54.99159709217916,
+                      1.1593679469410627,
+                      -75.86537727915773
+                    ],
+                    [
+                      54.99159709217916,
+                      1.1593679469410623,
+                      -75.86537727915771
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    0,
+                    [
+                      54.96159108537652,
+                      1.0642778551266883,
+                      -75.62064170185144
+                    ],
+                    [
+                      54.96159108537652,
+                      1.0642778551266883,
+                      -75.62064170185144
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    7.136584070361083e-15,
+                    [
+                      55.005091147004975,
+                      1.1994319944277927,
+                      -76.13808222083823
+                    ],
+                    [
+                      55.00509114700498,
+                      1.1994319944277934,
+                      -76.13808222083823
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.012019673578255516,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 0.875
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    0,
+                    [
+                      54.3,
+                      3.0483518493058874e-16,
+                      -78.645214976107
+                    ],
+                    [
+                      54.3,
+                      3.0483518493058874e-16,
+                      -78.645214976107
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0004476352765714126,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.422645865968639e-14,
+                    [
+                      54.97669444736572,
+                      1.1132578240356341,
+                      -76.4770520102036
+                    ],
+                    [
+                      54.97669444736574,
+                      1.1132578240356348,
+                      -76.4770520102036
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    2.220446049250313e-16,
+                    [
+                      54.98987149078035,
+                      1.1541329424132531,
+                      -76.59640080162232
+                    ],
+                    [
+                      54.98987149078035,
+                      1.154132942413253,
+                      -76.59640080162232
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    2.0097183471152322e-14,
+                    [
+                      54.96545785377238,
+                      1.0770500529412108,
+                      -76.3958840982917
+                    ],
+                    [
+                      54.96545785377239,
+                      1.0770500529412108,
+                      -76.39588409829169
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    5.551115123125783e-15,
+                    [
+                      55.00508653558185,
+                      1.1994185575639316,
+                      -76.88764821531831
+                    ],
+                    [
+                      55.00508653558185,
+                      1.1994185575639313,
+                      -76.88764821531832
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.011319888700910982,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 1
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    9.03677895859719e-14,
+                    [
+                      54.96885616019444,
+                      -1.0881397808201105,
+                      -98.43091637977095
+                    ],
+                    [
+                      54.96885616019445,
+                      -1.088139780820025,
+                      -98.43091637977092
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    8.881784197001252e-16,
+                    [
+                      54.99693541969585,
+                      1.1753993135179617,
+                      -97.68326323988383
+                    ],
+                    [
+                      54.99693541969585,
+                      1.1753993135179608,
+                      -97.68326323988383
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.00032321740216083815,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    9.579185431620679e-14,
+                    [
+                      54.998150088644465,
+                      1.1790132307736276,
+                      -97.70155427196475
+                    ],
+                    [
+                      54.99815008864447,
+                      1.1790132307735421,
+                      -97.7015542719648
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.000526449635039181,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    7.119291619286993e-15,
+                    [
+                      54.95325121373683,
+                      1.036145765392468,
+                      -97.31968811987814
+                    ],
+                    [
+                      54.953251213736834,
+                      1.0361457653924684,
+                      -97.31968811987814
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0007885734359325245,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    5.551115123125783e-16,
+                    [
+                      54.91960703827888,
+                      0.9131326517312922,
+                      -97.14641832261151
+                    ],
+                    [
+                      54.91960703827888,
+                      0.9131326517312928,
+                      -97.14641832261151
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.01630424549976459,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 4.5
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    1.589442370446406e-14,
+                    [
+                      54.99006416988428,
+                      -1.1547187832844326,
+                      -122.25153369100909
+                    ],
+                    [
+                      54.990064169884285,
+                      -1.1547187832844321,
+                      -122.2515336910091
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    1.4212589332811784e-14,
+                    [
+                      54.99693541969585,
+                      1.175399313517953,
+                      -121.68326323988379
+                    ],
+                    [
+                      54.99693541969584,
+                      1.1753993135179528,
+                      -121.68326323988379
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0003232035118784512,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    1.4419228562316118e-14,
+                    [
+                      54.95576865016147,
+                      1.0447244320018942,
+                      -121.33461760889554
+                    ],
+                    [
+                      54.95576865016145,
+                      1.0447244320018967,
+                      -121.33461760889554
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0005264285588698739,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    1.4273168140722167e-14,
+                    [
+                      54.999178619301,
+                      1.1820637294328902,
+                      -121.718298483535
+                    ],
+                    [
+                      54.999178619301,
+                      1.1820637294328888,
+                      -121.71829848353501
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0007884529740790267,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    1.5975256767596614e-14,
+                    [
+                      54.91960703827887,
+                      0.9131326517313026,
+                      -121.14641832261151
+                    ],
+                    [
+                      54.919607038278876,
+                      0.913132651731301,
+                      -121.14641832261152
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.01627680824406295,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 8.5
+            },
+            {
+              "phase_samples": [
+                {
+                  "closest": [
+                    3.7714130709307687e-13,
+                    [
+                      54.95690397510227,
+                      -1.0485683374744312,
+                      -125.50852715530687
+                    ],
+                    [
+                      54.95690397510226,
+                      -1.0485683374740822,
+                      -125.50852715530672
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.0004476457368863626,
+                  "phase_delta_deg": -1
+                },
+                {
+                  "closest": [
+                    4.4952380499036956e-14,
+                    [
+                      54.98448431867534,
+                      1.1376179034985476,
+                      -124.54312851208142
+                    ],
+                    [
+                      54.98448431867536,
+                      1.1376179034985487,
+                      -124.54312851208147
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": -0.05
+                },
+                {
+                  "closest": [
+                    7.944109290391274e-15,
+                    [
+                      54.96979010832202,
+                      1.091165945536732,
+                      -124.42564310583614
+                    ],
+                    [
+                      54.96979010832203,
+                      1.0911659455367284,
+                      -124.42564310583614
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0
+                },
+                {
+                  "closest": [
+                    3.4516332106845207e-14,
+                    [
+                      54.96545785377235,
+                      1.0770500529411104,
+                      -124.39588409829142
+                    ],
+                    [
+                      54.96545785377234,
+                      1.0770500529410798,
+                      -124.39588409829143
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0,
+                  "phase_delta_deg": 0.05
+                },
+                {
+                  "closest": [
+                    4.440892098500626e-16,
+                    [
+                      54.92507860302441,
+                      0.9343243577291819,
+                      -124.17198031855426
+                    ],
+                    [
+                      54.9250786030244,
+                      0.9343243577291794,
+                      -124.17198031855425
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.011287699643763036,
+                  "phase_delta_deg": 1
+                }
+              ],
+              "setting": 9
+            }
+          ],
+          "fork": [
+            {
+              "fixture": "initial",
+              "samples": [
+                {
+                  "axial_shift_mm": -0.5,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.42499975
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.42499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 5.39940969680094
+                },
+                {
+                  "axial_shift_mm": -0.2,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.12499975
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.12499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 2.1597638815602203
+                },
+                {
+                  "axial_shift_mm": -0.1,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.02499974999999
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -65.02499974999999
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 1.0798819430681845
+                },
+                {
+                  "axial_shift_mm": -0.05,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -64.97499975
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -64.97499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.5399409736604407
+                },
+                {
+                  "axial_shift_mm": -0.025,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -64.94999975
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -64.94999975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.2699704901182807
+                },
+                {
+                  "axial_shift_mm": 0,
+                  "closest": [
+                    0,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.025,
+                  "closest": [
+                    0.024999999660494154,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.89999974999999
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.05,
+                  "closest": [
+                    0.04999999966048563,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.87499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.1,
+                  "closest": [
+                    0.09999999966048279,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.82499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.2,
+                  "closest": [
+                    0.1999999996604913,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.72499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.5,
+                  "closest": [
+                    0,
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -62.92499975
+                    ],
+                    [
+                      44.68286533217768,
+                      -4.625751061359385,
+                      -62.92499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.6587279771041357
+                }
+              ]
+            },
+            {
+              "fixture": "postcarry",
+              "samples": [
+                {
+                  "axial_shift_mm": -0.5,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.42499975
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.42499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 5.399409696871042
+                },
+                {
+                  "axial_shift_mm": -0.2,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.12499975
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.12499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 2.159763881588262
+                },
+                {
+                  "axial_shift_mm": -0.1,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.02499974999999
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -65.02499974999999
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 1.0798819430822053
+                },
+                {
+                  "axial_shift_mm": -0.05,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -64.97499975
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -64.97499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.5399409736674511
+                },
+                {
+                  "axial_shift_mm": -0.025,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -64.94999975
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -64.94999975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.2699704901217858
+                },
+                {
+                  "axial_shift_mm": 0,
+                  "closest": [
+                    0,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.025,
+                  "closest": [
+                    0.024999999660494154,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.89999974999999
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.05,
+                  "closest": [
+                    0.04999999966048563,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.87499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.1,
+                  "closest": [
+                    0.09999999966048279,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.82499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.2,
+                  "closest": [
+                    0.1999999996604913,
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.92499974966049
+                    ],
+                    [
+                      37.500000000204594,
+                      -4.199999928474428,
+                      -64.72499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0
+                },
+                {
+                  "axial_shift_mm": 0.5,
+                  "closest": [
+                    0,
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -62.92499975
+                    ],
+                    [
+                      46.191927162489776,
+                      2.5487056412446663,
+                      -62.92499975
+                    ]
+                  ],
+                  "kernel_refusal": false,
+                  "overlap_mm3": 0.6587279771127178
+                }
+              ]
+            }
+          ],
+          "limitations": [
+            "Perturbation localization only; zero sampled overlap is not continuous capture proof",
+            "No follower-tip cut or between-detent phase change is installed"
+          ]
+        },
+        "mode": "capture",
+        "planning_commit": "da432fbdc7fe0e7f89e308237f281e9c3d368754"
+      }
+    },
+    "ball": {
+      "command": "python -m simulation.tools.selector_fit_working_play ball",
+      "raw_file": "_build_evidence/selector-fit-ball-play.json",
+      "raw_sha256": "7152432f89f107def4fa5202721da152545929465af282074386df41f5b4095b",
+      "log": "_build_evidence/selector-fit-ball-play.log",
+      "log_sha256": "b632afc222475363ab26f4acfd14a91e07ac1c7f1f7d35b5addf17fdc1fd8bbf",
+      "resources": {
+        "wall_s": 422.51,
+        "rss_kib": 631312,
+        "exit": 0
+      },
+      "result": {
+        "kind": "selected-input-working-play-localization",
+        "measurements": {
+          "guide_center_mm": [
+            62.834124973067105,
+            0.3334927414534689,
+            -54.69499999999999
+          ],
+          "limitations": [
+            "Cardinal play samples do not exhaust the disk",
+            "Source linear shaft phase, not yet a fitted groove-following law",
+            "Below-zero setting is a local diagnostic extrapolation, not admitted travel",
+            "No full-travel or retention-basin certificate from this grid"
+          ],
+          "nominal_radial_play_mm": 0.11850000000000005,
+          "samples": [
+            {
+              "legal_stroke": false,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.06437064521015,
+                    63.064370652288204
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.394999999999996,
+                  "distance_mm": 2.5000000055844662,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.99339374398001,
+                    0.7956507183334017,
+                    -53.07308295359247
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.101406911015516,
+                    63.101406918093566
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -54.394999999999996,
+                  "distance_mm": 2.5000000025403364,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.01471340302127,
+                    1.2602573298110953,
+                    -53.280361698996494
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.05201196372509,
+                    63.05201197080314
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -54.394999999999996,
+                  "distance_mm": 2.500000005390855,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.004445680639115,
+                    0.16160887789293543,
+                    -52.9616045634754
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.14193465933204,
+                    63.141934666410094
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.2765,
+                  "distance_mm": 2.5000000020444544,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.077878532465604,
+                    0.643243496172563,
+                    -52.90037255092439
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.99249496385454,
+                    62.9924949709326
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.51349999999999,
+                  "distance_mm": 2.500000004731195,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.90897008165113,
+                    1.0719787319518694,
+                    -53.34578321017542
+                  ]
+                }
+              ],
+              "setting": -0.05
+            },
+            {
+              "legal_stroke": false,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.94833909124136,
+                    62.94833909831941
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.544999999999995,
+                  "distance_mm": 2.500000001369348,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.871159798643404,
+                    0.7499618317498103,
+                    -53.2176418491334
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.990189883112905,
+                    62.990189890190955
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -54.544999999999995,
+                  "distance_mm": 2.5000000049897775,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.879340842314654,
+                    1.4189573001621876,
+                    -53.61801787275597
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.954566962644456,
+                    62.95456696972251
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -54.544999999999995,
+                  "distance_mm": 2.50000000216051,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.941770445414726,
+                    -0.42118725128670886,
+                    -53.205625078861715
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.02714366130531,
+                    63.02714366838336
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.4265,
+                  "distance_mm": 2.5000000047933435,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.965058609362615,
+                    0.5031731325714938,
+                    -53.023284479062404
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.88542585112153,
+                    62.88542585819958
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.66349999999999,
+                  "distance_mm": 2.5000000010085057,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.762554753656886,
+                    1.4970162426041183,
+                    -54.039295433523314
+                  ]
+                }
+              ],
+              "setting": -0.025
+            },
+            {
+              "legal_stroke": false,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.89101298898458,
+                    62.89101299606263
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.61999999999999,
+                  "distance_mm": 2.5000000051774283,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.81107890210245,
+                    0.7270883047952257,
+                    -53.28997867566459
+                  ]
+                }
+              ],
+              "setting": -0.0125
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.83412496857344,
+                    62.83412497565149
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.69499999999999,
+                  "distance_mm": 2.5000000022244957,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.682269906226914,
+                    1.6060962819617548,
+                    -54.69499999999999
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.90420567728579,
+                    62.90420568436384
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -54.69499999999999,
+                  "distance_mm": 2.5000000057290164,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.75235061192277,
+                    1.724596283745701,
+                    -54.69499999999999
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.93146196566521,
+                    62.931461972743264
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -54.69499999999999,
+                  "distance_mm": 2.5000000017788064,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.99962803762534,
+                    -1.3718335426812616,
+                    -54.694999999999965
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.91746588312089,
+                    62.91746589019894
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.576499999999996,
+                  "distance_mm": 2.5000000029425506,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.88154854046581,
+                    0.09935113781863855,
+                    -53.144641672784736
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.91746588312089,
+                    62.91746589019894
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.81349999999999,
+                  "distance_mm": 2.5000000029425506,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.88154854046581,
+                    0.09935113781863783,
+                    -56.24535832721525
+                  ]
+                }
+              ],
+              "setting": 0
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.89372176639734,
+                    62.89372177347539
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.769999999999996,
+                  "distance_mm": 2.500000003183347,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.9093087123662,
+                    -0.5012143622880179,
+                    -56.04097162430145
+                  ]
+                }
+              ],
+              "setting": 0.0125
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.95399591960012,
+                    62.95399592667817
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.84499999999999,
+                  "distance_mm": 2.50000000531384,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.97680781845335,
+                    -0.5233285146071908,
+                    -56.11251116224915
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.932945801317686,
+                    62.932945808395736
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -54.84499999999999,
+                  "distance_mm": 2.5000000044641015,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.85922603198905,
+                    0.6357512794459286,
+                    -56.229167298766725
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.023589686676864,
+                    63.023589693754914
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -54.84499999999999,
+                  "distance_mm": 2.500000002860778,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.09113486511175,
+                    -1.1240386047679825,
+                    -55.69506670526139
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.89091210551559,
+                    62.89091211259364
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.726499999999994,
+                  "distance_mm": 2.5000000008875447,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.97353793523773,
+                    -1.1681030719880185,
+                    -55.29120016956033
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.03306629881263,
+                    63.033066305890685
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.96349999999999,
+                  "distance_mm": 2.5000000004363634,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.03462315695198,
+                    -0.2942060895995792,
+                    -56.32813151075167
+                  ]
+                }
+              ],
+              "setting": 0.025
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.0766662541777,
+                    63.07666626125575
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.99499999999999,
+                  "distance_mm": 2.5000000003153318,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.114606115174986,
+                    -0.5674026828467649,
+                    -56.255439375461215
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.03663409687579,
+                    63.03663410395384
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -54.99499999999999,
+                  "distance_mm": 2.5000000033845877,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.021503423460636,
+                    0.03961986514023336,
+                    -56.41598450672028
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.1418574023992,
+                    63.14185740947725
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -54.99499999999999,
+                  "distance_mm": 2.5000000014636834,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.213123147308536,
+                    -0.9926726662460721,
+                    -56.0301465675453
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.00435591675341,
+                    63.00435592383146
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -54.87649999999999,
+                  "distance_mm": 2.5000000008841834,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.06899665767156,
+                    -0.8131884637403897,
+                    -55.96714509762116
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.15474475063383,
+                    63.15474475771188
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -55.11349999999999,
+                  "distance_mm": 2.5000000019599744,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.17746871048853,
+                    -0.42733794502954137,
+                    -56.44072119836237
+                  ]
+                }
+              ],
+              "setting": 0.05
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.331163055449736,
+                    63.331163062527786
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -55.294999999999995,
+                  "distance_mm": 2.500000000541288,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.402064812958926,
+                    -0.6548858475387173,
+                    -56.54066757645794
+                  ]
+                }
+              ],
+              "setting": 0.1
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.59925270974637,
+                    63.59925271682442
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -55.59499999999999,
+                  "distance_mm": 2.50000000401123,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.70671145200814,
+                    -0.7413885333802572,
+                    -56.82500724633458
+                  ]
+                }
+              ],
+              "setting": 0.15
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.882796121761196,
+                    63.882796128839246
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -55.894999999999996,
+                  "distance_mm": 2.5000000006827845,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.030389733162636,
+                    -0.8267970235679547,
+                    -57.10839120231557
+                  ]
+                }
+              ],
+              "setting": 0.2
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.15520745031534,
+                    64.15520745739339
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -56.19499999999999,
+                  "distance_mm": 2.5000000017230404,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.14159300978859,
+                    -0.6364330730022559,
+                    -57.315089630103245
+                  ]
+                }
+              ],
+              "setting": 0.25
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.3661431122571,
+                    64.36614311933516
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -56.49499999999999,
+                  "distance_mm": 2.500000005951236,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.17368560803389,
+                    -0.4133798871493717,
+                    -57.43590986153759
+                  ]
+                }
+              ],
+              "setting": 0.3
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.519553906098,
+                    64.51955391317605
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -56.794999999999995,
+                  "distance_mm": 2.5000000014286954,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.1897491051185,
+                    -0.22676402840823856,
+                    -57.507826707776516
+                  ]
+                }
+              ],
+              "setting": 0.35
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.62143214568495,
+                    64.62143215276299
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.09499999999999,
+                  "distance_mm": 2.5000000043198276,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.19598977358426,
+                    -0.062365282942833056,
+                    -57.55383080912684
+                  ]
+                }
+              ],
+              "setting": 0.4
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.67594315111636,
+                    64.6759431581944
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.394999999999996,
+                  "distance_mm": 2.5000000027029348,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.19526070650425,
+                    0.08909707062753669,
+                    -57.586011370009125
+                  ]
+                }
+              ],
+              "setting": 0.45
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.68652791716158,
+                    64.68652792423964
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.69499999999999,
+                  "distance_mm": 2.5000000015045987,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.18995875592829,
+                    0.20435526592193254,
+                    -57.67341510311599
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    64.67891879230737,
+                    64.67891879938543
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -57.69499999999999,
+                  "distance_mm": 2.500000004570446,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.185177272243536,
+                    0.2807317237078041,
+                    -57.65114931629987
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    64.69109583683311,
+                    64.69109584391116
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -57.69499999999999,
+                  "distance_mm": 2.5000000047211604,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.192678474967785,
+                    0.15122903067360788,
+                    -57.63299303784684
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    64.68740749955177,
+                    64.68740750662982
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.576499999999996,
+                  "distance_mm": 2.500000001524115,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    62.191401230279645,
+                    0.19225425325506484,
+                    -57.57441062389366
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    64.68347215242684,
+                    64.68347215950489
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.81349999999999,
+                  "distance_mm": 2.500000000714442,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    62.187273429843785,
+                    0.2461824195176163,
+                    -57.70687536263149
+                  ]
+                }
+              ],
+              "setting": 0.5
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.66108908839524,
+                    64.66108909547329
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -57.99499999999999,
+                  "distance_mm": 2.5000000005264456,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.17981073438574,
+                    0.3406976110650661,
+                    -57.689703771256816
+                  ]
+                }
+              ],
+              "setting": 0.55
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.59015227518975,
+                    64.59015228226781
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -58.294999999999995,
+                  "distance_mm": 2.5000000028189695,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.163349687175106,
+                    0.4860613041795294,
+                    -57.714179879640966
+                  ]
+                }
+              ],
+              "setting": 0.6
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.47141377702353,
+                    64.47141378410157
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -58.59499999999999,
+                  "distance_mm": 2.5000000049523736,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.138130373107366,
+                    0.6475623159639577,
+                    -57.75407857019343
+                  ]
+                }
+              ],
+              "setting": 0.65
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.3008392319083,
+                    64.30083923898636
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -58.894999999999996,
+                  "distance_mm": 2.500000002152757,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.09914070135428,
+                    0.8366819039412801,
+                    -57.822934597653955
+                  ]
+                }
+              ],
+              "setting": 0.7
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    64.07321979552506,
+                    64.07321980260312
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -59.19499999999999,
+                  "distance_mm": 2.500000001957815,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    62.036596623503655,
+                    1.070161300055093,
+                    -57.946206393789716
+                  ]
+                }
+              ],
+              "setting": 0.75
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.806597470864645,
+                    63.8065974779427
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -59.49499999999999,
+                  "distance_mm": 2.5000000038139807,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.792166547006595,
+                    1.0674601056256625,
+                    -58.209169547767694
+                  ]
+                }
+              ],
+              "setting": 0.8
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.54942015483975,
+                    63.5494201619178
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -59.794999999999995,
+                  "distance_mm": 2.5000000031700274,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.51246734550388,
+                    0.9773887408856983,
+                    -58.49645420509375
+                  ]
+                }
+              ],
+              "setting": 0.85
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.30242438241838,
+                    63.30242438949644
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.09499999999999,
+                  "distance_mm": 2.5000000031995815,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.24661920974644,
+                    0.8867497953207192,
+                    -58.78443839852636
+                  ]
+                }
+              ],
+              "setting": 0.9
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.06437064521015,
+                    63.064370652288204
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.394999999999996,
+                  "distance_mm": 2.500000005584459,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.993393743980015,
+                    0.7956507183333551,
+                    -59.073082953592454
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.101406911015516,
+                    63.101406918093566
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -60.394999999999996,
+                  "distance_mm": 2.5000000025403293,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.014713403021275,
+                    1.2602573298110533,
+                    -59.280361698996465
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.05201196372509,
+                    63.05201197080314
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -60.394999999999996,
+                  "distance_mm": 2.5000000053908455,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.00444568063912,
+                    0.1616088778929044,
+                    -58.961604563475404
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.14193465933204,
+                    63.141934666410094
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.2765,
+                  "distance_mm": 2.500000002044444,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.07787853246561,
+                    0.6432434961725302,
+                    -58.90037255092439
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.99249496385454,
+                    62.9924949709326
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.51349999999999,
+                  "distance_mm": 2.5000000047311914,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.908970081651134,
+                    1.0719787319517984,
+                    -59.34578321017537
+                  ]
+                }
+              ],
+              "setting": 0.95
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.94833909124136,
+                    62.94833909831941
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.544999999999995,
+                  "distance_mm": 2.500000001369344,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.87115979864341,
+                    0.7499618317497309,
+                    -59.21764184913337
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.990189883112905,
+                    62.990189890190955
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -60.544999999999995,
+                  "distance_mm": 2.5000000049897726,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.87934084231466,
+                    1.4189573001621305,
+                    -59.61801787275591
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.954566962644456,
+                    62.95456696972251
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -60.544999999999995,
+                  "distance_mm": 2.500000002160498,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.94177044541473,
+                    -0.42118725128669954,
+                    -59.20562507886172
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.02714366130531,
+                    63.02714366838336
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.4265,
+                  "distance_mm": 2.5000000047933293,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.96505860936263,
+                    0.5031731325714554,
+                    -59.023284479062404
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.88542585112153,
+                    62.88542585819958
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.66349999999999,
+                  "distance_mm": 2.5000000010085,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.7625547536569,
+                    1.49701624260399,
+                    -60.03929543352305
+                  ]
+                }
+              ],
+              "setting": 0.975
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.89101298898458,
+                    62.89101299606263
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.61999999999999,
+                  "distance_mm": 2.5000000051774216,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.811078902102466,
+                    0.7270883047950446,
+                    -59.28997867566453
+                  ]
+                }
+              ],
+              "setting": 0.9875
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.83412496857344,
+                    62.83412497565149
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.69499999999999,
+                  "distance_mm": 2.500000002224499,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.682269906226914,
+                    1.6060962819617606,
+                    -60.69500000000001
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.90420567728579,
+                    62.90420568436384
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -60.69499999999999,
+                  "distance_mm": 2.5000000057290115,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.75235061192278,
+                    1.7245962837457036,
+                    -60.69500000000001
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.93146196566521,
+                    62.931461972743264
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -60.69499999999999,
+                  "distance_mm": 2.5000000017788007,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.99962803762535,
+                    -1.3718335426812613,
+                    -60.69499999999983
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.91746588312089,
+                    62.91746589019894
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.576499999999996,
+                  "distance_mm": 2.500000002942543,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.881548540465815,
+                    0.099351137818616,
+                    -59.14464167278474
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.91746588312089,
+                    62.91746589019894
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.81349999999999,
+                  "distance_mm": 2.500000002942561,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.8815485404658,
+                    0.09935113781859573,
+                    -62.24535832721525
+                  ]
+                }
+              ],
+              "setting": 1
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.89372176639734,
+                    62.89372177347539
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.769999999999996,
+                  "distance_mm": 2.5000000031833496,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.909308712366204,
+                    -0.5012143622881401,
+                    -62.040971624301385
+                  ]
+                }
+              ],
+              "setting": 1.0125
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    62.95399591960012,
+                    62.95399592667817
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.84499999999999,
+                  "distance_mm": 2.5000000053138414,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.976807818453366,
+                    -0.5233285146073429,
+                    -62.11251116224907
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.932945801317686,
+                    62.932945808395736
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -60.84499999999999,
+                  "distance_mm": 2.500000004464114,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    60.85922603198905,
+                    0.6357512794458298,
+                    -62.22916729876676
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.023589686676864,
+                    63.023589693754914
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -60.84499999999999,
+                  "distance_mm": 2.500000002860776,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.091134865111755,
+                    -1.1240386047680522,
+                    -61.69506670526129
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    62.89091210551559,
+                    62.89091211259364
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.726499999999994,
+                  "distance_mm": 2.5000000008875403,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    60.973537935237744,
+                    -1.168103071988152,
+                    -61.29120016956
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.03306629881263,
+                    63.033066305890685
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.96349999999999,
+                  "distance_mm": 2.5000000004363656,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.03462315695199,
+                    -0.29420608959967226,
+                    -62.32813151075164
+                  ]
+                }
+              ],
+              "setting": 1.025
+            },
+            {
+              "legal_stroke": true,
+              "samples": [
+                {
+                  "center_x_bracket_mm": [
+                    63.0766662541777,
+                    63.07666626125575
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.99499999999999,
+                  "distance_mm": 2.5000000003153344,
+                  "offset_yz_mm": [
+                    0,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.11460611517499,
+                    -0.5674026828468374,
+                    -62.25543937546118
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.03663409687579,
+                    63.03663410395384
+                  ],
+                  "center_y_mm": 0.45199274145346896,
+                  "center_z_mm": -60.99499999999999,
+                  "distance_mm": 2.500000003384601,
+                  "offset_yz_mm": [
+                    0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.021503423460636,
+                    0.03961986514015481,
+                    -62.41598450672028
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.1418574023992,
+                    63.14185740947725
+                  ],
+                  "center_y_mm": 0.21499274145346886,
+                  "center_z_mm": -60.99499999999999,
+                  "distance_mm": 2.5000000014636883,
+                  "offset_yz_mm": [
+                    -0.11850000000000005,
+                    0
+                  ],
+                  "on_shaft_mm": [
+                    61.213123147308536,
+                    -0.9926726662461243,
+                    -62.03014656754525
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.00435591675341,
+                    63.00435592383146
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -60.87649999999999,
+                  "distance_mm": 2.500000000884188,
+                  "offset_yz_mm": [
+                    0,
+                    0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.06899665767157,
+                    -0.813188463740486,
+                    -61.967145097621085
+                  ]
+                },
+                {
+                  "center_x_bracket_mm": [
+                    63.15474475063383,
+                    63.15474475771188
+                  ],
+                  "center_y_mm": 0.3334927414534689,
+                  "center_z_mm": -61.11349999999999,
+                  "distance_mm": 2.500000001959984,
+                  "offset_yz_mm": [
+                    0,
+                    -0.11850000000000005
+                  ],
+                  "on_shaft_mm": [
+                    61.17746871048853,
+                    -0.4273379450295973,
+                    -62.440721198362354
+                  ]
+                }
+              ],
+              "setting": 1.05
+            }
+          ]
+        },
+        "mode": "ball",
+        "planning_commit": "da432fbdc7fe0e7f89e308237f281e9c3d368754"
+      }
+    },
+    "spring": {
+      "command": "python -m simulation.tools.selector_fit_spring_source",
+      "raw_file": "_build_evidence/selector-fit-spring-source.json",
+      "raw_sha256": "f15680651bcc3b7a65a698240a247fdeff2e48c01310307e455efb6f3a6b6599",
+      "log": "_build_evidence/selector-fit-spring-source.log",
+      "log_sha256": "f61ba070feac34155cbfd2f2518702037601c28c70d088cc3c35144b4731782d",
+      "resources": {
+        "wall_s": 39.64,
+        "rss_kib": 447716,
+        "exit": 0
+      },
+      "result": {
+        "analytic": {
+          "bounds_mm": [
+            [
+              62.746769459923875,
+              -2.550001440223516,
+              -58.33600300537559
+            ],
+            [
+              74.3532305400761,
+              2.5500033633579156,
+              -53.23599631775204
+            ]
+          ],
+          "edges": [
+            {
+              "bounds_mm": [
+                [
+                  62.9999999,
+                  -2.545108669100907,
+                  -58.31666619052506
+                ],
+                [
+                  73.86737801871233,
+                  2.507212274416924,
+                  -53.235999541999995
+                ]
+              ],
+              "index": 0,
+              "length_mm": 92.53054258720788,
+              "type": "BSPLINE"
+            },
+            {
+              "bounds_mm": [
+                [
+                  62.746769459923875,
+                  -0.029989168322562074,
+                  -53.74599974199997
+                ],
+                [
+                  63.25323054007608,
+                  0.0299891683225721,
+                  -53.235999541999895
+                ]
+              ],
+              "index": 1,
+              "length_mm": 1.6022122533393568,
+              "type": "BSPLINE"
+            },
+            {
+              "bounds_mm": [
+                [
+                  73.8467694599239,
+                  -0.029989168327204004,
+                  -58.335999742004674
+                ],
+                [
+                  74.3532305400761,
+                  0.029989168318143647,
+                  -57.82599954200472
+                ]
+              ],
+              "index": 2,
+              "length_mm": 1.6022122533393064,
+              "type": "BSPLINE"
+            }
+          ],
+          "face_types": {
+            "BSPLINE": 1,
+            "PLANE": 2
+          },
+          "faces": [
+            {
+              "area_mm2": 151.22382417757433,
+              "bounds_mm": [
+                [
+                  62.74676945992393,
+                  -2.550001440223516,
+                  -58.33600300537559
+                ],
+                [
+                  74.35323054007605,
+                  2.5500033633579156,
+                  -53.23599631775204
+                ]
+              ],
+              "center_mm": [
+                68.55000003739983,
+                -0.11307262990214469,
+                -55.78599962267999
+              ],
+              "index": 0,
+              "type": "BSPLINE"
+            },
+            {
+              "area_mm2": 0.2042820623319131,
+              "bounds_mm": [
+                [
+                  62.746769459923875,
+                  -0.029989168322562074,
+                  -53.74599974199997
+                ],
+                [
+                  63.25323054007608,
+                  0.0299891683225721,
+                  -53.235999541999895
+                ]
+              ],
+              "center_mm": [
+                63,
+                4.809605209141447e-15,
+                -53.490999643431444
+              ],
+              "index": 1,
+              "normal": [
+                0.11760418950026326,
+                -0.9930605493181099,
+                2.1253375265459694e-15
+              ],
+              "type": "PLANE"
+            },
+            {
+              "area_mm2": 0.2042820622788259,
+              "bounds_mm": [
+                [
+                  73.8467694599239,
+                  -0.029989168327204004,
+                  -58.335999742004674
+                ],
+                [
+                  74.3532305400761,
+                  0.029989168318143647,
+                  -57.82599954200472
+                ]
+              ],
+              "center_mm": [
+                74.09999999975666,
+                2.428724929504078e-11,
+                -58.080999643274836
+              ],
+              "index": 2,
+              "normal": [
+                0.11760418950068294,
+                0.9930605493180602,
+                -2.8009564014536485e-12
+              ],
+              "type": "PLANE"
+            }
+          ],
+          "volume_mm3": 19.281077407853903
+        },
+        "analytic_spec": {
+          "loop": false,
+          "molejo": "0.1",
+          "path": [
+            {
+              "height": 11.1,
+              "radius": 2.295,
+              "turns": 6.5,
+              "type": "helix"
+            }
+          ],
+          "profile": {
+            "radius": 0.255,
+            "type": "circle"
+          },
+          "tessellation": {
+            "path": 1300,
+            "profile": 32
+          }
+        },
+        "analytic_tolerance_mm": 0.000001,
+        "ends": [
+          {
+            "candidate_center_mm": [
+              63,
+              4.809605209141447e-15,
+              -53.490999643431444
+            ],
+            "candidate_normal": [
+              -0.11760418950026331,
+              0.9930605493181099,
+              -2.1775642781361996e-15
+            ],
+            "center_distance_mm": 1.4314380791802966e-9,
+            "source_center_mm": [
+              63,
+              5.2622184751063755e-15,
+              -53.490999642000006
+            ],
+            "source_normal": [
+              8.659560562354974e-17,
+              1,
+              -1.874077234285391e-15
+            ]
+          },
+          {
+            "candidate_center_mm": [
+              74.09999999975666,
+              2.428724929504078e-11,
+              -58.080999643274836
+            ],
+            "candidate_normal": [
+              0.11760418950068299,
+              0.9930605493180602,
+              -2.800904174702059e-12
+            ],
+            "center_distance_mm": 1.298076827637427e-9,
+            "source_center_mm": [
+              74.1,
+              1.9873691490604574e-16,
+              -58.080999642
+            ],
+            "source_normal": [
+              8.659560562354929e-17,
+              1,
+              8.659560562354929e-17
+            ]
+          }
+        ],
+        "kind": "source-spring-analytic-representation-comparison",
+        "limitations": [
+          "No source equivalence from equal radius/turn count alone",
+          "No installed seating, compression, force or continuous-motion claim"
+        ],
+        "scope": "Uninstalled comparison; a helix is not declared source-equivalent by its dimensions",
+        "source": {
+          "bounds_mm": [
+            [
+              62.7449999,
+              -2.550000099999999,
+              -58.33599974200001
+            ],
+            [
+              74.3550001,
+              2.550000100000001,
+              -53.23599954199998
+            ]
+          ],
+          "edges": [
+            {
+              "bounds_mm": [
+                [
+                  62.74499999999999,
+                  4.783818882986272e-15,
+                  -53.74599964200001
+                ],
+                [
+                  63.254999999999995,
+                  5.740618067226477e-15,
+                  -53.235999642
+                ]
+              ],
+              "center_mm": [
+                62.99999999999999,
+                5.262218475106375e-15,
+                -53.490999642000006
+              ],
+              "index": 0,
+              "length_mm": 1.6022122533307954,
+              "radius_mm": 0.255,
+              "type": "CIRCLE"
+            },
+            {
+              "bounds_mm": [
+                [
+                  63.254999900000016,
+                  -2.2950000999999993,
+                  -58.08099974200001
+                ],
+                [
+                  74.35500009999998,
+                  2.2950000999999998,
+                  -53.49099954199999
+                ]
+              ],
+              "index": 1,
+              "length_mm": 94.38552669446076,
+              "type": "BSPLINE"
+            },
+            {
+              "bounds_mm": [
+                [
+                  73.845,
+                  1.6750842152778827e-16,
+                  -58.335999642000004
+                ],
+                [
+                  74.35499999999999,
+                  2.2996540828430327e-16,
+                  -57.825999642
+                ]
+              ],
+              "center_mm": [
+                74.1,
+                1.9873691490604577e-16,
+                -58.080999642
+              ],
+              "index": 2,
+              "length_mm": 1.6022122533307954,
+              "radius_mm": 0.255,
+              "type": "CIRCLE"
+            }
+          ],
+          "face_types": {
+            "BSPLINE": 1,
+            "PLANE": 2
+          },
+          "faces": [
+            {
+              "area_mm2": 151.5320150257625,
+              "bounds_mm": [
+                [
+                  62.7449999,
+                  -2.550000099999999,
+                  -58.33599974200001
+                ],
+                [
+                  74.3550001,
+                  2.550000100000001,
+                  -53.23599954199998
+                ]
+              ],
+              "center_mm": [
+                68.55007095544453,
+                -0.12349454050136292,
+                -55.785999641999986
+              ],
+              "index": 0,
+              "type": "BSPLINE"
+            },
+            {
+              "area_mm2": 0.20428206229968032,
+              "bounds_mm": [
+                [
+                  62.74499999999999,
+                  4.783818882986272e-15,
+                  -53.74599964200001
+                ],
+                [
+                  63.254999999999995,
+                  5.740618067226477e-15,
+                  -53.235999642
+                ]
+              ],
+              "center_mm": [
+                63,
+                5.2622184751063755e-15,
+                -53.490999642000006
+              ],
+              "index": 1,
+              "normal": [
+                -8.659560562354887e-17,
+                -1,
+                1.8740772342853902e-15
+              ],
+              "type": "PLANE"
+            },
+            {
+              "area_mm2": 0.204282062299669,
+              "bounds_mm": [
+                [
+                  73.845,
+                  1.6750842152778827e-16,
+                  -58.335999642000004
+                ],
+                [
+                  74.35499999999999,
+                  2.2996540828430327e-16,
+                  -57.825999642
+                ]
+              ],
+              "center_mm": [
+                74.1,
+                1.9873691490604574e-16,
+                -58.080999642
+              ],
+              "index": 2,
+              "normal": [
+                8.65956056235493e-17,
+                1,
+                8.65956056235493e-17
+              ],
+              "type": "PLANE"
+            }
+          ],
+          "volume_mm3": 19.249334139530788
+        }
+      }
+    }
+  },
+  "diagnostic_retry": {
+    "log": "_build_evidence/selector-fit-capture-play.log",
+    "sha256": "d3e644c78d04fe2bcabb24b14ad46e702a60d94baccdba1906228a7ced129fc5",
+    "wall_s": 100.66,
+    "rss_kib": 464736,
+    "exit": 1,
+    "cause": "First capture probe asserted on invalid native boolean at setting 0.625, phase delta -0.05 degrees.",
+    "resolution": "Retain invalid results as explicit kernel_refusal rows and continue measurement. Six refusals remain unresolved in completed trace; none converted to zero overlap."
+  },
+  "native_red_baseline": {
+    "command": "solid test --exact simulation/selector_fit.py:SelectorFitBench",
+    "tests": 23,
+    "passed": 4,
+    "failed": 19,
+    "runner_s": 75.8,
+    "wall_s": 82.95,
+    "rss_kib": 614692,
+    "exit": 1,
+    "log": "_build_evidence/selector-fit-alignment-red.log",
+    "log_sha256": "300c6debb014c9b0dc1dfb902d1cd3305021a0db64c755a59ad4b0badb3e0815",
+    "test_source_sha256": "3360781f5f4166b67249d37440dd3bd4a9eb2e83522aebea4255d9921c940def",
+    "interpretation": "Expected red acceptance contracts against unchanged source geometry, not 19 regressions caused by a fitted selector. Previous 18 failures persist; new wall witness fails and exact fixed-joint guard passes.",
+    "transcript_filter": "sed 's/ INFO -.*$//' _build_evidence/selector-fit-alignment-red.log | sed '/^$/d' (removes generation chatter; retains test names, assertions and result)",
+    "filtered_transcript": "Running SelectedInputFitTest.test_aligned_guide_retains_a_continuous_wall\n.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 94, in test_aligned_guide_retains_a_continuous_wall\n    self.assertEqual(missing.Volume(), 0,\n  File \"/usr/lib/python3.12/unittest/case.py\", line 885, in assertEqual\n    assertion_func(first, second, msg=msg)\n  File \"/usr/lib/python3.12/unittest/case.py\", line 878, in _baseAssertEqual\n    raise self.failureException(msg)\nAssertionError: 23.60698934166411 != 0 : Aligned guide lacks its continuous 0.34 mm retaining wall; an unclosed obsolete bore cannot be replaced by a chosen centerline\nRunning SelectedInputFitTest.test_fixed_source_joints_keep_exact_regions_and_relative_poses\n. passed\nRunning SelectedInputFitTest.test_full_stroke_and_fixed_housing. passed\nRunning SelectedInputFitTest.test_independent_bench_matches_both_complete_frozen_fixtures\n. passed\nRunning SelectedInputFitTest.test_initial_ball_guide_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: p_5mm_ball should not intersect selector_knob (intersection volume 1.1953876585803762)\nRunning SelectedInputFitTest.test_initial_between_detent_ball_shaft_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect p_5mm_ball (intersection volume 2.866621265898005)\nRunning SelectedInputFitTest.test_initial_between_detent_screw_groove_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect digit_selector_screw (intersection volume 0.0005264794076108581)\nRunning SelectedInputFitTest.test_initial_knob_housing_slot_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob should not intersect bottom_housing (intersection volume 9.253229593654433)\nRunning SelectedInputFitTest.test_initial_number_roll_window_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: number_roll should not intersect bottom_housing (intersection volume 4.169640237750814)\nRunning SelectedInputFitTest.test_initial_seated_ball_shaft_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect p_5mm_ball (intersection volume 0.3878557919231307)\nRunning SelectedInputFitTest.test_initial_spring_back_seat_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob_spring should not intersect selector_knob (intersection volume 2.661638394442298)\nRunning SelectedInputFitTest.test_initial_spring_ball_seat_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob_spring should not intersect p_5mm_ball (intersection volume 3.4991802113553003)\nRunning SelectedInputFitTest.test_manual_ball_is_five_mm.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 43, in test_manual_ball_is_five_mm\n    self.assertAlmostEqual((3*sphere.Volume()/(4*pi))**(1/3)*2, 5., delta=1e-6)\n  File \"/usr/lib/python3.12/unittest/case.py\", line 939, in assertAlmostEqual\n    raise self.failureException(msg)\nAssertionError: 5.4 != 5.0 within 1e-06 delta (0.40000000000000036 difference)\nRunning SelectedInputFitTest.test_numbered_one_is_retained_by_ball_detent.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 67, in test_numbered_one_is_retained_by_ball_detent\n    self.assertLessEqual(seated[1], min(left[0], right[0]),\n  File \"/usr/lib/python3.12/unittest/case.py\", line 1263, in assertLessEqual\n    self.fail(self._formatMessage(msg, standardMsg))\n  File \"/usr/lib/python3.12/unittest/case.py\", line 715, in fail\n    raise self.failureException(msg)\nAssertionError: 63.675127589330074 not less than or equal to 63.54970746710897 : Numbered one has an adjacent position requiring less spring compression; ball-center X brackets left/one/right: [[63.54970746710897, 63.549707474187024], [63.675127582252024, 63.675127589330074], [63.80383150987327, 63.80383151695132]]\nRunning SelectedInputFitTest.test_postcarry_ball_guide_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: p_5mm_ball should not intersect selector_knob (intersection volume 1.1953876585803762)\nRunning SelectedInputFitTest.test_postcarry_between_detent_ball_shaft_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect p_5mm_ball (intersection volume 2.866621265898005)\nRunning SelectedInputFitTest.test_postcarry_between_detent_screw_groove_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect digit_selector_screw (intersection volume 0.0005264794076108581)\nRunning SelectedInputFitTest.test_postcarry_knob_housing_slot_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob should not intersect bottom_housing (intersection volume 9.253229593654433)\nRunning SelectedInputFitTest.test_postcarry_number_roll_window_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: number_roll should not intersect bottom_housing (intersection volume 4.169640237750814)\nRunning SelectedInputFitTest.test_postcarry_seated_ball_shaft_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_shaft_bottom should not intersect p_5mm_ball (intersection volume 0.3878557919231307)\nRunning SelectedInputFitTest.test_postcarry_spring_back_seat_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob_spring should not intersect selector_knob (intersection volume 2.661638394442298)\nRunning SelectedInputFitTest.test_postcarry_spring_ball_seat_clears.FAIL!\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/manager/test.py\", line 345, in run_test\n    method()\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 166, in test\n    self.clear_at(first, second, setting, postcarry)\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_selector_fit.py\", line 37, in clear_at\n    self.assertNotIntersecting(part(self.node, first), part(self.node, second))\n  File \"/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/test.py\", line 1860, in assertNotIntersecting\n    raise AssertionError(\nAssertionError: selector_knob_spring should not intersect p_5mm_ball (intersection volume 3.4991802113553003)\nRunning SelectedInputFitTest.test_selected_parts_are_valid_connected_solids. passed\nRan 23 tests in 75.80 seconds: 4 passed, 19 failed\nCommand exited with non-zero status 1\nRESOURCE wall=82.95 rss_kib=614692 exit=1\n"
+  },
+  "closeout_checks": {
+    "python": {
+      "exit": 0,
+      "output": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.035s\n\nOK\n"
+    },
+    "javascript": {
+      "exit": 0,
+      "output": "✔ author calibration and committed operations retain both registers (2.04654ms)\n✔ multiplication, decimal shift, subtraction, clearing and overflow (1.60066ms)\n✔ partial turns can be inspected but cannot silently commit (0.631814ms)\n✔ a calculation cannot be committed with the carriage lifted or between detents (0.370896ms)\n✔ worked examples calculate their stated answers and lift before shifting (1.313282ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 79.840409\n"
+    },
+    "frame_source_hashes": {
+      "exit": 0,
+      "output": ""
+    },
+    "fixed_joint_source_hashes": {
+      "exit": 0,
+      "output": ""
+    }
+  },
+  "limitations": [
+    "No operating selector, hardware, housing or control change; diagnostic bench is not wired into Curta.",
+    "23 zero-overlap follower queries are sampled contacts, not a clearance or capture certificate; 31 positive overlaps and six invalid booleans remain.",
+    "75 ball-support brackets at 31 settings, with cardinal play samples at 11 settings, do not exhaust the play disk or prove coupled spring retention.",
+    "Normal-swept analytic helix differs from source end-cap planes; no installed spring or source equivalence is claimed.",
+    "Guide-wall/back-seat witnesses establish local feasibility only; protected mouth/support and continuous full-travel acceptance remain open.",
+    "No full 39-module native/faceted rerun or new OpenSCAD snapshot during this checkpoint; prior named failures remain documented.",
+    "Generated CAD, raw logs, images and caches remain ignored and local; measured JSON data and the filtered final native test transcript are committed here.",
+    "Do not resume automatically, archive either active change, promote unfinished delta specs, integrate, remove worktrees, push, publish, or begin solid-node feature development from this checkpoint."
+  ]
+}

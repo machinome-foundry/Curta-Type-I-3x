@@ -1,10 +1,10 @@
 Status: original plan ratified on 2026-09-13 ("ratify, go on"), commit `aec7ca4`.
-Alignment revision ratified on 2026-09-13 ("ratify, go o"); record its revised
-planning commit before implementation resumes.
+Alignment revision ratified on 2026-09-13 ("ratify, go o"), separate planning
+commit `da432fb`.
 None of the implementation tasks below was complete at original ratification. The audit
 at `dd98104` is red evidence, not a passing fit or a completed task in this cycle.
 
-Implementation progress: 1/22 complete. Previously paused during task 1.2 after native
+Implementation progress: 2/22 complete (1.1 and 1.3). Previously paused during task 1.2 after native
 measurements found that the source guide places the ball on a detent flank at
 the required numbered coordinates. The 5 mm hardware correction alone does
 not fix that indexing. The revised source-parallel guide/back-seat alignment
@@ -12,20 +12,27 @@ preserves numbered datums and authorizes the explicitly bounded knob restoration
 exception in the design; those complete revised choices are now ratified. See
 `simulation/docs/selector-fit-implementation-2026-09-13.md` §3. No operating
 geometry has changed; broader alignment/cutter scope remains unauthorized.
+Source measurement work resumed after `da432fb`. The
+native endpoint/local wall witnesses and completed fixed-seat classification
+are retained in implementation evidence §5; full working-play support is open.
 
-The original planning-only record preceded task 1.1. Validate and commit only
-this ratified revision's planning artifacts before
-resuming task 1.2; preserve `aec7ca4` and the existing red evidence/probes without
-absorbing them into that planning-only commit. Work inside this project's existing
-`WTs/open-run-simulation`. Source/support conflicts return to the pilot;
-routine measurements and reversible trials within the ratified bounds do not
-need another confirmation. No solid-node or viewer feature work is included.
+**Paused by the pilot on 2026-09-13:** "wrap this up and commit, leaving Curta
+in a documented state, I want to steer the project direction." The current
+checkpoint preserves the diagnostic code, red contracts and all completed
+measurements; it is not a completed implementation commit. No additional task
+is checked off for this handoff, no delta requirements are promoted, and this
+change remains open and unarchived. See
+[the direction handoff](../../../simulation/docs/open-run-handoff-2026-09-13.md)
+and implementation evidence §§6–7 for the latest 23-test result and unresolved
+spring/capture/retention gates. Await the pilot's direction before resuming;
+the earlier instruction to continue routine measurements is superseded by
+this pause. No solid-node or viewer feature work is included.
 
 ## 1. Reproduce and bound the selected interfaces
 
 - [x] 1.1 Add independent selected-input acceptance contracts and reproduce the initial/post-cascade native counterexamples red, including between-detent screw and ball contacts; retain the frozen states, complete physical inventory, source/framework hashes and exact failing interfaces. Evidence: `simulation/docs/selector-fit-implementation-2026-09-13.md` §1 (20 native contracts: 3 passing guards, 17 expected red failures).
 - [ ] 1.2 Complete the nominal ball/shaft, source spring wire/coil/end, groove/follower and gear/fork measurements. Independently establish the source-parallel guide through the measured nominal seats and the relocated back-seat footprint on its unchanged axial plane; verify all ten unchanged numbered datums, retention basins, intermediate extrema and both-direction/lateral working play before changing operating geometry. Retain the original misindexing as a red witness, not a shifted digit-zero convention.
-- [ ] 1.3 Prove or reject the two fixed-seat candidates in canonical relative coordinates; record only the supported, unchanged screw/knob and shaft-join regions, with inventory mutation tests and no moving-contact exemptions.
+- [x] 1.3 Prove or reject the two fixed-seat candidates in canonical relative coordinates; record only the supported, unchanged screw/knob and shaft-join regions, with inventory mutation tests and no moving-contact exemptions. Evidence: implementation record §5 and `selector-fit-alignment-gates-2026-09-13.json`; fresh source-region comparison, common-transform proof, four placement runs and nine rejected mutations.
 - [ ] 1.4 Map separate independent knob-restoration and removal regions for the outboard guide, old/new local mouth and shifted seat footprint; preserve shaft clearance and all support lands outside that mouth, threads, fork/capture cavities and other stations. Measure and set geometric wall/seat/support, guide-play and clearance bounds before reconstruction; explicitly resolve the approximately 0.3515 mm upper-wall warning. Keep screw/housing changes removal-only. Stop if the fixed guide direction, source axial seat plane, unchanged outer shape, protected features or source hardware cannot support the fit.
 - [ ] 1.5 Add separate added/removed-material, connected/valid-part, residual wall/seat/support, bounded-guidance, unchanged-datum, source-to-body accounting and non-selected-occurrence guards. Establish negative witnesses including equal-net-volume protected damage, added material in a protected void, an overbroad mouth exception and an uncontrolled old guide opening before fitting; preserve the completed carry/frame comparison baseline.
 

@@ -1,5 +1,11 @@
 # Open-run Curta: first acceptance slice
 
+**Current disposition, 2026-09-13:** paused by the pilot to steer project
+direction. This document preserves the ratified scope and unfinished acceptance
+obligations; it is not an instruction to continue the previous roadmap.
+The [checkpoint handoff](open-run-handoff-2026-09-13.md) is the latest project
+status. Neither the selected-input fit nor the running slice is delivered.
+
 Status: first acceptance scope and initial fidelity ratified by the pilot,
 2026-09-12; evidence audit and remaining detailed operating choices are still
 open. This is a scoped planning decision, not ratification of a complete
@@ -325,17 +331,26 @@ No selector geometry or running code is changed. The pilot subsequently
 approved preparing the bounded selector correction; its complete
 [fit-selected-input-selector plan](../../openspec/changes/fit-selected-input-selector/proposal.md)
 now passes strict validation. The pilot ratified its complete fit/fidelity
-choices on 2026-09-13 ("ratify, go on"). All 22 implementation tasks remain
-open at ratification. These counterexamples keep
-the readiness gate open.
+choices on 2026-09-13 ("ratify, go on"); planning commit `aec7ca4`.
+All 22 implementation tasks were open at ratification. Task 1.1 is now complete;
+the [implementation evidence](selector-fit-implementation-2026-09-13.md)
+records the independent native red tests and a subsequent source detent/guide
+indexing conflict. The pilot ratified its bounded guide/back-seat alignment and
+local fill-and-rebore revision, committed separately as `da432fb`. Measurements
+resumed: two tasks are complete (red baseline and fixed-seat classification).
+Native endpoint/local support witnesses support further trials, but no production
+fit, full working-play retention or continuous travel is yet proved. These
+remaining gates keep running readiness open.
 
-Next: review the selected-selector prerequisite, then close the remaining home-window,
-continuous-neighbour, initial-setup and outgoing-boundary evidence gaps;
-raw-data reproduction is already verified. Then prepare the three coherent,
-repository-owned planning records. After full proposal ratification, the
-first implementation proves the contract on a tiny Python mechanism before
-the actual Curta geometry. The original audit and scope ratification did not
-create a cycle; the later correction proposal is a separate project-owned
-prerequisite. Only the Curta frame fit is implemented and verified; framework
-and viewer feature code remain unchanged. The pilot requires an explicit
-go-ahead once the evidence is ready, before solid-node feature development.
+The pilot subsequently requested a documented commit and pause to steer the
+project direction. The latest retained measurements and 23-test result are in
+implementation evidence §§6–7. Spring seating, full working-play/capture and
+protected-geometry gates remain open, followed by any eventual fitted-part and
+installed-travel acceptance. Home-window, continuous-neighbour, initial-setup
+and outgoing-boundary obligations likewise remain unresolved; raw-data
+reproduction is already verified. This checkpoint does not choose which work
+to pursue next, abandon the recorded scope, or complete either active change.
+Only the scoped Curta frame fit is implemented and verified in this readiness
+campaign; framework and viewer feature code remain unchanged. Await the
+pilot's project direction and retain the separate explicit go-ahead before
+solid-node feature development.

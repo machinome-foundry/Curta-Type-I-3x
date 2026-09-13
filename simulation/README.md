@@ -1,4 +1,12 @@
-# Curta simulation — implementation resumed
+# Curta simulation — paused for project direction
+
+**2026-09-13 checkpoint:** the pilot has paused work to steer the project
+direction. Start with the [committed-state handoff](docs/open-run-handoff-2026-09-13.md)
+for completed work, ratified choices, unresolved findings and reproducibility.
+The selected-input fit remains open at 2/22 tasks; the original simulation
+change remains separately open at 7/17. No selector correction is installed
+and no running-simulation feature is implemented. The capabilities described
+below are the existing prescribed model, not completed whole-machine acceptance.
 
 The simulation imports the complete standard STEP assembly: all 547 leaf
 occurrences, plus the manual's three clearing-strip prints omitted from the STEP,
@@ -57,6 +65,15 @@ finds nine intersecting pairs when between-detent poses are included, in both
 initial and post-cascade fixtures. The pending second carry is held unchanged.
 This diagnostic changes no operating geometry; selected-input clearance and
 installed-detent acceptance remain open before the running slice can proceed.
+
+The ratified selector alignment revision is committed as `da432fb`. Subsequent
+diagnostics verify the ten candidate nominal seats, local wall/back-seat
+feasibility and two fixed-source joints, but leave spring seating, moving
+capture, working-play retention and full installed travel unresolved. The
+latest native selector suite is **4 passing / 19 expected red**; the new
+`selector_fit.py` bench and `tools/selector_fit_*.py` are diagnostic only and
+are not wired into `Curta`. See the
+[implementation evidence](docs/selector-fit-implementation-2026-09-13.md).
 
 ## Run
 

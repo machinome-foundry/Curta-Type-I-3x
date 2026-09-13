@@ -4,6 +4,13 @@ Status: alignment revision ratified by the pilot on 2026-09-13
 ("ratify, go o"). The original planning commit `aec7ca4` remains unchanged;
 this revision separately authorizes the bounded geometry work below.
 
+Checkpoint, 2026-09-13: revision committed as `da432fb`; subsequent diagnostic
+work is now paused at the pilot's request to steer project direction. Tasks
+1.1 and 1.3 are complete (2/22); no operating selector fit is installed. The
+[handoff](../../../simulation/docs/open-run-handoff-2026-09-13.md) records the
+unfinished work. The proposal below retains its ratified scope, not an
+instruction to continue automatically or a claim of completed acceptance.
+
 The selected Curta input cannot yet traverse its required 0–9 range without
 entering its housing, detent and helical-follower parts. The installed-home
 audit at `dd981041ff41108727abc9ae02db0c291d0126cd` supplies nine native
@@ -80,12 +87,12 @@ No new package dependency, framework/viewer feature code, UI, input command
 contract, causal run or migration of the old calculator controls is included.
 
 The original plan was ratified on 2026-09-13 ("ratify, go on") and committed
-as `aec7ca4877c58820c6c02a32c44d8c6c206c9e9b`. Task 1.1 is complete; no
-operating geometry has changed. The pilot subsequently approved preparing,
+as `aec7ca4877c58820c6c02a32c44d8c6c206c9e9b`. At revision ratification
+task 1.1 was complete; no operating geometry has changed. The pilot subsequently approved preparing,
 then ratified, this bounded alignment revision. Its final fit dimensions
 and geometric adequacy still require the implementation gates below.
-Validate and record the revised planning state before
-resuming implementation. A failed wall/support/capture/continuous-path gate
+The revised planning state was validated and committed separately as `da432fb`
+before measurements resumed. A failed wall/support/capture/continuous-path gate
 returns specific evidence and choice, not a silently broader repair.
 
 Out of scope: the other seven selectors, unrelated housing/thread defects,
