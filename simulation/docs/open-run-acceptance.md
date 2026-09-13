@@ -1,10 +1,19 @@
-# Open-run Curta: first acceptance slice
+# Open-run Curta: acceptance slice for the second validation project
 
-**Current disposition, 2026-09-13:** paused by the pilot to steer project
-direction. This document preserves the ratified scope and unfinished acceptance
-obligations; it is not an instruction to continue the previous roadmap.
-The [checkpoint handoff](open-run-handoff-2026-09-13.md) is the latest project
-status. Neither the selected-input fit nor the running slice is delivered.
+**Current disposition, 2026-09-13:** second validation project, deferred behind
+the completed Pascaline's running migration by explicit pilot direction.
+Curta remains paused. This document preserves the ratified scope and unfinished
+acceptance obligations; it is not an instruction to resume the previous work.
+The [checkpoint handoff](open-run-handoff-2026-09-13.md) at `d7bf44b` is the
+latest mechanical status. Neither the selected-input fit nor the running slice
+is delivered, and neither is a prerequisite for Pascaline validation.
+
+The framework's active `workflow/open-run-simulation/roadmap.md` records the
+new sequence. Its `curta-roadmap-2026-09-13.md` preserves the previous roadmap
+verbatim with a historical-status notice. All Curta scope, ideal-detent
+fidelity, fit protections, readiness gates and later whole-machine increments
+remain intact. This disposition-only update changes no geometry, tests,
+OpenSpec task state or acceptance evidence.
 
 Status: first acceptance scope and initial fidelity ratified by the pilot,
 2026-09-12; evidence audit and remaining detailed operating choices are still
