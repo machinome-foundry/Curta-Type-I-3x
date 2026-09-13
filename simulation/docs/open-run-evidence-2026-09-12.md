@@ -308,5 +308,18 @@ still active at 7/17 tasks and passes strict validation unchanged.
 
 The pilot ratified this frame-only prerequisite on 2026-09-13 ("ratify,
 go on"), including the stop conditions; the running cycles remain unratified.
-Next: its planning commit and named native red tests before any fitting. Its eventual
-clearance result is only one prerequisite for the later running proposals.
+The planning commit is `7d39306`. The new independent frame bench produces
+six native red tests with three placement/travel/validity guards passing.
+Subsequent native support mapping found that both slider endpoint gaps reach
+the protected guide/frame seating land at each station. Work paused under the
+ratified stop condition; see the [gate report](carry-frame-gate-2026-09-13.md).
+The pilot approved the bounded seat-edge exception, committed as `9c58255`.
+The two-station frame fit is now verified: all 17 new contracts pass both
+runners, as do full-stroke frame enclosures, four installed transition sweeps,
+dimensional/protected-feature measurements and twelve negative controls.
+The complete regression is 159/161 faceted and 160/161 native, with only the
+named pre-existing failures; native sections and OpenSCAD assembled views were
+inspected. See the [completion record](carry-frame-validation-2026-09-13.md).
+This local correction is only one prerequisite for the later running
+proposals. The pilot requires an explicit go-ahead once
+the evidence is ready, before actual solid-node feature implementation.

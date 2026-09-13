@@ -24,7 +24,8 @@ preserve the initial 10h Astra/xhigh sprint and its historical stop condition.
 Current verification and remaining physical interfaces are recorded in the
 [measurements](docs/measurements.md#resumption-after-expression-graphs) and
 [resumption validation matrix](docs/resumption-validation-2026-09-11.md).
-All 37 tested node modules have been rerun: 142/144 faceted and 143/144 native
+At that 2026-09-11 checkpoint, all 37 tested node modules were rerun:
+142/144 faceted and 143/144 native
 checks pass. Both runners retain the housing-thread overlap; the additional
 faceted bearing contact passes natively. These are recorded findings, not waived
 failures or final whole-machine acceptance.
@@ -34,6 +35,22 @@ Work starts from the previous [assessment](assessment.md). The new
 spring, distinguish the hardware products sharing names, and document why the
 rest assembly's integrity tests currently fail. The invalid spring has an
 explicitly authorized, documented replacement; upstream geometry is untouched.
+
+## Selected carry/frame correction — verified locally
+
+The first two result-carry stations now use a local, stationary upper-frame
+fit, with a named 0.05 mm running gap. The source frame and all moving parts
+remain unchanged; only the operating frame adapter removes material. The
+pilot approved the tightly bounded guide-seat-edge exception: each station
+retains 73.415 of its original 73.575 mm² registration contact.
+
+All 17 new contracts pass on both runners, and both installed trips and resets
+pass at 41 poses against all 428 physical bodies. Continuous frame-clearance
+enclosures complement the sampled checks, with inspected native sections and
+OpenSCAD assembly views. Full regression is 159/161 faceted and 160/161 native,
+with only the unchanged bearing-facet and housing/thread findings. This does
+not deliver history-dependent running or complete the original simulation. See the
+[focused validation record](docs/carry-frame-validation-2026-09-13.md).
 
 ## Run
 

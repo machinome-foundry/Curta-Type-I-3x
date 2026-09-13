@@ -1,0 +1,31 @@
+{
+  "kind": "continuous-spring-frame-enclosure",
+  "station": "first",
+  "conservative_full_centerline_bounds_mm": [
+    [
+      52.49148331869068,
+      -11.23104718462561,
+      -20.41549637730977
+    ],
+    [
+      61.9544403464303,
+      -4.7885333910638455,
+      -1.8041690742454501
+    ]
+  ],
+  "spread_bounds_mm": [
+    0.094711,
+    1.327148
+  ],
+  "centerline_comparison_error_mm": 2.842170943040401E-14,
+  "surface_allowance_mm": 0.000002,
+  "rounding_allowance_mm": 1E-8,
+  "clear_enclosures": 229,
+  "native_checks": 370,
+  "max_depth": 24,
+  "unresolved": [],
+  "queued": 0,
+  "passed": true,
+  "elapsed_seconds": 12.145073466992471,
+  "model_sha256": "68cff8e1e2b819d37d8ac6e6124ec3809ea52f6aecd0e204ada6b9ec37f07836"
+}

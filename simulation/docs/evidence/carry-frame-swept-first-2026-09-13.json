@@ -1,0 +1,40 @@
+{
+  "kind": "continuous-native-slider-frame-enclosure",
+  "station": "first",
+  "raised_source_bounds_in_certificate_axes_mm": [
+    [
+      27.8651229940382,
+      -11.37859416683633,
+      -27.6000001
+    ],
+    [
+      61.725,
+      -6.419999899999997,
+      31.150000000000045
+    ]
+  ],
+  "full_stroke_bounds_in_certificate_axes_mm": [
+    [
+      27.8651229940382,
+      -11.37859416683633,
+      -31.8000001
+    ],
+    [
+      61.725,
+      -6.419999899999997,
+      31.150000000000045
+    ]
+  ],
+  "common_coordinate_rotation_degrees": 0,
+  "travel_mm": 4.2,
+  "guard_mm": 0.000001,
+  "max_depth": 36,
+  "native_frame_checks": 13907,
+  "clear_cells": 3178,
+  "excluded_empty_cells": 3776,
+  "smallest_clear_cell_width_mm": 0.019369508854829576,
+  "unresolved": [],
+  "queued": 0,
+  "passed": true,
+  "elapsed_seconds": 103.04603015599423
+}

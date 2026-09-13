@@ -296,12 +296,24 @@ two stations. The pilot subsequently ratified it on 2026-09-13 ("ratify,
 go on"), retaining its protected-feature stop conditions. The running cycles
 are not thereby ratified.
 
-Next: commit that ratified plan and preserve the named native failures in
-tests before fitting. After it passes, close the
-remaining transition, home-window and swept-neighbour/setup evidence gaps;
+The original plan is committed as `7d39306`; six native red tests reproduced
+the contacts and three guards passed. The requested gap reached guide-seat
+edges, triggering the [measured gate](carry-frame-gate-2026-09-13.md). The pilot
+approved its bounded exception; revision `9c58255` records that approval.
+The two-station frame fit now meets its focused acceptance: all 17 new
+contracts pass both runners, with continuous slider/spring/sleeve frame
+enclosures, four installed transition sweeps, dimensional/protected-feature
+measurements, twelve negative controls and inspected native/OpenSCAD views.
+Full regression is 159/161 faceted and 160/161 native, with only the named
+pre-existing failures. See the [completed validation](carry-frame-validation-2026-09-13.md).
+
+Next: record the correction's completion and close the remaining home-window,
+continuous-neighbour, initial-setup and outgoing-boundary evidence gaps;
 raw-data reproduction is already verified. Then prepare the three coherent,
 repository-owned planning records. After full proposal ratification, the
 first implementation proves the contract on a tiny Python mechanism before
 the actual Curta geometry. The original audit and scope ratification did not
 create a cycle; the later correction proposal is a separate project-owned
-prerequisite. No production code has changed.
+prerequisite. Only the Curta frame fit is implemented and verified; framework
+and viewer feature code remain unchanged. The pilot requires an explicit
+go-ahead once the evidence is ready, before solid-node feature development.

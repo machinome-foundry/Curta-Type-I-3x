@@ -1,9 +1,12 @@
 # Frame-fit implementation: protected-seat gate
 
-Status: **paused for pilot direction, before production fitting**, 2026-09-13.
-The ratified `clear-result-carry-frame-contacts` change remains active. Task
-1.1 is complete; 1.2–1.4 are not complete. No corrected-frame acceptance,
-full-path bound, regression acceptance, archival or integration is claimed.
+Historical gate report, 2026-09-13. The pilot subsequently approved the
+bounded seat-edge exception and continued fitting without repeated routine
+confirmations; that planning revision is commit `9c58255`. The findings below
+retain the reason for that revision, not a current request for permission.
+No corrected-frame acceptance, full-path bound or regression acceptance was
+claimed at this gate. The subsequent [verified correction](carry-frame-validation-2026-09-13.md)
+records those results separately; integration remains pending.
 
 ## Result
 
@@ -89,7 +92,7 @@ complete assembled or after-fit image is claimed.
 
 ## Decision returned to the pilot
 
-Recommendation, **not yet ratified**: permit an explicitly dimensioned local
+Recommendation at the gate, **subsequently approved by the pilot**: permit an explicitly dimensioned local
 exception at these two seat edges per selected station. Keep the guide itself
 and its placement unchanged, and require preservation/contact tests for the
 remaining registration land. Measure the complete 0.05 mm pocket boundary and
@@ -100,17 +103,18 @@ This is narrower than relocating a support or changing a moving part, but it
 does revise the current promise that every protected seating surface remains
 unchanged. All other stop conditions, the two-station scope and the unsampled
 clearance proof remain in force. The remaining M4, support/nut, shaft/bearing
-and non-selected-station checks have not been completed and are not waived.
+and non-selected-station checks had not been completed at the gate and were
+not waived; their later full measurements are in the correction's record.
 
-Next step after pilot direction: revise the proposal/design/spec/tasks
-coherently for the chosen treatment of these seat edges, validate and ratify
-that revision, then complete the dimensional and remaining-support gates
-before any production cut. Until then the native contact tests stay honestly
-red and the running-engine/viewer cycles remain pending.
+The proposal/design/spec/tasks have since been revised coherently and pass
+strict validation. Fitting and verification subsequently proceeded under that authority.
+The running-engine/viewer cycles remain pending; the pilot explicitly asks
+to be consulted again when ready to start actual solid-node feature development.
 
-## Reproduction and provenance
+## Historical commands and provenance
 
-Run sequentially from the Curta `WTs/open-run-simulation` directory:
+These commands were run sequentially from the Curta `WTs/open-run-simulation`
+directory with the gate-era bench/test/tool hashes listed below:
 
 ```sh
 ulimit -v 8388608
@@ -122,15 +126,22 @@ timeout 300 /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.too
 timeout 180 /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.tools.carry_frame_seat_gate
 ```
 
-The first command is expected to exit 1 for the six named contacts. Both
-diagnostics exited 0. `openspec validate clear-result-carry-frame-contacts
+The first command exited 1 for the six named contacts at that historical
+checkpoint. It now passes against the fitted operating frame; rerunning it
+in the completed checkout is not a reproduction of the red state. Both
+diagnostics exited 0; their current versions explicitly select the raw
+`MainBody` so they still measure the source seat, not the fitted adapter.
+The historical tool/test hashes below identify the earlier versions, whereas
+the completion regression records the full final source hashes.
+`openspec validate clear-result-carry-frame-contacts
 --strict` and `openspec validate simulate-the-curta --strict` pass; planning
 validation is not mechanical acceptance. The original simulation remains 7/17.
 
 Framework import: `solid-node/WTs/open-run-simulation`, unchanged content
 `6e41f2da132a8604f9b68895967247fb8876fc4d`. Other import origins are in the
-red record. Project production geometry and source placements remain at the
-planning commit; only the bench, tests, diagnostics and records were added.
+red record. At this checkpoint, project production geometry and source
+placements remained at the planning commit; only the bench, tests,
+diagnostics and records had been added.
 
 SHA-256:
 

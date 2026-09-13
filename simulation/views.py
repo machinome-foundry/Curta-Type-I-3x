@@ -35,6 +35,18 @@ class InsideCurta(Curta):
         self.frame.omit()
 
 
+class CarryFrameInspection(Curta):
+    """099 + 1, shell hidden for inspection only; frame and mounts stay present.
+
+    Collision and path evidence always use the complete Curta, never this view.
+    """
+    operand = Driver(default=1, range=(0, 99999999), dtype=int)
+    initial_result = Driver(default=99, range=(0, 99999999999), dtype=int)
+
+    def render(self):
+        self.enclosure.omit()
+
+
 class CarryPinDriving(CarryContactBench):
     enabled = Driver(default=1, range=(0, 1), dtype=int)
     crank_turns = Driver(default=.325, range=(0, 2), unit='rev')

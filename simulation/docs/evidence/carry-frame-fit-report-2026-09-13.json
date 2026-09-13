@@ -1,0 +1,357 @@
+{
+  "frame_fitted_mm3": 199441.6249710615,
+  "frame_original_mm3": 199456.9281226627,
+  "gaps": [
+    {
+      "gap_parameter_mm": 0.04,
+      "lowered_x_mm": 0.03999999999999915,
+      "raised_z_mm": 0.039999999999981384,
+      "spring_left_normal_mm": 0.040122907753743824,
+      "spring_left_wall_y_mm": -11.361999999999998,
+      "spring_right_normal_mm": 0.040538392310012,
+      "spring_right_wall_y_mm": -11.361999999999998,
+      "station": "first"
+    },
+    {
+      "gap_parameter_mm": 0.04,
+      "lowered_x_mm": 0.03999999999999915,
+      "raised_z_mm": 0.039999999999981384,
+      "spring_left_normal_mm": 0.04012290745523632,
+      "spring_left_wall_y_mm": -11.361999999999998,
+      "spring_right_normal_mm": 0.04053839505991776,
+      "spring_right_wall_y_mm": -11.361999999999998,
+      "station": "second"
+    },
+    {
+      "gap_parameter_mm": 0.05,
+      "lowered_x_mm": 0.04999999999999716,
+      "raised_z_mm": 0.04999999999999005,
+      "spring_left_normal_mm": 0.05009578507155856,
+      "spring_left_wall_y_mm": -11.372,
+      "spring_right_normal_mm": 0.050511416827979334,
+      "spring_right_wall_y_mm": -11.372000000000002,
+      "station": "first"
+    },
+    {
+      "gap_parameter_mm": 0.05,
+      "lowered_x_mm": 0.04999999999999716,
+      "raised_z_mm": 0.04999999999999005,
+      "spring_left_normal_mm": 0.050095784773012436,
+      "spring_left_wall_y_mm": -11.372,
+      "spring_right_normal_mm": 0.050511419577873036,
+      "spring_right_wall_y_mm": -11.371999999999996,
+      "station": "second"
+    },
+    {
+      "gap_parameter_mm": 0.06,
+      "lowered_x_mm": 0.060000000000002274,
+      "raised_z_mm": 0.05999999999998096,
+      "spring_left_normal_mm": 0.060068668120043016,
+      "spring_left_wall_y_mm": -11.382,
+      "spring_right_normal_mm": 0.0604844470729924,
+      "spring_right_wall_y_mm": -11.382,
+      "station": "first"
+    },
+    {
+      "gap_parameter_mm": 0.06,
+      "lowered_x_mm": 0.060000000000002274,
+      "raised_z_mm": 0.05999999999998096,
+      "spring_left_normal_mm": 0.06006866782145006,
+      "spring_left_wall_y_mm": -11.381999999999996,
+      "spring_right_normal_mm": 0.0604844498228785,
+      "spring_right_wall_y_mm": -11.382,
+      "station": "second"
+    }
+  ],
+  "kind": "carry-frame-dimensional-and-negative-controls",
+  "mutations": [
+    {
+      "detected": true,
+      "mutation": "omit-raised-shoulder",
+      "overlap_mm3": 4.626577658591639,
+      "station": "first"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-raised-shoulder",
+      "overlap_mm3": 4.626577659729467,
+      "station": "second"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-lowered-edge",
+      "overlap_mm3": 0.09922499999999418,
+      "station": "first"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-lowered-edge",
+      "overlap_mm3": 0.09922500192465789,
+      "station": "second"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-spring-left",
+      "overlap_mm3": 0.23686772238683562,
+      "station": "first"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-spring-left",
+      "overlap_mm3": 0.23686772218044014,
+      "station": "second"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-spring-right",
+      "overlap_mm3": 0.23657124515291197,
+      "station": "first"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-spring-right",
+      "overlap_mm3": 0.23657124068432625,
+      "station": "second"
+    },
+    {
+      "detected": true,
+      "mutation": "omit-second",
+      "overlap_mm3": 4.626577659729467
+    },
+    {
+      "detected": true,
+      "mutation": "misplace-second",
+      "overlap_mm3": 4.626577659729467
+    },
+    {
+      "detected": true,
+      "forbidden_removal_mm3": 0.0009999999999998161,
+      "mutation": "overcut-protected-seat"
+    },
+    {
+      "detected": true,
+      "measured_mm": 0.04999999999999716,
+      "mutation": "ignore-gap-parameter",
+      "requested_mm": 0.06
+    }
+  ],
+  "removed_mm3": 15.303151601197897,
+  "seats": {
+    "first": {
+      "lands": [
+        {
+          "bounds_mm": [
+            [
+              52.8,
+              -10.290000000000004,
+              16.8
+            ],
+            [
+              52.8,
+              -6.39,
+              24.300000000000004
+            ]
+          ],
+          "protected_mm2": 24.93000000000002,
+          "retained_mm2": 24.93000000000002,
+          "source_mm2": 24.93000000000002
+        },
+        {
+          "bounds_mm": [
+            [
+              60.375,
+              -6.390000000000003,
+              19.200000000000006
+            ],
+            [
+              61.800000000000004,
+              -6.3900000000000015,
+              24.300000000000008
+            ]
+          ],
+          "protected_mm2": 7.267499999999985,
+          "retained_mm2": 7.267499999999985,
+          "source_mm2": 7.267499999999985
+        },
+        {
+          "bounds_mm": [
+            [
+              52.8,
+              -6.390000000000003,
+              19.200000000000006
+            ],
+            [
+              54.224999999999994,
+              -6.39,
+              24.300000000000008
+            ]
+          ],
+          "protected_mm2": 7.267499999999981,
+          "retained_mm2": 7.267499999999981,
+          "source_mm2": 7.267499999999981
+        },
+        {
+          "bounds_mm": [
+            [
+              52.79999999999999,
+              -6.389999999999994,
+              -21.600000000000005
+            ],
+            [
+              54.224999999999994,
+              -6.389999999999993,
+              -16.8
+            ]
+          ],
+          "protected_mm2": 6.827200000000027,
+          "retained_mm2": 6.83499999999999,
+          "source_mm2": 6.840000000000025
+        },
+        {
+          "bounds_mm": [
+            [
+              60.37499999999999,
+              -6.389999999999994,
+              -21.600000000000005
+            ],
+            [
+              61.8,
+              -6.389999999999993,
+              -16.8
+            ]
+          ],
+          "protected_mm2": 6.839999999999982,
+          "retained_mm2": 6.839999999999982,
+          "source_mm2": 6.839999999999982
+        },
+        {
+          "bounds_mm": [
+            [
+              52.79999999999999,
+              -10.289999999999996,
+              -21.600000000000005
+            ],
+            [
+              52.8,
+              -6.389999999999993,
+              -15.9
+            ]
+          ],
+          "protected_mm2": 20.17720000000001,
+          "retained_mm2": 20.275000000000006,
+          "source_mm2": 20.43000000000001
+        }
+      ],
+      "original_mm2": 73.575,
+      "retained_mm2": 73.41499999999996
+    },
+    "second": {
+      "lands": [
+        {
+          "bounds_mm": [
+            [
+              46.09638309603874,
+              -27.728100637862152,
+              16.8
+            ],
+            [
+              47.430261661645,
+              -24.063299414417266,
+              24.3
+            ]
+          ],
+          "protected_mm2": 24.930000009905715,
+          "retained_mm2": 24.930000009905715,
+          "source_mm2": 24.930000009905715
+        },
+        {
+          "bounds_mm": [
+            [
+              54.54843325719908,
+              -27.141480702453215,
+              19.20000000099864
+            ],
+            [
+              55.88749524320304,
+              -26.654101998319078,
+              24.300000001352007
+            ]
+          ],
+          "protected_mm2": 7.26750000000001,
+          "retained_mm2": 7.26750000000001,
+          "source_mm2": 7.26750000000001
+        },
+        {
+          "bounds_mm": [
+            [
+              47.43026165537602,
+              -24.550678118504518,
+              19.19999999912022
+            ],
+            [
+              48.769323640115296,
+              -24.063299414417287,
+              24.3
+            ]
+          ],
+          "protected_mm2": 7.267499968040288,
+          "retained_mm2": 7.267499968040288,
+          "source_mm2": 7.267499968040288
+        },
+        {
+          "bounds_mm": [
+            [
+              47.43026166430317,
+              -24.550678120288495,
+              -21.600000000879778
+            ],
+            [
+              48.76932365023273,
+              -24.06329941616747,
+              -16.800000000526406
+            ]
+          ],
+          "protected_mm2": 6.8272000005906595,
+          "retained_mm2": 6.835000017719673,
+          "source_mm2": 6.839999999999986
+        },
+        {
+          "bounds_mm": [
+            [
+              54.548433267390905,
+              -27.14148070423719,
+              -21.59999999900136
+            ],
+            [
+              55.88749525332047,
+              -26.654102000116172,
+              -16.799999998647987
+            ]
+          ],
+          "protected_mm2": 6.839999999999997,
+          "retained_mm2": 6.839999999999997,
+          "source_mm2": 6.839999999999997
+        },
+        {
+          "bounds_mm": [
+            [
+              46.09638310240983,
+              -27.72810063776906,
+              -21.600000001050304
+            ],
+            [
+              47.430261665493454,
+              -24.06329941616747,
+              -15.9
+            ]
+          ],
+          "protected_mm2": 20.17720000204986,
+          "retained_mm2": 20.27500000513585,
+          "source_mm2": 20.430000002109253
+        }
+      ],
+      "original_mm2": 73.57499998005525,
+      "retained_mm2": 73.41500000080154
+    }
+  }
+}

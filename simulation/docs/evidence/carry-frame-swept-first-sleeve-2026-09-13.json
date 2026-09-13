@@ -1,0 +1,40 @@
+{
+  "kind": "continuous-native-sleeve-frame-enclosure",
+  "station": "first",
+  "raised_source_bounds_in_certificate_axes_mm": [
+    [
+      31.900179630239368,
+      -20.27726213697143,
+      -34.800000100000005
+    ],
+    [
+      44.21214506807023,
+      -7.875304514302445,
+      -15.899999900000003
+    ]
+  ],
+  "full_stroke_bounds_in_certificate_axes_mm": [
+    [
+      31.900179630239368,
+      -20.27726213697143,
+      -39.00000010000001
+    ],
+    [
+      44.21214506807023,
+      -7.875304514302445,
+      -15.899999900000003
+    ]
+  ],
+  "common_coordinate_rotation_degrees": 0,
+  "travel_mm": 4.2,
+  "guard_mm": 0.000001,
+  "max_depth": 36,
+  "native_frame_checks": 1,
+  "clear_cells": 1,
+  "excluded_empty_cells": 0,
+  "smallest_clear_cell_width_mm": 12.31196543783086,
+  "unresolved": [],
+  "queued": 0,
+  "passed": true,
+  "elapsed_seconds": 5.079645625999547
+}
