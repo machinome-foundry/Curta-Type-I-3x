@@ -5,6 +5,12 @@ acceptance checks. Planning: `7d39306`, revised with the
 pilot-approved guide-seat-edge exception in `9c58255`. This is a Curta-owned
 prerequisite, not implementation of the solid-node/viewer running feature.
 
+Verified implementation commit: `3afcac97a808aebf9d7019d6e43a6dc3086fea62`.
+Its source matches the 191-file regression fingerprint. The subsequent
+completion record only archives the [focused change](../../openspec/changes/archive/2026-09-13-clear-result-carry-frame-contacts/proposal.md)
+and records the campaign handoff. All 19 tasks are complete; repository
+integration is not authorized or performed.
+
 ## Actual fit and independent measurements
 
 `frame_fits.CarryPassageFrame` derives from the unchanged source `MainBody`.

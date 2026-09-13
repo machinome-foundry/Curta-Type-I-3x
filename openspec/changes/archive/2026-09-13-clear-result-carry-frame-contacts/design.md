@@ -30,7 +30,7 @@ present as neighbouring geometry, even where its motion is held fixed.
 
 ### Evidence and source reconciliation
 
-The [native evidence report](../../../simulation/docs/open-run-evidence-2026-09-12.md)
+The [native evidence report](../../../../simulation/docs/open-run-evidence-2026-09-12.md)
 records all 428 physical bodies and four nine-pose transition probes. Both
 stations show the same three contact families:
 
@@ -47,7 +47,7 @@ transmission-sleeve flanges, and require free snap/reset motion. Those figures
 support the installation topology; they do not specify a clearance-pocket
 dimension or prove the fitted wire's exact elastic shape.
 
-The [source comparison](../../../simulation/docs/evidence/open-run-transitions/frame-source-comparison.json)
+The [source comparison](../../../../simulation/docs/evidence/open-run-transitions/frame-source-comparison.json)
 checks the first station at four drops with both the original source parts and
 the fitted operating parts. All 16 native and 16 source-STL-interface results
 are valid. The original static STEP wire intersects the native frame by
@@ -164,7 +164,7 @@ bounds, not choosing a different repair when they fail.
 
 #### Approved seat-edge exception
 
-The [native gate report](../../../simulation/docs/carry-frame-gate-2026-09-13.md)
+The [native gate report](../../../../simulation/docs/carry-frame-gate-2026-09-13.md)
 measures a 20.43 mm² guide/frame registration land at each station. At the
 raised and lowered endpoints the slider meets its boundary; even a 0.025 mm
 clearance witness occupies a 0.03675 mm² strip of that land at each end.

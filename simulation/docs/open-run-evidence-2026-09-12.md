@@ -296,7 +296,7 @@ hole repair, source mutation or claim of complete STEP/STL equivalence was
 made; default duplicate-vertex processing on STL load is recorded explicitly.
 
 The Curta-owned
-[clear-result-carry-frame-contacts proposal](../../openspec/changes/clear-result-carry-frame-contacts/proposal.md)
+[clear-result-carry-frame-contacts proposal](../../openspec/changes/archive/2026-09-13-clear-result-carry-frame-contacts/proposal.md)
 now has proposal, design, delta spec and tasks, all passing strict OpenSpec
 validation. It recommends bounded stationary frame reliefs at the two
 selected stations, preserving the current spring, guides, moving parts and
@@ -320,6 +320,7 @@ dimensional/protected-feature measurements and twelve negative controls.
 The complete regression is 159/161 faceted and 160/161 native, with only the
 named pre-existing failures; native sections and OpenSCAD assembled views were
 inspected. See the [completion record](carry-frame-validation-2026-09-13.md).
+Verified implementation: `3afcac97a808aebf9d7019d6e43a6dc3086fea62`, not integrated.
 This local correction is only one prerequisite for the later running
 proposals. The pilot requires an explicit go-ahead once
 the evidence is ready, before actual solid-node feature implementation.

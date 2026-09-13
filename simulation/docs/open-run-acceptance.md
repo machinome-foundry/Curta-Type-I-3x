@@ -290,7 +290,7 @@ The frame was outside the earlier isolated carry and selected `099` checks.
 No interface or geometry correction is implied by recording that finding.
 
 **Follow-up, 2026-09-13:** source/manual comparison and the complete
-[clear-result-carry-frame-contacts proposal](../../openspec/changes/clear-result-carry-frame-contacts/proposal.md)
+[clear-result-carry-frame-contacts proposal](../../openspec/changes/archive/2026-09-13-clear-result-carry-frame-contacts/proposal.md)
 are now recorded. The proposed correction is frame-only and limited to these
 two stations. The pilot subsequently ratified it on 2026-09-13 ("ratify,
 go on"), retaining its protected-feature stop conditions. The running cycles
@@ -307,7 +307,15 @@ measurements, twelve negative controls and inspected native/OpenSCAD views.
 Full regression is 159/161 faceted and 160/161 native, with only the named
 pre-existing failures. See the [completed validation](carry-frame-validation-2026-09-13.md).
 
-Next: record the correction's completion and close the remaining home-window,
+The verified correction is committed as `3afcac97a808aebf9d7019d6e43a6dc3086fea62`.
+Integration remains pending. Readiness work has resumed with the selected-input
+source-frame inventory and a pure-law counterexample: even with completed
+result `100` held fixed at one turn, the old operand law changes the second
+carry from latched to released when input changes from one to zero. The next
+geometry probe must independently freeze that retained state, as detailed in
+the completion record; it cannot use the old calculator control as evidence.
+
+Next: close the remaining home-window,
 continuous-neighbour, initial-setup and outgoing-boundary evidence gaps;
 raw-data reproduction is already verified. Then prepare the three coherent,
 repository-owned planning records. After full proposal ratification, the
