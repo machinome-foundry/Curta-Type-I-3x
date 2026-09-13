@@ -34,6 +34,11 @@ The ball SHALL remain guided and supported by the shaft's detent surface;
 the spring SHALL follow its installed displacement while remaining retained
 at both ends. The ten seated detents and the transitions between them SHALL
 have supported geometry without ball, spring or guide penetration.
+Each numbered position SHALL belong to its corresponding geometric retention
+seat with bounded working play. Leaving that seat in either direction after
+taking up the play SHALL require additional spring compression; an externally
+held flank pose SHALL NOT substitute for a seat. This is geometric retention,
+not a claim about friction, spring force, settling time or manufacturing strength.
 
 #### Scenario: Inspect a numbered detent
 
@@ -41,6 +46,15 @@ have supported geometry without ball, spring or guide penetration.
 - **THEN** the ball is retained in its guide and supported at that detent
 - **AND** the spring remains seated against the ball and its back support
   without passing through either part
+
+#### Scenario: Distinguish a numbered seat from a held ramp pose
+
+- **WHEN** the coupled input is perturbed around one of its numbered positions
+  with the actual guide, spring support and follower constraints present
+- **THEN** that position lies within its measured retention seat and play
+- **AND** travel out of the seat requires additional spring compression
+- **AND** a lower-compression adjacent seat outside that play invalidates the
+  numbered alignment even when all displayed parts are non-intersecting
 
 #### Scenario: Inspect a between-detent position
 
@@ -102,23 +116,55 @@ fixed seats or exempted because their penetration is small.
 ### Requirement: A selected-input correction preserves the surrounding machine
 
 Apart from the documented ball replacement and installed spring representation,
-rigid material removal SHALL be confined to documented local regions of the
-selected knob's ball guide, screw's non-threaded follower tip and housing
-slot/window edges. The correction SHALL preserve shaft detent/groove working
-surfaces, screw threads, spring back support, knob fork, keyed gear, bearings,
-housing supports and fastening features. The other seven selectors, output
-and carry mechanisms, and the completed carry/frame fit SHALL retain their
-existing geometry and placement. Upstream files and attribution SHALL remain
-unchanged; every original physical body SHALL remain accounted for.
-Each fitted rigid part SHALL remain a valid connected solid, with no added
-material outside the explicitly documented hardware/spring replacements.
+rigid changes SHALL be confined to the selected knob's documented outboard
+ball/spring guide, localized shaft-facing mouth and spring-seat footprint,
+the screw's non-threaded follower tip and housing slot/window edges. Only the
+selected knob's old outboard guide/seat cavity and obsolete guide mouth SHALL
+be eligible for local material restoration. Its shaft-clearance bore, fork
+cavities, thread voids and exterior air SHALL NOT be eligible restoration space.
+The screw and housing corrections SHALL remain removal-only. Additions and
+removals SHALL each remain within their independently documented regions.
 
-#### Scenario: Inspect a local relief
+The corrected guide and aligned back-seat footprint SHALL preserve continuous
+ball containment, supported spring seating and bounded working play. The
+guide SHALL retain its source-parallel direction and the back seat its source
+axial plane. The knob's external shape, except the relocated guide opening,
+and its shaft-support lands outside the mapped guide mouth SHALL remain
+unchanged. The correction SHALL preserve the shaft's detent/groove surfaces,
+screw threads/retention, knob fork and capture cavities, keyed gear, bearings,
+other supports and housing fastening features. The other seven selectors,
+output and carry mechanisms, and the completed carry/frame fit SHALL retain
+their existing geometry and placement. Upstream files and attribution SHALL
+remain unchanged; every original physical body SHALL remain accounted for.
+Each fitted rigid part SHALL remain a valid connected solid. The corrected
+knob SHALL remain one source-attributed body, not an assembly with an unlisted
+insert. The guide/seat correction SHALL NOT move the entire knob, shaft or
+keyed group, redefine numbered coordinates or reduce the selected stroke.
+
+#### Scenario: Inspect a local guide correction and relief
 
 - **WHEN** the fitted input and housing are compared with the original source
-- **THEN** source-derived rigid reliefs occur only in the documented permitted regions
-- **AND** retained supports and working interfaces keep their source geometry,
-  alignment and mechanical function
+- **THEN** added and removed rigid material each remain in their documented
+  permitted regions, with no restoration outside the selected guide exception
+- **AND** the corrected guide and relocated seat retain their required containment
+  and support, with measured remaining walls, lands and working play
+- **AND** protected supports and working interfaces keep their source geometry,
+  alignment and mechanical function, regardless of unchanged net part volume
+
+#### Scenario: Obsolete guide space leaves the ball uncontrolled
+
+- **WHEN** a proposed correction leaves an old guide opening that permits ball
+  movement beyond the declared working play
+- **THEN** the guide correction is rejected even if its prescribed centerline clears
+- **AND** numerical placement of the ball does not substitute for physical guidance
+
+#### Scenario: The aligned guide loses containment or support
+
+- **WHEN** the shifted guide or seat leaves insufficient continuous material
+  for its declared geometric containment or support
+- **THEN** that fit remains unresolved even if the knob is one connected solid
+- **AND** external knob growth, changed hardware or damage to another support
+  is not silently substituted
 
 #### Scenario: A proposed cut would damage a support
 
