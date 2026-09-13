@@ -1,0 +1,91 @@
+{
+  "recorded_on_utc": "2026-09-12",
+  "status": "Native clearance counterexamples; no production mutation or running acceptance",
+  "project_commit": "60979adbc795785fc51a28a386f85d1a49bfedf7",
+  "framework_commit": "6e41f2da132a8604f9b68895967247fb8876fc4d",
+  "project_worktree": "/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation",
+  "framework_worktree": "/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation",
+  "python": "/home/asa/devel/libresolid-studio/.venv/bin/python",
+  "environment": {
+    "python": "3.12.3",
+    "cadquery": "2.7.0",
+    "cadquery-ocp": "7.8.1.1.post1",
+    "manifold3d": "3.5.2",
+    "trimesh": "4.4.9",
+    "molejo": "0.2.0",
+    "SOLID_BUILD_DIR": "_build_open_run_evidence",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "address_space_limit_KiB": 8388608,
+    "timeout_seconds": 600,
+    "heavy_jobs": "sequential"
+  },
+  "diagnostic_source_sha256": {
+    "simulation/tools/open_run_transitions.py": "904ccf97ff3dbb4f4033e804c1f810a6c07e6910c10edd183710e60fc557eeed",
+    "simulation/tools/open_run_contact_sections.py": "5f1b761422eb1ead190c7f0b24355c0bc6d4512371873140cb465287d288a759"
+  },
+  "evidence_sha256": {
+    "trip1-faceted-9.json": "13646c2332078dd89f98084d733b62162f1b18f0abc81f2c56e933fe65331465",
+    "trip1-native-9.json": "452b78cffb6fbbf854584eb6ff86a10d1fcfae4ae4af4250b45d611ccb522c79",
+    "trip2-native-9.json": "c722a773b12158121877b3cd36813192a289e65c6f225c4f189887239d18bda5",
+    "reset1-native-9.json": "d1b05ffa71a6af361a1d5beb14bd0544b65a22803cad19a1a3c220679ab366c9",
+    "reset2-native-9.json": "9fe009f81a25ca26fa1d297b71cf0a6d9422937f92602b94807728f54b04e033",
+    "frame-contact-localization.json": "84533ee979b6fcb4218cc7d4627ecef92cb5a8f2fdd64e69e42fc147be1a120c"
+  },
+  "image": {
+    "path": "_build_evidence/open-run-frame-sections.png",
+    "sha256": "929c8552ab1692704afdc7d50e6e7d3ac2e1edd9d48618fad256875fbdc3e043",
+    "storage": "Generated ignored output; regenerate with simulation.tools.open_run_contact_sections",
+    "visually_inspected": true,
+    "observed": "Native overlap outlines show spring/frame penetration, narrow lowered-slider edge intersection and wider raised-slider shoulder intersection; no proposed relief is drawn"
+  },
+  "runs": [
+    {
+      "arguments": "-m simulation.tools.open_run_transitions --event trip1 --samples 9 --kernel faceted --inventory",
+      "exit_code": 1,
+      "record": "trip1-faceted-9.json"
+    },
+    {
+      "arguments": "-m simulation.tools.open_run_transitions --event trip1 --samples 9 --kernel exact",
+      "exit_code": 1,
+      "record": "trip1-native-9.json"
+    },
+    {
+      "arguments": "-m simulation.tools.open_run_transitions --event trip2 --samples 9 --kernel exact",
+      "exit_code": 1,
+      "record": "trip2-native-9.json"
+    },
+    {
+      "arguments": "-m simulation.tools.open_run_transitions --event reset1 --samples 9 --kernel exact",
+      "exit_code": 1,
+      "record": "reset1-native-9.json"
+    },
+    {
+      "arguments": "-m simulation.tools.open_run_transitions --event reset2 --samples 9 --kernel exact",
+      "exit_code": 1,
+      "record": "reset2-native-9.json"
+    },
+    {
+      "arguments": "-m simulation.tools.open_run_contact_sections",
+      "exit_code": 0,
+      "meaning": "Diagnostic reporting and image generation completed; not a clearance pass",
+      "record": "frame-contact-localization.json"
+    }
+  ],
+  "guards": {
+    "event_crossings": "Passed for four retained profile-derived event angles within 1e-10 degrees",
+    "bounding_boxes": "Passed overlapping, boundary-touching and disjoint box cases",
+    "missing_crossing": "ValueError confirmed",
+    "installed_frame_and_stroke": "Passed within every completed transition run"
+  },
+  "limitations": [
+    "Nine discrete poses per transition, not a continuous clearance certificate.",
+    "The old arithmetic/prescribed model sets the frozen background only; no causal running simulation is exercised.",
+    "Only moving-vs-background and moving-vs-moving pairs are tested, not all static pairs.",
+    "Six source-mesh bodies have no native representation; their interfaces remain faceted.",
+    "The spring trajectory is the existing fitted analytic shape law, not a force, strain, friction or impact solution.",
+    "No home-window, complete setup, outgoing-boundary or cross-runtime acceptance is closed by these results.",
+    "No finer sweep was used to search for larger maxima once native counterexamples were established."
+  ]
+}

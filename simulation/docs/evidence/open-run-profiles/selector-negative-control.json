@@ -1,0 +1,6 @@
+{
+  "kind": "Negative control: crank 120 degrees with the one-row input pinion incorrectly held at home tooth phase",
+  "selector_travel_mm": 6,
+  "overlap_mm3": 2.9450197870974586,
+  "valid_boolean": true
+}

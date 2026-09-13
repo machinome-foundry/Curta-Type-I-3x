@@ -1,0 +1,29 @@
+{
+  "kind": "Exact sampled selector pinion/drum clearance at two candidate rest phases; not a full home-window proof",
+  "method": "Hold transmission at its home tooth phase and translate the fitted selected input group through its 0-54 mm physical axial travel; 1 mm spacing. No calculator or dynamic drive is evaluated during the sweep.",
+  "geometry": [
+    "Curta.drum.main_axle_step_drum_bottom_1",
+    "Curta.drum.main_axle_step_drum_top_1",
+    "Curta.drum.step_drum_joining_pin_1",
+    "Curta.drum.step_drum_joining_pin_2",
+    "Curta.drum.step_drum_joining_pin_3",
+    "Curta.result.p_10219_410002_1"
+  ],
+  "results": [
+    {
+      "crank_angle_deg": 0,
+      "samples": 55,
+      "boolean_pairs": 55,
+      "overlaps": [],
+      "invalid_booleans": []
+    },
+    {
+      "crank_angle_deg": 357,
+      "samples": 55,
+      "boolean_pairs": 0,
+      "overlaps": [],
+      "invalid_booleans": []
+    }
+  ],
+  "wall_seconds": 25.541898832001607
+}
