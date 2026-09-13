@@ -129,6 +129,18 @@ The standalone spring snapshot was visually inspected. Native connectivity
 alone is insufficient here: the exact connectivity check sees one solid and
 passes, while native validity and the faceted connectivity check expose defects.
 
+### Later selected-input readiness audit, 2026-09-13
+
+The [frozen-home selector evidence](open-run-selector-evidence-2026-09-13.md)
+extends the placement-only selector tests above. Eight selected movers are
+checked against all 428 installed physical bodies at initial and post-cascade
+home, without re-evaluating the old operand law or releasing the pending second
+carry. Ten seated settings have eight native intersecting pairs; adding nine
+half-detents finds a ninth, between the shaft and screw. The source ball named
+5 mm is natively a 5.4 mm sphere, and its fixed placement enters the shaft more
+deeply between digits. Housing-slot/window, spring-seat and co-moving fit
+findings are retained separately; no geometry is repaired or overlap waived.
+
 ## F2: Unreliable digits-cover / upper-housing boolean
 
 Both STEP products individually report valid native solids. The digits-cover

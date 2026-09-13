@@ -315,7 +315,16 @@ carry from latched to released when input changes from one to zero. The next
 geometry probe must independently freeze that retained state, as detailed in
 the completion record; it cannot use the old calculator control as evidence.
 
-Next: close the remaining home-window,
+**Selected-input evidence, 2026-09-13:** independent native-copy sweeps now
+hold the initial and post-cascade home states unchanged, including the latter's
+still-latched second carry. Both fixtures show eight intersecting pairs at the
+ten seated settings and nine with half-detents included. Housing-slot/window
+and installed ball/spring/follower findings are separate from the completed
+frame fit. See the [selector evidence and bounded next-step recommendation](open-run-selector-evidence-2026-09-13.md).
+No selector geometry or running code is changed; the additional correction
+scope is not ratified. These counterexamples keep the readiness gate open.
+
+Next: review the selected-selector prerequisite, then close the remaining home-window,
 continuous-neighbour, initial-setup and outgoing-boundary evidence gaps;
 raw-data reproduction is already verified. Then prepare the three coherent,
 repository-owned planning records. After full proposal ratification, the

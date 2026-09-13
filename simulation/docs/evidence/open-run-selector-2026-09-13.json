@@ -1,0 +1,3673 @@
+{
+  "kind": "open-run-selector-readiness-evidence",
+  "date": "2026-09-13",
+  "baseline_source_record": "carry-frame-regression-2026-09-13.json#/sources_sha256",
+  "physical_inventory": [
+    {
+      "path": "Curta.carriage.positioning.carriage_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.carriage_spring_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.p_6mm_ball_419094",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.spring_sleeve_c_clip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.thrust_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar_nut",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar_washer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_pin_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_stop_pin_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_stop_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_16",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_17",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_cover",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring_rivet_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring_rivet_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.m4x10_419010_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.covers.digits_cover",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.covers.upper_housing",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_16",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_17",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.mount",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_1.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_1.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_10.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_10.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_11.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_11.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_2.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_2.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_3.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_3.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_4.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_4.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_5.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_5.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_6.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_6.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_7.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_7.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_8.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_8.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_9.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_9.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_1.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_1.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_2.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_2.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_3.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_3.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_4.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_4.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_5.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_5.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_6.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_6.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_1.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_1.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_2.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_2.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_1.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_1.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_2.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_2.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_3.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_3.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_4.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_4.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_5.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_5.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_6.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_6.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_1.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_1.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_2.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_2.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.results_dial_type_2_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_3.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_3.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_4.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_4.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10204_7.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10204_7.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_3.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_3.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_4.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_4.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.results_dial_type_2_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.m4x10_419159_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.m4x10_419159_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.retaining_ring_for_tens_bell",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_c_clip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.left_arm.body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.left_hook",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.mount",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.right_arm.body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.right_hook",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.base_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.cover_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.lower_housing_1.bottom_housing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.lower_housing_1.lower_housing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m4x10_419010_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m5x30_countersunk_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m5x30_countersunk_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.upper_outer_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.bearing_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.bearing_plate_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.reverse_nose_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.main_body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.setting_axle_holding_plate_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.setting_axle_holding_plate_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_top_1_419153.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_top_1_419153.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_top_1_419224.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_top_1_419224.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_top_1_419083.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_top_1_419083.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_top_1_419178.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_top_1_419178.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_top_1_419142.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_top_1_419142.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_top_1_419103.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_top_1_419103.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_top_1_419156.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_top_1_419156.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.anti_reversal_m5_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.documented_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.m5x15_hex_bolt_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.reverse_rotation_prevention_pawl",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.crank_handle",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.crank_handle_pin_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.main_crank",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.lower_reversing_lever_spacer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.reversing_actuator",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.reversing_lever_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.upper_reversing_lever_spacer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.documented_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.disc_roller_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.m5_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.m5x15_hex_bolt_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.zero_positioning_disc_roller",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.zero_positioning_lever",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.m5_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.m5x30_hex_bolt",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc_securing_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_m5_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10209_1_419116.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10209_1_419116.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10220_410003_1_419117",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10230_410008_1_419118",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.spring_clip_for_transmission_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.spring_clip_for_transmission_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10209_1_419112.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10209_1_419112.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10220_410003_1_419114",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10230_410008_1_419111",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.spring_clip_for_transmission_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.spring_clip_for_transmission_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10207_1_419233.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10207_1_419233.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10220_410003_1_419234",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10230_410008_1_419232",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10207_1_419091.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10207_1_419091.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10220_410003_1_419093",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10230_410008_1_419092",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10207_1_419065.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10207_1_419065.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10220_410003_1_419064",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10230_410008_1_419066",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10207_1_419036.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10207_1_419036.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10220_410003_1_419039",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10230_410008_1_419032",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10207_1_419076.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10207_1_419076.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10220_410003_1_419074",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10230_410008_1_419075",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10209_1_419138.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10209_1_419138.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10220_410003_1_419139",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10230_410008_1_419137",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10220_410003_1_419086",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10230_410008_1_419088",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10208_1.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10219_410002_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10221_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10207_1_419228.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10207_1_419228.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10220_410003_1_419227",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10230_410008_1_419229",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10207_1_419180.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10207_1_419180.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10220_410003_1_419181",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10230_410008_1_419182",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10207_1_419106.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10207_1_419106.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10220_410003_1_419107",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10230_410008_1_419105",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10207_1_419236.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10207_1_419236.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10220_410003_1_419238",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10230_410008_1_419237",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10207_1_419069.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10207_1_419069.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10220_410003_1_419070",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10230_410008_1_419068",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10216_1.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10216_1.transmission_shaft_type_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10218_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10222_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10207_1_419079.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10207_1_419079.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10220_410003_1_419081",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10230_410008_1_419080",
+      "representation": "native"
+    }
+  ],
+  "all_runs_share_inventory": true,
+  "runs": [
+    {
+      "address_space_bytes": 8589934592,
+      "bindings": {
+        "maximum_native_vertex_error_mm": 1.502702346173435e-14,
+        "maximum_volume_error_mm3": 2.7284841053187847e-12,
+        "moving_bodies": 8,
+        "negative_controls": {
+          "omit-input-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 6
+          },
+          "reverse-knob-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 12
+          },
+          "wrong-selector-axis": {
+            "detected": true,
+            "native_vertex_error_mm": 36.15498834186885
+          }
+        },
+        "seated_settings": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "candidate_neighbours": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+          "Curta.transmission.result.ones.p_10219_410002_1"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve",
+          "Curta.frame.upper_frame.main_body",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll"
+        ],
+        "Curta.transmission.result.ones.p_10219_410002_1": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft"
+        ]
+      },
+      "comparisons": {
+        "faceted": 0,
+        "native": 280
+      },
+      "fixture": "initial",
+      "framework_import": "/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/__init__.py",
+      "frozen_state": {
+        "carry_fractions": [
+          0.27692416666666614,
+          0.27692416666666614
+        ],
+        "dial_degrees": [
+          -470,
+          -559.99999999,
+          -275.45008310000003
+        ],
+        "drivers": {
+          "carriage_lift": 0,
+          "carriage_position": 0,
+          "clear": 0,
+          "crank_turns": 0,
+          "initial_result": 99,
+          "initial_turns": 0,
+          "operand": 1,
+          "subtract": 0
+        },
+        "result": 99,
+        "selected_setting": 1,
+        "shaft_degrees": [
+          652,
+          632,
+          -36
+        ]
+      },
+      "full_physical_inventory_sha256": "af09629ffdd781d4b798e8a0edc400c149d3fbc43139dfab99ccbb3044eac6cb",
+      "invalid_pairs": {},
+      "kind": "frozen-installed-selector-travel",
+      "limitation": "Discrete independent source-pose checks, not continuous clearance or physical selector coupling/detent proof",
+      "mesh_only_bodies": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+        "Curta.carriage.registers.covers.digits_cover",
+        "Curta.carriage.registers.covers.upper_housing"
+      ],
+      "moving_bodies": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": "rotation",
+        "Curta.transmission.result.ones.p_10219_410002_1": "translation"
+      },
+      "native_bodies": 422,
+      "negative_volume_diagnostics": {},
+      "numerical_threads": 1,
+      "original_native_placements_unchanged": true,
+      "passed": false,
+      "physical_bodies": 428,
+      "positive_pairs": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              49.4999999,
+              -2.0000001,
+              -120.924999671
+            ],
+            [
+              54.23612683045817,
+              2.0000001000000003,
+              -116.924999471
+            ]
+          ],
+          "center_mm": [
+            51.73373323197595,
+            3.3920038872557647e-12,
+            -118.92499957150423
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 8,
+          "volume_mm3": 13.141988148136821
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              63.03714662745353,
+              -2.7,
+              -64.485999642
+            ],
+            [
+              64.35389699654652,
+              2.7,
+              -59.085999642
+            ]
+          ],
+          "center_mm": [
+            63.69552181199971,
+            -1.850464245814971e-15,
+            -61.78599963317137
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 1,
+          "volume_mm3": 1.1953876585802767
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              64.04774497832568,
+              -3.3000000000000416,
+              -99.725
+            ],
+            [
+              67.58133392023342,
+              -3.1541580509999823,
+              -81.72499999999998
+            ]
+          ],
+          "center_mm": [
+            65.81468274904609,
+            -3.2270806324501757,
+            -90.725
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 5,
+          "volume_mm3": 9.253229593654444
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              62.74499989999999,
+              -2.5500000999999988,
+              -100.08099974199999
+            ],
+            [
+              65.4642502669921,
+              2.5500001,
+              -95.23599954200002
+            ]
+          ],
+          "center_mm": [
+            64.02744451287349,
+            -0.24430689215488097,
+            -97.58000097715161
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 7,
+          "volume_mm3": 3.4991807603399123
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              72.59999990020461,
+              -2.550000099999999,
+              -112.33599974199998
+            ],
+            [
+              74.35500009999998,
+              2.550000099999999,
+              -107.490999542
+            ]
+          ],
+          "center_mm": [
+            73.34771656327048,
+            -0.0824970768527086,
+            -109.54841341886497
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 9,
+          "volume_mm3": 2.661638394165831
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              61.090591303264965,
+              -1.7961747244038657,
+              -58.00183287930572
+            ],
+            [
+              62.18263196955519,
+              0.806388249236916,
+              -56.08727845727088
+            ]
+          ],
+          "center_mm": [
+            61.606737467238126,
+            -0.5801557164512473,
+            -57.11904910364965
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 0,
+          "volume_mm3": 0.3878557919225498
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": {
+          "bounds_mm": [
+            [
+              54.805,
+              -3.6950000999999992,
+              -43.20000010000001
+            ],
+            [
+              62.1950001,
+              3.695,
+              -43.17499990000001
+            ]
+          ],
+          "center_mm": [
+            58.50000000000005,
+            1.3587069323721159e-14,
+            -43.18750000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 4,
+          "volume_mm3": 0.5336797772072562
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              63.61069815214607,
+              -7.769862572636112,
+              -51.300000000000004
+            ],
+            [
+              66.2162473772333,
+              -5.19129332761502,
+              -36.29999999999999
+            ]
+          ],
+          "center_mm": [
+            64.61056169196434,
+            -6.8927291090236205,
+            -43.80000000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 0,
+          "volume_mm3": 4.169640237750839
+        }
+      },
+      "retained_state_unchanged": true,
+      "samples": 10,
+      "source_content_commit": "739c91a5144fba8bac3a904ddb7b2fb5338fc363",
+      "wall_seconds": 58.783255634014495,
+      "source_file_count": 193,
+      "baseline_191_sources_unchanged": true,
+      "probe_sources_sha256": {
+        "simulation/test_open_run_selector.py": "e4d44e328a63511767024b274c5fee030428238176cdafdffa169ff41970eed0",
+        "simulation/tools/open_run_selector.py": "8fa1bce531c22c2ecbd7de7469e59308856072689fec662127e478be49d45c64"
+      },
+      "raw_record": "_build_evidence/open-run-selector-initial-10.json",
+      "process": {
+        "wall_seconds": 80.68,
+        "maximum_rss_kib": 570740,
+        "exit_code": 1,
+        "exit_meaning": "Native positive intersections, not a crashed diagnostic"
+      },
+      "raw_record_sha256": "40060facfab10240792c569248369087911e82a4657b05635f27e851517adb57"
+    },
+    {
+      "address_space_bytes": 8589934592,
+      "bindings": {
+        "maximum_native_vertex_error_mm": 1.502702346173435e-14,
+        "maximum_volume_error_mm3": 2.7284841053187847e-12,
+        "moving_bodies": 8,
+        "negative_controls": {
+          "omit-input-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 6
+          },
+          "reverse-knob-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 12
+          },
+          "wrong-selector-axis": {
+            "detected": true,
+            "native_vertex_error_mm": 36.15498834186885
+          }
+        },
+        "seated_settings": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "candidate_neighbours": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+          "Curta.transmission.result.ones.p_10219_410002_1"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve",
+          "Curta.frame.upper_frame.main_body",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll"
+        ],
+        "Curta.transmission.result.ones.p_10219_410002_1": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft"
+        ]
+      },
+      "comparisons": {
+        "faceted": 0,
+        "native": 280
+      },
+      "fixture": "postcarry",
+      "framework_import": "/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/__init__.py",
+      "frozen_state": {
+        "carry_fractions": [
+          0,
+          1
+        ],
+        "dial_degrees": [
+          -146,
+          -235.99999999,
+          -311.45008310000003
+        ],
+        "drivers": {
+          "carriage_lift": 0,
+          "carriage_position": 0,
+          "clear": 0,
+          "crank_turns": 1,
+          "initial_result": 99,
+          "initial_turns": 0,
+          "operand": 1,
+          "subtract": 0
+        },
+        "result": 100,
+        "selected_setting": 1,
+        "shaft_degrees": [
+          4,
+          -16,
+          36
+        ]
+      },
+      "full_physical_inventory_sha256": "af09629ffdd781d4b798e8a0edc400c149d3fbc43139dfab99ccbb3044eac6cb",
+      "invalid_pairs": {},
+      "kind": "frozen-installed-selector-travel",
+      "limitation": "Discrete independent source-pose checks, not continuous clearance or physical selector coupling/detent proof",
+      "mesh_only_bodies": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+        "Curta.carriage.registers.covers.digits_cover",
+        "Curta.carriage.registers.covers.upper_housing"
+      ],
+      "moving_bodies": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": "rotation",
+        "Curta.transmission.result.ones.p_10219_410002_1": "translation"
+      },
+      "native_bodies": 422,
+      "negative_volume_diagnostics": {},
+      "numerical_threads": 1,
+      "original_native_placements_unchanged": true,
+      "passed": false,
+      "physical_bodies": 428,
+      "positive_pairs": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              49.4999999,
+              -2.0000001,
+              -120.924999671
+            ],
+            [
+              54.23612683045817,
+              2.0000001000000003,
+              -116.924999471
+            ]
+          ],
+          "center_mm": [
+            51.73373323197595,
+            3.3920038872557647e-12,
+            -118.92499957150423
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 8,
+          "volume_mm3": 13.141988148136821
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              63.03714662745353,
+              -2.7,
+              -64.485999642
+            ],
+            [
+              64.35389699654652,
+              2.7,
+              -59.085999642
+            ]
+          ],
+          "center_mm": [
+            63.69552181199971,
+            -1.850464245814971e-15,
+            -61.78599963317137
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 1,
+          "volume_mm3": 1.1953876585802767
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              64.04774497832568,
+              -3.3000000000000416,
+              -99.725
+            ],
+            [
+              67.58133392023342,
+              -3.1541580509999823,
+              -81.72499999999998
+            ]
+          ],
+          "center_mm": [
+            65.81468274904609,
+            -3.2270806324501757,
+            -90.725
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 5,
+          "volume_mm3": 9.253229593654444
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              62.74499989999999,
+              -2.5500000999999988,
+              -100.08099974199999
+            ],
+            [
+              65.4642502669921,
+              2.5500001,
+              -95.23599954200002
+            ]
+          ],
+          "center_mm": [
+            64.02744451287349,
+            -0.24430689215488097,
+            -97.58000097715161
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 7,
+          "volume_mm3": 3.4991807603399123
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              72.59999990020461,
+              -2.550000099999999,
+              -112.33599974199998
+            ],
+            [
+              74.35500009999998,
+              2.550000099999999,
+              -107.490999542
+            ]
+          ],
+          "center_mm": [
+            73.34771656327048,
+            -0.0824970768527086,
+            -109.54841341886497
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 9,
+          "volume_mm3": 2.661638394165831
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              61.090591303264965,
+              -1.7961747244038657,
+              -58.00183287930572
+            ],
+            [
+              62.18263196955519,
+              0.806388249236916,
+              -56.08727845727088
+            ]
+          ],
+          "center_mm": [
+            61.606737467238126,
+            -0.5801557164512473,
+            -57.11904910364965
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 0,
+          "volume_mm3": 0.3878557919225498
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": {
+          "bounds_mm": [
+            [
+              54.805,
+              -3.6950000999999992,
+              -43.20000010000001
+            ],
+            [
+              62.1950001,
+              3.695,
+              -43.17499990000001
+            ]
+          ],
+          "center_mm": [
+            58.50000000000005,
+            1.3587069323721159e-14,
+            -43.18750000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 4,
+          "volume_mm3": 0.5336797772072562
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              63.61069815214607,
+              -7.769862572636112,
+              -51.300000000000004
+            ],
+            [
+              66.2162473772333,
+              -5.19129332761502,
+              -36.29999999999999
+            ]
+          ],
+          "center_mm": [
+            64.61056169196434,
+            -6.8927291090236205,
+            -43.80000000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 10,
+          "setting_at_maximum": 0,
+          "volume_mm3": 4.169640237750839
+        }
+      },
+      "retained_state_unchanged": true,
+      "samples": 10,
+      "source_content_commit": "739c91a5144fba8bac3a904ddb7b2fb5338fc363",
+      "wall_seconds": 66.25121757099987,
+      "source_file_count": 193,
+      "baseline_191_sources_unchanged": true,
+      "probe_sources_sha256": {
+        "simulation/test_open_run_selector.py": "e4d44e328a63511767024b274c5fee030428238176cdafdffa169ff41970eed0",
+        "simulation/tools/open_run_selector.py": "8fa1bce531c22c2ecbd7de7469e59308856072689fec662127e478be49d45c64"
+      },
+      "raw_record": "_build_evidence/open-run-selector-postcarry-10.json",
+      "process": {
+        "wall_seconds": 92.62,
+        "maximum_rss_kib": 610128,
+        "exit_code": 1,
+        "exit_meaning": "Native positive intersections, not a crashed diagnostic"
+      },
+      "raw_record_sha256": "1d1de199fc4f3862c83383fe06ae42e810c3422ddf4a0847e62f6a50f5fc36da"
+    },
+    {
+      "address_space_bytes": 8589934592,
+      "bindings": {
+        "maximum_native_vertex_error_mm": 1.502702346173435e-14,
+        "maximum_volume_error_mm3": 2.7284841053187847e-12,
+        "moving_bodies": 8,
+        "negative_controls": {
+          "omit-input-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 6
+          },
+          "reverse-knob-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 12
+          },
+          "wrong-selector-axis": {
+            "detected": true,
+            "native_vertex_error_mm": 36.15498834186885
+          }
+        },
+        "seated_settings": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "candidate_neighbours": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+          "Curta.transmission.result.ones.p_10219_410002_1"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve",
+          "Curta.frame.upper_frame.main_body",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll"
+        ],
+        "Curta.transmission.result.ones.p_10219_410002_1": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft"
+        ]
+      },
+      "comparisons": {
+        "faceted": 0,
+        "native": 530
+      },
+      "fixture": "initial",
+      "framework_import": "/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/__init__.py",
+      "frozen_state": {
+        "carry_fractions": [
+          0.27692416666666614,
+          0.27692416666666614
+        ],
+        "dial_degrees": [
+          -470,
+          -559.99999999,
+          -275.45008310000003
+        ],
+        "drivers": {
+          "carriage_lift": 0,
+          "carriage_position": 0,
+          "clear": 0,
+          "crank_turns": 0,
+          "initial_result": 99,
+          "initial_turns": 0,
+          "operand": 1,
+          "subtract": 0
+        },
+        "result": 99,
+        "selected_setting": 1,
+        "shaft_degrees": [
+          652,
+          632,
+          -36
+        ]
+      },
+      "full_physical_inventory_sha256": "af09629ffdd781d4b798e8a0edc400c149d3fbc43139dfab99ccbb3044eac6cb",
+      "invalid_pairs": {},
+      "kind": "frozen-installed-selector-travel",
+      "limitation": "Discrete independent source-pose checks, not continuous clearance or physical selector coupling/detent proof",
+      "mesh_only_bodies": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+        "Curta.carriage.registers.covers.digits_cover",
+        "Curta.carriage.registers.covers.upper_housing"
+      ],
+      "moving_bodies": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": "rotation",
+        "Curta.transmission.result.ones.p_10219_410002_1": "translation"
+      },
+      "native_bodies": 422,
+      "negative_volume_diagnostics": {},
+      "numerical_threads": 1,
+      "original_native_placements_unchanged": true,
+      "passed": false,
+      "physical_bodies": 428,
+      "positive_pairs": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              49.4999999,
+              -2.0000001,
+              -120.924999671
+            ],
+            [
+              54.23612683045817,
+              2.0000001000000003,
+              -116.924999471
+            ]
+          ],
+          "center_mm": [
+            51.73373323197595,
+            3.3920038872557647e-12,
+            -118.92499957150423
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 8,
+          "volume_mm3": 13.141988148136821
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              63.037146627453566,
+              -2.7,
+              -67.48599964200001
+            ],
+            [
+              64.35389699654648,
+              2.7,
+              -62.085999642000004
+            ]
+          ],
+          "center_mm": [
+            63.69552181199992,
+            -2.973652385184242e-14,
+            -64.78599963317147
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 1.5,
+          "volume_mm3": 1.1953876585803336
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              64.04774497832568,
+              -3.3000000000000416,
+              -99.725
+            ],
+            [
+              67.58133392023342,
+              -3.1541580509999823,
+              -81.72499999999998
+            ]
+          ],
+          "center_mm": [
+            65.81468274904609,
+            -3.2270806324501757,
+            -90.725
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 5,
+          "volume_mm3": 9.253229593654444
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              62.744999899999996,
+              -2.5500000999999988,
+              -79.08099974199999
+            ],
+            [
+              65.46425026699211,
+              2.5500001,
+              -74.23599954200002
+            ]
+          ],
+          "center_mm": [
+            64.02744451975121,
+            -0.24430689390011665,
+            -76.58000098375449
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 3.5,
+          "volume_mm3": 3.4991807850650916
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              72.59999990020461,
+              -2.550000099999999,
+              -97.33599974199998
+            ],
+            [
+              74.35500009999998,
+              2.550000099999999,
+              -92.490999542
+            ]
+          ],
+          "center_mm": [
+            73.34771656320788,
+            -0.0824970770371359,
+            -94.5484134191534
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 6.5,
+          "volume_mm3": 2.6616383945516837
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": {
+          "bounds_mm": [
+            [
+              54.95576854931125,
+              1.0447243320019233,
+              -115.70155437196416
+            ],
+            [
+              55.3058592892125,
+              1.17901333682603,
+              -115.33461750770589
+            ]
+          ],
+          "center_mm": [
+            55.07128639498313,
+            1.1240234259427746,
+            -115.52473919446817
+          ],
+          "first_setting": 0.5,
+          "kernel": "native",
+          "samples": 9,
+          "setting_at_maximum": 7.5,
+          "volume_mm3": 0.0005264958712614289
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              60.995521812,
+              -1.4630470846836905,
+              -60.09826090471285
+            ],
+            [
+              62.19688362381332,
+              1.8298006543801735,
+              -56.629017942604655
+            ]
+          ],
+          "center_mm": [
+            61.5819241212938,
+            0.3581392939235257,
+            -58.16121529459126
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 0.5,
+          "volume_mm3": 2.8666212658977814
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": {
+          "bounds_mm": [
+            [
+              54.805,
+              -3.6950000999999992,
+              -43.20000010000001
+            ],
+            [
+              62.1950001,
+              3.695,
+              -43.17499990000001
+            ]
+          ],
+          "center_mm": [
+            58.50000000000005,
+            1.3587069323721159e-14,
+            -43.18750000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 4,
+          "volume_mm3": 0.5336797772072562
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              63.61069815214607,
+              -7.769862572636112,
+              -51.300000000000004
+            ],
+            [
+              66.2162473772333,
+              -5.19129332761502,
+              -36.29999999999999
+            ]
+          ],
+          "center_mm": [
+            64.61056169196434,
+            -6.8927291090236205,
+            -43.80000000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 0,
+          "volume_mm3": 4.169640237750839
+        }
+      },
+      "retained_state_unchanged": true,
+      "samples": 19,
+      "source_content_commit": "739c91a5144fba8bac3a904ddb7b2fb5338fc363",
+      "wall_seconds": 95.51892935700016,
+      "source_file_count": 194,
+      "baseline_191_sources_unchanged": true,
+      "probe_sources_sha256": {
+        "simulation/test_open_run_selector.py": "e4d44e328a63511767024b274c5fee030428238176cdafdffa169ff41970eed0",
+        "simulation/tools/open_run_selector.py": "8fa1bce531c22c2ecbd7de7469e59308856072689fec662127e478be49d45c64",
+        "simulation/tools/open_run_selector_sections.py": "6cbe70cf7d6fcd8fc0363cb6e18b9ef8617a7fdca526f916e3aa907152156013"
+      },
+      "raw_record": "_build_evidence/open-run-selector-initial-19.json",
+      "process": {
+        "wall_seconds": 120.29,
+        "maximum_rss_kib": 691004,
+        "exit_code": 1,
+        "exit_meaning": "Native positive intersections, not a crashed diagnostic"
+      },
+      "raw_record_sha256": "bff7ba6d6a0475303825246d666d44486700b3f9ef83b2bbfdff8934c84aa63a"
+    },
+    {
+      "address_space_bytes": 8589934592,
+      "bindings": {
+        "maximum_native_vertex_error_mm": 1.502702346173435e-14,
+        "maximum_volume_error_mm3": 2.7284841053187847e-12,
+        "moving_bodies": 8,
+        "negative_controls": {
+          "omit-input-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 6
+          },
+          "reverse-knob-travel": {
+            "detected": true,
+            "native_vertex_error_mm": 12
+          },
+          "wrong-selector-axis": {
+            "detected": true,
+            "native_vertex_error_mm": 36.15498834186885
+          }
+        },
+        "seated_settings": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "candidate_neighbours": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+          "Curta.transmission.result.ones.p_10219_410002_1"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve"
+        ],
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.enclosure.upper_outer_sleeve",
+          "Curta.frame.upper_frame.main_body",
+          "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll"
+        ],
+        "Curta.transmission.result.ones.p_10219_410002_1": [
+          "Curta.enclosure.lower_housing_1.bottom_housing",
+          "Curta.frame.lower_bearing_plate.bearing_plate",
+          "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+          "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft"
+        ]
+      },
+      "comparisons": {
+        "faceted": 0,
+        "native": 530
+      },
+      "fixture": "postcarry",
+      "framework_import": "/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation/solid_node/__init__.py",
+      "frozen_state": {
+        "carry_fractions": [
+          0,
+          1
+        ],
+        "dial_degrees": [
+          -146,
+          -235.99999999,
+          -311.45008310000003
+        ],
+        "drivers": {
+          "carriage_lift": 0,
+          "carriage_position": 0,
+          "clear": 0,
+          "crank_turns": 1,
+          "initial_result": 99,
+          "initial_turns": 0,
+          "operand": 1,
+          "subtract": 0
+        },
+        "result": 100,
+        "selected_setting": 1,
+        "shaft_degrees": [
+          4,
+          -16,
+          36
+        ]
+      },
+      "full_physical_inventory_sha256": "af09629ffdd781d4b798e8a0edc400c149d3fbc43139dfab99ccbb3044eac6cb",
+      "invalid_pairs": {},
+      "kind": "frozen-installed-selector-travel",
+      "limitation": "Discrete independent source-pose checks, not continuous clearance or physical selector coupling/detent proof",
+      "mesh_only_bodies": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+        "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+        "Curta.carriage.registers.covers.digits_cover",
+        "Curta.carriage.registers.covers.upper_housing"
+      ],
+      "moving_bodies": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring": "translation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll": "rotation",
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": "rotation",
+        "Curta.transmission.result.ones.p_10219_410002_1": "translation"
+      },
+      "native_bodies": 422,
+      "negative_volume_diagnostics": {},
+      "numerical_threads": 1,
+      "original_native_placements_unchanged": true,
+      "passed": false,
+      "physical_bodies": 428,
+      "positive_pairs": {
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              49.4999999,
+              -2.0000001,
+              -120.924999671
+            ],
+            [
+              54.23612683045817,
+              2.0000001000000003,
+              -116.924999471
+            ]
+          ],
+          "center_mm": [
+            51.73373323197595,
+            3.3920038872557647e-12,
+            -118.92499957150423
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 8,
+          "volume_mm3": 13.141988148136821
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              63.037146627453566,
+              -2.7,
+              -67.48599964200001
+            ],
+            [
+              64.35389699654648,
+              2.7,
+              -62.085999642000004
+            ]
+          ],
+          "center_mm": [
+            63.69552181199992,
+            -2.973652385184242e-14,
+            -64.78599963317147
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 1.5,
+          "volume_mm3": 1.1953876585803336
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              64.04774497832568,
+              -3.3000000000000416,
+              -99.725
+            ],
+            [
+              67.58133392023342,
+              -3.1541580509999823,
+              -81.72499999999998
+            ]
+          ],
+          "center_mm": [
+            65.81468274904609,
+            -3.2270806324501757,
+            -90.725
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 5,
+          "volume_mm3": 9.253229593654444
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              62.744999899999996,
+              -2.5500000999999988,
+              -79.08099974199999
+            ],
+            [
+              65.46425026699211,
+              2.5500001,
+              -74.23599954200002
+            ]
+          ],
+          "center_mm": [
+            64.02744451975121,
+            -0.24430689390011665,
+            -76.58000098375449
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 3.5,
+          "volume_mm3": 3.4991807850650916
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob": {
+          "bounds_mm": [
+            [
+              72.59999990020461,
+              -2.550000099999999,
+              -97.33599974199998
+            ],
+            [
+              74.35500009999998,
+              2.550000099999999,
+              -92.490999542
+            ]
+          ],
+          "center_mm": [
+            73.34771656320788,
+            -0.0824970770371359,
+            -94.5484134191534
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 6.5,
+          "volume_mm3": 2.6616383945516837
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw": {
+          "bounds_mm": [
+            [
+              54.95576854931125,
+              1.0447243320019233,
+              -115.70155437196416
+            ],
+            [
+              55.3058592892125,
+              1.17901333682603,
+              -115.33461750770589
+            ]
+          ],
+          "center_mm": [
+            55.07128639498313,
+            1.1240234259427746,
+            -115.52473919446817
+          ],
+          "first_setting": 0.5,
+          "kernel": "native",
+          "samples": 9,
+          "setting_at_maximum": 7.5,
+          "volume_mm3": 0.0005264958712614289
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball": {
+          "bounds_mm": [
+            [
+              60.995521812,
+              -1.4630470846836905,
+              -60.09826090471285
+            ],
+            [
+              62.19688362381332,
+              1.8298006543801735,
+              -56.629017942604655
+            ]
+          ],
+          "center_mm": [
+            61.5819241212938,
+            0.3581392939235257,
+            -58.16121529459126
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 0.5,
+          "volume_mm3": 2.8666212658977814
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom / Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top": {
+          "bounds_mm": [
+            [
+              54.805,
+              -3.6950000999999992,
+              -43.20000010000001
+            ],
+            [
+              62.1950001,
+              3.695,
+              -43.17499990000001
+            ]
+          ],
+          "center_mm": [
+            58.50000000000005,
+            1.3587069323721159e-14,
+            -43.18750000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 4,
+          "volume_mm3": 0.5336797772072562
+        },
+        "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll / Curta.enclosure.lower_housing_1.bottom_housing": {
+          "bounds_mm": [
+            [
+              63.61069815214607,
+              -7.769862572636112,
+              -51.300000000000004
+            ],
+            [
+              66.2162473772333,
+              -5.19129332761502,
+              -36.29999999999999
+            ]
+          ],
+          "center_mm": [
+            64.61056169196434,
+            -6.8927291090236205,
+            -43.80000000000001
+          ],
+          "first_setting": 0,
+          "kernel": "native",
+          "samples": 19,
+          "setting_at_maximum": 0,
+          "volume_mm3": 4.169640237750839
+        }
+      },
+      "retained_state_unchanged": true,
+      "samples": 19,
+      "source_content_commit": "739c91a5144fba8bac3a904ddb7b2fb5338fc363",
+      "wall_seconds": 93.2892490249942,
+      "source_file_count": 194,
+      "baseline_191_sources_unchanged": true,
+      "probe_sources_sha256": {
+        "simulation/test_open_run_selector.py": "e4d44e328a63511767024b274c5fee030428238176cdafdffa169ff41970eed0",
+        "simulation/tools/open_run_selector.py": "8fa1bce531c22c2ecbd7de7469e59308856072689fec662127e478be49d45c64",
+        "simulation/tools/open_run_selector_sections.py": "6cbe70cf7d6fcd8fc0363cb6e18b9ef8617a7fdca526f916e3aa907152156013"
+      },
+      "raw_record": "_build_evidence/open-run-selector-postcarry-19.json",
+      "process": {
+        "wall_seconds": 118.59,
+        "maximum_rss_kib": 778572,
+        "exit_code": 1,
+        "exit_meaning": "Native positive intersections, not a crashed diagnostic"
+      },
+      "raw_record_sha256": "f3d149dcb47968eeb6ba39b32d20fd3cb556427a52ee24d38a2c4eceb8d39b38"
+    }
+  ],
+  "localization": {
+    "contact_probes": [
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -0.01,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0.1079881983170175,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0.01,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -0.05,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0.53994097338131,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0.05,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -0.1,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 1.0798819430940974,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0.1,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -0.25,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 2.6997048504681382,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0.25,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -0.5,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 5.399409696385463,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 0.5,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 0.6587279764960445,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": -1,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 10.798819388220108,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "delta": 1,
+        "motion": "input-group axial offset",
+        "moving": "Curta.transmission.result.ones.p_10219_410002_1",
+        "overlap_mm3": 6.058137668330718,
+        "unit": "mm"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": 0,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": -0.1,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": 0.1,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": -1,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.000447646012836549,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": 1,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.011336302930966614,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": -2,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.01586443928430681,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": 2,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.040188340982570035,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": -5,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.14601026815499632,
+        "unit": "deg"
+      },
+      {
+        "against": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "delta": 5,
+        "motion": "selector-shaft angular offset",
+        "moving": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "overlap_mm3": 0.19727420272156607,
+        "unit": "deg"
+      }
+    ],
+    "five_mm_ball_comparison": {
+      "nominal_outside_source_mm3": 0,
+      "nominal_sphere_volume_mm3": 65.44984694978736,
+      "note": "Comparison witness only; no source or operating ball is replaced",
+      "source_outside_nominal_mm3": 16.998110651023225,
+      "source_volume_mm3": 82.44795760081055
+    },
+    "frozen_state": {
+      "carry_fractions": [
+        0.27692416666666614,
+        0.27692416666666614
+      ],
+      "dial_degrees": [
+        -470,
+        -559.99999999,
+        -275.45008310000003
+      ],
+      "drivers": {
+        "carriage_lift": 0,
+        "carriage_position": 0,
+        "clear": 0,
+        "crank_turns": 0,
+        "initial_result": 99,
+        "initial_turns": 0,
+        "operand": 1,
+        "subtract": 0
+      },
+      "result": 99,
+      "selected_setting": 1,
+      "shaft_degrees": [
+        652,
+        632,
+        -36
+      ]
+    },
+    "image": "_build_evidence/open-run-selector-sections.png",
+    "image_sha256": "a50e8cce256d7c0bf655d3565dc269973ae0159832f1219f9a953560ff33e3a2",
+    "kind": "selector-contact-localization",
+    "parts": {
+      "ball": {
+        "bounds_mm": [
+          [
+            60.995521812,
+            -2.7,
+            -58.485999642
+          ],
+          [
+            66.395521812,
+            2.7,
+            -53.085999642
+          ]
+        ],
+        "face_types": [
+          "SPHERE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 82.44795760081055
+      },
+      "group": {
+        "bounds_mm": [
+          [
+            34.3970426064431,
+            -5.407577020660701,
+            -71.52499985
+          ],
+          [
+            46.48028135479516,
+            6.2343614605488025,
+            -51.42499965
+          ]
+        ],
+        "face_types": [
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.transmission.result.ones.p_10219_410002_1",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 444.0381776187601
+      },
+      "housing": {
+        "bounds_mm": [
+          [
+            -68.50690045599998,
+            -67.354158151,
+            -150.45000009999998
+          ],
+          [
+            67.693099744,
+            68.84584204899998,
+            -18.44999989999998
+          ]
+        ],
+        "face_types": [
+          "CONE",
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.enclosure.lower_housing_1.bottom_housing",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 172212.36693554057
+      },
+      "knob": {
+        "bounds_mm": [
+          [
+            37.500000000204594,
+            -6.0000000000000036,
+            -77.22500009999999
+          ],
+          [
+            78.56424455781774,
+            6.000000000000006,
+            -51.72499989999999
+          ]
+        ],
+        "face_types": [
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 4651.654279309683
+      },
+      "roll": {
+        "bounds_mm": [
+          [
+            49.1999999,
+            -9.300000099999998,
+            -51.300000100000005
+          ],
+          [
+            67.80000009999999,
+            9.300000099999998,
+            -36.299999899999996
+          ]
+        ],
+        "face_types": [
+          "CONE",
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 3384.437509644671
+      },
+      "screw": {
+        "bounds_mm": [
+          [
+            46.4999999,
+            -3.0000000999999994,
+            -73.924999671
+          ],
+          [
+            56.1000001,
+            3.0000001000000007,
+            -67.924999471
+          ]
+        ],
+        "face_types": [
+          "CONE",
+          "CYLINDER",
+          "PLANE",
+          "TORUS"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 138.88849062134713
+      },
+      "shaft": {
+        "bounds_mm": [
+          [
+            54.80436564491666,
+            -3.6954079617847584,
+            -127.7750001
+          ],
+          [
+            62.19563435508334,
+            3.6954194183989766,
+            -41.6999999
+          ]
+        ],
+        "face_types": [
+          "BSPLINE",
+          "CONE",
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 3096.8419811634526
+      },
+      "spring": {
+        "bounds_mm": [
+          [
+            62.7449999,
+            -2.550000099999999,
+            -58.33599974200001
+          ],
+          [
+            74.3550001,
+            2.550000100000001,
+            -53.23599954199998
+          ]
+        ],
+        "face_types": [
+          "BSPLINE",
+          "PLANE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 19.24933413953073
+      },
+      "top": {
+        "bounds_mm": [
+          [
+            54.8049999,
+            -3.6950000999999997,
+            -43.200000100000004
+          ],
+          [
+            62.1950001,
+            3.6950000999999997,
+            -17.9999999
+          ]
+        ],
+        "face_types": [
+          "CONE",
+          "CYLINDER",
+          "PLANE"
+        ],
+        "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top",
+        "solids": 1,
+        "valid": true,
+        "volume_mm3": 891.1077604454525
+      }
+    },
+    "retained_state_unchanged": true,
+    "setting": 0,
+    "raw_record": "_build_evidence/open-run-selector-sections.json",
+    "raw_record_sha256": "12f00ca8b94977c77b00c9d6abf6793febe2f00ad034e1130224c57df3f45474",
+    "process": {
+      "wall_seconds": 35.34,
+      "maximum_rss_kib": 652084,
+      "exit_code": 0
+    },
+    "probe_sources_sha256": {
+      "simulation/test_open_run_selector.py": "e4d44e328a63511767024b274c5fee030428238176cdafdffa169ff41970eed0",
+      "simulation/tools/open_run_selector.py": "8fa1bce531c22c2ecbd7de7469e59308856072689fec662127e478be49d45c64",
+      "simulation/tools/open_run_selector_sections.py": "6cbe70cf7d6fcd8fc0363cb6e18b9ef8617a7fdca526f916e3aa907152156013"
+    },
+    "source_content_commit": "739c91a5144fba8bac3a904ddb7b2fb5338fc363",
+    "baseline_source_record": "carry-frame-regression-2026-09-13.json#/sources_sha256"
+  },
+  "lightweight_tests": {
+    "python": {
+      "command": "python -m unittest simulation.test_open_run_selector simulation.test_arithmetic simulation.test_cycle",
+      "passed": 16,
+      "elapsed_seconds": 0.047
+    },
+    "javascript": {
+      "command": "node --test simulation/viewer/calculator.test.mjs",
+      "passed": 5
+    },
+    "limitation": "Probe and existing calculator semantics, not mechanical clearance acceptance"
+  },
+  "historical_failed_probe_tests": {
+    "before_helper": {
+      "chunk_id": "00ad9a",
+      "wall_time_seconds": 0.000004128,
+      "exit_code": 1,
+      "original_token_count": 547,
+      "output": "EEE\n======================================================================\nERROR: test_knob_and_input_group_have_six_mm_negative_z_travel (simulation.test_open_run_selector.SelectorProbeTest.test_knob_and_input_group_have_six_mm_negative_z_travel)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_open_run_selector.py\", line 16, in test_knob_and_input_group_have_six_mm_negative_z_travel\n    from simulation.tools.open_run_selector import move_shape\nModuleNotFoundError: No module named 'simulation.tools.open_run_selector'\n\n======================================================================\nERROR: test_shafts_rotate_about_the_source_axis_not_the_machine_origin (simulation.test_open_run_selector.SelectorProbeTest.test_shafts_rotate_about_the_source_axis_not_the_machine_origin)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_open_run_selector.py\", line 23, in test_shafts_rotate_about_the_source_axis_not_the_machine_origin\n    from simulation.tools.open_run_selector import move_shape\nModuleNotFoundError: No module named 'simulation.tools.open_run_selector'\n\n======================================================================\nERROR: test_unlisted_body_cannot_become_a_mover (simulation.test_open_run_selector.SelectorProbeTest.test_unlisted_body_cannot_become_a_mover)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_open_run_selector.py\", line 29, in test_unlisted_body_cannot_become_a_mover\n    from simulation.tools.open_run_selector import move_shape\nModuleNotFoundError: No module named 'simulation.tools.open_run_selector'\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nFAILED (errors=3)\n"
+    },
+    "numeric_driver_accessor": {
+      "chunk_id": "0a4404",
+      "wall_time_seconds": 0.000005731,
+      "exit_code": 1,
+      "original_token_count": 279,
+      "output": ".E..\n======================================================================\nERROR: test_retained_state_reads_numeric_drivers_and_bound_ports_separately (simulation.test_open_run_selector.SelectorProbeTest.test_retained_state_reads_numeric_drivers_and_bound_ports_separately)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/test_open_run_selector.py\", line 50, in test_retained_state_reads_numeric_drivers_and_bound_ports_separately\n    snapshot = retained_state(root)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/simulation/tools/open_run_selector.py\", line 49, in retained_state\n    drivers={name: getattr(root, name).value for name in\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'int' object has no attribute 'value'\n\n----------------------------------------------------------------------\nRan 4 tests in 0.009s\n\nFAILED (errors=1)\n"
+    }
+  },
+  "disposition": "Readiness blocked; no geometry or operating code changes; no new framework/viewer implementation"
+}

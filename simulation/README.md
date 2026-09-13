@@ -52,6 +52,12 @@ with only the unchanged bearing-facet and housing/thread findings. This does
 not deliver history-dependent running or complete the original simulation. See the
 [focused validation record](docs/carry-frame-validation-2026-09-13.md).
 
+The subsequent [stationary-home selector audit](docs/open-run-selector-evidence-2026-09-13.md)
+finds nine intersecting pairs when between-detent poses are included, in both
+initial and post-cascade fixtures. The pending second carry is held unchanged.
+This diagnostic changes no operating geometry; selected-input clearance and
+installed-detent acceptance remain open before the running slice can proceed.
+
 ## Run
 
 From this project's root, with the workspace venv active:
