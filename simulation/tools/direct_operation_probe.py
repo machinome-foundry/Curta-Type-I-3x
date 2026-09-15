@@ -8,9 +8,11 @@ These are capability diagnostics, not mechanical acceptance tests.
 
 import json
 
+from solid_node.math import floor
 from solid_node.motion.joints import Prismatic, Revolute
 from solid_node.motion.ports import Time
 from solid_node.node import AssemblyNode
+from solid_node.parameters import Angle
 from solid_node.simulation import Button, Driver, Instruction, Sim, Slide, Turn
 
 
@@ -35,24 +37,28 @@ class CrankControls(AssemblyNode):
 
 
 class ClearingWheel(AssemblyNode):
+    initial_angle = Angle(108)
     rotation = Revolute(axis=(0, 0, 1))
 
     def simulate(self):
         if self.rotation.value is None:
-            self.rotation = 108  # A three at the start of this reduced fixture.
+            self.rotation = self.initial_angle
 
 
 def missing_tooth(sources, target):
-    # Deliberately reduced to the engagement question. This is not the Curta's
-    # measured tooth profile: rack travel stops contributing at the zero gap.
-    return lambda rack, wheel: rack * (wheel % 360 < 359)
+    # ADR-121 requires a finite band, entered from either side. The half-degree
+    # width is deliberately schematic, not the Curta's measured tooth clearance.
+    def law(rack, wheel):
+        shifted = wheel + .5
+        return rack * (shifted - 360 * floor(shifted / 360) >= 1)
+    return law
 
 
-def clearing_fixture():
+def clearing_fixture(initial_angle=108):
     class Clearing(AssemblyNode):
         time = Time.running()
         rack = Driver(default=0, unit='deg')
-        wheel = ClearingWheel()
+        wheel = ClearingWheel(initial_angle=initial_angle)
         (rack & wheel.rotation).drives(wheel.rotation, law=missing_tooth)
 
     return Clearing()

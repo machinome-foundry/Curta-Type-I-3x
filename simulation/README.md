@@ -15,10 +15,13 @@ delivered calculator simulation.** Follow the
 
 Surface markings now use the framework's decal API: all 25 number rolls,
 the lower input-place indices, sleeve branding and reversing arrows are
-declared on their existing parts. They are exported but **not yet drawn by
-the browser viewer or OpenSCAD**. The conical upper-housing index sheet remains
-unsupported. See [markings and verification](docs/markings.md). Direct operation
-is still deferred at the [clearing-state prerequisite](docs/direct-operation-prerequisites-2026-09-15.md).
+declared on their existing parts and exported. The pilot has visually accepted
+the markings; the [original verification record](docs/markings.md) preserves
+the producer checks and renderer limitations at that checkpoint. OpenSCAD does
+not draw decals, and the conical upper-housing index sheet remains unsupported.
+The Python clearing-state prerequisite is now
+resolved; the [new running-operation checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
+records the changing carry-association question that pauses direct operation.
 
 The export memory blocker is resolved by solid-node's `expression-graphs`
 cycle, integrated at `5e59147`. The post-fit complete export takes 41.43 s

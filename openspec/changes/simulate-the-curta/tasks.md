@@ -1,4 +1,17 @@
-## Current continuation — markings, 2026-09-15
+## Current continuation — Python direct-operation prerequisite, 2026-09-15
+
+The pilot accepted the markings visually and authorized Python implementation
+without waiting for the viewer's retained-angle implementation. ADR-121 is now
+available and the repeated/bidirectional clearing prerequisite passes. A second
+reduced probe exposes a changing-carry-association cycle: both fixed carriage
+positions construct, but live selection is refused as a cyclic running program.
+See `simulation/docs/direct-operation-running-checkpoint-2026-09-15.md` for
+the tested framework identity, reproduction and representation decision needed.
+The production migration is paused; the existing model is unchanged. Tasks
+6.1 and 6.5 still owe paired viewer/pointer evidence, not a gate on Python-only
+work under the pilot's current direction. No older task is marked complete.
+
+## Previous continuation — markings, 2026-09-15
 
 The pilot directed a framework handoff for retained-angle clearing, then
 project markings. The handoff is committed in the framework as
