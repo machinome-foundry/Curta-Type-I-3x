@@ -17,6 +17,14 @@ def leaves(node):
 class CurtaTest(TestCase):
     node = Curta
 
+    def test_marked_digits_follow_every_reading_position(self):
+        from simulation.tools.check_marking_poses import check_poses
+        check_poses(self, self.node)
+
+    def test_reversing_label_is_beside_the_visible_control(self):
+        from simulation.tools.check_marking_poses import check_reversing_label
+        check_reversing_label(self, self.node)
+
     def test_carry_bell_follows_crank_but_stays_at_its_bearing_height(self):
         import numpy as np
         self.node.set_state(crank_turns=0, subtract=0)

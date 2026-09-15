@@ -1,11 +1,23 @@
-## Current continuation — direct operation, 2026-09-15
+## Current continuation — markings, 2026-09-15
+
+The pilot directed a framework handoff for retained-angle clearing, then
+project markings. The handoff is committed in the framework as
+`workflow/docs/curta-retained-angle-clearing.md` (`3045600`), a pre-spec
+requirement for another agent. The scoped markings record is
+`simulation/docs/markings.md`. The flat/cylindrical API supports 25 number
+rolls and three housing sheets; the conical upper-housing index sheet remains
+outside that API, and viewer rendering remains a separate pending capability.
+This continuation does not complete the direct-operation or older geometry tasks.
+
+## Paused continuation — direct operation, 2026-09-15
 
 The pilot approved direct interaction with every physical input, retained
 Time.running state and user-chosen ordering. No production code for this
 migration has been changed yet. The approved command inventory is in
 `simulation/docs/direct-operation-2026-09-15.md`. The required framework and
-viewer capabilities are proposed separately as `direct-part-motion` and
-`slide-and-turn-parts`; their implementation awaits pilot ratification.
+viewer capabilities were developed separately as `direct-part-motion` and
+`slide-and-turn-parts`; see the dated prerequisite probe for their tested state
+and the additional retained-angle clearing requirement.
 The new work below does not complete or waive any older mechanical task.
 
 ## Previous continuation — 2026-09-11

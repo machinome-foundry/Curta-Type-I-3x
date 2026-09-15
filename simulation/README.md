@@ -13,6 +13,13 @@ open; this is not a
 delivered calculator simulation.** Follow the
 [implementation tasks](../openspec/changes/simulate-the-curta/tasks.md).
 
+Surface markings now use the framework's decal API: all 25 number rolls,
+the lower input-place indices, sleeve branding and reversing arrows are
+declared on their existing parts. They are exported but **not yet drawn by
+the browser viewer or OpenSCAD**. The conical upper-housing index sheet remains
+unsupported. See [markings and verification](docs/markings.md). Direct operation
+is still deferred at the [clearing-state prerequisite](docs/direct-operation-prerequisites-2026-09-15.md).
+
 The export memory blocker is resolved by solid-node's `expression-graphs`
 cycle, integrated at `5e59147`. The post-fit complete export takes 41.43 s
 with 817216 KiB peak process RSS under the 8 GiB address-space guard, using
@@ -41,7 +48,7 @@ From this project's root, with the workspace venv active:
 
 Run heavyweight jobs sequentially under the resource bounds in the pause
 report. The current workspace framework is required; package metadata alone
-does not distinguish its post-0.6 motion and expression-graph changes.
+does not distinguish its post-0.6 motion, expression-graph and markings changes.
 
 ```sh
 solid build
@@ -111,6 +118,8 @@ reproducible pose, not a claim that a physical crank can run backward.
 - `mechanism.py`, `drive.py`, `selectors.py`: named joints and drive relations.
 - `arithmetic.py`: reproducible arithmetic; six calibration/operation tests pass.
 - `registers.py`: seventeen radial dial joints and measured source clocking.
+- `markings.py`, `artwork/`: surface decals, calibrated roll clocking and
+  paint-only derivatives of the original drawings; no additional solids.
 - `transmission.py`: result/turns banks with sliding inputs and keyed rotation.
 - `cycle.py`, `carry_motion.py`: sub-turn input, decimal complement, measured pin
   approach, retained carry and reset-cam timing.

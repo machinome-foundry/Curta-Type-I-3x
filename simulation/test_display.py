@@ -16,7 +16,7 @@ class DisplayTest(TestCase):
             parts.MainBody: '#b9c5cd',
             printed.MainAxleStepDrumTop1: '#b9c5cd',
             printed.Part10230_410008_1_419032: '#b68a46',
-            parts.NumberRoll: '#eadfc6',
+            parts.NumberRoll: '#222831',  # Original white input digits need a black ground.
             parts.ResultsDialType1: '#eadfc6',
             parts.Part6mmBall419241: '#96a8b8',
         }

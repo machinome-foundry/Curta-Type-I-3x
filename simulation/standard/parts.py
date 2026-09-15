@@ -5,6 +5,8 @@ refuses to overwrite this file (see docs/cli.rst).
 """
 from solid_node.node import StepNode
 from simulation.colors import ALUMINUM, BRONZE, BRASS, BLACK, STEEL, IVORY
+from simulation.markings import (RegisterDigits, InputDigits, InputPlaces,
+                                 SleeveBranding, ReversingArrows)
 from simulation.source import STEP, prepare
 prepare()
 
@@ -65,7 +67,7 @@ class TensSliderForResults(SourcePart):
     color = BRONZE
     part = 'tens slider for results'
 
-class UpperOuterSleeve(SourcePart):
+class UpperOuterSleeve(SleeveBranding, SourcePart):
     color = STEEL
     part = 'upper outer sleeve'
 
@@ -151,8 +153,8 @@ class SelectorShaftTop(SourcePart):
     color = STEEL
     part = 'selector shaft top'
 
-class NumberRoll(SourcePart):
-    color = IVORY
+class NumberRoll(InputDigits, SourcePart):
+    color = BLACK  # White glyphs on the original input sheet's black ground.
     part = 'number roll'
 
 class SelectorKnobSpring(SourcePart):
@@ -178,11 +180,11 @@ class Part6mmBall419094(SourcePart):
     color = STEEL
     part = '6mm ball [#419094]'
 
-class LowerHousing(SourcePart):
+class LowerHousing(InputPlaces, SourcePart):
     color = BLACK
     part = 'lower housing'
 
-class BottomHousing(SourcePart):
+class BottomHousing(ReversingArrows, SourcePart):
     color = BLACK
     part = 'bottom housing'
 
@@ -414,7 +416,7 @@ class NumberRollCarryPinFull(SourcePart):
     color = STEEL
     part = 'number roll carry pin full'
 
-class ResultsDialType2(SourcePart):
+class ResultsDialType2(RegisterDigits, SourcePart):
     color = IVORY
     part = 'results dial type 2'
 
@@ -429,7 +431,7 @@ class ClearingRingRivet(SourcePart):
     color = STEEL
     part = 'clearing ring rivet'
 
-class ResultsDialType1(SourcePart):
+class ResultsDialType1(RegisterDigits, SourcePart):
     color = IVORY
     part = 'results dial type 1'
 
