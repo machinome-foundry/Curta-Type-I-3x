@@ -14,8 +14,8 @@ and expressive with the motion api."
 - Add a project-owned `simulation/` package using the standard STEP geometry,
   its placements and the manual's assembly instructions.
 - Express crank, selector, transmission, carry, carriage and clearing motion
-  with named joints and drive relations, with calculator controls and a small
-  repeatable demonstration set.
+  with named joints and drive relations, direct controls on each physical
+  input and a small repeatable demonstration set separate from normal use.
 - Verify source identity, rigid parts, assembly interfaces and the author's
   arithmetic calibration sequence; record source defects and fidelity limits.
 - Add the project manifest, build instructions, measurements and visual evidence.
@@ -45,3 +45,12 @@ This is prescribed kinematics with explicit arithmetic state, not a force,
 friction or spring-force solver. Optional modifications are not selected.
 Delivery requires honest geometric evidence: an unresolved source defect or
 unproven drive interface is recorded as unfinished work, never a passing test.
+
+On 2026-09-15 the pilot approved replacing the original operation-oriented
+controls with direct mechanical interaction and retained Time.running state.
+The user chooses the order; no control prepares or repairs an operation by
+moving another control. The approved command inventory and acceptance work
+are recorded in `simulation/docs/direct-operation-2026-09-15.md`.
+Implementation depends on proposed, not yet ratified, framework
+`direct-part-motion` and viewer `slide-and-turn-parts` changes. This does not
+archive or waive the project's outstanding geometric verification.

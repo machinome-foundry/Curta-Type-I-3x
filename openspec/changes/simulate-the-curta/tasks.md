@@ -1,4 +1,14 @@
-## Current continuation — 2026-09-11
+## Current continuation — direct operation, 2026-09-15
+
+The pilot approved direct interaction with every physical input, retained
+Time.running state and user-chosen ordering. No production code for this
+migration has been changed yet. The approved command inventory is in
+`simulation/docs/direct-operation-2026-09-15.md`. The required framework and
+viewer capabilities are proposed separately as `direct-part-motion` and
+`slide-and-turn-parts`; their implementation awaits pilot ratification.
+The new work below does not complete or waive any older mechanical task.
+
+## Previous continuation — 2026-09-11
 
 The pilot resumed this change after solid-node's `expression-graphs` cycle
 merged into main at `5e59147` (planning `446bc22`, ADR-101). The complete
@@ -50,13 +60,17 @@ not a final full-machine regression. No outstanding task is waived by the pause.
 
 ## 5. Complete machine and evidence
 
-- [ ] 5.1 Finish calculator controls, educational show/hide assembly layers and the small instruction set; assert exact targets, layer membership and sample interference through every demonstration.
+- [ ] 5.1 Finish direct mechanical controls, educational show/hide assembly layers and the small separate demonstration set; assert retained outcomes, layer membership and sample interference through every demonstration.
 - [ ] 5.2 Run every node's faceted regression, build the root and inspect its viewer document and all referenced artifacts.
 - [ ] 5.3 Render and inspect rest, moving, isometric and alignment snapshots; record measured findings and fidelity limits.
 - [ ] 5.4 Run every node's exact regression and write the final simulation README from the verified implementation.
 - [ ] 5.5 Validate and sync the accepted specifications, archive the completed change and commit implementation and evidence.
 
 ## Current evidence and continuation
+
+The following records the earlier pose-driven implementation. It is retained
+as evidence, not a claim that the newly approved direct-operation controls
+are already implemented.
 
 The source assembly builds and its complete 547-occurrence world placement check
 passes. A +1 mm main-crank placement mutation fails that check with measured
@@ -141,3 +155,12 @@ placement audit identifies the remaining cover/window, frame-guide and retained-
 seat interfaces; these are not silently treated as fixed source overlaps.
 Inter-system contact, the whole-machine overlap inventory and demonstration sweeps keep
 their tasks open. These results are checkpoints, not final delivery evidence.
+
+## 6. Direct mechanical operation
+
+- [ ] 6.1 Verify the ratified framework/viewer prerequisites are available as a tested content pair before relying on Slide or selected-joint controls.
+- [ ] 6.2 Write red run tests for independent selector changes, retained arithmetic across operand/mode changes, partial crank travel, direction reversal attempts, carriage interlocks and repeatable snapshot/replay.
+- [ ] 6.3 Migrate the mechanism to Time.running with run-owned state and independent physical inputs; make those tests green without a page-local calculator, direct register setters or automatic operation preparation.
+- [ ] 6.4 Add and prove the reversing lever, selective bidirectional clearing, clearing-loop deployment and each decimal marker's independent movement and mechanical limits; preserve source provenance and existing geometric evidence.
+- [ ] 6.5 Bind every input to its actual visible part; test real pointer interactions in standalone and ordinary hosted viewers, including wrong-order attempts and partial motion, and inspect rest/moving/interlock snapshots.
+- [ ] 6.6 Replace obsolete calculator-page instructions and demos, update the simulation README and acceptance evidence, and report remaining whole-machine geometric gaps separately from the control migration.

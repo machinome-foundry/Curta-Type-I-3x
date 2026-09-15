@@ -58,10 +58,12 @@ friction, spring-force prediction, or fabrication certification.
    at the moving bodies, broadcast repeated digit motions, and keep nonlinear
    intermittent laws in a small kinematics module. Keep structural placement in
    `render()` and runtime inputs in relations or `simulate()`.
-5. **State must be reproducible.** Begin with explicit starting register values,
-   operand, operation and crank progress, so scrubbing to a pose produces the
-   same result without hidden Python history. Explain any distinction from a
-   physical calculator's retained state in the final controls and README.
+5. **The running mechanism retains state.** As approved on 2026-09-15, use
+   Time.running and run-banked joint state for retained registers and partial
+   motion. Reproduce a state by restoring a run snapshot and replaying the
+   same physical requests, not by making the user supply starting registers
+   or by retaining a second arithmetic state in the page. Readouts derive
+   from the mechanism. Deterministic fixture setup is not an operating control.
 6. **Evidence supplies motion dimensions.** Derive selector travel, subtraction
    lift, carry travel, gear phase and carriage pitch from the source and manual;
    keep the probe and readings. A demonstration's timing is stated as a chosen
@@ -72,20 +74,24 @@ friction, spring-force prediction, or fabrication certification.
    role, not STEP export order. Keep fasteners with their supported assembly,
    individual digit channels reachable, and moving carriage covers within the
    carriage's own frame. The raw source hierarchy remains a separate reference.
-8. **Calculator sliders expose causes, not arbitrary component poses.** The pilot
-   emphasized educational inputs and actual calculation. Operand, crank turns,
-   operation, carriage shift and clearing drive the corresponding mechanism and
-   register values. Starting registers make a calculation reproducible when
-   scrubbing; a preset animation alone does not meet the requested interaction.
-9. **Lift before shifting.** A continuous carriage-position driver traverses six
-   discrete working detents. The page lifts 6 mm, shifts, then reseats; it refuses
-   to commit calculations while lifted or between detents. The lower spring seat
-   moves while the upper seat stays fixed. Clearing follows a lift/turn/lower
-   sequence. Lower housing markers do not move with the carriage.
-10. **Examples and operation remain separate.** Six worked examples explicitly
-    replace the page-local starting registers, then run named mechanical moves.
-    The ordinary controls retain completed calculations. Seven small instructions
-    expose rest, setting one, one crank turn, lift, shift, reseat and clearing.
+8. **The controls are the physical inputs.** The approved replacement gives each
+   of the eight selectors its own direct control. Crank lift and turn, carriage
+   lift and turn, reversing lever, clearing ring, clearing loop and every decimal
+   marker are separately handled on their own parts. There is no operand slider,
+   arithmetic-operation mode or editable register in normal operation. A crank
+   click requests one clockwise revolution; a drag can request partial travel.
+9. **The user chooses the order; constraints enforce the mechanics.** Lifting,
+   shifting, seating and clearing are independent movements. The page does not
+   perform one to prepare another. Declare actual travel limits and mechanical
+   interlocks in the run so Python requests and browser gestures meet the same
+   stops. A blocked request does not repair the pose or postpone itself until
+   another control moves. Preserve the measured 6 mm carriage lift, six working
+   detents and 9 mm subtraction stroke. Lower markers stay with the housing.
+10. **Examples and operation remain separate.** Worked examples restore a stated
+    test snapshot and replay physical actions for teaching and regression, never
+    as the ordinary control path. A new empty machine is session setup, not a
+    mechanical reset button. Clearing is performed with the ring, with partial
+    and selective clearing retained. No page-local register commit remains.
 11. **Material-inspired colors teach the layers.** The pilot requested aluminum,
     bronze and black contrast while physical verification continues. The display
     palette uses silver structure/drum, bronze transmission/carry gearing, brass
@@ -96,6 +102,17 @@ friction, spring-force prediction, or fabrication certification.
     recursive navigation and exports retain them without altering geometry.
 
 ## Findings
+
+### Direct-operation prerequisite — 2026-09-15
+
+The approved interaction inventory is in
+`simulation/docs/direct-operation-2026-09-15.md`. The public framework presently
+has no sliding control and refuses a control on a body with two joints. The
+viewer also assumes a rotational placement for every control. Proposed changes
+`direct-part-motion` (framework) and `slide-and-turn-parts` (viewer) address
+those specific limits. Their implementation awaits separate ratification;
+this project record does not declare the proposed APIs available. The prior
+calculator page is still the implemented behavior, not the approved target.
 
 The complete 547-occurrence source assembly builds and its placement contract
 passes. Duplicate product names are resolved by suffixing only those names with
