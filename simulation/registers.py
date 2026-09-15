@@ -28,14 +28,8 @@ def neutral_operation(source, targets):
     return lambda value: (0, 0, 0)
 
 
-class ResultRegister(source.ResultRegister):
-    value = Port()
-    operand = Port()
-    crank_turns = Port(unit='rev')
-    subtract = Port()
-    carriage_position = Port()
-    clear = Port()
-
+class ResultDials(source.ResultRegister):
+    """The physical dial bank, independent of the pose calculator's inputs."""
     p_10203_1 = Part10203_1(turn=Revolute(
         axis=(-0.9999539409, -0.0095977127, 2e-10), at=(72.008486542, 0.647810225, 33.9)))
     p_10203_2 = Part10203_2(turn=Revolute(
@@ -59,27 +53,13 @@ class ResultRegister(source.ResultRegister):
     results_dial_type_2_1 = FittedDialType2(turn=Revolute(
         axis=(0.9429319507, -0.3329854896, 1e-10), at=(-66.857451389, 23.761646754, 33.9)))
 
-    (value & operand & crank_turns & subtract & carriage_position & clear).drives((
-        p_10203_1.turn,
-        p_10203_2.turn,
-        p_10205_1.turn,
-        p_10205_2.turn,
-        p_10204_1.turn,
-        p_10204_2.turn,
-        p_10204_3.turn,
-        p_10204_4.turn,
-        p_10204_5.turn,
-        p_10204_6.turn,
-        results_dial_type_2_1.turn,
-    ), law=dial_values((3.0, -86.99999999, -126.4500831, -146.45008308, -166.45008308, -186.45008307, -206.45008308, -226.45008311, -246.45008311, -266.4500831, 3.00000002)))
-
     def render(self):
         super().render()
         self.translate(tuple(-value for value in CARRIAGE_CENTER))
         self.rotate(-CARRIAGE_CLOCKING, (0, 0, 1))
 
 
-class TurnsRegister(source.TurnsRegister):
+class ResultRegister(ResultDials):
     value = Port()
     operand = Port()
     crank_turns = Port(unit='rev')
@@ -87,6 +67,22 @@ class TurnsRegister(source.TurnsRegister):
     carriage_position = Port()
     clear = Port()
 
+    (value & operand & crank_turns & subtract & carriage_position & clear).drives((
+        ResultDials.p_10203_1.turn,
+        ResultDials.p_10203_2.turn,
+        ResultDials.p_10205_1.turn,
+        ResultDials.p_10205_2.turn,
+        ResultDials.p_10204_1.turn,
+        ResultDials.p_10204_2.turn,
+        ResultDials.p_10204_3.turn,
+        ResultDials.p_10204_4.turn,
+        ResultDials.p_10204_5.turn,
+        ResultDials.p_10204_6.turn,
+        ResultDials.results_dial_type_2_1.turn,
+    ), law=dial_values((3.0, -86.99999999, -126.4500831, -146.45008308, -166.45008308, -186.45008307, -206.45008308, -226.45008311, -246.45008311, -266.4500831, 3.00000002)))
+
+class TurnsDials(source.TurnsRegister):
+    """The six physical counter dials, with the same source placements."""
     p_10203_3 = Part10203_3(turn=Revolute(
         axis=(0.650110279, -0.7598398681, 3e-10), at=(-45.928298358, 54.270661151, 33.9)))
     p_10203_4 = Part10203_4(turn=Revolute(
@@ -100,19 +96,28 @@ class TurnsRegister(source.TurnsRegister):
     results_dial_type_2_2 = FittedDialType2(turn=Revolute(
         axis=(-0.8611866588, -0.508288834, -0.0), at=(62.090225773, 36.291288041, 33.9)))
 
-    (value & operand & crank_turns & subtract & carriage_position & clear).drives((
-        p_10203_3.turn,
-        p_10203_4.turn,
-        p_10205_3.turn,
-        p_10205_4.turn,
-        p_10204_7.turn,
-        results_dial_type_2_2.turn,
-    ), law=dial_values((3.00000002, 3.00000001, 3.5499169, -16.45008308, -36.4500831, 3.00000002), counter=True))
-
     def render(self):
         super().render()
         self.translate(tuple(-value for value in CARRIAGE_CENTER))
         self.rotate(-CARRIAGE_CLOCKING, (0, 0, 1))
+
+
+class TurnsRegister(TurnsDials):
+    value = Port()
+    operand = Port()
+    crank_turns = Port(unit='rev')
+    subtract = Port()
+    carriage_position = Port()
+    clear = Port()
+
+    (value & operand & crank_turns & subtract & carriage_position & clear).drives((
+        TurnsDials.p_10203_3.turn,
+        TurnsDials.p_10203_4.turn,
+        TurnsDials.p_10205_3.turn,
+        TurnsDials.p_10205_4.turn,
+        TurnsDials.p_10204_7.turn,
+        TurnsDials.results_dial_type_2_2.turn,
+    ), law=dial_values((3.00000002, 3.00000001, 3.5499169, -16.45008308, -36.4500831, 3.00000002), counter=True))
 
 
 class RegisterBench(AssemblyNode):

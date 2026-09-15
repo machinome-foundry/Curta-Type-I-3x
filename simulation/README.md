@@ -19,9 +19,12 @@ declared on their existing parts and exported. The pilot has visually accepted
 the markings; the [original verification record](docs/markings.md) preserves
 the producer checks and renderer limitations at that checkpoint. OpenSCAD does
 not draw decals, and the conical upper-housing index sheet remains unsupported.
-The Python clearing-state prerequisite is now
-resolved; the [new running-operation checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
-records the changing carry-association question that pauses direct operation.
+The Python retained-angle and changing-source prerequisites are now resolved.
+The [implementation checkpoint](docs/direct-operation-implementation-2026-09-15.md)
+records the source-backed running development root, contact-law tests and work
+still required before replacing the published pose model. The
+[earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
+preserves the original carry-association refusal.
 
 The export memory blocker is resolved by solid-node's `expression-graphs`
 cycle, integrated at `5e59147`. The post-fit complete export takes 41.43 s

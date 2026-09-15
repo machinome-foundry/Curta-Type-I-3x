@@ -44,7 +44,7 @@ class ClearingPinCarrier(UpperCarriageBody1):
     press = Port(unit='mm')
     clearing_pin = ClearingPin(slide=Prismatic(axis=(0, 0, -1)))
     clearing_pin_spring = MountedClearingSpring(slide=Prismatic(axis=(0, 0, -1)))
-    press.drives(clearing_pin.slide)
+    pin_drive = press.drives(clearing_pin.slide)
     press.drives(clearing_pin_spring.slide)
     press.drives(clearing_pin_spring.height, ratio=-1, offset=HEIGHT)
 

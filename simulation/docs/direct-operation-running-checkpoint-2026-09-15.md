@@ -1,5 +1,9 @@
 # Running-operation prerequisite checkpoint — 2026-09-15
 
+Historical checkpoint: framework `0b0f02a` resolves the association refusal
+below. See the [implementation checkpoint](direct-operation-implementation-2026-09-15.md)
+for the resumed Python work and its remaining acceptance scope.
+
 The pilot visually accepted the markings and authorized Python-side interactive
 implementation while the viewer's retained-angle work continues. Browser
 support is not a prerequisite to implementing and testing Python mechanics;

@@ -138,7 +138,7 @@ class RegisterCarriage(SourceRegisters):
     turns_register = TurnsRegister()
     dial_detents = RegisterDetents()
     clearing_ring = ClearingAssembly(turn=Revolute(axis=(0, 0, 1)))
-    clearing_ring.turn.drives(carrier.upper_carriage_body_1.press, law=clearing_stop_following)
+    clearing_follower = clearing_ring.turn.drives(carrier.upper_carriage_body_1.press, law=clearing_stop_following)
 
     # Origins are the source-specific dial joints at their calibrated zero.
     result_register.p_10203_1.turn.drives(dial_detents.p_6mm_ball_419241_12.lift, law=following(-146))

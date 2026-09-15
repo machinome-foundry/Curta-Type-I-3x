@@ -35,7 +35,7 @@ class AntiReversal(SourceAntiReversal):
     reverse_rotation_prevention_pawl = FittedPawl(
         turn=Revolute(axis=(0, 0, 1), at=PIVOT))
     documented_spring = MountedPawlSpring()
-    turn.drives(reverse_rotation_prevention_pawl.turn, law=pawl_angle)
+    pawl_drive = turn.drives(reverse_rotation_prevention_pawl.turn, law=pawl_angle)
     reverse_rotation_prevention_pawl.turn.drives(documented_spring.deflection)
 
     def render(self):

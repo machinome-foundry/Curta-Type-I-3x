@@ -93,8 +93,8 @@ class Selector8(DigitSelectorAxle8):
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419156.turn)
 
 
-class Selectors(InputSelectors):
-    operand = Port()
+class IndependentSelectors(InputSelectors):
+    """The physical channels; each setting is independently wired by its owner."""
     digit_selector_axle_1 = Selector1()
     digit_selector_axle_2 = Selector2()
     digit_selector_axle_3 = Selector3()
@@ -103,14 +103,18 @@ class Selectors(InputSelectors):
     digit_selector_axle_6 = Selector6()
     digit_selector_axle_7 = Selector7()
     digit_selector_axle_8 = Selector8()
-    operand.drives(digit_selector_axle_1.setting, law=digit_at(0))
-    operand.drives(digit_selector_axle_2.setting, law=digit_at(1))
-    operand.drives(digit_selector_axle_3.setting, law=digit_at(2))
-    operand.drives(digit_selector_axle_4.setting, law=digit_at(3))
-    operand.drives(digit_selector_axle_5.setting, law=digit_at(4))
-    operand.drives(digit_selector_axle_6.setting, law=digit_at(5))
-    operand.drives(digit_selector_axle_7.setting, law=digit_at(6))
-    operand.drives(digit_selector_axle_8.setting, law=digit_at(7))
+
+
+class Selectors(IndependentSelectors):
+    operand = Port()
+    operand.drives(IndependentSelectors.digit_selector_axle_1.setting, law=digit_at(0))
+    operand.drives(IndependentSelectors.digit_selector_axle_2.setting, law=digit_at(1))
+    operand.drives(IndependentSelectors.digit_selector_axle_3.setting, law=digit_at(2))
+    operand.drives(IndependentSelectors.digit_selector_axle_4.setting, law=digit_at(3))
+    operand.drives(IndependentSelectors.digit_selector_axle_5.setting, law=digit_at(4))
+    operand.drives(IndependentSelectors.digit_selector_axle_6.setting, law=digit_at(5))
+    operand.drives(IndependentSelectors.digit_selector_axle_7.setting, law=digit_at(6))
+    operand.drives(IndependentSelectors.digit_selector_axle_8.setting, law=digit_at(7))
 
 
 class SelectorBank(Selectors):
