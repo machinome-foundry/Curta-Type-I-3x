@@ -77,6 +77,11 @@ calculator page still represents the implemented control behavior.
 
 ## Acceptance work
 
+The subsequent [resumption prerequisite checks](direct-operation-prerequisites-2026-09-15.md)
+record the installed direct-motion and markings capabilities, the still-open
+viewer pairing, and a reduced retained-angle clearing declaration refusal.
+They do not mark this approved redesign as implemented.
+
 Prove the new behavior red before implementing it. Replay the page-53
 calibration sequence, carries/borrows through both full banks, input changes
 between turns, subtraction and reversing-lever combinations at all carriage
