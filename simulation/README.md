@@ -23,6 +23,9 @@ The Python retained-angle and changing-source prerequisites are now resolved.
 The [implementation checkpoint](docs/direct-operation-implementation-2026-09-15.md)
 records the source-backed running development root, contact-law tests and work
 still required before replacing the published pose model. The
+[movable-marker record](docs/direct-operation-markers-2026-09-16.md) adds ten
+independent marker inputs and measured neighbour stops; it also records the
+remaining ratchet failures and the marker tessellation discrepancy. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.
 

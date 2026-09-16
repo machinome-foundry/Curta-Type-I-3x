@@ -7,13 +7,14 @@ pose-driven bindings; they neither duplicate physical parts nor add memory.
 from solid_node.node import AssemblyNode
 from solid_node.motion.joints import Revolute, Prismatic
 from simulation import assemblies
-from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure
+from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.running_pawl import RunningAntiReversal
 from simulation.cover_fits import FittedAxleCarrier
 from simulation.clearing_stop_motion import following as clearing_stop_following
 from simulation.registers import ResultDials, TurnsDials
 from simulation.selectors import IndependentSelectors
 from simulation.standard.layers import CrankAssembly
+from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
 
@@ -61,11 +62,20 @@ class RetainedCarriageStructure(CarriageStructure):
     upper_carriage_body_1 = RetainedAxleCarrier()
 
 
+class RunningClearingAssembly(ClearingAssembly):
+    decimal_markers = UpperMovableMarkers()
+
+
+class RunningEnclosure(assemblies.Enclosure):
+    decimal_markers = LowerMovableMarkers()
+
+
 class RetainedCarriage(RegisterCarriage):
     result_register = RetainedResultDials()
     turns_register = RetainedTurnsDials()
     carrier = RetainedCarriageStructure()
-    clearing_follower = RegisterCarriage.clearing_ring.turn.drives(
+    clearing_ring = RunningClearingAssembly(turn=Revolute(axis=(0, 0, 1)))
+    clearing_follower = clearing_ring.turn.drives(
         carrier.upper_carriage_body_1.clearing_pin.slide, law=clearing_stop_following)
 
 

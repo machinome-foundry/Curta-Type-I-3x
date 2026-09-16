@@ -14,7 +14,7 @@ from solid_node.simulation import Driver, Instruction, Button, Turn, Slide
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
 from simulation.positioning import CarriagePositioning
-from simulation.running_parts import (IndependentInputs, RetainedCarriage, RunningMainDrive,
+from simulation.running_parts import (IndependentInputs, RetainedCarriage, RunningMainDrive, RunningEnclosure,
     RetainedCarries, RetainedTransmission, RESULT_DIALS, TURNS_DIALS,
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
 from simulation.running_laws import shaft_motion, dial_motion, lever_motion, reading
@@ -61,7 +61,18 @@ class OperatingCurta(LayeredSource):
     carriage_rotation = Driver(default=0, range=(0, 100), unit='deg')
     carriage_elevation = Driver(default=0, range=(0, 6), unit='mm')
     clearing_rotation = Driver(default=0, unit='deg')
+    marker_1_rotation = Driver(default=0, unit='deg')
+    marker_2_rotation = Driver(default=0, unit='deg')
+    marker_3_rotation = Driver(default=0, unit='deg')
+    marker_4_rotation = Driver(default=0, unit='deg')
+    marker_5_rotation = Driver(default=0, unit='deg')
+    marker_6_rotation = Driver(default=0, unit='deg')
+    marker_7_rotation = Driver(default=0, unit='deg')
+    marker_8_rotation = Driver(default=0, unit='deg')
+    marker_9_rotation = Driver(default=0, unit='deg')
+    marker_10_rotation = Driver(default=0, unit='deg')
 
+    enclosure = RunningEnclosure()
     input_selectors = IndependentInputs()
     frame = Frame()
     main_drive = RunningMainDrive()
@@ -93,6 +104,17 @@ class OperatingCurta(LayeredSource):
     carriage_rotation.drives(carriage.registers.turn)
     carriage_elevation.drives(carriage.registers.lift)
     clearing_rotation.drives(carriage.registers.clearing_ring.turn, ratio=-1)
+
+    for _index, _input in enumerate((marker_1_rotation, marker_2_rotation, marker_3_rotation,
+            marker_4_rotation, marker_5_rotation, marker_6_rotation, marker_7_rotation,
+            marker_8_rotation, marker_9_rotation, marker_10_rotation), 1):
+        _marker = getattr(enclosure.decimal_markers if _index < 6 else
+                          carriage.registers.clearing_ring.decimal_markers,
+                          f'decimal_marker_{_index}')
+        _input.drives(_marker.turn)
+        controls[f'move decimal marker {_index}'] = Turn(
+            _marker.position_marker, _input, coordinate=_marker.turn)
+        del _marker, _input
 
     # Explicit names preserve physical identities; these loops declare laws
     # once in the class body, never mutate a run or maintain a second state.

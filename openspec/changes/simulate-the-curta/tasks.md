@@ -1,4 +1,19 @@
-## Current continuation — Python direct-operation prerequisite, 2026-09-15
+## Current continuation — Python direct operation, 2026-09-16
+
+The retained-angle and live source-selection prerequisites have merged. Python
+implementation is active, without waiting for viewer work. The source-backed
+`simulation.running:OperatingCurta` development root implements retained
+arithmetic/clearing and independent physical inputs; it does not yet replace
+the manifest's pose model. All ten decimal markers now move on their measured
+tracks with cyclic neighbour stops. See the
+`simulation/docs/direct-operation-implementation-2026-09-15.md` checkpoint and
+`simulation/docs/direct-operation-markers-2026-09-16.md` for passing evidence,
+the faceted/native discrepancy and explicitly open reverse-operation tests.
+Counter reversal, loop deployment, interlocks and final matrices remain open.
+The pilot requested a performance wart and continued implementation, not a
+Python handoff. Tasks 6.1–6.6 remain open; no earlier geometry task is waived.
+
+## Historical continuation — Python direct-operation prerequisite, 2026-09-15
 
 The pilot accepted the markings visually and authorized Python implementation
 without waiting for the viewer's retained-angle implementation. ADR-121 is now

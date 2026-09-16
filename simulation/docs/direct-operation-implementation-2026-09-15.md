@@ -142,7 +142,10 @@ do not replace a run with a pose at a new total crank angle.
 
 The remaining scope includes full-bank carry/borrow and shifted-mode matrices,
 crank/selector/carriage/ring interlocks with measured backlash, independent
-counter reversal, clearing-loop deployment and all ten movable decimal markers.
+counter reversal and clearing-loop deployment. All ten movable decimal markers
+have since been implemented; the [2026-09-16 record](direct-operation-markers-2026-09-16.md)
+documents their running/native checks, inspected snapshot and remaining faceted
+discrepancy. It also records the open running ratchet diagnostics.
 The current mid-stroke drive-selection gates are development assumptions, not
 verified engagement limits. Do not use them as evidence for permitted
 intermediate operation. Existing whole-machine thread/contact findings remain
@@ -165,7 +168,11 @@ reverser throw has not established complementary tooth engagement.
 upper drum; `test_counter_reversal.py` asks for free nominal passage and
 engagement under a 12-degree pinion perturbation at three tooth stations.
 This is an **unresolved red diagnostic**, not an accepted mechanism or a
-proposed fit. A 9 mm candidate also fails the engagement assertion. Independent
+proposed fit. The initial 9 mm candidate failed a bilateral engagement
+assertion. A subsequent check distinguishes the driving flank from permissible
+lead: the 9 mm candidate passes the one-sided lagging-pinion contact test, but
+fails the full-turn nominal clearance sweep at crank 114 degrees with a small
+native overlap (0.000120275 mm³). It is therefore still not an accepted fit. Independent
 world-axis overlap sampling (`simulation.tools.reverser_engagement`) helps
 distinguish contact, phase and fixture errors; it does not certify a new throw.
 Neither the printed shaft nor the running counter law has been changed to
