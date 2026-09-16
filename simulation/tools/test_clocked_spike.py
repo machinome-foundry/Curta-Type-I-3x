@@ -6,7 +6,7 @@ readouts and the actual dial angles of every scenario in
 `simulation.tools.clocked_spike.SCENARIOS`. Re-record it with
 
     OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD" \
-        ../../../.venv/bin/python -m simulation.tools.clocked_spike record
+        /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.tools.clocked_spike record
 
 which takes about seven and a half minutes. These tests replay the same
 corpus through the harness, which needs no geometry and finishes in

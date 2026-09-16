@@ -83,7 +83,7 @@ The operating model was run ONCE over the whole corpus and its readouts kept in
 `simulation/tools/clocked_spike_oracle.json`:
 
     OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH="$PWD" \
-        ../../../.venv/bin/python -m simulation.tools.clocked_spike record
+        /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.tools.clocked_spike record
 
 439.2 s over 574 ticks at `dt = .1`, plus 5.4 s to construct the `Sim`. The
 fixture records both registers AND every dial's actual angle at each read, so
