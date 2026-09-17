@@ -1,5 +1,11 @@
 # Curta simulation — implementation resumed
 
+There are now three sibling models: `fast_curta` (prescribed poses),
+`operating_curta` (`Time.running()`), and `clocked_curta` (event-committed
+registers using the framework's clocked-machine support). The
+[clocked model's record](docs/clocked-curta-2026-09-17.md) gives its Python
+operation surface, running-oracle comparisons, timings and viewer limitations.
+
 The simulation imports the complete standard STEP assembly: all 547 leaf
 occurrences, plus the manual's three clearing-strip prints omitted from the STEP,
 organized into educational show/hide layers. The root has
@@ -37,10 +43,10 @@ calculator page passes calibration, all six examples, retained operations,
 lift/shift guards, selector controls and layer checks against that fresh export.
 The [pause report and framework-cycle handoff](docs/pause-report-2026-09-11.md)
 preserve the initial 10h Astra/xhigh sprint and its historical stop condition.
-Current verification and remaining physical interfaces are recorded in the
+The September 11 verification and remaining physical interfaces are recorded in the
 [measurements](docs/measurements.md#resumption-after-expression-graphs) and
 [resumption validation matrix](docs/resumption-validation-2026-09-11.md).
-All 37 tested node modules have been rerun: 142/144 faceted and 143/144 native
+That baseline reran all 37 tested node modules: 142/144 faceted and 143/144 native
 checks pass. Both runners retain the housing-thread overlap; the additional
 faceted bearing contact passes natively. These are recorded findings, not waived
 failures or final whole-machine acceptance.
@@ -121,7 +127,10 @@ reproducible pose, not a claim that a physical crank can run backward.
 
 ## Source mapping
 
-- `curta.py`: the manifest's root, calculator controls and register-state relation.
+- `curta.py`: `fast_curta`, calculator controls and prescribed register-state relation.
+- `running.py`: `operating_curta`, with history integrated through the mechanical laws.
+- `clocked.py`, `clocked_parts.py`, `clocked_laws.py`: `clocked_curta`, with
+  framework-owned register commits, request interlocks and closed-form poses.
 - `assemblies.py`: seven educational layers, with separate result/turns registers,
   carriage covers, input banks, drive and carry subassemblies.
 - `mechanism.py`, `drive.py`, `selectors.py`: named joints and drive relations.
