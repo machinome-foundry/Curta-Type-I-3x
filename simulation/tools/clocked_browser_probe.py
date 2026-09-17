@@ -121,8 +121,6 @@ def main():
             check(reading() === 0 && reading(true) === 0, 'Counter-bank clear');
             machine.restore(saved);
             check(reading() === 27 && reading(true) === 3, 'Restore');
-            machine.move('time', {by: 1});
-            check(machine.state().time === 1 && reading() === 27, 'Elapsed clock');
             const final = machine.snapshot();
             const samples = [];
             for (let index = 0; index < 20; index++) {

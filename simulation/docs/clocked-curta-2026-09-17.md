@@ -65,9 +65,8 @@ sim.restore(saved)
 The inputs have the operating sibling's names and units: eight `digit_N`
 selectors, `crank_rotation`, `crank_elevation`, `carriage_rotation`,
 `carriage_elevation`, `clearing_rotation`, and ten `marker_N_rotation` inputs.
-The clock is elapsed seconds and may be advanced explicitly; it drives no
-mechanism automatically. `run`, `rate` and instruction triggering do not apply
-to clocked requests. The published instruction is descriptive metadata.
+`run`, `rate` and instruction triggering do not apply to clocked requests.
+The published instruction is descriptive metadata.
 
 Session setup accepts `result_0.value` through `result_10.value` and
 `turns_0.value` through `turns_5.value`, in units-first order, through
@@ -173,7 +172,7 @@ content changed in the switch from worktrees to main.
 The finite browser probe agrees with all 30 applicable committed readouts
 across the same 13 oracle scenarios. It also verifies partial and repeated
 strokes, a blocked mid-stroke lift, separate clearing of both banks,
-snapshot/restore, elapsed time and the repeated-reverse ratchet boundary. Its rendered
+snapshot/restore and the repeated-reverse ratchet boundary. Its rendered
 page was visually inspected, including the surface markings that OpenSCAD
 snapshots do not draw.
 

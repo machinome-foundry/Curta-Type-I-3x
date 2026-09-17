@@ -4,7 +4,7 @@ from functools import reduce
 from operator import and_
 
 from solid_node.node import AssemblyNode
-from solid_node.motion.ports import Port, Time
+from solid_node.motion.ports import Port
 from solid_node.simulation import Driver, State, Instruction
 from simulation.assemblies import LayeredSource
 from simulation.clocked_parts import Operation, ClockedCarriage
@@ -47,7 +47,6 @@ class PoseValues(AssemblyNode):
 class ClockedCurta(LayeredSource):
     """Same fitted machine; requests retain digits and latches, not the pose tree."""
 
-    time = Time.elapsed()
     values = PoseValues()
 
     digit_1 = Driver(default=0, range=(0, 9), unit='digit')
@@ -92,7 +91,7 @@ class ClockedCurta(LayeredSource):
     turns_4 = MemoryDigit()
     turns_5 = MemoryDigit()
 
-    instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
+    instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=6)}
     operation = Operation()
     enclosure = RunningEnclosure()
 
