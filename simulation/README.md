@@ -7,10 +7,11 @@ registers using the framework's clocked-machine support). The
 operation surface, running-oracle comparisons, timings and viewer limitations.
 The manifest selects `operating_curta`. Its current verification and remaining
 work are in the [operating completion record](docs/operating-curta-completion-2026-09-19.md).
-New geometry tests expose a framework prerequisite: nested retained joints can
-have correct bank angles but incorrect bound/rendered angles. Shift/clearing
-geometry and viewer acceptance remain blocked; passing arithmetic readings do
-not certify the visible mechanism.
+The nested retained-joint pose defect is corrected in framework `b9b64dd`,
+integrated with the pilot's approval. The unchanged operating-model subtraction,
+carriage and clearing world-motion contracts pass both geometry kernels. This
+removes that prerequisite; it does not certify the remaining mechanical stops,
+whole-machine clearance or viewer pointer operation.
 
 The simulation imports the complete standard STEP assembly: all 547 leaf
 occurrences, plus the manual's three clearing-strip prints omitted from the STEP,

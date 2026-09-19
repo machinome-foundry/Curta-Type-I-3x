@@ -20,6 +20,60 @@ def rotation(degrees):
 class RunningMotionTest(TestCase):
     node = RunningMotionBench
 
+    def test_carriage_spring_endpoints_follow_seats_during_lift_and_shift(self):
+        sim = Sim(self.node, dt=.1, meshes=True)
+        positioning = self.node.carriage.positioning
+        lower = positioning.thrust_ring
+        upper = positioning.carriage_spring_sleeve
+        spring = positioning.carriage_spring.wire
+        caps = spring.mesh.vertices[-2:].copy()
+        lower_before = lower.mesh.vertices.copy()
+        upper_before = upper.mesh.vertices.copy()
+        try:
+            for lift in (1.5, 3, 4.5, 6):
+                sim.move('carriage_elevation', to=lift)
+                np.testing.assert_allclose(lower.mesh.vertices, lower_before + (0, 0, lift),
+                                           rtol=0, atol=.00001)
+                np.testing.assert_allclose(spring.mesh.vertices[-2], caps[0] + (0, 0, lift),
+                                           rtol=0, atol=.00001)
+                np.testing.assert_allclose(spring.mesh.vertices[-1], caps[1],
+                                           rtol=0, atol=.00001)
+                np.testing.assert_array_equal(upper.mesh.vertices, upper_before)
+            lifted = spring.mesh.vertices.copy()
+            sim.move('carriage_rotation', to=20)
+            np.testing.assert_array_equal(spring.mesh.vertices, lifted)
+        finally:
+            sim.reset()
+
+    def test_clearing_follower_and_spring_follow_retained_ring_motion(self):
+        sim = Sim(self.node, dt=.1, meshes=True)
+        carriage = self.node.carriage.registers
+        carrier = carriage.carrier.upper_carriage_body_1
+        pin, sleeve = carrier.clearing_pin, carrier.clearing_stop_pin_sleeve
+        spring = carrier.clearing_pin_spring.wire
+        cover = carriage.clearing_ring.clearing_cover
+        try:
+            sim.move('carriage_elevation', to=6)
+            caps = spring.mesh.vertices[-2:].copy()
+            pin_before = pin.mesh.centroid.copy()
+            sleeve_before = sleeve.mesh.vertices.copy()
+            heights = []
+            for angle in (0, 5, 90, 230, 240, 360, 0):
+                sim.move('clearing_rotation', to=angle)
+                travel = pin.mesh.centroid - pin_before
+                heights.append(float(travel[2]))
+                np.testing.assert_allclose(spring.mesh.vertices[-2], caps[0] + travel,
+                                           rtol=0, atol=.00001)
+                np.testing.assert_allclose(spring.mesh.vertices[-1], caps[1],
+                                           rtol=0, atol=.00001)
+                np.testing.assert_array_equal(sleeve.mesh.vertices, sleeve_before)
+                self.assertNotIntersecting(pin, cover)
+                self.assertNotIntersecting(spring, pin)
+                self.assertNotIntersecting(spring, sleeve)
+            self.assertGreater(max(heights) - min(heights), 4)
+        finally:
+            sim.reset()
+
     def test_subtraction_lifts_the_crank_and_drum_nine_mm(self):
         sim = Sim(self.node, dt=.1, meshes=True)
         crank = self.node.main_drive.crank.crank_handle_1.main_crank

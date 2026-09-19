@@ -6,12 +6,15 @@ clocked sibling. The work order and new red/green evidence are recorded in
 selects `operating_curta`; the earlier development-root descriptions below are
 historical. No task is completed by that selection or by clocked-model tests.
 
-Tasks 2.3 and 3.3 are now complete (9/23 overall). New retained world-motion
-contracts expose a framework bank/pose disagreement at nested site-declared
-joints; the two-test framework-only reproduction is
-`simulation.tools.test_retained_pose_probe`. Shift/clearing geometry and viewer
-acceptance cannot be certified until that prerequisite is corrected. This is
-separate from the still-unresolved reverser assembly and source overlap findings.
+Tasks 2.3, 3.3, 4.2 and 4.3 are now complete (11/23 overall). The framework
+bank/pose disagreement is corrected and, with explicit pilot approval,
+framework main is fast-forwarded to `b9b64dd`. The unchanged minimal reproduction
+and full retained world-motion checks pass. Subtraction, shift and clearing
+mutations then failed their intended contracts, with both kernels green after
+restoration. Additional retained-model spring-seat/follower checks pass both
+kernels after detecting their disconnected-drive mutations. The reverser assembly,
+measured restraints, source overlap findings
+and viewer pointer acceptance remain unresolved.
 
 ## Previous continuation — Python direct operation, 2026-09-16
 
@@ -110,8 +113,8 @@ not a final full-machine regression. No outstanding task is waived by the pause.
 ## 4. Subtraction, carriage and clearing
 
 - [x] 4.1 Write subtraction-lift, carriage alignment and clearing contracts red. World-vertex tests exposed missing 9 mm subtraction, 6 mm carriage lift, 20° shift, plate rotation and spring-seat motion.
-- [ ] 4.2 Implement the measured joints and relations, including affected flexible parts, and make the contracts green.
-- [ ] 4.3 Prove subtraction, shift and clearing mutations fail their intended contracts.
+- [x] 4.2 Implement the measured joints and relations, including affected flexible parts, and make the contracts green. The existing subtraction/carriage/clearing relations now pass the retained world-motion checks after framework b9b64dd. Added operating-model carriage-spring and clearing-follower/spring contracts pass with the motion checks (5/5 faceted and exact); disconnected-drive mutations fail. The isolated positioning spring is also rerun green on both kernels. Earlier bell-spring full-travel geometry evidence is unchanged. This closes the measured motion/flexible-seat task, not task 1.3 clearance or 6.x restraints and operation acceptance.
+- [x] 4.3 Prove subtraction, shift and clearing mutations fail their intended contracts. On 2026-09-19, 8.1 mm subtraction travel, 18° instead of 20° shift and reversed clearing direction each failed its retained-model motion contract. All three mutations were restored; 3/3 contracts pass faceted and exact on integrated framework b9b64dd. See the operating completion record.
 
 ## 5. Complete machine and evidence
 

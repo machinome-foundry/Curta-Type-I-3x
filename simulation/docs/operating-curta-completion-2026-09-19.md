@@ -173,7 +173,7 @@ Continuation: preserve the red reversal engagement contract, establish the
 complete moving assembly and its contacts, and continue independent roadmap
 tasks while this source/assembly discrepancy remains unresolved.
 
-## Retained pose binding — newly isolated prerequisite
+## Retained pose binding — prerequisite corrected and integrated
 
 The new `running_motion.py` bench uses the complete operating model and fresh
 `Sim(..., meshes=True)` runs. Its subtraction test passes: both crank and drum
@@ -207,18 +207,80 @@ python -m unittest simulation.tools.test_retained_pose_probe
 This is a framework prerequisite for trustworthy operating geometry, not a
 request to redesign the Curta. The framework-only reproduction establishes
 the violated public contract without inspecting or changing framework source.
-A separate ratified framework correction is required under the shop's
-`framework-change` procedure before continuing the affected geometry/viewer
-acceptance. Its necessary outcome is agreement between each retained bank
-coordinate, bound joint and rendered pose after parent/child movement and
-snapshot restore; the final Curta tests above must then pass unchanged.
+A separate framework correction was required under the shop's
+`framework-change` procedure. Its acceptance requires agreement between each
+retained bank coordinate, bound joint and rendered pose after parent/child
+movement and snapshot restore, with these Curta tests passing unchanged.
+
+The other agent completed `bind-retained-coordinates-by-owner` at
+`b9b64ddaf0bc1d51d715d3d971b77b6ee58880bf`. Independent verification reproduced
+both minimal failures on framework `c62319e`, then passed both unchanged tests
+against the candidate. The full Curta `running_motion.py` bench passed 3/3
+faceted (22.69 s) and 3/3 exact (22.95 s). Its actual-world-mesh before/after
+images were inspected: the dial preserves its local angle while its carriage
+moves, and the clearing plate rotates with its retained joint. Restored poses
+agree. Logs: `_build_running/owner-fix-verification-{faceted,exact}.log`.
+
+With explicit pilot approval, clean framework `main` was fast-forwarded from
+`c62319e1974b88d8cfd2dd13fd205c7bf2533991` to `b9b64dd`. Both minimal tests
+then passed in the normal workspace environment (0.743 s), without a worktree
+import override. No framework source was changed by this project, no project
+workaround was added, and nothing was pushed. The retained-pose prerequisite is
+resolved; the independent reverser, mechanical-restraint, full-clearance and
+pointer-acceptance findings remain open.
 
 All eight selectors also pass a new independent-input test, changing them in
 nonsequential order while checking every shaft angle and both unchanged
 registers (1/1, 11.227 s; `_build_running/all-selectors-running.log`). The legacy
 calculator page and its README instructions are now explicitly limited to
 `fast_curta`; the default remains the incompletely validated operating model.
-Tasks 4.2, 4.3, 5.x and 6.x remain open. The change is not archived.
+Tasks 4.2 and 4.3 are now complete as recorded below. Tasks 1.3, 5.x and 6.x
+remain open. The change is not archived.
+
+## Operating-motion mutations — task 4.3 complete
+
+With the integrated framework, deliberately changing the subtraction drive
+ratio from 1/9 to 1/10 produces 8.1 mm travel and fails the independent 9 mm
+world-vertex contract by .9 mm. Changing the carriage drive ratio to .9 yields
+18° instead of the requested 20° and fails the joint-angle assertion. Reversing
+the clearing relation from −1 to +1 yields +90° instead of −90° and fails its
+angle assertion. These affect independent test poses; all three fail (0/3,
+23.44 s), rather than being hidden by the former binding defect.
+
+All three mutations were restored without changing the tests. The unchanged
+production relations pass 3/3 faceted (22.88 s) and 3/3 exact (22.82 s), using
+the normal workspace interpreter. Logs are
+`_build_running/operating-motion-mutations-red.log` and
+`operating-motion-mutations-restored-{faceted,exact}.log`. No temporary mutation
+remains in `running.py`. This proves these motion contracts, not interference,
+flexible-part regression or mechanical interlocks.
+
+## Retained flexible-part motion — task 4.2 complete
+
+Two additional full operating-model tests follow the actual world geometry.
+The carriage spring's lower cap and thrust ring rise through 1.5, 3, 4.5 and
+6 mm, while its upper cap and sleeve stay fixed; a subsequent 20° carriage
+shift leaves the positioning spring on its shaft. The clearing follower and
+its spring are checked through a forward sweep and return: the upper cap
+follows the pin, the lower cap and sleeve remain fixed, and pin/cover,
+spring/pin and spring/sleeve stay clear at the sampled cam stations.
+
+Disconnecting the carriage-to-positioning relation fails the first test at
+1.5 mm. Disconnecting the pin-to-spring relation fails the second on an actual
+5.917006 mm³ spring/pin collision. The other three motion tests still pass
+(3/5, 33.57 s). Both mutations were restored; no production change is needed
+beyond the integrated owner-binding correction. The full five-test module then
+passes faceted (41.12 s) and exact (58.20 s). Logs:
+`_build_running/operating-flex-motion-red.log` and
+`operating-flex-motion-restored-{faceted,exact}.log`.
+
+The independent positioning-spring module also passes 2/2 faceted (.83 s)
+and 2/2 exact (.94 s), including valid compression geometry and both seats;
+logs `operating-positioning-{faceted,exact}.log`. These augment the existing
+full bell-spring subtraction/contact and clearing-stop cam regressions; those
+geometries and laws are unchanged. The final all-node regression remains a
+separate obligation. Task 4.2 covers measured motion and flexible seats, not
+the source assembly's unresolved contacts, interlocks or pointer acceptance.
 
 ## Environment
 
