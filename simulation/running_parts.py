@@ -14,6 +14,7 @@ from simulation.clearing_stop_motion import following as clearing_stop_following
 from simulation.registers import ResultDials, TurnsDials
 from simulation.selectors import IndependentSelectors
 from simulation.standard.layers import CrankAssembly
+from simulation.print_parts import CounterBodyStopPin
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
@@ -36,6 +37,10 @@ RESULT_RESTS = (-4.2, 0, 0, 0, 0, -4.2, 0, -4.2, -4.2, -4.2)
 TURNS_RESTS = (-1.8,) * 5
 CHANNEL_NAMES = ('ones', 'tens', 'hundreds', 'digit_4', 'digit_5', 'digit_6',
                  'digit_7', 'digit_8', 'digit_9', 'digit_10', 'digit_11')
+# Manual p39 leaves "about 4 mm" exposed. The exported insertion leaves
+# 4.355589482 mm and penetrates the frame. Native contact ends at +.455580 mm;
+# seat the unchanged pin .51 mm deeper for at least .05 mm clearance.
+STOP_PIN_SEATING_RISE = .51
 
 
 class RetainedResultDials(ResultDials):
@@ -55,7 +60,12 @@ class RetainedTurnsDials(TurnsDials):
 
 
 class RetainedAxleCarrier(FittedAxleCarrier):
+    counter_body_stop_pin = CounterBodyStopPin()
     pin_drive = FittedAxleCarrier.clearing_pin.slide.drives(FittedAxleCarrier.press)
+
+    def render(self):
+        super().render()
+        self.counter_body_stop_pin.translate((0, 0, STOP_PIN_SEATING_RISE))
 
 
 class RetainedCarriageStructure(CarriageStructure):

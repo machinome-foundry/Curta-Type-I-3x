@@ -25,6 +25,13 @@ open; this is not a
 delivered calculator simulation.** Follow the
 [implementation tasks](../openspec/changes/simulate-the-curta/tasks.md).
 
+The operating carriage stop pin now uses the author's unchanged printable STL,
+seated .51 mm deeper to clear the frame while retaining its angular end stops.
+Its original STEP gives contradictory native intersection/containment answers;
+the reproduction and source comparison are in the operating completion record.
+Pin-contact checks therefore use the faceted backend even on the exact runner.
+This resolves that mounting interface, not the carriage's operating interlocks.
+
 Surface markings now use the framework's decal API: all 25 number rolls,
 the lower input-place indices, sleeve branding and reversing arrows are
 declared on their existing parts and exported. The pilot has visually accepted

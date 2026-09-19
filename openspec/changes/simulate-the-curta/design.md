@@ -219,6 +219,17 @@ full-sweep contact and spring tests pass both kernels. No pin or sleeve geometry
 is changed. The whole-machine audit still needs cover/window and frame-guide
 interfaces resolved before the source overlap inventory can be accepted.
 
+The operating carriage's bottom stop pin has a measured insertion-depth fit:
+.51 mm deeper than the source assembly, leaving 3.845589482 mm exposed against
+the manual's approximately 4 mm instruction. Both source frame representations
+clear it across the working travel and still block at the outer barriers.
+The STEP pin gives inconsistent native boolean and containment results even
+outside the simulation, so this one operating part uses the author's unchanged,
+watertight printable STL. Its contacts are explicitly faceted on either runner;
+the native ambiguity is retained as a reproducible finding, not waived with an
+intersection epsilon. See the 2026-09-19 operating completion record. No source
+file is edited, and this does not establish the seated-carriage shift lock.
+
 The cover-datum trial is retained, with three measured neighbour fits added on
 resumption: a .10 mm inner top-land facing beneath the clearing ring, seventeen
 R2.995 shallow housing pockets around the fixed axle ends, and .15 mm retaining-

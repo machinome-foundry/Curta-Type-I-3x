@@ -282,7 +282,71 @@ geometries and laws are unchanged. The final all-node regression remains a
 separate obligation. Task 4.2 covers measured motion and flexible seats, not
 the source assembly's unresolved contacts, interlocks or pointer acceptance.
 
-## Environment
+## Carriage stop pin — assembly fit and native-representation finding
+
+The pin/frame bench separates this interface from unrelated root overlaps.
+At the original insertion, rest clearance fails against both the STEP main
+body (2.835309 mm³ native) and the author's printable main body (2.569035 mm³
+faceted). A 6 mm lift clears it at every degree from 0° through 100° (2/4
+checks pass, 3.47 s; `_build_running/carriage-stop-native.log`). This is a
+source-assembly contact, not evidence for freezing carriage rotation at rest.
+
+Manual page 39 specifies about 4 mm of bottom-pin exposure. The recentered
+carrier's bottom is Z24.9 and the original pin tip is Z20.544410518, giving
+4.355589482 mm exposure. The source contact probe brackets first clearance at
+an upward seating adjustment of .455579281–.455579758 mm. The operating
+carrier seats the unchanged pin .51 mm deeper, leaving 3.845589482 mm exposed
+and at least .05 mm axial clearance. This is an insertion-depth fit, not a
+new pin, a bored-out frame, or a new shift-lock law. Neither source file changes.
+
+The bore-retention check exposed a separate native STEP limitation. Its bore
+is R2.293 and the pin's cylindrical land is R2.195: .098 mm radial play. The
+faceted check correctly blocks a .15 mm displacement; the native boolean
+returns zero intersection even at 1 mm displacement. Independent world-solid
+and unrotated source-pair probes reproduce this outside the running simulation.
+For a .15 mm shift, points (-21.330728,16.553416,Z), Z=26,30,34, classify
+inside both solids, while the common volume is zero. Both inputs and the
+empty result report valid. Swapping operands and cleaning redundant faces
+do not resolve it. The reproduction is `simulation.tools.carriage_pin_fit`;
+this is not attributed to the corrected retained-coordinate binding.
+
+The operating pin therefore uses the author's **unchanged printable STL**:
+`STLs/39 - Clearing Stop Pin & Digit Axles/carriage body stop pin.stl`.
+It is watertight, one body, R2.195 × 15 mm, volume 218.222802 mm³ versus the
+STEP's 218.300286 mm³. `print_parts.CounterBodyStopPin` records this provenance.
+This follows the existing source-print handling for the covers/collar; the
+older pose and clocked carriers are not changed. **Pin-contact assertions are
+faceted even under the exact runner. No native-solid acceptance is claimed
+for this pin.** No intersection-volume epsilon or skipped contact is introduced.
+
+The eight pin contracts pass with both frame representations: .05 mm axial
+seat clearance; every degree 0–100° at lifts 0,3,6 mm; both out-of-range
+barriers at −20° and 120°; unchanged pin height/connectivity; and .05 mm
+radial freedom / .15 mm blocking along both horizontal axes. The initial
+.05 mm blocking trial was an incorrect bore-clearance assumption, corrected
+from the measured radii rather than a volume tolerance. Logs:
+`_build_running/carriage-stop-print-{faceted,exact}.log` (8/8, 20.98 s and
+2.36 s respectively; both use source-STL pin contacts).
+
+Removing the .51 mm seating adjustment while retaining the source STL fails
+six of eight checks (1.28 s), including real frame interference and the
+independent tip-height assertion. Restoring it gives 8/8 again (2.79 s).
+Logs: `carriage-stop-seat-mutation-{red,restored}.log`. No fit mutation remains.
+
+The inspection-only pin/frame view omits surrounding carrier parts without
+changing the test bench. The fitted rest snapshot was inspected; it shows the
+pin within the annular frame channel. Task 1.3 remains open for the other
+source/frame interfaces. The pin is an angular end stop, not by itself the
+seated-carriage shift interlock. No new operating restraint is claimed.
+
+After integration into the operating carrier, the five retained world-motion
+and spring-seat checks still pass (5/5 faceted, 57.42 s), and a fresh
+`machinome build operating_curta` succeeds. Logs:
+`operating-motion-after-pin-fit.log` and `operating-build-after-pin-fit.log`.
+The rebuilt source-STL pin/frame snapshot was inspected separately from the
+earlier native-pin trial (`carriage-stop-fitted-print-rest.png`).
+
+## Environment history
 
 Framework content `df0bee4c7a5c727becf9ea33b7409ef796256a3d`; viewer content
 `26c86df4557dae6392de1e2237acdf25328fe963`. The installed viewer reports API 21
