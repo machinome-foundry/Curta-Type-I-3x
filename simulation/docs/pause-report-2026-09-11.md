@@ -1,7 +1,7 @@
 # Curta initial sprint — checkpoint and framework handoff
 
 Historical checkpoint at `d80e7bf`. Work resumed after the pilot integrated
-solid-node's `expression-graphs` cycle (`446bc22` planning, `5e59147`
+machinome's `expression-graphs` cycle (`446bc22` planning, `5e59147`
 implementation; ADR-101). The fresh project export and browser checks pass;
 see [resumption evidence](measurements.md#resumption-after-expression-graphs).
 The report below preserves what was known when work stopped.
@@ -9,7 +9,7 @@ The report below preserves what was known when work stopped.
 ## Disposition
 
 The initial simulation implementation is **paused, not delivered**. The pilot
-chose to address solid-node's symbolic-expression memory growth before resuming
+chose to address machinome's symbolic-expression memory growth before resuming
 Curta. Preserve the complete mechanism, educational assembly layers, calculator
 controls and flexible parts; do not reduce their scope to make an export fit.
 
@@ -57,7 +57,7 @@ regression, a complete interference inventory or whole-machine certification.
 ## Why work stopped
 
 Fixed numeric poses and inspected snapshots work. Fresh interactive export
-fails when solid-node evaluates the same motion laws with symbolic drivers.
+fails when machinome evaluates the same motion laws with symbolic drivers.
 Its solid2 `OpenSCADConstant` arithmetic eagerly interpolates each input's
 complete expression into another string. Reuse therefore becomes duplication;
 composing profiles and distributing their outputs multiplies that duplication.
@@ -98,7 +98,7 @@ unbounded exports were killed by the OS. The pilot separately reported a host
 crash during a parallel build; VM evidence does not establish that host's
 exact failure mechanism. No host configuration was changed.
 
-The final traceback ends at `detents.spreading` → `solid_node.math.piecewise`
+The final traceback ends at `detents.spreading` → `machinome.math.piecewise`
 → solid2's `OpenSCADConstant(f'({self} {op} {other})')`. Other attempts reached
 the subsequent spring-coordinate arithmetic before failing. All failed before
 writing a fresh manifest.
@@ -112,7 +112,7 @@ this allocation failure. No framework implementation was changed.
 ## Framework cycle triggered by this project
 
 **Suggested cycle identifier:** `construction-time-expression-sharing`.
-**Owner:** the independent solid-node repository, not this project or the shop.
+**Owner:** the independent machinome repository, not this project or the shop.
 **State at handoff:** empirical finding and proposed scope captured; formal
 proposal, ratification, worktree and implementation are pending. No formal
 memory-fix cycle has been opened or completed by this project checkpoint.
@@ -127,7 +127,7 @@ This report is the portable project-side handoff; copying the finding into the
 framework's wart record belongs to that separate cycle.
 
 The relevant accepted decision is
-[ADR-080](https://github.com/LibreSolid/solid-node/blob/main/docs/adrs/EXPORT/ADR-080-a-shared-subexpression-is-named-once.md).
+[ADR-080](https://github.com/machinome/machinome-framework/blob/main/docs/adrs/EXPORT/ADR-080-a-shared-subexpression-is-named-once.md).
 It explicitly deferred construction-time expression graphs because the earlier
 clock case was manageable. Curta provides the missing producer-memory evidence.
 
@@ -221,7 +221,7 @@ export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 SOLID_BUILD_DIR=_build_checks
 ../../../.venv/bin/python -m unittest simulation.test_arithmetic simulation.test_cycle simulation.test_dial_cam_law simulation.test_expression_size simulation.test_carry_timing simulation.test_source
 ```
 
-The inspected environment reported solid-node 0.6.0, solid-node-viewer 0.1.0
+The inspected environment reported machinome 0.6.0, machinome-viewer 0.1.0
 and molejo 0.2.0 as installed package metadata. The local framework source is
 the main commit recorded above, not an assumption that released 0.6.0 contains
 all of that main's APIs; viewer 0.1.0 remains founded, not released.

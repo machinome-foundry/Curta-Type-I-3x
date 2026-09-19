@@ -2,7 +2,7 @@
 
 from math import cos, sin, radians
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.registers import RegisterBench
 
 

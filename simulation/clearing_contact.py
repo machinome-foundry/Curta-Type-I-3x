@@ -1,8 +1,8 @@
 """The installed clearing rows and seventeen dials, without common carriage lift."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute
+from machinome.simulation import Driver
 from simulation.registers import ResultRegister, TurnsRegister
 from simulation.mechanism import ClearingAssembly, clearing_turn
 

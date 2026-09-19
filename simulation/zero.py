@@ -1,10 +1,10 @@
 """The retained zero cam, its following lever, and the sliding drive pin."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.motion.ports import Port
-from solid_node.simulation import Driver
-from solid_node.math import piecewise
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Port
+from machinome.simulation import Driver
+from machinome.math import piecewise
 from simulation.arithmetic import modulo
 from simulation.flexibles import MountedZeroSpring, FIXED_PIN, ZERO_PIVOT
 from simulation.standard.parts import (

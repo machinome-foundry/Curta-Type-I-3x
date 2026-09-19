@@ -1,6 +1,6 @@
 """Native clearing-stop depression for .05 mm minimum surface separation."""
 
-from solid_node.math import piecewise
+from machinome.math import piecewise
 
 
 PIN_DROP = (

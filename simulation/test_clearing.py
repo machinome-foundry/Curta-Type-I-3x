@@ -1,7 +1,7 @@
 """The omitted strips must be bent into the measured cover groove."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.clearing import ClearingBench, GROOVE_FLOOR, SEAT_GAP
 from simulation.contracts import assert_connected_material
 

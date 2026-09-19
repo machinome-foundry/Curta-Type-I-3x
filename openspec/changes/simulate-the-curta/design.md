@@ -17,7 +17,7 @@ The pilot subsequently paused implementation for a framework memory fix.
 The project checkpoint and proposed framework-cycle handoff are recorded in
 `simulation/docs/pause-report-2026-09-11.md`. This change remains active;
 neither the original scope nor its delivery requirements are reduced.
-Work resumed after the pilot integrated solid-node's `expression-graphs`
+Work resumed after the pilot integrated machinome's `expression-graphs`
 cycle (`446bc22` / `5e59147`, ADR-101). Fresh project export and browser
 verification now pass; the mechanical delivery scope remains unchanged.
 
@@ -42,7 +42,7 @@ friction, spring-force prediction, or fabrication certification.
 ## Decisions
 
 1. **Import STEP components and preserve provenance.** Scaffold through
-   `solid import-step`, retaining its hierarchy and transforms as an auditable
+   `machinome import-step`, retaining its hierarchy and transforms as an auditable
    source map. Simplify the moving mechanism into meaningful subassemblies only
    after source-drift checks exist. The STL assessment shows substantial topology
    defects, so replacing the STEP indiscriminately with STLs would lose evidence.

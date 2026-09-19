@@ -1,6 +1,6 @@
 """Reproducible decimal register state for a prescribed crank operation."""
 
-from solid_node.math import floor
+from machinome.math import floor
 
 
 def modulo(value, modulus):

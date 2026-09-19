@@ -2,7 +2,7 @@
 
 The pilot directed this project to defer direct-operation clearing, record its
 framework requirement for another agent, and implement markings next. The
-clearing handoff is `solid-node/workflow/docs/curta-retained-angle-clearing.md`
+clearing handoff is `machinome/workflow/docs/curta-retained-angle-clearing.md`
 in the workspace (framework commit `3045600`); it is pre-spec evidence, not a
 ratified new API. The existing calculator remains pose-driven.
 
@@ -74,11 +74,11 @@ one BLAS/OpenMP thread and the recorded 8 GiB address-space guard:
 
 ```sh
 python -m simulation.tools.prepare_marking_artwork --check
-solid build
+machinome build
 python -m simulation.tools.check_markings
 python -m simulation.tools.check_marking_poses
 python -m simulation.tools.render_markings
-solid export -o _build_export
+machinome export -o _build_export
 python -m simulation.tools.check_markings _build_export/manifest.json
 ```
 

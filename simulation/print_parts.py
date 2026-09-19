@@ -7,7 +7,7 @@ See docs/measurements.md for the source comparison and boolean findings.
 
 from simulation.colors import BLACK, ALUMINUM
 from pathlib import Path
-from solid_node.node import StlNode
+from machinome.node import StlNode
 
 PRINTS = Path(__file__).resolve().parents[1] / 'STLs'
 

@@ -1,8 +1,8 @@
 """Complete stepped drum and both first-channel transmission stacks."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.simulation import Driver
 from simulation.cycle import dial_positions
 from simulation.fit import INPUT_CLOCKING
 from simulation.prints import PrintedDrum

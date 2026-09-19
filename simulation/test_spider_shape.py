@@ -1,6 +1,6 @@
 """A moving tapered finger must retain its source shape and continuous body."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.spider_shape import SpiderShapeBench
 from simulation.standard.parts import SpiderSpring
 from simulation.tools.interference import world_solids

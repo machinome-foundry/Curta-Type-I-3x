@@ -1,7 +1,7 @@
 """Filing a fork cannot erase its guide, detents or material connectivity."""
 
 import cadquery as cq
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry_fits import FittedResultsSlider, FittedTurnsSlider, in_first_result_station
 from simulation.standard.parts import TensSliderForResults, TensSliderForTurnsCounter
 

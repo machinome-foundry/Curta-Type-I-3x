@@ -1,6 +1,6 @@
 """Use the complete printed drum, not an isolated tooth or arithmetic proxy."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.engagement import Engagement
 
 

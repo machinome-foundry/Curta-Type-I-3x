@@ -1,9 +1,9 @@
 """Crank, stepped drum and one input channel, using the source's rest frames."""
 
-from solid_node.node import AssemblyNode
-from solid_node.simulation import Driver
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.motion.ports import Port
+from machinome.node import AssemblyNode
+from machinome.simulation import Driver
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Port
 from simulation.standard.assembly import (
     CrankHandle1, MainAxleStepDrum1, DigitSelectorAxle1,
     SelectorShaftTop1_419054, SelectorKnob1_419057,

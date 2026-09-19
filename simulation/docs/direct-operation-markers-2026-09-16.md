@@ -100,7 +100,7 @@ workspace environment:
 
 ```sh
 PYTHONPATH="$PWD" ../../../.venv/bin/python -m unittest -v simulation.test_running_markers
-PYTHONPATH="$PWD" ../../../.venv/bin/solid test --exact simulation/decimal_markers.py:MarkerGeometryBench
+PYTHONPATH="$PWD" ../../../.venv/bin/machinome test --exact simulation/decimal_markers.py:MarkerGeometryBench
 ```
 
 Use the resource guard and single-threaded settings in the implementation
@@ -115,7 +115,7 @@ that repeated reverse crank requests are not blocked. Native seated-pawl
 bracketing at seven regular/closing stations finds contact about
 0.20005–0.20008 degree before each release. The rounded free-side position
 `release - 0.2` is clear; another 0.001 degree in reverse meets material.
-`solid test --exact simulation/tools/ratchet_stop.py:StopProbe` passes that
+`machinome test --exact simulation/tools/ratchet_stop.py:StopProbe` passes that
 geometry contract (1/1, 0.74 seconds).
 
 A candidate crank-only stop was rejected: recomputing the last release after

@@ -14,10 +14,10 @@ def main():
     if args.samples < 1:
         parser.error('--samples must be positive')
     start = perf_counter()
-    import solid_node
-    from solid_node.simulation import Sim
+    import machinome
+    from machinome.simulation import Sim
     from simulation.clocked import ClockedCurta, register_reading
-    report = {'framework_module': solid_node.__file__, 'import_seconds': perf_counter() - start}
+    report = {'framework_module': machinome.__file__, 'import_seconds': perf_counter() - start}
     start = perf_counter()
     sim = Sim(ClockedCurta())
     report['construct_seconds'] = perf_counter() - start

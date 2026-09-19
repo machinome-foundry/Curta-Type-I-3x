@@ -1,6 +1,6 @@
 """The seventeen native balls lift individual fingers of one spider spring."""
 
-from solid_node.motion.joints import Prismatic
+from machinome.motion.joints import Prismatic
 from simulation.standard.layers import RegisterDetents as SourceDetents
 from simulation.standard.parts import Part6mmBall419241
 from simulation.spider import FlexibleSpider, PRELOAD, SEAT_GAP

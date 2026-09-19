@@ -1,7 +1,7 @@
 """Carry sliders, with fitted U-wire seats at the source bearing stations."""
 
-from solid_node.motion.joints import Prismatic
-from solid_node.motion.ports import Port
+from machinome.motion.joints import Prismatic
+from machinome.motion.ports import Port
 from simulation.carry_heads import (ResultsSlider as TensSliderForResults,
                                    TurnsSlider as TensSliderForTurnsCounter)
 from simulation.carry_spring import MountedCarrySpring

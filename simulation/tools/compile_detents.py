@@ -24,7 +24,7 @@ def compact(points):
 def emit(path):
     readings = [json.loads(line) for line in Path(path).read_text().splitlines()]
     lines = ['"""Measured .05 mm carry-hook gauge profiles; see tools/carry_profile.py."""', '',
-             'from solid_node.math import piecewise', '', '']
+             'from machinome.math import piecewise', '', '']
     for bank in ('Results', 'Turns'):
         points = compact([(row['engaged'], row['spread']) for row in readings if row['bank'] == bank])
         lines.append(bank.upper() + ' = (')

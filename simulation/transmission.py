@@ -1,9 +1,9 @@
 """Keyed transmission shafts: selector travel and the two-to-one dial drive."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.ports import Port
-from solid_node.simulation import Driver
-from solid_node.math import abs, clamp01, floor
+from machinome.node import AssemblyNode
+from machinome.motion.ports import Port
+from machinome.simulation import Driver
+from machinome.math import abs, clamp01, floor
 from simulation.arithmetic import digit, modulo, decimal_shift
 from simulation.cycle import dial_positions, added_digits, carries
 from simulation.carry_motion import engagement

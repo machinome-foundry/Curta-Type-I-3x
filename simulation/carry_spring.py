@@ -3,9 +3,9 @@
 from simulation.colors import STEEL
 from math import pi, sin, cos, radians
 from molejo import Shape, Circle, Line, Arc, Spline, P
-from solid_node.node import AssemblyNode, MolejoNode
-from solid_node.motion.joints import Prismatic
-from solid_node.motion.ports import Port
+from machinome.node import AssemblyNode, MolejoNode
+from machinome.motion.joints import Prismatic
+from machinome.motion.ports import Port
 
 # Source-frame measurements; small fits clear the bearing's 6 mm waist and
 # lower support. The slider's center is .075 mm off the bearing's center.

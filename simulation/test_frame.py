@@ -1,6 +1,6 @@
 """Spring wire stays in its measured holes and outside the printed supports."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.frame import LowerFrame
 
 

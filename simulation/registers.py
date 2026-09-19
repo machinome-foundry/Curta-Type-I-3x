@@ -1,9 +1,9 @@
 """Dial joints and source-specific clocking; one port per register value."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute
-from solid_node.motion.ports import Port
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute
+from machinome.motion.ports import Port
+from machinome.simulation import Driver
 from simulation.cycle import dial_positions
 from simulation.fit import CARRIAGE_CENTER, CARRIAGE_CLOCKING, INPUT_CLOCKING, BEVEL_DIAL_CLOCKING
 from simulation.standard.assembly import *

@@ -5,7 +5,7 @@ No total operand, completed-turn count or arithmetic register enters a law.
 """
 
 from math import degrees
-from solid_node.math import floor, clamp01, max, piecewise
+from machinome.math import floor, clamp01, max, piecewise
 from simulation.cycle import (tooth_passage, RESULT_INPUT_END, TURNS_INPUT_END,
                               RESULT_CARRY_END, TURNS_CARRY_END)
 from simulation.carry_profiles import PIN_DROP, RESET_LIFT

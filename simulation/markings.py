@@ -7,7 +7,7 @@ See docs/markings.md for registration evidence and the deferred conical sheet.
 
 from math import degrees
 
-from solid_node.node.markings import Marking, Svg, Wrapped
+from machinome.node.markings import Marking, Svg, Wrapped
 
 
 class RegisterDigits:

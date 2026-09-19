@@ -138,7 +138,7 @@ facet-diagonal fidelity limit. Upstream STEP/STL files remain unchanged.
 ## Reproduction
 
 From the project root, in the workspace environment, run each table module with
-`solid test --faceted simulation/<module>.py`, then `--exact` for native checks.
+`machinome test --faceted simulation/<module>.py`, then `--exact` for native checks.
 Each module has its own ignored `_build_evidence/resume-{faceted,exact}-<module>.log`
 (the slash in `standard/assembly` is a hyphen in its log name). Do not treat a
 loop finishing as a green suite: inspect each module's failed count.

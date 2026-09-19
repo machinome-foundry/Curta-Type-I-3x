@@ -1,6 +1,6 @@
 """One printed group is one connected solid, not its separate CAD ingredients."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.prints import PrintedDrive
 
 

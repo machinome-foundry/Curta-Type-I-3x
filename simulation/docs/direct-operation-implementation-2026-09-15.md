@@ -113,7 +113,7 @@ the timing probe; omit `--ticks` for full calibration with progress output.
 
 The pilot requested a wart, not a Python handoff, and directed continued
 Python implementation. The finding is committed as `f21c46e` in framework
-worktree `solid-node/WTs/curta-running-performance-wart`, in
+worktree `machinome/WTs/curta-running-performance-wart`, in
 `workflow/warts.md` under the originating Curta follow-up. It is a local,
 unratified finding, not an external issue or a framework optimization cycle;
 it has not been integrated into framework main.

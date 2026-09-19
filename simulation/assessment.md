@@ -154,7 +154,7 @@ intersections between parts, correct assembly, or correct motion.
 - `StepAssembly` successfully provided the inventory and placements above.
 - Constructing temporary in-memory `StepNode` subclasses and calling
   `.shape()` failed with `ProjectManifestError`: no `pyproject.toml` containing
-  `[tool.solid-node]` exists above the source STEP. No manifest was created
+  `[tool.machinome]` exists above the source STEP. No manifest was created
   for the assessment. This is not evidence that a properly configured
   simulation project cannot import the geometry.
 - `cadquery.Assembly.load(path, importType="STEP")` failed while recovering
@@ -162,10 +162,10 @@ intersections between parts, correct assembly, or correct motion.
   already in the assembly`. This is a separate duplicate-instance-name issue
   from the two duplicated product names reported above. It prevented that
   diagnostic route from identifying the invalid solid.
-- No `solid import-step` scaffold, `solid build`, snapshot of a simulation,
+- No `machinome import-step` scaffold, `machinome build`, snapshot of a simulation,
   project contract suite, or motion validation was run.
 
-The public API describes a STEP scaffolding route through `solid import-step`
+The public API describes a STEP scaffolding route through `machinome import-step`
 and part import through `StepNode`, with declared tessellation. Consult the
 current public API before using these. Full scaffolding success on this
 particular document remains untested.
@@ -362,7 +362,7 @@ Do not combine their geometries without a deliberate, documented decision.
 The probes used the existing workspace venv, from this project directory:
 
 ```text
-solid-node 0.6.0 (installed distribution metadata)
+machinome 0.6.0 (installed distribution metadata)
 cadquery 2.7.0
 trimesh 4.4.9
 ```

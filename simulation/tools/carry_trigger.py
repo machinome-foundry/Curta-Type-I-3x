@@ -11,7 +11,7 @@ from simulation.carry_contact import CarryContactBench
 from simulation.tools.carry_phase import solid
 from simulation.tools.interference import world_solids
 from simulation.standard.carry import ResultsLever5
-from solid_node.simulation import Driver
+from machinome.simulation import Driver
 
 
 class FullPinLever(ResultsLever5):

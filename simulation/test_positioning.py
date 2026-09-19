@@ -1,7 +1,7 @@
 """Measured spring seats, not a translated rigid coil, govern carriage lift."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.positioning import PositioningBench
 
 

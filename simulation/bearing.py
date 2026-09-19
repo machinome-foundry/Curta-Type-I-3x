@@ -1,7 +1,7 @@
 """The bevel fit must retain clearance to the frame's shaft bearing."""
 
-from solid_node.node import AssemblyNode
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.simulation import Driver
 from simulation.standard.parts import MainBody
 from simulation.standard.channels import ResultOnes
 

@@ -2,7 +2,7 @@
 
 import numpy as np
 from math import degrees
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.clearing_contact import ClearingContactBench
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 from simulation.tools.interference import rigid_leaves

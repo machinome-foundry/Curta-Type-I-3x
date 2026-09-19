@@ -1,9 +1,9 @@
 """One selectable drum row and its transmission pinion, in the source frame."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute
-from solid_node.simulation import Driver
-from solid_node.math import clamp01
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute
+from machinome.simulation import Driver
+from machinome.math import clamp01
 from simulation.standard.parts import OneToothStepDrumSegment, TransmissionGear0_5
 from simulation.fit import FittedInputPinion
 

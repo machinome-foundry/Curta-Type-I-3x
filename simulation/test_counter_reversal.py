@@ -1,6 +1,6 @@
 """A reversal must engage the complement teeth, not just avoid collisions."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.counter_reversal import CounterReversalBench
 
 

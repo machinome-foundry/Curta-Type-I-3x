@@ -1,7 +1,7 @@
 """Ratchet motion must lift the pawl instead of passing through it."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.pawl import PawlBench
 from simulation.pawl import RELEASE, TOOTH_PITCH, CLOSING_RELEASE
 
@@ -51,7 +51,7 @@ class PawlTest(TestCase):
 
     def test_spring_stays_in_its_mounts_as_the_pawl_moves(self):
         from simulation.fit import PAWL_PIVOT, PAWL_SPRING_ANCHOR, PAWL_SPRING_HOLE
-        from solid_node.math import turn
+        from machinome.math import turn
         wire = self.node.pawl.documented_spring.wire
         pawl = self.node.pawl.reverse_rotation_prevention_pawl
         for angle in (0, 1, 3, 100, 301.83, 301.84):

@@ -4,7 +4,7 @@ Placements are transcribed from the untouched source map. Gear fitting is
 explicit in fit.py; nothing is copied from the problematic grouped print STLs.
 """
 
-from solid_node.node import FusionNode
+from machinome.node import FusionNode
 from simulation.colors import ALUMINUM, BRONZE
 from simulation.standard.parts import *
 from simulation.fit import (FittedInputPinion, FittedCounterPinion, FittedInputSpacer, FittedOnesSpacer,

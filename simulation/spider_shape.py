@@ -1,7 +1,7 @@
 """Prove one tapered source finger before repeating it over the registers."""
 
-from solid_node.node import AssemblyNode
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.simulation import Driver
 from simulation.spider import OneFingerMount, SpiderFinger
 
 

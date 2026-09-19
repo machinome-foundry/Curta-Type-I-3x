@@ -5,7 +5,7 @@ must become green before the development root can replace the pose model.
 """
 
 import unittest
-from solid_node.simulation import Sim
+from machinome.simulation import Sim
 from simulation.pawl import RELEASE, RAMP, TOOTH_PITCH
 from simulation.running_pawl import RETURN_SPAN
 from simulation.test_running_laws import RunningPawlBench

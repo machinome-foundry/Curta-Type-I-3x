@@ -2,10 +2,10 @@
 
 Source-specific axes and child types are deliberately explicit.
 """
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.motion.ports import Port
-from solid_node.math import floor
-from solid_node.simulation import Driver
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Port
+from machinome.math import floor
+from machinome.simulation import Driver
 from simulation.standard.assembly import *
 from simulation.standard.layers import InputSelectors
 

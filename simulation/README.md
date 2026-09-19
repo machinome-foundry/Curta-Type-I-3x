@@ -35,7 +35,7 @@ remaining ratchet failures and the marker tessellation discrepancy. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.
 
-The export memory blocker is resolved by solid-node's `expression-graphs`
+The export memory blocker is resolved by machinome's `expression-graphs`
 cycle, integrated at `5e59147`. The post-fit complete export takes 41.43 s
 with 817216 KiB peak process RSS under the 8 GiB address-space guard, using
 the existing CAD cache. The
@@ -66,15 +66,15 @@ report. The current workspace framework is required; package metadata alone
 does not distinguish its post-0.6 motion, expression-graph and markings changes.
 
 ```sh
-solid build
-solid snapshot -o snapshot-rest.png --autocenter --viewall
+machinome build
+machinome snapshot -o snapshot-rest.png --autocenter --viewall
 python -m unittest simulation.test_source
-solid test --faceted simulation/standard/assembly.py
-solid test --exact simulation/curta.py
+machinome test --faceted simulation/standard/assembly.py
+machinome test --exact simulation/curta.py
 python -m simulation.tools.probe
 ```
 
-Without activating the workspace environment, use `../../../.venv/bin/solid`
+Without activating the workspace environment, use `../../../.venv/bin/machinome`
 and `../../../.venv/bin/python` in this checkout. The exact root test is
 intentionally failing until the recorded source findings are resolved. A
 successful build alone is not an assembly-validation result.
@@ -82,12 +82,12 @@ successful build alone is not an assembly-validation result.
 Independent subassemblies are inspectable by explicit class reference:
 
 ```sh
-solid build simulation/standard/assembly.py:UpperFrame1
-solid build simulation/standard/assembly.py:MainAxleStepDrum1
-solid build simulation/standard/assembly.py:LowerFrame1
-solid build simulation/standard/assembly.py:DigitSelectorAxle1
-solid build simulation/standard/assembly.py:Carriage1
-solid build
+machinome build simulation/standard/assembly.py:UpperFrame1
+machinome build simulation/standard/assembly.py:MainAxleStepDrum1
+machinome build simulation/standard/assembly.py:LowerFrame1
+machinome build simulation/standard/assembly.py:DigitSelectorAxle1
+machinome build simulation/standard/assembly.py:Carriage1
+machinome build
 ```
 
 The last command restores the complete model as the published viewer document.
@@ -96,10 +96,10 @@ No floor or development server is launched by these commands.
 ### Calculator page
 
 The project-owned page adds retained calculations and recursive layer controls
-over the public solid-node viewer. Export and serve the project root locally:
+over the public machinome viewer. Export and serve the project root locally:
 
 ```sh
-solid export -o _build_export
+machinome export -o _build_export
 python -m http.server 8766 --bind 127.0.0.1
 ```
 
@@ -187,7 +187,7 @@ reproducible pose, not a claim that a physical crank can run backward.
   detached positive-volume bodies; rigid bodies and flexible material patches
   are checked. A reconstructed spring still counts as one physical occurrence.
 - `standard/parts.py` and `standard/assembly.py`: compacted output of
-  `solid import-step`, with source product names and all source placements.
+  `machinome import-step`, with source product names and all source placements.
 - `source.py`: creates the ignored STEP import copy with unique names for
   otherwise ambiguous products. A restoration test proves every other byte
   remains upstream's.

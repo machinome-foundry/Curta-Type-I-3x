@@ -50,7 +50,7 @@ The new work below does not complete or waive any older mechanical task.
 
 ## Previous continuation — 2026-09-11
 
-The pilot resumed this change after solid-node's `expression-graphs` cycle
+The pilot resumed this change after machinome's `expression-graphs` cycle
 merged into main at `5e59147` (planning `446bc22`, ADR-101). The complete
 post-fit export succeeds in 41.43 s at 817216 KiB peak process RSS with the
 existing CAD cache. All six
@@ -67,7 +67,7 @@ interfaces and final acceptance tasks below are still open. The schema is
 
 ## Historical pause checkpoint — 2026-09-11
 
-Paused by the pilot for the solid-node construction-time expression-sharing
+Paused by the pilot for the machinome construction-time expression-sharing
 follow-up. See `simulation/docs/pause-report-2026-09-11.md` for the initial
 10h Astra/xhigh sprint, memory evidence, cycle handoff and ordered restart.
 At that checkpoint no formal framework memory-fix change existed; this project stays

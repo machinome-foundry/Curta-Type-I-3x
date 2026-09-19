@@ -1,6 +1,6 @@
 """Colors distinguish mechanical roles on real leaves, not empty assemblies."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.display import DisplayBench
 from simulation.tools.interference import rigid_leaves
 

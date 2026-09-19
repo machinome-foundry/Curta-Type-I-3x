@@ -11,7 +11,7 @@ not an implemented migration or a completed mechanical acceptance task.
 - The selected-joint hardening commit `d1108a4` is **not** an ancestor of
   that framework head. The API skill describes that correction separately.
 - Viewer committed head: `4cfa251adaae20b4ff7e998dcd8f8a9afaa807fd`, with
-  pre-existing uncommitted API-13 implementation. `solid viewer` reports
+  pre-existing uncommitted API-13 implementation. `machinome viewer` reports
   API 13, document versions 1–5 and package metadata version 0.1.0.
 - Installed bundle SHA-256:
   `42e214cb1d3cc0483548f53d4a8c27324d4ebca816f1b29ae9b66789800733b7`.
@@ -69,7 +69,7 @@ for arbitrary repeated operations.
 
 ## Markings readiness
 
-The new public manual is `solid-node/docs/markings.rst`. It documents
+The new public manual is `machinome/docs/markings.rst`. It documents
 `Marking`, `Svg`, `Flat` and `Wrapped`, including source-relative SVG paths,
 nominal zero-volume surfaces and separate decal artifacts. It explicitly says
 that neither the browser viewer nor the OpenSCAD path draws these markings yet.

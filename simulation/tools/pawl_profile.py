@@ -7,7 +7,7 @@ pass the installed contact contract. No part is repaired by this probe.
 
 import json
 import argparse
-from solid_node.node.adapters.step import StepAssembly
+from machinome.node.adapters.step import StepAssembly
 from simulation.source import STEP
 from simulation.standard.parts import ZeroPositioningDisc, ReverseRotationPreventionPawl
 from simulation.tools.carry_phase import solid

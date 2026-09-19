@@ -11,7 +11,7 @@ def emit(path):
             if line.startswith('{')]
     points = compact([(row['angle'], row['drop']) for row in rows])
     lines = ['"""Native clearing-stop depression for .05 mm minimum surface separation."""',
-             '', 'from solid_node.math import piecewise', '', '', 'PIN_DROP = (']
+             '', 'from machinome.math import piecewise', '', '', 'PIN_DROP = (']
     lines.extend(f'    ({x:g}, {y:.6f}),' for x, y in points)
     lines.extend([')', '', '', 'def following(source, target):',
                   '    return lambda turn: piecewise((-turn) % 360, PIN_DROP)'])

@@ -3,9 +3,9 @@
 from simulation.colors import STEEL
 from math import atan2, cos, sin, hypot, tau
 from molejo import Circle, Shape, Spline, P
-from solid_node.node import AssemblyNode, MolejoNode
-from solid_node.motion.ports import Port
-from solid_node.math import turn
+from machinome.node import AssemblyNode, MolejoNode
+from machinome.motion.ports import Port
+from machinome.math import turn
 from simulation.fit import PAWL_PIVOT, PAWL_SPRING_ANCHOR, PAWL_SPRING_HOLE
 
 # A 9.5 mm winding mandrel is not the installed bore. The 12.5 mm source

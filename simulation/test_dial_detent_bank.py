@@ -1,6 +1,6 @@
 """Every source ball follows the correct dial and its own spider finger."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.dial_detent_bank import DialDetentBank
 
 # Independent source occurrence map, ordered by decimal place.

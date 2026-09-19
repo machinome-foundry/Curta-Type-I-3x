@@ -1,7 +1,7 @@
 """Carry motion is vertical travel within a fixed bearing, not an axle rotation."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry import CarryBench, TurnsCarryBench
 
 

@@ -1,6 +1,6 @@
 """Both a carried digit and a blank digit must clear the complete bell."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry_mesh import CarryMesh
 
 

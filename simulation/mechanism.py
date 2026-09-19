@@ -1,8 +1,8 @@
 """Motion belongs to the mechanism that the navigation tree exposes."""
 
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.motion.ports import Port
-from solid_node.math import clamp01, abs
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Port
+from machinome.math import clamp01, abs
 from simulation.assemblies import Inputs as SourceInputs, MainDrive as SourceDrive, Frame as SourceFrame
 from simulation.assemblies import RegisterCarriage as SourceRegisters, Carriage as SourceCarriage
 from simulation.assemblies import CarryMechanism as SourceCarry

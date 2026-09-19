@@ -1,6 +1,6 @@
 """A carry must be physically trippable, transferable and resettable."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry_contact import CarryContactBench
 from simulation.tools.interference import rigid_leaves
 

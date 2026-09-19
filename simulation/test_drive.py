@@ -1,7 +1,7 @@
 """World-space geometry checks, independent of the declared joint values."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.drive import DriveTrain
 
 

@@ -5,10 +5,10 @@ import argparse
 import numpy as np
 from simulation.standard.assembly import ResultsTensLeverAssembly1, TurnsTensLeverAssembly1
 from simulation.standard.parts import TensSliderForResults, TensSliderForTurnsCounter
-from solid_node.motion.joints import Prismatic
-from solid_node.simulation import Driver
+from machinome.motion.joints import Prismatic
+from machinome.simulation import Driver
 from simulation.tools.interference import world_solids
-from solid_node.node.adapters.step import StepAssembly
+from machinome.node.adapters.step import StepAssembly
 from simulation.source import STEP
 from simulation.tools.transmission_import import translation
 from simulation.standard.parts import CarryLeverSpring

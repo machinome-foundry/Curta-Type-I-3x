@@ -1,6 +1,6 @@
 """Clearance and follower motion of the documented clearing-ring stop."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.clearing_stop import ClearingStopBench
 
 

@@ -1,8 +1,8 @@
 """Each physical annotation moves independently and cannot pass its neighbour."""
 
 import unittest
-from solid_node.motion.ports import Time
-from solid_node.simulation import Sim
+from machinome.motion.ports import Time
+from machinome.simulation import Sim
 from simulation.decimal_markers import MarkerBench, LOWER_GAPS, UPPER_GAPS
 
 

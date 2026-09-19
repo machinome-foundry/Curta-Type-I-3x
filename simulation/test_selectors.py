@@ -1,7 +1,7 @@
 """Every input digit changes its own channel, with the other axes stationary."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.selectors import SelectorBank
 
 

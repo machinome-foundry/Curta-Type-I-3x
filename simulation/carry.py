@@ -1,6 +1,6 @@
 """The carry slider drops to engage and rises when the bell resets it."""
 
-from solid_node.simulation import Driver
+from machinome.simulation import Driver
 from simulation.standard.carry import ResultsLever1, TurnsLever1
 
 

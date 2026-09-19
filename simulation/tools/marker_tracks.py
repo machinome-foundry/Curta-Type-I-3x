@@ -44,7 +44,7 @@ def probe():
 
 
 def native_probe():
-    from solid_node.test import TestCase
+    from machinome.test import TestCase
     from simulation.decimal_markers import MarkerGeometryBench, LOWER_GAPS, UPPER_GAPS
     logging.disable(logging.INFO)
     bench = MarkerGeometryBench()

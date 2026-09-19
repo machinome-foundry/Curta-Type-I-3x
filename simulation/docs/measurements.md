@@ -1,6 +1,6 @@
 # Source assembly measurements
 
-Measured 2026-09-11 using the workspace's editable solid-node installation,
+Measured 2026-09-11 using the workspace's editable machinome installation,
 CadQuery 2.7.0 and Trimesh 4.4.9. These extend the historical
 [assessment](../assessment.md); they do not certify a functioning calculator.
 
@@ -11,9 +11,9 @@ From the project root, with the workspace environment active:
 ```sh
 python -m simulation.tools.probe
 python -m unittest simulation.test_source
-solid build
-solid test --faceted simulation/standard/assembly.py
-solid test --exact simulation/curta.py
+machinome build
+machinome test --faceted simulation/standard/assembly.py
+machinome test --exact simulation/curta.py
 ```
 
 The last command currently fails; the findings below are unresolved.
@@ -26,7 +26,7 @@ The original STEP has 276 product definitions, 691 occurrences including
 subassemblies, and 547 leaf occurrences. The built viewer document has 692 tree
 nodes including its root, 547 rigid leaves and no missing model files.
 
-The unmodified `solid import-step` scaffold is unusable for this file: repeated
+The unmodified `machinome import-step` scaffold is unusable for this file: repeated
 subassembly names conflate definitions, and identity-only `render()` methods
 contain no Python statement. The raw generated files are retained in ignored
 `_build_import/raw-scaffold/` for diagnostics.
@@ -1254,7 +1254,7 @@ before that sharing runs. Preserving shared expressions through evaluation is
 an upstream requirement, not a new calculator control or permission to remove
 working springs. A separate framework cycle needs pilot authority; no framework
 source had been inspected at the time of those project probes. In the later
-pilot-requested diagnosis, read-only inspection of solid-node main
+pilot-requested diagnosis, read-only inspection of machinome main
 `2bdc50b37be920e79202d1c9e9c5700e43f525e0` confirmed that `symbolic_document`
 runs before `bind_document`, as documented in ADR-080. No framework code was
 changed. The pilot then paused project implementation for that framework work;
@@ -1298,7 +1298,7 @@ all-node regression or new snapshot was attempted during this pause checkpoint.
 
 ## Resumption after expression-graphs
 
-The pilot resumed work after solid-node's completed `expression-graphs` cycle
+The pilot resumed work after machinome's completed `expression-graphs` cycle
 was integrated into main: planning `446bc22`, implementation
 `5e591474b5cf54c2b41f223400d2b6ee3cbb97ae`, accepted ADR-101. The workspace
 environment imports that primary checkout; no project-side replacement of the
@@ -1433,7 +1433,7 @@ frame interface is waived by these successful scoped checks.
 ## Historical initial validation boundary
 
 - Initial frame-only root: faceted inventory contract failed `1 != 547`.
-- Complete static root: `solid build` succeeds; every published STL exists.
+- Complete static root: `machinome build` succeeds; every published STL exists.
 - Source name adaptation: two unit tests pass.
 - Source placements: one contract covering all 547 occurrences passes; the
   deliberate +1 mm mutation fails as intended.

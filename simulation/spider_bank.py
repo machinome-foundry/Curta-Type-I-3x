@@ -1,7 +1,7 @@
 """Native continuity and source fidelity of all seventeen flexible fingers."""
 
-from solid_node.node import AssemblyNode
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.simulation import Driver
 from simulation.spider import FlexibleSpider
 
 

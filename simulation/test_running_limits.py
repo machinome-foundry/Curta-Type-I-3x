@@ -2,9 +2,9 @@
 
 import unittest
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.ports import Time
-from solid_node.simulation import Driver, Sim
+from machinome.node import AssemblyNode
+from machinome.motion.ports import Time
+from machinome.simulation import Driver, Sim
 from simulation.running_parts import RunningMainDrive
 
 

@@ -7,10 +7,10 @@ interlock, clearing and geometry contracts have all been verified.
 from functools import reduce
 from operator import and_
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.ports import Time, Port
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.simulation import Driver, Instruction, Button, Turn, Slide
+from machinome.node import AssemblyNode
+from machinome.motion.ports import Time, Port
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.simulation import Driver, Instruction, Button, Turn, Slide
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
 from simulation.positioning import CarriagePositioning

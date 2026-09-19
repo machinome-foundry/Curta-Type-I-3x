@@ -2,7 +2,7 @@
 
 import unittest
 
-from solid_node.simulation import Sim
+from machinome.simulation import Sim
 from simulation.tools.direct_operation_probe import clearing_fixture
 from simulation.tools.shifted_carry_probe import ShiftedCarry, fixed_fixture
 

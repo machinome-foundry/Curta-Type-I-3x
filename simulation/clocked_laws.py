@@ -1,7 +1,7 @@
 """Clocked register arithmetic and the measured clearing-rack event surfaces."""
 
 from math import degrees
-from solid_node.math import floor, min, max, clamp
+from machinome.math import floor, min, max, clamp
 from simulation.arithmetic import digit, modulo
 from simulation.cycle import dial_positions
 

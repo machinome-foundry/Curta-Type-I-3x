@@ -6,10 +6,10 @@ moved beyond this two-wheel fixture. No active position closes a drive loop.
 The union of those mutually exclusive connections nevertheless has a cycle.
 """
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.motion.ports import Time
-from solid_node.simulation import Driver, Sim, UnsupportedLaw
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Time
+from machinome.simulation import Driver, Sim, UnsupportedLaw
 
 
 class Shaft(AssemblyNode):

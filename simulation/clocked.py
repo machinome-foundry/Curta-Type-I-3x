@@ -3,9 +3,9 @@
 from functools import reduce
 from operator import and_
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.ports import Port
-from solid_node.simulation import Driver, State, Instruction
+from machinome.node import AssemblyNode
+from machinome.motion.ports import Port
+from machinome.simulation import Driver, State, Instruction
 from simulation.assemblies import LayeredSource
 from simulation.clocked_parts import Operation, ClockedCarriage
 from simulation.clocked_laws import (stroke, advance, clearing_event, cleared, value_of,

@@ -1,7 +1,7 @@
 """Explicit assembly fitting; upstream STEP and STL files remain untouched."""
 
 import cadquery as cq
-from solid_node.parameters import Length
+from machinome.parameters import Length
 from simulation.standard.parts import (TransmissionGear0_5, TransmissionGear0_6, TransmissionGearTip,
     Part1_8mmSpacer, Part1_5mmSpacer, Part1_6mmSpacer, Part1mmSpacer,
     Part4_7mmOnesSleeve, Part2_5mmLockoutSleeve, Part5_8Sleeve, PentagonalLockout,

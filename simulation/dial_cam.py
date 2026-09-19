@@ -6,7 +6,7 @@ dial_detent_motion.py independently checks this compact geometric law.
 """
 
 from math import acos, degrees
-from solid_node.math import abs, max, sin, cos, sqrt
+from machinome.math import abs, max, sin, cos, sqrt
 
 CAM_RADIUS = 7.2
 BALL_RADIUS = 3

@@ -2,11 +2,11 @@
 
 import unittest
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Prismatic
-from solid_node.motion.ports import Time
-from solid_node.math import piecewise
-from solid_node.simulation import Driver, Sim
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Prismatic
+from machinome.motion.ports import Time
+from machinome.math import piecewise
+from machinome.simulation import Driver, Sim
 from simulation.carry_profiles import PIN_DROP
 from simulation.running_laws import lever_motion
 from simulation.running_pawl import ContinuousPawlBench

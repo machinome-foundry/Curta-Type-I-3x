@@ -1,7 +1,7 @@
 """Local fork and reset-shoe filing; the slider's detents and guide stay intact."""
 
 import cadquery as cq
-from solid_node.parameters import Length
+from machinome.parameters import Length
 from simulation.standard.parts import TensSliderForResults, TensSliderForTurnsCounter
 
 

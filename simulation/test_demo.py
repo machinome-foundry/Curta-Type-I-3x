@@ -2,7 +2,7 @@
 
 import json
 from pathlib import Path
-from solid_node.simulation import ScenarioTest, Instruction
+from machinome.simulation import ScenarioTest, Instruction
 from simulation.demo import Demo
 
 

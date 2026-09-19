@@ -1,9 +1,9 @@
 """The first register's measured five-to-ten-tooth bevel drive."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute
-from solid_node.simulation import Driver
-from solid_node.parameters import Length
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute
+from machinome.simulation import Driver
+from machinome.parameters import Length
 from simulation.standard.assembly import Part10208_1, Part10203_1
 
 

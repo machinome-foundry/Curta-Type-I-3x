@@ -7,7 +7,7 @@ and multiplying text lengths no longer measures the emitted expression.
 """
 
 import json
-from solid_node.node import AssemblyNode
+from machinome.node import AssemblyNode
 from simulation.arithmetic import calculate
 from simulation.transmission import channel_values
 from simulation.detents import spreading

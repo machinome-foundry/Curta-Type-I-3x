@@ -1,7 +1,7 @@
 """A local tip fit must leave the guide, detents, fork and reset shoe intact."""
 
 import cadquery as cq
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry_heads import ResultsSlider, TurnsSlider
 from simulation.carry_fits import FittedResultsSlider, FittedTurnsSlider, in_first_result_station
 

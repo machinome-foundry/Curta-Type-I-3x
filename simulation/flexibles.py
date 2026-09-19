@@ -4,9 +4,9 @@ from simulation.colors import STEEL
 from math import atan2, cos, sin, tau
 
 from molejo import Circle, Shape, Spline, Helix, P
-from solid_node.node import MolejoNode, AssemblyNode
-from solid_node.motion.ports import Port
-from solid_node.math import turn
+from machinome.node import MolejoNode, AssemblyNode
+from machinome.motion.ports import Port
+from machinome.math import turn
 
 ZERO_PIVOT = (40.5, 33.6)
 FIXED_PIN = (33.552746609, 28.154097304, -133.45)

@@ -9,7 +9,7 @@ import cadquery as cq
 import manifold3d as manifold
 import numpy as np
 import trimesh
-from solid_node.parameters import Length
+from machinome.parameters import Length
 from simulation.print_parts import DigitsCover, UpperHousing
 from simulation.standard.parts import DigitsAxle
 from simulation.clearing_stop_spring import ClearingPinCarrier

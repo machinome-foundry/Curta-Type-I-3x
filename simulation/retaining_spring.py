@@ -9,9 +9,9 @@ from simulation.colors import STEEL
 from math import radians, sin, cos, pi
 import cadquery as cq
 from molejo import Shape, Polygon, Line, Spline, P
-from solid_node.node import AssemblyNode, MolejoNode
-from solid_node.motion.ports import Port
-from solid_node.motion.joints import Prismatic
+from machinome.node import AssemblyNode, MolejoNode
+from machinome.motion.ports import Port
+from machinome.motion.joints import Prismatic
 from simulation.standard.parts import TensBellSpring
 
 ROOT_X = 16.357624187715082

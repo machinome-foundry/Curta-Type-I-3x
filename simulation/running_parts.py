@@ -4,8 +4,8 @@ The pose benches remain available. These specializations replace only the
 pose-driven bindings; they neither duplicate physical parts nor add memory.
 """
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
 from simulation import assemblies
 from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.running_pawl import RunningAntiReversal

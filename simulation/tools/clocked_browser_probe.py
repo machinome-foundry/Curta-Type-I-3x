@@ -23,7 +23,7 @@ def main():
     args = parser.parse_args()
     build = args.build.resolve()
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'solid_node_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
     assert 8 in viewer['documentVersions'], viewer
     errors = []
     oracle = json.loads(Path(__file__).parents[1].joinpath('clocked_oracle.json').read_text())
@@ -56,7 +56,7 @@ def main():
         page.goto('http://clocked.test/')
         page.add_script_tag(path=viewer['path'])
         page.evaluate('''async () => {
-            window.curta = await SolidNodeWidget.mount('#view', 'viewer.json', {
+            window.curta = await MachinomeWidget.mount('#view', 'viewer.json', {
                 autoplay: false,
             });
         }''')

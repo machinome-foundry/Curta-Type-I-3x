@@ -4,7 +4,7 @@ The pin and cam profiles are measured clearances. The short snap between
 detents is prescribed motion, not a spring-force or impact simulation.
 """
 
-from solid_node.math import max, clamp01, piecewise
+from machinome.math import max, clamp01, piecewise
 from simulation.arithmetic import modulo
 from simulation.carry_profiles import PIN_DROP, RESET_LIFT
 

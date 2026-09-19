@@ -1,6 +1,6 @@
 """Assembly contracts, including the source interfaces not yet implemented."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 
 from simulation.curta import Curta
 from simulation.contracts import assert_connected_material

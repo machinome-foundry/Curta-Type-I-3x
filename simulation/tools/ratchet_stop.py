@@ -2,7 +2,7 @@
 
 import json
 import logging
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.pawl import AntiReversal, PawlBench, RELEASE, TOOTH_PITCH, CLOSING_RELEASE, RAMP
 
 

@@ -1,6 +1,6 @@
 """Native confirmation of the measured, bilateral zero-capture band."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.clearing_gap import ClearingGapBench
 
 

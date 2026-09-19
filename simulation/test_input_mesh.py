@@ -1,6 +1,6 @@
 """An input tooth must pass without overlap and actually constrain the pinion."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.input_mesh import InputMesh
 
 

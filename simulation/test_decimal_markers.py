@@ -1,6 +1,6 @@
 """Native neighbour contacts independently check the measured track stops."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 import numpy as np
 from simulation.decimal_markers import MarkerGeometryBench, LOWER_GAPS, UPPER_GAPS
 

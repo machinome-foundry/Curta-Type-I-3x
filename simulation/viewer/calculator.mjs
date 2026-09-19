@@ -1,4 +1,4 @@
-/** Session state belongs to this page; the solid-node model remains replayable. */
+/** Session state belongs to this page; the machinome model remains replayable. */
 export const DRIVER_IDS = [
   'operand', 'crank_turns', 'initial_result', 'initial_turns',
   'subtract', 'carriage_position', 'carriage_lift', 'clear',

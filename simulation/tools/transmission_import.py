@@ -44,8 +44,8 @@ def channels():
 def emit():
     data = sorted(channels(), key=lambda item: (item['counter'], item['place']))
     lines = ['"""Source-specific keyed shafts, separated into sliding printed groups."""', '',
-             'from solid_node.motion.joints import Revolute, Prismatic',
-             'from solid_node.motion.ports import Port',
+             'from machinome.motion.joints import Revolute, Prismatic',
+             'from machinome.motion.ports import Port',
              'from simulation.fit import FittedBevelTip, TENS_SHAFT_X_CORRECTION',
              'import simulation.standard.assembly as source',
              'import simulation.standard.printed as printed', '', '']

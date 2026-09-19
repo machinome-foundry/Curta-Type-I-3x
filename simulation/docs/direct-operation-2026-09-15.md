@@ -66,7 +66,7 @@ only Button and Turn controls and refuses controls on a two-joint body. The
 viewer also requires a rotational placement for a button. The prerequisites
 are proposed separately, awaiting ratification:
 
-- Framework `direct-part-motion`, in `solid-node/WTs/direct-part-motion`:
+- Framework `direct-part-motion`, in `machinome/WTs/direct-part-motion`:
   Slide plus explicit selection of an existing posing joint.
 - Viewer `slide-and-turn-parts`: sliding gestures and separately reachable
   lift/turn handles on one part, always submitting requests to the same run.

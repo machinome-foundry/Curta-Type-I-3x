@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.assemblies import LayeredSource
 from simulation.standard.assembly import CurtaAssembly
 

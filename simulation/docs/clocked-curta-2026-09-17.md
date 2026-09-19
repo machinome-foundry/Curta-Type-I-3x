@@ -17,9 +17,9 @@ to the framework's public `Sim`.
 From this project directory:
 
 ```sh
-export PYTHONPATH="../../../solid-node:$PWD"
+export PYTHONPATH="../../../machinome:$PWD"
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1
-../../../.venv/bin/solid build clocked_curta
+../../../.venv/bin/machinome build clocked_curta
 ../../../.venv/bin/python -m unittest -v simulation.test_clocked.ClockedOperationsTest
 ../../../.venv/bin/python -m simulation.tools.clocked_benchmark --running
 ```
@@ -28,11 +28,11 @@ For browser operation, select the matching viewer checkout too (API 18,
 commit `757ad84`, now on viewer main), without changing the shared installation:
 
 ```sh
-export PYTHONPATH="../../../solid-node:../../../solid-node-viewer:$PWD"
-../../../.venv/bin/solid viewer
+export PYTHONPATH="../../../machinome:../../../machinome-viewer:$PWD"
+../../../.venv/bin/machinome viewer
 ../../../.venv/bin/python -m simulation.tools.clocked_browser_probe
 # Optional interactive launch; not started by this implementation:
-../../../.venv/bin/solid develop clocked_curta
+../../../.venv/bin/machinome develop clocked_curta
 ```
 
 The browser probe mounts the real build in headless Chromium through the
@@ -44,7 +44,7 @@ to `360`, and press `+` repeatedly. The crank's editable position is an
 absolute request; repeatedly entering the same position does not add again.
 
 ```python
-from solid_node.simulation import Sim
+from machinome.simulation import Sim
 from simulation.clocked import ClockedCurta, register_reading
 
 sim = Sim(ClockedCurta())  # no dt

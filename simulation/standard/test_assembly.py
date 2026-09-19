@@ -3,8 +3,8 @@
 import numpy as np
 import trimesh
 
-from solid_node.node.adapters.step import StepAssembly
-from solid_node.test import TestCase
+from machinome.node.adapters.step import StepAssembly
+from machinome.test import TestCase
 
 from simulation.source import STEP
 from simulation.standard.assembly import CurtaAssembly

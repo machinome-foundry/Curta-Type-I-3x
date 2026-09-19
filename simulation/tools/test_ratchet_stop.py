@@ -1,6 +1,6 @@
 """Geometry evidence for the open running anti-reversal diagnostic."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.pawl import RELEASE, TOOTH_PITCH, CLOSING_RELEASE
 from simulation.tools.ratchet_stop import StopProbe
 

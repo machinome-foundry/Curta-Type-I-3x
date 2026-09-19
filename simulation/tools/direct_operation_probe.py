@@ -8,12 +8,12 @@ These are capability diagnostics, not mechanical acceptance tests.
 
 import json
 
-from solid_node.math import floor
-from solid_node.motion.joints import Prismatic, Revolute
-from solid_node.motion.ports import Time
-from solid_node.node import AssemblyNode
-from solid_node.parameters import Angle
-from solid_node.simulation import Button, Driver, Instruction, Sim, Slide, Turn
+from machinome.math import floor
+from machinome.motion.joints import Prismatic, Revolute
+from machinome.motion.ports import Time
+from machinome.node import AssemblyNode
+from machinome.parameters import Angle
+from machinome.simulation import Button, Driver, Instruction, Sim, Slide, Turn
 
 
 class Crank(AssemblyNode):

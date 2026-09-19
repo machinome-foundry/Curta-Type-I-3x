@@ -4,9 +4,9 @@ Keep these beside the model modules: nested SCAD output currently fails to
 rebase flexible snapshot STL paths. See the project's framework findings.
 """
 
-from solid_node.simulation import Driver
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
+from machinome.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
 from simulation.carry_contact import CarryContactBench
 from simulation.bell_spring import BellLeafContactBench
 from simulation.mechanism import RegisterCarriage, Carriage

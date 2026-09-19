@@ -1,7 +1,7 @@
 """Clock half pins to 36°, with the cutaway clearing the neighbouring bank."""
 
 from simulation.standard.parts import NumberRollCarryPinHalf
-from solid_node.parameters import Angle
+from machinome.parameters import Angle
 
 
 class HalfPin(NumberRollCarryPinHalf):

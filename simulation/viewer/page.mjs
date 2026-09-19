@@ -6,9 +6,9 @@ const names = ['ones', 'tens', 'hundreds', 'thousands', 'ten thousands',
   'hundred thousands', 'millions', 'ten millions'];
 
 async function main() {
-  if (!globalThis.SolidNodeWidget || SolidNodeWidget.apiVersion < 7)
-    throw new Error('Export this project with the current solid-node viewer before opening this page.');
-  const viewer = await SolidNodeWidget.mount('#model', '../../_build_export/manifest.json', {
+  if (!globalThis.MachinomeWidget || MachinomeWidget.apiVersion < 7)
+    throw new Error('Export this project with the current machinome viewer before opening this page.');
+  const viewer = await MachinomeWidget.mount('#model', '../../_build_export/manifest.json', {
     driverControls: 'none', up: [0, 0, 1], fov: 30,
   });
   const calculator = new Calculator(viewer);

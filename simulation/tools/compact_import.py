@@ -1,6 +1,6 @@
 """Mechanically compact the one-shot STEP scaffold, preserving its operations.
 
-Run immediately after `solid import-step ... --into simulation/standard`.
+Run immediately after `machinome import-step ... --into simulation/standard`.
 This removes repetitive generated comments and empty render methods, and shares
 the STEP path/tessellation on one base class. It does not infer any mechanics.
 """
@@ -30,7 +30,7 @@ def compact(directory):
                                          and statement.targets[0].id in
                                          {"step_source", "angular_deflection"})]
             tree.body[1:2] = ast.parse('''
-from solid_node.node import StepNode
+from machinome.node import StepNode
 from simulation.source import STEP, prepare
 
 prepare()

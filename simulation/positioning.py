@@ -1,8 +1,8 @@
 """The carriage lifts against a spring whose upper seat stays on the shaft."""
 
-from solid_node.simulation import Driver
-from solid_node.motion.joints import Prismatic
-from solid_node.motion.ports import Port
+from machinome.simulation import Driver
+from machinome.motion.joints import Prismatic
+from machinome.motion.ports import Port
 from simulation.standard.layers import CarriagePositioning as SourcePositioning
 from simulation.standard.parts import ThrustRing
 from simulation.flexibles import MountedCarriageSpring

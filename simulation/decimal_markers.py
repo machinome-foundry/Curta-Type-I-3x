@@ -1,9 +1,9 @@
 """Source marker, ball and spring travel together around their circular track."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Bound, Revolute
-from solid_node.simulation import Driver
-from solid_node.parameters import Length
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Bound, Revolute
+from machinome.simulation import Driver
+from machinome.parameters import Length
 from math import hypot
 from simulation.standard import assembly as source
 from simulation.clearing import ClearingGrooveCover

@@ -1,10 +1,10 @@
-[tool.solid-node]
+[tool.machinome]
 model = "operating_curta"
 
-[tool.solid-node.models]
+[tool.machinome.models]
 fast_curta = "simulation.curta:Curta"
 operating_curta = "simulation.running:OperatingCurta"
 clocked_curta = "simulation.clocked:ClockedCurta"
 
-[tool.libresolid-studio]
+[tool.machinome-studio]
 profile = "builder"

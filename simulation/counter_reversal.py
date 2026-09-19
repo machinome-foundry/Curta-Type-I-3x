@@ -4,10 +4,10 @@ This pose bench does not change the operating model or fit the source shaft.
 Its stroke is the knob/yoke displacement from the verified normal-counter pose.
 """
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute, Prismatic
-from solid_node.parameters import Length
-from solid_node.simulation import Driver
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute, Prismatic
+from machinome.parameters import Length
+from machinome.simulation import Driver
 from simulation.cycle import tooth_passage, TURNS_INPUT_END
 from simulation.fit import INPUT_CLOCKING, FittedCounterPinion
 from simulation.prints import PrintedDrum

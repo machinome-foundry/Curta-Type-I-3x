@@ -1,9 +1,9 @@
-"""Parts scaffolded from 'curta.step' by `solid import-step`.
+"""Parts scaffolded from 'curta.step' by `machinome import-step`.
 
 Generated once; edit freely -- running the command again
 refuses to overwrite this file (see docs/cli.rst).
 """
-from solid_node.node import StepNode
+from machinome.node import StepNode
 from simulation.colors import ALUMINUM, BRONZE, BRASS, BLACK, STEEL, IVORY
 from simulation.markings import (RegisterDigits, InputDigits, InputPlaces,
                                  SleeveBranding, ReversingArrows)

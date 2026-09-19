@@ -1,7 +1,7 @@
 """Fit the dial-pin contact tips to the measured 4.2 mm carry stroke."""
 
 import cadquery as cq
-from solid_node.parameters import Length
+from machinome.parameters import Length
 from simulation.carry_fits import FittedResultsSlider, FittedTurnsSlider, in_first_result_station
 
 

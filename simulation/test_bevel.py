@@ -1,6 +1,6 @@
 """A correct ratio must also produce a seated, engaged, non-overlapping pair."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.bevel import BevelPair
 
 

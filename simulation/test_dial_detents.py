@@ -1,6 +1,6 @@
 """A digit detent follows its dial and deflects its spring finger."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.dial_detents import DialDetentBench
 
 

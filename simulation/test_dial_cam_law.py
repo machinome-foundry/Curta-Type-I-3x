@@ -1,7 +1,7 @@
 """The measured ball cam must also stay small enough to publish seventeen times."""
 
 from unittest import TestCase
-from solid_node.node import AssemblyNode
+from machinome.node import AssemblyNode
 from simulation.dial_detent_motion import BALL_RISE, following
 
 

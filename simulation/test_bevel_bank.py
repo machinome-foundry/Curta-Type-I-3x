@@ -1,7 +1,7 @@
 """Check the installed parts; an isolated first-pair bench cannot prove a bank."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.bevel_bank import BevelBank
 from simulation.fit import FittedBevelTip
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2

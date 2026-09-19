@@ -2,7 +2,7 @@
 
 import json
 import numpy as np
-from solid_node.node.adapters.step import StepAssembly
+from machinome.node.adapters.step import StepAssembly
 from simulation.source import STEP
 from simulation.tools.transmission_import import translation
 

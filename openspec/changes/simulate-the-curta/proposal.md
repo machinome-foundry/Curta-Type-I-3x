@@ -38,7 +38,7 @@ None; this project has no existing behavioral specifications.
 
 Adds Python simulation code and tests, a `pyproject.toml`, build exclusions and
 project-owned OpenSpec records. Upstream CAD, STLs and the manual remain the
-source material. Uses the workspace's solid-node motion API and exact STEP
+source material. Uses the workspace's machinome motion API and exact STEP
 adapter. Keeps the project's existing license and attribution.
 
 This is prescribed kinematics with explicit arithmetic state, not a force,

@@ -1,6 +1,6 @@
 """A correct dial needs room to rotate inside its visible housing."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.covers import CoverClearanceBench
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 from simulation.tools.interference import rigid_leaves

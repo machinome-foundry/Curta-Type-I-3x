@@ -1,6 +1,6 @@
 """Restoring omitted prints cannot introduce unexamined hardware collisions."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.clearing_fasteners import ClearingFastenerBench
 
 

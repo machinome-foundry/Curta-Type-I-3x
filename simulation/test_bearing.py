@@ -1,6 +1,6 @@
 """A locally successful gear fit must not enter the stationary bearing plate."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.bearing import ShaftBearing
 
 

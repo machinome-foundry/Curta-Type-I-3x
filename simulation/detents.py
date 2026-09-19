@@ -1,6 +1,6 @@
 """Measured .05 mm carry-hook gauge profiles; see tools/carry_profile.py."""
 
-from solid_node.math import piecewise
+from machinome.math import piecewise
 
 
 RESULTS = (

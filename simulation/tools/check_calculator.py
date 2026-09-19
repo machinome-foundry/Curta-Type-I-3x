@@ -1,6 +1,6 @@
 """Exercise the exported calculator page through the public viewer API.
 
-Run `solid export -o _build_export` first. This opens an ephemeral loopback
+Run `machinome export -o _build_export` first. This opens an ephemeral loopback
 server and headless browser, then closes both. Artifacts stay in _build_evidence.
 """
 

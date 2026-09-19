@@ -1,7 +1,7 @@
 """An inspectable Curta: calculator inputs above meaningful mechanical layers."""
 
-from solid_node.simulation import Driver, Instruction
-from solid_node.motion.ports import Port
+from machinome.simulation import Driver, Instruction
+from machinome.motion.ports import Port
 from simulation.arithmetic import calculate
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Inputs, MainDrive, Carriage, CarryMechanism, Frame

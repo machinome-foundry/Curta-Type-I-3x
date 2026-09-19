@@ -4,7 +4,7 @@ import faulthandler
 import argparse
 from time import monotonic
 
-from solid_node.simulation import Sim
+from machinome.simulation import Sim
 from simulation.running import OperatingCurta, register_reading
 
 

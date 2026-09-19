@@ -1,6 +1,6 @@
 """Check actual published decals, not just Python declarations.
 
-Run after ``solid build`` or pass an exported ``manifest.json``. An optional
+Run after ``machinome build`` or pass an exported ``manifest.json``. An optional
 baseline records the material artifacts before adding markings; it is evidence,
 not a golden file that changes the expected mechanical design.
 """

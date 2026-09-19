@@ -1,7 +1,7 @@
 """The bell's spring is attached to the bell and follows the sliding drum."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.bell_spring import BellSpringBench, BellLeafFitBench, BellLeafContactBench
 from simulation.tools.interference import rigid_leaves, world_solids
 

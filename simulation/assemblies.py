@@ -1,6 +1,6 @@
 """Educational layers: visibility follows the mechanism, not STEP export order."""
 
-from solid_node.node import AssemblyNode
+from machinome.node import AssemblyNode
 import simulation.standard.layers as layers
 
 

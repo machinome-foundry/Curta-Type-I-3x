@@ -4,7 +4,7 @@ import unittest
 import json
 from pathlib import Path
 
-from solid_node.simulation import Sim
+from machinome.simulation import Sim
 from simulation.clocked import ClockedCurta, register_reading
 from simulation.clocked_cases import SCENARIOS
 from simulation.running_parts import RESULT_DIALS, TURNS_DIALS
@@ -210,7 +210,7 @@ class ClockedOperationsTest(unittest.TestCase):
         self.assertEqual(sim.move('crank_rotation', by=-360).admitted, 0)
 
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 
 
 class ClockedGeometryTest(TestCase):

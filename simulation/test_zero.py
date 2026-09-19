@@ -1,10 +1,10 @@
 """The cam turns, its retained height stays fixed, and the roller follows it."""
 
 import numpy as np
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.zero import ZeroCamBench
 from simulation.flexibles import FIXED_PIN, LEVER_PIN, ZERO_PIVOT
-from solid_node.math import turn
+from machinome.math import turn
 
 
 def find(node, name):

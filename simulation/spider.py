@@ -9,10 +9,10 @@ from simulation.colors import STEEL
 from math import hypot
 import cadquery as cq
 from molejo import Shape, Polygon, Line, P
-from solid_node.node import AssemblyNode, MolejoNode
-from solid_node.parameters import Angle
-from solid_node.motion.ports import Port
-from solid_node.motion.joints import Prismatic
+from machinome.node import AssemblyNode, MolejoNode
+from machinome.parameters import Angle
+from machinome.motion.ports import Port
+from machinome.motion.joints import Prismatic
 from simulation.standard.parts import SpiderSpring
 
 WIDTH = 4.5

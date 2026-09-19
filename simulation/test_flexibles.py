@@ -1,6 +1,6 @@
 """The source defect must fail before its documented replacement can pass."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.flexibles import ZeroSpring
 
 

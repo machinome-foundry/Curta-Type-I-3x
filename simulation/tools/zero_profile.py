@@ -9,7 +9,7 @@ from math import asin, atan2, degrees, hypot
 import json
 import cadquery as cq
 import numpy as np
-from solid_node.node.adapters.step import StepAssembly
+from machinome.node.adapters.step import StepAssembly
 from simulation.source import STEP
 from simulation.standard.parts import ZeroPositioningDisc
 

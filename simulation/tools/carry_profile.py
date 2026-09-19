@@ -3,7 +3,7 @@
 import json
 import numpy as np
 import cadquery as cq
-from solid_node.node.adapters.step import StepAssembly
+from machinome.node.adapters.step import StepAssembly
 from simulation.source import STEP
 from simulation.carry_spring import HALF_SPAN, TIP_CENTER, FIRST_TIP
 from simulation.tools.carry_spring import SourceCarryBench, SourceTurnsBench

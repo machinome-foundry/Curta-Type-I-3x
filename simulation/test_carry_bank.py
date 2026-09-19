@@ -1,6 +1,6 @@
 """First-pair calibration must also hold at every installed carry station."""
 
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.carry_bank import CarryBank
 from simulation.carry_heads import ResultsSlider, TurnsSlider
 from simulation.standard.parts import NumberRollCarryPinHalf, NumberRollCarryPinFull

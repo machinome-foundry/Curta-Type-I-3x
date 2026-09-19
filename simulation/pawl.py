@@ -1,10 +1,10 @@
 """The spring-loaded pawl rides the disc's anti-reversal ratchet."""
 
-from solid_node.node import AssemblyNode
-from solid_node.simulation import Driver
-from solid_node.motion.joints import Revolute
-from solid_node.motion.ports import Port
-from solid_node.math import piecewise, clamp01, floor
+from machinome.node import AssemblyNode
+from machinome.simulation import Driver
+from machinome.motion.joints import Revolute
+from machinome.motion.ports import Port
+from machinome.math import piecewise, clamp01, floor
 from simulation.arithmetic import modulo
 from simulation.standard.parts import ZeroPositioningDisc, ReverseRotationPreventionPawl
 from simulation.standard.layers import AntiReversal as SourceAntiReversal

@@ -2,7 +2,7 @@
 
 import numpy as np
 from math import cos, sin, radians
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.transmission import TransmissionBench
 
 

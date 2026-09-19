@@ -1,9 +1,9 @@
 """The complete rotating tens bell against the first carry in each register."""
 
-from solid_node.node import AssemblyNode
-from solid_node.motion.joints import Revolute
-from solid_node.simulation import Driver
-from solid_node.math import floor
+from machinome.node import AssemblyNode
+from machinome.motion.joints import Revolute
+from machinome.simulation import Driver
+from machinome.math import floor
 from simulation.standard.printed import TensBell1
 from simulation.standard.channels import ResultTens, TurnsTens
 from simulation.transmission import channel_values

@@ -1,7 +1,7 @@
 """Prescribed decimal-wheel motion within one clockwise crank revolution."""
 
 from math import degrees
-from solid_node.math import abs, clamp01, floor, max
+from machinome.math import abs, clamp01, floor, max
 from simulation.arithmetic import digit, decimal_shift, modulo
 
 TOOTH_PITCH = 11.25

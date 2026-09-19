@@ -5,7 +5,7 @@ law correctly subtracts. Here that return traverses the already-probed
 0.005-degree release interval. This prescribes travel, not spring dynamics.
 """
 
-from solid_node.math import clamp01, floor, piecewise
+from machinome.math import clamp01, floor, piecewise
 from simulation.arithmetic import modulo
 from simulation.pawl import AntiReversal, PawlBench, RAMP, TOOTH_PITCH, RELEASE, CLOSING_RELEASE
 

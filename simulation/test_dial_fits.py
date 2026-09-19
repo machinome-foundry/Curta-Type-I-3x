@@ -1,7 +1,7 @@
 """Clearing fits cannot silently alter the already-proven bevel or axle bore."""
 
 import cadquery as cq
-from solid_node.test import TestCase
+from machinome.test import TestCase
 from simulation.dial_fits import FittedDialType1, FittedDialType2
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 
