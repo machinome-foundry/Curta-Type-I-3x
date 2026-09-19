@@ -183,6 +183,10 @@ class Part6mmBall419094(SourcePart):
 class LowerHousing(InputPlaces, SourcePart):
     color = BLACK
     part = 'lower housing'
+    # Preserve the native marker-track clearance in its concave STL wall.
+    # The general .1 mm tessellation falsely intersects the .06 mm radial seat.
+    linear_deflection = .01
+    angular_deflection = .1
 
 class BottomHousing(ReversingArrows, SourcePart):
     color = BLACK

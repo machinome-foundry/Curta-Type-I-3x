@@ -18,6 +18,11 @@ acceptance remain unresolved. The tested framework/viewer pair loads all 24
 controls, and actual selected crank-lift and first-selector drags pass with
 retained readback. The operating stop pin also has a tested source-print seating
 fit; that partial frame work does not complete the whole overlap inventory.
+The marker-track mesh discrepancy is also resolved without changing the native
+housing or marker seating: all four marker geometry checks pass both kernels.
+The retained-motion suite now passes six checks, including every marker's own
+motion and upper-bank carriage/clearing transport. Task 6.4 remains open for
+the reverser, clearing-loop and complete operating matrix.
 
 ## Previous continuation — Python direct operation, 2026-09-16
 

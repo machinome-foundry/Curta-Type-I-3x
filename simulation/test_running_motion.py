@@ -20,6 +20,49 @@ def rotation(degrees):
 class RunningMotionTest(TestCase):
     node = RunningMotionBench
 
+    def test_all_markers_move_independently_and_upper_bank_follows_its_track(self):
+        from simulation.decimal_markers import LOWER_CENTER
+        from simulation.running import register_reading
+
+        sim = Sim(self.node, dt=.1, meshes=True)
+        markers = [getattr(self.node.enclosure.decimal_markers if index < 6 else
+                           self.node.carriage.registers.clearing_ring.decimal_markers,
+                           f'decimal_marker_{index}') for index in range(1, 11)]
+        pieces = [(marker.position_marker, marker.p_3mm_ball,
+                   marker.decimal_marker_spring) for marker in markers]
+        before = [[piece.mesh.vertices.copy() for piece in group] for group in pieces]
+        try:
+            # Move in physical order so each preceding marker opens space.
+            # Every request is to a distinct public input, never a bank setter.
+            for selected in range(1, 11):
+                sim.move(f'marker_{selected}_rotation', by=20)
+                for index, (marker, group, original) in enumerate(
+                        zip(markers, pieces, before), 1):
+                    angle = 20 if index <= selected else 0
+                    bank = ('enclosure.decimal_markers' if index < 6 else
+                            'carriage.registers.clearing_ring.decimal_markers')
+                    self.assertAlmostEqual(sim.state[f'{bank}.decimal_marker_{index}.turn'], angle)
+                    self.assertAlmostEqual(marker.turn.value, angle)
+                    center = np.asarray(LOWER_CENTER if index < 6 else (0, 0, 0))
+                    for piece, points in zip(group, original):
+                        expected = (points - center) @ rotation(angle).T + center
+                        np.testing.assert_allclose(piece.mesh.vertices, expected,
+                                                   rtol=0, atol=.00001)
+            moved = [[piece.mesh.vertices.copy() for piece in group] for group in pieces]
+            sim.move('carriage_elevation', to=6)
+            sim.move('carriage_rotation', to=20)
+            sim.move('clearing_rotation', to=90)
+            for index, (group, original) in enumerate(zip(pieces, moved), 1):
+                for piece, points in zip(group, original):
+                    expected = points if index < 6 else points @ rotation(-70).T + (0, 0, 6)
+                    np.testing.assert_allclose(piece.mesh.vertices, expected,
+                                               rtol=0, atol=.00001)
+            self.assertEqual(register_reading(sim), 0)
+            self.assertEqual(register_reading(sim, True), 0)
+            self.assertTrue(all(sim.state[f'digit_{i}'] == 0 for i in range(1, 9)))
+        finally:
+            sim.reset()
+
     def test_carriage_spring_endpoints_follow_seats_during_lift_and_shift(self):
         sim = Sim(self.node, dt=.1, meshes=True)
         positioning = self.node.carriage.positioning

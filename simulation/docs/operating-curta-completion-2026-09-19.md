@@ -378,6 +378,49 @@ it uploads nothing and leaves no server running. Task 6.1 alone is complete:
 this is not the full all-controls matrix, wrong-order verification, standalone
 export-page acceptance, sustained performance measurement or task 6.5.
 
+## Marker-track mesh precision
+
+The previously recorded marker-track disagreement is reproduced on the current
+framework: 4/4 native checks pass (60.85 s), but the faceted runner passes only
+3/4 (1.20 s), reporting 0.02339708516317529 mm³ intersection between marker 1
+and the lower housing at zero degrees. Logs: `marker-mesh-baseline.log`
+(exact) and `marker-mesh-faceted-red.log`, under `_build_running/`.
+
+Only `LowerHousing`'s tessellation is refined to .01 mm linear / .1 rad angular
+deflection, replacing the general source import's .1 mm / .5 rad mesh. Its
+native shape, source file, placement, existing .06 mm marker seating and
+neighbour-contact bounds are unchanged. The complete unchanged four-test
+geometry suite then passes faceted in 21.11 s, including the full-turn track
+sweep and both radial capture directions. No material is trimmed and no
+intersection epsilon is introduced (`marker-mesh-refined-faceted.log`).
+
+The refined native rerun also passes 4/4 (62.46 s;
+`marker-mesh-refined-exact.log`). A new test on the complete retained operating
+model independently requests each of the ten markers, checking every body,
+ball and spring against its own measured-axis world rotation and checking all
+held markers. It then lifts/shifts the carriage and turns the clearing plate:
+the five upper assemblies follow their track, the five lower assemblies stay
+fixed, and the registers and input digits remain zero. Together with the five
+existing motion/flexible-seat checks this passes 6/6 faceted (94.10 s;
+`operating-all-marker-motion-faceted.log`). This is physical Python-run evidence,
+not the remaining all-controls pointer matrix or reversal/loop acceptance.
+
+The existing running marker suite also passes 5/5 (59.568 s;
+`operating-marker-requests.log`): both directions for all ten neighbour stops,
+held neighbours, opening space, snapshot replay, full-bank circulation and
+register/input independence. The isolated track snapshot
+`marker-track-refined.png` was inspected: both five-marker banks remain on
+their respective tracks, with the slotted lower housing and clearing cover
+intact. Sub-millimetre clearance is established by the contracts, not pixels.
+
+The final `machinome build operating_curta` succeeds
+(`operating-build-after-marker-mesh.log`). Its version-7 document retains 23
+drivers and 24 controls; all 154 distinct referenced model files, including
+marking meshes and piece-inventory references, exist in the publication.
+Strict OpenSpec validation passes. This rebuild is not the full per-node
+regression or a fresh all-controls browser acceptance run; tasks 5.x and the
+remaining 6.x acceptance stay open.
+
 ## Earlier environment history
 
 Framework content `df0bee4c7a5c727becf9ea33b7409ef796256a3d`; viewer content

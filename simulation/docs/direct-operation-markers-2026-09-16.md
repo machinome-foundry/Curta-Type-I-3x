@@ -1,5 +1,11 @@
 # Movable decimal markers — Python implementation
 
+Historical checkpoint. The 2026-09-19 operating continuation corrects the
+ratchet and lower-track tessellation findings below, selects the operating
+root, and verifies the integrated framework/viewer prerequisites. See the
+[current completion record](operating-curta-completion-2026-09-19.md); the
+original results below are preserved rather than presented as current failures.
+
 The running development root now exposes all ten original decimal markers as
 independent physical inputs. This is separate from the visually accepted
 surface markings: no decal artwork or marking declarations changed.

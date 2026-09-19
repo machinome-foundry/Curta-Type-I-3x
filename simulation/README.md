@@ -49,7 +49,8 @@ records the initial running implementation and its then-open prerequisites. The
 [movable-marker record](docs/direct-operation-markers-2026-09-16.md) adds ten
 independent marker inputs and measured neighbour stops. Its ratchet failures
 have since been corrected and verified across all 117 teeth for two revolutions;
-the marker tessellation discrepancy remains open. Counter reversal, interlocks,
+the marker-track tessellation discrepancy is now corrected by finer housing
+meshing, without changing its native solid or marker seating. Counter reversal, interlocks,
 clearing-loop deployment and final whole-machine acceptance are still incomplete. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.
