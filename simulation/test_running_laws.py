@@ -9,11 +9,12 @@ from machinome.math import piecewise
 from machinome.simulation import Driver, Sim
 from simulation.carry_profiles import PIN_DROP
 from simulation.running_laws import lever_motion
-from simulation.running_pawl import ContinuousPawlBench
+from simulation.running_pawl import ContinuousPawlBench, RetainedAntiReversal
 
 
 class RunningPawlBench(ContinuousPawlBench):
     time = Time.running()
+    pawl = RetainedAntiReversal()
 
 
 class Lever(AssemblyNode):

@@ -3,10 +3,43 @@
 import unittest
 
 from machinome.simulation import Sim
+from machinome.test import TestCase
 from simulation.running import OperatingCurta, register_reading
+from simulation.contracts import assert_connected_material
+
+
+class OperatingCurtaIntegrityTest(TestCase):
+    node = OperatingCurta
+
+    def test_solid_integrity(self):
+        def check(node):
+            if node.rigid or not node.children:
+                assert_connected_material(node.mesh)
+                if node.exact:
+                    self.assertEqual(len(node.shape().Solids()), 1, node.name)
+            else:
+                for child in node.children:
+                    check(child)
+        check(self.node)
+
+    def test_assembly_integrity(self):
+        self.assertNoSolidInterference(self.node)
 
 
 class RunningCurtaTest(unittest.TestCase):
+    def test_every_selector_moves_independently_without_driving_a_register(self):
+        sim = Sim(OperatingCurta(), dt=.1)
+        settings = [0] * 8
+        for index in (8, 1, 5, 2, 7, 3, 6, 4):
+            settings[index - 1] = index
+            sim.move(f'digit_{index}', to=index)
+            for place, digit in enumerate(settings, 1):
+                key = (f'input_selectors.selectors.digit_selector_axle_{place}'
+                       '.selector_shaft_bottom.turn')
+                self.assertAlmostEqual(sim.state[key], 36 * digit)
+            self.assertEqual(register_reading(sim), 0)
+            self.assertEqual(register_reading(sim, True), 0)
+
     def test_subtraction_borrows_through_both_registers_and_addition_undoes_it(self):
         sim = Sim(OperatingCurta(), dt=.1)
         sim.move('digit_1', to=1)
@@ -78,13 +111,15 @@ class RunningCurtaTest(unittest.TestCase):
     def test_manual_calibration_carries(self):
         machine = OperatingCurta()
         sim = Sim(machine, dt=.1)
-        for units, tens, expected in ((0, 0, 0), (1, 0, 1), (9, 0, 10), (0, 9, 100)):
+        for turns, (units, tens, expected) in enumerate(
+                ((0, 0, 0), (1, 0, 1), (9, 0, 10), (0, 9, 100)), 1):
             sim.move('digit_1', to=units)
             sim.move('digit_2', to=tens)
             command = sim.move('crank_rotation', by=360, duration=2)
             sim.run(2)
             self.assertEqual(command.status, 'completed')
             self.assertEqual(register_reading(sim), expected)
+            self.assertEqual(register_reading(sim, True), turns)
 
     def test_partial_crank_release_and_snapshot_replay(self):
         machine = OperatingCurta()

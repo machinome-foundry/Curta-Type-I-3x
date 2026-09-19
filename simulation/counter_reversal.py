@@ -1,7 +1,9 @@
 """Diagnostic: does the source reversing stroke actually select nine teeth?
 
 This pose bench does not change the operating model or fit the source shaft.
-Its stroke is the knob/yoke displacement from the verified normal-counter pose.
+Its stroke is measured from the existing normal-counter gear-height assumption.
+That height is not a verified knob/yoke/ball/frame assembly position; see the
+complete reverser assembly diagnostic before interpreting a passing pinion test.
 """
 
 from machinome.node import AssemblyNode
@@ -20,11 +22,12 @@ def reversed_counter_motion(sources, target):
 
 class CounterReversalBench(AssemblyNode):
     stroke = Length(12, min=0)
+    flank_relief = Length(.36, min=0)
     crank_angle = Driver(default=101.25, range=(0, 360), unit='deg')
     subtract = Driver(default=0, range=(0, 1))
     drum = PrintedDrum(turn=Revolute(axis=(0, 0, 1)),
                        lift=Prismatic(axis=(0, 0, 1)))
-    counter = FittedCounterPinion(turn=Revolute(
+    counter = FittedCounterPinion(flank_relief=flank_relief, turn=Revolute(
         axis=(0, 0, 1), at=(-13.851815805, 38.057551142, 0)))
     crank_angle.drives(drum.turn, ratio=-1)
     subtract.drives(drum.lift, ratio=9)

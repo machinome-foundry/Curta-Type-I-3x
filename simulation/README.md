@@ -5,13 +5,18 @@ There are now three sibling models: `fast_curta` (prescribed poses),
 registers using the framework's clocked-machine support). The
 [clocked model's record](docs/clocked-curta-2026-09-17.md) gives its Python
 operation surface, running-oracle comparisons, timings and viewer limitations.
+The manifest selects `operating_curta`. Its current verification and remaining
+work are in the [operating completion record](docs/operating-curta-completion-2026-09-19.md).
+New geometry tests expose a framework prerequisite: nested retained joints can
+have correct bank angles but incorrect bound/rendered angles. Shift/clearing
+geometry and viewer acceptance remain blocked; passing arithmetic readings do
+not certify the visible mechanism.
 
 The simulation imports the complete standard STEP assembly: all 547 leaf
 occurrences, plus the manual's three clearing-strip prints omitted from the STEP,
-organized into educational show/hide layers. The root has
-calculator controls, working input selectors, subtraction lift, keyed-shaft
-motion, lifting/shifting carriage, clearing plate and prescribed sub-turn dial
-rotations. Input, bevel, carry and clearing-tooth contact contracts now pass,
+organized into educational show/hide layers. The operating root has independent
+physical inputs and retained joint motion; it does not use the legacy page's
+calculator or starting-register controls. Input, bevel, carry and clearing-tooth contact contracts pass,
 as do the bell spring's full subtraction sweep, all seventeen register
 detents and the spring-loaded clearing stop. **Whole-machine cover/frame
 interfaces, the seat inventory and final demonstration verification remain
@@ -27,11 +32,12 @@ the producer checks and renderer limitations at that checkpoint. OpenSCAD does
 not draw decals, and the conical upper-housing index sheet remains unsupported.
 The Python retained-angle and changing-source prerequisites are now resolved.
 The [implementation checkpoint](docs/direct-operation-implementation-2026-09-15.md)
-records the source-backed running development root, contact-law tests and work
-still required before replacing the published pose model. The
+records the initial running implementation and its then-open prerequisites. The
 [movable-marker record](docs/direct-operation-markers-2026-09-16.md) adds ten
-independent marker inputs and measured neighbour stops; it also records the
-remaining ratchet failures and the marker tessellation discrepancy. The
+independent marker inputs and measured neighbour stops. Its ratchet failures
+have since been corrected and verified across all 117 teeth for two revolutions;
+the marker tessellation discrepancy remains open. Counter reversal, interlocks,
+clearing-loop deployment and final whole-machine acceptance are still incomplete. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.
 
@@ -70,7 +76,8 @@ machinome build
 machinome snapshot -o snapshot-rest.png --autocenter --viewall
 python -m unittest simulation.test_source
 machinome test --faceted simulation/standard/assembly.py
-machinome test --exact simulation/curta.py
+machinome test --exact simulation/running.py
+python -m unittest simulation.test_running.RunningCurtaTest
 python -m simulation.tools.probe
 ```
 
@@ -93,13 +100,15 @@ machinome build
 The last command restores the complete model as the published viewer document.
 No floor or development server is launched by these commands.
 
-### Calculator page
+### Legacy prescribed-pose calculator page
 
-The project-owned page adds retained calculations and recursive layer controls
-over the public machinome viewer. Export and serve the project root locally:
+This page belongs only to `fast_curta`, not to the operating model. Its page-local
+registers, automatic preparation and direct register setters are historical
+teaching aids, not direct mechanical operation. To inspect that older study,
+explicitly export the pose model and serve the project root locally:
 
 ```sh
-machinome export -o _build_export
+machinome export fast_curta -o _build_export
 python -m http.server 8766 --bind 127.0.0.1
 ```
 

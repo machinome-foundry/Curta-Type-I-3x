@@ -1,4 +1,19 @@
-## Current continuation — Python direct operation, 2026-09-16
+## Current continuation — finish operating Curta, 2026-09-19
+
+The pilot requested completion of the operating model task by task after the
+clocked sibling. The work order and new red/green evidence are recorded in
+`simulation/docs/operating-curta-completion-2026-09-19.md`. The manifest now
+selects `operating_curta`; the earlier development-root descriptions below are
+historical. No task is completed by that selection or by clocked-model tests.
+
+Tasks 2.3 and 3.3 are now complete (9/23 overall). New retained world-motion
+contracts expose a framework bank/pose disagreement at nested site-declared
+joints; the two-test framework-only reproduction is
+`simulation.tools.test_retained_pose_probe`. Shift/clearing geometry and viewer
+acceptance cannot be certified until that prerequisite is corrected. This is
+separate from the still-unresolved reverser assembly and source overlap findings.
+
+## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python
 implementation is active, without waiting for viewer work. The source-backed
@@ -84,13 +99,13 @@ not a final full-machine regression. No outstanding task is waived by the pause.
 
 - [x] 2.1 Measure the drum, selector and transmission interfaces; write travel, seating and engagement contracts red. Measurements and red evidence are recorded in simulation/docs/measurements.md.
 - [x] 2.2 Declare crank, drum, selector and shaft joints and drive relations; make the single-channel contracts green. The complete result/counter drum sweeps also pass faceted and exact (20 result settings/modes, both counter modes).
-- [ ] 2.3 Prove mutations of drum axis, selector travel and gear phase fail their intended contracts.
+- [x] 2.3 Prove mutations of drum axis, selector travel and gear phase fail their intended contracts. On 2026-09-19, a Y-axis drum, 5 mm selector pitch and +10° pinion-phase mutation each failed the intended geometry contracts; all were restored, then both modules passed faceted and exact (4/4 per kernel). See the operating completion record.
 
 ## 3. Carry and registers
 
 - [x] 3.1 Write adjacent-digit carry and reset contracts red, including the manual's geometric checks. Dial-pin, fork and reset-shoe contracts failed; native probes identified the contacts. Timing tests rejected an early reset, and the installed bank exposed a nine-degree half-pin mounting discrepancy plus shifted-neighbour contact.
 - [x] 3.2 Implement the carry mechanism, expand to all digit channels and register dials, and make the contracts green. All fifteen carries pass both kernels through two revolutions and all carriage shifts; the complete bell spring's mounting and subtraction sweep now pass native as well.
-- [ ] 3.3 Verify the page-53 arithmetic sequence and complete overflow; prove carry and dial-phase mutations fail.
+- [x] 3.3 Verify the page-53 arithmetic sequence and complete overflow; prove carry and dial-phase mutations fail. The retained model passes the 0, 1, 9, 90 sequence with counter readings 1–4 and subtraction from zero followed by full-bank overflow back to zero (both registers). Disabling the production carry latch and shifting the bevel dial phase +10° each fail their intended contracts; restored checks pass, including exact bevel geometry. See the 2026-09-19 completion record.
 
 ## 4. Subtraction, carriage and clearing
 

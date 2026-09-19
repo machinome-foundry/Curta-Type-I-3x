@@ -5,10 +5,10 @@ pose-driven bindings; they neither duplicate physical parts nor add memory.
 """
 
 from machinome.node import AssemblyNode
-from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.joints import Bound, Revolute, Prismatic
 from simulation import assemblies
 from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
-from simulation.running_pawl import RunningAntiReversal
+from simulation.running_pawl import RetainedAntiReversal, reverse_stop
 from simulation.cover_fits import FittedAxleCarrier
 from simulation.clearing_stop_motion import following as clearing_stop_following
 from simulation.registers import ResultDials, TurnsDials
@@ -86,9 +86,10 @@ class IndependentInputs(assemblies.Inputs):
 class RunningMainDrive(MainDrive):
     # Driver ranges only describe the control panel; the moving crank's
     # joint admits the measured addition-to-subtraction stroke in Python too.
-    crank = CrankAssembly(turn=Revolute(axis=(0, 0, 1)),
+    anti_reversal = RetainedAntiReversal()
+    crank = CrankAssembly(turn=Revolute(axis=(0, 0, 1), range=(None,
+                          Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))),
                           lift=Prismatic(axis=(0, 0, 1), range=(0, 9)))
-    anti_reversal = RunningAntiReversal()
 
 
 def retained_lever(base, rest, counter=False):

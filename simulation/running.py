@@ -1,7 +1,8 @@
 """Direct-operation migration on the source-backed Curta parts.
 
-This development root is not the manifest's operating model until the run,
-interlock, clearing and geometry contracts have all been verified.
+The manifest selects this root. Selection is not acceptance: the outstanding
+interlock, reverser, clearing-loop and whole-machine geometry contracts remain
+recorded in the project-owned operating completion record.
 """
 
 from functools import reduce
