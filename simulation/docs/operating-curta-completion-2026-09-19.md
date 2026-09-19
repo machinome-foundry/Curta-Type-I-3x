@@ -234,8 +234,8 @@ nonsequential order while checking every shaft angle and both unchanged
 registers (1/1, 11.227 s; `_build_running/all-selectors-running.log`). The legacy
 calculator page and its README instructions are now explicitly limited to
 `fast_curta`; the default remains the incompletely validated operating model.
-Tasks 4.2 and 4.3 are now complete as recorded below. Tasks 1.3, 5.x and 6.x
-remain open. The change is not archived.
+Tasks 4.2, 4.3 and 6.1 are now complete as recorded below. Tasks 1.3, 5.x and
+6.2–6.6 remain open. The change is not archived.
 
 ## Operating-motion mutations — task 4.3 complete
 
@@ -346,7 +346,39 @@ and spring-seat checks still pass (5/5 faceted, 57.42 s), and a fresh
 The rebuilt source-STL pin/frame snapshot was inspected separately from the
 earlier native-pin trial (`carriage-stop-fitted-print-rest.png`).
 
-## Environment history
+## Browser prerequisites — task 6.1 complete
+
+The fresh operating build is a version-7 document. It mounts through the public
+`MachinomeViewer.mount()` API with framework content
+`b9b64ddaf0bc1d51d715d3d971b77b6ee58880bf` and viewer content
+`2912006dd4864bc25aa4b7c0e11cd2e457dd5836` (API 21, unreleased 0.2.0).
+The tested bundle SHA-256 is
+`a5a5542762c3326aa53fa68875f7d3da698ae0253681366ba325528446afa614`.
+The viewer's README still says Slide is absent; the installed bundle actually
+loads all 24 declared controls, supplies projected/raycast gesture locations,
+and exposes distinct lift/turn targets when the crank is hovered.
+
+`python -m simulation.tools.operating_browser_probe` serves local artifacts
+through Playwright routing, mounts the actual model in an ordinary host page,
+then uses real mouse events at those public gesture locations. No state is
+assigned to a register or driver. During the selected crank-lift drag, both
+the input and actual crank lift read 1.3333333333333333 mm, while crank input
+and joint rotation remain zero. After a public run reset **as independent test
+setup**, dragging the first selector produces digit 1 = 3.3333333333333335 and
+its actual shaft = 120°, with the other seven digits and crank at zero. These
+are in-motion readbacks, not claims that a fractional digit is a seated detent.
+All assertions pass and no page errors occur. The browser screenshot was
+inspected. The first attempt's delay was an incorrect accessible-name lookup
+for the test's Reset button, not a demonstrated mechanism-performance failure.
+
+Logs: `_build_running/operating-browser-prerequisite.log` (mount/hover) and
+`operating-browser-pointer-prerequisite.log` (the two gestures). The script
+records bundle identity, public control descriptors, readback and screenshot;
+it uploads nothing and leaves no server running. Task 6.1 alone is complete:
+this is not the full all-controls matrix, wrong-order verification, standalone
+export-page acceptance, sustained performance measurement or task 6.5.
+
+## Earlier environment history
 
 Framework content `df0bee4c7a5c727becf9ea33b7409ef796256a3d`; viewer content
 `26c86df4557dae6392de1e2237acdf25328fe963`. The installed viewer reports API 21

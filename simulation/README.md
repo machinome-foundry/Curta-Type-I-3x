@@ -32,6 +32,11 @@ the reproduction and source comparison are in the operating completion record.
 Pin-contact checks therefore use the faceted backend even on the exact runner.
 This resolves that mounting interface, not the carriage's operating interlocks.
 
+Framework `b9b64dd` and viewer `2912006` (API 21) now pass a browser prerequisite
+probe on the actual operating export: all 24 controls load, and real drags
+operate the selected crank lift and first selector independently. This is not
+yet the complete standalone/hosted pointer and wrong-order acceptance matrix.
+
 Surface markings now use the framework's decal API: all 25 number rolls,
 the lower input-place indices, sleeve branding and reversing arrows are
 declared on their existing parts and exported. The pilot has visually accepted

@@ -6,15 +6,18 @@ clocked sibling. The work order and new red/green evidence are recorded in
 selects `operating_curta`; the earlier development-root descriptions below are
 historical. No task is completed by that selection or by clocked-model tests.
 
-Tasks 2.3, 3.3, 4.2 and 4.3 are now complete (11/23 overall). The framework
+Tasks 2.3, 3.3, 4.2, 4.3 and 6.1 are now complete (12/23 overall). The framework
 bank/pose disagreement is corrected and, with explicit pilot approval,
 framework main is fast-forwarded to `b9b64dd`. The unchanged minimal reproduction
 and full retained world-motion checks pass. Subtraction, shift and clearing
 mutations then failed their intended contracts, with both kernels green after
 restoration. Additional retained-model spring-seat/follower checks pass both
 kernels after detecting their disconnected-drive mutations. The reverser assembly,
-measured restraints, source overlap findings
-and viewer pointer acceptance remain unresolved.
+measured restraints, source overlap findings and complete viewer pointer
+acceptance remain unresolved. The tested framework/viewer pair loads all 24
+controls, and actual selected crank-lift and first-selector drags pass with
+retained readback. The operating stop pin also has a tested source-print seating
+fit; that partial frame work does not complete the whole overlap inventory.
 
 ## Previous continuation — Python direct operation, 2026-09-16
 
@@ -216,7 +219,7 @@ their tasks open. These results are checkpoints, not final delivery evidence.
 
 ## 6. Direct mechanical operation
 
-- [ ] 6.1 Verify the ratified framework/viewer prerequisites are available as a tested content pair before relying on Slide or selected-joint controls.
+- [x] 6.1 Verify the ratified framework/viewer prerequisites are available as a tested content pair before relying on Slide or selected-joint controls. Framework b9b64dd and viewer 2912006 (API 21, bundle SHA-256 a5a5542762c3326aa53fa68875f7d3da698ae0253681366ba325528446afa614) load the actual version-7 operating build with all 24 controls. Real pointer drags use the distinct selected crank-lift target and the first selector; retained readback proves lift without crank turn and independent selector/shaft motion. Public run reset is test setup between cases. Full standalone/hosted interaction and wrong-order coverage remain task 6.5.
 - [ ] 6.2 Write red run tests for independent selector changes, retained arithmetic across operand/mode changes, partial crank travel, direction reversal attempts, carriage interlocks and repeatable snapshot/replay.
 - [ ] 6.3 Migrate the mechanism to Time.running with run-owned state and independent physical inputs; make those tests green without a page-local calculator, direct register setters or automatic operation preparation.
 - [ ] 6.4 Add and prove the reversing lever, selective bidirectional clearing, clearing-loop deployment and each decimal marker's independent movement and mechanical limits; preserve source provenance and existing geometric evidence.
