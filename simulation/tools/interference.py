@@ -9,6 +9,8 @@ This is a faceted diagnostic, not an exact-kernel certification.
 
 import json
 import argparse
+import logging
+import sys
 from itertools import combinations
 import manifold3d as manifold
 import numpy as np
@@ -50,7 +52,7 @@ def world_solids(root, include_flexible=False, selected=None):
     return found
 
 
-def inventory(root, exact=False):
+def inventory(root, exact=False, progress=False):
     meshes = {path: node.mesh for path, node in rigid_leaves(root)}
     bounds = {path: mesh.bounds for path, mesh in meshes.items()}
     solids, overlaps, refusals = {}, {}, {}
@@ -86,12 +88,18 @@ def inventory(root, exact=False):
                 volume = overlap.volume()
             if volume > 0:
                 overlaps[key] = volume
+                if progress:
+                    print(json.dumps({'pair': key, 'overlap_mm3': volume}),
+                          file=sys.stderr, flush=True)
             elif volume < 0:
                 # Preserve these signed sums as diagnostics. No positive volume
                 # is suppressed, however small; invalid results are refused above.
                 contact_sums[key] = volume
         except ValueError as error:
             refusals[key] = str(error)
+            if progress:
+                print(json.dumps({'pair': key, 'refusal': str(error)}),
+                      file=sys.stderr, flush=True)
     return {'rigid_occurrences': len(meshes),
             'kernel': 'OCCT with source-STL interfaces' if exact else 'Manifold, faceted',
             'overlap_mm3': overlaps, 'refusals': refusals,
@@ -101,9 +109,20 @@ def inventory(root, exact=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--exact', action='store_true')
+    parser.add_argument('--operating', action='store_true',
+                        help='Inventory the initial retained operating assembly')
+    parser.add_argument('--progress', action='store_true',
+                        help='Write each positive pair/refusal to stderr as measured')
     args = parser.parse_args()
-    root = Curta()
-    root.set_state(time=0, **root.instructions['Rest'].targets)
-    root.assemble()
-    root.build_stls()
-    print(json.dumps(inventory(root, exact=args.exact), indent=2))
+    logging.disable(logging.INFO)
+    if args.operating:
+        from machinome.simulation import Sim
+        from simulation.running import OperatingCurta
+        root = OperatingCurta()
+        sim = Sim(root, dt=.1, meshes=True)
+    else:
+        root = Curta()
+        root.set_state(time=0, **root.instructions['Rest'].targets)
+        root.assemble()
+        root.build_stls()
+    print(json.dumps(inventory(root, exact=args.exact, progress=args.progress), indent=2))

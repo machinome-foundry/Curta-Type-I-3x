@@ -48,6 +48,14 @@ a .05 mm base seat. Five scoped geometry/fidelity contracts pass both runners;
 see `simulation/docs/enclosure-seats-2026-09-20.md`. This does not close the
 whole-machine rest inventory or the final control matrix.
 
+The initial operating rest inventory is now measured and committed separately:
+390 rigid occurrences, 268 positive faceted pairs and 166 positive native/STL
+pairs, with no refused commons. These remain findings, not exclusions; task
+1.3 is still open because the rest/frame contracts are red. The reverser-seat
+record now also checks the actual knob print, ball bore, shaft fastening
+shoulder and housing window. A functional mounting-seat correction is a pilot
+decision, not an adopted workaround for the remaining lower-detent mismatch.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

@@ -15,12 +15,14 @@ from simulation.standard.parts import ReversingShaft
 from simulation.tools.carry_phase import solid
 
 
-def probe(native=False, z_seam=False):
+def probe(native=False, z_seam=False, ball_radius=2.7):
     shaft = ReversingShaft().shape()
     print_mesh = trimesh.load_mesh(Path(__file__).resolve().parents[2] /
         'STLs/27 - Assemble Reversing Lever/reversing shaft.stl')
     printed = solid(print_mesh)
-    sphere = solid(trimesh.creation.icosphere(subdivisions=4, radius=2.5))
+    # Actual STEP sphere is R2.7 despite the 5mm part name. Manual p28 calls
+    # for a nominal 5mm bought ball; --ball-radius 2.5 compares that separately.
+    sphere = solid(trimesh.creation.icosphere(subdivisions=4, radius=ball_radius))
     radius = math.hypot(19.505705679 - 17.613968679,
                         59.407726119 - 54.210221429)
     for height in (-7.6427, -6.8425, -6, -5.5, -5.0925, -4.5, -3, 0,
@@ -28,7 +30,7 @@ def probe(native=False, z_seam=False):
         z = 85.4425 + height
 
         def overlap(radial):
-            ball = cq.Solid.makeSphere(2.5, cq.Vector(radial, 0, z),
+            ball = cq.Solid.makeSphere(ball_radius, cq.Vector(radial, 0, z),
                                        dir=cq.Vector(0, 0, 1) if z_seam else cq.Vector(1, 1, 1),
                                        angleDegrees1=-90, angleDegrees2=90)
             common = shaft.intersect(ball)
@@ -51,8 +53,9 @@ def probe(native=False, z_seam=False):
             else:
                 mh = middle
         row = {'knob_height': height, 'ball_local_z': z,
+               'ball_radius': ball_radius,
                'faceted_contact_radius_bracket': [ml, mh],
-               'source_ball_radius': radius,
+               'source_ball_center_radius': radius,
                'source_radial_overlap_mm3_faceted': mesh_overlap(radius)}
         if native:
             # Native common is an independently audited diagnostic here, not
@@ -72,5 +75,9 @@ if __name__ == '__main__':
                         help='Audit native common beside the print contact, not as a reference')
     parser.add_argument('--z-seam', action='store_true',
                         help='Reproduce the refused pole-aligned native Boolean')
+    parser.add_argument('--ball-radius', type=float, default=2.7,
+                        help='Actual CAD sphere radius by default; use 2.5 for manual hardware')
     args = parser.parse_args()
-    probe(args.native, args.z_seam)
+    if not math.isfinite(args.ball_radius) or args.ball_radius <= 0:
+        parser.error('--ball-radius must be finite and positive')
+    probe(args.native, args.z_seam, args.ball_radius)

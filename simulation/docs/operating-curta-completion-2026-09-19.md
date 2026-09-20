@@ -17,6 +17,14 @@ The lower shell, markers and hardware are recentered together, with a named
 base seating clearance. Scoped native/faceted checks pass; the full-machine
 inventory and remaining operating controls are still open.
 
+The [rest inventory](operating-rest-inventory-2026-09-20.md) now records all
+390 rigid occurrences at the initial operating state, including every
+positive pair. The [reverser-seat investigation](reverser-seating-investigation-2026-09-20.md)
+has ruled out the tested unchanged shaft, raised-yoke, ball-bore and
+housing-window alternatives. Development of a functional mounting-seat
+correction requires pilot authority; no shaft geometry is changed. The
+remaining roadmap is not marked complete or archived.
+
 1. Retained anti-reversal pawl and measured crank backlash.
 2. Counter reversing lever: establish engagement before adopting a stroke.
 3. Measured crank, selector, carriage and clearing restraints.

@@ -50,6 +50,13 @@ together; a separate .05 mm base seating clearance and finer sleeve
 tessellation leave the native solids unchanged. The scoped seat and placement
 checks pass on both runners.
 
+The [operating rest inventory](docs/operating-rest-inventory-2026-09-20.md)
+records the remaining positive contacts without exclusions. The
+[reverser seating investigation](docs/reverser-seating-investigation-2026-09-20.md)
+now includes the printable knob/yoke, ball bore, shaft fastening seats and
+housing window. Counter reversal remains unimplemented pending a justified
+working fit; no reversing-shaft geometry has been changed.
+
 Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
 probe on the actual operating export: all 24 controls load, real drags operate
 the selected crank lift and first selector independently, and seated shift
