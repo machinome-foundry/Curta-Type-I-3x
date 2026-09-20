@@ -1,6 +1,7 @@
 """Source-local detent and fork dimensions, before choosing a reversal fit."""
 
 import json
+from OCP.BRepAdaptor import BRepAdaptor_Surface
 from simulation.standard.parts import ReversingShaft, ReversingActuator, TransmissionGear0_5
 
 
@@ -10,9 +11,10 @@ def probe():
         part = part_type()
         part.assemble()
         shapes[part_type.__name__] = part.shape()
-    detents = sorted((face.BoundingBox().zmin + face.BoundingBox().zmax) / 2
-                     for face in shapes['ReversingShaft'].Faces()
-                     if face.geomType() == 'CONE')
+    cones = sorted((face for face in shapes['ReversingShaft'].Faces()
+                    if face.geomType() == 'CONE'), key=lambda face: face.Center().z)
+    detents = [BRepAdaptor_Surface(face.wrapped).Cone().Location().Z()
+               for face in cones]
     assert len(detents) == 2, detents
     fork_planes = sorted(face.Center().z for face in shapes['ReversingActuator'].Faces()
                          if face.geomType() == 'PLANE' and abs(face.normalAt().z) > .999)
@@ -24,6 +26,18 @@ def probe():
                       'fork_z_planes': fork_planes, 'fork_slot': slot,
                       'gear_thickness': gear.zlen,
                       'axial_clearance': slot - gear.zlen}), flush=True)
+    for face in cones:
+        box = face.BoundingBox()
+        cone = BRepAdaptor_Surface(face.wrapped).Cone()
+        circles = [{'radius': edge.radius(), 'center': edge.arcCenter().toTuple()}
+                   for edge in face.Edges() if edge.geomType() == 'CIRCLE']
+        print(json.dumps({'detent_cone_bounds': [box.xmin, box.ymin, box.zmin,
+                                                box.xmax, box.ymax, box.zmax],
+                          'cone_location': cone.Location().Coord(),
+                          'cone_axis': cone.Axis().Direction().Coord(),
+                          'cone_apex': cone.Apex().Coord(),
+                          'cone_semia_angle': cone.SemiAngle(),
+                          'circles': circles}), flush=True)
 
 
 if __name__ == '__main__':

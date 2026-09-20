@@ -173,6 +173,16 @@ Continuation: preserve the red reversal engagement contract, establish the
 complete moving assembly and its contacts, and continue independent roadmap
 tasks while this source/assembly discrepancy remains unresolved.
 
+The [2026-09-20 seating investigation](reverser-seating-investigation-2026-09-20.md)
+checks the alternative of ball contact on detent flanks against independent
+stops. It identifies missing radial ball following, a source/native Boolean
+disagreement and a sixth-pinion/yoke contact, but does not establish a shorter
+retained stroke or adopt any redesign. The
+[printed-loop investigation](clearing-loop-investigation-2026-09-19.md) now has
+a calibrated diagnostic and 125 contact samples; neither an unrestricted hinge
+nor vertical release alone matches the mounted parts. Both operating inputs
+remain outstanding.
+
 ## Retained pose binding — prerequisite corrected and integrated
 
 The new `running_motion.py` bench uses the complete operating model and fresh
