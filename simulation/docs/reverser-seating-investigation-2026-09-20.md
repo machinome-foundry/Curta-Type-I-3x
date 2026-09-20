@@ -178,3 +178,11 @@ needs pilot authority before development. Both complete operating positions,
 all six input stacks, knob/spring capture and both crank modes would still
 have to pass. Other whole-machine findings remain in the separate rest
 inventory; no failed contract has been removed.
+
+The pilot subsequently requested an insertion-depth calibration trial.
+The [independent native/print comparison](reverser-insertion-trial-2026-09-20.md)
+confirms the same shoulder stop in the author's original printable files.
+Raising the shaft +0.3075 mm merely closes the axial tooth-band gap while
+intersecting the upper frame by 4.147209 mm³ native / 4.145870 mm³ from the
+prints. No insertion-only fix is adopted; altering the shoulder or seat
+remains a different action from positioning the unchanged shaft.
