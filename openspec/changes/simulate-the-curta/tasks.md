@@ -63,6 +63,15 @@ reverser fit or complete tasks 5.1/6.4. See
 `simulation/docs/reverser-inspection-2026-09-20.md`; operating controls, geometry
 and the manifest default remain unchanged.
 
+The pilot authorized testing a bounded reversing-shaft mounting-seat change on
+2026-09-20, with all fits documented for author review. The separate trial
+raises the unchanged detent-bearing body 1.9 mm while shortening the upper
+profile to preserve its installed fastening-end height. It restores sampled
+lower-row reach but leaves sixth-channel fork interference and upper detent
+retention unresolved. See `simulation/docs/reverser-seat-trial-2026-09-20.md`
+and the consolidated `simulation/docs/author-review.md`. No operating geometry,
+upstream CAD, task checkbox or acceptance requirement is changed by this trial.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

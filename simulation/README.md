@@ -55,7 +55,11 @@ records the remaining positive contacts without exclusions. The
 [reverser seating investigation](docs/reverser-seating-investigation-2026-09-20.md)
 now includes the printable knob/yoke, ball bore, shaft fastening seats and
 housing window. Counter reversal remains unimplemented pending a justified
-working fit; no reversing-shaft geometry has been changed.
+working fit; the operating reversing shaft remains unchanged. A separate,
+pilot-authorized [mounting-seat trial](docs/reverser-seat-trial-2026-09-20.md)
+tests a bounded profile change without editing upstream CAD. The
+[author-review register](docs/author-review.md) consolidates existing simulation
+fits, assembly corrections, rejected hypotheses and unresolved findings.
 
 For interactive investigation, select the separate **`reverser_inspection`**
 model. It opens only the drum, one counter pinion, fork and detent reference,
