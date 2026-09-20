@@ -141,6 +141,19 @@ wired into the operating root. A separate framework cycle needs pilot
 authority; hiding the failure by splitting requests or imposing a one-turn
 cap is not an accepted continuation. Tasks 6.2/6.3 remain open.
 
+The pilot-authorized `periodic-lockout-first-contact` framework cycle is now
+archived and integrated on main at `e63700e` (planning `c2023b1`, ADR-135).
+Both Curta motion suites pass; seven actual long-request stops are clear in
+both kernels and .2-degree overtravel contacts in every negative control.
+Post-integration framework checks pass 233 tests and 153 subtests. The cycle
+worktree was removed cleanly; its branch was preserved, with no push.
+The new project-owned isolated-browser probe exports the actual periodic
+bench and reproduces the old error in viewer `4355da1`: 120 -> 150 stops at
+125.22, but 120 -> 840 is refused transactionally at 120. The viewer needs
+the corresponding first-contact correction in its own repository before
+operating adoption. See `simulation/docs/periodic-lockout-browser-2026-09-20.md`.
+Production controls, manifest, upstream CAD and task checkboxes are unchanged.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

@@ -82,9 +82,12 @@ outer-profile fit on the ones lockout (author-review F18). It removes a
 native-only overlap at normal input 3 without changing upstream CAD or shaft
 clocking. The broader closing restraint remains an **unadopted diagnostic**:
 a [source-backed periodic-stop reproduction](docs/periodic-lockout-stop-2026-09-20.md)
-isolates a framework invariant error on a long instantaneous crank request.
-Short and timed requests pass that reproduction; the long-request failure
-must be resolved before claiming general operating restraint acceptance.
+isolated a framework invariant error on a long instantaneous crank request.
+Framework main `e63700e` now fixes that failure: the Python reproduction and
+five-flat motion suite pass, with seven actual stops verified on both kernels.
+The [browser continuation](docs/periodic-lockout-browser-2026-09-20.md) still
+reproduces the same error in the separate viewer executor. Browser parity and
+full-root acceptance remain prerequisites to operating adoption.
 
 For interactive investigation, select the separate **`reverser_inspection`**
 model. It opens only the drum, one counter pinion, fork and detent reference,

@@ -1,5 +1,9 @@
 # Periodic closing surface: project-owned framework reproduction
 
+Historical red evidence below. Framework main `e63700e` now fixes the Python
+failure; the separate viewer still fails the actual exported reproduction.
+See the [integration and browser continuation](periodic-lockout-browser-2026-09-20.md).
+
 Framework main: `8d2bd71171be81f13ba5dd492851ed8b3a9ababb`.
 Project starting checkpoint: `331081436ed3d4e79890e07843f93f82e2d71f2a`.
 No framework source changes or new framework cycle have been made here.
