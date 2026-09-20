@@ -82,8 +82,14 @@ simulation adoption, not whole-machine or fabrication acceptance.
   [roadmap](../../openspec/changes/simulate-the-curta/tasks.md).
   A mid-turn selector withdrawal now has a measured closing-disc/lockout
   contact and a [nested-constraint reproduction](nested-lockout-constraint-2026-09-20.md);
-  it is an unimplemented simulation restraint, not evidence for modifying
-  the author's locking disc.
+  its [ancestor-constraint acceptance](ancestor-lockout-2026-09-20.md) uses a
+  separate full-tree diagnostic, not a production whole-machine restraint or
+  evidence for modifying the author's locking disc. The complete bell and
+  published mesh both clear at a local 125.32° stopping point; other phases,
+  channels and action orders remain unvalidated. Hosted requests and a real
+  pointer drag stop there with the existing 608 descendant paths and 25 controls;
+  focused existing-model arithmetic, partial-input replay and reverser-limit
+  regressions pass. The linked record preserves the exact tested content.
 
 ## Questions to resolve with the author
 

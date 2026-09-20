@@ -1,5 +1,10 @@
 # Nested cross-assembly lockout constraint
 
+Historical finding below. The subsequent ratified framework cycle and
+[complete-bell diagnostic acceptance](ancestor-lockout-2026-09-20.md) resolve
+the declaration limitation without reparenting parts. That opt-in diagnostic
+is not a production whole-machine restraint; broader operating work remains.
+
 This is a project finding and reproduction, not a ratified framework API or
 an implemented operating restraint. No framework or viewer source is changed.
 Tested framework content: `9fb5127fad62e6c66067b34e7d02dd389471fa2d`.

@@ -104,6 +104,18 @@ nested assemblies needs a separate framework/ownership decision. See
 `simulation/docs/nested-lockout-constraint-2026-09-20.md`.
 Tasks 6.2/6.3 remain open; this is not a blanket crank-home lock.
 
+The ratified framework `ancestor-joint-constraints` cycle now has a full-tree
+Curta diagnostic in `simulation/ancestor_lockout.py`. The actual wrong-order
+request failed red at 150°; native and published-mesh contact measurements
+then established 125.32° as a local free-side stop. Retained motion, held shaft,
+both kernels, .05° reverse relief and exact replay pass without reparenting
+parts or replacing the original pawl restraint. Hosted and real-pointer browser
+checks preserve all 608 descendant paths and 25 controls; focused existing-model
+arithmetic, partial-input replay and reverser-limit regressions pass. See
+`simulation/docs/ancestor-lockout-2026-09-20.md`. The manifest still selects
+the original operating model. This intentionally limited framework acceptance
+does not finish tasks 6.2/6.3 or certify other shaft phases/action orders.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python
