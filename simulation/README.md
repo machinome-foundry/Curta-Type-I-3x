@@ -69,6 +69,13 @@ Complete standalone/pointer and mid-cycle-restraint acceptance remain open. The
 [author-review register](docs/author-review.md) consolidates existing simulation
 fits, assembly corrections, rejected hypotheses and unresolved findings.
 
+Result input now also uses the [actual tooth bands](docs/result-partial-engagement-2026-09-20.md)
+at partial selector/crank heights, instead of fractional teeth or a half-lift
+mode switch. Ordinary operation still uses integer selectors and crank heights
+0/9 mm. Partial positions can produce unwanted entries; they are not snapped
+into correct settings. Native/faceted fixed-setting contact checks pass, while
+mid-cycle setting changes and their restraints remain separate acceptance work.
+
 For interactive investigation, select the separate **`reverser_inspection`**
 model. It opens only the drum, one counter pinion, fork and detent reference,
 with four independent inspection sliders and measured-pose buttons. See the

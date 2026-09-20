@@ -49,6 +49,7 @@ No overlap is waived by this index.
 | R04 | Finer frame, sleeve, track and spring tessellation; bounded generated-mesh encoding corrections for cover fits. Native source geometry is unchanged by tessellation. Tiny positive intersections remain failures, not silently rounded away. | [Cover/thread evidence](housing-thread-fit-2026-09-20.md), [enclosure](enclosure-seats-2026-09-20.md), [rest inventory](operating-rest-inventory-2026-09-20.md). |
 | R05 | Reversing ball follows the original pockets, rim and shaft land radially; analytic spring retains source .51 mm wire, R2.295 coil centre, 6½ turns and 11.1 mm free centreline height. A .05 mm named seating gap preserves contacts. Ball remains the source's R2.7, not silently replaced by nominal 5 mm hardware. | [Follower dimensions and independent original-print checks](reverser-fork-and-follower-2026-09-20.md#radial-ball-and-spring-following), [reverser_following.py](../reverser_following.py). Geometric restoring direction only, not force/friction or automatic snap. |
 | M01 | Negative clearing-sweep modulo corrected; retained carriage/clearing restraints use measured contact envelopes and require separate release. These are simulation logic corrections, not physical modifications. | [Restraints and red-first evidence](carriage-interlocks-2026-09-19.md). |
+| M02 | Result engagement now derives from actual lower-drum axial bands and pinion heights instead of a half-lift mode switch or fractional tooth count. No print geometry changes. | [Partial-result engagement](result-partial-engagement-2026-09-20.md). Both contact kernels, retained partial-selector/replay, calibration and full-bank subtraction/overflow checks pass. Wrong-order locking-disc restraint remains open. |
 
 ## Current candidate and unresolved work
 
@@ -79,6 +80,10 @@ simulation adoption, not whole-machine or fabrication acceptance.
 - Crank/selector wrong-order restraints, full motion/interference matrices,
   and complete hosted/standalone pointer checks remain on the
   [roadmap](../../openspec/changes/simulate-the-curta/tasks.md).
+  A mid-turn selector withdrawal now has a measured closing-disc/lockout
+  contact and a [nested-constraint reproduction](nested-lockout-constraint-2026-09-20.md);
+  it is an unimplemented simulation restraint, not evidence for modifying
+  the author's locking disc.
 
 ## Questions to resolve with the author
 

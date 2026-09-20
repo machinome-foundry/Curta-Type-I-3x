@@ -93,6 +93,17 @@ still finds two second-rivet passage contacts on the body-side mouth wall.
 It remains a diagnostic, not an adopted deploy/stow control or task completion.
 See `simulation/docs/clearing-loop-investigation-2026-09-19.md`.
 
+The result-law continuation replaces fictional fractional teeth and the
+half-lift mode switch with the measured lower-drum bands. Both kernels,
+retained partial-selector/replay, page-53 calibration, full-bank
+subtraction/overflow, the operating build and scoped hosted gestures pass.
+No print geometry changes. The subsequent wrong-order probe identifies the
+closing bell/lockout contact; expressing its restraint across the existing
+nested assemblies needs a separate framework/ownership decision. See
+`simulation/docs/result-partial-engagement-2026-09-20.md` and
+`simulation/docs/nested-lockout-constraint-2026-09-20.md`.
+Tasks 6.2/6.3 remain open; this is not a blanket crank-home lock.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

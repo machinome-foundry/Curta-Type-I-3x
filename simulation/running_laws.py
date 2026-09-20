@@ -12,6 +12,7 @@ from simulation.carry_profiles import PIN_DROP, RESET_LIFT
 from simulation.running_parts import RESULT_DIALS, TURNS_DIALS
 from simulation.fit import INPUT_CLOCKING
 from simulation.reverser_modes import counter_count
+from simulation.result_modes import result_count
 
 
 def phase(angle):
@@ -32,9 +33,8 @@ def shaft_motion(channel, counter=False, lever_rest=0):
             if counter:
                 count = counter_count(channel, setting+.0925, elevation)
             else:
-                subtract = elevation >= 4.5
                 entered = setting / 36 if channel < 8 else 0
-                count = entered * (1 - subtract) + (9 - entered + int(channel == 0)) * subtract
+                count = result_count(channel, entered, elevation)
             direct = tooth_passage(angle, count,
                                    (TURNS_INPUT_END if counter else RESULT_INPUT_END) + 20 * channel)
             carried = (tooth_passage(angle, 1,
