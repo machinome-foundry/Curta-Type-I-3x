@@ -80,9 +80,10 @@ radial follower and housing overtravel pass independently. `OperatingCurta` now
 has a physical `reverser_height` input, all six gears follow the actual knob,
 and engagement reads source tooth-row overlap rather than a midpoint mode.
 The first four-turn retained-operation sequence, physical overtravel and replay
-tests pass. The shifted-operation matrix and installed motion/pointer checks
-are recorded in `simulation/docs/reverser-fork-and-follower-2026-09-20.md` as
-they complete. Task 6.4 still includes clearing-loop deployment, and the
+tests pass. All 24 shifted-operation cases also pass, as do installed-world
+motion checks on both kernels and scoped hosted down/up gestures. Evidence is
+in `simulation/docs/reverser-fork-and-follower-2026-09-20.md`.
+Task 6.4 still includes clearing-loop deployment, and the
 remaining action-order and whole-machine obligations are not waived.
 
 ## Previous continuation — Python direct operation, 2026-09-16

@@ -207,8 +207,13 @@ The first integrated retained-operation test passes (359.526 s, `dt=.1`). With
 operand 3, successive user-requested turns give `(result, counter)`:
 `(3, 1)` → lower lever → `(6, 0)` → raised crank → `(3, 1)` → upper lever →
 `(0, 0)`. Moving the lever alone does not change the preceding total. The all-six
-carriage-position matrix uses `dt=.2` as an additional subdivision check; its
-result is recorded separately when complete, not inferred from this first run.
+carriage-position matrix uses `dt=.2` as an additional subdivision check and
+passes **all 24 cases**: six carriage positions × two crank modes × two lever
+positions. The matrix, whole-root overtravel and replay tests finish **3/3 in
+2143.724 s**. Each case uses the ordinary input requests after restoring the
+empty fixture snapshot; no register is seeded or edited. Together with the
+history and unseated-characterization runs, all five `test_running_reverser.py`
+methods pass. This does not substitute for the separate wrong-order matrix.
 The full operating-root lower-overtravel/hard-stop test and partial-movement
 snapshot/replay test also pass. They issue physical requests and verify that
 the crank, carriage and register history are not silently prepared or reset.

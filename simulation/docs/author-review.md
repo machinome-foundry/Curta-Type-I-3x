@@ -62,8 +62,9 @@ simulation adoption, not whole-machine or fabrication acceptance.
   four-turn retained-arithmetic scenario. Partial lever engagement is derived
   from the actual source tooth bands, including one-tooth engagement on higher
   channels when unseated. Installed-world motion passes both kernels, and
-  ordinary hosted down/up gestures pass. The full shifted-operation matrix,
-  standalone/full pointer matrix and mid-cycle restraints are tracked in the continuation.
+  ordinary hosted down/up gestures pass, as do all 24 carriage-position ×
+  crank-mode × lever-position cases. The standalone/full pointer matrix and
+  mid-cycle restraints remain tracked in the continuation.
   These results include F01 tooth relief; they do not certify untouched gears.
 - The [operating rest inventory](operating-rest-inventory-2026-09-20.md) records
   390 rigid occurrences with 268 positive faceted pairs / 166 native-or-STL

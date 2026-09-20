@@ -63,8 +63,9 @@ positions and overtravel to the lower housing stop at −6.9425 mm: those positi
 can engage different tooth rows and are not automatically snapped to a mode.
 The unchanged detent-bearing shaft body is mounted 1.9 mm higher with a bounded
 shortened fastening profile; upstream CAD is untouched. Scoped bank, follower,
-housing and retained-history tests pass. Complete shifted-operation, installed
-pointer and mid-cycle-restraint acceptance are recorded separately. The
+housing, retained-history and all 24 shifted-operation cases pass. Actual
+installed motion passes both kernels and hosted down/up gestures pass.
+Complete standalone/pointer and mid-cycle-restraint acceptance remain open. The
 [author-review register](docs/author-review.md) consolidates existing simulation
 fits, assembly corrections, rejected hypotheses and unresolved findings.
 

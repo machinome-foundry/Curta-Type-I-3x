@@ -260,8 +260,8 @@ source drum bands, including one-tooth engagement on higher channels at partial
 lever positions. It does not snap to a binary mode. Lower working detent
 −4.9425 mm is distinct from the lower housing stop −6.9425 mm; the upper spacer
 stop is +3.9075 mm. Scoped native/faceted bank, follower, transition and first
-retained-history checks pass; complete shifted-operation, pointer and mid-cycle
-restraint acceptance remain explicit.
+retained-history checks pass, as do all 24 shifted-operation cases and scoped
+hosted gestures. Complete pointer and mid-cycle-restraint acceptance remain explicit.
 See `simulation/docs/reverser-fork-and-follower-2026-09-20.md` and the
 consolidated `simulation/docs/author-review.md`. Trials, rejected alternatives,
 remaining checks and source invariants stay explicit; no upstream CAD changes.
