@@ -116,6 +116,31 @@ arithmetic, partial-input replay and reverser-limit regressions pass. See
 the original operating model. This intentionally limited framework acceptance
 does not finish tasks 6.2/6.3 or certify other shaft phases/action orders.
 
+The ancestor-constraint framework cycle is now integrated on main at
+`8d2bd71`. Broader ones-lockout acceptance starts with five red withdrawal
+cases and a long wrong-order request, while legal three-turn requests pass.
+Checking all five source flats also exposed a native-only overlap during
+ordinary input 3. A bounded additional .01 mm outer-profile fit on the ones
+lockout now passes its four scoped contracts in both kernels, mutation,
+operating-tree recheck and pixel inspection; other lockouts and upstream CAD
+are unchanged.
+See `simulation/docs/result-locking-2026-09-20.md` and author-review F18.
+No general restraint has been adopted and no task is completed by this
+intermediate geometry result.
+
+The refined five-flat contact profile also passes 1888 boundary samples per
+kernel, numerical ordinary-tooth-passage/admission checks and four legal
+three-turn requests. This measured profile is a diagnostic, not an adopted
+whole-machine restraint or a continuous collision certificate.
+
+The subsequent source-backed reproduction isolates a periodic-bound run
+defect: a fixed local stop, a short periodic request, and a timed long periodic
+request pass, while an immediate 120 → 840° request raises `StopInvariantError`.
+See `simulation/docs/periodic-lockout-stop-2026-09-20.md`. The candidate is not
+wired into the operating root. A separate framework cycle needs pilot
+authority; hiding the failure by splitting requests or imposing a one-turn
+cap is not an accepted continuation. Tasks 6.2/6.3 remain open.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

@@ -104,6 +104,18 @@ class FittedCarryLockout(PentagonalLockout):
         return relieve_outline(shape, self.flank_relief, clocking=-INPUT_CLOCKING)
 
 
+class FittedOnesLockout(FittedCarryLockout):
+    """Extend the existing profile fit by .01 mm on the result ones only.
+
+    The .15 mm profile left 0.00005969798 mm³ native contact at the
+    input-three indexed position (shaft 220°); the operating tree reproduces it.
+    Meshes miss its .009 mm-wide sliver. The additional outer skin keeps
+    the source keyed bore, height, placement and every other lockout intact.
+    See docs/result-locking-2026-09-20.md for red/green and protected geometry.
+    """
+    flank_relief = Length(.16, min=0)
+
+
 class FittedCarryPinion(TransmissionGear0_6):
     """Trial outer-flank fit for the .6 carry tooth, retaining its keyway.
 

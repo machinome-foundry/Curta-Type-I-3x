@@ -76,6 +76,16 @@ mode switch. Ordinary operation still uses integer selectors and crank heights
 into correct settings. Native/faceted fixed-setting contact checks pass, while
 mid-cycle setting changes and their restraints remain separate acceptance work.
 
+The [ones-lockout continuation](docs/result-locking-2026-09-20.md) checks all
+five source flats and adds only .01 mm to the existing simulation-owned
+outer-profile fit on the ones lockout (author-review F18). It removes a
+native-only overlap at normal input 3 without changing upstream CAD or shaft
+clocking. The broader closing restraint remains an **unadopted diagnostic**:
+a [source-backed periodic-stop reproduction](docs/periodic-lockout-stop-2026-09-20.md)
+isolates a framework invariant error on a long instantaneous crank request.
+Short and timed requests pass that reproduction; the long-request failure
+must be resolved before claiming general operating restraint acceptance.
+
 For interactive investigation, select the separate **`reverser_inspection`**
 model. It opens only the drum, one counter pinion, fork and detent reference,
 with four independent inspection sliders and measured-pose buttons. See the

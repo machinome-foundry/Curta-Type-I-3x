@@ -9,7 +9,8 @@ from simulation.colors import ALUMINUM, BRONZE
 from simulation.standard.parts import *
 from simulation.fit import (FittedInputPinion, FittedCounterPinion, FittedInputSpacer, FittedOnesSpacer,
     FittedSlidingSpacer, FittedCounterSpacer, FittedOnesSleeve,
-    FittedInputSleeve, FittedCounterSleeve, FittedCarryLockout, FittedCarryPinion)
+    FittedInputSleeve, FittedCounterSleeve, FittedCarryLockout, FittedCarryPinion,
+    FittedOnesLockout)
 
 
 class Part10230_410008_1_419032(FusionNode):
@@ -367,7 +368,7 @@ class Part10221_1(FusionNode):
     color = BRONZE
     angular_deflection = 0.5
     p_2_5mm_lockout_sleeve = Part2_5mmLockoutSleeve()
-    pentagonal_lockout = FittedCarryLockout()
+    pentagonal_lockout = FittedOnesLockout()
     p_1_6mm_spacer = Part1_6mmSpacer()
 
     def render(self):

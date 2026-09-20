@@ -34,6 +34,21 @@ No overlap is waived by this index.
 | F16 | Reversing actuator's sixth sleeve seat opened at the actual input axis to R3.9 through 4.5 mm; only its existing 1.685 mm tooth slot opened to R6.28. Original axial faces and other five seats retained. Originated as T02. | [Fork measurement and bounded removal](reverser-fork-and-follower-2026-09-20.md#local-fork-relief), [reverser_fits.py](../reverser_fits.py), `test_reverser_seat_trial.py`. |
 | F17 | Reversing-shaft body raised 1.9 mm; mounting shoulder shortened to local Z115.05, neck end119.6, stud end125.6 mm; finished M4 major envelope R2.0. Installed fastening-end height retained. Both pockets and all geometry below local Z110 unchanged. Originated as T01/T03. | [Initial dimensions](reverser-seat-trial-2026-09-20.md), [continued M4 fit](reverser-fork-and-follower-2026-09-20.md#finished-m4-end-not-the-unthreaded-blank), [reverser_seat_trial.py](../reverser_seat_trial.py). Not a release drawing or thread-load certification. |
 
+## Additional ones-lockout fit — F18
+
+Implemented scoped fit: **F18**, result ones locking outline only,
+.15 → .16 mm outer-profile relief. A normal input 3 leaves a valid native
+overlap of 0.00005969798 mm³ at shaft 220° with the earlier fit; the published
+mesh misses it. All five indexed flats clear after the additional .01 mm,
+with the keyed core, height and two-sided locking retained. See the
+[restraint and fit record](result-locking-2026-09-20.md). The actual operating
+tree clears the input-3 pose in both kernels; restoring the earlier source
+class reproduces the failure. Four fit contracts pass under both runners,
+including protected material and retained locking. This is not a finding
+that the author's physical build jams or a manufacturing recommendation.
+The general restraint remains unadopted because of the separately isolated
+[periodic-stop software defect](periodic-lockout-stop-2026-09-20.md).
+
 ## Assembly, source-representation and motion corrections — not new prints
 
 | ID | Correction or explicit assumption | Record |
