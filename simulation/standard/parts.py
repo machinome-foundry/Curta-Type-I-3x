@@ -253,6 +253,10 @@ class FrameSupport(SourcePart):
 
 class MainBody(SourcePart):
     part = 'main body'
+    # The carriage's .05 mm seating clearance needs matching frame precision.
+    # Native source geometry is unchanged; the default mesh closes that gap.
+    linear_deflection = .01
+    angular_deflection = .1
 
 class TensBellSpring(SourcePart):
     color = STEEL

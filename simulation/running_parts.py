@@ -15,6 +15,9 @@ from simulation.registers import ResultDials, TurnsDials
 from simulation.selectors import IndependentSelectors
 from simulation.standard.layers import CrankAssembly
 from simulation.print_parts import CounterBodyStopPin
+from simulation.clearing_seat_fit import FittedClearingPin
+from simulation.carriage_frame_fit import FittedCounterBody
+from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
@@ -60,8 +63,10 @@ class RetainedTurnsDials(TurnsDials):
 
 
 class RetainedAxleCarrier(FittedAxleCarrier):
+    counter_body = FittedCounterBody()
     counter_body_stop_pin = CounterBodyStopPin()
-    pin_drive = FittedAxleCarrier.clearing_pin.slide.drives(FittedAxleCarrier.press)
+    clearing_pin = FittedClearingPin(slide=Prismatic(axis=(0, 0, -1)))
+    pin_drive = clearing_pin.slide.drives(FittedAxleCarrier.press)
 
     def render(self):
         super().render()
@@ -85,6 +90,9 @@ class RetainedCarriage(RegisterCarriage):
     turns_register = RetainedTurnsDials()
     carrier = RetainedCarriageStructure()
     clearing_ring = RunningClearingAssembly(turn=Revolute(axis=(0, 0, 1)))
+    turn = Revolute(axis=(0, 0, 1), range=(0, 100))
+    lift = Prismatic(axis=(0, 0, 1), range=(Bound(minimum_carriage_lift,
+        reads=(carrier.upper_carriage_body_1.clearing_pin.slide, turn)), 6))
     clearing_follower = clearing_ring.turn.drives(
         carrier.upper_carriage_body_1.clearing_pin.slide, law=clearing_stop_following)
 

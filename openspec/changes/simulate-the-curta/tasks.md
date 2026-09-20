@@ -24,6 +24,16 @@ The retained-motion suite now passes six checks, including every marker's own
 motion and upper-bank carriage/clearing transport. Task 6.4 remains open for
 the reverser, clearing-loop and complete operating matrix.
 
+The carriage/clearing restraint increment now passes its source-fidelity,
+free/blocked contact and installed-world checks on both kernels. Eleven
+running tests cover measured play, all six slots, repeated attempts, separate
+release and replay; a negative-sweep follower error is corrected. Real hosted
+pointer drags now stop seated shift and clearing without auto-lifting. The
+bounded fits and evidence are in
+`simulation/docs/carriage-interlocks-2026-09-19.md`. Tasks 1.3 and 6.2–6.5 remain
+open for the rest of their stated matrices; this does not certify crank and
+selector mid-cycle restraints, counter reversal or the printed loop.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

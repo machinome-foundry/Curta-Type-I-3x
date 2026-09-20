@@ -1,7 +1,8 @@
 """Physical requests must move the installed parts by their measured travel.
 
 These checks use a retained run, not the old calculator's pose inputs. They
-prove displacement, not clearance or mechanical interlock acceptance.
+prove displacement and the specifically named carriage/frame stop contacts,
+not whole-machine clearance or complete mechanical interlock acceptance.
 """
 
 import numpy as np
@@ -19,6 +20,37 @@ def rotation(degrees):
 
 class RunningMotionTest(TestCase):
     node = RunningMotionBench
+
+    def test_admitted_carriage_and_clearing_stops_match_installed_world_contacts(self):
+        sim = Sim(self.node, dt=.1, meshes=True)
+        carrier = self.node.carriage.registers.carrier.upper_carriage_body_1
+        body, pin = carrier.counter_body, carrier.clearing_pin
+        frame = self.node.frame.upper_frame.main_body
+        try:
+            command = sim.move('carriage_rotation', to=10)
+            self.assertEqual(command.status, 'blocked')
+            self.assertAlmostEqual(sim.state['carriage.registers.turn'], .18)
+            self.assertNotIntersecting(body, frame)
+            self.assertBlockedBeyond(body, .02, against=frame,
+                                     axis=(0, 0, -1), directions='forward')
+            sim.move('carriage_elevation', to=6)
+            sim.move('carriage_rotation', to=10)
+            command = sim.move('carriage_elevation', to=0)
+            self.assertEqual(command.status, 'blocked')
+            self.assertAlmostEqual(sim.state['carriage.registers.lift'], 6)
+            self.assertFreeWithin(body, .01, against=frame, along=(0, 0, 1))
+            self.assertBlockedBeyond(body, .1, against=frame,
+                                     along=(0, 0, 1), directions='forward')
+            sim.move('carriage_rotation', to=20)
+            sim.move('clearing_rotation', to=90)
+            command = sim.move('carriage_elevation', to=0)
+            self.assertEqual(command.status, 'blocked')
+            self.assertAlmostEqual(sim.state['carriage.registers.lift'], 4.810085)
+            self.assertFreeWithin(pin, .01, against=frame, along=(0, 0, 1))
+            self.assertBlockedBeyond(pin, .1, against=frame,
+                                     along=(0, 0, -1), directions='forward')
+        finally:
+            sim.reset()
 
     def test_all_markers_move_independently_and_upper_bank_follows_its_track(self):
         from simulation.decimal_markers import LOWER_CENTER

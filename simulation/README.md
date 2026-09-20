@@ -30,12 +30,20 @@ seated .51 mm deeper to clear the frame while retaining its angular end stops.
 Its original STEP gives contradictory native intersection/containment answers;
 the reproduction and source comparison are in the operating completion record.
 Pin-contact checks therefore use the faceted backend even on the exact runner.
-This resolves that mounting interface, not the carriage's operating interlocks.
+This resolves that mounting interface. The separately verified
+[carriage and clearing restraints](docs/carriage-interlocks-2026-09-19.md) now
+stop seated shifting, between-slot seating and clearing against the fixed
+frame. They preserve measured play and require the user to release each
+restraint; they never lift, finish a sweep or seat the carriage automatically.
+The record names the bounded simulation-owned tip and underside fits, their
+source-fidelity tests and the negative-sweep follower correction. Upstream
+CAD and the reversing-shaft detents are unchanged.
 
-Framework `b9b64dd` and viewer `2912006` (API 21) now pass a browser prerequisite
-probe on the actual operating export: all 24 controls load, and real drags
-operate the selected crank lift and first selector independently. This is not
-yet the complete standalone/hosted pointer and wrong-order acceptance matrix.
+Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
+probe on the actual operating export: all 24 controls load, real drags operate
+the selected crank lift and first selector independently, and seated shift
+and clearing drags stop at their measured play without auto-lifting. This
+is not yet the complete standalone/hosted pointer and wrong-order matrix.
 
 Surface markings now use the framework's decal API: all 25 number rolls,
 the lower input-place indices, sleeve branding and reversing arrows are

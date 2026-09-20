@@ -1,6 +1,7 @@
 """Native clearing-stop depression for .05 mm minimum surface separation."""
 
 from machinome.math import piecewise
+from simulation.arithmetic import modulo
 
 
 PIN_DROP = (
@@ -53,4 +54,6 @@ PIN_DROP = (
 
 
 def following(source, target):
-    return lambda turn: piecewise((-turn) % 360, PIN_DROP)
+    # Keep the phase positive on either side of zero in a compiled run too.
+    # The remainder operator leaves negative sweeps on the clamped endpoint.
+    return lambda turn: piecewise(modulo(-turn, 360), PIN_DROP)

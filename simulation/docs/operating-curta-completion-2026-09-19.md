@@ -421,6 +421,17 @@ Strict OpenSpec validation passes. This rebuild is not the full per-node
 regression or a fresh all-controls browser acceptance run; tasks 5.x and the
 remaining 6.x acceptance stay open.
 
+## Carriage and clearing restraints
+
+The [carriage/clearing increment](carriage-interlocks-2026-09-19.md) records the
+native contact measurements, rejected roof-cut candidate, bounded simulation-owned
+fits, red/green motion tests, negative-sweep follower correction and hosted
+pointer regression. The operating carriage now meets its real indexing keys
+and clearing-pin stop without preparing another control. The complete retained
+world-motion suite passes 7/7 on each geometry runner. This does not complete
+the remaining crank/selector restraints, reverser, printed loop, standalone
+pointer matrix or whole-machine overlap inventory; no broader task is checked.
+
 ## Earlier environment history
 
 Framework content `df0bee4c7a5c727becf9ea33b7409ef796256a3d`; viewer content

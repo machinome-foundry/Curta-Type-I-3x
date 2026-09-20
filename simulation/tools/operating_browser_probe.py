@@ -1,6 +1,7 @@
 """Mount the actual operating export through the viewer's public host API.
 
-This checks two pointer prerequisites, not complete pointer/arithmetic acceptance. Assets
+This checks two pointer prerequisites and optional carriage/clearing wrong-order
+gestures, not complete pointer/arithmetic acceptance. Assets
 are served locally through Playwright routing; nothing is uploaded and no
 persistent server is opened. A refused control remains a failing result.
 """
@@ -21,6 +22,7 @@ def main():
     parser.add_argument('--build', type=Path, default=Path('_build/operating_curta'))
     parser.add_argument('--screenshot', type=Path,
                         default=Path('_build_running/operating-browser-prerequisite.png'))
+    parser.add_argument('--interlocks', action='store_true')
     args = parser.parse_args()
     build = args.build.resolve()
     document = json.loads((build / 'viewer.json').read_text())
@@ -29,6 +31,7 @@ def main():
     bundle = Path(viewer['path'])
     errors = []
     report = {'viewer': viewer, 'bundle_sha256': hashlib.sha256(bundle.read_bytes()).hexdigest(),
+              'document_sha256': hashlib.sha256((build / 'viewer.json').read_bytes()).hexdigest(),
               'document_version': document['version'],
               'declared_controls': {name: control['kind']
                                     for name, control in document['controls'].items()}}
@@ -116,6 +119,51 @@ def main():
                             shaft: state['input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom.turn'],
                             crank: state.crank_rotation};
                 }''')
+                if args.interlocks:
+                    for name, key, report_key in (
+                            ('shift carriage', 'carriage_rotation', 'seated_shift'),
+                            ('clear registers', 'clearing_rotation', 'seated_clearing')):
+                        # Each wrong-order case has independent fixture setup;
+                        # the gesture itself never calls a run movement API.
+                        page.evaluate('async () => { await curta.run().reset(); }')
+                        page.wait_for_function('curta.run().state().carriage_elevation === 0')
+                        attempts = []
+                        for dx, dy in ((80, 0), (-80, 0), (0, -80), (0, 80)):
+                            control = page.evaluate('''name => curta.controls().find(
+                                control => control.name === name)''', name)
+                            point = control['point']
+                            assert point is not None, f'No visible control location: {name}'
+                            page.mouse.move(point['x'], point['y'])
+                            page.evaluate('''async () => {
+                                await new Promise(requestAnimationFrame);
+                                await new Promise(requestAnimationFrame);
+                            }''')
+                            control = page.evaluate('''name => curta.controls().find(
+                                control => control.name === name)''', name)
+                            point = control['gesturePoint']
+                            assert point is not None, f'No reachable gesture target: {name}'
+                            page.mouse.move(point['x'], point['y'])
+                            page.mouse.down()
+                            page.mouse.move(point['x'] + dx, point['y'] + dy, steps=16)
+                            page.mouse.up()
+                            page.evaluate('''async () => {
+                                await new Promise(requestAnimationFrame);
+                                await new Promise(requestAnimationFrame);
+                            }''')
+                            state = page.evaluate('() => curta.run().state()')
+                            attempts.append({'dx': dx, 'dy': dy, 'admitted': state[key]})
+                            if abs(state[key]) > .000001:
+                                break
+                        report[report_key] = {'attempts': attempts, 'state': state}
+                        # Gestures submit timed requests. Wait for the admitted
+                        # contact boundary, not an arbitrary number of frames
+                        # that can still show a request in flight.
+                        condition = (
+                            "Math.abs(curta.run().state()['carriage.registers.turn'] - .18) < .00001"
+                            if key == 'carriage_rotation' else
+                            "Math.abs(curta.run().state()['carriage.registers.carrier.upper_carriage_body_1.clearing_pin.slide'] - 3.09) < .00001")
+                        page.wait_for_function(condition)
+                        report[report_key]['state'] = page.evaluate('() => curta.run().state()')
             page.screenshot(path=str(args.screenshot))
         except Exception as error:
             report['probe_error'] = f'{type(error).__name__}: {error}'
@@ -139,6 +187,16 @@ def main():
     selected = report['pointer_selector']
     assert 0 < selected['digits'][0] <= 9 and selected['digits'][1:] == [0] * 7, selected
     assert abs(selected['shaft'] - 36 * selected['digits'][0]) < .00001 and selected['crank'] == 0, selected
+    if args.interlocks:
+        shifted = report['seated_shift']['state']
+        assert abs(shifted['carriage_rotation'] - .18) < .00001, report['seated_shift']
+        assert abs(shifted['carriage.registers.turn'] - .18) < .00001, shifted
+        assert shifted['carriage_elevation'] == shifted['carriage.registers.lift'] == 0, shifted
+        cleared = report['seated_clearing']['state']
+        assert 0 < abs(cleared['clearing_rotation']) < 1.5, report['seated_clearing']
+        assert abs(cleared['carriage.registers.carrier.upper_carriage_body_1.clearing_pin.slide']
+                   - 3.09) < .00001, cleared
+        assert cleared['carriage_elevation'] == cleared['carriage.registers.lift'] == 0, cleared
 
 
 if __name__ == '__main__':
