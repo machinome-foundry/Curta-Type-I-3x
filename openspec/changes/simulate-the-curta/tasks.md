@@ -86,6 +86,13 @@ in `simulation/docs/reverser-fork-and-follower-2026-09-20.md`.
 Task 6.4 still includes clearing-loop deployment, and the
 remaining action-order and whole-machine obligations are not waived.
 
+The clearing-loop continuation now proves the original first clip's captive
+bearing and a bounded second-seat candidate (T05/T06) on both kernels.
+The candidate's endpoint and rivet-head capture pass, but a 111-pose sweep
+still finds two second-rivet passage contacts on the body-side mouth wall.
+It remains a diagnostic, not an adopted deploy/stow control or task completion.
+See `simulation/docs/clearing-loop-investigation-2026-09-19.md`.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

@@ -82,6 +82,14 @@ simulation adoption, not whole-machine or fabrication acceptance.
 
 ## Questions to resolve with the author
 
+The [clearing-loop continuation](clearing-loop-investigation-2026-09-19.md#second-seat-trial-2026-09-20)
+also records **unadopted** trials T05 (bounded second-cavity opening at its
+actual mounted rivet) and T06 (.05 mm loop/cover seat allowance). Their deployed
+endpoint passes both kernels, but clipping travel and grip are not yet proven.
+The measured .850639 mm difference between clip and rivet centre spacings may
+involve intended elastic clipping or assembly fitting; it is not listed as a
+proven defect or recommended physical modification.
+
 1. Which source revision and exact printed shaft/knob/spacer variants were
    used in a build demonstrating counter reversal in both directions?
 2. What are the installed shaft shoulder/fastening heights, spacer lengths,

@@ -70,3 +70,69 @@ Next evidence: determine the permitted clip/release path against
 the collar and crank. Do not infer a permanent single-rivet hinge or a
 horizontal folding hinge merely from the control inventory. The source pose
 and the manual's clipping action must establish the actual motion first.
+
+## Second-seat trial, 2026-09-20
+
+`tools/clearing_loop_clip.py` independently reads the original native arcs and
+source placements. The source clip centres are 28.450638765 mm apart; the
+mounted rivets are 27.600000000 mm apart. Consequently, rigidly centring the
+first clip cannot also centre the second. This does **not** prove the working
+printed design defective: the manual explicitly requires clipping and permits
+fitting, and this measurement does not account for elastic assembly strain.
+
+At the radial deployed diagnostic pose (swivel −90°), the actual second rivet
+is at (31.095555539, 25.948341482) in the loop's own frame, .9066224 mm from
+the original second cavity centre. The unmodified endpoint contract fails
+natively with 26.551689793 mm³ of second-rivet overlap
+(`clearing-loop-seat-red.log`).
+
+Trial **T05**, `clearing_loop_seat.py`, opens only a cylinder R3.8 through the
+source's 5.46 mm thickness at that measured position. It preserves the first
+clip, the complete finger loop, and all material outside that bounded cutter.
+It adds no material and remains one valid native solid. The comparison image
+`clearing-loop-seat-comparison.png` was inspected: source second clip is grey
+on the left, trial is green on the right. This cropped inspection is not the
+installed geometry or an operating control.
+
+Trial **T06** raises the whole loop .05 mm off its cover seat, without moving
+either rivet. Before this locational allowance, all three endpoint tests pass
+natively but the faceted cover contact is positive by 4.702446138e−6 mm³.
+No Boolean epsilon is used. With the named gap, all three endpoint/fidelity
+tests pass on both kernels (20.72 s faceted, 2.83 s native), recorded in
+`clearing-loop-seat-gap-{faceted,exact}.log`.
+
+The original first clip separately passes native and faceted captive-bearing
+checks at 0°, −45° and −75°: ±.02 mm radial motion is free, ±.2 mm is blocked,
+and its unchanged head blocks .7 mm upward motion. This establishes an
+attached snap-on bearing, **not** a permanently attached hinge. The first
+clip's measured throat is only 6.2 mm across versus the rivet's 7.5 mm bearing
+diameter; rigid straight-out removal is not its assembly mechanism.
+
+T05/T06 remain diagnostic candidates, not adopted operating fits. The
+intervening second-clip passage, retained grip and neighbour sweep must be
+resolved before a deploy/stow input is wired into `OperatingCurta`.
+
+The additional head/bearing retention contract passes: 4/4 total under each
+kernel (`clearing-loop-seat-capture-{faceted,exact}.log`, 2.26/3.27 s).
+Both rivet heads permit .2 mm upward play and block .7 mm; the first bearing
+retains its ±.02 mm free / ±.2 mm blocked radial checks after the .05 mm rise.
+This is axial/radial capture, not proof of a second-clip snap detent.
+
+`tools/clearing_loop_contacts.py --seated` probes −95..15° in one-degree
+steps at the fitted height against both rivets, cover, collar/washer/nut,
+housing and the source crank. Native solids are used where available and
+unchanged source STLs otherwise. The 111-pose sweep has two contact intervals
+inside −90..0°: −89..−78° and −70..−63°, exclusively against the second rivet.
+The largest sampled contact is 3.034345403 mm³ at −84°. At −92° and beyond,
+the collar/washer also obstruct travel. The complete readings are in
+`_build_running/clearing-loop-seated-path.jsonl`.
+
+Importantly, the independent local probe `tools/clearing_loop_passage.py`
+locates those contacts on the **lower, body-side mouth wall**, not the thin
+free upper lip. At −84° the local contact bounds are X29.082..31.063,
+Y21.129..22.189 mm; the second interval reaches the lower mouth corner at
+(23.542395, 17.104551). Thus simply bending the obvious free lip would not
+resolve this particular rigid-path conflict. Do not erase the wall along
+the swept peg path and then claim the original snap retention was preserved.
+Clipping remains open pending a justified compliant/assembly path; the
+operating model and its existing Studio navigation are unchanged by T05/T06.

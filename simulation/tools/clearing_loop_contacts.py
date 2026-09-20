@@ -2,15 +2,20 @@
 
 import json
 import logging
+import argparse
 import manifold3d as manifold
 from simulation.clearing_loop import LoopMountBench
 from simulation.tools.interference import world_solids, rigid_leaves
 from simulation.tools.carry_phase import solid
 
 
-def probe():
+def probe(seated=False):
     logging.disable(logging.INFO)
-    bench = LoopMountBench()
+    if seated:
+        from simulation.clearing_loop_seat import LoopSeatTrial
+        bench = LoopSeatTrial()
+    else:
+        bench = LoopMountBench()
     bench.set_state(deployment=0, release_height=0)
     bench.assemble()
     bench.build_stls()
@@ -28,8 +33,10 @@ def probe():
             raise ValueError(f'Missing mounted neighbour: {path}')
         print(json.dumps({'part': path, 'bounds': paths[path].mesh.bounds.tolist(),
                           'kernel': 'exact' if path in native else 'source STL'}), flush=True)
-    for height in (0, .05, .5, 3, 8):
-        for angle in range(-180, 181, 15):
+    heights = (0,) if seated else (0, .05, .5, 3, 8)
+    angles = range(-95, 16) if seated else range(-180, 181, 15)
+    for height in heights:
+        for angle in angles:
             bench.set_state(deployment=angle, release_height=height)
             moving = world_solids(bench, selected={moving_path})[moving_path]
             mesh = solid(paths[moving_path].mesh)
@@ -52,4 +59,7 @@ def probe():
 
 
 if __name__ == '__main__':
-    probe()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--seated', action='store_true',
+                        help='Probe the bounded second-cavity trial at one-degree intervals')
+    probe(seated=parser.parse_args().seated)

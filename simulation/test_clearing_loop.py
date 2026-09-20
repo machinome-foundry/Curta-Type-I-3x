@@ -9,6 +9,20 @@ from simulation.clearing_loop import LoopMountBench
 class LoopMountTest(TestCase):
     node = LoopMountBench
 
+    def test_first_clip_is_a_captive_bearing_while_attached(self):
+        loop = self.node.loop.clearing_ring
+        peg = self.node.loop.clearing_ring_rivet_1
+        for angle in (0, -45, -75):
+            self.node.set_state(deployment=angle, release_height=0)
+            self.assertNotIntersecting(loop, peg)
+            for direction in ((1, 0, 0), (0, 1, 0)):
+                self.assertFreeWithin(loop, .02, against=peg, along=direction)
+                self.assertBlockedBeyond(loop, .2, against=peg, along=direction)
+            self.assertFreeWithin(loop, .2, against=peg, along=(0, 0, 1))
+            # Source loop local -Z is upward. The unchanged head retains it.
+            self.assertBlockedBeyond(loop, .7, against=peg,
+                                     along=(0, 0, -1), directions='forward')
+
     def test_release_height_moves_only_the_loop_up_in_the_assembly_frame(self):
         self.node.set_state(deployment=0, release_height=0)
         loop = self.node.loop.clearing_ring
