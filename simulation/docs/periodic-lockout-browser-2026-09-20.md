@@ -1,5 +1,48 @@
 # Periodic lockout: integrated producer and browser parity check
 
+The red browser finding below is now corrected. The matching viewer cycle is
+archived and integrated on `main` at `e82b5214e4460e606cb86608f042e7a6fcefa49d`
+(planning `8847234`, ADR-069). The historical refusal is retained as evidence,
+not the current result.
+
+## Viewer correction and integration
+
+The consumer now retains the inside/outside first-contact bracket and uses it
+to identify pushing inputs. It consumes the unchanged producer corpus, with
+23 scenarios / 20 machines / 381 ticks. No public API, schema, version, print
+geometry, stop tolerance or request splitting changes.
+
+Red corpus/contact/coverage checks preceded implementation; an explicit
+old-algorithm mutation still reproduces the fault. The full corrected viewer
+passes **1,402 JavaScript tests**, typecheck and build, plus **192 Python/browser
+tests and 20 subtests**. One initially malformed new time-drive test fixture
+was corrected separately; it is not claimed as a valid red reproduction.
+
+The source-backed browser bench passes both original requests at 125.22°,
+holding the actual shaft at 189.6°. The unchanged default acceptance was rerun
+after integration and passes again on primary main. The isolated worktree was
+removed cleanly and the branch retained; nothing was pushed or published.
+
+The expanded probe's `--measured` mode also tests actual `ResultLocking`
+exports against the seven geometry-certified Python stops: 125.22323837227304,
+485.2280105590762, 845.2050994865567, 1205.2280067446554,
+1565.2280067446554, 120.38810729947272 and 129.82507171577254 degrees.
+All seven pass exact replay, .05-degree relief, idle hold and blocked retry.
+All four legal 1080-degree controls pass, including subtraction height. No
+page errors occur. The first-contact screenshot was inspected; it shows the
+source parts and the successfully stopped 125.2200-degree control readout.
+
+The tested and primary-main rebuilt bundle share SHA-256
+`8acaf5989e5fa99bb5f3314c2080016603893ca8e665569a4d707ff24f8de751`.
+The measured bench document SHA-256 is
+`1fc33714744a0de08cf9dc40431cf921418c080e3870852df888cd9f517cfa20`.
+The periodic document and corpus hashes below are unchanged.
+
+The viewer archive owns its complete implementation evidence at
+`openspec/changes/archive/2026-09-20-periodic-first-contact/`. This removes
+the browser prerequisite. Full operating-root adoption and the remaining
+mechanical/control matrices are still separate project acceptance.
+
 ## Framework integration
 
 The pilot approved integration and continued Curta work on 2026-09-20.
