@@ -39,6 +39,11 @@ The record names the bounded simulation-owned tip and underside fits, their
 source-fidelity tests and the negative-sweep follower correction. Upstream
 CAD and the reversing-shaft detents are unchanged.
 
+The [housing-thread fit](docs/housing-thread-fit-2026-09-20.md) now clears the
+two installed printed covers while retaining their measured axial capture.
+Three scoped clearance/fidelity checks pass under both runners; these STL
+interfaces remain faceted. This does not complete the whole-machine inventory.
+
 Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
 probe on the actual operating export: all 24 controls load, real drags operate
 the selected crank lift and first selector independently, and seated shift
@@ -75,9 +80,10 @@ The September 11 verification and remaining physical interfaces are recorded in 
 [measurements](docs/measurements.md#resumption-after-expression-graphs) and
 [resumption validation matrix](docs/resumption-validation-2026-09-11.md).
 That baseline reran all 37 tested node modules: 142/144 faceted and 143/144 native
-checks pass. Both runners retain the housing-thread overlap; the additional
-faceted bearing contact passes natively. These are recorded findings, not waived
-failures or final whole-machine acceptance.
+checks passed. Both runners then retained the housing-thread overlap; the
+additional faceted bearing contact passed natively. The thread interface has
+since been fitted as linked above. The historical matrix is not final
+whole-machine acceptance.
 
 Work starts from the previous [assessment](assessment.md). The new
 [measurements and validation findings](docs/measurements.md) identify the invalid
@@ -195,7 +201,9 @@ reproducible pose, not a claim that a physical crank can run backward.
   inner ring-seat facing, shallow housing pockets and retained axle flats.
   Seven contracts pass on both runners, and three separate fit mutations fail
   as intended (then are restored). Source-STL interfaces remain faceted. The covers'
-  mutual thread overlap still belongs to the open whole-machine inventory.
+  mutual thread overlap now has the separately verified bounded fitting in
+  `housing_thread.py` and `test_housing_thread.py`; the complete inventory
+  remains open.
   `tools/cover_fit.py` and `tools/cover_neighbors.py` reconstruct the unfitted
   source geometry independently of these adjustments.
 - `tools/expression_size.py`: actual standalone expression sizes on the shared-

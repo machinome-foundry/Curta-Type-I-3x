@@ -1,6 +1,7 @@
 """Measured carriage-cover fits; no upstream print or STEP file is edited.
 
-The covers keep their corrected datum, dial windows and threaded joint. The
+The covers keep their corrected datum and dial windows. Bounded thread/seat
+lapping now clears their source overlap while retaining axial capture. The
 clearing ring, axle bearings and carrier keep their already-tested placements.
 See docs/measurements.md for the rejected axle translations and local contacts.
 """
@@ -22,7 +23,8 @@ AXLE_ANGLES = (*range(0, -181, -20), 160, *range(130, 29, -20))
 def mesh_solid(mesh):
     # Keep source coordinates in double precision until the final STL write.
     body = manifold.Manifold(manifold.Mesh64(
-        np.asarray(mesh.vertices, dtype=np.float64), np.asarray(mesh.faces, dtype=np.uint64)))
+        np.array(mesh.vertices, dtype=np.float64, order='C', copy=True),
+        np.array(mesh.faces, dtype=np.uint64, order='C', copy=True)))
     if body.status() != manifold.Error.NoError:
         raise ValueError(f'Invalid source cover: {body.status()}')
     return body
@@ -48,10 +50,23 @@ class FittedDigitsCover(DigitsCover):
 
 
 class FittedUpperHousing(UpperHousing):
-    """Seventeen shallow axle-end pockets in the inner lower seating flange."""
+    """Seventeen axle-end pockets and a bounded fit of the mating thread/seat."""
     seat_gap = Length(SEAT_GAP, min=0)
+    thread_gap = Length(.05, min=0)
+    thread_radial_gap = Length(.02, min=0)
+    thread_mesh_precision = Length(.000008, min=0)
 
     def adjust(self, mesh):
+        body = self.fitted_body(mesh)
+        if self.thread_gap:
+            # Reset only the generated Boolean's face provenance so coplanar
+            # triangles from different cutters can be collapsed together.
+            # Keeping those artificial seams leaves edges that collapse on a
+            # binary-STL round trip. No source mesh is repaired or welded.
+            body = body.as_original().simplify(self.thread_mesh_precision)
+        return fitted_mesh(body)
+
+    def fitted_body(self, mesh):
         body = mesh_solid(mesh)
         # Axles are R2.945 at world Z33.9, outer ends on R73.574057463.
         # Housing local Z = world Z + 4.35 and its installed clocking is 160°.
@@ -62,7 +77,32 @@ class FittedUpperHousing(UpperHousing):
         pocket = pocket.rotate((0, 0, 180/128)).rotate((0, 90, 0)).translate((71.65, 0, 38.25))
         for angle in AXLE_ANGLES:
             body = body - pocket.rotate((0, 0, angle-160))
-        return fitted_mesh(body)
+        if self.thread_gap:
+            # The source threads interfere at the window-aligned placement.
+            # Lap only this mating thread/seat zone against the unchanged
+            # male print, with an explicit axial assembly allowance. Relative
+            # placement is transcribed from standard.layers.CarriageCovers;
+            # the later common carriage recentering cancels out here.
+            mate = trimesh.load_mesh(DigitsCover.stl_source)
+            mate.apply_transform(trimesh.transformations.rotation_matrix(
+                np.radians(-180), (.168920173, .985629735, 0)))
+            mate.apply_transform(trimesh.transformations.rotation_matrix(
+                np.radians(-160.549916905), (0, 0, 1)))
+            mate.apply_translation((0, 0, 36))
+            male = mesh_solid(mate)
+            # A sampled union or a scaled male leaves slivers at thread-root
+            # edges. Dilate the actual mating surface continuously instead:
+            # +/- .02 mm in X/Y and +/- .05 mm axially, bounded below to the
+            # measured thread/seat zone. Neither printed part is scaled.
+            slab = manifold.Manifold.cube((152, 152, 7)).translate((-76, -76, 35.65))
+            allowance = manifold.Manifold.cube((2*self.thread_radial_gap,
+                2*self.thread_radial_gap, 2*self.thread_gap), center=True)
+            tool = (male ^ slab).minkowski_sum(allowance)
+            outside = manifold.Manifold.cylinder(6.5, 75, circular_segments=720)
+            inside = manifold.Manifold.cylinder(6.5, 71.9, circular_segments=720)
+            zone = (outside - inside).translate((0, 0, 35.9))
+            body = body - (tool ^ zone)
+        return body
 
 
 class FittedDigitsAxle(DigitsAxle):

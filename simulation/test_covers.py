@@ -84,8 +84,9 @@ class CoverClearanceTest(TestCase):
                 self.assertEqual(len(quad), 4)
                 self.assertLess(cKDTree(actual.vertices).query(quad)[0].max(), .00001)
             else:
-                self.assertGreater(removed, 50)
-                self.assertLess(removed, 60)  # Seventeen shallow outer axle seats.
+                # Seventeen axle seats plus the separately bounded thread fit.
+                self.assertGreater(removed, 367)
+                self.assertLess(removed, 368)
             # The boolean can retriangulate coplanar source faces elsewhere.
             # Audit BOTH directions, including face interiors, at STL coordinate
             # precision. This is a surface-fidelity length, never an overlap
@@ -97,8 +98,12 @@ class CoverClearanceTest(TestCase):
                 if node is covers.digits_cover:
                     permitted = (samples[:, 2] >= -12.00001) & (samples[:, 2] <= -11.89999) & (radius < 61.56)
                 else:
-                    permitted = ((radius > 71.9) & (radius < 73.8) &
-                                 (samples[:, 2] > 35.24) & (samples[:, 2] < 36.01))
+                    axle_seats = ((radius > 71.9) & (radius < 73.8) &
+                                  (samples[:, 2] > 35.24) & (samples[:, 2] < 36.01))
+                    thread_seat = ((radius > 71.899) & (radius < 75.00001) &
+                                   (samples[:, 2] > 35.89999) &
+                                   (samples[:, 2] < 42.40001))
+                    permitted = axle_seats | thread_seat
                 protected = samples[~permitted]
                 for start in range(0, len(protected), 128):
                     points = protected[start:start+128]

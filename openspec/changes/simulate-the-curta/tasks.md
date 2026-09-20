@@ -34,6 +34,14 @@ bounded fits and evidence are in
 open for the rest of their stated matrices; this does not certify crank and
 selector mid-cycle restraints, counter reversal or the printed loop.
 
+The housing-thread fitting increment clears the covers at their already
+verified datum and preserves their axial capture. Its generated-STL defect
+was caught by the neighbouring regressions and corrected without repairing
+the source prints. The seven cover contracts pass again under both runners;
+see `simulation/docs/housing-thread-fit-2026-09-20.md`. The rest inventory is
+still open. Separate calibrated loop and reverser-seat investigations retain
+their unresolved findings rather than inventing working endpoints.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

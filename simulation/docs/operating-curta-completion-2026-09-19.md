@@ -183,6 +183,13 @@ a calibrated diagnostic and 125 contact samples; neither an unrestricted hinge
 nor vertical release alone matches the mounted parts. Both operating inputs
 remain outstanding.
 
+The subsequent [housing-thread fit](housing-thread-fit-2026-09-20.md) resolves
+the covers' 224.327505 mm³ interface without changing their installed datum or
+upstream prints. Its three scoped clearance, axial-capture and material-fidelity
+checks pass under both runners (STL contacts remain faceted). Complete-machine
+rest acceptance is separate; the earlier root failure above remains historical
+evidence, not a current claim about this fitted pair.
+
 ## Retained pose binding — prerequisite corrected and integrated
 
 The new `running_motion.py` bench uses the complete operating model and fresh
