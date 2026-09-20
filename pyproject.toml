@@ -5,6 +5,7 @@ model = "operating_curta"
 fast_curta = "simulation.curta:Curta"
 operating_curta = "simulation.running:OperatingCurta"
 clocked_curta = "simulation.clocked:ClockedCurta"
+reverser_inspection = "simulation.reverser_inspection:ReverserInspection"
 
 [tool.machinome-studio]
 profile = "builder"

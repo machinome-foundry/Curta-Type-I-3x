@@ -57,6 +57,13 @@ now includes the printable knob/yoke, ball bore, shaft fastening seats and
 housing window. Counter reversal remains unimplemented pending a justified
 working fit; no reversing-shaft geometry has been changed.
 
+For interactive investigation, select the separate **`reverser_inspection`**
+model. It opens only the drum, one counter pinion, fork and detent reference,
+with four independent inspection sliders and measured-pose buttons. See the
+[short inspection guide](docs/reverser-inspection-2026-09-20.md).
+This is a geometric diagnostic, not working counter reversal or contact physics;
+the operating model and its default selection are unchanged.
+
 Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
 probe on the actual operating export: all 24 controls load, real drags operate
 the selected crank lift and first selector independently, and seated shift

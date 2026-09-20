@@ -56,6 +56,13 @@ record now also checks the actual knob print, ball bore, shaft fastening
 shoulder and housing window. A functional mounting-seat correction is a pilot
 decision, not an adopted workaround for the remaining lower-detent mismatch.
 
+Pilot-guided inspection on 2026-09-20 adds the separate `reverser_inspection`
+model with measured-pose buttons, independent gear/drum rotation and a short
+navigation tree. Its source-equivalence and control checks do not resolve the
+reverser fit or complete tasks 5.1/6.4. See
+`simulation/docs/reverser-inspection-2026-09-20.md`; operating controls, geometry
+and the manifest default remain unchanged.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python
