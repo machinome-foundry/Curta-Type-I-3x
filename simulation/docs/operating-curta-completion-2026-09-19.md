@@ -22,8 +22,12 @@ The [rest inventory](operating-rest-inventory-2026-09-20.md) now records all
 positive pair. The [reverser-seat investigation](reverser-seating-investigation-2026-09-20.md)
 has ruled out the tested unchanged shaft, raised-yoke, ball-bore and
 housing-window alternatives. Development of a functional mounting-seat
-correction requires pilot authority; no shaft geometry is changed. The
-remaining roadmap is not marked complete or archived.
+correction was subsequently authorized by the pilot. The
+[fork/follower continuation](reverser-fork-and-follower-2026-09-20.md) now wires
+that bounded simulation-owned fit into a physical operating lever while
+preserving the original pockets and upstream CAD. Scoped geometry and the
+first retained-operation sequence pass; the remaining roadmap is not marked
+complete or archived.
 
 1. Retained anti-reversal pawl and measured crank backlash.
 2. Counter reversing lever: establish engagement before adopting a stroke.

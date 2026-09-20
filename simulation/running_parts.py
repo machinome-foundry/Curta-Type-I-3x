@@ -19,6 +19,10 @@ from simulation.clearing_seat_fit import FittedClearingPin
 from simulation.carriage_frame_fit import FittedCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
+from simulation.reverser_following import FollowingReverser
+from simulation.reverser_seat_trial import TrialKnob
+from simulation.reverser_inputs import (ReversingOnes, ReversingTens, ReversingHundreds,
+    ReversingFourth, ReversingFifth, ReversingSixth)
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
 
@@ -115,10 +119,20 @@ class IndependentInputs(assemblies.Inputs):
     selectors = IndependentSelectors()
 
 
+class RunningReverser(FollowingReverser):
+    reversing_lever_knob_1 = TrialKnob(
+        lift=Prismatic(axis=(0, 0, 1), range=(-6.9425, 3.9075)))
+
+
+class RunningReversingAssembly(AssemblyNode):
+    reversing_lever_1 = RunningReverser()
+
+
 class RunningMainDrive(MainDrive):
     # Driver ranges only describe the control panel; the moving crank's
     # joint admits the measured addition-to-subtraction stroke in Python too.
     anti_reversal = RetainedAntiReversal()
+    reversing_lever = RunningReversingAssembly()
     crank = CrankAssembly(turn=Revolute(axis=(0, 0, 1), range=(None,
                           Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))),
                           lift=Prismatic(axis=(0, 0, 1), range=(0, 9)))
@@ -189,12 +203,12 @@ class ResultShafts(AssemblyNode):
 
 
 class TurnsShafts(AssemblyNode):
-    ones = channels.TurnsOnes()
-    tens = channels.TurnsTens()
-    hundreds = channels.TurnsHundreds()
-    digit_4 = channels.TurnsDigit4()
-    digit_5 = channels.TurnsDigit5()
-    digit_6 = channels.TurnsDigit6()
+    ones = ReversingOnes()
+    tens = ReversingTens()
+    hundreds = ReversingHundreds()
+    digit_4 = ReversingFourth()
+    digit_5 = ReversingFifth()
+    digit_6 = ReversingSixth()
 
     def simulate(self):
         from simulation.fit import INPUT_CLOCKING

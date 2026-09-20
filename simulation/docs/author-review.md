@@ -16,7 +16,7 @@ No overlap is waived by this index.
 
 | ID | Part/interface and current simulation change | Evidence and implementation |
 |---|---|---|
-| F01 | Input gear outer profile relieved .35 mm; counter input .36 mm; keyed bores and heights retained. | [Measurements F4 and complete drum](measurements.md#f4-drum-to-input-tooth-fit), [fit.py](../fit.py), `test_input_mesh.py`, `test_engagement.py`, `test_prints.py`. |
+| F01 | Input gear outer profile relieved .35 mm; counter ones stack .36 mm. The operating candidate's five higher counters use .42 mm (trial T04); keyed bores and heights retained. | [Measurements F4 and complete drum](measurements.md#f4-drum-to-input-tooth-fit), [full-bank reversal](reverser-fork-and-follower-2026-09-20.md), [fit.py](../fit.py), [reverser_inputs.py](../reverser_inputs.py). |
 | F02 | Input sleeves and spacers reduced to outside R3.85; keyed bores retained. | [fit.py](../fit.py), measurements F4; same input/drum tests. |
 | F03 | Bevel head seated 1.2 mm lower with the newly protruding stem end removed, preserving the original bearing-plane datum. Historical .8 mm isolated trial is not the installed value. | [Frame clearance](measurements.md#bevel-fit-must-also-clear-the-frame), [fit.py](../fit.py), `test_bevel_bank.py`, `test_transmission.py`. |
 | F04 | Carry pinion outer profile relieved .42 mm; locking outline .15 mm with its clipping profile clocked back 4°, not its keyway. | [Carry fits](measurements.md#carry-fits-and-current-engagement-boundary), [fit.py](../fit.py), `test_carry_mesh.py`, `test_carry_bank.py`. |
@@ -31,6 +31,8 @@ No overlap is waived by this index.
 | F13 | Counter/carriage body underside: .95 mm annulus R31.7..34.25, general underside .05 mm facing, existing indexing-pocket ceilings deepened .05 mm within R21.9..34.25. | [Bounded body fit](carriage-interlocks-2026-09-19.md), [carriage_frame_fit.py](../carriage_frame_fit.py), `test_carriage_frame.py`. |
 | F14 | Digits cover inner top land faced .10 mm through R61.55; seventeen axle retaining flats extended .15 mm; upper housing receives seventeen R2.995 axle-end pockets. Windows and axle bearing lengths retained. | [Cover neighbours](measurements.md#cover-neighbours--measured-local-fits-after-resumption), [cover_fits.py](../cover_fits.py), `test_covers.py`. |
 | F15 | Female housing thread/seat locally lapped against the actual male print, with ±.02 mm X/Y and ±.05 mm axial fitting envelope, clipped to R71.9..75 and local Z35.9..42.4. Thread pitch unchanged. | [Thread fit and rejected cutters](housing-thread-fit-2026-09-20.md), [cover_fits.py](../cover_fits.py), `test_housing_thread.py`. |
+| F16 | Reversing actuator's sixth sleeve seat opened at the actual input axis to R3.9 through 4.5 mm; only its existing 1.685 mm tooth slot opened to R6.28. Original axial faces and other five seats retained. Originated as T02. | [Fork measurement and bounded removal](reverser-fork-and-follower-2026-09-20.md#local-fork-relief), [reverser_fits.py](../reverser_fits.py), `test_reverser_seat_trial.py`. |
+| F17 | Reversing-shaft body raised 1.9 mm; mounting shoulder shortened to local Z115.05, neck end119.6, stud end125.6 mm; finished M4 major envelope R2.0. Installed fastening-end height retained. Both pockets and all geometry below local Z110 unchanged. Originated as T01/T03. | [Initial dimensions](reverser-seat-trial-2026-09-20.md), [continued M4 fit](reverser-fork-and-follower-2026-09-20.md#finished-m4-end-not-the-unthreaded-blank), [reverser_seat_trial.py](../reverser_seat_trial.py). Not a release drawing or thread-load certification. |
 
 ## Assembly, source-representation and motion corrections — not new prints
 
@@ -40,24 +42,29 @@ No overlap is waived by this index.
 | A02 | Input clocking +4°, bevel/dial clocking −3°, dial-zero indexing and carry half-pin orientation reconciled with installed contact. Half-pin type-2 mounts have an additional 9° source difference. | [Installed phase](measurements.md#installed-bank-engagement-and-phase-centering), [pin_mounts.py](../pin_mounts.py), measurements clearing/carry sections. |
 | A03 | Author's printable carriage-stop pin used instead of contradictory STEP Boolean representation; installed .51 mm deeper, retaining about 3.846 mm protrusion. | [Operating completion](operating-curta-completion-2026-09-19.md), [carriage_stop.py](../carriage_stop.py). |
 | A04 | Lower enclosure group recentered (.406900356, −.745841949, 0) mm; base and bolts seated .05 mm lower. All lower markers/fittings move with their group. | [Enclosure seats](enclosure-seats-2026-09-20.md). |
-| A05 | Reverser spacers moved to measured frame seats in diagnostic only: upper +3.9075 mm, lower −7.6427 mm. Not adopted as a functional reversal. | [Reverser investigation](reverser-seating-investigation-2026-09-20.md), [reverser_assembly.py](../reverser_assembly.py). |
+| A05 | Reverser spacers moved to measured frame seats: upper +3.9075 mm, lower −7.6427 mm. Now used by the operating candidate. Working knob positions −4.9425/+3.9075 mm; lower housing overtravel stop −6.9425 mm. Pinions sit .0925 mm above knob displacement, centring the source fork play. | [Reverser continuation](reverser-fork-and-follower-2026-09-20.md), [reverser_assembly.py](../reverser_assembly.py). The lower detent is not modeled as a rigid stop. |
 | R01 | Invalid zero-positioning spring replaced by a manual-based analytic wire model: 1.1 mm wire, five turns. | [F1](measurements.md#f1-invalid-zero-positioning-spring). |
 | R02 | Unreliable STEP cover/housing/collar solids use original printable STL representations; three missing clearing strips are imported from the author's prints and formed per the manual. This is distinct from F09/F11/F14/F15. | [F2](measurements.md#f2-unreliable-digits-cover--upper-housing-boolean), [clearing strips](measurements.md#clearing-strips-omitted-from-the-step). |
 | R03 | Pawl, carry, clearing-stop and drum-positioning springs have prescribed flexible motion; native mounts/hooks retained where stated. Spider retains native ring/tips, with seventeen analytic tapered fingers using a bounded inner approximation of the upper cone. Named seat/preload allowances are not force/strain validation. | [Spring measurements](measurements.md#stepped-drum-positioning-leaf-spring-source-and-ownership), [spider](measurements.md#register-balls-and-the-tapered-spider-spring), [retaining_spring.py](../retaining_spring.py), [spider.py](../spider.py). |
 | R04 | Finer frame, sleeve, track and spring tessellation; bounded generated-mesh encoding corrections for cover fits. Native source geometry is unchanged by tessellation. Tiny positive intersections remain failures, not silently rounded away. | [Cover/thread evidence](housing-thread-fit-2026-09-20.md), [enclosure](enclosure-seats-2026-09-20.md), [rest inventory](operating-rest-inventory-2026-09-20.md). |
+| R05 | Reversing ball follows the original pockets, rim and shaft land radially; analytic spring retains source .51 mm wire, R2.295 coil centre, 6½ turns and 11.1 mm free centreline height. A .05 mm named seating gap preserves contacts. Ball remains the source's R2.7, not silently replaced by nominal 5 mm hardware. | [Follower dimensions and independent original-print checks](reverser-fork-and-follower-2026-09-20.md#radial-ball-and-spring-following), [reverser_following.py](../reverser_following.py). Geometric restoring direction only, not force/friction or automatic snap. |
 | M01 | Negative clearing-sweep modulo corrected; retained carriage/clearing restraints use measured contact envelopes and require separate release. These are simulation logic corrections, not physical modifications. | [Restraints and red-first evidence](carriage-interlocks-2026-09-19.md). |
 
-## Current trial and unresolved work
+## Current candidate and unresolved work
 
-- **T01, not adopted:** reversing-shaft mounting-seat profile trial, explicitly
-  authorized by the pilot on 2026-09-20. Raises the unchanged detent-bearing
-  body 1.9 mm while restoring the original installed fastening-end height.
-  See the [trial dimensions and outcomes](reverser-seat-trial-2026-09-20.md).
-  Do not treat it as a release drawing or change detent spacing to make it pass.
-- Counter reversal still needs the complete six-input bank, lever, spring-loaded
-  detent retention, enclosure window, both drum heights and moving-cycle checks.
-  Existing pinion relief F01 is already present in the trial; any result is not
-  validation of completely untouched gears.
+The [fork/follower continuation](reverser-fork-and-follower-2026-09-20.md)
+preserves trial IDs T01–T04 and their rejected variants. The tested candidate
+is now wired into `OperatingCurta` (F01/F16/F17, A05/R05 above). This is scoped
+simulation adoption, not whole-machine or fabrication acceptance.
+
+- Counter reversal now passes the six-input working-position bank on both
+  kernels, spring/follower and housing-overtravel checks, and the first
+  four-turn retained-arithmetic scenario. Partial lever engagement is derived
+  from the actual source tooth bands, including one-tooth engagement on higher
+  channels when unseated. Installed-world motion passes both kernels, and
+  ordinary hosted down/up gestures pass. The full shifted-operation matrix,
+  standalone/full pointer matrix and mid-cycle restraints are tracked in the continuation.
+  These results include F01 tooth relief; they do not certify untouched gears.
 - The [operating rest inventory](operating-rest-inventory-2026-09-20.md) records
   390 rigid occurrences with 268 positive faceted pairs / 166 native-or-STL
   pairs at its dated checkpoint. These counts are not independent defects.

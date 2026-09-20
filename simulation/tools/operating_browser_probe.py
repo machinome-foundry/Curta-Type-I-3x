@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--screenshot', type=Path,
                         default=Path('_build_running/operating-browser-prerequisite.png'))
     parser.add_argument('--interlocks', action='store_true')
+    parser.add_argument('--reverser', action='store_true')
     args = parser.parse_args()
     build = args.build.resolve()
     document = json.loads((build / 'viewer.json').read_text())
@@ -164,6 +165,40 @@ def main():
                             "Math.abs(curta.run().state()['carriage.registers.carrier.upper_carriage_body_1.clearing_pin.slide'] - 3.09) < .00001")
                         page.wait_for_function(condition)
                         report[report_key]['state'] = page.evaluate('() => curta.run().state()')
+                if args.reverser:
+                    page.evaluate('''async () => {
+                        await curta.run().reset();
+                        curta.setView({camera: [100, 220, -15], target: [10, 35, -35]});
+                        await new Promise(requestAnimationFrame);
+                        await new Promise(requestAnimationFrame);
+                    }''')
+                    report['reverser_drags'] = []
+                    for direction in (1, -1):
+                        before = page.evaluate('() => curta.run().state().reverser_height')
+                        control = page.evaluate('''() => curta.controls().find(
+                            control => control.name === 'reverse counter')''')
+                        assert control and control['point'], 'No visible reversing knob control'
+                        point = control['point']
+                        page.mouse.move(point['x'], point['y'])
+                        page.evaluate('''async () => {
+                            await new Promise(requestAnimationFrame);
+                            await new Promise(requestAnimationFrame);
+                        }''')
+                        control = page.evaluate('''() => curta.controls().find(
+                            control => control.name === 'reverse counter')''')
+                        point = control['gesturePoint']
+                        assert point is not None, 'No reachable reversing-knob gesture target'
+                        page.mouse.move(point['x'], point['y'])
+                        page.mouse.down()
+                        page.mouse.move(point['x'], point['y']+direction*80, steps=16)
+                        page.mouse.up()
+                        page.wait_for_function('''([before, direction]) =>
+                            (before-curta.run().state().reverser_height)*direction > .2''',
+                            arg=[before, direction])
+                        state = page.evaluate('() => curta.run().state()')
+                        report['reverser_drags'].append({'direction': direction, 'state': state})
+                        page.screenshot(path=str(args.screenshot.with_name(
+                            args.screenshot.stem+('-reverser-down' if direction == 1 else '-reverser-up')+'.png')))
             page.screenshot(path=str(args.screenshot))
         except Exception as error:
             report['probe_error'] = f'{type(error).__name__}: {error}'
@@ -197,6 +232,22 @@ def main():
         assert abs(cleared['carriage.registers.carrier.upper_carriage_body_1.clearing_pin.slide']
                    - 3.09) < .00001, cleared
         assert cleared['carriage_elevation'] == cleared['carriage.registers.lift'] == 0, cleared
+    if args.reverser:
+        for attempt in report['reverser_drags']:
+            state = attempt['state']
+            height = state['reverser_height']
+            prefix = 'main_drive.reversing_lever.reversing_lever_1.'
+            assert -6.942501 <= height <= 3.907501, attempt
+            assert abs(state[prefix+'reversing_lever_knob_1.lift']-height) < .00001, attempt
+            assert abs(state[prefix+'p_5mm_ball.lift']-height) < .00001, attempt
+            # Run banks publish retained coordinates, not computed Port values.
+            for name, member in (
+                    ('ones', 'p_10218_1'), ('tens', 'p_10230_410008_1_419080'),
+                    ('hundreds', 'p_10230_410008_1_419068'), ('digit_4', 'p_10230_410008_1_419182'),
+                    ('digit_5', 'p_10230_410008_1_419105'), ('digit_6', 'p_10230_410008_1_419237')):
+                assert abs(state[f'transmission.turns.{name}.{member}.travel']+height+.0925) < .00001, attempt
+            assert state['crank_rotation'] == state['carriage_elevation'] == 0, attempt
+            assert all(state[f'digit_{i}'] == 0 for i in range(1, 9)), attempt
 
 
 if __name__ == '__main__':

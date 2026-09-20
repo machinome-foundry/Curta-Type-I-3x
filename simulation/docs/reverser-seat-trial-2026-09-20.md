@@ -1,5 +1,11 @@
 # Reversing-shaft mounting-seat trial
 
+This records the initial candidate at `fe02911`. The
+[fork/follower continuation](reverser-fork-and-follower-2026-09-20.md) records
+the revised fastening end, local fork fit, differentiated counter profiles
+and radial spring-loaded follower. Initial failures below remain historical
+evidence, not the current trial's complete status.
+
 Pilot authorization, 2026-09-20: test the mounting-seat modification in the
 simulation and document all proposed fixes for review with the author.
 **Experimental, not adopted in OperatingCurta.** Upstream CAD, both detent

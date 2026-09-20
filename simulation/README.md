@@ -54,10 +54,17 @@ The [operating rest inventory](docs/operating-rest-inventory-2026-09-20.md)
 records the remaining positive contacts without exclusions. The
 [reverser seating investigation](docs/reverser-seating-investigation-2026-09-20.md)
 now includes the printable knob/yoke, ball bore, shaft fastening seats and
-housing window. Counter reversal remains unimplemented pending a justified
-working fit; the operating reversing shaft remains unchanged. A separate,
-pilot-authorized [mounting-seat trial](docs/reverser-seat-trial-2026-09-20.md)
-tests a bounded profile change without editing upstream CAD. The
+housing window. The pilot-authorized [mounting-seat trial](docs/reverser-seat-trial-2026-09-20.md)
+now has a [tested fork/follower continuation](docs/reverser-fork-and-follower-2026-09-20.md)
+connected to the operating model's **reverse counter** slide (`reverser_height`).
+Its working heights are **+3.9075 mm** (normal, default) and **−4.9425 mm**
+(reversed). Move it with the crank parked. The model also permits partial
+positions and overtravel to the lower housing stop at −6.9425 mm: those positions
+can engage different tooth rows and are not automatically snapped to a mode.
+The unchanged detent-bearing shaft body is mounted 1.9 mm higher with a bounded
+shortened fastening profile; upstream CAD is untouched. Scoped bank, follower,
+housing and retained-history tests pass. Complete shifted-operation, installed
+pointer and mid-cycle-restraint acceptance are recorded separately. The
 [author-review register](docs/author-review.md) consolidates existing simulation
 fits, assembly corrections, rejected hypotheses and unresolved findings.
 
@@ -66,7 +73,7 @@ model. It opens only the drum, one counter pinion, fork and detent reference,
 with four independent inspection sliders and measured-pose buttons. See the
 [short inspection guide](docs/reverser-inspection-2026-09-20.md).
 This is a geometric diagnostic, not working counter reversal or contact physics;
-the operating model and its default selection are unchanged.
+this historical diagnostic and the default model selection are unchanged.
 
 Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
 probe on the actual operating export: all 24 controls load, real drags operate
@@ -87,7 +94,7 @@ records the initial running implementation and its then-open prerequisites. The
 independent marker inputs and measured neighbour stops. Its ratchet failures
 have since been corrected and verified across all 117 teeth for two revolutions;
 the marker-track tessellation discrepancy is now corrected by finer housing
-meshing, without changing its native solid or marker seating. Counter reversal, interlocks,
+meshing, without changing its native solid or marker seating. Counter-reversal acceptance, interlocks,
 clearing-loop deployment and final whole-machine acceptance are still incomplete. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.

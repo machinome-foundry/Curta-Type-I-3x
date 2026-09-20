@@ -11,6 +11,7 @@ from simulation.cycle import (tooth_passage, RESULT_INPUT_END, TURNS_INPUT_END,
 from simulation.carry_profiles import PIN_DROP, RESET_LIFT
 from simulation.running_parts import RESULT_DIALS, TURNS_DIALS
 from simulation.fit import INPUT_CLOCKING
+from simulation.reverser_modes import counter_count
 
 
 def phase(angle):
@@ -28,10 +29,12 @@ def shaft_motion(channel, counter=False, lever_rest=0):
             # Source crank clockwise is negative about +Z. Complementary drum
             # rows reach the input gears after the measured 9 mm lift.
             angle = phase(-crank)
-            subtract = elevation >= 4.5
-            entered = ((1 if channel == 0 else 0) if counter
-                       else setting / 36 if channel < 8 else 0)
-            count = entered * (1 - subtract) + (9 - entered + int(channel == 0)) * subtract
+            if counter:
+                count = counter_count(channel, setting+.0925, elevation)
+            else:
+                subtract = elevation >= 4.5
+                entered = setting / 36 if channel < 8 else 0
+                count = entered * (1 - subtract) + (9 - entered + int(channel == 0)) * subtract
             direct = tooth_passage(angle, count,
                                    (TURNS_INPUT_END if counter else RESULT_INPUT_END) + 20 * channel)
             carried = (tooth_passage(angle, 1,

@@ -11,6 +11,7 @@ from machinome.node import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.simulation import Driver
+from machinome.parameters import Flag
 from simulation.standard.assembly import ReversingLever1
 from simulation.standard.parts import (MainBody, BearingPlate, Part5mmBall,
                                        SelectorKnobSpring)
@@ -43,9 +44,13 @@ class MovingReverser(ReversingLever1):
 
 def counter_passage(index):
     def factory(sources, target):
-        def angle(crank, subtract, reversed_counter):
+        mapped = sources is not None and sources[0].contact_mapped
+        def angle(crank, subtract, reversed_counter, gear_height=4.5):
             complement = subtract + reversed_counter - 2 * subtract * reversed_counter
             count = (1 - complement) * (index == 0) + 9 * complement
+            if mapped:
+                from simulation.reverser_modes import counter_count
+                count = counter_count(index, gear_height, 9*subtract)
             return (130 + INPUT_CLOCKING - 20 * index +
                     72 * tooth_passage(crank, count, TURNS_INPUT_END + 20 * index))
         return angle
@@ -53,6 +58,7 @@ def counter_passage(index):
 
 
 class ReverserAssemblyBench(AssemblyNode):
+    contact_mapped = Flag(False)
     knob_height = Driver(default=0, unit='mm')
     gear_height = Driver(default=4.5, unit='mm')
     crank_angle = Driver(default=0, unit='deg')
@@ -76,7 +82,7 @@ class ReverserAssemblyBench(AssemblyNode):
     for _index, _channel in enumerate((ones, tens, hundreds, digit_4, digit_5, digit_6)):
         gear_height.drives(_channel.setting, ratio=-1 / 6)
         gear_height.drives(_channel.carry, ratio=0)
-        (crank_angle & subtract & reversed_counter).drives(
+        (crank_angle & subtract & reversed_counter & gear_height).drives(
             _channel.turn, law=counter_passage(_index))
     del _index, _channel
 

@@ -3,7 +3,8 @@
 import cadquery as cq
 from machinome.test import TestCase
 from simulation.reverser_seat_trial import ReverserSeatTrial
-from simulation.standard.parts import ReversingShaft
+from simulation.standard.parts import ReversingShaft, ReversingActuator
+from simulation.reverser_fits import SIXTH_LOCAL
 from simulation.test_reverser_assembly import INPUTS
 
 
@@ -95,3 +96,84 @@ class ReverserSeatTrialTest(TestCase):
 
     def test_upper_knob_clears_frame_stops(self):
         self.check_knob(3.9075)
+
+    def test_fork_fit_is_local_and_one_body(self):
+        source = ReversingActuator().shape()
+        fitted = self.node.lever.reversing_lever_knob_1.reversing_actuator.shape()
+        allowed = cq.Solid.makeCylinder(3.9, 4.5, cq.Vector(*SIXTH_LOCAL, -2.25))
+        allowed = allowed.fuse(cq.Solid.makeCylinder(6.28, 1.685,
+                                                    cq.Vector(*SIXTH_LOCAL, -.8425)))
+        self.assertTrue(fitted.isValid())
+        self.assertEqual(len(fitted.Solids()), 1)
+        self.assertAlmostEqual(fitted.cut(source).Volume(), 0, delta=1e-8)
+        removed = source.cut(fitted)
+        self.assertGreater(removed.Volume(), 0)
+        self.assertAlmostEqual(removed.cut(allowed).Volume(), 0, delta=1e-8)
+
+    def test_fork_clears_and_captures_all_six_through_rotation(self):
+        fork = self.node.lever.reversing_lever_knob_1.reversing_actuator
+        for height, gear_height in ((-4.9425, -4.85), (3.9075, 4)):
+            for crank in range(0, 361, 15):
+                self.node.set_state(knob_height=height, gear_height=gear_height,
+                                    crank_angle=crank, subtract=0, reversed_counter=1)
+                for name, member in INPUTS:
+                    gear = getattr(getattr(self.node, name), member)
+                    try:
+                        self.assertNotIntersecting(gear, fork)
+                        self.assertBlockedBeyond(gear, .3, against=fork, along=(0, 0, 1))
+                    except AssertionError as error:
+                        raise AssertionError(f'knob {height}, crank {crank}, {name}: {error}') from error
+
+    def test_complete_counter_bank_crank_sweep_in_both_lever_and_drum_positions(self):
+        for lower in (False, True):
+            for subtract in (0, 1):
+                self.node.set_state(knob_height=-4.9425 if lower else 3.9075,
+                                    gear_height=-4.85 if lower else 4,
+                                    reversed_counter=int(lower), subtract=subtract)
+                for angle in range(0, 361, 3):
+                    self.node.set_state(crank_angle=angle)
+                    for name, member in INPUTS:
+                        gear = getattr(getattr(self.node, name), member)
+                        for drum in (self.node.drum.main_axle_step_drum_top_1,
+                                     self.node.drum.main_axle_step_drum_bottom_1):
+                            try:
+                                self.assertNotIntersecting(gear, drum)
+                            except AssertionError as error:
+                                contacts = []
+                                for ingredient in gear.children:
+                                    try:
+                                        self.assertNotIntersecting(ingredient, drum)
+                                    except AssertionError as detail:
+                                        contacts.append(str(detail))
+                                raise AssertionError(
+                                    f'lower={lower}, subtract={subtract}, crank={angle}, {name}: {error}; '
+                                    f'ingredients: {contacts}') from error
+
+    def test_every_active_counter_channel_is_driven_in_all_four_modes(self):
+        drum = self.node.drum.main_axle_step_drum_top_1
+        for lower in (False, True):
+            for subtract in (0, 1):
+                complement = bool(lower) != bool(subtract)
+                self.node.set_state(knob_height=-4.9425 if lower else 3.9075,
+                                    gear_height=-4.85 if lower else 4,
+                                    reversed_counter=int(lower), subtract=subtract)
+                for index, (name, member) in enumerate(INPUTS):
+                    count = 9 if complement else int(index == 0)
+                    if not count:
+                        continue  # No driving tooth is expected; full sweep still tests clearance.
+                    gear = getattr(getattr(self.node, name), member)
+                    teeth = [child for child in gear.children if child.name.startswith('transmission_gear_0_5')]
+                    for passage in ((0, 4, 8) if count == 9 else (0,)):
+                        angle = 176 + 20*index - 11.25*count + 6.5 + 11.25*passage
+                        self.node.set_state(crank_angle=angle)
+                        engaged = []
+                        for tooth in teeth:
+                            self.assertNotIntersecting(tooth, drum)
+                            self.assertFreeWithin(tooth, .1, against=drum)
+                            try:
+                                self.assertBlockedBeyond(tooth, 12, against=drum,
+                                                         axis=(0, 0, -1), directions='forward')
+                                engaged.append(tooth.name)
+                            except AssertionError:
+                                pass
+                        self.assertTrue(engaged, f'lower={lower}, subtract={subtract}, {name}, crank={angle}')

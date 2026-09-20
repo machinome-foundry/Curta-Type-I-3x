@@ -242,6 +242,30 @@ The source prints themselves remain untouched. Their mutual thread overlap and
 other frame-guide findings still prevent whole-machine acceptance. Measurements
 record the rejected axle translations and the explicit mesh-fidelity limits.
 
+### Reverser trial continuation — 2026-09-20
+
+The pilot authorized testing the shaft mounting-seat correction and asked for
+all fits to be documented for author review. The detent-bearing body rises
+1.9 mm while the shortened fastening end retains its installed height. Its
+two original pockets remain unchanged. The continued trial also fits only
+the sixth fork seat/slot, represents the manual's M4 die-cut end, and applies
+differentiated counter tooth relief: .36 mm on the ones stack, .42 mm on the
+five higher inputs. A source-sized radial ball and analytic spring now follow
+the original cones/rim; the upper flank biases the spring-loaded ball toward
+the measured upper stop. These are prescribed geometry and restoring-direction
+checks, not force/friction certification. The operating candidate now binds
+the actual knob to all six gear heights, maintaining .0925 mm mid-play offset.
+Counter tooth passage derives from positive overlap with the seven adjacent
+source drum bands, including one-tooth engagement on higher channels at partial
+lever positions. It does not snap to a binary mode. Lower working detent
+−4.9425 mm is distinct from the lower housing stop −6.9425 mm; the upper spacer
+stop is +3.9075 mm. Scoped native/faceted bank, follower, transition and first
+retained-history checks pass; complete shifted-operation, pointer and mid-cycle
+restraint acceptance remain explicit.
+See `simulation/docs/reverser-fork-and-follower-2026-09-20.md` and the
+consolidated `simulation/docs/author-review.md`. Trials, rejected alternatives,
+remaining checks and source invariants stay explicit; no upstream CAD changes.
+
 ## Findings for the framework
 
 - Exact printed groups can contain enclosed voids represented by disconnected

@@ -1,7 +1,7 @@
 """Direct-operation migration on the source-backed Curta parts.
 
 The manifest selects this root. Selection is not acceptance: the outstanding
-interlock, reverser, clearing-loop and whole-machine geometry contracts remain
+interlock, reverser wrong-order, clearing-loop and whole-machine geometry contracts remain
 recorded in the project-owned operating completion record.
 """
 
@@ -57,6 +57,7 @@ class OperatingCurta(LayeredSource):
     digit_8 = Driver(default=0, range=(0, 9), unit='digit')
     crank_rotation = Driver(default=0, unit='deg')
     crank_elevation = Driver(default=0, range=(0, 9), unit='mm')
+    reverser_height = Driver(default=3.9075, range=(-6.9425, 3.9075), unit='mm')
     carriage_rotation = Driver(default=0, range=(0, 100), unit='deg')
     carriage_elevation = Driver(default=0, range=(0, 6), unit='mm')
     clearing_rotation = Driver(default=0, unit='deg')
@@ -87,6 +88,10 @@ class OperatingCurta(LayeredSource):
                                  coordinate=main_drive.crank.turn),
         'lift crank': Slide(main_drive.crank.crank_handle_1, crank_elevation,
                             coordinate=main_drive.crank.lift),
+        'reverse counter': Slide(
+            main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.reversing_lever_knob,
+            reverser_height,
+            coordinate=main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift),
         'shift carriage': Turn(carriage.registers.covers.upper_housing, carriage_rotation,
                                coordinate=carriage.registers.turn),
         'lift carriage': Slide(carriage.registers.covers.upper_housing, carriage_elevation,
@@ -98,6 +103,7 @@ class OperatingCurta(LayeredSource):
 
     crank_rotation.drives(main_drive.turn, ratio=-1)
     crank_elevation.drives(main_drive.subtract, ratio=1 / 9)
+    reverser_height.drives(main_drive.reversing_lever.reversing_lever_1.displacement)
     crank_rotation.drives(carry_mechanism.tens_bell.turn, ratio=-1)
     crank_elevation.drives(carry_mechanism.tens_bell.subtract, ratio=1 / 9)
     carriage_rotation.drives(carriage.registers.turn)
@@ -142,12 +148,17 @@ class OperatingCurta(LayeredSource):
             _setting = (getattr(input_selectors.selectors,
                                f'digit_selector_axle_{_index + 1}').selector_shaft_bottom.turn
                         if not _counter and _index < 8 else crank_elevation)
+            if _counter:
+                _setting = main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift
             # Inactive higher input channels have a constant zero setting.
             if not _counter and _index < 8:
                 _setting.drives(_shaft.setting, ratio=1 / 36)
+            elif _counter:
+                # Centre the source .185 mm fork play. Setting is the keyed
+                # input's six-mm downward travel, not a binary mode flag.
+                _setting.drives(_shaft.setting, ratio=-1/6, offset=-.0925/6)
             else:
-                crank_elevation.drives(_shaft.setting, ratio=0,
-                                       offset=-.75 if _counter else 0)
+                crank_elevation.drives(_shaft.setting, ratio=0)
             if _index:
                 _lever_ends[_index - 1].drives(_shaft.carry, ratio=1 / 4.2,
                                               offset=-_rests[_index - 1] / 4.2)

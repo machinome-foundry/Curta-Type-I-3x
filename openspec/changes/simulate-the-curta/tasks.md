@@ -72,6 +72,19 @@ retention unresolved. See `simulation/docs/reverser-seat-trial-2026-09-20.md`
 and the consolidated `simulation/docs/author-review.md`. No operating geometry,
 upstream CAD, task checkbox or acceptance requirement is changed by this trial.
 
+The subsequent fork/follower continuation fits the sixth fork seat, represents
+the manual's finished M4 end, and differentiates the five higher counter tooth
+profiles from the ones stack. Both original shaft pockets remain unchanged.
+The six-input working bank passes 15/15 under each kernel; the source-sized
+radial follower and housing overtravel pass independently. `OperatingCurta` now
+has a physical `reverser_height` input, all six gears follow the actual knob,
+and engagement reads source tooth-row overlap rather than a midpoint mode.
+The first four-turn retained-operation sequence, physical overtravel and replay
+tests pass. The shifted-operation matrix and installed motion/pointer checks
+are recorded in `simulation/docs/reverser-fork-and-follower-2026-09-20.md` as
+they complete. Task 6.4 still includes clearing-loop deployment, and the
+remaining action-order and whole-machine obligations are not waived.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python
