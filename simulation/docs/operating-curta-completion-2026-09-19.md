@@ -12,6 +12,11 @@ does not certify the outstanding mechanics.
 
 ## Order of work
 
+Latest enclosure increment: [source datum and seats](enclosure-seats-2026-09-20.md).
+The lower shell, markers and hardware are recentered together, with a named
+base seating clearance. Scoped native/faceted checks pass; the full-machine
+inventory and remaining operating controls are still open.
+
 1. Retained anti-reversal pawl and measured crank backlash.
 2. Counter reversing lever: establish engagement before adopting a stroke.
 3. Measured crank, selector, carriage and clearing restraints.

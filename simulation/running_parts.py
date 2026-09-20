@@ -18,7 +18,7 @@ from simulation.print_parts import CounterBodyStopPin
 from simulation.clearing_seat_fit import FittedClearingPin
 from simulation.carriage_frame_fit import FittedCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
-from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers
+from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
 
@@ -83,6 +83,20 @@ class RunningClearingAssembly(ClearingAssembly):
 
 class RunningEnclosure(assemblies.Enclosure):
     decimal_markers = LowerMovableMarkers()
+
+    def render(self):
+        super().render()
+        # Native circular datums put the source lower shell .8496 mm off the
+        # sleeve/main shaft. Carry its marker track and fitted hardware with it.
+        recenter = tuple(-value for value in LOWER_CENTER)
+        for name in ('lower_housing_1', 'decimal_markers', 'base_plate',
+                     'm4x10_419010_6', 'm5x30_countersunk_1', 'm5x30_countersunk_2'):
+            getattr(self, name).translate(recenter)
+        # A named .05 mm locational seat, not an overlap tolerance. The source
+        # is exactly flush natively but its encoded faces slightly interpenetrate.
+        # The two countersunk heads stay seated in the unchanged plate.
+        for name in ('base_plate', 'm5x30_countersunk_1', 'm5x30_countersunk_2'):
+            getattr(self, name).translate((0, 0, -.05))
 
 
 class RetainedCarriage(RegisterCarriage):

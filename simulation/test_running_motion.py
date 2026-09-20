@@ -53,7 +53,6 @@ class RunningMotionTest(TestCase):
             sim.reset()
 
     def test_all_markers_move_independently_and_upper_bank_follows_its_track(self):
-        from simulation.decimal_markers import LOWER_CENTER
         from simulation.running import register_reading
 
         sim = Sim(self.node, dt=.1, meshes=True)
@@ -75,7 +74,9 @@ class RunningMotionTest(TestCase):
                             'carriage.registers.clearing_ring.decimal_markers')
                     self.assertAlmostEqual(sim.state[f'{bank}.decimal_marker_{index}.turn'], angle)
                     self.assertAlmostEqual(marker.turn.value, angle)
-                    center = np.asarray(LOWER_CENTER if index < 6 else (0, 0, 0))
+                    # Both installed tracks now share the native main-shaft axis;
+                    # the lower marker joints keep their source-local datum.
+                    center = np.asarray((0, 0, 0))
                     for piece, points in zip(group, original):
                         expected = (points - center) @ rotation(angle).T + center
                         np.testing.assert_allclose(piece.mesh.vertices, expected,

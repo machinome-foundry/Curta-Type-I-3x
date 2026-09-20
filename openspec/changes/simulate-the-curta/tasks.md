@@ -42,6 +42,12 @@ see `simulation/docs/housing-thread-fit-2026-09-20.md`. The rest inventory is
 still open. Separate calibrated loop and reverser-seat investigations retain
 their unresolved findings rather than inventing working endpoints.
 
+The next enclosure increment recenters the source lower group on the sleeve's
+native circular datum, carries its five markers and lower fittings, and names
+a .05 mm base seat. Five scoped geometry/fidelity contracts pass both runners;
+see `simulation/docs/enclosure-seats-2026-09-20.md`. This does not close the
+whole-machine rest inventory or the final control matrix.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

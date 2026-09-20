@@ -44,6 +44,12 @@ two installed printed covers while retaining their measured axial capture.
 Three scoped clearance/fidelity checks pass under both runners; these STL
 interfaces remain faceted. This does not complete the whole-machine inventory.
 
+The [lower enclosure seat](docs/enclosure-seats-2026-09-20.md) now shares the
+main-shaft axis. The correction carries its marker track and lower fittings
+together; a separate .05 mm base seating clearance and finer sleeve
+tessellation leave the native solids unchanged. The scoped seat and placement
+checks pass on both runners.
+
 Framework `6954e7c` and viewer `038f74d` (API 22) pass the current hosted-browser
 probe on the actual operating export: all 24 controls load, real drags operate
 the selected crank lift and first selector independently, and seated shift

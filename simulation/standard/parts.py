@@ -70,6 +70,10 @@ class TensSliderForResults(SourcePart):
 class UpperOuterSleeve(SleeveBranding, SourcePart):
     color = STEEL
     part = 'upper outer sleeve'
+    # Coarse concave chords cross the concentric bottom housing despite the
+    # native .4 mm radial gap. Keep the source solid; resolve its curved wall.
+    linear_deflection = .01
+    angular_deflection = .1
 
 class CarriageSpring(SourcePart):
     color = STEEL
