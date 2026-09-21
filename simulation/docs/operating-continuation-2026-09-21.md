@@ -427,3 +427,18 @@ At the pilot's request, viewer-owned OpenSpec change
 design, behavioral delta, tasks and pinned Curta mount evidence. Strict
 OpenSpec validation passes. This is planning only: no viewer implementation
 or framework mutation is authorized by that preparation request.
+
+## Independent collar/rest-contact continuation
+
+While viewer implementation awaits approval, task 1.3's collar contact was
+measured against every other current rigid occurrence at nine diagnostic
+heights. The unchanged operating model's 213-coordinate bank is preserved.
+A .7 mm rise clears the spider mount but worsens thrust-ring interference
+and retains nut/pin contacts; none of the tested rises clears all neighbours.
+Full-stack and local-source sections were inspected, along with manual pages
+44 and 48. The STEP and print sections agree visually at the suspect seats;
+the STEP mesh remains non-watertight and is not used as contact evidence.
+The [reproducible survey](collar-seating-investigation-2026-09-21.md) records
+the rejected placement change and the source-fidelity/retention checks owed
+by any subsequent local fit. No geometry, operating law, dependency or task
+checkbox changed; this is not a replacement whole-machine inventory.

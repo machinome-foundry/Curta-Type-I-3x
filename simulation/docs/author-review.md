@@ -155,6 +155,9 @@ simulation adoption, not whole-machine or fabrication acceptance.
   and thrust ring/collar; bottom housing/main body, threaded fasteners and
   internal ball/spring seats also remain. The committed pair lists preserve
   exact targets and quantities. No later full inventory is claimed here.
+  The subsequent [collar-only height survey](collar-seating-investigation-2026-09-21.md)
+  rejects all nine tested rises as complete fixes: clearing the spider worsens
+  the thrust-ring fit and leaves other contacts. No new fit is adopted.
 - [Clearing-loop clip/release](clearing-loop-investigation-2026-09-19.md)
   remains unresolved. A forced permanent hinge or straight upward release is
   not justified by the manual's clipping action.

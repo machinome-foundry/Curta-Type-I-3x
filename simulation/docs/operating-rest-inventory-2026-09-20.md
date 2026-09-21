@@ -43,3 +43,10 @@ At completion, the shared workspace dependency heads were framework
 Their version labels are not substituted for the earlier explicitly tested
 browser pair. This inventory uses no browser. No framework or viewer changes
 were made for this inventory.
+
+On 2026-09-21, a [collar seating survey](collar-seating-investigation-2026-09-21.md)
+checked collar-only translations against every other current rigid occurrence.
+Raising it .7 mm clears the spider mount but increases thrust-ring overlap and
+leaves nut/pin contacts. No tested height clears all neighbours; no placement
+or fitting change was adopted. This scoped survey does not replace the dated
+whole-machine inventories above.

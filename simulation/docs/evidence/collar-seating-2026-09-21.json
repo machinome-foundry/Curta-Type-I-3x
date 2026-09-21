@@ -1,0 +1,267 @@
+{
+  "date": "2026-09-21",
+  "project_content_commit": "07dc3f3f953d77de481550362627dc6bf947cd2a",
+  "framework_content_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "scope": "Unchanged initial OperatingCurta: measuring-copy collar translations only",
+  "status": "All nine sampled height-only corrections rejected; no fit adopted",
+  "sha256": {
+    "simulation/tools/collar_seating.py": "e08bbf301a1aace693a930ac425ed94b3c8d656f06cd46c6c02d28188ffc0a0a",
+    "_build_checks/collar-rise-neighbour-diagnostic.log": "70c4f884c08850cb64a1baca52e3c179f94743461c07ad80ef29f910daecac5c",
+    "_build_checks/collar-seating-repro.log": "513dbe5b7a67786a2eeacc0e5ce1f4927ce79ab7fe7452d1776b56676f9d84df",
+    "_build_checks/collar-seating.png": "385faebd400555a885a1810bfc3670d55b25eb6984229e81ce2eee5b240428c7",
+    "_build_checks/collar-source-sections.log": "b7aaec21d4c0e79ccf4ce3b90833d43f7fd3b4aac41b8f5dd15de4120cc5c7be",
+    "_build_checks/collar-source-sections.png": "233e780d890a22e906d85ccc54dc70c4b99e629c4250f4ab15d4a44e8c9f9870",
+    "Manual/Curta Build Manual.pdf": "af2a7e512063ec485ae992bbf490f5f1e14aac5dc35277183603ff725fb2ab7c",
+    "CAD/Curta Assembly.step": "943ec7545d9cbcbe69266f0e8b1b65e912f80fa46cad0c974dea164bdcbbbee3",
+    "_build_checks/collar-seating-final.log": "513dbe5b7a67786a2eeacc0e5ce1f4927ce79ab7fe7452d1776b56676f9d84df",
+    "_build_checks/collar-seating-final.png": "385faebd400555a885a1810bfc3670d55b25eb6984229e81ce2eee5b240428c7",
+    "_build_checks/collar-source-sections-final.log": "b7aaec21d4c0e79ccf4ce3b90833d43f7fd3b4aac41b8f5dd15de4120cc5c7be",
+    "_build_checks/collar-source-sections-final.png": "b752de5e81937667a75d501b354d90b9e1741d98b185d81339cbc79686e4912c"
+  },
+  "assembly_probe": [
+    {
+      "scope": "pose-only collar translation against every other rigid occurrence",
+      "model": "simulation.running:OperatingCurta",
+      "coordinates": 213,
+      "rigid_occurrences": 389,
+      "kernel": "source-STL/published-mesh Manifold",
+      "not_adopted": true,
+      "collar_source_sha256": "fd70390be6142f1b86f219d89b1d3109db72d587dde6b17e90fe820477c4c8cd",
+      "section_parts_world_bounds_mm": {
+        "collar": [
+          [
+            -28.49776279974528,
+            -28.49776279974528,
+            7.799999999990281
+          ],
+          [
+            28.49776279974528,
+            28.49776279974528,
+            66.3
+          ]
+        ],
+        "thrust ring": [
+          [
+            -16.265701916171125,
+            -16.34697359580492,
+            25.5225
+          ],
+          [
+            16.265701916171125,
+            16.34697359580492,
+            27.0225
+          ]
+        ],
+        "spider mount": [
+          [
+            -25.000000000000007,
+            -25.010902404785156,
+            45.04999999701977
+          ],
+          [
+            25.000000000000007,
+            25.0,
+            47.47000002861023
+          ]
+        ],
+        "nut": [
+          [
+            -20.996113148666872,
+            -20.971467023872574,
+            12.299999999999688
+          ],
+          [
+            20.996113148666872,
+            20.971467023872574,
+            24.3
+          ]
+        ],
+        "washer": [
+          [
+            -28.38930656350854,
+            -28.484796395103817,
+            57.09999995231628
+          ],
+          [
+            28.38930656350854,
+            28.484796395103817,
+            60.3
+          ]
+        ],
+        "carrier": [
+          [
+            -48.750000000000014,
+            -48.73484802274799,
+            24.95000076293945
+          ],
+          [
+            48.750000000000014,
+            48.73484802274799,
+            45.00000000000001
+          ]
+        ],
+        "cover": [
+          [
+            -61.49999805382328,
+            -61.48097746331043,
+            41.20000038146972
+          ],
+          [
+            61.49999805382328,
+            61.48097746331043,
+            57.10000000000001
+          ]
+        ]
+      }
+    },
+    {
+      "rise_mm": 0,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 225.52306507620042,
+        "Curta.carriage.registers.dial_detents.spider_spring.mount": 504.8715043762823,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 8.28837752989575,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 11.430454585559772,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 11.43045535767021
+      }
+    },
+    {
+      "rise_mm": 0.25,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 259.9067151667055,
+        "Curta.carriage.registers.dial_detents.spider_spring.mount": 316.48717250678396,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 10.205438042923333,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 10.205438815033768
+      }
+    },
+    {
+      "rise_mm": 0.5,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 293.7015030163557,
+        "Curta.carriage.registers.dial_detents.spider_spring.mount": 128.1028405407623,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 8.980421500286893,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 8.98042227239733
+      }
+    },
+    {
+      "rise_mm": 0.65,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 313.69572185053534,
+        "Curta.carriage.registers.dial_detents.spider_spring.mount": 15.072241314815166,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 8.245411574705034,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 8.245412346815474
+      }
+    },
+    {
+      "rise_mm": 0.7,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 320.31335248266026,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 0.5952606160018986,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 8.000408266177727,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 8.000409038288165
+      }
+    },
+    {
+      "rise_mm": 0.75,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 326.90742862515106,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 6.775989252829923,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 7.7554049576504545,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 7.755405729760893
+      }
+    },
+    {
+      "rise_mm": 1,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 359.52449199309154,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 76.3731630231886,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 6.530388415014015,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 6.5303891871244515
+      }
+    },
+    {
+      "rise_mm": 1.5,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 383.10160704859317,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 208.90712436006078,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 4.158076602877389,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 4.158077374987826
+      }
+    },
+    {
+      "rise_mm": 2,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 369.54051530438517,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 270.9449952083562,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 2.1911967057364805,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 2.1911972865417275
+      }
+    },
+    {
+      "complete": true,
+      "all_rises_measured": 9,
+      "run_bank_unchanged": true
+    }
+  ],
+  "matches_prior_inline_survey_exactly": true,
+  "source_representation_probe": {
+    "source_sections": {
+      "source STL": {
+        "local_bounds_mm": [
+          [
+            -28.5,
+            -28.5,
+            -9.71833204188588e-12
+          ],
+          [
+            28.5,
+            28.5,
+            58.5
+          ]
+        ],
+        "watertight": true,
+        "mesh_volume_mm3": 20732.746529260843
+      },
+      "source STEP tessellation": {
+        "local_bounds_mm": [
+          [
+            -28.5,
+            -28.29220199584961,
+            -2.103049823859709e-15
+          ],
+          [
+            28.5,
+            28.29220199584961,
+            58.5
+          ]
+        ],
+        "watertight": false,
+        "mesh_volume_mm3": 20567.862553915213
+      }
+    }
+  },
+  "inspected_images": [
+    "_build_checks/collar-seating.png",
+    "_build_checks/collar-source-sections.png",
+    "_build_checks/collar-manual-page44.png",
+    "_build_checks/collar-manual-page48.png",
+    "_build_checks/collar-seating-final.png",
+    "_build_checks/collar-source-sections-final.png"
+  ],
+  "validation": {
+    "assembly_process_exit": 0,
+    "source_section_process_exit": 0,
+    "geometry_changed": false,
+    "task_1_3_complete": false,
+    "nonfinite_rise_refused_exit": 2,
+    "py_compile_passed": true,
+    "openspec_strict_validation_passed": true
+  },
+  "limits": [
+    "Faceted source-STL interfaces, not native contact certification",
+    "Every other rigid occurrence checked against collar; flexible wires excluded",
+    "Nine sampled heights only, not continuous interval proof",
+    "Source profile comparison is visual at Y=0, not shape equality; STEP mesh remains non-watertight",
+    "No whole-machine inventory replacement, dynamic clearance proof, manufacturing recommendation or task closure"
+  ],
+  "final_tool_rerun_matches_all_prior_measurements": true
+}
