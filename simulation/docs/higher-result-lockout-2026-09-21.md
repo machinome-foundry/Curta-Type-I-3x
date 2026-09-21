@@ -181,6 +181,32 @@ why interpolating whole-contact endpoints is not adequate. The complete
 upper print also contains the carry pinion at source Z −33.6..−31.8 mm;
 its tooth contact must remain part of the admitted-motion checks.
 
+## Contact ownership, before compiling a restraint
+
+The new `--components` diagnostic follows the same native placement operations
+into the ingredients of each print. It identifies contact; all acceptance
+checks continue to use the complete fused prints. At shaft 169.6°, crank
+146°, the raised and half-carried contacts are pentagon/upper-results-disc
+(0.0316946210 and 0.0633892420 mm³). At full carry the first contact is instead
+carry-pinion/results-carry-ring (0.1604892313 mm³). At crank 170° the lowered
+pentagon then meets the lower locking disc (0.8862395230 mm³).
+The frozen-gear negative control at carry .75 / crank 150° is likewise
+pinion/ring contact; the properly driven 7.2° shaft pose has no component
+contacts. These measurements explain the different contact windows without
+changing source motion or cutting away a drive tooth.
+
+Three native ingredient-pair surveys (`--pair upper_lock`, `lower_lock`,
+`carry_tooth`) now locate their independent angular boundaries. Their future
+combination must be checked against complete native and published-mesh
+geometry, including intermediate axial positions. Ingredient separation is a
+measurement technique, not permission to omit any part from certification.
+
+From the measured axial faces, the potential overlap gates in the actual
+upper-stack travel coordinate q are upper disc q < −1.5 mm, lower disc
+q > −3 mm, and the ring's driving-tooth height q > −2.1 mm. These are working
+geometric hypotheses: box overlap is necessary, not a sufficient contact
+proof, and any profile's axial invariance still needs direct measurement.
+
 The native/mesh intermediate-height survey at shaft 169.6° also shows that
 opening switches from the raised boundary at carry .25 to the later boundary
 at .5; closing switches to the earlier lowered boundary between .5 and .75.
@@ -190,3 +216,199 @@ own geometry proof. No such interpolation is adopted.
 An arbitrary one-turn cap, an assumed
 20-degree copy of the ones envelope, and a silent swept clearance cut are not
 acceptable substitutes for those measurements.
+
+## Separating the three contact regions
+
+The completed axial-invariance survey takes 129.552 s. At shaft phases 32°
+and 169.6°, upper-disc boundaries agree through carry .64 and disappear at
+.65; lower-disc boundaries are absent at .28 and agree from .3 through 1;
+carry-tooth boundaries are absent at .5 and agree from .51 through 1.
+The brackets agree within one 0.00000763-degree measurement interval.
+This supports the three axial gates above at the sampled phases; it is not
+a global continuous-contact proof.
+
+The native upper and lower indexed-band measurements agree at all five
+source flats. Applying the 20° station transform to the existing upper-disc
+profile is now checked against the **complete raised T07 prints**:
+1,888/1,888 faceted and 1,888/1,888 native boundary samples pass, with zero
+positive common volume. This validates that particular reuse, not the
+lowered stack or the other result/counter stations.
+
+The new axial action-order test prepares the retained 169.6° shaft at crank
+145.1°, then requests full lowering. Before the restraint it fails because
+the request completes instead of stopping at carry-latch travel 2.1 mm.
+In the same run all eight ordinary three-turn cases pass (raised/lowered,
+digits 0/3/9 and lifted zero): two tests, one expected failure, 5.739 s.
+The future constrained diagnostic is `HigherResultLocking`; its source
+fixture remains `HigherResultActionOrder`. The original two-channel red
+fixture established the missing behavior, but its ones-only restraint is
+not silently relabeled as a higher-stack implementation.
+
+`compile_higher_locking_profiles` produces a **candidate**, never acceptance:
+native lower-disc boundaries and the two adjacent carry-tooth contact strips
+are measured separately for all five source flats. Charts overlap at indexed
+seams to avoid admitting contact there. The compiler asserts contiguous
+measured support and records every unresolved strip birth/death bracket;
+between-knot admission and complete native/mesh contact remain mandatory.
+Neither T07 nor this candidate restraint is adopted in `OperatingCurta`.
+
+## Candidate restraint and independent rejection checks
+
+The dense native survey completes 181 shaft phases per ingredient pair
+(−16..344° at 2° spacing), plus 20 local lower-disc refinements, in
+1,491.005 s for the two main pairs. The first generated candidate passes
+the four action-order tests in 85.413 s, including both short/long stops,
+axial entry and eight ordinary three-turn cases. Adding exact replay,
+reverse relief/idle/retry and complete-print stop/overtravel commons gives
+five passing tests in 142.070 s. The physical negative controls force an
+additional .2° bell rotation and require positive volume in both kernels.
+
+This behavioral success does **not** adopt the first table. Its initial
+complete-print coarse admission check passes 374 native samples but fails
+six mesh samples at lower-disc opening. The `higher_lower_openings` tool
+therefore brackets release using the actual complete published prints at
+all 190 measured non-indexed/refinement phases; the compiler takes the later
+of the native and mesh release, preserving the .1° free-side stand-off.
+The resulting table passes 5,203 faceted knot/midpoint/support-edge checks
+at full lowering and 2,052 more across carry .28/.3/.5/.51/.64/.65.
+
+The denser native check of the **first**, native-only opening table also
+finds an isolated Boolean blind spot at shaft 160°, crank exactly 30°:
+both native ingredient and complete-print commons report zero, while the
+published mesh reports 0.5034500144 mm³. Native contact is 0.4837292908 mm³
+at 29.999° and 0.4828411747 mm³ at 30.001°. Thus the sampling/bisection had
+mistaken that isolated zero for release and admitted neighboring contact
+at shafts 159–161°. Component inspection confirms the same lower-disc /
+pentagon pair, not a missing fourth restraint. The measured mesh release
+31.0016745329° already corrects this knot in the combined table. Native
+verification of the combined table remains a separate gate; no Boolean
+zero, passing action-order test, or single kernel certifies it by itself.
+
+The unchanged ordinary source trajectories also pass 79,310 half-degree
+admission samples (five flats, eleven tooth counts, both carry seats) in
+130.595 s. This checks against false jams; it is not collision acceptance.
+
+An isolated full-tree `HigherOperatingTrial` now carries T07 and the refined
+bell mesh while retaining all production inputs, carry levers, paths and
+restraints. Its actual raised and carry-lowered stop tests are run red before
+adding the candidate bound. The manifest and `OperatingCurta` are unchanged.
+
+## Completed diagnostic acceptance and actual-carry blocker
+
+The combined release table completes **5,203/5,203 native and 5,203/5,203
+faceted** full-lowering admission checks, including knots, midpoints and
+support seams. Both representations also pass **2,052/2,052** intermediate-
+height checks. Ten retained raised/lowered cases covering all five source
+flats on later revolutions pass short and unsplit long requests (198.045 s).
+These finite checks do not settle the carry-tooth support-edge interpolation:
+separate birth/death measurements now refine each original 2° support bracket
+to less than .0001°, with near-edge curves still being checked before adoption.
+
+The isolated browser matches Python stops **145.22323837279146°** raised and
+**144.9514572141925°** lowered. Both short/long requests, exact replay,
+relief/idle/retry and all eight legal three-turn cases pass, with no page
+errors. Export SHA-256 is
+`3415ba04e5ca46ea8efeed9f8f46c16af426dff79eaf80dcacf6821fc5292938`,
+viewer bundle `8acaf5989e5fa99bb5f3314c2080016603893ca8e665569a4d707ff24f8de751`.
+The stopped screenshot was inspected with the drum hidden. Two earlier
+invocations passed motion checks but failed screenshot setup because the
+test used the wrong visibility-path form; the corrected complete invocation
+passes. This was a test-script error, not a viewer fix.
+
+The full-tree T07 tests first fail **2/2 red** (264.029 s): raised withdrawal
+and actual carry then withdrawal both complete instead of stopping. Adding
+the candidate constraint gives **one pass and one error** (618.351 s), not
+a green operating adoption. Raised withdrawal, replay, long request and
+relief pass. The carried case fails earlier, on normal preparation of input
+9 followed by a single 360° request: the engine raises `LandingInvariantError`
+while evaluating the first real carry lever inside constraint observation.
+No completed turn, geometry acceptance or whole-machine completion is claimed.
+
+`carry_constraint_repro.py` removes CAD while retaining the actual source
+shaft, dial and self-reading lever laws. The unrestricted 360° request passes
+in .866 s; adding the measured restraint reproduces the same error in 16.497 s.
+An initial reduction using linear dial bindings failed even without the
+observer, so it was rejected as insufficiently faithful; the current fixture
+uses the real dial laws and distinguishes the two cases.
+
+Read-only traceback inspection identifies a mixed moving threshold: the lever
+changes from −3.0518676393442643 to −3.051867639344261 mm at the cut, but the
+comparison crosses in the opposite relative direction. The current landing
+walk chooses its search direction from the lever's positive displacement and
+cannot find the previous branch even after 200 doublings. This is an engine
+finding, not clearance, source-print interference or permission to change the
+carry law. `test_carry_constraint_repro` keeps the expected-completion test red;
+the actual-root test remains the empirical acceptance gate. Upstream CAD,
+production geometry, production constraints and the manifest are unchanged.
+
+The full-tree export reproduces the same failure in the isolated Chromium
+worker using viewer main `e82b521` (bundle hash above). Input 9 completes;
+the single 360° request raises the landing invariant and leaves the entire
+snapshot unchanged, with crank still at 0°. No page errors occur. The exported
+assembly screenshot was inspected; it shows the requested input and unchanged
+crank, not a completed carry. Evidence is
+`_build_higher_operating_trial/carry-browser-acceptance.json` and
+`_build_checks/higher-t07-operating-browser-red.log`. Thus both executors need
+the scoped correction; a Python-only pass cannot close this gate. The proposed
+framework cycle is `mixed-threshold-landing`, based on `e63700e`. The pilot
+subsequently ratified the explained direction correction and local integration
+after acceptance; its planning commit is `3a51345`. It is not integrated.
+
+The first direction correction passes 163 selected framework tests and 653
+subtests, including prior running and clocked conformance. Both the faithful
+reduction (one pass, one error, 24.042 s) and the complete source-backed trial
+(one error, 259.694 s) get past the original landing failure but then raise
+`UnsupportedLaw` during the same ordinary carry preparation. On a pin-following
+branch the contact level should stay zero; round-off produces
++2.220446049250313e−16, leading the branch decision to mistake following contact
+for a sliding mode. An independent affine reproduction fails on unmodified
+framework main as well, so this second fault was not introduced by the first
+fix. No tolerance, carry law or geometry is changed to bypass it. An extension
+of the correction was explicitly approved by the pilot on 2026-09-21.
+The amended framework planning commit is `5673d1f`; the matching viewer's
+planning commit is `f77dab4`. Acceptance, archival and integration remain
+gated on passing the complete Curta and browser checks.
+
+The precision correction uses an exact algebraic zero-motion certificate,
+not a clearance epsilon: a contact whose relative position is provably
+constant cannot depart just because a point evaluation rounds differently.
+Continuous profile knots are split at their exact algebraic crossings;
+uncertain/curved cases retain the existing execution and refusal rules.
+The faithful unchanged-law reduction now passes both tests (54.046 s).
+The full exported trial also completes the input-9/single-360° request in
+the corrected browser worker with no page error. The inspected screenshot
+shows crank 360°, the original complete tree and its visible number rolls.
+Full withdrawal/relief/replay and final repository regressions are still
+being validated. No physical-print modification follows from this software
+finding; T07 and the other mechanical trials retain their separate gates.
+
+## Near-edge sampling tool correction
+
+Both native and faceted measurements bracket all ten carry-tooth support
+edges to less than .0001°; the native flat-0 birth bracket is
+22.2406494140625–22.24072265625°, and death is
+49.1064453125–49.10650634765625°. Repeated source flats retain their own
+measurements, not a symmetry assumption.
+
+The first dual near-edge curve run stops at shaft 49.1044453125° because the
+complete mesh has **four** disconnected grazing-contact intervals within
+158.9680519104–160.1480800629°. The tool incorrectly assumed at most one.
+Four focused tests give three failures before correction and four passes
+afterward: preserve disjoint contacts/free gaps, union overlapping brackets,
+retain mesh-only islands, and retain native coverage where it really exists.
+The corrected tool unions measured intervals rather than taking their convex
+envelope. It keeps both kernels' raw boundary lists in every record. The
+downstream two-tooth compiler still refuses unsupported extra branches; it
+does not silently collapse them. This is a measurement-tool fix, not a change
+to collision tolerances or print geometry. Actual near-edge remeasurement and
+candidate-profile regeneration/acceptance remain open.
+
+## Software gate closed
+
+The [integrated engine acceptance](mixed-contact-engine-2026-09-21.md) records
+the completed correction in both executors. The final full-tree Python tests
+pass **2/2 (1145.059 s)**; actual browser carry, raised/carried stops, replay,
+long requests and relief also pass. All 213 bank coordinates match exactly
+in four stopped/relieved states. The measured geometry and carry laws are
+unchanged by the fix. T07 and the near-edge profile work above are still
+provisional; this result is not production higher-bank adoption.

@@ -18,9 +18,19 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--kernel', choices=('exact', 'faceted'), required=True)
     parser.add_argument('--step', type=float, default=.5)
+    parser.add_argument('--tens-trial', action='store_true',
+                        help='Verify the 20-degree station transform on the complete raised T07 pair.')
     args = parser.parse_args()
     assert 0 < args.step <= 1
-    reader = contact_reader(args.kernel)
+    if args.tens_trial:
+        from simulation.higher_lockout_trial import HigherLockoutFitBench
+        from simulation.tools.higher_locking_envelope import contact_reader as tens_reader
+        def reader(shaft):
+            volume = tens_reader(0, shaft=shaft-20, node_type=HigherLockoutFitBench)
+            kernel = 'native' if args.kernel == 'exact' else 'faceted'
+            return lambda crank: volume(crank+20, kernel)
+    else:
+        reader = contact_reader(args.kernel)
     failures, checked = 0, 0
     for index, (start, end, points) in enumerate(SECTORS):
         samples = {start + .01 + args.step*i

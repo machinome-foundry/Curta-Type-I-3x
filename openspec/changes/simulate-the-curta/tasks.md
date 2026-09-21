@@ -187,6 +187,33 @@ No higher restraint or trial geometry is adopted by the operating model yet;
 the deliberately red action-order test and phase/axial investigation are in
 `simulation/docs/higher-result-lockout-2026-09-21.md`. No task checkbox changes.
 
+The isolated higher-restraint candidate now passes raised/lowered short and
+long stops, axial entry, exact replay, relief/retry, complete-print stop and
+overtravel checks, and 79,310 ordinary-tooth-path admission samples. An
+isolated browser matches both Python stops and all eight legal three-turn
+cases. Dense complete-print checks rejected the first native-only release
+table, so mesh-measured release is incorporated and verification continues.
+The full-tree T07 trial is separately tested before any operating adoption;
+carry-tooth support refinement and the rest of the bank remain open.
+
+Dense combined-profile checks now pass 5,203 samples per kernel and another
+2,052 intermediate-height samples per kernel. Later-revolution tests cover
+all five source flats. Full-tree raised restraint acceptance passes, but
+normal preparation of a real carry raises `LandingInvariantError` during
+constraint observation. A CAD-free actual-law reduction preserves the
+passing unconstrained case and reproduces the constrained error. This is
+a newly recorded framework gate, not a waived test or operating adoption.
+
+That software gate is now closed by the independently archived and locally
+integrated framework/viewer `mixed-threshold-landing` cycles. The actual
+full-tree raised and carried withdrawal tests pass, as do browser carry,
+restraint, replay and relief. All 213 coordinates agree exactly between
+Python and browser in four stopped/relieved states. See
+`simulation/docs/mixed-contact-engine-2026-09-21.md` for commits, test counts,
+hashes and reproduction. No source carry law, tolerance or print geometry
+was changed by that correction. T07 profile refinement and wider channel/
+action-order acceptance remain open; overall status is still 12/23.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

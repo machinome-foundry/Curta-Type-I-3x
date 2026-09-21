@@ -278,6 +278,16 @@ remaining checks and source invariants stay explicit; no upstream CAD changes.
 
 ## Findings for the framework
 
+- The isolated higher-result restraint passes both geometry representations
+  and browser/Python action-order checks, but its full-tree trial triggers
+  `LandingInvariantError` on an ordinary carry preparation. A CAD-free
+  reduction using the actual shaft/dial/lever laws completes without the
+  constraint and fails with it. At the observed mixed-source cut the driven
+  coordinate's displacement and the threshold crossing have opposite relative
+  directions. See `simulation/docs/higher-result-lockout-2026-09-21.md` and
+  `simulation/test_carry_constraint_repro.py`. No new framework correction is
+  ratified or implemented by this project record, and adoption remains open.
+
 - Exact printed groups can contain enclosed voids represented by disconnected
   negative-volume mesh shells. The project checks material connectivity, not
   surface-shell count, and separately requires one valid native solid. Every

@@ -1,6 +1,6 @@
 # Author review: simulation fits and unresolved findings
 
-Review checkpoint: 2026-09-20. This is a review agenda, **not a list of proven
+Review checkpoint: 2026-09-21. This is a review agenda, **not a list of proven
 defects in the author's working printed calculator**, nor instructions to
 modify a physical machine. The simulation reconstructs the supplied assembly
 and assumes rigid contact except where flexible motion is explicitly modeled.
@@ -65,7 +65,13 @@ changing its native solid. The expanded six contracts pass on both kernels,
 including 925 sampled poses following the actual carry tooth passage and a
 deliberately frozen engaged-gear negative control. Production
 tens geometry, production bell tessellation and upstream CAD are unchanged.
-The moving restraint and its adoption remain open; this is not a manufacturing
+The isolated moving-restraint candidate now stops raised/lowered withdrawal
+and axial entry, with exact replay, reverse relief and complete-print
+stop/overtravel checks. Python and an isolated browser agree; ordinary source
+tooth trajectories remain admitted. Native-only release measurement first
+missed both a mesh contact and an isolated native Boolean blind spot; the
+combined profile is undergoing dense verification and carry-tooth support
+refinement. Actual-root adoption remains open; this is not a manufacturing
 recommendation.
 
 ## Assembly, source-representation and motion corrections — not new prints
@@ -85,6 +91,7 @@ recommendation.
 | M01 | Negative clearing-sweep modulo corrected; retained carriage/clearing restraints use measured contact envelopes and require separate release. These are simulation logic corrections, not physical modifications. | [Restraints and red-first evidence](carriage-interlocks-2026-09-19.md). |
 | M02 | Result engagement now derives from actual lower-drum axial bands and pinion heights instead of a half-lift mode switch or fractional tooth count. No print geometry changes. | [Partial-result engagement](result-partial-engagement-2026-09-20.md). Both contact kernels, retained partial-selector/replay, calibration and full-bank subtraction/overflow checks pass. Wrong-order locking-disc restraint remains open. |
 | M03 | The operating crank now reads the actual bell and retained ones shaft for its measured closing restraint, intersecting the original pawl limit. Both executors attribute a long request's push at first contact. | [Full-root adoption and remaining acceptance](operating-ones-lockout-2026-09-20.md), [paired software correction](periodic-lockout-browser-2026-09-20.md). No new print modification; higher sliding channels remain separate. |
+| M04 | Carry preparation under a higher-stack observer exposed two engine errors: wrong relative landing direction and false chatter from rounding in following contact. Corrected in framework and viewer without a clearance/tolerance or carry-law change. | [Integrated correction and full-bank parity](mixed-contact-engine-2026-09-21.md). This is not a defect attributed to the author's printed mechanism and requires no physical modification. |
 
 ## Current candidate and unresolved work
 
