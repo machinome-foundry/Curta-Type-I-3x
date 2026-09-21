@@ -46,8 +46,11 @@ tree clears the input-3 pose in both kernels; restoring the earlier source
 class reproduces the failure. Four fit contracts pass under both runners,
 including protected material and retained locking. This is not a finding
 that the author's physical build jams or a manufacturing recommendation.
-The general restraint remains unadopted because of the separately isolated
-[periodic-stop software defect](periodic-lockout-stop-2026-09-20.md).
+The separately isolated [periodic-stop software defect](periodic-lockout-stop-2026-09-20.md)
+is now corrected in both executors. The fixed-height ones profile is
+[wired into the operating crank](operating-ones-lockout-2026-09-20.md), with
+full-root regression in progress. This introduces no further geometry fit
+and does not adopt the profile on other channels.
 
 ## Assembly, source-representation and motion corrections — not new prints
 
@@ -65,6 +68,7 @@ The general restraint remains unadopted because of the separately isolated
 | R05 | Reversing ball follows the original pockets, rim and shaft land radially; analytic spring retains source .51 mm wire, R2.295 coil centre, 6½ turns and 11.1 mm free centreline height. A .05 mm named seating gap preserves contacts. Ball remains the source's R2.7, not silently replaced by nominal 5 mm hardware. | [Follower dimensions and independent original-print checks](reverser-fork-and-follower-2026-09-20.md#radial-ball-and-spring-following), [reverser_following.py](../reverser_following.py). Geometric restoring direction only, not force/friction or automatic snap. |
 | M01 | Negative clearing-sweep modulo corrected; retained carriage/clearing restraints use measured contact envelopes and require separate release. These are simulation logic corrections, not physical modifications. | [Restraints and red-first evidence](carriage-interlocks-2026-09-19.md). |
 | M02 | Result engagement now derives from actual lower-drum axial bands and pinion heights instead of a half-lift mode switch or fractional tooth count. No print geometry changes. | [Partial-result engagement](result-partial-engagement-2026-09-20.md). Both contact kernels, retained partial-selector/replay, calibration and full-bank subtraction/overflow checks pass. Wrong-order locking-disc restraint remains open. |
+| M03 | The operating crank now reads the actual bell and retained ones shaft for its measured closing restraint, intersecting the original pawl limit. Both executors attribute a long request's push at first contact. | [Full-root adoption and remaining acceptance](operating-ones-lockout-2026-09-20.md), [paired software correction](periodic-lockout-browser-2026-09-20.md). No new print modification; higher sliding channels remain separate. |
 
 ## Current candidate and unresolved work
 

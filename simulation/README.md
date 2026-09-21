@@ -80,14 +80,17 @@ The [ones-lockout continuation](docs/result-locking-2026-09-20.md) checks all
 five source flats and adds only .01 mm to the existing simulation-owned
 outer-profile fit on the ones lockout (author-review F18). It removes a
 native-only overlap at normal input 3 without changing upstream CAD or shaft
-clocking. The broader closing restraint remains an **unadopted diagnostic**:
-a [source-backed periodic-stop reproduction](docs/periodic-lockout-stop-2026-09-20.md)
+clocking. A [source-backed periodic-stop reproduction](docs/periodic-lockout-stop-2026-09-20.md)
 isolated a framework invariant error on a long instantaneous crank request.
 Framework main `e63700e` now fixes that failure: the Python reproduction and
 five-flat motion suite pass, with seven actual stops verified on both kernels.
-The [browser continuation](docs/periodic-lockout-browser-2026-09-20.md) still
-reproduces the same error in the separate viewer executor. Browser parity and
-full-root acceptance remain prerequisites to operating adoption.
+The [browser continuation](docs/periodic-lockout-browser-2026-09-20.md) is also
+integrated in viewer `e82b521`. The measured fixed-height ones restraint is now
+[wired to the operating crank](docs/operating-ones-lockout-2026-09-20.md): short
+and long wrong-order requests and a real pointer drag stop at 125.223238° for
+the documented withdrawal sequence. Its installed native and published-mesh
+contacts pass; broader regressions remain in progress. This does not certify
+the higher channels' sliding stacks, other action orders or the whole machine.
 
 For interactive investigation, select the separate **`reverser_inspection`**
 model. It opens only the drum, one counter pinion, fork and detent reference,

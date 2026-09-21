@@ -9,6 +9,10 @@ Only this phase neighbourhood and the prepared 120..150-degree window have
 been sampled. The fallback permits a one-turn request, not a certified law
 outside that window. Never select this diagnostic as the operating model.
 Upstream CAD, assemblies, original stops and all controls are unchanged.
+
+The operating parent now includes its certified five-flat ones restraint.
+This historical extra local bound is retained for ancestor-intersection
+regression; the stricter parent stops the prepared case at 125.22323837.
 """
 
 from machinome.motion.joints import Bound

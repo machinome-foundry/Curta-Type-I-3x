@@ -12,13 +12,18 @@ from simulation.tools.interference import rigid_leaves
 
 class AncestorLockoutTest(unittest.TestCase):
     def test_wrong_order_request_stops_the_actual_crank(self):
+        # OperatingCurta now contributes the independently measured five-flat
+        # restraint. Its .1-degree stand-off is stricter than the historical
+        # local diagnostic, so both must intersect rather than replace it.
+        expected_stop = 125.22323837227304
+        self.assertLess(expected_stop, LAST_FREE)
         sim = Sim(AncestorLockoutCurta(), dt=.1, meshes=True, record=8)
         prepare(sim)
         prepared = sim.snapshot()
         request = sim.move('crank_rotation', to=150)
         self.assertEqual(request.status, 'blocked')
-        self.assertAlmostEqual(sim.state['crank_rotation'], LAST_FREE, places=7)
-        self.assertAlmostEqual(sim.state['main_drive.crank.turn'], -LAST_FREE, places=7)
+        self.assertAlmostEqual(sim.state['crank_rotation'], expected_stop, places=7)
+        self.assertAlmostEqual(sim.state['main_drive.crank.turn'], -expected_stop, places=7)
         self.assertAlmostEqual(sim.state[SHAFT], 189.6, places=10)
         self.assertTrue(any(stop.coordinate == 'main_drive.crank.turn'
                             for stop in sim.stops))
@@ -35,10 +40,10 @@ class AncestorLockoutTest(unittest.TestCase):
         sim.restore(prepared)
         sim.move('crank_rotation', to=150)
         self.assertEqual(sim.snapshot(), stopped)
-        relief = sim.move('crank_rotation', to=LAST_FREE-.05)
+        relief = sim.move('crank_rotation', to=expected_stop-.05)
         self.assertEqual(relief.status, 'completed')
         self.assertAlmostEqual(sim.state[SHAFT], 189.6, places=10)
         sim.run(.1)
-        self.assertAlmostEqual(sim.state['crank_rotation'], LAST_FREE-.05, places=7)
+        self.assertAlmostEqual(sim.state['crank_rotation'], expected_stop-.05, places=7)
         self.assertEqual(sim.move('crank_rotation', to=150).status, 'blocked')
-        self.assertAlmostEqual(sim.state['crank_rotation'], LAST_FREE, places=7)
+        self.assertAlmostEqual(sim.state['crank_rotation'], expected_stop, places=7)

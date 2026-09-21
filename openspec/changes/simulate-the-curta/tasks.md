@@ -154,6 +154,24 @@ the corresponding first-contact correction in its own repository before
 operating adoption. See `simulation/docs/periodic-lockout-browser-2026-09-20.md`.
 Production controls, manifest, upstream CAD and task checkboxes are unchanged.
 
+The corresponding viewer cycle is archived and integrated at `e82b521`:
+all 1,402 JavaScript tests, 192 Python/browser tests and 20 subtests pass.
+The unchanged actual periodic reproduction and the seven measured bench
+positions pass in Chromium. Project commit `2a9aa84` records this dependency
+closure. No release or push was performed.
+
+The fixed-height ones profile is now connected to the production crank.
+Both full-root short/long requests failed red before adoption and pass now;
+the installed stop and .2-degree overtravel controls pass both kernels.
+The real pointer also stops there with all 608 paths and 25 controls intact.
+The browser matrix passes seven stop/replay/relief/retry cases and four legal
+three-turn requests. Page-53 calibration and full-bank subtraction/undo also
+pass; the remaining Python
+root regressions are in progress. See
+`simulation/docs/operating-ones-lockout-2026-09-20.md`, including the explicit
+large-tick setup limitation. Other channels and action orders are not inferred
+from this pair. Tasks 6.2/6.3 and the overall 12/23 status remain open.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

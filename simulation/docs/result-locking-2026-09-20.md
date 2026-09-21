@@ -1,5 +1,10 @@
 # Ones-shaft closing restraint: continuation in progress
 
+Later checkpoint: the framework and viewer periodic-stop fixes are integrated,
+and the [measured ones restraint is now on the operating crank](operating-ones-lockout-2026-09-20.md).
+That record carries current acceptance and remaining scope. The investigation
+and previously blocked states below are preserved as historical evidence.
+
 Framework `ancestor-joint-constraints` is integrated into main at `8d2bd71`.
 This continuation addresses project tasks 6.2/6.3; the framework diagnostic
 alone did not adopt a general operating restraint. No upstream CAD changes.

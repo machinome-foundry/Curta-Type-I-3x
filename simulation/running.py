@@ -10,6 +10,7 @@ from operator import and_
 
 from machinome.node import AssemblyNode
 from machinome.motion.ports import Time, Port
+from machinome.motion.joints import Bound
 from machinome.simulation import Driver, Instruction, Button, Turn, Slide
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
@@ -18,6 +19,7 @@ from simulation.running_parts import (IndependentInputs, RetainedCarriage, Runni
     RetainedCarries, RetainedTransmission, RESULT_DIALS, TURNS_DIALS,
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
 from simulation.running_laws import shaft_motion, dial_motion, lever_motion, reading
+from simulation.locking_laws import closing_limit
 
 
 def sources(*ends):
@@ -79,6 +81,14 @@ class OperatingCurta(LayeredSource):
     carriage = RunningCarriage()
     carry_mechanism = RetainedCarries()
     transmission = RetainedTransmission()
+
+    # The fixed-height ones lockout meets the source bell after premature
+    # selector withdrawal. Intersect the crank's existing pawl restraint;
+    # preserve its assembly path and read actual retained part coordinates.
+    # Higher channels move axially with carry and need their own certification.
+    main_drive.crank.turn.constrain(range=(Bound(
+        closing_limit,
+        reads=(carry_mechanism.tens_bell.turn, transmission.result.ones.turn)), None))
 
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {

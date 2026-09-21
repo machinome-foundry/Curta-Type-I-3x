@@ -103,6 +103,16 @@ friction, spring-force prediction, or fabrication certification.
 
 ## Findings
 
+### Operating ones-lockout adoption — 2026-09-20/21
+
+Framework `e63700e` and viewer `e82b521` resolve the periodic first-contact
+software prerequisite. The fixed-height ones profile now constrains the actual
+crank across the preserved assembly tree, intersecting its original pawl bound.
+The project-owned [adoption record](../../../simulation/docs/operating-ones-lockout-2026-09-20.md)
+separates passed full-root requests, contact kernels and pointer evidence from
+the still-running broader regressions. It introduces no further print fit and
+does not generalize the ones profile to axially sliding higher channels.
+
 ### Direct-operation prerequisite — 2026-09-15
 
 The approved interaction inventory is in

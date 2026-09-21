@@ -1,4 +1,4 @@
-"""Local hosted acceptance of the opt-in complete-Curta lockout diagnostic.
+"""Local hosted acceptance of a complete-Curta crank lockout.
 
 Only public viewer/run APIs and real pointer gestures. Does not touch the
 pilot's Studio session, rebuild the viewer, or upload any asset.
@@ -28,6 +28,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--baseline', type=Path, required=True)
+    parser.add_argument('--stop', type=float, default=125.32,
+                        help='Certified stop for this export (default: historical local diagnostic).')
+    parser.add_argument('--target', type=float, default=150,
+                        help='Requested crank endpoint; use 840 for periodic operating acceptance.')
     args = parser.parse_args()
     build = args.build.resolve()
     document_path = build / 'manifest.json'
@@ -72,7 +76,7 @@ def main():
             page.route('http://lockout.test/**', serve)
             page.goto('http://lockout.test/')
             page.add_script_tag(content=bundle.decode())
-            report['host_request'] = page.evaluate('''async () => {
+            report['host_request'] = page.evaluate('''async ({expected,target}) => {
                 window.curta = await MachinomeViewer.mount('#view', 'manifest.json', {
                     autoplay: false, partControls: 'inline', run: {dt: .1},
                 });
@@ -85,27 +89,27 @@ def main():
                     if (result.some(x => x.status !== 'completed')) throw Error(JSON.stringify(result));
                 }
                 window.prepared = await run.snapshot();
-                const result = await run.move('crank_rotation', {to:150});
+                const result = await run.move('crank_rotation', {to:target});
                 const stopped = run.state();
                 window.stopped = await run.snapshot();
                 await run.restore(prepared);
-                await run.move('crank_rotation', {to:150});
+                await run.move('crank_rotation', {to:target});
                 const replay = JSON.stringify(await run.snapshot()) === JSON.stringify(window.stopped);
-                const relief = await run.move('crank_rotation', {to:125.27});
+                const relief = await run.move('crank_rotation', {to:expected-.05});
                 await run.step(1);
                 const relieved = run.state();
                 await run.restore(prepared);
                 await new Promise(requestAnimationFrame);
                 await new Promise(requestAnimationFrame);
                 return {result, stopped, replay, relief, relieved, worker:run.runsInWorker};
-            }''')
+            }''', {'expected': args.stop, 'target': args.target})
             host = report['host_request']
             assert host['result'][-1]['status'] == 'blocked', host
-            assert abs(host['stopped']['crank_rotation']-125.32) < 1e-7, host
+            assert abs(host['stopped']['crank_rotation']-args.stop) < 1e-7, host
             assert abs(host['stopped']['transmission.result.ones.turn']-189.6) < 1e-10
             assert host['replay'], host
             assert host['relief'][-1]['status'] == 'completed'
-            assert abs(host['relieved']['crank_rotation']-125.27) < 1e-7
+            assert abs(host['relieved']['crank_rotation']-(args.stop-.05)) < 1e-7
             print('Host stop, relief and replay passed', flush=True)
 
             attempts = []
@@ -144,13 +148,13 @@ def main():
                 }''')
                 attempt['drag'] = [dx, dy]
                 attempts.append(attempt)
-                if (abs(attempt['state']['crank_rotation']-125.32) < 1e-7
+                if (abs(attempt['state']['crank_rotation']-args.stop) < 1e-7
                         and any(x['status'] == 'blocked' and x['input'] == 'crank_rotation'
                                 for x in attempt['outcomes'])):
                     break
             report['pointer_attempts'] = attempts
             (build/'acceptance.json').write_text(json.dumps(report, indent=2)+'\n')
-            assert abs(attempts[-1]['state']['crank_rotation']-125.32) < 1e-7, [
+            assert abs(attempts[-1]['state']['crank_rotation']-args.stop) < 1e-7, [
                 (a['drag'], a['state']['crank_rotation'], a['outcomes']) for a in attempts]
             assert abs(attempts[-1]['state']['transmission.result.ones.turn']-189.6) < 1e-10
             report['stopped_view'] = page.evaluate('''async () => {
