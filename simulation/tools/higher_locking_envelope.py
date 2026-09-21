@@ -25,6 +25,21 @@ CONTACT_PAIRS = {
 }
 
 
+def faceted_common_volume(common):
+    """Measure spatial volume, recognizing exactly planar boundary contact.
+
+    Manifold can retain coincident triangles whose signed tetrahedron sum
+    rounds away from zero. An exactly zero extent proves zero 3D measure;
+    no positive thickness or positive volume is discarded by a tolerance.
+    Empty commons have inverted infinite bounds and likewise contain no body.
+    """
+    assert common.status() == manifold.Error.NoError
+    bounds = common.bounding_box()
+    if any(bounds[axis] >= bounds[axis+3] for axis in range(3)):
+        return 0.0
+    return common.volume()
+
+
 def component_shapes(carry, crank, shaft, node_type=HigherLockoutBench):
     """Place native ingredients with the same operations as their complete print."""
     node = node_type()
@@ -90,8 +105,7 @@ def contact_reader(carry=0, reference=140, shaft=169.6, node_type=HigherLockoutB
             assert common.isValid()
             return common.Volume()
         common = faceted[stack_path] ^ faceted[bell_path].rotate((0, 0, reference-crank))
-        assert common.status() == manifold.Error.NoError
-        return common.volume()
+        return faceted_common_volume(common)
     return volume
 
 

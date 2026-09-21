@@ -17,6 +17,7 @@ from simulation.locking_profiles import SECTORS
 from simulation.higher_locking_profiles import LOWER_LOCK_SECTORS, CARRY_TOOTH_STRIPS
 from simulation.higher_lockout_trial import HigherLockoutFitBench
 from simulation.tools.higher_locking_envelope import contact_reader
+from simulation.tools.result_bank_lockout_probe import station_reader
 
 
 def candidate_angles(shaft):
@@ -39,10 +40,14 @@ def main():
     parser.add_argument('--carry', type=float, action='append')
     parser.add_argument('--step', type=float, default=6)
     parser.add_argument('--knots', action='store_true')
+    parser.add_argument('--station', type=int, choices=range(2, 12),
+                        help='Check the candidate at another source result station; '
+                             'uses its own print, pivot and carry seating.')
     args = parser.parse_args()
     assert 0 < args.step <= 12
     profile_path = Path(__file__).resolve().parents[1]/'higher_locking_profiles.py'
     print(json.dumps({'kernel': args.kernel, 'carry': args.carry, 'step': args.step,
+                      'station': args.station or 2,
                       'knots': args.knots, 'profile_sha256': hashlib.sha256(
                           profile_path.read_bytes()).hexdigest()}), flush=True)
     shafts = {-16+args.step*i for i in range(int(360/args.step)+1)}
@@ -58,7 +63,9 @@ def main():
     for carry in args.carry or (0, .5, 1):
         assert 0 <= carry <= 1
         for shaft in sorted(shafts):
-            volume = contact_reader(carry, shaft=shaft, node_type=HigherLockoutFitBench)
+            volume = (station_reader(args.station, carry, shaft, trial=True)
+                      if args.station else
+                      contact_reader(carry, shaft=shaft, node_type=HigherLockoutFitBench))
             for crank in candidate_angles(shaft):
                 if higher_contact_gap(crank, shaft, carry*4.2-4.2) > 0:
                     continue

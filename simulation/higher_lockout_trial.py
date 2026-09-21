@@ -19,6 +19,11 @@ class TrialTensLockout(FittedCarryLockout):
 
 
 class TrialTensUpper(Part10220_410003_1_419227):
+    # At intermediate carry heights the coarse upper-print mesh extends
+    # into an opening that is clear natively. Resolve its profile as well
+    # as the bell; neither tessellation setting changes native material.
+    linear_deflection = .01
+    angular_deflection = .1
     pentagonal_lockout = TrialTensLockout()
 
 

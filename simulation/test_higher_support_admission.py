@@ -13,6 +13,19 @@ from simulation.tools.higher_locking_envelope import contact_reader
 
 
 class HigherSupportAdmissionTest(unittest.TestCase):
+    def test_intermediate_carry_opening_clears_the_complete_prints(self):
+        # Dense bank admission exposed this opening, outside the earlier
+        # near-tooth support corpus. The native pair is clear; the coarse
+        # upper-print mesh protrudes into the bell at the same physical pose.
+        crank, shaft = 25.3366216485, 131
+        for carry in (.49999, .5, .50001):
+            volume = contact_reader(carry, reference=crank, shaft=shaft,
+                                    node_type=HigherLockoutFitBench)
+            self.assertLessEqual(higher_contact_gap(crank, shaft, 4.2*carry-4.2), 0)
+            for kernel in ('native', 'faceted'):
+                with self.subTest(carry=carry, kernel=kernel):
+                    self.assertLessEqual(volume(crank, kernel), 0)
+
     def test_free_side_of_every_measured_tooth_support_remains_admitted(self):
         # .02 degrees outside the measured supports, beyond the declared
         # .002-degree shaft guard. The crank is inside the tooth's old strip,

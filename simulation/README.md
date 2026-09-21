@@ -3,6 +3,10 @@
 **Fresh-agent starting point:** [2026-09-21 handoff](docs/handoff-2026-09-21.md).
 It distinguishes completed engine/trial validation from the still-unfinished
 operating model, with exact next actions and reproduction commands.
+The [continuation record](docs/operating-continuation-2026-09-21.md) adds the
+result-bank fixture correction and intermediate-carry mesh checks performed
+after that handoff. Production adoption and full operating acceptance remain
+in progress.
 
 There are now three sibling models: `fast_curta` (prescribed poses),
 `operating_curta` (`Time.running()`), and `clocked_curta` (event-committed

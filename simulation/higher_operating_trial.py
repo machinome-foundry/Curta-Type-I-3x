@@ -1,6 +1,6 @@
 """Full-tree T07 tens experiment; the manifest still selects OperatingCurta.
 
-Only the tens outer fit and bell mesh are changed here. All physical inputs,
+Only the tens outer fit and contact-print meshes change here. All physical inputs,
 carry levers, initial shaft seating and original restraints are inherited.
 """
 

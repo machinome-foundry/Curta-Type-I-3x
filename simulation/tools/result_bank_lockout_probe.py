@@ -1,9 +1,10 @@
 """Measure each installed result station before sharing the tens contact law.
 
 These source-backed pose instruments neither seed an operating run nor adopt
-fits. --trial substitutes only the already measured T07 outer skin and keeps
-each station's own source assembly, pivot, upper-stack placement and carry
-stroke. Both modes use the refined, native-equivalent bell mesh.
+fits. --trial substitutes the measured T07 outer skin and refines the upper
+print's mesh, keeping each station's source assembly, pivot, upper-stack
+placement and carry stroke. Both modes use the refined, native-equivalent
+bell mesh. Tessellation changes no native material.
 """
 
 import argparse
@@ -12,6 +13,7 @@ import logging
 
 from machinome.node import AssemblyNode
 from machinome.motion.joints import Prismatic, Revolute
+from machinome.parameters import Count
 from machinome.simulation import Driver
 from simulation.standard import channels, printed
 from simulation.higher_lockout_trial import TrialContactBell, TrialTensLockout
@@ -39,6 +41,12 @@ def station_bench(station, trial=False):
         upper = getattr(printed, 'Part'+upper_name[2:])
 
         class TrialUpper(upper):
+            # The factory's class name is shared, but its source solid is
+            # not: each imported print contains its station's placement.
+            # Include that source selection in the public artifact identity.
+            source_station = Count(station, min=station, max=station)
+            linear_deflection = .01
+            angular_deflection = .1
             pentagonal_lockout = TrialTensLockout()
 
         class TrialChannel(channel):
