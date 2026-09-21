@@ -1,16 +1,54 @@
 """Admission checks must retain interior, edge and known-failure poses."""
 
 import unittest
+import json
+from pathlib import Path
 from unittest.mock import patch
 
 from simulation.counter_locking_profiles import SECTORS
 from simulation.higher_counter_locking_profiles import LOWER_LOCK_SECTORS, CARRY_TOOTH_STRIPS
 from simulation.tools.check_higher_counter_locking_profile import (
-    sample_shafts, sample_angles, admitted_contacts, rejected_poses,
+    sample_shafts, sample_angles, admitted_contacts, rejected_poses, sample_carries,
 )
 
 
 class HigherCounterProfileSamplingTest(unittest.TestCase):
+    def test_station_chart_does_not_change_the_measured_machine_pose(self):
+        for station in range(2, 7):
+            shift = 20*(station-2)
+            calls = []
+            with patch('simulation.tools.check_higher_counter_locking_profile.higher_counter_contact_gap',
+                       return_value=-1) as gap:
+                rows = list(admitted_contacts(
+                    lambda angle, kernel: calls.append((angle, kernel)) or 0,
+                    1, 166-shift, 'faceted', angles=(206.5+shift,), station=station))
+            gap.assert_called_once_with(206.5, 166, -1.8+4.2)
+            self.assertEqual(calls, [(206.5+shift, 'faceted')])
+            self.assertEqual(rows[0]['shaft'], 166-shift)
+            self.assertEqual(rows[0]['crank'], 206.5+shift)
+            self.assertEqual(rows[0]['station'], station)
+        for station in (1, 7):
+            with self.assertRaises(ValueError):
+                list(admitted_contacts(lambda angle, kernel: 0, 1, 166,
+                                       'native', angles=(206.5,), station=station))
+
+    def test_axial_matrix_retains_measured_brackets_and_nominal_plane_sides(self):
+        self.assertEqual(sample_carries(), (0, .5, 1))
+        heights = sample_carries(supports=True)
+        self.assertEqual(tuple(sorted(set(heights))), heights)
+        self.assertTrue(all(0 <= height <= 1 for height in heights))
+        self.assertTrue({0, .25, .5, .75, 1} <= set(heights))
+        for travel in (-.6, .3, .9):
+            for offset in (-.001, 0, .001):
+                self.assertIn((travel+offset+1.8)/4.2, heights)
+        data = json.loads((Path(__file__).parent/'docs/evidence/'
+                           'counter-tens-contact-support-2026-09-21.json').read_text())
+        for support in data['axial_supports']:
+            for row in support['measurements']:
+                self.assertIn(row['left'], heights)
+                self.assertIn(row['right'], heights)
+                self.assertIn((row['left']+row['right'])/2, heights)
+
     def test_collision_evidence_survives_changes_to_profile_knots(self):
         # Remove the candidate tables: known failures must come from the
         # evidence, not happen to survive as the current profile's edges.

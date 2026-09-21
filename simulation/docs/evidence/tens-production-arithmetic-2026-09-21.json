@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "model": "simulation.running:OperatingCurta",
+  "scope": "Three production-root arithmetic regressions; not whole-machine acceptance",
+  "framework_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "production_adoption_commit": "c603b8d",
+  "source_check": "simulation/running.py and simulation/test_running.py remain unchanged from production adoption at capture",
+  "tests": [
+    "simulation.test_running.RunningCurtaTest.test_manual_calibration_carries",
+    "simulation.test_running.RunningCurtaTest.test_subtraction_borrows_through_both_registers_and_addition_undoes_it",
+    "simulation.test_running.RunningCurtaTest.test_independent_inputs_and_two_successive_additions"
+  ],
+  "passed": 3,
+  "elapsed_seconds": 10042.779,
+  "log": "_build_checks/tens-production-arithmetic.log",
+  "log_sha256": "f147092d11f45cbe612a405bde13ad304483386ecfe0d47e2e85f111febe0fa9",
+  "limitations": [
+    "Elapsed time is an observation under concurrent load, not a controlled benchmark",
+    "Counter and remaining-result-bank trial arithmetic runs are separate and not implied by this result",
+    "No unchecked whole-project task is completed by these three tests"
+  ]
+}

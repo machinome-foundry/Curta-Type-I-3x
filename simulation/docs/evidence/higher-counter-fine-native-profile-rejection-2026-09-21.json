@@ -1,0 +1,163 @@
+{
+  "status": "interrupted-after-confirmed-rejection",
+  "reason": "Superseded profile already rejected by complete faceted sweep; partial native result corroborates collisions. Replaced with full native run of lower-edge refinement.",
+  "source_sha256": {
+    "higher_counter_locking_profiles.py": "ad255b61cc1c6b3ea252ff13c0f7357c4e6c727e4c63576a4bff2fc1615afffd",
+    "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+    "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367"
+  },
+  "last_progress": {
+    "carry": 0.5,
+    "shaft_complete": 424.0,
+    "checked": 9249,
+    "failures": 16
+  },
+  "admitted_collisions": [
+    {
+      "carry": 0.5,
+      "shaft": 182.0,
+      "crank": 98.23833236694335,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.0004787280609345045,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 182.0,
+      "crank": 98.23933236694336,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.00046112092027989616,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 183.0,
+      "crank": 98.23833236694335,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.0005160543348856512,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 183.0,
+      "crank": 98.23933236694336,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005160543348853748,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 254.0,
+      "crank": 98.23833236694335,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.00047875491323296783,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 254.0,
+      "crank": 98.23933236694336,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0004611472443824481,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 255.0,
+      "crank": 98.23833236694335,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.00051611490216826,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 255.0,
+      "crank": 98.23933236694336,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005161149021681019,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 326.0,
+      "crank": 98.23899993896484,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.0004794385894442429,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 326.0,
+      "crank": 98.23999993896484,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.00046180862767103057,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 327.0,
+      "crank": 98.23899993896484,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.000542718700172088,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 327.0,
+      "crank": 98.23999993896484,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005427187001721385,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 398.0,
+      "crank": 98.27813873291015,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.00046891944791603677,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 398.0,
+      "crank": 98.27913873291016,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0004516280519800791,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 399.0,
+      "crank": 98.27813873291015,
+      "kernel": "native",
+      "gap": 0.0,
+      "common_mm3": 0.0012919969868289965,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 399.0,
+      "crank": 98.27913873291016,
+      "kernel": "native",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0012850691082953655,
+      "failure": true
+    }
+  ],
+  "log": "_build_checks/higher-counter-fine-admission-native.log",
+  "log_sha256": "5281ca7af06668e4176bf3586f3905c82e279f2e349d294a054094bb9d811e99"
+}

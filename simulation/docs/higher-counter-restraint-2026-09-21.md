@@ -99,7 +99,8 @@ does not include the separately reported candidate law tests.
 
 The fine-tooth candidate's expanded faceted check completed **15,519 poses
 with 40 admitted collisions** in `higher-counter-fine-admission-faceted.log`.
-Its native sweep remains running under that original profile identity.
+Its native sweep was later interrupted after independently confirming 16
+collisions under that original profile identity; it is not a completed pass.
 The [rejection record](evidence/higher-counter-fine-profile-rejection-2026-09-21.json)
 retains all 40 poses and source/log hashes. A dedicated numerical regression
 fails all 40 assertions before further profile changes
@@ -140,12 +141,75 @@ The emitted profile SHA-256 is
 All 40 recorded collision refusals and the five earlier free poses pass on
 this profile; the full law regression passes **5/5 in 43.147 s**, including
 21,630 ordinary source-path samples
-(`higher-counter-law-lower-edge-refined.log`). A fresh complete faceted sweep is
-running in `higher-counter-lower-edge-admission-faceted.log`. These are not
-yet geometry acceptance. The checker now retains collision evidence even if
+(`higher-counter-law-lower-edge-refined.log`). The revised candidate's complete
+configured faceted sweep passes **15,714 admitted poses with zero common**
+in `higher-counter-lower-edge-admission-faceted.log`. This finite check is
+not native or operating acceptance. The checker now retains collision evidence even if
 later profile knots move: its new retention test fails first, then the
 sampling/compiler/component group passes **12/12 in .063 s**
 (`higher-counter-failure-retention-{red,green}.log`).
+
+The new native edge-only check completes **175 admitted poses, zero positive
+commons**, at those ten shafts and half/full carry
+(`higher-counter-lower-edge-admission-native-targeted.log`). This is targeted
+validation, not the full native matrix. The old native sweep used the
+earlier fine-tooth profile and independently reproduced 16 collisions. It
+was intentionally interrupted after rejection was established; its
+[partial evidence](evidence/higher-counter-fine-native-profile-rejection-2026-09-21.json)
+preserves all observed failures, the last progress row and interrupted log
+hash. A full native sweep of the revised profile now runs as
+`higher-counter-lower-edge-admission-native.log`. Neither run's results may
+be attributed to the other's profile.
+
+## Axial-support admission checks
+
+The checker's optional `--support-heights` matrix retains quarter/three-quarter
+carry, both sides and the midpoint of each independently measured native and
+faceted axial bracket, and the nominal −.6/.3/.9 mm support planes with
+±.001 mm samples. The former default 0/.5/1 heights remain unchanged; explicit
+`--carry` cannot be combined with this option. A missing-helper test fails
+first, then all **13 sampling/compiler/component tests pass in .047 s**
+(`higher-counter-support-sampling-{red,green}.log`). The header now also pins
+the checker and support-evidence hashes.
+
+Both kernels are checking these heights at twenty actual counter-tens shaft
+positions: 114, 156, 166 and 182 degrees, repeated at each of the five flats
+with 72-degree offsets. These include the indexed flat, the mixed-contact
+region, the earlier false-stop pose and the lower-disc edge. Each tests the
+existing angular grid and all applicable profile boundaries. Logs are
+`higher-counter-support-heights-{native,faceted}.log`. Faceted completes
+**7,094 admitted poses, zero positive common**; native remains running.
+The [scoped geometry record](evidence/higher-counter-lower-edge-admission-2026-09-21.json)
+pins each completed run's actual header, summary, source identities and log
+hash. These finite poses do not establish height-independent clearance or
+prove the other four higher-counter stations.
+
+## Other higher-counter station frames
+
+The measuring CLI now accepts `--station 2..6`. It measures each complete
+source-backed station, not a rotated tens surrogate. All five higher counter
+channels declare the same raw axial law, −1.8 + 4.2 × carry, in
+`standard/channels.py`. The measured input/carry timing advances 20° per
+station while the indexed shaft phase retreats 20°. To ask the tens-frame
+candidate at station N, only its numeric query is registered by
+crank − 20(N−2), shaft + 20(N−2); the geometry reader receives the original
+machine crank and shaft values. This is a transfer hypothesis to challenge,
+not a declaration that the source bodies are identical.
+
+The frame test fails first on the unsupported station argument, then all
+**14 sampling/compiler/component tests pass in .115 s**
+(`higher-counter-station-chart-{red,green}.log`). It checks all five offsets,
+the unchanged geometry-query pose and rejection of ones/out-of-range
+stations. The faceted diagnostic at stations 3..6 passes carry 0/.5/1 and
+the same twenty chart positions per station: **787, 787, 839 and 839 admitted
+poses**, respectively, with zero positive common. The
+[station evidence](evidence/higher-counter-later-stations-faceted-2026-09-21.json)
+pins the per-station headers and summaries of
+`higher-counter-later-stations-faceted-diagnostic.log`. This does not replace
+the per-station full matrix, other heights or native verification. Full
+configured faceted sweeps are now queued in station order 3..6 as
+`higher-counter-station-N-admission-faceted.log`; the queue stops if a station
+fails rather than treating its successor's result as a substitute.
 
 ## Remaining acceptance
 

@@ -2,8 +2,9 @@
 
 The active objective remains completion of the operating Curta under
 `simulate-the-curta`. This is incremental evidence, not delivery or a waiver
-of any of the eleven unchecked tasks. The production tens restraint is not
-yet adopted at this checkpoint.
+of any of the eleven unchecked tasks. The chronological entries below start
+before production tens adoption; the later adoption and final arithmetic
+results are recorded explicitly in their own section.
 
 Environment: framework `c5ca365616251bd4649dc344cb7f00f97afdf832`, viewer
 `a1ae12dc3ca7c09638898c22501542b123b78acc`. The framework head has advanced
@@ -251,14 +252,13 @@ preserved. `HigherOperatingTrial` only inherits the default root; it no
 longer redeclares the bound or substitutes a separate subtree.
 
 The prior production red is still retained as `higher-t07-production-red.log`
-(completed instead of blocked, 66.318 s). New production acceptance is
-running, not yet a pass:
+(completed instead of blocked, 66.318 s). Production acceptance results:
 
 - `tens-production-operating.log`: all three stop/free-support cases, with
   stopped/idle banks in `tens-production-python-acceptance.json` on completion.
   all three pass **3/3 in 2119.774 s**;
 - `tens-production-arithmetic.log`: the same three arithmetic cases on the
-  actual default root;
+  actual default root pass **3/3 in 10042.779 s**;
 - `tens-production-ones-regression.log`: the unchanged ones/pawl stop,
   geometry, relief and replay test against the default root with the new bell
   passes **1/1 in 1403.527 s**;
@@ -304,11 +304,11 @@ No viewer or framework mutation was performed for this adoption.
 The [production Python banks](evidence/tens-production-python-acceptance-2026-09-21.json)
 are now complete. All four 213-coordinate stopped/idle banks match both the
 old trial and the fresh production browser **exactly**, checked independently
-from the saved values. Production neighbouring arithmetic is still running;
-its page-53 calibration and subtraction/overflow-undo cases now pass, with
-successive-addition/selective-clearing still pending in that invocation.
-the previously completed three-case trial arithmetic gate is not relabelled
-as that production invocation. This implementation step does not close any
+from the saved values. Production neighbouring arithmetic now passes all
+three cases, including successive addition/selective clearing, in
+**10042.779 s**. The [production arithmetic record](evidence/tens-production-arithmetic-2026-09-21.json)
+pins the completed log and distinguishes it from the previously completed
+three-case trial gate. This implementation step does not close any
 whole-project task or adopt higher-result-bank/counter restraints.
 
 Additional supplied-video samples at 42:30–43:30 and 43:30–44:30 (two-second
@@ -403,7 +403,16 @@ sweep finishes with 40 failures in 15,519 poses, all preserved as regression
 evidence. Complete-print boundary measurements identify a held lower-disc
 endpoint; ten added edge curves now refuse those collisions without blocking
 the five earlier free poses. The new isolated profile is under fresh geometry
-verification; the old native sweep remains identifiable by its source hash.
+verification. The old native sweep independently confirmed 16 collisions
+before intentional interruption, with all partial evidence retained; a full
+native sweep of the revised profile replaces it. Targeted native edge checks
+pass 175 admitted poses. Intermediate carry-height checks now run in both
+kernels, including the measured axial-support brackets on all five flats.
+The revised counter-tens faceted sweep passes 15,714 poses and its separate
+support-height sweep passes 7,094. The corresponding native runs remain
+open. The first faceted transfer diagnostic passes 787/787/839/839 admitted
+poses on counter stations 3/4/5/6; full station sweeps are queued. These
+remain finite geometric checks, not bank-wide operating adoption.
 
 At the pilot's request, viewer-owned OpenSpec change
 `keep-expression-references-valid` is prepared for approval, with proposal,
