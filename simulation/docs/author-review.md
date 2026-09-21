@@ -101,7 +101,13 @@ source pivots, keyed cores and axial extents are retained. Sixty indexed
 poses clear and 300 two-sided locking poses retain contact in both kernels.
 Protected-material and connected-print checks pass. Ordinary motion now passes
 12,645 complete-print poses across all six candidate stations in both kernels.
-Counter profile admission and actual operating/browser restraints remain unproved.
+The fixed-height ones profile now passes 11,858 admitted poses per kernel;
+its isolated full-machine short/long stops pass native/faceted contact,
+replay and relief checks. An independent browser run reaches the same stop
+angles with replay/relief/idle/retry and no page errors. Full retained-bank
+Python/browser comparison and ordinary trial arithmetic are still running.
+Higher-counter profiles and operating restraints remain unproved; the three
+sampled tens heights already show changing contact windows.
 No production counter geometry or upstream CAD changes from this candidate;
 it is neither a physical-build failure claim nor a manufacturing recommendation.
 

@@ -352,8 +352,27 @@ browser check reaches the prepared crank 170° / counter shaft 167.6° but
 times out taking its first screenshot, before either stop request
 (`counter-operating-trial-browser.log`). Its incomplete report is preserved
 as `_build_counter_ones_trial/counter-browser-capture-timeout.json`; it is not
-acceptance. A retry with a finite 60 s capture deadline is running in
-`counter-operating-trial-browser-retry.log`.
+acceptance. A retry with a finite 60 s capture deadline **passes**, exit 0
+(`counter-operating-trial-browser-retry.log`). Both short/long requests stop
+at exactly the Python stop angles above, replay exactly, admit .05° relief,
+retain the relieved state during an idle step, and stop again on retry. Its
+[complete browser report](evidence/counter-ones-browser-acceptance-2026-09-21.json)
+contains all 213 coordinates per state and zero page errors. Both fresh
+prepared/stopped screenshots were inspected: the complete assembly renders,
+the crank is lifted and readback advances from 170° to 174.7854°. These images
+do not expose or prove the internal contact clearances. The tested document
+SHA-256 is `0ab407640bcda4aee8f0e79e264a4bbd7d6857939fb1149c896e53faf719f648`;
+viewer bundle SHA-256 is
+`5f3ec29aede4934106bb0cbbdaa7454dcec39d2ba04a233f431a4ce279fef610`.
+
+The completed original Python stop test did not record full banks or idle
+steps. Its extended invocation now adds those assertions and optional report
+capture (`CURTA_COUNTER_ACCEPTANCE_REPORT`); it is running separately in
+`counter-operating-trial-idle-banks.log`. No cross-executor full-bank parity
+is claimed before that report exists and compares exactly. The three-case
+page-53/subtraction/successive-addition-and-clearing arithmetic suite is also
+running against the isolated trial through a temporary test-class patch,
+with production tests unchanged (`counter-operating-trial-arithmetic.log`).
 This is a browser request/render probe, not physical-pointer or mesh-clearance
 acceptance. Its Playwright Promise evaluation and local-file interception
 follow the official Python API documentation fetched through Context7.

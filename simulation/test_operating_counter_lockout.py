@@ -1,5 +1,8 @@
 """The actual crank must stop when a withdrawn counter input leaves a flank."""
 
+import json
+import os
+from pathlib import Path
 import unittest
 
 from machinome.simulation import Sim
@@ -12,6 +15,16 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 class OperatingCounterLockoutTest(unittest.TestCase):
     model = OperatingCurta
+
+    @classmethod
+    def setUpClass(cls):
+        cls.acceptance = []
+
+    @classmethod
+    def tearDownClass(cls):
+        output = os.environ.get('CURTA_COUNTER_ACCEPTANCE_REPORT')
+        if output:
+            Path(output).write_text(json.dumps(cls.acceptance, indent=2)+'\n')
 
     def test_withdrawn_counter_stops_short_and_long_crank_requests(self):
         sim = Sim(self.model(), dt=.1, meshes=True, record=16)
@@ -33,6 +46,7 @@ class OperatingCounterLockoutTest(unittest.TestCase):
             self.assertTrue(any(stop.coordinate == 'main_drive.crank.turn'
                                 and stop.bound == 'low' for stop in sim.stops))
             stopped = sim.snapshot()
+            stopped_state = dict(sim.state)
             shapes = world_solids(sim.node, selected={UPPER, BELL})
             leaves = dict(rigid_leaves(sim.node))
             meshes = {path: mesh_solid(leaves[path].mesh) for path in (UPPER, BELL)}
@@ -51,7 +65,14 @@ class OperatingCounterLockoutTest(unittest.TestCase):
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
             self.assertEqual(sim.snapshot(), stopped)
             self.assertEqual(sim.move('crank_rotation', by=-.05).status, 'completed')
+            sim.run(.1)
+            self.assertAlmostEqual(sim.state['crank_rotation'], stop_angle-.05, places=7)
+            self.assertAlmostEqual(sim.state[SHAFT], 167.6, places=9)
+            idle_state = dict(sim.state)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
+            self.assertAlmostEqual(sim.state['crank_rotation'], stop_angle, places=7)
+            self.acceptance.append({'target': target, 'stopped': stopped_state,
+                                    'idle': idle_state, 'replay': True})
             print(f'PASS counter withdrawal: target={target}, stop={stop_angle}', flush=True)
 
 
