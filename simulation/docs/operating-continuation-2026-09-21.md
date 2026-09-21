@@ -16,7 +16,12 @@ The handoff's interrupted trial arithmetic gate is rerunning as
 `_build_checks/higher-t07-trial-arithmetic-resumed.log`, against
 `HigherOperatingTrial` through a temporary `unittest.mock.patch.object` of
 the test module's `OperatingCurta`. The original interrupted log is preserved.
-No arithmetic pass is claimed until the new process completes.
+The complete arithmetic gate is not passed until all three cases complete.
+
+The manual-calibration case has now completed successfully. The process has
+advanced to subtraction/borrow and addition undo; the later independent-input
+and successive-addition case is still queued. One passed case is not the
+three-case adoption gate.
 
 A separate bounded diagnostic queues an empty 360° turn over two seconds
 on `Sim(HigherOperatingTrial(), dt=.1)` and runs only its first .1 second.
@@ -169,3 +174,12 @@ Reproducible contact sheets are retained under `_build_checks/` as
 `clearing-loop-clip-sequence.png`, and
 `clearing-loop-late-video-overview.png`. Their observations are not a claim
 to have examined every frame of the video.
+
+## Counter-side continuation
+
+The [counter investigation](counter-lockout-investigation-2026-09-21.md)
+adds independently calibrated source instruments for all six counter
+stations. It records a new parked-indexed clearance failure on every station,
+and a bounded T08 outer-skin candidate that passes indexed clearance,
+protected-material and two-sided engagement checks. That candidate remains
+isolated; no counter restraint or operating fit has been adopted.

@@ -85,6 +85,19 @@ work. The [checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.json)
 retains all 100 measured poses. These small rigid-simulation overlaps do not
 establish that the author's physical builds fail.
 
+## Counter lockout trial — T08, not adopted
+
+The [counter investigation](counter-lockout-investigation-2026-09-21.md)
+records indexed-position native contact on all six counter stations with the
+existing .15 mm fit. The isolated **T08** candidate increases only their
+outer-profile relief to .16 mm and refines the complete upper-print meshes;
+source pivots, keyed cores and axial extents are retained. Sixty indexed
+poses clear and 300 two-sided locking poses retain contact in both kernels.
+Protected-material and connected-print checks pass. Counter profile admission,
+ordinary motion and actual operating/browser restraints remain unproved.
+No production counter geometry or upstream CAD changes from this candidate;
+it is neither a physical-build failure claim nor a manufacturing recommendation.
+
 ## Assembly, source-representation and motion corrections — not new prints
 
 | ID | Correction or explicit assumption | Record |

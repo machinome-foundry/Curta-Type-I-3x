@@ -103,6 +103,20 @@ friction, spring-force prediction, or fabrication certification.
 
 ## Findings
 
+### Counter lockout indexed fit — 2026-09-21
+
+The counter's six source-backed upper prints match the independently posed
+retained root, but each has a tiny native common at its third indexed flat
+with the existing .15 mm simulation fit. The parked-crank test fails 19
+kernel/pose checks; meshes miss several native contacts. The isolated T08
+.16 mm outer-skin candidate clears all 60 indexed poses while preserving
+the keyed cores, axial extents, connected material and 300 two-sided locking
+poses. It is not adopted: counter contact profiles, ordinary motion and
+actual-root/browser wrong-order acceptance remain open. See the
+[counter investigation](../../../simulation/docs/counter-lockout-investigation-2026-09-21.md).
+This does not establish a fault in the author's printed machine or recommend
+a manufacturing tolerance; upstream CAD remains untouched.
+
 ### Operating ones-lockout adoption — 2026-09-20/21
 
 Framework `e63700e` and viewer `e82b521` resolve the periodic first-contact
