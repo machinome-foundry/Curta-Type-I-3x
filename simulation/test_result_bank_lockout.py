@@ -12,6 +12,16 @@ from simulation.tools.result_bank_lockout_probe import STATIONS, station_bench, 
 
 
 class ResultBankFixtureTest(unittest.TestCase):
+    def test_station_exports_keep_distinct_root_and_trial_channel_identities(self):
+        for trial in (False, True):
+            with self.subTest(trial=trial, level='root'):
+                self.assertEqual(len({station_bench(station, trial)().uniq_id
+                                      for station in range(2, 12)}), 10)
+        self.assertEqual(len({station_bench(station, trial)().uniq_id
+                              for station in range(2, 12) for trial in (False, True)}), 20)
+        self.assertEqual(len({station_bench(station, True)().shaft.uniq_id
+                              for station in range(2, 12)}), 10)
+
     def test_positive_spatial_volume_is_retained_even_below_roundoff_of_a_plane(self):
         common = manifold.Manifold.cube((1e-6, 1e-6, 1e-6))
         self.assertGreater(common.volume(), 0)

@@ -48,9 +48,9 @@ identity test fails **1 != 6** (1.656 s); the channel now declares its source
 station too, and the test passes (1.667 s). Logs:
 `counter-lockout-channel-identity-{red,green}.log`. Native/memory measurements
 use each actual placed child and are unaffected by this SCAD-reference issue.
-The analogous generated result-bank enclosing/root export identities need
-the same check before result-bank instrument exports are relied on; its
-ongoing dense measurements use the already corrected rigid child identities.
+The analogous generated result-bank enclosing/root identity issue was then
+reproduced and corrected separately; its dense measurements use the already
+corrected rigid children. See the operating continuation record.
 
 ## Indexed contact before a candidate fit
 
@@ -113,3 +113,56 @@ are `_build_checks/counter-ones-t08-contact-view.png` and
 shaft, complete upper and lower prints, and bell in their separate installed
 frames. Their pixels establish the assembly view, not clearance of the tiny
 contacts quantified above.
+
+## Ordinary passage and independent contact timing
+
+Freezing an engaged carry gear is a negative control, not ordinary motion.
+At each higher counter's tooth midpoint (crank 204°, 224°, 244°, 264°, 284°),
+the frozen initial shaft has approximately **2.9283 mm³** native contact;
+advancing it by the source passage's 36° makes both complete-print kernels
+clear. All five stations reproduce this contrast. Log:
+`counter-carry-motion-control-probe.log`.
+
+`test_counter_bank_lockout.py` now samples ordinary source tooth trajectories
+for counts 0, 1 and 9, five starting flats and carry fractions 0, .5 and 1.
+It includes input/carry entry, midpoint and exit angles as well as a 10° grid.
+An initial candidate run is scoped to ones and tens through temporary test
+patches, not production edits, in
+`counter-trial-ordinary-motion-ones-tens.log`. It passes **2/2 tests in
+1112.536 s**: the negative control and **4,125 complete-print poses** in both
+kernels (90 flat/count/height cases). The corresponding run for stations
+3–6 is now active in `counter-trial-ordinary-motion-stations-3-6.log`.
+No whole-bank motion acceptance follows until that run also completes.
+
+The counter's bell ingredients are not rigid copies of the result-side ones.
+`tools/compare_counter_profiles.py` reads the original native parts and
+compares candidate registrations without altering them:
+
+| Native ingredient | Result volume, mm³ | Counter volume, mm³ |
+| --- | --- | --- |
+| upper locking disc | 2849.553368 | 2891.484231 |
+| lower locking disc | 4511.217197 | 4572.692667 |
+| carry ring | 2033.363220 | 2033.075111 |
+
+The tested 0°, 180°, 181.25° and 182° registrations all retain material
+differences. Some working surfaces could nevertheless coincide; whole-solid
+non-equivalence does not establish every contact curve's shape. It means
+rigid congruence cannot justify simply copying a result contact table. The
+committed probe reproduces the initial readings byte-for-byte in
+`counter-result-profile-shape-comparison-tool.log`.
+
+`tools/counter_locking_envelope.py` therefore measures complete counter
+prints independently. At ones shaft **167.6°**, the native closing bracket is
+**174.885711670..174.885749817°**, while the mesh closes slightly earlier at
+**174.884986877..174.885025024°**. At raised tens shaft **147.6°**, the sampled
+opening and closing brackets are exactly 20° later in both kernels. This
+single-pose agreement does not establish a shared profile. Logs:
+`counter-ones-partial-envelope.log` and
+`counter-tens-raised-partial-envelope.log`.
+
+A coarse ones profile collection is running over shaft 134..494° in 6°
+steps, with a 5° crank grid and bracket refinement in both kernels, in
+`counter-ones-upper-envelopes-coarse.log`. The finite grid can miss narrow
+islands; support-band measurement, refined/between-knot checks and retained
+operating action-order evidence are still required. No counter law is adopted
+or proposed as settled by this collection.

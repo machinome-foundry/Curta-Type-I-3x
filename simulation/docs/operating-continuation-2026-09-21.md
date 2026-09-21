@@ -33,6 +33,14 @@ pass or proof that every later step terminates. The original three-case
 acceptance process is left uninterrupted. An optional debugger attachment
 was unavailable in the host and did not alter the process.
 
+The corresponding existing-production step was also measured: initialization
+8.745 s, step 17.214 s, driver +18° / physical crank −18°, both registers still
+zero and the longer command active. Log:
+`_build_checks/operating-timed-first-step-baseline.log`. These are individual
+observations under concurrent load, not a controlled benchmark or a diagnosed
+framework defect. No framework change follows from them without its separate
+authorization and cycle.
+
 ## Result-bank measuring fixture correction
 
 The first bank-wide .16 mm trial revealed an error in the diagnostic factory,
@@ -143,7 +151,8 @@ all **230/230** residual poses, with exactly zero
 native and measured mesh volume at every one; see
 `result-bank-planar-common-native-recheck.log`. The clean complete faceted
 sweep now passes **23,556/23,556** admitted poses, across carry 0, .5 and 1.
-Its native counterpart is still running, logged separately as
+Its native counterpart has also completed with **23,556/23,556** passing;
+the two logs are
 `result-station-3-profile-certified-{faceted,native}.log`.
 
 Fresh isometric and axial views of the refined tens trial at shaft 131°,
@@ -158,6 +167,21 @@ The final focused regression run passes **7/7 in 75.476 s**: all three
 contracts. Log: `_build_checks/continuation-fixture-support-suite.log`.
 The original production bank clearance test remains red and is not included
 in this scoped green claim.
+
+The counter investigation then exposed a second factory identity issue:
+non-rigid generated roots/channels shared SCAD artifact names despite their
+distinct rigid children. The result factory's regression reproduces it
+with three failures (2.414 s). Explicit station/fit identities now distinguish
+all twenty source/trial roots and ten trial channels. The expanded fixture,
+material, planar-common and original-tens parity checks pass **5/5 in
+34.554 s**; logs are `result-bank-export-identities-{red,green}.log`.
+No part, placement or law changed. The completed hundreds measurements use
+the already corrected rigid children and are unaffected by this export fix.
+
+A sequential batch is now checking the refined tens station (faceted then
+native), followed by faceted admission at stations 4–11. Logs use
+`result-station-N-profile-certified-KERNEL.log`; only completed terminal
+records count as passes. This is not bank-wide adoption.
 
 ## Further clearing-loop observation
 

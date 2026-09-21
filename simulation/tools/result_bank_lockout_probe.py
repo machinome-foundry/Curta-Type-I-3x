@@ -50,11 +50,14 @@ def station_bench(station, trial=False):
             pentagonal_lockout = TrialTensLockout()
 
         class TrialChannel(channel):
+            source_station = Count(station, min=station, max=station)
             locals()[upper_name] = TrialUpper(travel=Prismatic(axis=(0, 0, -1)))
 
         channel = TrialChannel
 
     class ResultStation(AssemblyNode):
+        source_station = Count(station, min=station, max=station)
+        trial_fit = Count(int(trial), min=int(trial), max=int(trial))
         shaft_angle = Driver(default=4-20*(station-1), unit='deg')
         crank_angle = Driver(default=0, unit='deg')
         carry_position = Driver(default=0, range=(0, 1))
