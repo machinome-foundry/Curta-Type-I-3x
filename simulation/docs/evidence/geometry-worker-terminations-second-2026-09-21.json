@@ -117,7 +117,22 @@
     ],
     "incomplete_case": "test_independent_inputs_and_two_successive_additions",
     "exit_code": null,
-    "log": "_build_checks/counter-operating-trial-arithmetic.log"
+    "log": "_build_checks/counter-operating-trial-arithmetic.log",
+    "log_sha256": "1fc1fa81bc8850d7f197e096057bdb71082071e63cabfaac46fed51c6bb8ad77"
   },
+  "result_bank_arithmetic": {
+    "pid": 1813221,
+    "session": 63515,
+    "status": "terminated-before-batch-completion",
+    "exit_code": 143,
+    "output": "Terminated",
+    "completed_cases": ["test_manual_calibration_carries"],
+    "incomplete_case": "test_subtraction_borrows_through_both_registers_and_addition_undoes_it",
+    "unstarted_case": "test_independent_inputs_and_two_successive_additions",
+    "log": "_build_checks/result-bank-operating-trial-arithmetic.log",
+    "log_sha256": "671e71f975130b084a8cfc6563b1b1af6686a81d6842a1f3108415463ea6ddf4"
+  },
+  "final_process_check_utc": "2026-09-21 19:39:40",
+  "live_curta_processes_at_final_check": 0,
   "next_action": "Preserve results; ask whether interruption is intentional before repeating full long runs"
 }

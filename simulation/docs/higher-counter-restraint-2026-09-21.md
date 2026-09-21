@@ -365,4 +365,8 @@ The next station-6 worker and both newer native queues subsequently receive
 SIGTERM before completion; the counter-ones arithmetic process also disappears
 with no terminal summary. No additional pass is inferred. Repeated full
 restarts are held while the unexpected interruption is clarified; the live
-result-bank arithmetic process remains untouched.
+result-bank arithmetic process remained untouched at that checkpoint. It
+subsequently also terminates with exit 143 after passing page-53 calibration,
+during subtraction/undo. At 19:39:40 UTC no Curta test process remains live;
+the [second interruption record](evidence/geometry-worker-terminations-second-2026-09-21.json)
+pins both incomplete arithmetic logs and their completed individual cases.

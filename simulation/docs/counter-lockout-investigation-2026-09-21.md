@@ -378,12 +378,14 @@ The Python report SHA-256 is
 `113d241d40144a4384de16b7ecd544553b9b3023e7ebee94ba752551b897874b`;
 its log SHA-256 is
 `0e3631bb95c3f7b4141184f0e2d76d175f469e5fc501f31c54a9f814d77d549f`.
-The three-case
-page-53/subtraction/successive-addition-and-clearing arithmetic suite is also
-running against the isolated trial through a temporary test-class patch,
+The three-case page-53/subtraction/successive-addition-and-clearing arithmetic
+suite ran against the isolated trial through a temporary test-class patch,
 with production tests unchanged (`counter-operating-trial-arithmetic.log`).
-The page-53 calibration case has now passed; subtraction/overflow undo and
-successive-addition/selective-clearing still await terminal results.
+Page-53 calibration and subtraction/overflow undo both passed. The process
+then disappeared during successive-addition/selective-clearing without a
+terminal summary, so the batch is incomplete and adoption remains gated.
+The [interruption record](evidence/geometry-worker-terminations-second-2026-09-21.json)
+preserves the log hash; the process is not still running.
 This is a browser request/render probe, not physical-pointer or mesh-clearance
 acceptance. Its Playwright Promise evaluation and local-file interception
 follow the official Python API documentation fetched through Context7.

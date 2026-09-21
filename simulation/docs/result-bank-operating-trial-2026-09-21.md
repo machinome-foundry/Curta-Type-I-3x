@@ -193,4 +193,11 @@ pins both logs alongside the counter workers interrupted at the same
 checkpoint. Previously completed native stations 2..7 and 9 are unaffected.
 A separate full-matrix retry queue now schedules result 8/10/11 after the
 counter-tens retry, writing `result-station-N-profile-certified-native-retry-1.log`
-without overwriting the old logs. The isolated arithmetic batch remains live.
+without overwriting the old logs. Those retry queues subsequently terminate
+again before completion, as recorded in the
+[second interruption checkpoint](evidence/geometry-worker-terminations-second-2026-09-21.json).
+The isolated arithmetic worker later also terminates with exit 143: page-53
+calibration passed, subtraction/undo was unfinished, and the third case had
+not started. No batch acceptance is claimed. At the final 19:39:40 UTC check,
+no Curta test process remains live; long retries await clarification of the
+repeated unexpected termination rather than overwriting or trusting partial logs.
