@@ -70,9 +70,20 @@ and axial entry, with exact replay, reverse relief and complete-print
 stop/overtravel checks. Python and an isolated browser agree; ordinary source
 tooth trajectories remain admitted. Native-only release measurement first
 missed both a mesh contact and an isolated native Boolean blind spot; the
-combined profile is undergoing dense verification and carry-tooth support
-refinement. Actual-root adoption remains open; this is not a manufacturing
+combined profile now passes dense verification, carry-tooth support refinement
+and full-tree Python/browser acceptance with exact retained-bank agreement.
+Actual-root adoption and neighbouring arithmetic acceptance remain open; see
+the [fresh-agent checkpoint](handoff-2026-09-21.md). This is not a manufacturing
 recommendation.
+
+The new independently placed result-bank probe also finds indexed contact on
+all ten higher result stations with the existing .15 mm simulation fit:
+normalized flat 3, both carry seats. The complete-print indexed test is red
+with 30 kernel/station/seat failures. No bank-wide .16 mm fit or shared
+restraint is adopted; its trial and engagement/admission checks remain next
+work. The [checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.json)
+retains all 100 measured poses. These small rigid-simulation overlaps do not
+establish that the author's physical builds fail.
 
 ## Assembly, source-representation and motion corrections — not new prints
 

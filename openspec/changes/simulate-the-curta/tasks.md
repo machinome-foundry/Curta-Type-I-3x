@@ -1,5 +1,13 @@
 ## Current continuation — finish operating Curta, 2026-09-19
 
+**Fresh-agent checkpoint, 2026-09-21:** start with
+`simulation/docs/handoff-2026-09-21.md`. The refined T07 full-tree trial now
+passes Python/browser acceptance and exact 213-coordinate parity, but is not
+adopted in the default root. Its new default-root test is intentionally red.
+The new result-bank probe also records indexed-fit failures before any bank
+adoption. A separate arithmetic batch was interrupted for the pilot-requested
+handoff and is not acceptance. No task checkbox changed; 12/23 remain complete.
+
 The pilot requested completion of the operating model task by task after the
 clocked sibling. The work order and new red/green evidence are recorded in
 `simulation/docs/operating-curta-completion-2026-09-19.md`. The manifest now

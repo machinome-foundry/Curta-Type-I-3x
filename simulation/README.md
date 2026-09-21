@@ -1,5 +1,9 @@
 # Curta simulation — implementation resumed
 
+**Fresh-agent starting point:** [2026-09-21 handoff](docs/handoff-2026-09-21.md).
+It distinguishes completed engine/trial validation from the still-unfinished
+operating model, with exact next actions and reproduction commands.
+
 There are now three sibling models: `fast_curta` (prescribed poses),
 `operating_curta` (`Time.running()`), and `clocked_curta` (event-committed
 registers using the framework's clocked-machine support). The

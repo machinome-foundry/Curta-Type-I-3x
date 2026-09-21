@@ -73,22 +73,23 @@ def component_contacts(carry, crank, shaft, node_type=HigherLockoutBench):
     return found
 
 
-def contact_reader(carry=0, reference=140, shaft=169.6, node_type=HigherLockoutBench):
+def contact_reader(carry=0, reference=140, shaft=169.6, node_type=HigherLockoutBench,
+                   *, stack_path=STACK, bell_path=BELL):
     node = node_type()
     node.set_state(shaft_angle=shaft, crank_angle=reference, carry_position=carry, time=0)
     node.assemble()
     node.build_stls()
-    native = world_solids(node, selected={BELL, STACK})
+    native = world_solids(node, selected={bell_path, stack_path})
     leaves = dict(rigid_leaves(node))
-    faceted = {path: mesh_solid(leaves[path].mesh) for path in (BELL, STACK)}
+    faceted = {path: mesh_solid(leaves[path].mesh) for path in (bell_path, stack_path)}
 
     def volume(crank, kernel):
         if kernel == 'native':
-            common = native[STACK].intersect(native[BELL].rotate(
+            common = native[stack_path].intersect(native[bell_path].rotate(
                 (0, 0, 0), (0, 0, 1), reference-crank))
             assert common.isValid()
             return common.Volume()
-        common = faceted[STACK] ^ faceted[BELL].rotate((0, 0, reference-crank))
+        common = faceted[stack_path] ^ faceted[bell_path].rotate((0, 0, reference-crank))
         assert common.status() == manifold.Error.NoError
         return common.volume()
     return volume

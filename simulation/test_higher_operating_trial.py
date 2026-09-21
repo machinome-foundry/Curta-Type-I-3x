@@ -10,6 +10,8 @@ from simulation.higher_operating_trial import HigherOperatingTrial
 
 
 class HigherOperatingTrialTest(unittest.TestCase):
+    model = HigherOperatingTrial
+
     @classmethod
     def setUpClass(cls):
         cls.acceptance = []
@@ -21,7 +23,7 @@ class HigherOperatingTrialTest(unittest.TestCase):
             Path(output).write_text(json.dumps(cls.acceptance, indent=2)+'\n')
 
     def check_withdrawal(self, carried):
-        sim = Sim(HigherOperatingTrial(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         if carried:
             for name, value in (('digit_1', 9), ('crank_rotation', 360), ('digit_1', 1)):
                 self.assertEqual(sim.move(name, to=value).status, 'completed')
@@ -60,7 +62,7 @@ class HigherOperatingTrialTest(unittest.TestCase):
         self.check_withdrawal(True)
 
     def test_real_carry_preparation_preserves_the_free_support_approach(self):
-        sim = Sim(HigherOperatingTrial(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         withdrawal = 360+133.5+(22.22+16)/(72/11.25)
         for name, value in (('digit_1', 9), ('crank_rotation', 360),
                             ('digit_1', 1), ('digit_2', 1),

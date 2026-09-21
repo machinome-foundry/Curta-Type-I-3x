@@ -108,17 +108,32 @@ all referenced rigid artifacts exist.
 - Viewer bundle: SHA-256
   `1098d52b62445f2a8ef6fece5ce38b4d9723ae1f8a6c74d21729668d4bb6d1aa`.
 
-The complete operating-tree carry checks are still running. T07 remains
-unadopted and the complete roadmap remains 12/23; this record does not mark
-any whole-machine task complete.
+## Full-tree acceptance completed; production adoption remains next
 
-The active full-tree run covers the two original raised/carried stop tests
-and writes `_build_checks/higher-refined-python-acceptance.json`. The new
-`test_real_carry_preparation_preserves_the_free_support_approach` runs
-separately because it was added after that suite started. Its log is
-`_build_checks/higher-t07-refined-full-free.log`; neither running invocation
-is counted as passed yet. The fresh complete export is
-`_build_higher_refined_operating/`, with browser acceptance recorded in
-`_build_checks/higher-t07-refined-full-browser.log`. Once both finish,
-compare all bank coordinates in its `carry-browser-acceptance.json` to
-the Python acceptance report before production adoption.
+The two original raised/carried stop tests pass **2/2, 1215.666 s**. Their
+report is `_build_checks/higher-refined-python-acceptance.json`. The new
+`test_real_carry_preparation_preserves_the_free_support_approach` also passes
+separately: **1/1, 657.766 s**, log
+`_build_checks/higher-t07-refined-full-free.log`.
+
+The fresh complete export `_build_higher_refined_operating/` passes all
+browser carry/withdrawal/short/long/replay/relief/free-support cases with no
+page errors. Its document SHA-256 is
+`15617702eb301b7b00f6e88448fabe4886d565c0d1977ae92aa22da3990b1b62`.
+All **213 coordinates at each of four stopped/idle states match Python
+exactly**, maximum difference zero. The free-support request reaches 506.3
+degrees and replays exactly. The three full-model screenshots were inspected;
+they confirm the assembly and poses, not hidden contact clearance.
+
+The default-root regression now independently fails as intended:
+`OperatingHigherLockoutTest.test_raised_tens_withdrawal_stops_the_actual_crank`
+reports completed instead of blocked (**66.318 s**). T07 is therefore still
+unadopted, not silently accepted in the production model. A neighbouring
+three-test arithmetic batch on HigherOperatingTrial was interrupted during
+its first test at the pilot's requested fresh-agent handoff (exit 130).
+**None of that batch is counted as passed.**
+
+The [handoff](handoff-2026-09-21.md) names the next adoption steps and remaining
+roadmap. [Checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.json)
+preserves comparison results and raw-log hashes. The roadmap remains 12/23;
+this increment does not mark any whole-machine task complete.
