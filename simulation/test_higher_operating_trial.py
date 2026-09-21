@@ -59,6 +59,25 @@ class HigherOperatingTrialTest(unittest.TestCase):
     def test_real_carry_then_withdrawal_stops_the_actual_crank(self):
         self.check_withdrawal(True)
 
+    def test_real_carry_preparation_preserves_the_free_support_approach(self):
+        sim = Sim(HigherOperatingTrial(), dt=.1)
+        withdrawal = 360+133.5+(22.22+16)/(72/11.25)
+        for name, value in (('digit_1', 9), ('crank_rotation', 360),
+                            ('digit_1', 1), ('digit_2', 1),
+                            ('crank_rotation', withdrawal), ('digit_2', 0)):
+            self.assertEqual(sim.move(name, to=value).status, 'completed')
+        shaft = 'transmission.result.tens.turn'
+        travel = 'transmission.result.tens.p_10220_410003_1_419227.travel'
+        self.assertAlmostEqual(sim.state[shaft], 22.22, places=7)
+        self.assertAlmostEqual(sim.state[travel], 0, places=7)
+        before = sim.snapshot()
+        self.assertEqual(sim.move('crank_rotation', to=506.3).status, 'completed')
+        self.assertAlmostEqual(sim.state[shaft], 22.22, places=7)
+        expected = sim.snapshot()
+        sim.restore(before)
+        self.assertEqual(sim.move('crank_rotation', to=506.3).status, 'completed')
+        self.assertEqual(sim.snapshot(), expected)
+
 
 if __name__ == '__main__':
     unittest.main()

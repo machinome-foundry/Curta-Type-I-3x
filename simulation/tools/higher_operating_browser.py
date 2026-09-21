@@ -107,6 +107,25 @@ def main():
                                   'replay': case['replay'], 'carry_replay': case['carryReplay']}),
                       flush=True)
             page.screenshot(path=str(build/'carry-withdrawal-relieved.png'))
+            report['free_support'] = page.evaluate('''async () => {
+                const run=curta.run(); await run.reset(); run.pause();
+                const withdrawal=360+133.5+(22.22+16)/(72/11.25);
+                for(const [input,to] of [['digit_1',9],['crank_rotation',360],
+                    ['digit_1',1],['digit_2',1],['crank_rotation',withdrawal],['digit_2',0]]) {
+                    const result=await run.move(input,{to});
+                    if(result.some(x=>x.status!=='completed')) throw Error(JSON.stringify(result));
+                }
+                const before=await run.snapshot();
+                const result=await run.move('crank_rotation',{to:506.3});
+                const state=run.state(), after=await run.snapshot();
+                await run.restore(before);
+                await run.move('crank_rotation',{to:506.3});
+                return {result,state,replay:JSON.stringify(after)===
+                    JSON.stringify(await run.snapshot())};
+            }''')
+            print(json.dumps({'free_support': report['free_support']['result'],
+                              'replay': report['free_support']['replay']}), flush=True)
+            page.screenshot(path=str(build/'carry-free-support.png'))
         finally:
             browser.close()
             (build/'carry-browser-acceptance.json').write_text(json.dumps(report, indent=2)+'\n')
@@ -114,6 +133,11 @@ def main():
     assert report['request']['error'] is None, report['request']['error']
     assert report['request']['result'][-1]['status'] == 'completed', report['request']
     assert report['request']['state']['crank_rotation'] == 360, report['request']
+    free = report['free_support']
+    assert free['result'][-1]['status'] == 'completed' and free['replay'], free
+    assert abs(free['state']['crank_rotation']-506.3) < 1e-7, free
+    assert abs(free['state']['transmission.result.tens.turn']-22.22) < 1e-7, free
+    assert abs(free['state']['transmission.result.tens.p_10220_410003_1_419227.travel']) < 1e-7, free
     for case in report['cases']:
         withdrawal = 500 if case['carried'] else 140
         angle = case['stopped']['crank_rotation']

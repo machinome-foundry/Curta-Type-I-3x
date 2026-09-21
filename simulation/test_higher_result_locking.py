@@ -26,6 +26,27 @@ class HigherResultLockingTest(unittest.TestCase):
 
 
 class HigherTrialActionOrderTest(unittest.TestCase):
+    def test_withdrawn_selector_can_reach_the_free_side_of_tooth_birth(self):
+        sim = Sim(HigherResultLocking(), dt=.1,
+                  state={'digit': 1, 'carry_latch': 4.2})
+        # The source one-tooth input begins at 133.5 degrees and advances
+        # 72/11.25 shaft degrees per crank degree. Stop it at shaft 22.22,
+        # then withdraw the selector. No retained coordinate is seeded.
+        withdrawal = 133.5+(22.22+16)/(72/11.25)
+        self.assertEqual(sim.move('crank_angle', to=withdrawal).status, 'completed')
+        self.assertEqual(sim.move('digit', to=0).status, 'completed')
+        self.assertAlmostEqual(sim.state['tens.turn'], 22.22, places=8)
+        saved = sim.snapshot()
+        # The real carry tooth starts its prescribed transfer at 146.375.
+        # At 146.3 the retained shaft is still outside its measured support;
+        # the former coarse strip falsely stopped this request near 145.
+        self.assertEqual(sim.move('crank_angle', to=146.3).status, 'completed')
+        self.assertAlmostEqual(sim.state['tens.turn'], 22.22, places=8)
+        expected = sim.snapshot()
+        sim.restore(saved)
+        self.assertEqual(sim.move('crank_angle', to=146.3).status, 'completed')
+        self.assertEqual(sim.snapshot(), expected)
+
     def test_all_five_source_flats_stop_on_later_revolutions(self):
         for carry in (0, 4.2):
             for turns in range(5):

@@ -412,3 +412,10 @@ long requests and relief also pass. All 213 bank coordinates match exactly
 in four stopped/relieved states. The measured geometry and carry laws are
 unchanged by the fix. T07 and the near-edge profile work above are still
 provisional; this result is not production higher-bank adoption.
+
+The subsequent [support-edge refinement](higher-support-refinement-2026-09-21.md)
+completes all 110 near-edge measurements and removes ten independently
+verified false jams in the coarse trial table. The old browser export also
+fails the new physical-request regression; the refined one passes alongside
+the existing stop/replay matrix. Dense native and full-tree acceptance remain
+separate gates in that continuation record.

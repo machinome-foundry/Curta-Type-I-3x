@@ -104,6 +104,29 @@ def main():
                 }
                 return found;
             }''')
+            report['free_support'] = page.evaluate('''async () => {
+                const run=curta.run(); await run.reset(); run.pause();
+                const withdrawal=133.5+(22.22+16)/(72/11.25);
+                for(const [input,to] of [['carry_latch',4.2],['digit',1],
+                    ['crank_angle',withdrawal],['digit',0]]) {
+                    const result=await run.move(input,{to});
+                    if(result.some(x=>x.status!=='completed')) throw Error(JSON.stringify(result));
+                }
+                const before=await run.snapshot();
+                const result=await run.move('crank_angle',{to:146.3});
+                const after=await run.snapshot(),state=run.state();
+                await run.restore(before);
+                await run.move('crank_angle',{to:146.3});
+                return {result,state,replay:JSON.stringify(after)===
+                    JSON.stringify(await run.snapshot())};
+            }''')
+            page.evaluate('''async () => {
+                curta.setVisible(['drum'],false);
+                curta.setView({camera:[85,-35,0],target:[34,0,-23]});
+                await new Promise(requestAnimationFrame);
+                await new Promise(requestAnimationFrame);
+            }''')
+            page.screenshot(path=str(build/'higher-free-support.png'))
             page.evaluate('''async () => {
                 const run=curta.run(); await run.reset(); run.pause();
                 await run.move('carry_latch',{to:4.2}); await run.move('digit',{to:3});
@@ -131,7 +154,12 @@ def main():
     for case in report['legal']:
         assert case['result'][-1]['status'] == 'completed', case
         assert abs(case['state']['tens.turn']-case['expected']) < 1e-7, case
-    print('Two retained-stop/replay cases and eight legal moves pass.', flush=True)
+    free = report['free_support']
+    assert free['result'][-1]['status'] == 'completed' and free['replay'], free
+    assert abs(free['state']['crank_angle']-146.3) < 1e-7, free
+    assert abs(free['state']['tens.turn']-22.22) < 1e-7, free
+    print('Two retained-stop/replay cases, eight legal moves, and free-support replay pass.',
+          flush=True)
 
 
 if __name__ == '__main__':

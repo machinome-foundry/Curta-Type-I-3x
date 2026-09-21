@@ -214,6 +214,17 @@ hashes and reproduction. No source carry law, tolerance or print geometry
 was changed by that correction. T07 profile refinement and wider channel/
 action-order acceptance remain open; overall status is still 12/23.
 
+The resumed higher-stack support refinement completes all 110 near-edge
+measurements and pins ten false jams in the former coarse trial profile.
+The refined candidate admits those free positions while retaining all ten
+neighbouring contact refusals; source-path, retained-motion, intermediate-
+height and isolated-browser checks pass. The old browser export independently
+reproduces a false stop, and the new one completes the physical request with
+exact replay. Dense native and complete operating-tree checks are tracked in
+`simulation/docs/higher-support-refinement-2026-09-21.md`. The final production
+adoption and wider-bank work remain active; no whole-machine checkbox is
+closed merely by this profile increment.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

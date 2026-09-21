@@ -1,0 +1,7447 @@
+{
+  "purpose": "Measured trial carry-tooth support refinement, not whole-machine acceptance",
+  "inputs": [
+    {
+      "path": "_build_checks/higher-t07-dense-pairs.log",
+      "sha256": "5473f71403c239a3657977adf489424f4f091a23a64ca50e7a03398821892d3d",
+      "rows": 364
+    },
+    {
+      "path": "_build_checks/higher-t07-index-bands.log",
+      "sha256": "eff65aed9bd3f674f6ea4b3fd0880332e9920fa5085ea2a16acc641982552bac",
+      "rows": 10
+    },
+    {
+      "path": "_build_checks/higher-t07-lower-corner-refinements.log",
+      "sha256": "f0b14514dd4de6b4d38e4df52ae1fef3820317b9f78b0fa623041f448ff25765",
+      "rows": 20
+    },
+    {
+      "path": "_build_checks/higher-t07-lower-mesh-openings.log",
+      "sha256": "c55bdc929f56ce236a1c4390a24ddd80da482d180d8b6393dc1afa4d9f6f1abb",
+      "rows": 190
+    },
+    {
+      "path": "_build_checks/higher-t07-refined-support-brackets.log",
+      "sha256": "e807786e8d017d73c494cfdcd154c6e59a28fb37c0e15b5a19a6df30d58e03c9",
+      "rows": 10
+    },
+    {
+      "path": "_build_checks/higher-t07-refined-support-brackets-faceted.log",
+      "sha256": "998dd027fd5ff07ced2eebaf001d9543c0cd4530697785078a75009aed8ba500",
+      "rows": 10
+    },
+    {
+      "path": "_build_checks/higher-t07-dual-support-birth-all.log",
+      "sha256": "4c9ea893433607c975848f360c8244b9ed200909058b8ab2977b1ba6a61b737e",
+      "rows": 55
+    },
+    {
+      "path": "_build_checks/higher-t07-dual-support-death-flat0.log",
+      "sha256": "033c17dff029af1ab70c71a54d633067b216dbabb2268edc66e512294032f36e",
+      "rows": 11
+    },
+    {
+      "path": "_build_checks/higher-t07-dual-support-death-rest.log",
+      "sha256": "55881aff2455b8acf641b8bbe44fa4fc1497b1c0adc30df43e7ece8753dc069d",
+      "rows": 44
+    }
+  ],
+  "brackets": [
+    {
+      "flat": 0,
+      "side": "birth",
+      "outside": 22.240649414062496,
+      "inside": 22.240722656249996,
+      "peak_crank": 146.09500000000003,
+      "width": 7.324218750071054e-05
+    },
+    {
+      "flat": 0,
+      "side": "death",
+      "outside": 49.10650634765625,
+      "inside": 49.1064453125,
+      "peak_crank": 159.595,
+      "width": 6.103515625e-05
+    },
+    {
+      "flat": 1,
+      "side": "birth",
+      "outside": 94.24064941406252,
+      "inside": 94.24072265625001,
+      "peak_crank": 146.14999999999998,
+      "width": 7.324218749715783e-05
+    },
+    {
+      "flat": 1,
+      "side": "death",
+      "outside": 121.10650634765625,
+      "inside": 121.1064453125,
+      "peak_crank": 159.29999999999998,
+      "width": 6.103515625e-05
+    },
+    {
+      "flat": 2,
+      "side": "birth",
+      "outside": 166.2406494140625,
+      "inside": 166.24072265625,
+      "peak_crank": 146.53,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "flat": 2,
+      "side": "death",
+      "outside": 193.10650634765625,
+      "inside": 193.1064453125,
+      "peak_crank": 159.54,
+      "width": 6.103515625e-05
+    },
+    {
+      "flat": 3,
+      "side": "birth",
+      "outside": 238.2406494140625,
+      "inside": 238.24072265625,
+      "peak_crank": 146.53,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "flat": 3,
+      "side": "death",
+      "outside": 265.10650634765625,
+      "inside": 265.1064453125,
+      "peak_crank": 159.61,
+      "width": 6.103515625e-05
+    },
+    {
+      "flat": 4,
+      "side": "birth",
+      "outside": 310.24064941406243,
+      "inside": 310.24072265624994,
+      "peak_crank": 146.78,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "flat": 4,
+      "side": "death",
+      "outside": 337.10650634765625,
+      "inside": 337.1064453125,
+      "peak_crank": 159.59499999999997,
+      "width": 6.103515625e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 0,
+      "side": "birth",
+      "outside": 22.240649414062496,
+      "inside": 22.240722656249996,
+      "peak_crank": 146.545,
+      "width": 7.324218750071054e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 0,
+      "side": "death",
+      "outside": 49.10650634765625,
+      "inside": 49.1064453125,
+      "peak_crank": 159.75499999999997,
+      "width": 6.103515625e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 1,
+      "side": "birth",
+      "outside": 94.240576171875,
+      "inside": 94.24064941406252,
+      "peak_crank": 146.545,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 1,
+      "side": "death",
+      "outside": 121.10650634765625,
+      "inside": 121.1064453125,
+      "peak_crank": 159.75499999999997,
+      "width": 6.103515625e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 2,
+      "side": "birth",
+      "outside": 166.24057617187498,
+      "inside": 166.2406494140625,
+      "peak_crank": 146.545,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 2,
+      "side": "death",
+      "outside": 193.10650634765625,
+      "inside": 193.1064453125,
+      "peak_crank": 159.75499999999997,
+      "width": 6.103515625e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 3,
+      "side": "birth",
+      "outside": 238.24057617187498,
+      "inside": 238.2406494140625,
+      "peak_crank": 146.545,
+      "width": 7.324218751136868e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 3,
+      "side": "death",
+      "outside": 265.10650634765625,
+      "inside": 265.1064453125,
+      "peak_crank": 159.75499999999997,
+      "width": 6.103515625e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 4,
+      "side": "birth",
+      "outside": 310.240576171875,
+      "inside": 310.24064941406243,
+      "peak_crank": 146.545,
+      "width": 7.324218745452526e-05
+    },
+    {
+      "kernel": "faceted",
+      "flat": 4,
+      "side": "death",
+      "outside": 337.10650634765625,
+      "inside": 337.1064453125,
+      "peak_crank": 159.75499999999997,
+      "width": 6.103515625e-05
+    }
+  ],
+  "curves": [
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.240722656249996,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.242722656249995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.58725852966305,
+          "right": 145.58725891113278,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10397300720211,
+          "right": 147.10397338867185,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.58858680725098,
+          "right": 145.5885877609253,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.58725852966305,
+          "right": 145.58725891113278,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10397300720211,
+          "right": 147.10397338867185,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.245722656249995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.48926811218263,
+          "right": 145.48926849365236,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.48976230621338,
+          "right": 145.4897632598877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.48926811218263,
+          "right": 145.48926849365236,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19641227722164,
+          "right": 147.19641265869137,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.250722656249998,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.37560119628904,
+          "right": 145.37560157775877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.37618350982666,
+          "right": 145.37618446350098,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.37560119628904,
+          "right": 145.37560157775877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035247802735,
+          "right": 147.30035285949708,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.260722656249996,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.2120704650879,
+          "right": 145.2120708465576,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.21218490600586,
+          "right": 145.21218585968018,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.2120704650879,
+          "right": 145.2120708465576,
+          "enters_contact": true
+        },
+        {
+          "left": 147.4441146850586,
+          "right": 147.44411506652833,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.290722656249997,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03005867004396,
+          "right": 145.03005905151366,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72071189880373,
+          "right": 147.72071228027346,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.340722656249998,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03067474365238,
+          "right": 145.03067512512212,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01813125610357,
+          "right": 148.01813163757328,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.440722656249996,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.03187866210934,
+          "right": 145.03187904357907,
+          "enters_contact": true
+        },
+        {
+          "left": 148.4139072418213,
+          "right": 148.41390762329104,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03187866210934,
+          "right": 145.03187904357907,
+          "enters_contact": true
+        },
+        {
+          "left": 148.4139072418213,
+          "right": 148.41390762329104,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 22.640722656249995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92680854797362,
+          "right": 148.92680892944333,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0341968536377,
+          "right": 145.0341972351074,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92680854797362,
+          "right": 148.92680892944333,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 23.040722656249997,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0384342193604,
+          "right": 145.0384346008301,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56854324340821,
+          "right": 149.56854362487792,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 23.440722656249996,
+      "carry": 1,
+      "support": "birth",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.04214019775392,
+          "right": 145.04214057922366,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025226593018,
+          "right": 150.0025230407715,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 47.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18248748779297,
+          "right": 160.18248844146729,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 157.97631797790527,
+          "right": 157.976318359375,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 48.3064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.2723644256592,
+          "right": 158.27236480712892,
+          "enters_contact": true
+        },
+        {
+          "left": 160.17161483764647,
+          "right": 160.1716152191162,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 48.7064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012802124015,
+          "right": 160.1601284027099,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.60087165832522,
+          "right": 158.60087203979492,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012802124015,
+          "right": 160.1601284027099,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 48.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.7797504425049,
+          "right": 158.7797508239746,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15414619445798,
+          "right": 160.1541465759277,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.0064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.87335815429685,
+          "right": 158.87335853576658,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110206604,
+          "right": 160.15110244750974,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.0564453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.149564743042,
+          "right": 160.1495656967163,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9212886810303,
+          "right": 158.92128906250002,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.0864453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864044189449,
+          "right": 160.14864082336422,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863777160645,
+          "right": 160.14863872528076,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9504138946533,
+          "right": 158.950414276123,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864044189449,
+          "right": 160.14864082336422,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.0964453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96022377014157,
+          "right": 158.96022415161127,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14832420349117,
+          "right": 160.1483245849609,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.1014453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96509704589846,
+          "right": 158.9650974273682,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817276000974,
+          "right": 160.14817314147948,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.1044453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96805191040045,
+          "right": 158.96805229187015,
+          "enters_contact": true
+        },
+        {
+          "left": 159.0809741973877,
+          "right": 159.08097457885742,
+          "enters_contact": false
+        },
+        {
+          "left": 159.2521800994873,
+          "right": 159.25218048095704,
+          "enters_contact": true
+        },
+        {
+          "left": 159.47291679382323,
+          "right": 159.47291717529296,
+          "enters_contact": false
+        },
+        {
+          "left": 159.64374580383299,
+          "right": 159.6437461853027,
+          "enters_contact": true
+        },
+        {
+          "left": 159.86635475158695,
+          "right": 159.8663551330567,
+          "enters_contact": false
+        },
+        {
+          "left": 160.0379421234131,
+          "right": 160.03794250488284,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14807968139644,
+          "right": 160.14808006286617,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 49.1064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 0,
+      "boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.24072265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 146.1275917053223,
+          "right": 146.12759189605714,
+          "enters_contact": true
+        },
+        {
+          "left": 146.1763654708862,
+          "right": 146.17636566162108,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.24272265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.5874042510986,
+          "right": 145.58740463256834,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.58858680725098,
+          "right": 145.5885877609253,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.5874042510986,
+          "right": 145.58740463256834,
+          "enters_contact": true
+        },
+        {
+          "left": 147.1038192749023,
+          "right": 147.10381965637202,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.24572265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.4893627166748,
+          "right": 145.48936309814454,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.48976230621338,
+          "right": 145.4897632598877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.4893627166748,
+          "right": 145.48936309814454,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19631042480466,
+          "right": 147.1963108062744,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.25072265625002,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.37565879821776,
+          "right": 145.3756591796875,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.37618350982666,
+          "right": 145.37618446350098,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.37565879821776,
+          "right": 145.3756591796875,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30027770996094,
+          "right": 147.30027809143067,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.26072265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.2121566772461,
+          "right": 145.21215705871583,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.21218490600586,
+          "right": 145.21218585968018,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.2121566772461,
+          "right": 145.21215705871583,
+          "enters_contact": true
+        },
+        {
+          "left": 147.4440284729004,
+          "right": 147.44402885437012,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.29072265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.7209503173828,
+          "right": 147.72095069885253,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0300594329834,
+          "right": 145.03005981445312,
+          "enters_contact": true
+        },
+        {
+          "left": 147.7209503173828,
+          "right": 147.72095069885253,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.34072265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01829528808594,
+          "right": 148.01829566955567,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03067398071295,
+          "right": 145.03067436218265,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01829528808594,
+          "right": 148.01829566955567,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.44072265625002,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0318820953369,
+          "right": 145.03188247680663,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41380729675296,
+          "right": 148.4138076782227,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 94.64072265625002,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0341983795166,
+          "right": 145.03419876098633,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92673110961914,
+          "right": 148.92673149108887,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 95.04072265625001,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0384368896485,
+          "right": 145.03843727111823,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56853218078615,
+          "right": 149.56853256225588,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 95.44072265625002,
+      "carry": 1,
+      "support": "birth",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025440216065,
+          "right": 150.00254440307623,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.04213905334475,
+          "right": 145.0421394348145,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025440216065,
+          "right": 150.00254440307623,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 119.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18248748779297,
+          "right": 160.18248844146729,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 157.9762939453125,
+          "right": 157.97629432678224,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 120.3064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.17162170410154,
+          "right": 160.17162208557127,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.2723453521729,
+          "right": 158.27234573364262,
+          "enters_contact": true
+        },
+        {
+          "left": 160.17162170410154,
+          "right": 160.17162208557127,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 120.7064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.6008625030518,
+          "right": 158.60086288452152,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012649536128,
+          "right": 160.160126876831,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 120.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415306091305,
+          "right": 160.15415344238278,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.77971420288083,
+          "right": 158.77971458435056,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415306091305,
+          "right": 160.15415344238278,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.0064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.87334480285645,
+          "right": 158.87334518432618,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1511009216308,
+          "right": 160.15110130310055,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.0564453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956626892086,
+          "right": 160.1495666503906,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.149564743042,
+          "right": 160.1495656967163,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9212760925293,
+          "right": 158.92127647399903,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956626892086,
+          "right": 160.1495666503906,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.0864453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863929748532,
+          "right": 160.14863967895502,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863777160645,
+          "right": 160.14863872528076,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.95040206909175,
+          "right": 158.95040245056148,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863929748532,
+          "right": 160.14863967895502,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.0964453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833106994624,
+          "right": 160.14833145141597,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96018028259272,
+          "right": 158.96018066406245,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833106994624,
+          "right": 160.14833145141597,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.1014453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9650974273682,
+          "right": 158.96509780883792,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817276000974,
+          "right": 160.14817314147948,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.1044453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96804046630862,
+          "right": 158.96804084777835,
+          "enters_contact": true
+        },
+        {
+          "left": 159.08188552856444,
+          "right": 159.08188591003415,
+          "enters_contact": false
+        },
+        {
+          "left": 159.2512634277344,
+          "right": 159.25126380920412,
+          "enters_contact": true
+        },
+        {
+          "left": 159.47383041381835,
+          "right": 159.47383079528808,
+          "enters_contact": false
+        },
+        {
+          "left": 159.64282684326167,
+          "right": 159.6428272247314,
+          "enters_contact": true
+        },
+        {
+          "left": 159.86726417541504,
+          "right": 159.86726455688478,
+          "enters_contact": false
+        },
+        {
+          "left": 160.03702697753909,
+          "right": 160.03702735900882,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14807815551757,
+          "right": 160.14807853698727,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 121.1064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 1,
+      "boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.24072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 146.50442920684816,
+          "right": 146.50442932128905,
+          "enters_contact": true
+        },
+        {
+          "left": 146.58474304199217,
+          "right": 146.58474330902098,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.24272265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.58725852966305,
+          "right": 145.58725891113278,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10397300720211,
+          "right": 147.10397338867185,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.58858680725098,
+          "right": 145.5885877609253,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.58725852966305,
+          "right": 145.58725891113278,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10397300720211,
+          "right": 147.10397338867185,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.24572265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.48926811218263,
+          "right": 145.48926849365236,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.48976230621338,
+          "right": 145.4897632598877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.48926811218263,
+          "right": 145.48926849365236,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19641227722164,
+          "right": 147.19641265869137,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.25072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.3755977630615,
+          "right": 145.37559814453124,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30036277770998,
+          "right": 147.3003631591797,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.37618350982666,
+          "right": 145.37618446350098,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.3755977630615,
+          "right": 145.37559814453124,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30036277770998,
+          "right": 147.3003631591797,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.26072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.21149597167965,
+          "right": 145.21149635314939,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44458045959473,
+          "right": 147.44458084106446,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.21218490600586,
+          "right": 145.21218585968018,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.21149597167965,
+          "right": 145.21149635314939,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44458045959473,
+          "right": 147.44458084106446,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.29072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.0300563812256,
+          "right": 145.03005676269532,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72100677490235,
+          "right": 147.72100715637208,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0300563812256,
+          "right": 145.03005676269532,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72100677490235,
+          "right": 147.72100715637208,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.34072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.0306720733643,
+          "right": 145.03067245483402,
+          "enters_contact": true
+        },
+        {
+          "left": 148.0183250427246,
+          "right": 148.01832542419433,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0306720733643,
+          "right": 145.03067245483402,
+          "enters_contact": true
+        },
+        {
+          "left": 148.0183250427246,
+          "right": 148.01832542419433,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.44072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.4138999938965,
+          "right": 148.41390037536624,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03188018798824,
+          "right": 145.03188056945797,
+          "enters_contact": true
+        },
+        {
+          "left": 148.4138999938965,
+          "right": 148.41390037536624,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 166.64072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.03419456481933,
+          "right": 145.03419494628906,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92688331604003,
+          "right": 148.92688369750977,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03419456481933,
+          "right": 145.03419494628906,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92688331604003,
+          "right": 148.92688369750977,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 167.04072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.03843307495123,
+          "right": 145.03843345642093,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685829162598,
+          "right": 149.5685832977295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03843307495123,
+          "right": 145.03843345642093,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685829162598,
+          "right": 149.5685832977295,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 167.44072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 145.04213752746585,
+          "right": 145.04213790893556,
+          "enters_contact": true
+        },
+        {
+          "left": 150.00255088806156,
+          "right": 150.0025512695313,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.04213752746585,
+          "right": 145.04213790893556,
+          "enters_contact": true
+        },
+        {
+          "left": 150.00255088806156,
+          "right": 150.0025512695313,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 191.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18248748779297,
+          "right": 160.18248844146729,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 157.97630157470704,
+          "right": 157.97630195617677,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 192.3064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.17162322998047,
+          "right": 160.1716236114502,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.2723400115967,
+          "right": 158.27234039306643,
+          "enters_contact": true
+        },
+        {
+          "left": 160.17162322998047,
+          "right": 160.1716236114502,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 192.7064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012802124015,
+          "right": 160.1601284027099,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.60087318420412,
+          "right": 158.60087356567385,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012802124015,
+          "right": 160.1601284027099,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 192.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415420532224,
+          "right": 160.15415458679198,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.77972526550292,
+          "right": 158.77972564697265,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415420532224,
+          "right": 160.15415458679198,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.0064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15111007690427,
+          "right": 160.151110458374,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.873327255249,
+          "right": 158.87332763671873,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15111007690427,
+          "right": 160.151110458374,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.0564453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.149564743042,
+          "right": 160.1495656967163,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.92128753662112,
+          "right": 158.92128791809085,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.0864453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864044189449,
+          "right": 160.14864082336422,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863777160645,
+          "right": 160.14863872528076,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.95041351318358,
+          "right": 158.9504138946533,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864044189449,
+          "right": 160.14864082336422,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.0964453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833221435543,
+          "right": 160.14833259582517,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9601917266845,
+          "right": 158.96019210815422,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833221435543,
+          "right": 160.14833259582517,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.1014453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96509704589846,
+          "right": 158.9650974273682,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817276000974,
+          "right": 160.14817314147948,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.1044453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96805191040045,
+          "right": 158.96805229187015,
+          "enters_contact": true
+        },
+        {
+          "left": 159.0809741973877,
+          "right": 159.08097457885742,
+          "enters_contact": false
+        },
+        {
+          "left": 159.2521800994873,
+          "right": 159.25218048095704,
+          "enters_contact": true
+        },
+        {
+          "left": 159.47291679382323,
+          "right": 159.47291717529296,
+          "enters_contact": false
+        },
+        {
+          "left": 159.64374580383299,
+          "right": 159.6437461853027,
+          "enters_contact": true
+        },
+        {
+          "left": 159.86635475158695,
+          "right": 159.8663551330567,
+          "enters_contact": false
+        },
+        {
+          "left": 160.0379421234131,
+          "right": 160.03794250488284,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14807968139644,
+          "right": 160.14808006286617,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 193.1064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 2,
+      "boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801597595215,
+          "right": 160.14801692962646,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801597595215,
+          "right": 160.14801692962646,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.24072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.9655122756958,
+          "right": 146.96551322937012,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 146.50404525756838,
+          "right": 146.50404537200927,
+          "enters_contact": true
+        },
+        {
+          "left": 146.58511260986324,
+          "right": 146.58511287689205,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.24272265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.58716201782227,
+          "right": 145.587162399292,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10405616760252,
+          "right": 147.10405654907225,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.58858680725098,
+          "right": 145.5885877609253,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.58716201782227,
+          "right": 145.587162399292,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10405616760252,
+          "right": 147.10405654907225,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.24572265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.48920364379882,
+          "right": 145.48920402526855,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.48976230621338,
+          "right": 145.4897632598877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.48920364379882,
+          "right": 145.48920402526855,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19646263122556,
+          "right": 147.1964630126953,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.25072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.37560119628904,
+          "right": 145.37560157775877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.37618350982666,
+          "right": 145.37618446350098,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.37560119628904,
+          "right": 145.37560157775877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035247802735,
+          "right": 147.30035285949708,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.26072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.21145858764646,
+          "right": 145.2114589691162,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44461097717289,
+          "right": 147.4446113586426,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.21218490600586,
+          "right": 145.21218585968018,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.21145858764646,
+          "right": 145.2114589691162,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44461097717289,
+          "right": 147.4446113586426,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.29072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.03005256652833,
+          "right": 145.03005294799806,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72100028991701,
+          "right": 147.72100067138675,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03005256652833,
+          "right": 145.03005294799806,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72100028991701,
+          "right": 147.72100067138675,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.34072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.0306667327881,
+          "right": 145.03066711425782,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01833152771,
+          "right": 148.01833190917972,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0306667327881,
+          "right": 145.03066711425782,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01833152771,
+          "right": 148.01833190917972,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.44072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.03187484741204,
+          "right": 145.03187522888177,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03187484741204,
+          "right": 145.03187522888177,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41382675170905,
+          "right": 148.41382713317878,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 238.64072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.03419151306153,
+          "right": 145.03419189453126,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03419151306153,
+          "right": 145.03419189453126,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92674789428708,
+          "right": 148.9267482757568,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 239.04072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.03842811584477,
+          "right": 145.0384284973145,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56858215332034,
+          "right": 149.56858253479007,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03842811584477,
+          "right": 145.0384284973145,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56858215332034,
+          "right": 149.56858253479007,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 239.44072265625,
+      "carry": 1,
+      "support": "birth",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 145.0421325683594,
+          "right": 145.04213294982912,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0421325683594,
+          "right": 145.04213294982912,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0024993896485,
+          "right": 150.00249977111824,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 263.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249168395997,
+          "right": 160.1824920654297,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18248748779297,
+          "right": 160.18248844146729,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 157.97630004882814,
+          "right": 157.97630043029787,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249168395997,
+          "right": 160.1824920654297,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 264.3064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.27237472534182,
+          "right": 158.27237510681155,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716163635254,
+          "right": 160.1716167449951,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 264.7064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012916564935,
+          "right": 160.16012954711908,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.60088958740235,
+          "right": 158.60088996887208,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012916564935,
+          "right": 160.16012954711908,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 264.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.77975959777834,
+          "right": 158.77975997924807,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15414619445798,
+          "right": 160.1541465759277,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.0064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.87337417602538,
+          "right": 158.87337455749508,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110359191894,
+          "right": 160.15110397338867,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.0564453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.149564743042,
+          "right": 160.1495656967163,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.92129516601565,
+          "right": 158.92129554748539,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956779479976,
+          "right": 160.1495681762695,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.0864453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864196777341,
+          "right": 160.14864234924315,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863777160645,
+          "right": 160.14863872528076,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.95043258666993,
+          "right": 158.95043296813964,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864196777341,
+          "right": 160.14864234924315,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.0964453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96023101806637,
+          "right": 158.9602313995361,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14832420349117,
+          "right": 160.1483245849609,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.1014453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96511573791506,
+          "right": 158.9651161193848,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817390441894,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.1044453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.9680587768555,
+          "right": 158.96805915832522,
+          "enters_contact": true
+        },
+        {
+          "left": 159.0809741973877,
+          "right": 159.08097457885742,
+          "enters_contact": false
+        },
+        {
+          "left": 159.2521800994873,
+          "right": 159.25218048095704,
+          "enters_contact": true
+        },
+        {
+          "left": 159.47291679382323,
+          "right": 159.47291717529296,
+          "enters_contact": false
+        },
+        {
+          "left": 159.64374588012697,
+          "right": 159.64374622344974,
+          "enters_contact": true
+        },
+        {
+          "left": 159.86635475158695,
+          "right": 159.8663551330567,
+          "enters_contact": false
+        },
+        {
+          "left": 160.0379421234131,
+          "right": 160.03794250488284,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14807968139644,
+          "right": 160.14808006286617,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 265.1064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 3,
+      "boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.24072265624994,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.96551254272464,
+          "right": 146.96551338195803,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.73111724853516,
+          "right": 145.73111820220947,
+          "enters_contact": true
+        },
+        {
+          "left": 146.96551254272464,
+          "right": 146.96551338195803,
+          "enters_contact": false
+        },
+        {
+          "left": 153.3361930847168,
+          "right": 153.3361940383911,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9340000152588,
+          "right": 159.9340009689331,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.24272265624995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.58728408813477,
+          "right": 145.58728446960447,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.58858680725098,
+          "right": 145.5885877609253,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10396003723145,
+          "right": 147.10396099090576,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33643341064453,
+          "right": 153.33643436431885,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93411254882812,
+          "right": 159.93411350250244,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.58728408813477,
+          "right": 145.58728446960447,
+          "enters_contact": true
+        },
+        {
+          "left": 147.10394020080562,
+          "right": 147.10394058227536,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.24572265624994,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.48928565979006,
+          "right": 145.4892860412598,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.48976230621338,
+          "right": 145.4897632598877,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19677925109863,
+          "right": 147.19678020477295,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33679389953613,
+          "right": 153.33679485321045,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9342803955078,
+          "right": 159.93428134918213,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.48928565979006,
+          "right": 145.4892860412598,
+          "enters_contact": true
+        },
+        {
+          "left": 147.19638748168944,
+          "right": 147.19638786315915,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.25072265624993,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.3756111145019,
+          "right": 145.37561149597164,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.37618350982666,
+          "right": 145.37618446350098,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30035495758057,
+          "right": 147.30035591125488,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33739376068115,
+          "right": 153.33739471435547,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93455982208252,
+          "right": 159.93456077575684,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.3756111145019,
+          "right": 145.37561149597164,
+          "enters_contact": true
+        },
+        {
+          "left": 147.30034255981445,
+          "right": 147.30034294128416,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.2607226562499,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.21146850585936,
+          "right": 145.2114688873291,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44459381103516,
+          "right": 147.4445941925049,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.21218490600586,
+          "right": 145.21218585968018,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44435119628906,
+          "right": 147.44435214996338,
+          "enters_contact": false
+        },
+        {
+          "left": 153.33859539031982,
+          "right": 153.33859634399414,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93511772155762,
+          "right": 159.93511867523193,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.21146850585936,
+          "right": 145.2114688873291,
+          "enters_contact": true
+        },
+        {
+          "left": 147.44459381103516,
+          "right": 147.4445941925049,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.29072265624995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.0300563812256,
+          "right": 145.03005676269532,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03005695343018,
+          "right": 145.0300579071045,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72094631195068,
+          "right": 147.720947265625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34219932556152,
+          "right": 153.34220027923584,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9367914199829,
+          "right": 159.93679237365723,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.0300563812256,
+          "right": 145.03005676269532,
+          "enters_contact": true
+        },
+        {
+          "left": 147.72088737487792,
+          "right": 147.72088775634765,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.34072265624997,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.03067054748539,
+          "right": 145.0306709289551,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01832427978516,
+          "right": 148.0183246612549,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03067302703857,
+          "right": 145.0306739807129,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01828384399414,
+          "right": 148.01828479766846,
+          "enters_contact": false
+        },
+        {
+          "left": 153.34820652008057,
+          "right": 153.34820747375488,
+          "enters_contact": true
+        },
+        {
+          "left": 159.93957042694092,
+          "right": 159.93957138061523,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03067054748539,
+          "right": 145.0306709289551,
+          "enters_contact": true
+        },
+        {
+          "left": 148.01832427978516,
+          "right": 148.0183246612549,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.44072265624993,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.03187866210934,
+          "right": 145.03187904357907,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03187942504883,
+          "right": 145.03188037872314,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41386795043945,
+          "right": 148.41386890411377,
+          "enters_contact": false
+        },
+        {
+          "left": 153.36022090911865,
+          "right": 153.36022186279297,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9450912475586,
+          "right": 159.9450922012329,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03187866210934,
+          "right": 145.03187904357907,
+          "enters_contact": true
+        },
+        {
+          "left": 148.41382675170905,
+          "right": 148.41382713317878,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 310.6407226562499,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.03419265747073,
+          "right": 145.03419303894043,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92682228088378,
+          "right": 148.92682266235352,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.03419589996338,
+          "right": 145.0341968536377,
+          "enters_contact": true
+        },
+        {
+          "left": 148.9268045425415,
+          "right": 148.92680549621582,
+          "enters_contact": false
+        },
+        {
+          "left": 153.38425540924072,
+          "right": 153.38425636291504,
+          "enters_contact": true
+        },
+        {
+          "left": 159.95598983764648,
+          "right": 159.9559907913208,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03419265747073,
+          "right": 145.03419303894043,
+          "enters_contact": true
+        },
+        {
+          "left": 148.92682228088378,
+          "right": 148.92682266235352,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 311.04072265624995,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.03843193054203,
+          "right": 145.03843231201176,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56858215332034,
+          "right": 149.56858253479007,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0384340286255,
+          "right": 145.0384349822998,
+          "enters_contact": true
+        },
+        {
+          "left": 149.5685577392578,
+          "right": 149.56855869293213,
+          "enters_contact": false
+        },
+        {
+          "left": 153.43233394622803,
+          "right": 153.43233489990234,
+          "enters_contact": true
+        },
+        {
+          "left": 159.97720909118652,
+          "right": 159.97721004486084,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.03843193054203,
+          "right": 145.03843231201176,
+          "enters_contact": true
+        },
+        {
+          "left": 149.56858215332034,
+          "right": 149.56858253479007,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 311.44072265624993,
+      "carry": 1,
+      "support": "birth",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 145.04213790893556,
+          "right": 145.0421382904053,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 145.0421380996704,
+          "right": 145.04213905334473,
+          "enters_contact": true
+        },
+        {
+          "left": 150.0025224685669,
+          "right": 150.0025234222412,
+          "enters_contact": false
+        },
+        {
+          "left": 153.48041343688965,
+          "right": 153.48041439056396,
+          "enters_contact": true
+        },
+        {
+          "left": 159.9976625442505,
+          "right": 159.9976634979248,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 145.04213790893556,
+          "right": 145.0421382904053,
+          "enters_contact": true
+        },
+        {
+          "left": 150.00249786376958,
+          "right": 150.0024982452393,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 335.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.37589645385742,
+          "right": 147.37589740753174,
+          "enters_contact": true
+        },
+        {
+          "left": 154.25351810455322,
+          "right": 154.25351905822754,
+          "enters_contact": false
+        },
+        {
+          "left": 157.89267253875732,
+          "right": 157.89267349243164,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18248748779297,
+          "right": 160.18248844146729,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 157.9762939453125,
+          "right": 157.97629432678224,
+          "enters_contact": true
+        },
+        {
+          "left": 160.18249053955077,
+          "right": 160.1824909210205,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 336.3064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.43313789367676,
+          "right": 147.43313884735107,
+          "enters_contact": true
+        },
+        {
+          "left": 154.28459358215332,
+          "right": 154.28459453582764,
+          "enters_contact": false
+        },
+        {
+          "left": 158.11132431030273,
+          "right": 158.11132526397705,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716184616089,
+          "right": 160.1716194152832,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.27234191894536,
+          "right": 158.2723423004151,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1716136932373,
+          "right": 160.17161407470704,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 336.7064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.49041080474854,
+          "right": 147.49041175842285,
+          "enters_contact": true
+        },
+        {
+          "left": 154.31551265716553,
+          "right": 154.31551361083984,
+          "enters_contact": false
+        },
+        {
+          "left": 158.39429378509521,
+          "right": 158.39429473876953,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1601266860962,
+          "right": 160.1601276397705,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.6008625030518,
+          "right": 158.60086288452152,
+          "enters_contact": true
+        },
+        {
+          "left": 160.16012649536128,
+          "right": 160.160126876831,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 336.9064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415306091305,
+          "right": 160.15415344238278,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.51905727386475,
+          "right": 147.51905822753906,
+          "enters_contact": true
+        },
+        {
+          "left": 154.33091640472412,
+          "right": 154.33091735839844,
+          "enters_contact": false
+        },
+        {
+          "left": 158.59160232543945,
+          "right": 158.59160327911377,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415000915527,
+          "right": 160.1541509628296,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.7797149658203,
+          "right": 158.77971534729002,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15415306091305,
+          "right": 160.15415344238278,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.0064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.53338241577148,
+          "right": 147.5333833694458,
+          "enters_contact": true
+        },
+        {
+          "left": 154.338604927063,
+          "right": 154.3386058807373,
+          "enters_contact": false
+        },
+        {
+          "left": 158.7278699874878,
+          "right": 158.7278709411621,
+          "enters_contact": true
+        },
+        {
+          "left": 160.15110397338867,
+          "right": 160.151104927063,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.87334480285645,
+          "right": 158.87334518432618,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1511009216308,
+          "right": 160.15110130310055,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.0564453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956626892086,
+          "right": 160.1495666503906,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.540545463562,
+          "right": 147.54054641723633,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34244537353516,
+          "right": 154.34244632720947,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8203706741333,
+          "right": 158.82037162780762,
+          "enters_contact": true
+        },
+        {
+          "left": 160.149564743042,
+          "right": 160.1495656967163,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.92127647399903,
+          "right": 158.92127685546876,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14956626892086,
+          "right": 160.1495666503906,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.0864453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864082336422,
+          "right": 160.14864120483395,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54484367370605,
+          "right": 147.54484462738037,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3447494506836,
+          "right": 154.3447504043579,
+          "enters_contact": false
+        },
+        {
+          "left": 158.8958044052124,
+          "right": 158.89580535888672,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14863777160645,
+          "right": 160.14863872528076,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.95041351318358,
+          "right": 158.9504138946533,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14864082336422,
+          "right": 160.14864120483395,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.0964453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833145141597,
+          "right": 160.1483318328857,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.5462770462036,
+          "right": 147.54627799987793,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34551620483398,
+          "right": 154.3455171585083,
+          "enters_contact": false
+        },
+        {
+          "left": 158.92858028411865,
+          "right": 158.92858123779297,
+          "enters_contact": true
+        },
+        {
+          "left": 160.1483278274536,
+          "right": 160.14832878112793,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96018028259272,
+          "right": 158.96018066406245,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14833145141597,
+          "right": 160.1483318328857,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.1014453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54699325561523,
+          "right": 147.54699420928955,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3459005355835,
+          "right": 154.3459014892578,
+          "enters_contact": false
+        },
+        {
+          "left": 158.94776821136475,
+          "right": 158.94776916503906,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817333221436,
+          "right": 160.14817428588867,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96509704589846,
+          "right": 158.9650974273682,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14817314147948,
+          "right": 160.1481735229492,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.1044453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54742336273193,
+          "right": 147.54742431640625,
+          "enters_contact": true
+        },
+        {
+          "left": 154.34613037109375,
+          "right": 154.34613132476807,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96064376831055,
+          "right": 158.96064472198486,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14808082580566,
+          "right": 160.14808177947998,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": [
+        {
+          "left": 158.96804046630862,
+          "right": 158.96804084777835,
+          "enters_contact": true
+        },
+        {
+          "left": 159.08188552856444,
+          "right": 159.08188591003415,
+          "enters_contact": false
+        },
+        {
+          "left": 159.2512634277344,
+          "right": 159.25126380920412,
+          "enters_contact": true
+        },
+        {
+          "left": 159.47383041381835,
+          "right": 159.47383079528808,
+          "enters_contact": false
+        },
+        {
+          "left": 159.64282684326167,
+          "right": 159.6428272247314,
+          "enters_contact": true
+        },
+        {
+          "left": 159.86726417541504,
+          "right": 159.86726455688478,
+          "enters_contact": false
+        },
+        {
+          "left": 160.03702697753909,
+          "right": 160.03702735900882,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14807929992674,
+          "right": 160.14807968139644,
+          "enters_contact": false
+        }
+      ]
+    },
+    {
+      "kernel": "dual",
+      "pair": "carry_tooth",
+      "trial": true,
+      "shaft": 337.1064453125,
+      "carry": 1,
+      "support": "death",
+      "flat": 4,
+      "boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "native_boundaries": [
+        {
+          "left": 147.54770946502686,
+          "right": 147.54771041870117,
+          "enters_contact": true
+        },
+        {
+          "left": 154.3462839126587,
+          "right": 154.346284866333,
+          "enters_contact": false
+        },
+        {
+          "left": 158.96999549865723,
+          "right": 158.96999645233154,
+          "enters_contact": true
+        },
+        {
+          "left": 160.14801692962646,
+          "right": 160.14801788330078,
+          "enters_contact": false
+        }
+      ],
+      "mesh_local_boundaries": []
+    }
+  ]
+}
