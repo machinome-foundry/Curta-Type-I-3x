@@ -1,0 +1,57 @@
+"""The higher-counter diagnostic uses only physical operating requests."""
+
+import unittest
+from types import SimpleNamespace
+
+from simulation.tools.higher_counter_wrong_order import withdrawal_trace, SHAFT
+
+
+class HigherCounterWrongOrderProbeTest(unittest.TestCase):
+    def test_trace_requests_actual_controls_and_reads_the_retained_shaft(self):
+        class Machine:
+            state = {'crank_rotation': 0, SHAFT: 114}
+
+            def __init__(self):
+                self.calls = []
+
+            def move(self, name, *, to):
+                self.calls.append((name, to))
+                if name == 'crank_rotation':
+                    self.state = dict(self.state, crank_rotation=to)
+                return SimpleNamespace(status='completed')
+
+        sim = Machine()
+        reads = []
+
+        def contacts(machine):
+            self.assertIs(machine, sim)
+            reads.append(len(machine.calls))
+            return {'native': 0, 'faceted': 0}
+
+        rows = list(withdrawal_trace(sim, contacts=contacts))
+        self.assertEqual(sim.calls, [
+            ('crank_elevation', 9), ('reverser_height', -4.9425),
+            ('crank_rotation', 90), ('crank_rotation', 180),
+            ('crank_rotation', 190), ('reverser_height', -6.9425),
+            ('crank_rotation', 200)])
+        self.assertEqual(reads, list(range(1, 8)))
+        self.assertEqual([row['crank'] for row in rows], [0, 0, 90, 180, 190, 190, 200])
+        self.assertTrue(all(row['shaft'] == 114 for row in rows))
+        self.assertTrue(all(row['common_mm3'] == {'native': 0, 'faceted': 0} for row in rows))
+
+    def test_an_unexpected_preparation_stop_is_reported_without_repair(self):
+        class Machine:
+            state = {'crank_rotation': 12, SHAFT: 123}
+
+            def move(self, name, *, to):
+                return SimpleNamespace(status='blocked')
+
+        rows = list(withdrawal_trace(Machine(), contacts=lambda sim: {'native': 0, 'faceted': 0}))
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]['status'], 'blocked')
+        self.assertEqual(rows[0]['crank'], 12)
+        self.assertEqual(rows[0]['shaft'], 123)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -224,3 +224,32 @@ counter stations still need their own source-frame admission checks. The
 viewer cache-reset finding has a separate viewer-owned proposal,
 `keep-expression-references-valid`, prepared at the pilot's request and
 awaiting approval; no viewer fix has been implemented.
+
+## Actual-root withdrawal diagnostic in progress
+
+`tools/higher_counter_wrong_order.py` preserves the separate production-root
+counter-tens experiment. It uses only these actual requests: crank elevation
+9 mm, reverser −4.9425 mm, crank 90°, 180°, 190°, reverser −6.9425 mm, crank
+200°. No register is seeded and no retained coordinate is assigned directly.
+The intended question is whether withdrawing the counter input after partial
+tooth passage leaves a displaced shaft that the next crank request must stop
+against. This is a diagnostic question, not a passing stop claim.
+
+The reusable tool records each actual status, retained shaft/crank, the full
+bank and complete upper-print/bell contact in both kernels. It stops after an
+unexpected preparation refusal without retrying or repairing state. Two trace
+tests first fail on the absent module, then pass **2/2 in .001 s**
+(`higher-counter-wrong-order-probe-red.log` and
+`higher-counter-wrong-order-probe-light-green.log`). The fixture substitutes
+contact readings and a request recorder; those two tests prove the diagnostic
+sequence and refusal handling, not geometry or simulator performance.
+CAD/model imports are deferred until real measurement so testing the trace
+does not construct the complete machine.
+
+An earlier equivalent seven-request native-only invocation remains live in
+`higher-counter-tens-production-wrong-order-diagnostic.log`. It has completed
+lift, reverser positioning and crank 90°, each with zero measured upper/bell
+common. The remaining requests are pending. Do not conflate that preliminary
+native-only run with a completed run of the dual-kernel, full-bank tool above.
+It is not a whole-machine interference test; other contacts in its preparation
+will still need checking before an operating restraint is accepted.
