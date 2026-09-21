@@ -15,8 +15,6 @@ from itertools import combinations
 import manifold3d as manifold
 import numpy as np
 
-from simulation.curta import Curta
-
 
 def rigid_leaves(node, path='Curta'):
     if node.rigid:
@@ -121,6 +119,8 @@ if __name__ == '__main__':
         root = OperatingCurta()
         sim = Sim(root, dt=.1, meshes=True)
     else:
+        from simulation.curta import Curta
+
         root = Curta()
         root.set_state(time=0, **root.instructions['Rest'].targets)
         root.assemble()

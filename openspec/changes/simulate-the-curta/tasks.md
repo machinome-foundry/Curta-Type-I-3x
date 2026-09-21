@@ -172,6 +172,20 @@ root regressions are in progress. See
 large-tick setup limitation. Other channels and action orders are not inferred
 from this pair. Tasks 6.2/6.3 and the overall 12/23 status remain open.
 
+The next higher-result investigation proves a missing tens-channel stop in
+both raised and carry-lowered positions using the actual operating root.
+An independent measuring bench reproduces both contact poses. It also exposes
+a tiny native-only contact at an ordinary indexed position; isolated trial
+T07 removes only a bounded additional .01 mm outer skin. Six fit, indexed
+clearance, retained-locking and source-fidelity contracts pass in both kernels
+after refining the diagnostic bell's mesh without changing its native solid.
+The expanded clearance sweep includes 925 poses following the real carry
+tooth passage; holding an engaged gear stationary is a retained negative
+control, not a cutout or an ignored contact.
+No higher restraint or trial geometry is adopted by the operating model yet;
+the deliberately red action-order test and phase/axial investigation are in
+`simulation/docs/higher-result-lockout-2026-09-21.md`. No task checkbox changes.
+
 ## Previous continuation — Python direct operation, 2026-09-16
 
 The retained-angle and live source-selection prerequisites have merged. Python

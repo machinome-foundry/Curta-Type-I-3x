@@ -11,7 +11,6 @@ import manifold3d as manifold
 import numpy as np
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
 from simulation.tools.interference import world_solids
 from simulation.tools.interference import rigid_leaves
 
@@ -43,6 +42,8 @@ def mesh_solid(mesh):
 
 
 def measure():
+    from simulation.running import OperatingCurta
+
     sim = Sim(OperatingCurta(), dt=.1, meshes=True)
     prepare(sim)
     bell, lockout = contact_shapes(sim.node)

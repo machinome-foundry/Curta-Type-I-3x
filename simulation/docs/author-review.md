@@ -52,6 +52,21 @@ is now corrected in both executors. The fixed-height ones profile is
 full-root regression in progress. This introduces no further geometry fit
 and does not adopt the profile on other channels.
 
+## Higher result lockout trial — T07, not adopted
+
+The [higher-result investigation](higher-result-lockout-2026-09-21.md) records
+**T07**, a .15 → .16 mm outer-profile trial on the result tens lockout. Its
+source-backed normal indexed pose has a tiny native-solid overlap missed by
+the mesh. The trial keeps the keyed core, height and placement. Coarse mesh
+also misses an existing negative locking contact both before and after T07.
+Refining only the diagnostic bell's tessellation restores that contact without
+changing its native solid. The expanded six contracts pass on both kernels,
+including 925 sampled poses following the actual carry tooth passage and a
+deliberately frozen engaged-gear negative control. Production
+tens geometry, production bell tessellation and upstream CAD are unchanged.
+The moving restraint and its adoption remain open; this is not a manufacturing
+recommendation.
+
 ## Assembly, source-representation and motion corrections — not new prints
 
 | ID | Correction or explicit assumption | Record |

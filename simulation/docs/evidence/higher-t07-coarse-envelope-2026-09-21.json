@@ -1,0 +1,3289 @@
+{
+  "status": "Diagnostic coarse survey, not a certified interpolation or adopted restraint",
+  "model": "simulation.higher_lockout_trial:HigherLockoutFitBench",
+  "shaft_degrees": {
+    "start": -16,
+    "end": 344,
+    "step": 12
+  },
+  "carry_positions": [
+    0,
+    0.5,
+    1
+  ],
+  "crank_step_degrees": 10,
+  "bisection_rounds": 18,
+  "raw_log_sha256": "4fd4b373a5c3f4e620c1cbad0ef97aa94ce65404aa85dd6753038036e35600ba",
+  "records": [
+    {
+      "kernel": "native",
+      "shaft": -16,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -16,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": -4,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.7598876953125,
+          "right": 25.759925842285156,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.12381988925214381
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -4,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.884361267089844,
+          "right": 25.8843994140625,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86036682128906,
+          "right": 140.86040496826172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.1401086290356786
+    },
+    {
+      "kernel": "native",
+      "shaft": 8,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.908554077148438,
+          "right": 27.908592224121094,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6541519165039,
+          "right": 142.65419006347656,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.269319478720037
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 8,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.9449462890625,
+          "right": 27.944984436035156,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6422119140625,
+          "right": 142.64225006103516,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2879403905768465
+    },
+    {
+      "kernel": "native",
+      "shaft": 20,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.714736938476562,
+          "right": 29.71477508544922,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3186853854618198
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 20,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.720001220703125,
+          "right": 29.72003936767578,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3366732802865099
+    },
+    {
+      "kernel": "native",
+      "shaft": 32,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.663780212402344,
+          "right": 31.663818359375,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50737762451172,
+          "right": 146.50741577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.25625756927915283
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 32,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.66515350341797,
+          "right": 31.665191650390625,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50516510009766,
+          "right": 146.5052032470703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2701364132840267
+    },
+    {
+      "kernel": "native",
+      "shaft": 44,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.09131622314453,
+          "right": 33.09135437011719,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.09649969099060475
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 44,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.0963134765625,
+          "right": 33.096351623535156,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47017669677734,
+          "right": 149.47021484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.10226412510154799
+    },
+    {
+      "kernel": "native",
+      "shaft": 56,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 56,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 68,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.7598876953125,
+          "right": 25.759925842285156,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.12382045682261258
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 68,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.884361267089844,
+          "right": 25.8843994140625,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86036682128906,
+          "right": 140.86040496826172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.1401090968708516
+    },
+    {
+      "kernel": "native",
+      "shaft": 80,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.908554077148438,
+          "right": 27.908592224121094,
+          "enters_contact": false
+        },
+        {
+          "left": 142.65411376953125,
+          "right": 142.6541519165039,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.26932092102722927
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 80,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.9449462890625,
+          "right": 27.944984436035156,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6422119140625,
+          "right": 142.64225006103516,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.28794151306111515
+    },
+    {
+      "kernel": "native",
+      "shaft": 92,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.714736938476562,
+          "right": 29.71477508544922,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.31868763058370253
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 92,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.720001220703125,
+          "right": 29.72003936767578,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3366758757683693
+    },
+    {
+      "kernel": "native",
+      "shaft": 104,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.663780212402344,
+          "right": 31.663818359375,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50733947753906,
+          "right": 146.50737762451172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.25626011976641994
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 104,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.66515350341797,
+          "right": 31.665191650390625,
+          "enters_contact": false
+        },
+        {
+          "left": 146.505126953125,
+          "right": 146.50516510009766,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2701387916050335
+    },
+    {
+      "kernel": "native",
+      "shaft": 116,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.09131622314453,
+          "right": 33.09135437011719,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.09650121114080668
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 116,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.0963134765625,
+          "right": 33.096351623535156,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47017669677734,
+          "right": 149.47021484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.10226573409165025
+    },
+    {
+      "kernel": "native",
+      "shaft": 128,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 128,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 140,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.759963989257812,
+          "right": 25.76000213623047,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86891174316406,
+          "right": 140.86894989013672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.12406293283381468
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 140,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.8843994140625,
+          "right": 25.884437561035156,
+          "enters_contact": false
+        },
+        {
+          "left": 140.8592987060547,
+          "right": 140.85933685302734,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.13856802574824278
+    },
+    {
+      "kernel": "native",
+      "shaft": 152,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.908592224121094,
+          "right": 27.90863037109375,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6514434814453,
+          "right": 142.65148162841797,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.26991742401102103
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 152,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.9449462890625,
+          "right": 27.944984436035156,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6396942138672,
+          "right": 142.63973236083984,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2864131839498272
+    },
+    {
+      "kernel": "native",
+      "shaft": 164,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.71508026123047,
+          "right": 29.715118408203125,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42501068115234,
+          "right": 144.425048828125,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.31960523704685573
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 164,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.72034454345703,
+          "right": 29.720382690429688,
+          "enters_contact": false
+        },
+        {
+          "left": 144.41699981689453,
+          "right": 144.4170379638672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.33562819622686496
+    },
+    {
+      "kernel": "native",
+      "shaft": 176,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.66431427001953,
+          "right": 31.664352416992188,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50279998779297,
+          "right": 146.50283813476562,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2572982214748939
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 176,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.66576385498047,
+          "right": 31.665802001953125,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50108337402344,
+          "right": 146.5011215209961,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.26969701266656115
+    },
+    {
+      "kernel": "native",
+      "shaft": 188,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.09196472167969,
+          "right": 33.092002868652344,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47124481201172,
+          "right": 149.47128295898438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.09712269460218032
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 188,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.096961975097656,
+          "right": 33.09700012207031,
+          "enters_contact": false
+        },
+        {
+          "left": 149.4686508178711,
+          "right": 149.46868896484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.102142934497545
+    },
+    {
+      "kernel": "native",
+      "shaft": 200,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 200,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 212,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.79448699951172,
+          "right": 25.794525146484375,
+          "enters_contact": false
+        },
+        {
+          "left": 140.85529327392578,
+          "right": 140.85533142089844,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.13022055742487681
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 212,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.91320037841797,
+          "right": 25.913238525390625,
+          "enters_contact": false
+        },
+        {
+          "left": 140.84442138671875,
+          "right": 140.8444595336914,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.1469939198377186
+    },
+    {
+      "kernel": "native",
+      "shaft": 224,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.933006286621094,
+          "right": 27.93304443359375,
+          "enters_contact": false
+        },
+        {
+          "left": 142.63916015625,
+          "right": 142.63919830322266,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.27793580141202257
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 224,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.96436309814453,
+          "right": 27.964401245117188,
+          "enters_contact": false
+        },
+        {
+          "left": 142.62802124023438,
+          "right": 142.62805938720703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2968835713762705
+    },
+    {
+      "kernel": "native",
+      "shaft": 236,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.750442504882812,
+          "right": 29.75048065185547,
+          "enters_contact": false
+        },
+        {
+          "left": 144.41211700439453,
+          "right": 144.4121551513672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3277207113788688
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 236,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.755096435546875,
+          "right": 29.75513458251953,
+          "enters_contact": false
+        },
+        {
+          "left": 144.4027328491211,
+          "right": 144.40277099609375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.34611436402785223
+    },
+    {
+      "kernel": "native",
+      "shaft": 248,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.704444885253906,
+          "right": 31.704483032226562,
+          "enters_contact": false
+        },
+        {
+          "left": 146.4861297607422,
+          "right": 146.48616790771484,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.26444641518318845
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 248,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.70696258544922,
+          "right": 31.707000732421875,
+          "enters_contact": false
+        },
+        {
+          "left": 146.48555755615234,
+          "right": 146.485595703125,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.27877013980032894
+    },
+    {
+      "kernel": "native",
+      "shaft": 260,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.13220977783203,
+          "right": 33.13224792480469,
+          "enters_contact": false
+        },
+        {
+          "left": 149.44408416748047,
+          "right": 149.44412231445312,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.10190164778485769
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 260,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.13697814941406,
+          "right": 33.13701629638672,
+          "enters_contact": false
+        },
+        {
+          "left": 149.43580627441406,
+          "right": 149.43584442138672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.10801763194687886
+    },
+    {
+      "kernel": "native",
+      "shaft": 272,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 272,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 284,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.766983032226562,
+          "right": 25.76702117919922,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.12427833049672934
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 284,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 25.890541076660156,
+          "right": 25.890579223632812,
+          "enters_contact": false
+        },
+        {
+          "left": 140.8603286743164,
+          "right": 140.86036682128906,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.1405666050073592
+    },
+    {
+      "kernel": "native",
+      "shaft": 296,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.914810180664062,
+          "right": 27.91484832763672,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6541519165039,
+          "right": 142.65419006347656,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.26998731358328676
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 296,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 27.950210571289062,
+          "right": 27.95024871826172,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6422119140625,
+          "right": 142.64225006103516,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.28856504898027524
+    },
+    {
+      "kernel": "native",
+      "shaft": 308,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.715194702148438,
+          "right": 29.715232849121094,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.31925214865789914
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 308,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 29.720420837402344,
+          "right": 29.720458984375,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3372127120551085
+    },
+    {
+      "kernel": "native",
+      "shaft": 320,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.66423797607422,
+          "right": 31.664276123046875,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50737762451172,
+          "right": 146.50741577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.25659884072420674
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 320,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 31.6656494140625,
+          "right": 31.665687561035156,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50516510009766,
+          "right": 146.5052032470703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.2704613173825017
+    },
+    {
+      "kernel": "native",
+      "shaft": 332,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.09173583984375,
+          "right": 33.091773986816406,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.0966066652234574
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 332,
+      "carry": 0,
+      "boundaries": [
+        {
+          "left": 33.09673309326172,
+          "right": 33.096771240234375,
+          "enters_contact": false
+        },
+        {
+          "left": 149.4701385498047,
+          "right": 149.47017669677734,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.10236734046012683
+    },
+    {
+      "kernel": "native",
+      "shaft": 344,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 344,
+      "carry": 0,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": -16,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -16,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": -4,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.75989532470703,
+          "right": 27.759933471679688,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.6190994638252744
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -4,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.884368896484375,
+          "right": 27.88440704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86036682128906,
+          "right": 140.86040496826172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7010594422960177
+    },
+    {
+      "kernel": "native",
+      "shaft": 8,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.90856170654297,
+          "right": 29.908599853515625,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6541519165039,
+          "right": 142.65419006347656,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3465974318658605
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 8,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.94495391845703,
+          "right": 29.944992065429688,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6422119140625,
+          "right": 142.64225006103516,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.4406254352766814
+    },
+    {
+      "kernel": "native",
+      "shaft": 20,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.714744567871094,
+          "right": 31.71478271484375,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.5934269725955068
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 20,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.719970703125,
+          "right": 31.720008850097656,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.6844703826471439
+    },
+    {
+      "kernel": "native",
+      "shaft": 32,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.663787841796875,
+          "right": 33.66382598876953,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50737762451172,
+          "right": 146.50741577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.2812878828811316
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 32,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.6651611328125,
+          "right": 33.665199279785156,
+          "enters_contact": false
+        },
+        {
+          "left": 146.505126953125,
+          "right": 146.50516510009766,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3516575295221012
+    },
+    {
+      "kernel": "native",
+      "shaft": 44,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.091285705566406,
+          "right": 35.09132385253906,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.4824984686685531
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 44,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09632110595703,
+          "right": 35.09635925292969,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47017669677734,
+          "right": 149.47021484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5125818367091692
+    },
+    {
+      "kernel": "native",
+      "shaft": 56,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 56,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 68,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.75989532470703,
+          "right": 27.759933471679688,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.6191023016777377
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 68,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.884368896484375,
+          "right": 27.88440704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86036682128906,
+          "right": 140.86040496826172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.701061786188238
+    },
+    {
+      "kernel": "native",
+      "shaft": 80,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.90856170654297,
+          "right": 29.908599853515625,
+          "enters_contact": false
+        },
+        {
+          "left": 142.65411376953125,
+          "right": 142.6541519165039,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.346604643402071
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 80,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.94495391845703,
+          "right": 29.944992065429688,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6422119140625,
+          "right": 142.64225006103516,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.4406310552073434
+    },
+    {
+      "kernel": "native",
+      "shaft": 92,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.714744567871094,
+          "right": 31.71478271484375,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.5934381982052872
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 92,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.719970703125,
+          "right": 31.720008850097656,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.68448335854235
+    },
+    {
+      "kernel": "native",
+      "shaft": 104,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.663787841796875,
+          "right": 33.66382598876953,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50733947753906,
+          "right": 146.50737762451172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.2813006353178982
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 104,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.6651611328125,
+          "right": 33.665199279785156,
+          "enters_contact": false
+        },
+        {
+          "left": 146.505126953125,
+          "right": 146.50516510009766,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3516694415607893
+    },
+    {
+      "kernel": "native",
+      "shaft": 116,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.091285705566406,
+          "right": 35.09132385253906,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.4825060694198339
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 116,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09632110595703,
+          "right": 35.09635925292969,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47017669677734,
+          "right": 149.47021484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5125899167568191
+    },
+    {
+      "kernel": "native",
+      "shaft": 128,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 128,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 140,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.759971618652344,
+          "right": 27.760009765625,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86891174316406,
+          "right": 140.86894989013672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.618747322994656
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 140,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.88440704345703,
+          "right": 27.884445190429688,
+          "enters_contact": false
+        },
+        {
+          "left": 140.8592987060547,
+          "right": 140.85933685302734,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.6596816923055179
+    },
+    {
+      "kernel": "native",
+      "shaft": 152,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.908599853515625,
+          "right": 29.90863800048828,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6514434814453,
+          "right": 142.65148162841797,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3185182960505353
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 152,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.94495391845703,
+          "right": 29.944992065429688,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6396942138672,
+          "right": 142.63973236083984,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3659535991820027
+    },
+    {
+      "kernel": "native",
+      "shaft": 164,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.715087890625,
+          "right": 31.715126037597656,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42501068115234,
+          "right": 144.425048828125,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.5589763668152543
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 164,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.720352172851562,
+          "right": 31.72039031982422,
+          "enters_contact": false
+        },
+        {
+          "left": 144.41699981689453,
+          "right": 144.4170379638672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.606996333487991
+    },
+    {
+      "kernel": "native",
+      "shaft": 176,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.66432189941406,
+          "right": 33.66436004638672,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50279998779297,
+          "right": 146.50283813476562,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.2768581116421465
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 176,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.665771484375,
+          "right": 33.665809631347656,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50104522705078,
+          "right": 146.50108337402344,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3142566521748174
+    },
+    {
+      "kernel": "native",
+      "shaft": 188,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09197235107422,
+          "right": 35.092010498046875,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47124481201172,
+          "right": 149.47128295898438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.48561348681772104
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 188,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09696960449219,
+          "right": 35.097007751464844,
+          "enters_contact": false
+        },
+        {
+          "left": 149.4686508178711,
+          "right": 149.46868896484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5010611744538106
+    },
+    {
+      "kernel": "native",
+      "shaft": 200,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 200,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 212,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.794456481933594,
+          "right": 27.79449462890625,
+          "enters_contact": false
+        },
+        {
+          "left": 140.85529327392578,
+          "right": 140.85533142089844,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.6511028056073831
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 212,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.913169860839844,
+          "right": 27.9132080078125,
+          "enters_contact": false
+        },
+        {
+          "left": 140.84442138671875,
+          "right": 140.8444595336914,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.735508181836396
+    },
+    {
+      "kernel": "native",
+      "shaft": 224,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.93297576904297,
+          "right": 29.933013916015625,
+          "enters_contact": false
+        },
+        {
+          "left": 142.63916015625,
+          "right": 142.63919830322266,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3896790465655593
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 224,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.964370727539062,
+          "right": 29.96440887451172,
+          "enters_contact": false
+        },
+        {
+          "left": 142.62802124023438,
+          "right": 142.62805938720703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.4853657479040412
+    },
+    {
+      "kernel": "native",
+      "shaft": 236,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.750411987304688,
+          "right": 31.750450134277344,
+          "enters_contact": false
+        },
+        {
+          "left": 144.41211700439453,
+          "right": 144.4121551513672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.638603603481434
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 236,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.755104064941406,
+          "right": 31.755142211914062,
+          "enters_contact": false
+        },
+        {
+          "left": 144.4027328491211,
+          "right": 144.40277099609375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.731692806874901
+    },
+    {
+      "kernel": "native",
+      "shaft": 248,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.70445251464844,
+          "right": 33.704490661621094,
+          "enters_contact": false
+        },
+        {
+          "left": 146.4861297607422,
+          "right": 146.48616790771484,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3222321135831259
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 248,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.70697021484375,
+          "right": 33.707008361816406,
+          "enters_contact": false
+        },
+        {
+          "left": 146.48555755615234,
+          "right": 146.485595703125,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.394855845728768
+    },
+    {
+      "kernel": "native",
+      "shaft": 260,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.13221740722656,
+          "right": 35.13225555419922,
+          "enters_contact": false
+        },
+        {
+          "left": 149.44408416748047,
+          "right": 149.44412231445312,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5095082534172168
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 260,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.13694763183594,
+          "right": 35.136985778808594,
+          "enters_contact": false
+        },
+        {
+          "left": 149.43580627441406,
+          "right": 149.43584442138672,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5413465652399788
+    },
+    {
+      "kernel": "native",
+      "shaft": 272,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 272,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": 284,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.766990661621094,
+          "right": 27.76702880859375,
+          "enters_contact": false
+        },
+        {
+          "left": 140.86997985839844,
+          "right": 140.8700180053711,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.621391670115009
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 284,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 27.890548706054688,
+          "right": 27.890586853027344,
+          "enters_contact": false
+        },
+        {
+          "left": 140.8603286743164,
+          "right": 140.86036682128906,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7033516792278254
+    },
+    {
+      "kernel": "native",
+      "shaft": 296,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.914817810058594,
+          "right": 29.91485595703125,
+          "enters_contact": false
+        },
+        {
+          "left": 142.6541519165039,
+          "right": 142.65419006347656,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.349936606278953
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 296,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 29.950218200683594,
+          "right": 29.95025634765625,
+          "enters_contact": false
+        },
+        {
+          "left": 142.64225006103516,
+          "right": 142.6422882080078,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.443752502736922
+    },
+    {
+      "kernel": "native",
+      "shaft": 308,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.71520233154297,
+          "right": 31.715240478515625,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42901611328125,
+          "right": 144.4290542602539,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.5962607886573006
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 308,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 31.720428466796875,
+          "right": 31.72046661376953,
+          "enters_contact": false
+        },
+        {
+          "left": 144.42127227783203,
+          "right": 144.4213104248047,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.6871670881679468
+    },
+    {
+      "kernel": "native",
+      "shaft": 320,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.66424560546875,
+          "right": 33.664283752441406,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50737762451172,
+          "right": 146.50741577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.282994240155174
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 320,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 33.665618896484375,
+          "right": 33.66565704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 146.50516510009766,
+          "right": 146.5052032470703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.3532844319672621
+    },
+    {
+      "kernel": "native",
+      "shaft": 332,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09174346923828,
+          "right": 35.09178161621094,
+          "enters_contact": false
+        },
+        {
+          "left": 149.47261810302734,
+          "right": 149.47265625,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.48303333984806657
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 332,
+      "carry": 0.5,
+      "boundaries": [
+        {
+          "left": 35.09674072265625,
+          "right": 35.096778869628906,
+          "enters_contact": false
+        },
+        {
+          "left": 149.4701385498047,
+          "right": 149.47017669677734,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.5130946421628426
+    },
+    {
+      "kernel": "native",
+      "shaft": 344,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 344,
+      "carry": 0.5,
+      "boundaries": [],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0
+    },
+    {
+      "kernel": "native",
+      "shaft": -16,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.9166653921285621
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -16,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.885362367835477
+    },
+    {
+      "kernel": "native",
+      "shaft": -4,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.75989532470703,
+          "right": 27.759933471679688,
+          "enters_contact": false
+        },
+        {
+          "left": 150.20858764648438,
+          "right": 150.20862579345703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3714596865428643
+    },
+    {
+      "kernel": "faceted",
+      "shaft": -4,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.884368896484375,
+          "right": 27.88440704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 150.2108383178711,
+          "right": 150.21087646484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.42064343118895187
+    },
+    {
+      "kernel": "native",
+      "shaft": 8,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.908523559570312,
+          "right": 29.90856170654297,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70459747314453,
+          "right": 151.7046356201172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8079584770915189
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 8,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.94495391845703,
+          "right": 29.944992065429688,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70318603515625,
+          "right": 151.7032241821289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8647682323439942
+    },
+    {
+      "kernel": "native",
+      "shaft": 20,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.714744567871094,
+          "right": 31.71478271484375,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06785583496094,
+          "right": 153.0678939819336,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.956056204825682
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 20,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.719970703125,
+          "right": 31.720008850097656,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06549072265625,
+          "right": 153.0655288696289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.0109968180729563
+    },
+    {
+      "kernel": "native",
+      "shaft": 32,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.663787841796875,
+          "right": 33.66382598876953,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.768772746874546
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 32,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.6651611328125,
+          "right": 33.665199279785156,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8114039656586292
+    },
+    {
+      "kernel": "native",
+      "shaft": 44,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.091285705566406,
+          "right": 35.09132385253906,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033602768329122
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 44,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09632110595703,
+          "right": 35.09635925292969,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.0334726919934134
+    },
+    {
+      "kernel": "native",
+      "shaft": 56,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.916665392128578
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 56,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.8853623169907463
+    },
+    {
+      "kernel": "native",
+      "shaft": 68,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.75989532470703,
+          "right": 27.759933471679688,
+          "enters_contact": false
+        },
+        {
+          "left": 150.20858764648438,
+          "right": 150.20862579345703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.37146138925435823
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 68,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.884368896484375,
+          "right": 27.88440704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 150.2108383178711,
+          "right": 150.21087646484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.4206448338672904
+    },
+    {
+      "kernel": "native",
+      "shaft": 80,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.908523559570312,
+          "right": 29.90856170654297,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70459747314453,
+          "right": 151.7046356201172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8079628040133129
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 80,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.94495391845703,
+          "right": 29.944992065429688,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70318603515625,
+          "right": 151.7032241821289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8647716022285327
+    },
+    {
+      "kernel": "native",
+      "shaft": 92,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.714744567871094,
+          "right": 31.71478271484375,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06785583496094,
+          "right": 153.0678939819336,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.9560629401916725
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 92,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.719970703125,
+          "right": 31.720008850097656,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06549072265625,
+          "right": 153.0655288696289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.0110046203379675
+    },
+    {
+      "kernel": "native",
+      "shaft": 104,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.663787841796875,
+          "right": 33.66382598876953,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7687803983367497
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 104,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.6651611328125,
+          "right": 33.665199279785156,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8114111005294189
+    },
+    {
+      "kernel": "native",
+      "shaft": 116,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.091285705566406,
+          "right": 35.09132385253906,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033602768329138
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 116,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09632110595703,
+          "right": 35.09635925292969,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033471464546812
+    },
+    {
+      "kernel": "native",
+      "shaft": 128,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.916665392128594
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 128,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.8853641878955076
+    },
+    {
+      "kernel": "native",
+      "shaft": 140,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.759971618652344,
+          "right": 27.760009765625,
+          "enters_contact": false
+        },
+        {
+          "left": 150.20858764648438,
+          "right": 150.20862579345703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3706193012610965
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 140,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.831192016601562,
+          "right": 27.83123016357422,
+          "enters_contact": false
+        },
+        {
+          "left": 150.2108383178711,
+          "right": 150.21087646484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.38562194611094713
+    },
+    {
+      "kernel": "native",
+      "shaft": 152,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.908599853515625,
+          "right": 29.90863800048828,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70459747314453,
+          "right": 151.7046356201172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7786846188244257
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 152,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.9365234375,
+          "right": 29.936561584472656,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70318603515625,
+          "right": 151.7032241821289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7970412157558744
+    },
+    {
+      "kernel": "native",
+      "shaft": 164,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.715087890625,
+          "right": 31.715126037597656,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06785583496094,
+          "right": 153.0678939819336,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.9197741921497979
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 164,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.720352172851562,
+          "right": 31.72039031982422,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06549072265625,
+          "right": 153.0655288696289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.9391422724077508
+    },
+    {
+      "kernel": "native",
+      "shaft": 176,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.66432189941406,
+          "right": 33.66436004638672,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7622616835635412
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 176,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.665771484375,
+          "right": 33.665809631347656,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31536102294922,
+          "right": 145.31539916992188,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7775168133683807
+    },
+    {
+      "kernel": "native",
+      "shaft": 188,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09197235107422,
+          "right": 35.092010498046875,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.0336027683291387
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 188,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09696960449219,
+          "right": 35.097007751464844,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033472182775606
+    },
+    {
+      "kernel": "native",
+      "shaft": 200,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.9166653921286052
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 200,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.885360913608638
+    },
+    {
+      "kernel": "native",
+      "shaft": 212,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.794456481933594,
+          "right": 27.79449462890625,
+          "enters_contact": false
+        },
+        {
+          "left": 150.20858764648438,
+          "right": 150.20862579345703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.3906616920450395
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 212,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.913169860839844,
+          "right": 27.9132080078125,
+          "enters_contact": false
+        },
+        {
+          "left": 150.2108383178711,
+          "right": 150.21087646484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.44134430172760647
+    },
+    {
+      "kernel": "native",
+      "shaft": 224,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.93297576904297,
+          "right": 29.933013916015625,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70459747314453,
+          "right": 151.7046356201172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.833807446496285
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 224,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.964370727539062,
+          "right": 29.96440887451172,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70318603515625,
+          "right": 151.7032241821289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8916109045286079
+    },
+    {
+      "kernel": "native",
+      "shaft": 236,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.750411987304688,
+          "right": 31.750450134277344,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06785583496094,
+          "right": 153.0678939819336,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.9831621839710628
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 236,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.755104064941406,
+          "right": 31.755142211914062,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06549072265625,
+          "right": 153.0655288696289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.0393467217569587
+    },
+    {
+      "kernel": "native",
+      "shaft": 248,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.70445251464844,
+          "right": 33.704490661621094,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.7933392858538288
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 248,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.70697021484375,
+          "right": 33.707008361816406,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8373180317294694
+    },
+    {
+      "kernel": "native",
+      "shaft": 260,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.13221740722656,
+          "right": 35.13225555419922,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033602768329144
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 260,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.13694763183594,
+          "right": 35.136985778808594,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.0334726080834664
+    },
+    {
+      "kernel": "native",
+      "shaft": 272,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.9166653921285557
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 272,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.8853665374552027
+    },
+    {
+      "kernel": "native",
+      "shaft": 284,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.766990661621094,
+          "right": 27.76702880859375,
+          "enters_contact": false
+        },
+        {
+          "left": 150.20858764648438,
+          "right": 150.20862579345703,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.37283501034813243
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 284,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 27.890548706054688,
+          "right": 27.890586853027344,
+          "enters_contact": false
+        },
+        {
+          "left": 150.2108383178711,
+          "right": 150.21087646484375,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.4220263145232691
+    },
+    {
+      "kernel": "native",
+      "shaft": 296,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.914779663085938,
+          "right": 29.914817810058594,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70459747314453,
+          "right": 151.7046356201172,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8099619817847609
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 296,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 29.950218200683594,
+          "right": 29.95025634765625,
+          "enters_contact": false
+        },
+        {
+          "left": 151.70318603515625,
+          "right": 151.7032241821289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8666447529079253
+    },
+    {
+      "kernel": "native",
+      "shaft": 308,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.71520233154297,
+          "right": 31.715240478515625,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06785583496094,
+          "right": 153.0678939819336,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.9577564945007047
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 308,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 31.720428466796875,
+          "right": 31.72046661376953,
+          "enters_contact": false
+        },
+        {
+          "left": 153.06549072265625,
+          "right": 153.0655288696289,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.0126185812606552
+    },
+    {
+      "kernel": "native",
+      "shaft": 320,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.66424560546875,
+          "right": 33.664283752441406,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31532287597656,
+          "right": 145.31536102294922,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.769796561261616
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 320,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 33.665618896484375,
+          "right": 33.66565704345703,
+          "enters_contact": false
+        },
+        {
+          "left": 145.31536102294922,
+          "right": 145.31539916992188,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 0.8123790093713842
+    },
+    {
+      "kernel": "native",
+      "shaft": 332,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09174346923828,
+          "right": 35.09178161621094,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.033602768329151
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 332,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 35.09674072265625,
+          "right": 35.096778869628906,
+          "enters_contact": false
+        },
+        {
+          "left": 146.81987762451172,
+          "right": 146.81991577148438,
+          "enters_contact": true
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 2.0334777248689626
+    },
+    {
+      "kernel": "native",
+      "shaft": 344,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53527069091797,
+          "right": 148.53530883789062,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.916665392128576
+    },
+    {
+      "kernel": "faceted",
+      "shaft": 344,
+      "carry": 1,
+      "boundaries": [
+        {
+          "left": 148.53649139404297,
+          "right": 148.53652954101562,
+          "enters_contact": true
+        },
+        {
+          "left": 154.86038208007812,
+          "right": 154.86042022705078,
+          "enters_contact": false
+        }
+      ],
+      "sample_count": 37,
+      "maximum_sample_volume_mm3": 1.885362367835477
+    }
+  ]
+}
