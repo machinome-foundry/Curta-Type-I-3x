@@ -9,6 +9,17 @@ from simulation.higher_counter_locking_laws import higher_counter_contact_gap
 
 
 class HigherCounterLockingLawTest(unittest.TestCase):
+    def test_measured_complete_print_collisions_are_refused(self):
+        data = json.loads((Path(__file__).parent/'docs/evidence/'
+                           'higher-counter-fine-profile-rejection-2026-09-21.json').read_text())
+        self.assertEqual(data['summary']['failures'], 40)
+        self.assertEqual(len(data['admitted_collisions']), 40)
+        for row in data['admitted_collisions']:
+            self.assertGreater(row['common_mm3'], 0)
+            with self.subTest(carry=row['carry'], shaft=row['shaft'], crank=row['crank']):
+                self.assertGreater(higher_counter_contact_gap(
+                    row['crank'], row['shaft'], -1.8+4.2*row['carry']), 0)
+
     def test_measured_free_carry_poses_do_not_become_false_stops(self):
         data = json.loads((Path(__file__).parent/'docs/evidence/'
                            'higher-counter-coarse-profile-rejection-2026-09-21.json').read_text())

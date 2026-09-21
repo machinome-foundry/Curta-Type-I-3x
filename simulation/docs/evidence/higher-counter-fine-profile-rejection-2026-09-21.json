@@ -1,0 +1,382 @@
+{
+  "status": "rejected-admitted-collisions",
+  "scope": "counter-tens complete-print faceted finite admission sweep; native sweep pending",
+  "source_sha256": {
+    "higher_counter_locking_profiles.py": "ad255b61cc1c6b3ea252ff13c0f7357c4e6c727e4c63576a4bff2fc1615afffd",
+    "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+    "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367"
+  },
+  "log": {
+    "path": "_build_checks/higher-counter-fine-admission-faceted.log",
+    "sha256": "0da5aa1ec5180c3bd90096a73a0ad1c86c7fe2e74124ac3e1b54c7a7d69cae8c"
+  },
+  "summary": {
+    "complete": true,
+    "station": 2,
+    "kernel": "faceted",
+    "checked": 15519,
+    "failures": 40
+  },
+  "admitted_collisions": [
+    {
+      "carry": 0.5,
+      "shaft": 182.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005596668870335197,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 182.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005404579229329914,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 183.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005470640205084048,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 183.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005472146726931085,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 254.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.000559673884282531,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 254.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005404646800719042,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 255.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005472184651433619,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 255.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005473691408009827,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 326.0,
+      "crank": 98.23899993896484,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.000560746293907027,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 326.0,
+      "crank": 98.23999993896484,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.000541507453388155,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 327.0,
+      "crank": 98.23899993896484,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.000575900668817264,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 327.0,
+      "crank": 98.23999993896484,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005760567757373844,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 398.0,
+      "crank": 98.27813873291015,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005587548935614671,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 398.0,
+      "crank": 98.27913873291016,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005396600341784606,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 399.0,
+      "crank": 98.27813873291015,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.00134697193306659,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 399.0,
+      "crank": 98.27913873291016,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0013396359153194063,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 470.0,
+      "crank": 98.23873291015624,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005610732134324456,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 470.0,
+      "crank": 98.23973291015625,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005418173740654871,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 471.0,
+      "crank": 98.23873291015624,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005512979570292159,
+      "failure": true
+    },
+    {
+      "carry": 0.5,
+      "shaft": 471.0,
+      "crank": 98.23973291015625,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005514493536485175,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 182.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005596668870334943,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 182.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005404579229329846,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 183.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005432305336599283,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 183.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005434908042800382,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 254.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005596738842825202,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 254.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.000540464680071889,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 255.0,
+      "crank": 98.23833236694335,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005433853886107369,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 255.0,
+      "crank": 98.23933236694336,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005436456781191166,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 326.0,
+      "crank": 98.23899993896484,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005607702531241206,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 326.0,
+      "crank": 98.23999993896484,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005415301894234571,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 327.0,
+      "crank": 98.23899993896484,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.000572133628561078,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 327.0,
+      "crank": 98.23999993896484,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005723987534818238,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 398.0,
+      "crank": 98.27813873291015,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005587548935614551,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 398.0,
+      "crank": 98.27913873291016,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005396600341784803,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 399.0,
+      "crank": 98.27813873291015,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0013449761186975677,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 399.0,
+      "crank": 98.27913873291016,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0013377117442353822,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 470.0,
+      "crank": 98.23873291015624,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005610732134324645,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 470.0,
+      "crank": 98.23973291015625,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005418173740654752,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 471.0,
+      "crank": 98.23873291015624,
+      "kernel": "faceted",
+      "gap": 0.0,
+      "common_mm3": 0.0005474695451166342,
+      "failure": true
+    },
+    {
+      "carry": 1,
+      "shaft": 471.0,
+      "crank": 98.23973291015625,
+      "kernel": "faceted",
+      "gap": -0.0009999999999763531,
+      "common_mm3": 0.0005477305539501494,
+      "failure": true
+    }
+  ]
+}

@@ -305,8 +305,8 @@ The [production Python banks](evidence/tens-production-python-acceptance-2026-09
 are now complete. All four 213-coordinate stopped/idle banks match both the
 old trial and the fresh production browser **exactly**, checked independently
 from the saved values. Production neighbouring arithmetic is still running;
-its page-53 calibration case now passes, with subtraction/overflow undo and
-successive-addition/clearing still pending in that invocation.
+its page-53 calibration and subtraction/overflow-undo cases now pass, with
+successive-addition/selective-clearing still pending in that invocation.
 the previously completed three-case trial arithmetic gate is not relabelled
 as that production invocation. This implementation step does not close any
 whole-project task or adopt higher-result-bank/counter restraints.
@@ -395,4 +395,18 @@ refuses known contacts but incorrectly blocks ordinary carry at five source
 flat poses that both complete-print kernels prove clear. A finer scan reveals
 the missed free interval behind those false stops. The
 [candidate record](higher-counter-restraint-2026-09-21.md) preserves the rejection
-and active refinement; no operating restraint is adopted from a coarse scan.
+and refinement. The completed 181-shaft fine scan now clears all four
+numerical gates, including those five false stops, but the expanded faceted
+complete-print check finds admitted collisions. Geometry acceptance remains
+failed for that candidate and no operating restraint is adopted. Its faceted
+sweep finishes with 40 failures in 15,519 poses, all preserved as regression
+evidence. Complete-print boundary measurements identify a held lower-disc
+endpoint; ten added edge curves now refuse those collisions without blocking
+the five earlier free poses. The new isolated profile is under fresh geometry
+verification; the old native sweep remains identifiable by its source hash.
+
+At the pilot's request, viewer-owned OpenSpec change
+`keep-expression-references-valid` is prepared for approval, with proposal,
+design, behavioral delta, tasks and pinned Curta mount evidence. Strict
+OpenSpec validation passes. This is planning only: no viewer implementation
+or framework mutation is authorized by that preparation request.
