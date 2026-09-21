@@ -1,0 +1,40 @@
+{
+  "status": "scoped-pass",
+  "scope": "Complete configured faceted admission matrix for source-backed counter station 5",
+  "header": {
+    "station": 5,
+    "trial": true,
+    "kernel": "faceted",
+    "carry": [
+      0,
+      0.5,
+      1
+    ],
+    "support_heights": false,
+    "shafts": null,
+    "dense": false,
+    "source_sha256": {
+      "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+      "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+      "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+      "tools/counter_lockout_probe.py": "a8ce11f1793d08b31334f031b23da68278f2b8a40c3a623ce07becaf476d29d7",
+      "tools/check_higher_counter_locking_profile.py": "0e8cac5491e435aa376995774fd9192823dedd86bd129ccdeaedbe49a696cf12",
+      "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+    }
+  },
+  "summary": {
+    "complete": true,
+    "station": 5,
+    "kernel": "faceted",
+    "checked": 16538,
+    "failures": 0
+  },
+  "positive_rows": 0,
+  "log": "_build_checks/higher-counter-station-5-admission-faceted-retry-1.log",
+  "log_sha256": "b99e5d6e40ad4434ba3fd23fbe85f1c698446f92168d1d3a0571a2811816fd3b",
+  "limitations": [
+    "Carry 0, 0.5 and 1 only; no continuous or complete-height claim",
+    "Native station 5 and operating acceptance remain open",
+    "Counter station 6 worker terminated before completion"
+  ]
+}

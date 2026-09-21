@@ -1,0 +1,43 @@
+{
+  "status": "preparation-blocked-with-recorded-stop",
+  "header": {
+    "model": "simulation.running:OperatingCurta",
+    "coordinates": 213,
+    "acceptance": "diagnostic-only"
+  },
+  "stopped": {
+    "input": "crank_rotation",
+    "target": 180,
+    "status": "blocked",
+    "crank": 163.42595046793576,
+    "shaft": 114,
+    "common_mm3": {
+      "native": 0,
+      "faceted": 0
+    },
+    "stops": [
+      {
+        "coordinate": "main_drive.crank.turn",
+        "bound": "low"
+      }
+    ]
+  },
+  "summary": {
+    "complete": true,
+    "sequence_completed": false,
+    "final_request_status": "blocked"
+  },
+  "bank_parity": {
+    "banks": 2,
+    "equal": true
+  },
+  "bank_reference": "higher-counter-preparation-attribution-2026-09-21.json:trace.stopped.bank",
+  "log": "_build_checks/higher-counter-tens-production-preparation-recorded.log",
+  "log_sha256": "6ec8caf3e092e6cc2f8e1b233d4ea2d416adab1190f24b3ac14e30270c614c4d",
+  "probe_sha256": "bac5baa336f8df65bd915f80217665166ce1befb4f74e4b9415b711c09af6395",
+  "limitations": [
+    "Confirms the bounded coordinate and side, not the identity of one of multiple lower-bound declarations",
+    "Numerical result-tens attribution and geometry remain in the linked record",
+    "The intended counter-tens withdrawal remains unreached"
+  ]
+}

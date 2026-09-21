@@ -345,3 +345,24 @@ Full-matrix retries preserve those logs and write separate `-retry-1.log`
 files: one native queue runs counter tens, then result 8/10/11; one faceted
 queue runs counter 5/6. The newer native counter 3..6 queue and both arithmetic
 batches remained live. These are active validation jobs, not passes.
+
+## Complete carry-graph reproduction and latest validation state
+
+The history-enabled preparation rerun now completes its diagnostic and records
+the crank's `low` stop at the same 163.42595046793576°. All 213 stopped bank
+values equal the earlier run exactly; see the
+[recorded-stop evidence](evidence/higher-counter-preparation-recorded-stop-2026-09-21.json).
+The expanded CAD-free result graph reproduces the full-machine stop and all
+41 mapped result-bank/control values exactly. Without its restraints it reaches
+180° but misses one 72° tens carry. Both regressions remain red; the
+[carry-graph finding](result-carry-graph-finding-2026-09-21.md) records the
+reproduction and separate framework-correctness scope decision. This is not
+a higher-counter law failure or a completed counter withdrawal test.
+
+The counter-station-5 faceted retry completes **16,538 admitted poses with
+zero positive common**, separately [recorded](evidence/higher-counter-station-5-faceted-2026-09-21.json).
+The next station-6 worker and both newer native queues subsequently receive
+SIGTERM before completion; the counter-ones arithmetic process also disappears
+with no terminal summary. No additional pass is inferred. Repeated full
+restarts are held while the unexpected interruption is clarified; the live
+result-bank arithmetic process remains untouched.

@@ -1,0 +1,49 @@
+{
+  "status": "inspected-no-deployment-path-established",
+  "source": {
+    "path": "3D Printed Curta Calculator Assembly_720p.mp4",
+    "sha256": "95aca6d4d3a43790fae86a3d7d34cd94f4989301318c0ff73ed7a2977632a014",
+    "duration_seconds": 2789.121451,
+    "width": 1280,
+    "height": 720
+  },
+  "sheets": [
+    {
+      "path": "_build_checks/loop-30m-to-36m15-contact-sheet.png",
+      "start": "00:30:00",
+      "duration": 375,
+      "filter": "fps=1/15,scale=320:-1,tile=5x5",
+      "sha256": "299f7670fcd8ccb085cf287fb31cef919c619cebb27e94b28a66123ac5659aae"
+    },
+    {
+      "path": "_build_checks/loop-36m30-to-41m30-contact-sheet.png",
+      "start": "00:36:30",
+      "duration": 300,
+      "filter": "fps=1/15,scale=320:-1,tile=5x4",
+      "sha256": "3bab941588c631453aaaa6ff4bb3fd3f9d2406e0d4868e2c97c2f9dbe042a050"
+    },
+    {
+      "path": "_build_checks/loop-38m-to-39m-contact-sheet.png",
+      "start": "00:38:00",
+      "duration": 60,
+      "filter": "fps=1/2,scale=320:-1,tile=5x6",
+      "sha256": "505520d3fb933c3852a14d16b8e133b6e5fd0c01476f5dfb0b91b5007fc3139a"
+    },
+    {
+      "path": "_build_checks/loop-44m30-to-end-contact-sheet.png",
+      "start": "00:44:30",
+      "duration": null,
+      "filter": "fps=1/8,scale=320:-1,tile=5x3",
+      "sha256": "41c7178cf7f464c589cdcbf96e49289bdfa45662c796167b686358bcd3e3d893"
+    }
+  ],
+  "observations": [
+    "Loop is already attached to the black top-cover assembly when that assembly is installed",
+    "Sampled clearing/operation views do not resolve clip release or snap deformation"
+  ],
+  "limitations": [
+    "Sampled frames, not a continuous frame-by-frame audit",
+    "No permanent hinge, new fitting or compliance path inferred",
+    "Generated sheets and user-owned video remain unstaged"
+  ]
+}

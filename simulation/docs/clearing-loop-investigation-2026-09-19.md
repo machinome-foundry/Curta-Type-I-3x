@@ -136,3 +136,17 @@ resolve this particular rigid-path conflict. Do not erase the wall along
 the swept peg path and then claim the original snap retention was preserved.
 Clipping remains open pending a justified compliant/assembly path; the
 operating model and its existing Studio navigation are unchanged by T05/T06.
+
+## Additional local assembly-video review, 2026-09-21
+
+Four new contact sheets were inspected: 30:00–36:15 and 36:30–41:30 at
+15-second sampling, 38:00–39:00 at two-second sampling, and 44:30–end at
+eight-second sampling. The [review record](evidence/clearing-loop-video-review-2026-09-21.json)
+pins the local video's hash and duration, exact sampling filters, and all
+four generated image hashes. The 38-minute views show the loop already
+attached when the black top-cover assembly is installed; the later sampled
+operation views still do not resolve clip release or elastic passage.
+These are inspected frames, not a claim that the entire film lacks a useful
+moment. They justify no permanent hinge, additional material removal or
+deploy/stow path. The user's video and generated sheets remain unstaged,
+and the clearing-loop task remains open.

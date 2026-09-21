@@ -1,0 +1,369 @@
+{
+  "status": "reproduced-failure",
+  "framework_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "log": "_build_checks/result-carry-graph-repro-declared-paths.log",
+  "log_sha256": "d155bbc64e5c9be5e6f221573414c11f769c1440c91d1b972b4d8e74dac3e2a1",
+  "tests": {
+    "run": 2,
+    "failures": 2,
+    "seconds": 281.535
+  },
+  "constrained": {
+    "status": "blocked",
+    "crank": 163.42595046793576,
+    "bank": {
+      "bell.turn": -163.42595046793576,
+      "carriage_lift": 0,
+      "carriage_turn": 0,
+      "clearing": 0,
+      "crank.turn": -163.42595046793576,
+      "crank_angle": 163.42595046793576,
+      "digit": 0,
+      "height": 9,
+      "lever.travel": 0,
+      "lever_10.travel": -4.2,
+      "lever_2.travel": 4.2,
+      "lever_3.travel": 0.618460480880413,
+      "lever_4.travel": 0,
+      "lever_5.travel": 0,
+      "lever_6.travel": -4.2,
+      "lever_7.travel": 0,
+      "lever_8.travel": -4.2,
+      "lever_9.travel": -4.2,
+      "ones.turn": 724,
+      "selector.turn": 0,
+      "shaft_10.turn": -196,
+      "shaft_2.turn": 603.5260829947889,
+      "shaft_3.turn": 455.52608299478896,
+      "shaft_4.turn": 307.5260829947889,
+      "shaft_5.turn": 159.52608299478888,
+      "shaft_6.turn": 11.52608299478888,
+      "shaft_7.turn": -136,
+      "shaft_8.turn": -156,
+      "shaft_9.turn": -176,
+      "tens.turn": 699.2537571367207,
+      "wheel_0.turn": -506.00000000000006,
+      "wheel_1.turn": -593.6268785583603,
+      "wheel_10.turn": -145.99999998,
+      "wheel_2.turn": -595.2131245973944,
+      "wheel_3.turn": -551.2131245773944,
+      "wheel_4.turn": -507.21312457739447,
+      "wheel_5.turn": -463.21312456739446,
+      "wheel_6.turn": -419.21312457739447,
+      "wheel_7.turn": -375.45008311,
+      "wheel_8.turn": -395.45008311,
+      "wheel_9.turn": -415.4500831,
+      "zero_setting": 0
+    }
+  },
+  "unconstrained": {
+    "status": "completed",
+    "crank": 180,
+    "actual_tens_shaft": 632,
+    "expected_tens_shaft": 704
+  },
+  "full_root_comparison": {
+    "mapped": 41,
+    "exact": 41,
+    "rows": [
+      {
+        "reduced": "bell.turn",
+        "operating": "carry_mechanism.tens_bell.turn",
+        "reduced_value": -163.42595046793576,
+        "operating_value": -163.42595046793576,
+        "exact": true
+      },
+      {
+        "reduced": "crank.turn",
+        "operating": "main_drive.crank.turn",
+        "reduced_value": -163.42595046793576,
+        "operating_value": -163.42595046793576,
+        "exact": true
+      },
+      {
+        "reduced": "crank_angle",
+        "operating": "crank_rotation",
+        "reduced_value": 163.42595046793576,
+        "operating_value": 163.42595046793576,
+        "exact": true
+      },
+      {
+        "reduced": "height",
+        "operating": "main_drive.crank.lift",
+        "reduced_value": 9,
+        "operating_value": 9,
+        "exact": true
+      },
+      {
+        "reduced": "carriage_lift",
+        "operating": "carriage.registers.lift",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "carriage_turn",
+        "operating": "carriage.registers.turn",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "clearing",
+        "operating": "carriage.registers.clearing_ring.turn",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "digit",
+        "operating": "digit_1",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "selector.turn",
+        "operating": "input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom.turn",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "ones.turn",
+        "operating": "transmission.result.ones.turn",
+        "reduced_value": 724,
+        "operating_value": 724,
+        "exact": true
+      },
+      {
+        "reduced": "tens.turn",
+        "operating": "transmission.result.tens.turn",
+        "reduced_value": 699.2537571367207,
+        "operating_value": 699.2537571367207,
+        "exact": true
+      },
+      {
+        "reduced": "lever.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results.travel",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_2.turn",
+        "operating": "transmission.result.hundreds.turn",
+        "reduced_value": 603.5260829947889,
+        "operating_value": 603.5260829947889,
+        "exact": true
+      },
+      {
+        "reduced": "lever_2.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slider_for_results.travel",
+        "reduced_value": 4.2,
+        "operating_value": 4.2,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_3.turn",
+        "operating": "transmission.result.digit_4.turn",
+        "reduced_value": 455.52608299478896,
+        "operating_value": 455.52608299478896,
+        "exact": true
+      },
+      {
+        "reduced": "lever_3.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_3.tens_slider_for_results.travel",
+        "reduced_value": 0.618460480880413,
+        "operating_value": 0.618460480880413,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_4.turn",
+        "operating": "transmission.result.digit_5.turn",
+        "reduced_value": 307.5260829947889,
+        "operating_value": 307.5260829947889,
+        "exact": true
+      },
+      {
+        "reduced": "lever_4.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_4.tens_slider_for_results.travel",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_5.turn",
+        "operating": "transmission.result.digit_6.turn",
+        "reduced_value": 159.52608299478888,
+        "operating_value": 159.52608299478888,
+        "exact": true
+      },
+      {
+        "reduced": "lever_5.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_5.tens_slider_for_results.travel",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_6.turn",
+        "operating": "transmission.result.digit_7.turn",
+        "reduced_value": 11.52608299478888,
+        "operating_value": 11.52608299478888,
+        "exact": true
+      },
+      {
+        "reduced": "lever_6.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_6.tens_slider_for_results.travel",
+        "reduced_value": -4.2,
+        "operating_value": -4.2,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_7.turn",
+        "operating": "transmission.result.digit_8.turn",
+        "reduced_value": -136,
+        "operating_value": -136,
+        "exact": true
+      },
+      {
+        "reduced": "lever_7.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_7.tens_slider_for_results.travel",
+        "reduced_value": 0,
+        "operating_value": 0,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_8.turn",
+        "operating": "transmission.result.digit_9.turn",
+        "reduced_value": -156,
+        "operating_value": -156,
+        "exact": true
+      },
+      {
+        "reduced": "lever_8.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_8.tens_slider_for_results.travel",
+        "reduced_value": -4.2,
+        "operating_value": -4.2,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_9.turn",
+        "operating": "transmission.result.digit_10.turn",
+        "reduced_value": -176,
+        "operating_value": -176,
+        "exact": true
+      },
+      {
+        "reduced": "lever_9.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_9.tens_slider_for_results.travel",
+        "reduced_value": -4.2,
+        "operating_value": -4.2,
+        "exact": true
+      },
+      {
+        "reduced": "shaft_10.turn",
+        "operating": "transmission.result.digit_11.turn",
+        "reduced_value": -196,
+        "operating_value": -196,
+        "exact": true
+      },
+      {
+        "reduced": "lever_10.travel",
+        "operating": "carry_mechanism.result_carries.results_tens_lever_assembly_10.tens_slider_for_results.travel",
+        "reduced_value": -4.2,
+        "operating_value": -4.2,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_0.turn",
+        "operating": "carriage.registers.result_register.p_10203_1.turn",
+        "reduced_value": -506.00000000000006,
+        "operating_value": -506.00000000000006,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_1.turn",
+        "operating": "carriage.registers.result_register.p_10203_2.turn",
+        "reduced_value": -593.6268785583603,
+        "operating_value": -593.6268785583603,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_2.turn",
+        "operating": "carriage.registers.result_register.p_10205_1.turn",
+        "reduced_value": -595.2131245973944,
+        "operating_value": -595.2131245973944,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_3.turn",
+        "operating": "carriage.registers.result_register.p_10205_2.turn",
+        "reduced_value": -551.2131245773944,
+        "operating_value": -551.2131245773944,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_4.turn",
+        "operating": "carriage.registers.result_register.p_10204_1.turn",
+        "reduced_value": -507.21312457739447,
+        "operating_value": -507.21312457739447,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_5.turn",
+        "operating": "carriage.registers.result_register.p_10204_2.turn",
+        "reduced_value": -463.21312456739446,
+        "operating_value": -463.21312456739446,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_6.turn",
+        "operating": "carriage.registers.result_register.p_10204_3.turn",
+        "reduced_value": -419.21312457739447,
+        "operating_value": -419.21312457739447,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_7.turn",
+        "operating": "carriage.registers.result_register.p_10204_4.turn",
+        "reduced_value": -375.45008311,
+        "operating_value": -375.45008311,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_8.turn",
+        "operating": "carriage.registers.result_register.p_10204_5.turn",
+        "reduced_value": -395.45008311,
+        "operating_value": -395.45008311,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_9.turn",
+        "operating": "carriage.registers.result_register.p_10204_6.turn",
+        "reduced_value": -415.4500831,
+        "operating_value": -415.4500831,
+        "exact": true
+      },
+      {
+        "reduced": "wheel_10.turn",
+        "operating": "carriage.registers.result_register.results_dial_type_2_1.turn",
+        "reduced_value": -145.99999998,
+        "operating_value": -145.99999998,
+        "exact": true
+      }
+    ]
+  },
+  "source_sha256": {
+    "simulation/result_carry_graph_repro.py": "acb34f145f3be0ee8235bbb11dc70856426c5020dff22ae2c9762ab33ccd1a75",
+    "simulation/test_result_carry_graph_repro.py": "34269df78bc1d9b21ad96e28c009771443bdf073c5ee2b5dd7153d5c675678be",
+    "simulation/carry_constraint_repro.py": "0810d7591aed02e91fae33773715f1570cdc80a79046dc967e321d0a00c501a0",
+    "simulation/running_laws.py": "8938991d5b9234e3a7075bb3ca4ba04e1f54ebdf025936e815ea5ae7435efaa7"
+  },
+  "limitations": [
+    "No framework correctness fix or interface change authorized",
+    "The reduction retains source laws but omits CAD, counter, pawl and upper-travel adapter",
+    "Unconstrained completion is not mechanically acceptable; its carry result fails"
+  ]
+}
