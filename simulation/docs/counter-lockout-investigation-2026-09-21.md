@@ -457,3 +457,61 @@ overlap; 108/110 faceted brackets overlap. The faceted brackets at tens shafts
 rounded away. The [normalization evidence](evidence/counter-upper-normalization-2026-09-21.json)
 pins both source logs and the comparison. This neither certifies interpolation
 between those coarse samples nor supplies the lower-disc/carry-tooth fields.
+
+## Independent lower-disc and carry-tooth angular fields
+
+The native pair reader now accepts explicit counter ingredient names and the
+source-specific stack path. A new check compares its rotated reference shapes
+against independently posed ingredients at seven upper/lower/tooth contact and
+clear positions. Zero common must stay exactly zero; positive/zero classification
+must agree before numerical-volume parity is checked. The whole-print counter
+profile compiler now refuses any row or band marked `component`, so diagnostic
+curves cannot accidentally become complete-print acceptance.
+
+Those two tests fail first (unsupported `stack_path`, and two missing refusal
+assertions), then the complete component/compiler group passes **8/8 in
+67.305 s**. Logs: `counter-pair-envelope-{red,green}.log`. The new
+`tools/counter_component_envelope.py` preserves every observed contact interval,
+its free/contact endpoint volumes and its component identity. Three tests fail
+on the absent module first and then pass **3/3 in .002 s**, covering multiple
+intervals, a positive common of 1e−20 mm³, non-finite results and invalid scopes
+(`counter-component-envelope-{red,green}.log`). No intersection epsilon or
+whole-print replacement is introduced.
+
+The first measured six native curves cover tens shafts 114°, 120° and 156° at
+full carry, for each lower-disc and carry-tooth pair. The
+[curve evidence](evidence/counter-tens-component-curves-2026-09-21.json)
+retains all boundary brackets, endpoint volumes and source-log hashes. At
+shaft 156°, the lower disc opens near **95.25585°** and closes near
+**209.16744°**. The carry teeth contact in **197.05272°..203.48665°** and
+**205.78767°..212.12027°**, explaining the independently measured intervening
+complete-print free interval. At the indexed shaft 114° the lower disc has no
+sampled contact, but the carry teeth contact near **200.53528°..206.87382°**.
+An indexed shaft therefore does not make this carried upper print universally
+free. The lower closing boundary is not an upper-disc curve shifted by the
+roughly two-degree opening difference.
+
+At all 73 sampled crank angles for those three shafts, the native component
+union's positive/zero classification agrees with the previously measured
+complete print in both kernels: **438/438 comparisons**, no mismatch. This
+does not equate the component volume sum with a fused-print common, certify
+unsampled angles or intermediate heights, or adopt a restraint. The remaining
+58 shaft samples at six-degree spacing now complete for both pairs in
+`counter-tens-lower-tooth-component-coarse-remaining.log`: **122 native curves**
+total across 61 actual shaft angles from 114° to 474°. Each lower-disc curve
+has zero or two boundaries; each carry-tooth curve has two or four. Their
+union's classification matches the prior full-carry complete-print sweep at
+all **8,906 kernel/pose samples**, zero mismatches. The
+[complete coarse and intermediate-height boundary evidence](evidence/counter-tens-component-coarse-2026-09-21.json)
+retains endpoint volumes and all four source-log hashes. The upper-disc
+and axial-support evidence remain separate; no result-side curves are copied.
+
+The combined component/envelope/compiler/axial/indexed-band/support-interval
+regression passes **21/21 in 46.168 s**
+(`counter-angular-support-regression.log`). Twelve additional native curves
+at carry .5 and .75 complete for the same three shafts. The carry-tooth pair
+has no sampled contact at .5; at .75 its brackets equal the full-carry
+brackets. Lower-disc openings differ by up to one final bisection bracket
+between these heights, while lower closings match. These observations retain
+the endpoint volumes and do not assert exact continuous height invariance.
+Log: `counter-tens-component-intermediate-heights.log`.

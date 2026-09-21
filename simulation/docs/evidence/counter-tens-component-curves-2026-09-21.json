@@ -1,0 +1,197 @@
+{
+  "status": "component diagnostics; no profile or operating adoption",
+  "log": "_build_checks/counter-tens-lower-tooth-component-curves.log",
+  "log_sha256": "f85caf3ff0d87cc875b5d65af88ca10acae4de0d175c0a3c1e638cb98989172c",
+  "complete_log": "_build_checks/counter-tens-upper-envelopes-coarse.log",
+  "complete_log_sha256": "b4fb26665d077275434c5c042a18095fe5bc1cdd7119ef918189144f879af6a8",
+  "complete_sample_comparison": {
+    "carry": 1,
+    "shafts": [
+      114,
+      120,
+      156
+    ],
+    "kernels": [
+      "native",
+      "faceted"
+    ],
+    "compared": 438,
+    "classification_mismatches": [],
+    "scope": "positive/zero classification of the native pair union at sampled crank angles, not exact volume or continuous clearance"
+  },
+  "rows": [
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 114.0,
+      "trial": true,
+      "component": "lower_lock",
+      "pair": [
+        "tens_turns_counter_locking_disc",
+        "pentagonal_lockout"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": []
+    },
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 114.0,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207816786801e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.5623884582859578e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 120.0,
+      "trial": true,
+      "component": "lower_lock",
+      "pair": [
+        "tens_turns_counter_locking_disc",
+        "pentagonal_lockout"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": [
+        {
+          "left": 88.66635799407959,
+          "right": 88.66636276245117,
+          "enters_contact": false,
+          "left_mm3": 4.629248407970245e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.31978702545166,
+          "right": 204.31979179382324,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.974488761719475e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 120.0,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.858677700328577e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.3606765562727355e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 156.0,
+      "trial": true,
+      "component": "lower_lock",
+      "pair": [
+        "tens_turns_counter_locking_disc",
+        "pentagonal_lockout"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": [
+        {
+          "left": 95.25584697723389,
+          "right": 95.25585174560547,
+          "enters_contact": false,
+          "left_mm3": 1.066144331846221e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16743278503418,
+          "right": 209.16743755340576,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.887869226299636e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1.0,
+      "shaft": 156.0,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5.0,
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.99000587354429e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.926021228695477e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.3826874973882585e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.085993439638288e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    }
+  ]
+}

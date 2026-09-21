@@ -15,6 +15,8 @@ SHAFT_GUARD = .002
 
 def compile_profile(rows, bands):
     for row in [*rows, *bands]:
+        if 'component' in row:
+            raise ValueError('Profile requires complete-print records, not component diagnostics')
         if row.get('station') != 1 or row.get('carry') != 0 or row.get('trial') is not True:
             raise ValueError('Profile requires the trial counter ones at carry 0')
         if row.get('kernel') not in ('native', 'faceted'):

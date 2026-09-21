@@ -59,6 +59,14 @@ class CounterProfileCompilerTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'trial counter ones'):
             compile_profile(rows, bands)
 
+    def test_component_diagnostics_cannot_be_compiled_as_complete_prints(self):
+        for location in ('rows', 'bands'):
+            rows, bands = fixture()
+            (rows if location == 'rows' else bands)[0]['component'] = 'upper_lock'
+            with self.subTest(location=location):
+                with self.assertRaisesRegex(ValueError, 'complete.print'):
+                    compile_profile(rows, bands)
+
 
 if __name__ == '__main__':
     unittest.main()

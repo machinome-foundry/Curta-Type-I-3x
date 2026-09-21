@@ -93,13 +93,25 @@ trial hundreds short/long stop test now passes **1/1 in 1112.808 s**
 .05° relief followed by another stop. Its log SHA-256 is
 `b221e689dcdf37fafc6951f92799aeae5c14fc663dda80b86c37ca420d5634b0`.
 
-The trial's eighth-input case is now running in
-`result-bank-trial-eighth-operating.log`. The test optionally records full
-stopped/relieved banks through `CURTA_RESULT_ACCEPTANCE_REPORT`; only that
-new eighth invocation uses this capture, not the completed hundreds run.
+The trial's eighth-input case passes **1/1 in 1166.542 s** in
+`result-bank-trial-eighth-operating.log`: 290° stops at
+**265.22323837279146°**, and 980° stops at **265.22323837227304°**.
+Both clear in both kernels, contact at .2° overtravel, retain the shaft,
+replay exactly and admit .05° relief followed by another matching stop.
+Its log SHA-256 is
+`6186f95bd85246bb25e4def0b3784c90e4f6bec597bfae94ad95a49648b13d99`.
+The test records full stopped/relieved banks through
+`CURTA_RESULT_ACCEPTANCE_REPORT`; only this eighth invocation uses the capture,
+not the completed hundreds run. The [saved Python banks](evidence/result-bank-eighth-python-acceptance-2026-09-21.json)
+contain all 213 manifest coordinates in each of four states (SHA-256
+`d1dbc4c056c13e9ed8a9ba0eb45bf9627055745340ad50b002aa690a6897f08e`).
+They are not browser parity: mounting that trial still fails below.
 The isolated export completes in `result-bank-operating-export.log`, retaining
 213 coordinates, 24 inputs and 25 controls. Browser mounting fails as recorded
-below. No arithmetic or successful browser result is claimed for this trial.
+below. The ordinary page-53, subtraction/borrow-and-undo and successive-addition/
+selective-clearing regressions are now running against this isolated class
+(`result-bank-operating-trial-arithmetic.log`), without modifying the production
+test class or root. No arithmetic or successful browser result is claimed yet.
 
 Independent dense profile checks continue per station and kernel. Faceted
 stations 2..11 have completed **23,556 admitted poses each**, zero positive

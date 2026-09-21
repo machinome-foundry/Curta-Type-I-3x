@@ -359,7 +359,8 @@ The corrected law and fixture now pass; all ten complete higher prints match
 their independent benches and all initial bank values match production.
 The trial's hundreds short/long test passes in 1112.808 s: both stops clear
 in both kernels, .2° overtravel contacts, the shaft is retained, replay is
-exact and relief/retry pass. The trial's eighth-input test is still running.
+exact and relief/retry pass. The trial's eighth-input test also passes in
+1166.542 s, preserving four complete 213-coordinate stopped/relieved banks.
 The isolated export completes, but its browser mount fails before any
 requests: loading 30,159 expression bindings resets the viewer's expression
 pool while the validator holds an older root. The result-bank investigation
@@ -379,3 +380,12 @@ curve covers the counter. No higher-counter operating law is adopted.
 The combined component/axial/indexed-band/browser-validator/result-frame
 regression passes **14/14 in 41.333 s**
 (`counter-support-regression.log`).
+
+The higher-counter lower-disc/carry-tooth split now has independent angular
+measurements: 122 native component curves over all five shaft flats, plus
+12 curves at intermediate heights. Their full-carry contact classification
+agrees with both complete-print kernels at all 8,906 sampled positions.
+Component records are explicitly rejected by the fixed-height whole-print
+compiler; no operating law or geometric acceptance is inferred from them.
+The combined probe/compiler/support regression passes 21/21. The counter
+investigation retains the curves, endpoint volumes and finite-sampling limits.

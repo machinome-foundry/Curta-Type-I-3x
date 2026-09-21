@@ -4,11 +4,37 @@ import unittest
 
 from simulation.higher_lockout_trial import HigherLockoutFitBench
 from simulation.tools.counter_lockout_probe import STATIONS, station_bench
-from simulation.tools.higher_locking_envelope import component_shapes
+from simulation.tools.higher_locking_envelope import component_shapes, pair_reader, component_contacts
 from simulation.tools.interference import world_solids
 
 
 class CounterComponentProbeTest(unittest.TestCase):
+    def test_counter_pair_reader_preserves_independently_placed_contacts(self):
+        pairs = {
+            'upper_lock': ('turns_counter_locking_disc', 'pentagonal_lockout'),
+            'lower_lock': ('tens_turns_counter_locking_disc', 'pentagonal_lockout'),
+            'carry_tooth': ('turns_counter_carry_ring', 'transmission_gear_0_6'),
+        }
+        node_type = station_bench(2, trial=True)
+        path = ('shaft', STATIONS[1][1])
+        for pair, carry, angles in (('upper_lock', 0, (196, 204)),
+                                    ('lower_lock', 1, (94, 96)),
+                                    ('carry_tooth', 1, (198, 204, 206))):
+            read = pair_reader(carry, 156, pair, node_type,
+                               stack_path=path, contact_pairs=pairs)
+            for crank in angles:
+                contacts = component_contacts(carry, crank, 156, node_type, stack_path=path)
+                expected = sum(row['native_mm3'] for row in contacts
+                               if (row['bell'], row['upper']) == pairs[pair])
+                actual = read(crank)
+                with self.subTest(pair=pair, carry=carry, crank=crank):
+                    # Numerical placement parity, not a clearance epsilon:
+                    # a zero independent common requires exactly zero here.
+                    self.assertEqual(actual > 0, expected > 0)
+                    self.assertAlmostEqual(actual, expected, places=9)
+                    if expected == 0:
+                        self.assertEqual(actual, 0)
+
     def test_counter_ingredients_cover_exactly_the_complete_prints(self):
         upper_name = STATIONS[1][1]
         node_type = station_bench(2, trial=True)

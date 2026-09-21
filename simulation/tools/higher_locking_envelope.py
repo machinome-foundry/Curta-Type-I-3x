@@ -114,9 +114,13 @@ def contact_reader(carry=0, reference=140, shaft=169.6, node_type=HigherLockoutB
     return volume
 
 
-def pair_reader(carry, shaft, pair, node_type=HigherLockoutBench):
-    bell_parts, stack_parts = component_shapes(carry, 140, shaft, node_type)
-    bell_name, stack_name = CONTACT_PAIRS[pair]
+def pair_reader(carry, shaft, pair, node_type=HigherLockoutBench, *,
+                stack_path=('tens', 'p_10220_410003_1_419227'),
+                contact_pairs=CONTACT_PAIRS):
+    """Read a diagnostic native pair, never complete-print acceptance."""
+    bell_parts, stack_parts = component_shapes(
+        carry, 140, shaft, node_type, stack_path=stack_path)
+    bell_name, stack_name = contact_pairs[pair]
 
     def volume(crank, kernel='native'):
         assert kernel == 'native'

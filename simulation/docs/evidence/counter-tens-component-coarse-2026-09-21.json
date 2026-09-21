@@ -1,0 +1,2903 @@
+{
+  "status": "measured component curves; not a compiled or accepted restraint",
+  "station": 2,
+  "trial": true,
+  "kernel": "native",
+  "step_degrees": 5,
+  "source_logs": [
+    {
+      "path": "_build_checks/counter-tens-lower-tooth-component-curves.log",
+      "sha256": "f85caf3ff0d87cc875b5d65af88ca10acae4de0d175c0a3c1e638cb98989172c"
+    },
+    {
+      "path": "_build_checks/counter-tens-lower-tooth-component-coarse-remaining.log",
+      "sha256": "f853328734b308b866bdda6c8a7e0c1acf01f15c44b10de16dc38515a67388a6"
+    },
+    {
+      "path": "_build_checks/counter-tens-component-intermediate-heights.log",
+      "sha256": "b3d5e14fa80c8f4a786fcee951b7738787221dc9f3dd11baf2ef7e0de5eac0cf"
+    },
+    {
+      "path": "_build_checks/counter-tens-upper-envelopes-coarse.log",
+      "sha256": "b4fb26665d077275434c5c042a18095fe5bc1cdd7119ef918189144f879af6a8"
+    }
+  ],
+  "comparison": {
+    "carry": 1,
+    "shafts": [
+      114,
+      120,
+      126,
+      132,
+      138,
+      144,
+      150,
+      156,
+      162,
+      168,
+      174,
+      180,
+      186,
+      192,
+      198,
+      204,
+      210,
+      216,
+      222,
+      228,
+      234,
+      240,
+      246,
+      252,
+      258,
+      264,
+      270,
+      276,
+      282,
+      288,
+      294,
+      300,
+      306,
+      312,
+      318,
+      324,
+      330,
+      336,
+      342,
+      348,
+      354,
+      360,
+      366,
+      372,
+      378,
+      384,
+      390,
+      396,
+      402,
+      408,
+      414,
+      420,
+      426,
+      432,
+      438,
+      444,
+      450,
+      456,
+      462,
+      468,
+      474
+    ],
+    "kernels": [
+      "native",
+      "faceted"
+    ],
+    "sample_count": 8906,
+    "classification_mismatches": [],
+    "scope": "positive/zero classification of native pair union versus complete-print samples; not volume equality, continuous clearance, or intermediate-height acceptance"
+  },
+  "rows": [
+    {
+      "carry": 1.0,
+      "shaft": 114.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 114.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207816786801e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.5623884582859578e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 120.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.66635799407959,
+          "right": 88.66636276245117,
+          "enters_contact": false,
+          "left_mm3": 4.629248407970245e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.31978702545166,
+          "right": 204.31979179382324,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.974488761719475e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 120.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.858677700328577e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.3606765562727355e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 156.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25584697723389,
+          "right": 95.25585174560547,
+          "enters_contact": false,
+          "left_mm3": 1.066144331846221e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16743278503418,
+          "right": 209.16743755340576,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.887869226299636e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 156.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.99000587354429e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.926021228695477e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.3826874973882585e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.085993439638288e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 126.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 90.25990009307861,
+          "right": 90.2599048614502,
+          "enters_contact": false,
+          "left_mm3": 9.432571243642693e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.9039077758789,
+          "right": 204.9039125442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.042923518512341e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 126.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.2085952758789,
+          "right": 202.2086000442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.2748061453891743e-08
+        },
+        {
+          "left": 208.80445003509521,
+          "right": 208.8044548034668,
+          "enters_contact": false,
+          "left_mm3": 1.941254705837217e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 132.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 91.45219802856445,
+          "right": 91.45220279693604,
+          "enters_contact": false,
+          "left_mm3": 4.456400282133595e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.60356616973877,
+          "right": 205.60357093811035,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.0582597060940134e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 132.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.99639225006104,
+          "right": 202.99639701843262,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.0570246608525496e-08
+        },
+        {
+          "left": 209.80884075164795,
+          "right": 209.80884552001953,
+          "enters_contact": false,
+          "left_mm3": 9.875127913111122e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 138.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 92.40855693817139,
+          "right": 92.40856170654297,
+          "enters_contact": false,
+          "left_mm3": 9.791757641644478e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.43098831176758,
+          "right": 206.43099308013916,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.0033278455474597e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 138.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 203.70461463928223,
+          "right": 203.7046194076538,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.1441721320745055e-11
+        },
+        {
+          "left": 210.64921855926514,
+          "right": 210.64922332763672,
+          "enters_contact": false,
+          "left_mm3": 1.2848711755431677e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 144.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 93.23334217071533,
+          "right": 93.23334693908691,
+          "enters_contact": false,
+          "left_mm3": 1.512318388864974e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.3923683166504,
+          "right": 207.39237308502197,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.163439649408e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 144.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 204.36822891235352,
+          "right": 204.3682336807251,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.34529311577998e-12
+        },
+        {
+          "left": 211.31597518920898,
+          "right": 211.31597995758057,
+          "enters_contact": false,
+          "left_mm3": 8.564970283064516e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 150.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 94.21474933624268,
+          "right": 94.21475410461426,
+          "enters_contact": false,
+          "left_mm3": 1.0435373275626898e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 208.41741561889648,
+          "right": 208.41742038726807,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.3458393184767339e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 150.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 205.06787776947021,
+          "right": 205.0678825378418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.593645756017817e-12
+        },
+        {
+          "left": 211.80565357208252,
+          "right": 211.8056583404541,
+          "enters_contact": false,
+          "left_mm3": 1.2965195454919791e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 162.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.16378784179688,
+          "right": 96.16379261016846,
+          "enters_contact": false,
+          "left_mm3": 4.6729521775901875e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 210.0077199935913,
+          "right": 210.0077247619629,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.0269706311249294e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 162.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.315354347229,
+          "right": 197.3153591156006,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.270710680251703e-12
+        },
+        {
+          "left": 204.7339105606079,
+          "right": 204.7339153289795,
+          "enters_contact": false,
+          "left_mm3": 3.064743147038534e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.55240535736084,
+          "right": 206.55241012573242,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.6115165449605606e-12
+        },
+        {
+          "left": 212.26625442504883,
+          "right": 212.2662591934204,
+          "enters_contact": false,
+          "left_mm3": 1.735599752883749e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 168.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.93925380706787,
+          "right": 96.93925857543945,
+          "enters_contact": false,
+          "left_mm3": 7.815537174030014e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 211.0236930847168,
+          "right": 211.02369785308838,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.225512915502604e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 168.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.02139282226562,
+          "right": 198.0213975906372,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.528001125172499e-11
+        },
+        {
+          "left": 212.2533655166626,
+          "right": 212.25337028503418,
+          "enters_contact": false,
+          "left_mm3": 5.118217090951466e-09,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 174.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 97.59131908416748,
+          "right": 97.59132385253906,
+          "enters_contact": false,
+          "left_mm3": 1.317093216305768e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 212.3684549331665,
+          "right": 212.3684597015381,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.137606865734202e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 174.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.81989002227783,
+          "right": 198.8198947906494,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.353019393056158e-10
+        },
+        {
+          "left": 212.26623058319092,
+          "right": 212.2662353515625,
+          "enters_contact": false,
+          "left_mm3": 2.6485372050227306e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 180.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 98.13354969024658,
+          "right": 98.13355445861816,
+          "enters_contact": false,
+          "left_mm3": 1.7786215314179066e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 214.27534580230713,
+          "right": 214.2753505706787,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.4565392948856025e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 180.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 199.67578411102295,
+          "right": 199.67578887939453,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.618864738431856e-08
+        },
+        {
+          "left": 206.43147945404053,
+          "right": 206.4314842224121,
+          "enters_contact": false,
+          "left_mm3": 1.0275081437681642e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 186.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 186.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207776980329e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.5623884462203418e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 192.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.66635799407959,
+          "right": 88.66636276245117,
+          "enters_contact": false,
+          "left_mm3": 4.629248581515124e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.31978702545166,
+          "right": 204.31979179382324,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.925413527416898e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 192.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.858677597189945e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.379158230792881e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 198.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 90.25990009307861,
+          "right": 90.2599048614502,
+          "enters_contact": false,
+          "left_mm3": 9.432571437549456e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.90390300750732,
+          "right": 204.9039077758789,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.5432917782442349e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 198.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.2085952758789,
+          "right": 202.2086000442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.2748061348070236e-08
+        },
+        {
+          "left": 208.80445003509521,
+          "right": 208.8044548034668,
+          "enters_contact": false,
+          "left_mm3": 1.960727338798729e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 204.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 91.45219802856445,
+          "right": 91.45220279693604,
+          "enters_contact": false,
+          "left_mm3": 4.456400384399202e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.60356616973877,
+          "right": 205.60357093811035,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.655305542904923e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 204.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.99639225006104,
+          "right": 202.99639701843262,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.0570246546390346e-08
+        },
+        {
+          "left": 209.80884075164795,
+          "right": 209.80884552001953,
+          "enters_contact": false,
+          "left_mm3": 1.000160184038053e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 210.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 92.40855693817139,
+          "right": 92.40856170654297,
+          "enters_contact": false,
+          "left_mm3": 9.791757833392066e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.430983543396,
+          "right": 206.43098831176758,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.43087905542422e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 210.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 203.70461463928223,
+          "right": 203.7046194076538,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.1441721358052291e-11
+        },
+        {
+          "left": 210.64921855926514,
+          "right": 210.64922332763672,
+          "enters_contact": false,
+          "left_mm3": 1.3061120164101226e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 216.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 93.23334217071533,
+          "right": 93.23334693908691,
+          "enters_contact": false,
+          "left_mm3": 1.512318406664079e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.3923683166504,
+          "right": 207.39237308502197,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2561018803629243e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 216.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 204.36822891235352,
+          "right": 204.3682336807251,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.345293152368859e-12
+        },
+        {
+          "left": 211.31597518920898,
+          "right": 211.31597995758057,
+          "enters_contact": false,
+          "left_mm3": 8.753062939839852e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 222.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 94.21474933624268,
+          "right": 94.21475410461426,
+          "enters_contact": false,
+          "left_mm3": 1.296206439930031e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 208.41740131378174,
+          "right": 208.41740608215332,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.7856642531546584e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 222.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 205.06787776947021,
+          "right": 205.0678825378418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.59364582555835e-12
+        },
+        {
+          "left": 211.80565357208252,
+          "right": 211.8056583404541,
+          "enters_contact": false,
+          "left_mm3": 1.3365997219947518e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 228.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25585174560547,
+          "right": 95.25585651397705,
+          "enters_contact": false,
+          "left_mm3": 2.2006335221713098e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16741371154785,
+          "right": 209.16741847991943,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.8835271977318094e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 228.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.990005843505181e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.9260213021899524e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.382687425170143e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.385267075010674e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 234.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.16378784179688,
+          "right": 96.16379261016846,
+          "enters_contact": false,
+          "left_mm3": 6.974084412747024e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 210.0076961517334,
+          "right": 210.00770092010498,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.91989165151876e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 234.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.315354347229,
+          "right": 197.3153591156006,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.270710658627976e-12
+        },
+        {
+          "left": 204.7339105606079,
+          "right": 204.7339153289795,
+          "enters_contact": false,
+          "left_mm3": 3.0647432069809956e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.55240535736084,
+          "right": 206.55241012573242,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.611516494346901e-12
+        },
+        {
+          "left": 212.26625442504883,
+          "right": 212.2662591934204,
+          "enters_contact": false,
+          "left_mm3": 1.7355997598122518e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 240.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.93925857543945,
+          "right": 96.93926334381104,
+          "enters_contact": false,
+          "left_mm3": 1.9282632267531555e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 211.0236644744873,
+          "right": 211.0236692428589,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.921627483902181e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 240.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.02139282226562,
+          "right": 198.0213975906372,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.5280011396230833e-11
+        },
+        {
+          "left": 212.2533655166626,
+          "right": 212.25337028503418,
+          "enters_contact": false,
+          "left_mm3": 5.11821711653678e-09,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 246.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 97.59131908416748,
+          "right": 97.59132385253906,
+          "enters_contact": false,
+          "left_mm3": 2.8629894975635413e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 212.368426322937,
+          "right": 212.3684310913086,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.922518156514209e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 246.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.81989002227783,
+          "right": 198.8198947906494,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.353019399461651e-10
+        },
+        {
+          "left": 212.26623058319092,
+          "right": 212.2662353515625,
+          "enters_contact": false,
+          "left_mm3": 2.6485372187132874e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 252.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 98.13354969024658,
+          "right": 98.13355445861816,
+          "enters_contact": false,
+          "left_mm3": 3.618856520501471e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 214.2753267288208,
+          "right": 214.27533149719238,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.724345172890937e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 252.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 199.67578411102295,
+          "right": 199.67578887939453,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.618864735052573e-08
+        },
+        {
+          "left": 206.43147945404053,
+          "right": 206.4314842224121,
+          "enters_contact": false,
+          "left_mm3": 1.0275081527371731e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 258.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 258.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207840037564e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.5623884663544988e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 264.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.6664628982544,
+          "right": 88.66646766662598,
+          "enters_contact": false,
+          "left_mm3": 4.989701580656473e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.3187952041626,
+          "right": 204.31879997253418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.10119815046892e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 264.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.85867765449372e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.3606765745519097e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 270.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 90.25999069213867,
+          "right": 90.25999546051025,
+          "enters_contact": false,
+          "left_mm3": 2.161062451485377e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.9028730392456,
+          "right": 204.9028778076172,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2475735433531473e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 270.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.2085952758789,
+          "right": 202.2086000442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.274806143693039e-08
+        },
+        {
+          "left": 208.80445003509521,
+          "right": 208.8044548034668,
+          "enters_contact": false,
+          "left_mm3": 1.9412547075795455e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 276.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 91.45226955413818,
+          "right": 91.45227432250977,
+          "enters_contact": false,
+          "left_mm3": 3.925107748957215e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.60250282287598,
+          "right": 205.60250759124756,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2671254313041663e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 276.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.99639225006104,
+          "right": 202.99639701843262,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.057024658938486e-08
+        },
+        {
+          "left": 209.80884075164795,
+          "right": 209.80884552001953,
+          "enters_contact": false,
+          "left_mm3": 9.875127919963204e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 282.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 92.40861892700195,
+          "right": 92.40862369537354,
+          "enters_contact": false,
+          "left_mm3": 5.9131463026718935e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.42991542816162,
+          "right": 206.4299201965332,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.734366653043269e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 282.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 203.70461463928223,
+          "right": 203.7046194076538,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.1441721383944529e-11
+        },
+        {
+          "left": 210.64921855926514,
+          "right": 210.64922332763672,
+          "enters_contact": false,
+          "left_mm3": 1.2848711770942863e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 288.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 93.23339462280273,
+          "right": 93.23339939117432,
+          "enters_contact": false,
+          "left_mm3": 1.9274953044337816e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.39131450653076,
+          "right": 207.39131927490234,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2080865997075864e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 288.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 204.36822891235352,
+          "right": 204.3682336807251,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.345293178173529e-12
+        },
+        {
+          "left": 211.31597518920898,
+          "right": 211.31597995758057,
+          "enters_contact": false,
+          "left_mm3": 8.564970291663765e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 294.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 94.21510696411133,
+          "right": 94.21511173248291,
+          "enters_contact": false,
+          "left_mm3": 1.062862743955598e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 208.4103012084961,
+          "right": 208.41030597686768,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.0011484085548652e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 294.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 205.06787776947021,
+          "right": 205.0678825378418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.593645836792794e-12
+        },
+        {
+          "left": 211.80565357208252,
+          "right": 211.8056583404541,
+          "enters_contact": false,
+          "left_mm3": 1.2965195440915371e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 300.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25632381439209,
+          "right": 95.25632858276367,
+          "enters_contact": false,
+          "left_mm3": 2.9245465217532584e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.15888786315918,
+          "right": 209.15889263153076,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.3256759303284866e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 300.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.99000589145927e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.9260212340634287e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.382687474287777e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.085993436060967e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 306.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.16435050964355,
+          "right": 96.16435527801514,
+          "enters_contact": false,
+          "left_mm3": 8.383414620714381e-13,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.9976110458374,
+          "right": 209.99761581420898,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.363755636584636e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 306.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.315354347229,
+          "right": 197.3153591156006,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2707106622320936e-12
+        },
+        {
+          "left": 204.7339105606079,
+          "right": 204.7339153289795,
+          "enters_contact": false,
+          "left_mm3": 3.0647431332573134e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.55240535736084,
+          "right": 206.55241012573242,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.6115165323445114e-12
+        },
+        {
+          "left": 212.26625442504883,
+          "right": 212.2662591934204,
+          "enters_contact": false,
+          "left_mm3": 1.7355997584110512e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 312.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.93987369537354,
+          "right": 96.93987846374512,
+          "enters_contact": false,
+          "left_mm3": 5.986631533117283e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 211.0122585296631,
+          "right": 211.01226329803467,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.505450893806553e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 312.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.02139282226562,
+          "right": 198.0213975906372,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.5280011395155873e-11
+        },
+        {
+          "left": 212.2533655166626,
+          "right": 212.25337028503418,
+          "enters_contact": false,
+          "left_mm3": 5.1182170911952915e-09,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 318.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 97.59197235107422,
+          "right": 97.5919771194458,
+          "enters_contact": false,
+          "left_mm3": 3.503368010639322e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 212.35721588134766,
+          "right": 212.35722064971924,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.661160819407657e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 318.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.81989002227783,
+          "right": 198.8198947906494,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.353019394926527e-10
+        },
+        {
+          "left": 212.26623058319092,
+          "right": 212.2662353515625,
+          "enters_contact": false,
+          "left_mm3": 2.6485372014557843e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 324.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 98.13422203063965,
+          "right": 98.13422679901123,
+          "enters_contact": false,
+          "left_mm3": 4.027314004889019e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 214.26854610443115,
+          "right": 214.26855087280273,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.208685881661582e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 324.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 199.67578411102295,
+          "right": 199.67578887939453,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.6188647406266962e-08
+        },
+        {
+          "left": 206.43147945404053,
+          "right": 206.4314842224121,
+          "enters_contact": false,
+          "left_mm3": 1.0275081494567948e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 330.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 330.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207819108955e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.562388455996865e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 336.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.70821475982666,
+          "right": 88.70821952819824,
+          "enters_contact": false,
+          "left_mm3": 3.5632073795700382e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.2822790145874,
+          "right": 204.28228378295898,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.002950022783115e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 336.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.858677626924361e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.3606765612956883e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 342.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 90.29448509216309,
+          "right": 90.29448986053467,
+          "enters_contact": false,
+          "left_mm3": 4.156870825256223e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.8663091659546,
+          "right": 204.86631393432617,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.4802046675096434e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 342.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.2085952758789,
+          "right": 202.2086000442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.274806141040653e-08
+        },
+        {
+          "left": 208.80445003509521,
+          "right": 208.8044548034668,
+          "enters_contact": false,
+          "left_mm3": 1.9412547061131404e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 348.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 91.48086547851562,
+          "right": 91.4808702468872,
+          "enters_contact": false,
+          "left_mm3": 3.66023218726784e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.56663513183594,
+          "right": 205.56663990020752,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.921875083358281e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 348.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.99639225006104,
+          "right": 202.99639701843262,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.0570246590817707e-08
+        },
+        {
+          "left": 209.80884075164795,
+          "right": 209.80884552001953,
+          "enters_contact": false,
+          "left_mm3": 9.875127900656734e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 354.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 92.43299961090088,
+          "right": 92.43300437927246,
+          "enters_contact": false,
+          "left_mm3": 1.681439381428715e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.39577865600586,
+          "right": 206.39578342437744,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.529321168070319e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 354.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 203.70461463928223,
+          "right": 203.7046194076538,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.1441721395905152e-11
+        },
+        {
+          "left": 210.64921855926514,
+          "right": 210.64922332763672,
+          "enters_contact": false,
+          "left_mm3": 1.2848711767777173e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 360.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 93.25489521026611,
+          "right": 93.2548999786377,
+          "enters_contact": false,
+          "left_mm3": 1.390651352604888e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.36021518707275,
+          "right": 207.36021995544434,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.473492878282359e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 360.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 204.36822891235352,
+          "right": 204.3682336807251,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.345293141984485e-12
+        },
+        {
+          "left": 211.31597518920898,
+          "right": 211.31597995758057,
+          "enters_contact": false,
+          "left_mm3": 8.564970280905441e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 366.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 94.25044536590576,
+          "right": 94.25045013427734,
+          "enters_contact": false,
+          "left_mm3": 1.135452639465947e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 208.401141166687,
+          "right": 208.4011459350586,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.7968665308166876e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 366.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 205.06787776947021,
+          "right": 205.0678825378418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.593645865446107e-12
+        },
+        {
+          "left": 211.80565357208252,
+          "right": 211.8056583404541,
+          "enters_contact": false,
+          "left_mm3": 1.2965195426421765e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 372.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.29476165771484,
+          "right": 95.29476642608643,
+          "enters_contact": false,
+          "left_mm3": 2.4662599013289743e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.14913177490234,
+          "right": 209.14913654327393,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.7728681734072524e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 372.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.990005896558597e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.9260211792416374e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.382687459198189e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.085993470228158e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 378.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.20445251464844,
+          "right": 96.20445728302002,
+          "enters_contact": false,
+          "left_mm3": 8.749960561763438e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.98635292053223,
+          "right": 209.9863576889038,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.1052154216606724e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 378.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.315354347229,
+          "right": 197.3153591156006,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2707106583616183e-12
+        },
+        {
+          "left": 204.7339105606079,
+          "right": 204.7339153289795,
+          "enters_contact": false,
+          "left_mm3": 3.0647430978953374e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.55240535736084,
+          "right": 206.55241012573242,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.6115165082877364e-12
+        },
+        {
+          "left": 212.26625442504883,
+          "right": 212.2662591934204,
+          "enters_contact": false,
+          "left_mm3": 1.7355997590521455e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 384.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.98047637939453,
+          "right": 96.98048114776611,
+          "enters_contact": false,
+          "left_mm3": 1.4822475934861608e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 210.99777221679688,
+          "right": 210.99777698516846,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.9648323055037433e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 384.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.02139282226562,
+          "right": 198.0213975906372,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.528001127993381e-11
+        },
+        {
+          "left": 212.2533655166626,
+          "right": 212.25337028503418,
+          "enters_contact": false,
+          "left_mm3": 5.118217129531276e-09,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 390.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 97.63221740722656,
+          "right": 97.63222217559814,
+          "enters_contact": false,
+          "left_mm3": 2.0363835459088187e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 212.3362398147583,
+          "right": 212.33624458312988,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.241315339065209e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 390.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.81989002227783,
+          "right": 198.8198947906494,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.3530193883953923e-10
+        },
+        {
+          "left": 212.26623058319092,
+          "right": 212.2662353515625,
+          "enters_contact": false,
+          "left_mm3": 2.6485372133612666e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 396.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 98.17357540130615,
+          "right": 98.17358016967773,
+          "enters_contact": false,
+          "left_mm3": 4.186682647080158e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 214.23645496368408,
+          "right": 214.23645973205566,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.4011582836362883e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 396.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 199.67578411102295,
+          "right": 199.67578887939453,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.6188647288403082e-08
+        },
+        {
+          "left": 206.43147945404053,
+          "right": 206.4314842224121,
+          "enters_contact": false,
+          "left_mm3": 1.0275081331299645e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 402.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 402.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.9632077612166075e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.562388426032007e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 408.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.6717176437378,
+          "right": 88.67172241210938,
+          "enters_contact": false,
+          "left_mm3": 6.765736764819289e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.3195343017578,
+          "right": 204.3195390701294,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.3936702278578197e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 408.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.858677632246199e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.3606765585179596e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 414.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 90.26699542999268,
+          "right": 90.26700019836426,
+          "enters_contact": false,
+          "left_mm3": 2.6849169848217137e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.9036693572998,
+          "right": 204.9036741256714,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.716014240817599e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 414.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.2085952758789,
+          "right": 202.2086000442505,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.274806133465879e-08
+        },
+        {
+          "left": 208.80445003509521,
+          "right": 208.8044548034668,
+          "enters_contact": false,
+          "left_mm3": 1.9412547034345403e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 420.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 91.4591932296753,
+          "right": 91.45919799804688,
+          "enters_contact": false,
+          "left_mm3": 9.741388970706197e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.60335159301758,
+          "right": 205.60335636138916,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.742124906425708e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 420.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 202.99639225006104,
+          "right": 202.99639701843262,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.0570246517656464e-08
+        },
+        {
+          "left": 209.80884075164795,
+          "right": 209.80884552001953,
+          "enters_contact": false,
+          "left_mm3": 9.875127917888052e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 426.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 92.41481304168701,
+          "right": 92.4148178100586,
+          "enters_contact": false,
+          "left_mm3": 1.9500465433236758e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.43080234527588,
+          "right": 206.43080711364746,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.501154082442597e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 426.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 203.70461463928223,
+          "right": 203.7046194076538,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.1441721443045035e-11
+        },
+        {
+          "left": 210.64921855926514,
+          "right": 210.64922332763672,
+          "enters_contact": false,
+          "left_mm3": 1.2848711765296926e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 432.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 93.23873043060303,
+          "right": 93.23873519897461,
+          "enters_contact": false,
+          "left_mm3": 1.2863531573279434e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.3922300338745,
+          "right": 207.3922348022461,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.091120742706659e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 432.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 204.36822891235352,
+          "right": 204.3682336807251,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.34529314023002e-12
+        },
+        {
+          "left": 211.31597518920898,
+          "right": 211.31597995758057,
+          "enters_contact": false,
+          "left_mm3": 8.564970277115954e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 438.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 94.21520233154297,
+          "right": 94.21520709991455,
+          "enters_contact": false,
+          "left_mm3": 7.719462656836884e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 208.41741561889648,
+          "right": 208.41742038726807,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.3458392911536188e-11
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 438.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 205.06787776947021,
+          "right": 205.0678825378418,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.593645808702949e-12
+        },
+        {
+          "left": 211.80565357208252,
+          "right": 211.8056583404541,
+          "enters_contact": false,
+          "left_mm3": 1.2965195447322412e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 444.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25630950927734,
+          "right": 95.25631427764893,
+          "enters_contact": false,
+          "left_mm3": 1.109319563913576e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16743278503418,
+          "right": 209.16743755340576,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.887868964649165e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 444.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 8.99000587396706e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.9260211942097896e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.3826874515432384e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 6.085993446513916e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 450.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.16425037384033,
+          "right": 96.16425514221191,
+          "enters_contact": false,
+          "left_mm3": 1.2382287800143791e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 210.0077199935913,
+          "right": 210.0077247619629,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.026970493850352e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 450.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.315354347229,
+          "right": 197.3153591156006,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.2707106961371077e-12
+        },
+        {
+          "left": 204.7339105606079,
+          "right": 204.7339153289795,
+          "enters_contact": false,
+          "left_mm3": 3.064743084023709e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 206.55240535736084,
+          "right": 206.55241012573242,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.6115165099634282e-12
+        },
+        {
+          "left": 212.26625442504883,
+          "right": 212.2662591934204,
+          "enters_contact": false,
+          "left_mm3": 1.7355997555557523e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 456.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 96.93970203399658,
+          "right": 96.93970680236816,
+          "enters_contact": false,
+          "left_mm3": 7.008083804282272e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 211.0236930847168,
+          "right": 211.02369785308838,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.225512760997358e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 456.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.02139282226562,
+          "right": 198.0213975906372,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.5280011301991607e-11
+        },
+        {
+          "left": 212.2533655166626,
+          "right": 212.25337028503418,
+          "enters_contact": false,
+          "left_mm3": 5.118217100688706e-09,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 462.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 97.59174823760986,
+          "right": 97.59175300598145,
+          "enters_contact": false,
+          "left_mm3": 1.9261010441819442e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 212.3684549331665,
+          "right": 212.3684597015381,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.137606703988384e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 462.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 198.81989002227783,
+          "right": 198.8198947906494,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.353019411577262e-10
+        },
+        {
+          "left": 212.26623058319092,
+          "right": 212.2662353515625,
+          "enters_contact": false,
+          "left_mm3": 2.6485372044159132e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 468.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 98.13395500183105,
+          "right": 98.13395977020264,
+          "enters_contact": false,
+          "left_mm3": 7.568985448957924e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 214.27534580230713,
+          "right": 214.2753505706787,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.456539147457417e-12
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 468.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 199.67578411102295,
+          "right": 199.67578887939453,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.6188647427473663e-08
+        },
+        {
+          "left": 206.43147945404053,
+          "right": 206.4314842224121,
+          "enters_contact": false,
+          "left_mm3": 1.0275081419295865e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 1.0,
+      "shaft": 474.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 1.0,
+      "shaft": 474.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.963207800971363e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.5623884540859337e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 0.5,
+      "shaft": 114.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 0.5,
+      "shaft": 114.0,
+      "component": "carry_tooth",
+      "boundaries": []
+    },
+    {
+      "carry": 0.5,
+      "shaft": 120.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.66636276245117,
+          "right": 88.66636753082275,
+          "enters_contact": false,
+          "left_mm3": 2.7821484803220347e-13,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.31978702545166,
+          "right": 204.31979179382324,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 2.974488688280717e-12
+        }
+      ]
+    },
+    {
+      "carry": 0.5,
+      "shaft": 120.0,
+      "component": "carry_tooth",
+      "boundaries": []
+    },
+    {
+      "carry": 0.5,
+      "shaft": 156.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25584697723389,
+          "right": 95.25585174560547,
+          "enters_contact": false,
+          "left_mm3": 1.0661443055475447e-11,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16743278503418,
+          "right": 209.16743755340576,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 9.887869226299638e-12
+        }
+      ]
+    },
+    {
+      "carry": 0.5,
+      "shaft": 156.0,
+      "component": "carry_tooth",
+      "boundaries": []
+    },
+    {
+      "carry": 0.75,
+      "shaft": 114.0,
+      "component": "lower_lock",
+      "boundaries": []
+    },
+    {
+      "carry": 0.75,
+      "shaft": 114.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 200.53527355194092,
+          "right": 200.5352783203125,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.342806839688418e-09
+        },
+        {
+          "left": 206.87381267547607,
+          "right": 206.87381744384766,
+          "enters_contact": false,
+          "left_mm3": 2.2420899010002133e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 0.75,
+      "shaft": 120.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 88.66635799407959,
+          "right": 88.66636276245117,
+          "enters_contact": false,
+          "left_mm3": 7.715413890899584e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 204.31978702545166,
+          "right": 204.31979179382324,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.957481215440856e-12
+        }
+      ]
+    },
+    {
+      "carry": 0.75,
+      "shaft": 120.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 201.384015083313,
+          "right": 201.38401985168457,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 6.001342987787605e-09
+        },
+        {
+          "left": 207.65201568603516,
+          "right": 207.65202045440674,
+          "enters_contact": false,
+          "left_mm3": 2.0655919867386433e-11,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "carry": 0.75,
+      "shaft": 156.0,
+      "component": "lower_lock",
+      "boundaries": [
+        {
+          "left": 95.25585174560547,
+          "right": 95.25585651397705,
+          "enters_contact": false,
+          "left_mm3": 1.3796436227471365e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 209.16743278503418,
+          "right": 209.16743755340576,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.6479782042890363e-11
+        }
+      ]
+    },
+    {
+      "carry": 0.75,
+      "shaft": 156.0,
+      "component": "carry_tooth",
+      "boundaries": [
+        {
+          "left": 197.0527172088623,
+          "right": 197.0527219772339,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 7.866255139351257e-12
+        },
+        {
+          "left": 203.4866428375244,
+          "right": 203.486647605896,
+          "enters_contact": false,
+          "left_mm3": 1.6852685751085421e-12,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.787672996521,
+          "right": 205.78767776489258,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.709851560214732e-12
+        },
+        {
+          "left": 212.12026596069336,
+          "right": 212.12027072906494,
+          "enters_contact": false,
+          "left_mm3": 5.3252442596835e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    }
+  ]
+}
