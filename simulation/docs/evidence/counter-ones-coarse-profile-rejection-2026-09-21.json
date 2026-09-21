@@ -1,0 +1,173 @@
+{
+  "status": "Rejected provisional coarse profile; no operating adoption",
+  "station": 1,
+  "trial": true,
+  "carry": 0,
+  "date": "2026-09-21",
+  "kernels": {
+    "native": [
+      {
+        "kernel": "native",
+        "profile_sha256": "6ac6d52a3e367b4641d984f00faac1b8042fddcd4ee078775b124200954f6f0d"
+      },
+      {
+        "failure": true,
+        "shaft": 143,
+        "crank": 171.50060064697266,
+        "common_mm3": 0.00544775890973591,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 197,
+        "crank": 181.39399893188477,
+        "common_mm3": 0.0010443227826831337,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 215,
+        "crank": 171.5005911102295,
+        "common_mm3": 0.005447592998306214,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 269,
+        "crank": 181.39399893188477,
+        "common_mm3": 0.0010444269607804433,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 287,
+        "crank": 171.49891264343262,
+        "common_mm3": 0.005448025490225166,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 341,
+        "crank": 181.39109022521973,
+        "common_mm3": 0.0010574579587033187,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 359,
+        "crank": 171.4150846710205,
+        "common_mm3": 0.003902503585229454,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 413,
+        "crank": 181.33954412841797,
+        "common_mm3": 0.0015329519240798852,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 431,
+        "crank": 171.4998186340332,
+        "common_mm3": 0.005445370609304112,
+        "kernel": "native"
+      },
+      {
+        "failure": true,
+        "shaft": 485,
+        "crank": 181.3938844909668,
+        "common_mm3": 0.0010475303207168889,
+        "kernel": "native"
+      },
+      {
+        "complete": true,
+        "checked": 1154,
+        "failures": 10,
+        "kernel": "native"
+      }
+    ],
+    "faceted": [
+      {
+        "kernel": "faceted",
+        "profile_sha256": "6ac6d52a3e367b4641d984f00faac1b8042fddcd4ee078775b124200954f6f0d"
+      },
+      {
+        "failure": true,
+        "shaft": 143,
+        "crank": 171.50060064697266,
+        "common_mm3": 0.00564288972188336,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 197,
+        "crank": 181.39399893188477,
+        "common_mm3": 0.00114191975964739,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 215,
+        "crank": 171.5005911102295,
+        "common_mm3": 0.005642633814926185,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 269,
+        "crank": 181.39399893188477,
+        "common_mm3": 0.0011419702777315777,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 287,
+        "crank": 171.49891264343262,
+        "common_mm3": 0.005642759472358713,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 341,
+        "crank": 181.39109022521973,
+        "common_mm3": 0.0011561378174499669,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 359,
+        "crank": 171.4150846710205,
+        "common_mm3": 0.004098188150431118,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 413,
+        "crank": 181.33954412841797,
+        "common_mm3": 0.0016678858609642036,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 431,
+        "crank": 171.4998186340332,
+        "common_mm3": 0.005640194678556377,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 485,
+        "crank": 181.3938844909668,
+        "common_mm3": 0.0011453144701218027,
+        "kernel": "faceted"
+      },
+      {
+        "complete": true,
+        "checked": 1154,
+        "failures": 10,
+        "kernel": "faceted"
+      }
+    ]
+  }
+}

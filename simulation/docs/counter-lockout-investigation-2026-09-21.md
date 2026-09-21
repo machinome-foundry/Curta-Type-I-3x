@@ -100,7 +100,7 @@ present at all six stations, all five indexed flats and five carry heights:
 Log: `counter-bank-trial-material-flanks.log`.
 
 Whole-profile
-admission, ordinary counter motion, wrong-order retained stops and actual-root
+admission, wrong-order retained stops and actual-root
 Python/browser acceptance remain unproved; no counter contact law is proposed
 from indexed clearance alone.
 
@@ -131,8 +131,11 @@ patches, not production edits, in
 `counter-trial-ordinary-motion-ones-tens.log`. It passes **2/2 tests in
 1112.536 s**: the negative control and **4,125 complete-print poses** in both
 kernels (90 flat/count/height cases). The corresponding run for stations
-3–6 is now active in `counter-trial-ordinary-motion-stations-3-6.log`.
-No whole-bank motion acceptance follows until that run also completes.
+3–6 has now passed **2/2 tests in 2525.137 s**, covering **8,520 poses**
+in both kernels (180 flat/count/height cases), in
+`counter-trial-ordinary-motion-stations-3-6.log`. Together these runs cover
+12,645 ordinary source-path poses over all six candidate stations. This
+does not establish admission of arbitrary interrupted/wrong-order paths.
 
 The counter's bell ingredients are not rigid copies of the result-side ones.
 `tools/compare_counter_profiles.py` reads the original native parts and
@@ -199,8 +202,16 @@ or a reason to use identical repeated sectors. Logs:
 `counter-indexed-band-tool-{red,green}.log` and
 `counter-ones-indexed-bands.log`. The full bracket/volume records are also
 committed as [numeric evidence](evidence/counter-ones-indexed-bands-2026-09-21.json).
-The corresponding tens measurement at
-carry 0, .5 and 1 is active in `counter-tens-indexed-bands.log`.
+The corresponding tens measurement at carry 0, .5 and 1 has completed:
+30 bracket records plus its terminal completion record are in
+`counter-tens-indexed-bands.log` and the committed
+[tens numeric evidence](evidence/counter-tens-indexed-bands-2026-09-21.json).
+All three heights have the same combined parked bands in that measurement:
+111.304992676..114.311031342°, 183.303943634..186.311031342°,
+255.303943634..258.307903290°, 327.310714722..330.063819885°,
+399.518196106..402.308113098°. No all-crank or higher-station law is inferred
+from that agreement. Independent tens envelope measurements at those three
+heights are running in `counter-tens-upper-envelopes-coarse.log`.
 
 The first actual-root diagnostic reaches crank 170° and counter shaft
 167.6°, but fails its measurement setup: its drum path omitted the enclosing
@@ -210,10 +221,53 @@ preserved as `counter-ones-wrong-order-root-probe.log`.
 The durable `tools/counter_wrong_order.py` corrects that path and additionally
 checks **all six** complete lower counter prints against both drum halves.
 Its actual operating requests are crank lift to 9 mm, reverser to −4.9425 mm,
-partial crank movement to 170°, separately sampled lever withdrawal toward
-the lower housing stop, and a further crank request. The corrected run is
-active in `counter-ones-wrong-order-root-corrected.log`. Its preparation,
-complete upper/bell contacts and lower-input/both-drum contacts must be read
-before declaring this a clear withdrawal path or a missing counter stop.
-Neither this scope nor a successful diagnostic would certify every unrelated
-interface in the operating root.
+partial crank movement to 170°, ten separate −.2 mm lever withdrawals toward
+the lower housing stop at −6.9425 mm, and a further crank request to 180°.
+The corrected run completes in `counter-ones-wrong-order-root-corrected.log`.
+The retained counter shaft stays at 167.6°. At all eleven pre-final poses,
+all thirteen measured pairs have zero native and faceted common volume.
+The final request incorrectly reports **completed**: the upper/bell common
+is **0.8056968920 mm³ native / 0.8044790921 mm³ faceted**, while all twelve
+lower/drum pairs remain clear. The compact full readings and log hashes are
+committed as [withdrawal evidence](evidence/counter-ones-withdrawal-2026-09-21.json).
+This establishes the missing stop for these interfaces, not whole-machine
+clearance of the preparation path.
+
+`OperatingCounterLockoutTest` now uses that actual preparation and requires
+short/long requests, a physically clear installed stop, positive overtravel
+contact, exact replay and pawl relief. It fails at the first missing stop
+(**completed instead of blocked**, 128.385 s), before the later assertions
+can run. Log: `counter-ones-operating-restraint-red.log`. Production remains
+unchanged; no assertion is skipped or marked expected-failure.
+
+## Provisional ones law and rejected coarse interpolation
+
+`compile_counter_locking_profile.py` combines independent native/faceted
+free-side brackets and all five independently measured indexed bands. It
+refuses missing kernel/flat records, unexpected contact islands and the
+wrong candidate geometry. Its initial missing-module test was red; the
+four compiler tests pass. The provisional `counter_locking_laws.py` retains
+the existing .1° free-side stand-off and .002° shaft-support guard, with
+unbounded shaft/crank revolution normalization. It is not connected to the
+operating root. Higher counter stacks are outside this fixed-height law.
+
+The initial numeric law checks pass: known withdrawal timing, five indexed
+flats, and 21,615 ordinary source-path samples. Geometry independently
+**rejects** the 6°-shaft-grid profile: each kernel checks 1,154 admitted
+poses and finds ten positive commons between knots, including shaft 143°,
+crank 171.500600647° (native common 0.005447758910 mm³). Both terminal records
+are present in `counter-ones-profile-coarse-{native,faceted}.log`.
+The complete rejection coordinates/volumes and profile hash are committed in
+[rejection evidence](evidence/counter-ones-coarse-profile-rejection-2026-09-21.json).
+Those twenty kernel/pose failures are now pinned by a numeric regression,
+red with all twenty failures in 0.011 s; log
+`counter-profile-between-knots-red.log`. The previously green numeric checks
+are not a clearance certificate.
+
+The verifier retains these discovered poses even when later profiles change
+their knots. Its `--dense` mode additionally checks a 1° shaft / 5° crank
+grid, plus profile knots, midpoints and support edges. Missing sampling-helper
+tests failed first; all three sampling and four compiler tests pass in
+0.007 s (`counter-profile-sampling-{red,green}.log`). This tests the measuring
+instrument, not clearance. The 2° profile refinement remains in progress;
+neither the contact stand-off nor any positive-volume rule was relaxed.

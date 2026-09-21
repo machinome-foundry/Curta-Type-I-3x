@@ -1,0 +1,820 @@
+{
+  "scope": "Actual OperatingCurta withdrawal: upper/bell and six lower inputs versus both drum halves only; not whole-machine clearance.",
+  "base_commit": "e5ba863792d3a98f6c8c8d3c7c234d5c4a97d9c3",
+  "date": "2026-09-21",
+  "logs": [
+    "3cda4c9550b2237c893d1c6f5a96e537451521af167f3a324f8526121449b245  _build_checks/counter-ones-wrong-order-root-corrected.log",
+    "df14e59113960aa2a10d1fb65149ddf1b711d20d58e2d57ca7c259337d14f571  _build_checks/counter-tens-indexed-bands.log"
+  ],
+  "requests": [
+    {
+      "input": "crank_elevation",
+      "target": 9,
+      "status": "completed",
+      "shaft": 134
+    },
+    {
+      "input": "reverser_height",
+      "target": -4.9425,
+      "status": "completed",
+      "shaft": 134
+    },
+    {
+      "input": "crank_rotation",
+      "target": 90,
+      "status": "completed",
+      "shaft": 134
+    },
+    {
+      "input": "crank_rotation",
+      "target": 160,
+      "status": "completed",
+      "shaft": 134
+    },
+    {
+      "input": "crank_rotation",
+      "target": 170,
+      "status": "completed",
+      "shaft": 167.6
+    },
+    {
+      "final_request_status": "completed"
+    }
+  ],
+  "pairs": [
+    [
+      "Curta.transmission.turns.ones.p_10222_1",
+      "Curta.carry_mechanism.tens_bell.tens_bell_1"
+    ],
+    [
+      "Curta.transmission.turns.ones.p_10218_1",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.ones.p_10218_1",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ],
+    [
+      "Curta.transmission.turns.tens.p_10230_410008_1_419080",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.tens.p_10230_410008_1_419080",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ],
+    [
+      "Curta.transmission.turns.hundreds.p_10230_410008_1_419068",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.hundreds.p_10230_410008_1_419068",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_4.p_10230_410008_1_419182",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_4.p_10230_410008_1_419182",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_5.p_10230_410008_1_419105",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_5.p_10230_410008_1_419105",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_6.p_10230_410008_1_419237",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"
+    ],
+    [
+      "Curta.transmission.turns.digit_6.p_10230_410008_1_419237",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1"
+    ]
+  ],
+  "poses": [
+    {
+      "label": "before lever withdrawal",
+      "crank": 170,
+      "knob": -4.942499999999999,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 1",
+      "crank": 170,
+      "knob": -5.1425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 2",
+      "crank": 170,
+      "knob": -5.3425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 3",
+      "crank": 170,
+      "knob": -5.5425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 4",
+      "crank": 170,
+      "knob": -5.7425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 5",
+      "crank": 170,
+      "knob": -5.9425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 6",
+      "crank": 170,
+      "knob": -6.1425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 7",
+      "crank": 170,
+      "knob": -6.3425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 8",
+      "crank": 170,
+      "knob": -6.5425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 9",
+      "crank": 170,
+      "knob": -6.7425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "lever withdrawal 10",
+      "crank": 170,
+      "knob": -6.9425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "label": "after wrong-order crank request",
+      "crank": 180,
+      "knob": -6.9425,
+      "shaft": 167.6,
+      "volumes_native_faceted_mm3": [
+        [
+          0.805696892000372,
+          0.8044790920738424
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ]
+}

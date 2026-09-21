@@ -1,0 +1,666 @@
+{
+  "scope": "T08 parked-crank tens bands; not all-crank clearance",
+  "date": "2026-09-21",
+  "rows": [
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.30499267578125,
+          "first_contact": 111.30497360229492,
+          "free_mm3": 0,
+          "contact_mm3": 1.440260978600785e-12
+        },
+        {
+          "last_free": 114.31103134155273,
+          "first_contact": 114.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 5.370776130998517e-13
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.20504760742188,
+          "first_contact": 111.20502853393555,
+          "free_mm3": 0,
+          "contact_mm3": 9.462056160192195e-14
+        },
+        {
+          "last_free": 114.4328727722168,
+          "first_contact": 114.43289184570312,
+          "free_mm3": 0,
+          "contact_mm3": 3.44681719642509e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.3039436340332,
+          "first_contact": 183.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 5.441751207228576e-13
+        },
+        {
+          "last_free": 186.31103134155273,
+          "first_contact": 186.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 9.78203358728283e-13
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.20396041870117,
+          "first_contact": 183.20394134521484,
+          "free_mm3": 0,
+          "contact_mm3": 4.3938493284937543e-14
+        },
+        {
+          "last_free": 186.43289184570312,
+          "first_contact": 186.43291091918945,
+          "free_mm3": 0,
+          "contact_mm3": 8.335068203739823e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.3039436340332,
+          "first_contact": 255.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 1.9884710106463627e-12
+        },
+        {
+          "last_free": 258.3079032897949,
+          "first_contact": 258.30792236328125,
+          "free_mm3": 0,
+          "contact_mm3": 6.833166221819051e-13
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.2039794921875,
+          "first_contact": 255.20396041870117,
+          "free_mm3": 0,
+          "contact_mm3": 4.3940160886403275e-14
+        },
+        {
+          "last_free": 258.42978286743164,
+          "first_contact": 258.42980194091797,
+          "free_mm3": 0,
+          "contact_mm3": 2.806660806600694e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.3107147216797,
+          "first_contact": 327.31069564819336,
+          "free_mm3": 0,
+          "contact_mm3": 1.1245354440610051e-12
+        },
+        {
+          "last_free": 330.0638198852539,
+          "first_contact": 330.06383895874023,
+          "free_mm3": 0,
+          "contact_mm3": 6.32078135233841e-13
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.2108840942383,
+          "first_contact": 327.21086502075195,
+          "free_mm3": 0,
+          "contact_mm3": 5.813755140211334e-14
+        },
+        {
+          "last_free": 330.18651962280273,
+          "first_contact": 330.18653869628906,
+          "free_mm3": 0,
+          "contact_mm3": 2.0539700117138206e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.51819610595703,
+          "first_contact": 399.5181770324707,
+          "free_mm3": 0,
+          "contact_mm3": 1.1674992522002992e-12
+        },
+        {
+          "last_free": 402.30811309814453,
+          "first_contact": 402.30813217163086,
+          "free_mm3": 0,
+          "contact_mm3": 1.9291224315774264e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.424259185791,
+          "first_contact": 399.4242401123047,
+          "free_mm3": 0,
+          "contact_mm3": 3.671843678066324e-14
+        },
+        {
+          "last_free": 402.42993545532227,
+          "first_contact": 402.4299545288086,
+          "free_mm3": 0,
+          "contact_mm3": 2.448433212340154e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.30499267578125,
+          "first_contact": 111.30497360229492,
+          "free_mm3": 0,
+          "contact_mm3": 7.2013050890977916e-12
+        },
+        {
+          "last_free": 114.31103134155273,
+          "first_contact": 114.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 2.6853881498711653e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.29938507080078,
+          "first_contact": 111.29936599731445,
+          "free_mm3": 0,
+          "contact_mm3": 3.2332330266930635e-14
+        },
+        {
+          "last_free": 114.3359603881836,
+          "first_contact": 114.33597946166992,
+          "free_mm3": 0,
+          "contact_mm3": 2.510785041358107e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.3039436340332,
+          "first_contact": 183.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 2.7208755419890157e-12
+        },
+        {
+          "last_free": 186.31103134155273,
+          "first_contact": 186.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 4.891016933957462e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.29835510253906,
+          "first_contact": 183.29833602905273,
+          "free_mm3": 0,
+          "contact_mm3": 2.7111053947419048e-14
+        },
+        {
+          "last_free": 186.33597946166992,
+          "first_contact": 186.33599853515625,
+          "free_mm3": 0,
+          "contact_mm3": 9.023786775831708e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.3039436340332,
+          "first_contact": 255.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 9.942355338721303e-12
+        },
+        {
+          "last_free": 258.3079032897949,
+          "first_contact": 258.30792236328125,
+          "free_mm3": 0,
+          "contact_mm3": 3.4165833091593688e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.2983741760254,
+          "first_contact": 255.29835510253906,
+          "free_mm3": 0,
+          "contact_mm3": 2.7112102408771626e-14
+        },
+        {
+          "last_free": 258.33288955688477,
+          "first_contact": 258.3329086303711,
+          "free_mm3": 0,
+          "contact_mm3": 3.303815267402589e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.3107147216797,
+          "first_contact": 327.31069564819336,
+          "free_mm3": 0,
+          "contact_mm3": 5.622677398893294e-12
+        },
+        {
+          "last_free": 330.0638198852539,
+          "first_contact": 330.06383895874023,
+          "free_mm3": 0,
+          "contact_mm3": 3.1603907700281224e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.3050880432129,
+          "first_contact": 327.30506896972656,
+          "free_mm3": 0,
+          "contact_mm3": 3.010861970472513e-14
+        },
+        {
+          "last_free": 330.09063720703125,
+          "first_contact": 330.0906562805176,
+          "free_mm3": 0,
+          "contact_mm3": 3.9312336446871345e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.51819610595703,
+          "first_contact": 399.5181770324707,
+          "free_mm3": 0,
+          "contact_mm3": 5.837496290434068e-12
+        },
+        {
+          "last_free": 402.30811309814453,
+          "first_contact": 402.30813217163086,
+          "free_mm3": 0,
+          "contact_mm3": 9.645612415775238e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.50993728637695,
+          "first_contact": 399.5099182128906,
+          "free_mm3": 0,
+          "contact_mm3": 1.4783982120339952e-14
+        },
+        {
+          "last_free": 402.3330421447754,
+          "first_contact": 402.3330612182617,
+          "free_mm3": 0,
+          "contact_mm3": 3.515375781579984e-15
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.30499267578125,
+          "first_contact": 111.30497360229492,
+          "free_mm3": 0,
+          "contact_mm3": 4.320783139420128e-12
+        },
+        {
+          "last_free": 114.31103134155273,
+          "first_contact": 114.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 1.6112329214018547e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 114,
+      "bounds": [
+        {
+          "last_free": 111.21036911010742,
+          "first_contact": 111.2103500366211,
+          "free_mm3": 0,
+          "contact_mm3": 3.541564381646523e-14
+        },
+        {
+          "last_free": 114.38898468017578,
+          "first_contact": 114.38900375366211,
+          "free_mm3": 0,
+          "contact_mm3": 6.386811328846704e-14
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.3039436340332,
+          "first_contact": 183.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 1.632525449922007e-12
+        },
+        {
+          "last_free": 186.31103134155273,
+          "first_contact": 186.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 2.9346102268449774e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 186,
+      "bounds": [
+        {
+          "last_free": 183.20932006835938,
+          "first_contact": 183.20930099487305,
+          "free_mm3": 0,
+          "contact_mm3": 1.3384991869400378e-14
+        },
+        {
+          "last_free": 186.3890037536621,
+          "first_contact": 186.38902282714844,
+          "free_mm3": 0,
+          "contact_mm3": 6.387035703754038e-14
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.3039436340332,
+          "first_contact": 255.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 5.965413345397016e-12
+        },
+        {
+          "last_free": 258.3079032897949,
+          "first_contact": 258.30792236328125,
+          "free_mm3": 0,
+          "contact_mm3": 2.049949972186044e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 258,
+      "bounds": [
+        {
+          "last_free": 255.2093391418457,
+          "first_contact": 255.20932006835938,
+          "free_mm3": 0,
+          "contact_mm3": 1.3385501581816146e-14
+        },
+        {
+          "last_free": 258.3857612609863,
+          "first_contact": 258.38578033447266,
+          "free_mm3": 0,
+          "contact_mm3": 5.834126239977488e-14
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.3107147216797,
+          "first_contact": 327.31069564819336,
+          "free_mm3": 0,
+          "contact_mm3": 3.3736065099086146e-12
+        },
+        {
+          "last_free": 330.0638198852539,
+          "first_contact": 330.06383895874023,
+          "free_mm3": 0,
+          "contact_mm3": 1.8962345006391906e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 330,
+      "bounds": [
+        {
+          "last_free": 327.2161102294922,
+          "first_contact": 327.21609115600586,
+          "free_mm3": 0,
+          "contact_mm3": 1.630272044217121e-14
+        },
+        {
+          "last_free": 330.13683319091797,
+          "first_contact": 330.1368522644043,
+          "free_mm3": 0,
+          "contact_mm3": 6.981742323008545e-14
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.51819610595703,
+          "first_contact": 399.5181770324707,
+          "free_mm3": 0,
+          "contact_mm3": 3.5024979214822493e-12
+        },
+        {
+          "last_free": 402.30811309814453,
+          "first_contact": 402.30813217163086,
+          "free_mm3": 0,
+          "contact_mm3": 5.7873675744837125e-12
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 402,
+      "bounds": [
+        {
+          "last_free": 399.42345809936523,
+          "first_contact": 399.4234390258789,
+          "free_mm3": 0,
+          "contact_mm3": 2.7608296687003866e-14
+        },
+        {
+          "last_free": 402.3860092163086,
+          "first_contact": 402.3860282897949,
+          "free_mm3": 0,
+          "contact_mm3": 6.640904282698636e-14
+        }
+      ]
+    }
+  ]
+}

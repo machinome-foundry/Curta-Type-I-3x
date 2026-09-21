@@ -44,16 +44,22 @@ def contact_evidence(sim, label):
             'contacts': contacts}
 
 
-def measure():
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
-    print('constructed', flush=True)
+def prepare_partial_turn(sim, *, report=False):
+    """Physical test setup only: no register seeds or model-state overrides."""
     for name, value in (('crank_elevation', 9), ('reverser_height', -4.9425),
                         ('crank_rotation', 90), ('crank_rotation', 160),
                         ('crank_rotation', 170)):
         command = sim.move(name, to=value)
-        print(json.dumps({'input': name, 'target': value, 'status': command.status,
-                          'shaft': sim.state[SHAFT]}), flush=True)
+        if report:
+            print(json.dumps({'input': name, 'target': value, 'status': command.status,
+                              'shaft': sim.state[SHAFT]}), flush=True)
         assert command.status == 'completed', (name, value, command.status)
+
+
+def measure():
+    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    print('constructed', flush=True)
+    prepare_partial_turn(sim, report=True)
     print(json.dumps(contact_evidence(sim, 'before lever withdrawal')), flush=True)
     for step in range(1, 11):
         command = sim.move('reverser_height', to=-4.9425-.2*step)
