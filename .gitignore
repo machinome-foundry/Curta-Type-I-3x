@@ -1,5 +1,6 @@
 .DS_Store
 _build*/
+/_export_tens_production/
 simulation/_source/
 __pycache__/
 *.py[cod]

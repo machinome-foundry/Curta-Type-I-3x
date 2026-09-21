@@ -1,0 +1,47 @@
+{
+  "scope": "Production document versus pre-adoption T07 trial; structural comparison, not runtime or geometric acceptance",
+  "baseline": "_build_higher_refined_operating/manifest.json",
+  "baseline_sha256": "15617702eb301b7b00f6e88448fabe4886d565c0d1977ae92aa22da3990b1b62",
+  "production": "_build_tens_production/operating_curta/viewer.json",
+  "production_sha256": "024572ec5a4a142b902ab7d9f67dca171817af864d5e74e2145d34cfbbf65506",
+  "version": 7,
+  "coordinates": 213,
+  "controls": 25,
+  "drivers": 24,
+  "same_descendant_paths": true,
+  "descendants": 608,
+  "nonempty_assets": 155,
+  "equal_top_fields": [
+    "format",
+    "version",
+    "animation",
+    "drivers",
+    "instructions",
+    "controls",
+    "bindings"
+  ],
+  "equal_program_fields": [
+    "clock",
+    "coordinates",
+    "intermediates",
+    "spans",
+    "sources",
+    "limits"
+  ],
+  "same_edges_except_stated_by": true,
+  "edge_count": 273,
+  "stated_by_changes": [
+    [
+      "HigherOperatingTrial",
+      "OperatingCurta"
+    ],
+    [
+      "TrialBellAssembly",
+      "ContactBellAssembly"
+    ],
+    [
+      "TrialTens",
+      "ContactTens"
+    ]
+  ]
+}

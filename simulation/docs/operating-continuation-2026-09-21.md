@@ -220,3 +220,100 @@ stations. It records a new parked-indexed clearance failure on every station,
 and a bounded T08 outer-skin candidate that passes indexed clearance,
 protected-material and two-sided engagement checks. That candidate remains
 isolated; no counter restraint or operating fit has been adopted.
+
+## T07 arithmetic gate and default-root adoption work
+
+The resumed `HigherOperatingTrial` arithmetic gate completes **3/3 in
+8666.232 s**: page-53 calibration/carries, subtraction through both registers
+followed by addition undo, and independent inputs with successive additions.
+Log: `_build_checks/higher-t07-trial-arithmetic-resumed.log`. This replaces
+neither the earlier interrupted log nor its recorded status.
+
+The refined tens native admission check has also completed **23,556/23,556**
+with zero failures, matching its completed faceted run. The sequential
+remaining-result-bank batch has moved on to station 4; later stations are not
+yet certified by this result.
+
+Station 4's faceted check subsequently passes **23,556/23,556**. The mesh
+queue continues through stations 5–11. Two native queues now independently
+cover stations 4/6/8/10 and 5/7/9/11, aborting their own queue on any failure
+and refusing to overwrite existing logs. They use the same
+`result-station-N-profile-certified-native.log` naming. No remaining-bank
+pass is inferred from a running queue or from the tens/hundreds results.
+
+The handoff's production gate is therefore satisfied. The tested parts now
+live in `higher_lockout_parts.py`; historical trial names alias those same
+classes. `ResultShafts.tens` and `RetainedCarries.tens_bell` use the fitted
+tens and refined bell. `OperatingCurta` owns the existing `higher_closing_limit`
+bound, reading actual bell rotation, retained tens rotation and upper-stack
+travel. The ones/pawl restraints, inputs, control paths and motion laws are
+preserved. `HigherOperatingTrial` only inherits the default root; it no
+longer redeclares the bound or substitutes a separate subtree.
+
+The prior production red is still retained as `higher-t07-production-red.log`
+(completed instead of blocked, 66.318 s). New production acceptance is
+running, not yet a pass:
+
+- `tens-production-operating.log`: all three stop/free-support cases, with
+  stopped/idle banks in `tens-production-python-acceptance.json` on completion.
+  all three pass **3/3 in 2119.774 s**;
+- `tens-production-arithmetic.log`: the same three arithmetic cases on the
+  actual default root;
+- `tens-production-ones-regression.log`: the unchanged ones/pawl stop,
+  geometry, relief and replay test against the default root with the new bell
+  passes **1/1 in 1403.527 s**;
+- `tens-production-fit-{faceted,native}.log`: the six complete-print fit
+  contracts; faceted has passed **6/6 in 34.87 s**, native **6/6 in 132.32 s**;
+- `tens-production-build.log`: fresh default-root build to the isolated
+  `_build_tens_production/` directory has passed, not the pilot's live Studio
+  build. The standalone export to `_export_tens_production/` also passes
+  (`tens-production-export.log`). The fresh browser run passes against the
+  earlier trial's Python banks in `tens-production-browser-vs-trial.log`;
+  all four new production Python banks also match exactly.
+
+The fresh build's [document comparison](evidence/tens-production-document-comparison-2026-09-21.json)
+preserves all 213 coordinates, 24 inputs, 25 controls and 608 descendant
+paths from the previously accepted trial export. All 155 distinct referenced
+model/marking assets exist and are nonempty. Drivers, instructions, controls,
+bindings and the program's clock, coordinates, intermediates, spans, sources
+and limits are exactly equal. All 273 edges are equal except their
+`stated_by` class names (historical trial names become production names).
+Program identity and geometry-piece identities change with those names;
+neither is claimed byte-identical. This is a structural comparison, not
+runtime or contact acceptance.
+
+The [fresh browser evidence](evidence/tens-production-browser-acceptance-2026-09-21.json)
+records completed carry preparation, raised/carried short and long stops,
+exact replay, relief/idle and the free-support request to 506.3°. There are
+no page errors. All 213 coordinates are **exactly equal** to the earlier
+trial's Python banks at all four stopped/idle states; this is stronger than
+the probe's threshold assertions and was checked independently on the saved
+JSON values. The three fresh full-model screenshots were inspected:
+`carry-preparation.png`, `carry-withdrawal-relieved.png`, and
+`carry-free-support.png`, under `_export_tens_production/`. They establish
+the rendered assembly, crank/selector poses and control readback, not Boolean
+contact clearance or every physical-pointer interaction.
+
+The viewer checkout has independently advanced since the handoff. This fresh
+run uses viewer commit `1995aa1f58d44dfeea7bfa62502d71349891327a`, bundle
+SHA-256 `5f3ec29aede4934106bb0cbbdaa7454dcec39d2ba04a233f431a4ce279fef610`,
+and framework `e6a42c80e6dcc686c180b8a6d94037301c4213a5`. The exported document
+SHA-256 is `fdd2442d49ec978556169fec8300f42f6d4f52924114ed686d0332aa552e384b`.
+No viewer or framework mutation was performed for this adoption.
+
+The [production Python banks](evidence/tens-production-python-acceptance-2026-09-21.json)
+are now complete. All four 213-coordinate stopped/idle banks match both the
+old trial and the fresh production browser **exactly**, checked independently
+from the saved values. Production neighbouring arithmetic is still running;
+the previously completed three-case trial arithmetic gate is not relabelled
+as that production invocation. This implementation step does not close any
+whole-project task or adopt higher-result-bank/counter restraints.
+
+Additional supplied-video samples at 42:30–43:30 and 43:30–44:30 (two-second
+intervals), and 0:00–2:00 (five-second intervals), were rendered and inspected.
+They show carriage/crank assembly and the opening drum assembly, respectively,
+not a justified clearing-loop clip/release path. The source and unadopted
+T05/T06 diagnostics are unchanged. Contact sheets are
+`clearing-loop-crank-install-42m30-43m30.png`,
+`clearing-loop-crank-install-43m30-44m30.png` and
+`clearing-loop-video-intro-0m-2m.png` under `_build_checks/`.

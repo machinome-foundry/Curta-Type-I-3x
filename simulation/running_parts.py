@@ -9,6 +9,7 @@ from machinome.motion.joints import Bound, Revolute, Prismatic
 from simulation import assemblies
 from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
+from simulation.higher_lockout_parts import ContactTens, ContactBell
 from simulation.cover_fits import FittedAxleCarrier
 from simulation.clearing_stop_motion import following as clearing_stop_following
 from simulation.registers import ResultDials, TurnsDials
@@ -175,15 +176,19 @@ class RetainedTurnsCarries(carry.TurnsCarry):
     turns_tens_lever_assembly_5 = retained_lever(carry.TurnsLever5, -1.8, True)()
 
 
+class ContactBellAssembly(TensBellAssembly):
+    tens_bell_1 = ContactBell()
+
+
 class RetainedCarries(assemblies.CarryMechanism):
-    tens_bell = TensBellAssembly(turn=Revolute(axis=(0, 0, 1)))
+    tens_bell = ContactBellAssembly(turn=Revolute(axis=(0, 0, 1)))
     result_carries = RetainedResultCarries()
     turns_carries = RetainedTurnsCarries()
 
 
 class ResultShafts(AssemblyNode):
     ones = channels.ResultOnes()
-    tens = channels.ResultTens()
+    tens = ContactTens()
     hundreds = channels.ResultHundreds()
     digit_4 = channels.ResultDigit4()
     digit_5 = channels.ResultDigit5()

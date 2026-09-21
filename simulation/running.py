@@ -20,6 +20,7 @@ from simulation.running_parts import (IndependentInputs, RetainedCarriage, Runni
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
 from simulation.running_laws import shaft_motion, dial_motion, lever_motion, reading
 from simulation.locking_laws import closing_limit
+from simulation.higher_locking_laws import higher_closing_limit
 
 
 def sources(*ends):
@@ -85,10 +86,15 @@ class OperatingCurta(LayeredSource):
     # The fixed-height ones lockout meets the source bell after premature
     # selector withdrawal. Intersect the crank's existing pawl restraint;
     # preserve its assembly path and read actual retained part coordinates.
-    # Higher channels move axially with carry and need their own certification.
+    # Tens additionally reads its actual axial carry position. The remaining
+    # higher result/counter channels still need their own certification.
     main_drive.crank.turn.constrain(range=(Bound(
         closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.result.ones.turn)), None))
+    main_drive.crank.turn.constrain(range=(Bound(
+        higher_closing_limit,
+        reads=(carry_mechanism.tens_bell.turn, transmission.result.tens.turn,
+               transmission.result.tens.p_10220_410003_1_419227.travel)), None))
 
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {

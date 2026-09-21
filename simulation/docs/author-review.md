@@ -53,7 +53,7 @@ full-root lockout, neighbouring arithmetic/history and browser acceptance
 passing. This introduces no further geometry fit
 and does not adopt the profile on other channels.
 
-## Higher result lockout trial — T07, not adopted
+## Higher result lockout — T07 adoption under verification
 
 The [higher-result investigation](higher-result-lockout-2026-09-21.md) records
 **T07**, a .15 → .16 mm outer-profile trial on the result tens lockout. Its
@@ -63,8 +63,7 @@ also misses an existing negative locking contact both before and after T07.
 Refining only the diagnostic bell's tessellation restores that contact without
 changing its native solid. The expanded six contracts pass on both kernels,
 including 925 sampled poses following the actual carry tooth passage and a
-deliberately frozen engaged-gear negative control. Production
-tens geometry, production bell tessellation and upstream CAD are unchanged.
+deliberately frozen engaged-gear negative control. Upstream CAD is unchanged.
 The isolated moving-restraint candidate now stops raised/lowered withdrawal
 and axial entry, with exact replay, reverse relief and complete-print
 stop/overtravel checks. Python and an isolated browser agree; ordinary source
@@ -72,9 +71,16 @@ tooth trajectories remain admitted. Native-only release measurement first
 missed both a mesh contact and an isolated native Boolean blind spot; the
 combined profile now passes dense verification, carry-tooth support refinement
 and full-tree Python/browser acceptance with exact retained-bank agreement.
-Actual-root adoption and neighbouring arithmetic acceptance remain open; see
-the [fresh-agent checkpoint](handoff-2026-09-21.md). This is not a manufacturing
-recommendation.
+The trial's three neighbouring arithmetic cases now pass (8666.232 s).
+The default operating root has been wired to the same tens fit, refined bell
+and moving bound; the historical trial entry point inherits them without
+repeating the constraint. Production stop/replay/free-support (3/3), the
+original ones/pawl regression, both six-test fit suites and fresh browser
+acceptance now pass. All four 213-coordinate production Python/browser
+stopped/idle banks agree exactly. Production arithmetic remains in progress,
+so final adoption acceptance remains open. See
+the [continuation record](operating-continuation-2026-09-21.md).
+This is not a manufacturing recommendation.
 
 The new independently placed result-bank probe also finds indexed contact on
 all ten higher result stations with the existing .15 mm simulation fit:
@@ -93,8 +99,9 @@ existing .15 mm fit. The isolated **T08** candidate increases only their
 outer-profile relief to .16 mm and refines the complete upper-print meshes;
 source pivots, keyed cores and axial extents are retained. Sixty indexed
 poses clear and 300 two-sided locking poses retain contact in both kernels.
-Protected-material and connected-print checks pass. Counter profile admission,
-ordinary motion and actual operating/browser restraints remain unproved.
+Protected-material and connected-print checks pass. Ordinary motion now passes
+12,645 complete-print poses across all six candidate stations in both kernels.
+Counter profile admission and actual operating/browser restraints remain unproved.
 No production counter geometry or upstream CAD changes from this candidate;
 it is neither a physical-build failure claim nor a manufacturing recommendation.
 
