@@ -1,0 +1,47 @@
+{
+  "status": "isolated trial; not adopted in OperatingCurta",
+  "profile_sha256": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+  "dense_checks": [
+    {
+      "kernel": "native",
+      "checked": 11858,
+      "failures": 0,
+      "complete": true,
+      "log": "_build_checks/counter-ones-profile-cusp-dense-native.log",
+      "log_sha256": "f96e5547956b99341ad7f81fe5421c47c564b7ad3e750d527f23a0ff82eca05b"
+    },
+    {
+      "kernel": "faceted",
+      "checked": 11858,
+      "failures": 0,
+      "complete": true,
+      "log": "_build_checks/counter-ones-profile-cusp-dense-faceted.log",
+      "log_sha256": "c82e965c48de624486ae620f958f8699c66c3d7986326cec5b08191c2c27232e"
+    }
+  ],
+  "operating_test": {
+    "tests": 1,
+    "passed": 1,
+    "seconds": 1665.484,
+    "stops": [
+      {"target": 180, "stop": 174.7853836059494},
+      {"target": 900, "stop": 174.78538360544917}
+    ],
+    "geometry_kernels": ["native", "faceted"],
+    "stop_common_mm3": 0,
+    "overtravel_degrees": 0.2,
+    "overtravel_common": "positive in both kernels at both stops",
+    "exact_snapshot_replay": true,
+    "relief_degrees": -0.05,
+    "relief_completed": true,
+    "retry_blocked": true,
+    "log": "_build_checks/counter-operating-trial-stops.log",
+    "log_sha256": "c2e2500277dde616d2b347d9b91c84ba618cd836c6d7a61ac22c4c259c6d7563"
+  },
+  "limitations": [
+    "Finite geometry sampling, not a continuous proof",
+    "No ordinary arithmetic acceptance for this counter trial yet",
+    "No Python/browser full-bank comparison yet",
+    "No higher-counter restraint acceptance"
+  ]
+}

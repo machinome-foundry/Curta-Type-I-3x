@@ -11,8 +11,10 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 
 class OperatingCounterLockoutTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_withdrawn_counter_stops_short_and_long_crank_requests(self):
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True, record=16)
+        sim = Sim(self.model(), dt=.1, meshes=True, record=16)
         prepare_partial_turn(sim)
         self.assertAlmostEqual(sim.state[SHAFT], 167.6, places=9)
         self.assertEqual(sim.move('reverser_height', to=-6.9425).status, 'completed')

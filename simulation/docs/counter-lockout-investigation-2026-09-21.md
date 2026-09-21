@@ -298,7 +298,77 @@ eleven compiler/sampling/law tests in **36.244 s**, including both sets of
 discovered collision poses (`counter-profile-cusp-regression.log`).
 Its SHA-256 is
 `eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367`.
-Fresh dense checks are active in
-`counter-ones-profile-cusp-dense-{native,faceted}.log`; only their eventual
-terminal results can establish these finite geometry checks. No operating
-counter fit/bound or changed stand-off follows from this unfinished acceptance.
+The fresh dense checks each pass **11,858/11,858 admitted poses**, in both
+faceted and native kernels, including the retained failures and independently
+sampled interiors. Their terminal results are recorded in
+`counter-ones-profile-cusp-dense-{faceted,native}.log`. These are finite
+geometry checks, not a proof of every continuous intermediate pose.
+No default operating counter fit/bound or changed stand-off follows from
+this unfinished acceptance.
+
+## Isolated retained counter-ones trial
+
+`CounterOperatingTrial` now adds the measured T08 ones upper print and the
+independent fixed-height counter law to the complete operating tree. It
+inherits the current result ones/tens and pawl restraints and all actual
+inputs. There is no new register setter or preparation macro in the model,
+and higher counter stacks are unchanged. The manifest still selects
+`OperatingCurta`, which has no counter restraint or T08 counter fit.
+
+The full-root fixture compares the installed complete upper and bell against
+the measured station-one candidate in both native-difference directions,
+and compares the complete initial state bank against `OperatingCurta`.
+It passes **1/1 in 77.328 s** (`counter-operating-fixture-green.log`). The same
+test with the unmodified production counter selected as its subject rejects
+it: **0.404301831873 mm³** of extra material relative to the measured upper
+print, 76.590 s (`counter-operating-fixture-baseline-red.log`). The original
+production wrong-order stop failure remains the behavioral red evidence.
+
+An earlier attempt to check for the missing trial module was still importing
+when the module was written, so it cannot establish a red result. That
+invalidated, redundant attempt was intentionally interrupted (exit 130) and
+retained as `counter-operating-fixture-import-attempt-interrupted.log`. It is
+not counted as a test pass or failure.
+
+The production withdrawal test now has an explicit model class so the exact
+same assertions can run against the isolated trial. Its short/long request,
+installed-stop/overtravel geometry, retained shaft, replay and relief checks
+pass **1/1 in 1665.484 s** (`counter-operating-trial-stops.log`). The short
+request to 180° stops at **174.7853836059494°**; the long request to 900° stops
+at **174.78538360544917°**. Both installed stop poses have zero common in
+both kernels, and .2° overtravel has positive common. This isolated stop
+test is not ordinary arithmetic, browser or whole-counter-bank acceptance.
+
+`tools/counter_operating_browser.py` prepares the same actual inputs on a
+separate full-machine export and tests short/long stops, snapshot replay,
+relief/idle and retry. It can compare every retained coordinate exactly with
+an optional Python report. Without that report it explicitly records no
+Python comparison. Its report-validator module failed as missing first;
+all four positive/negative validator tests then pass (0.001 s), including
+missing requests, failed replay/relief, page errors and an unrelated changed
+or missing bank coordinate. Logs: `counter-browser-validator-{red,green}.log`.
+The isolated export passes (`counter-operating-trial-export.log`). The first
+browser check reaches the prepared crank 170° / counter shaft 167.6° but
+times out taking its first screenshot, before either stop request
+(`counter-operating-trial-browser.log`). Its incomplete report is preserved
+as `_build_counter_ones_trial/counter-browser-capture-timeout.json`; it is not
+acceptance. A retry with a finite 60 s capture deadline is running in
+`counter-operating-trial-browser-retry.log`.
+This is a browser request/render probe, not physical-pointer or mesh-clearance
+acceptance. Its Playwright Promise evaluation and local-file interception
+follow the official Python API documentation fetched through Context7.
+
+Higher counter measurement is also independent of this fixed-height trial.
+At tens shaft 120°, carry 0's native opening bracket is
+86.666355133..86.666374207°, while carry .5 opens at
+88.666362762..88.666381836°. Both close at
+191.422691345..191.422710419° in that measurement. The approximately two-degree
+opening change rules out treating this sampled axial motion as a fixed curve.
+The coarse tens collection now completes all **183 shaft/height rows**:
+61 shaft positions at each of carry 0, .5 and 1, in both kernels
+(`counter-tens-upper-envelopes-coarse.log`). Fully carried poses can have
+four contact boundaries rather than two; for example shaft 156° has a
+second short free interval near crank 203.49°..205.79°. This rules out
+feeding all heights to the fixed-height ones compiler unchanged. These are
+sampled heights and angles, not a continuous axial interpolation law or
+an operating higher-counter restraint.

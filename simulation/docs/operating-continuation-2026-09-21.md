@@ -317,3 +317,22 @@ T05/T06 diagnostics are unchanged. Contact sheets are
 `clearing-loop-crank-install-42m30-43m30.png`,
 `clearing-loop-crank-install-43m30-44m30.png` and
 `clearing-loop-video-intro-0m-2m.png` under `_build_checks/`.
+
+## Isolated counter-ones operating checkpoint
+
+The independent cusp-refined counter-ones law now passes both dense geometry
+checks: **11,858 admitted poses per kernel**, zero positive commons. The
+full-machine `CounterOperatingTrial` installs that measured upper print and
+restraint without changing the manifest-selected `OperatingCurta`. Its
+short/long withdrawal test passes in **1665.484 s**, including native/faceted
+stop clearance, positive .2° overtravel contact, retained shaft, exact replay
+and relief/retry. See the [counter investigation](counter-lockout-investigation-2026-09-21.md)
+and [numeric checkpoint](evidence/counter-ones-trial-acceptance-2026-09-21.json).
+
+Its first browser run timed out during the prepared-state screenshot before
+either stop request; that incomplete report is preserved and not accepted.
+A retry with a finite 60 s capture deadline is pending. No Python/browser
+full-bank comparison or ordinary-arithmetic acceptance is claimed for this
+isolated counter trial. Higher-counter coarse measurement completes three
+sampled heights, but reveals height-dependent contact windows; higher-counter
+operation remains unimplemented. No whole-project task is closed here.
