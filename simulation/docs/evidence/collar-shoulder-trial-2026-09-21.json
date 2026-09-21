@@ -1,0 +1,213 @@
+{
+  "date": "2026-09-21",
+  "project_parent_commit": "60fb6eb",
+  "framework_content_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "status": "isolated shoulder-facing candidate; not adopted; task 1.3 open",
+  "fit": {
+    "axial_removal_band_local_mm": [
+      39,
+      39.72
+    ],
+    "stem_profile": "unchanged source section at local Z38",
+    "outer_tool_radius_mm": 24.05,
+    "measured_removed_mm3": 555.0922278914127,
+    "named_axial_gap_mm": 0.05,
+    "source_stl_unchanged": true
+  },
+  "tests": {
+    "unmodified_red": {
+      "path": "_build_checks/collar-shoulder-trial-red.log",
+      "sha256": "959917e1fa0608e984f6b5a3cdf1515e6906b2d449dd03d3b025cda961d1bac0",
+      "summary": "Ran 3 tests in 1.19 seconds: 1 passed, 2 failed (faceted kernel, volume epsilon 0 mm\u00b3)",
+      "failures": [
+        "AssertionError: 0.0 not greater than 500",
+        "AssertionError: spider should not intersect collar (intersection volume 504.8700313647372)"
+      ]
+    },
+    "r17_95_rejected_contact": {
+      "path": "_build_checks/collar-shoulder-trial-green-faceted.log",
+      "sha256": "d1c47781895a6ac9623cda28bd1bbd771f2668b4e10d8e0fa397881bd0b10593",
+      "summary": "Ran 3 tests in 1.93 seconds: 2 passed, 1 failed (faceted kernel, volume epsilon 0 mm\u00b3)",
+      "failures": [
+        "AssertionError: spider should not intersect collar (intersection volume 0.009838669105933175)"
+      ]
+    },
+    "r17_941_rejected_encoding_faceted": {
+      "path": "_build_checks/collar-shoulder-trial-refined-faceted.log",
+      "sha256": "42e5031d4cd5d67b34c6d88dc47e42936f4cf95683a4042be095119cc65d943e",
+      "summary": "Ran 3 tests in 1.18 seconds: 2 passed, 1 failed (faceted kernel, volume epsilon 0 mm\u00b3)",
+      "failures": [
+        "AssertionError: zero-volume shell"
+      ]
+    },
+    "r17_941_rejected_encoding_exact_runner": {
+      "path": "_build_checks/collar-shoulder-trial-refined-exact.log",
+      "sha256": "4304c9d27689f1dfb8532917fe407e2073ddacc2f5db82aa7f8c3b70e4f23c52",
+      "summary": "Ran 3 tests in 0.94 seconds: 2 passed, 1 failed",
+      "failures": [
+        "AssertionError: zero-volume shell"
+      ]
+    },
+    "source_profile_chord_check_red_faceted": {
+      "path": "_build_checks/collar-shoulder-source-profile-faceted.log",
+      "sha256": "b72983b3ee162291db697977447d6e8399db094801ec2426351a4dd28b416b32",
+      "summary": "Ran 4 tests in 2.55 seconds: 3 passed, 1 failed (faceted kernel, volume epsilon 0 mm\u00b3)",
+      "failures": [
+        "AssertionError: np.float64(0.4799999999999969) not less than 1e-05"
+      ]
+    },
+    "source_profile_chord_check_red_exact_runner": {
+      "path": "_build_checks/collar-shoulder-source-profile-exact.log",
+      "sha256": "ad8bc57a2492aad24728db638a0244567fe25e9a9d5883832d5ecc68ff346a3d",
+      "summary": "Ran 4 tests in 2.04 seconds: 3 passed, 1 failed",
+      "failures": [
+        "AssertionError: np.float64(0.4799999999999969) not less than 1e-05"
+      ]
+    },
+    "final_faceted": {
+      "path": "_build_checks/collar-shoulder-source-profile-final-faceted.log",
+      "sha256": "125fe4b00e0667ed0acacd39c4c6205c632f331776e03763b1ef28a4ff2bdd6b",
+      "summary": "Ran 4 tests in 2.34 seconds: 4 passed, 0 failed (faceted kernel, volume epsilon 0 mm\u00b3)",
+      "failures": []
+    },
+    "final_exact_runner": {
+      "path": "_build_checks/collar-shoulder-source-profile-final-exact.log",
+      "sha256": "596ee4ac29a04389e1959906799afb8a5bcbfd9c6dd79b596b8294faeb598861",
+      "summary": "Ran 4 tests in 2.34 seconds: 4 passed, 0 failed",
+      "failures": []
+    }
+  },
+  "whole_assembly_measuring_probe": [
+    {
+      "scope": "unadopted shoulder-facing copy against every other rigid occurrence",
+      "model": "simulation.running:OperatingCurta",
+      "coordinates": 213,
+      "rigid_occurrences": 389,
+      "kernel": "source-STL/published-mesh Manifold",
+      "not_adopted": true,
+      "collar_source_sha256": "fd70390be6142f1b86f219d89b1d3109db72d587dde6b17e90fe820477c4c8cd",
+      "shoulder_trial": true,
+      "unfitted_fixture_max_distance_mm": {
+        "collar": 0.0,
+        "spider": 1.0658141036401503e-14
+      },
+      "section_parts_world_bounds_mm": {
+        "collar": [
+          [
+            -28.49776279974528,
+            -28.49776279974528,
+            7.799999999990281
+          ],
+          [
+            28.49776279974528,
+            28.49776279974528,
+            66.3
+          ]
+        ],
+        "thrust ring": [
+          [
+            -16.265701916171125,
+            -16.34697359580492,
+            25.5225
+          ],
+          [
+            16.265701916171125,
+            16.34697359580492,
+            27.0225
+          ]
+        ],
+        "spider mount": [
+          [
+            -25.000000000000007,
+            -25.010902404785156,
+            45.04999999701977
+          ],
+          [
+            25.000000000000007,
+            25.0,
+            47.47000002861023
+          ]
+        ],
+        "nut": [
+          [
+            -20.996113148666872,
+            -20.971467023872574,
+            12.299999999999688
+          ],
+          [
+            20.996113148666872,
+            20.971467023872574,
+            24.3
+          ]
+        ],
+        "washer": [
+          [
+            -28.38930656350854,
+            -28.484796395103817,
+            57.09999995231628
+          ],
+          [
+            28.38930656350854,
+            28.484796395103817,
+            60.3
+          ]
+        ],
+        "carrier": [
+          [
+            -48.750000000000014,
+            -48.73484802274799,
+            24.95000076293945
+          ],
+          [
+            48.750000000000014,
+            48.73484802274799,
+            45.00000000000001
+          ]
+        ],
+        "cover": [
+          [
+            -61.49999805382328,
+            -61.48097746331043,
+            41.20000038146972
+          ],
+          [
+            61.49999805382328,
+            61.48097746331043,
+            57.10000000000001
+          ]
+        ]
+      }
+    },
+    {
+      "rise_mm": 0.0,
+      "positive_contacts_mm3": {
+        "Curta.carriage.positioning.thrust_ring": 225.52306507620042,
+        "Curta.carriage.registers.carrier.crank_collar_nut": 8.28837752989575,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1": 7.902400961240737,
+        "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2": 7.902401733351174
+      }
+    },
+    {
+      "complete": true,
+      "all_rises_measured": 1,
+      "run_bank_unchanged": true
+    }
+  ],
+  "no_new_positive_rigid_pair": true,
+  "no_existing_positive_pair_increased": true,
+  "final_section_visually_inspected": true,
+  "source_kernel_limit": "Collar is the source STL: contacts are faceted on both test runners",
+  "limits": [
+    "Only a shoulder-facing candidate; thrust ring, nut and carrier pin contacts remain",
+    "No operating adoption, flexible-wire contact matrix, moving-trajectory certificate or manufacturing recommendation",
+    "Run bank unchanged during measurement, not a new arithmetic acceptance result"
+  ],
+  "sha256": {
+    "simulation/collar_seat_trial.py": "b7046fd436e8310457e04c84b9b0918df3f9b966941943502990406db86e3667",
+    "simulation/test_collar_seat_trial.py": "c3df47291b707f9c9190d2236c6eaa885fd84f78e25909efffff87ab040d7713",
+    "simulation/tools/collar_seating.py": "865a82a46da115b33ec80e798d51322236f48fdf7535048238dda363b21e52ac",
+    "_build_checks/collar-shoulder-source-profile-neighbours.log": "060fb57273088239cd127335a5b3e2f7d9ccb4efc36490719be1862494e061aa",
+    "_build_checks/collar-shoulder-source-profile-section.png": "8824bd7b8baeb1c9fd5fee03aad69683fb237dd1f4e0e942aeacfea70c595416",
+    "STLs/43 - Clearing Cover & Collar/crank collar.stl": "fd70390be6142f1b86f219d89b1d3109db72d587dde6b17e90fe820477c4c8cd"
+  }
+}

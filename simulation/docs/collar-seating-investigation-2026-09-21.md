@@ -96,3 +96,68 @@ and finger roots, spring capture/travel, cover freedom and carrier-pin
 engagement. It must fail the current geometry first and pass scoped
 source-fidelity and moving-neighbour checks after the fit. Task 1.3 and the
 complete operating-machine acceptance remain open.
+
+## Isolated shoulder-facing trial
+
+The follow-on `collar_seat_trial.py` now has a scoped passing candidate, still
+**not adopted** by `OperatingCurta`. It faces only the collar's underside:
+local Z39..39.72, corresponding to installed Z46.8..47.52. The unchanged
+spider mount ends at Z47.47, leaving the named .05 mm axial seating gap.
+The trial removes 555.092227891 mm³ from this annular shoulder. It preserves
+the source stem's actual faceted profile, all geometry below the shoulder,
+the inner bore, threads, upper flange and overall bounds. Neither part moves.
+
+Red-first evidence and rejected constructions are retained, not overwritten:
+
+- The unmodified collar fails the seat test with 504.870031365 mm³ common
+  on the test runner. Its retention control already passes. This is the same
+  interface as the earlier world-mesh inventory, not a newly chosen seat.
+- An initial annular cutter retaining radius 17.95 leaves a new narrow lip
+  and a 0.009838669 mm³ contact. Its common lies at world Z46.8..47.47,
+  near R17.95. The positive contact was not thresholded away.
+- A nominal R17.941 cutter clears that contact, but its crossing of the
+  source facets leaves a zero-volume shell after binary-STL encoding. Both
+  runners reject material connectivity. Simplifying a reconstructed generated
+  mesh at .000008 mm also failed; it is not part of the accepted candidate.
+- The retained candidate derives its protected stem column from the actual
+  source section at local Z38, rather than substituting a circular outline.
+  It passes material connectivity before and after STL encoding. The first
+  source-profile run exposed an incorrectly narrow test region: source stem
+  vertices are near R17.941, but their flat chord interiors reach R17.937050.
+  The removal-region check now includes those measured chords (R17.936 lower
+  bound); neither clearance assertion nor collision-volume tolerance changed.
+
+The final four tests pass on the faceted and exact runners, 2.34 s each:
+clearance with ±.04 mm axial free play, positive capture at +.1 mm, connected
+material and bounded source removal including fresh/built/STL-roundtrip
+agreement, and a zero-facing negative control preserving the original print
+and reproducing its contact. The collar remains STL geometry on **both**
+runners; these results do not imply an exact native collar contact check.
+
+The updated whole-assembly measuring probe first compares the unfitted bench
+against actual operating meshes: collar residual 0 mm, spider residual
+1.07e-14 mm across vertices and face centres. It then substitutes only the
+candidate measuring mesh, without editing the root or its 213-coordinate bank.
+The spider contact disappears and no new positive rigid-neighbour pair appears.
+Four positive pairs remain: thrust ring 225.523065076 mm³, nut 8.288377530 mm³,
+and the two carrier pins 7.902400961 / 7.902401733 mm³. These are still failures,
+not exclusions. The full 3D survey covers 389 current rigid occurrences;
+flexible wires and moving trajectories remain outside that survey.
+
+The final section `_build_checks/collar-shoulder-source-profile-section.png`
+was inspected. It shows the gap under the faced shoulder while retaining the
+source bore and outer flange. The record and hashes are in
+[shoulder-trial evidence](evidence/collar-shoulder-trial-2026-09-21.json).
+Reproduce with the environment above:
+
+```sh
+/home/asa/devel/machinome-studio/.venv/bin/machinome test --faceted simulation/collar_seat_trial.py:CollarShoulderBench
+/home/asa/devel/machinome-studio/.venv/bin/machinome test simulation/collar_seat_trial.py:CollarShoulderBench
+/home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.collar_seating \
+  --shoulder-trial --rise 0 --section _build_checks/collar-shoulder-source-profile-section.png
+```
+
+Next work remains the collar's independent thrust seat, threaded fit and pin
+clearance/capture, with any operating adoption verified in the real assembly.
+This trial is a source-backed simulation candidate, not a manufacturing
+recommendation or complete collar acceptance. Task 1.3 remains open.

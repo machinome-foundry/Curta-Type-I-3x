@@ -114,6 +114,15 @@ it is neither a physical-build failure claim nor a manufacturing recommendation.
 
 ## Assembly, source-representation and motion corrections — not new prints
 
+The separate [collar shoulder trial](collar-seating-investigation-2026-09-21.md#isolated-shoulder-facing-trial)
+is not adopted. A .72 mm annular facing leaves .05 mm below the unchanged
+spider, preserving the actual source stem profile, bore, threads and flange.
+Four scoped tests pass on both runners (collar contacts remain faceted),
+including clearance/capture, bounded removal, STL validity and the source
+negative control. The actual-root measuring copy clears the spider but still
+contacts the thrust ring, nut and two pins. No complete collar fit, operating
+adoption or manufacturing recommendation follows from this trial.
+
 | ID | Correction or explicit assumption | Record |
 |---|---|---|
 | A01 | Register carriage recentered by (.537721035, −.038177283, 0) mm and clocked .549916905°; result tens shaft X corrected −.079764273 mm. | [F3](measurements.md#f3-register-bank-alignment-and-bevel-seating), [fit.py](../fit.py). |

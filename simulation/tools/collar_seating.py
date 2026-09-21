@@ -34,7 +34,7 @@ SECTION_PATHS = {
 }
 
 
-def section(meshes, output):
+def section(meshes, output, shoulder_trial=False):
     import matplotlib.pyplot as plt
 
     figure, axes = plt.subplots(1, 2, figsize=(14, 8))
@@ -53,7 +53,9 @@ def section(meshes, output):
         axis.set(xlabel='World X (mm)', ylabel='World Z (mm)', aspect='equal')
         axis.grid()
     axes[0].legend()
-    figure.suptitle('Unchanged OperatingCurta initial state; Y = 0 section')
+    title = ('Unadopted shoulder-facing measuring copy' if shoulder_trial
+             else 'Unchanged OperatingCurta initial state')
+    figure.suptitle(title + '; Y = 0 section')
     figure.tight_layout()
     figure.savefig(output, dpi=160)
     plt.close(figure)
@@ -97,23 +99,52 @@ def source_sections(output):
     print(json.dumps({'source_sections': readings}), flush=True)
 
 
-def probe(rises=RISES, section_path=None):
+def probe(rises=RISES, section_path=None, shoulder_trial=False):
     from simulation.running import OperatingCurta
 
     sim = Sim(OperatingCurta(), dt=.1, meshes=True)
     initial_bank = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     meshes = {path: node.mesh for path, node in leaves.items()}
+    fixture_distances = None
+    if shoulder_trial:
+        from scipy.spatial import cKDTree
+        from simulation.collar_seat_trial import (CollarShoulderBench,
+                                                   UnfittedCollarShoulderBench)
+        baseline = UnfittedCollarShoulderBench()
+        baseline.assemble()
+        baseline.build_stls()
+        fixture_distances = {}
+        for name, path in (('collar', COLLAR),
+                            ('spider', SECTION_PATHS['spider mount'])):
+            first, second = getattr(baseline, name).mesh, meshes[path]
+            a = np.concatenate((first.vertices, first.triangles_center))
+            b = np.concatenate((second.vertices, second.triangles_center))
+            distance = max(cKDTree(a).query(b)[0].max(),
+                           cKDTree(b).query(a)[0].max())
+            # A placement check at source-STL length precision, not a contact
+            # epsilon. Refuse to use an incorrectly placed measuring bench.
+            if distance > .00001:
+                raise ValueError(('Fixture differs from operating mesh', name, distance))
+            fixture_distances[name] = float(distance)
+        candidate = CollarShoulderBench()
+        candidate.assemble()
+        candidate.build_stls()
+        meshes[COLLAR] = candidate.collar.mesh
     bounds = {path: mesh.bounds for path, mesh in meshes.items()}
     collar = mesh_solid(meshes[COLLAR])
     solids = {}
     source = Path(leaves[COLLAR].stl_source)
     print(json.dumps({
-        'scope': 'pose-only collar translation against every other rigid occurrence',
+        'scope': ('unadopted shoulder-facing copy against every other rigid occurrence'
+                  if shoulder_trial else
+                  'pose-only collar translation against every other rigid occurrence'),
         'model': 'simulation.running:OperatingCurta',
         'coordinates': len(initial_bank), 'rigid_occurrences': len(leaves),
         'kernel': 'source-STL/published-mesh Manifold', 'not_adopted': True,
         'collar_source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
+        'shoulder_trial': shoulder_trial,
+        'unfitted_fixture_max_distance_mm': fixture_distances,
         'section_parts_world_bounds_mm': {
             name: bounds[path].tolist() for name, path in SECTION_PATHS.items()},
     }), flush=True)
@@ -138,7 +169,7 @@ def probe(rises=RISES, section_path=None):
         print(json.dumps({'rise_mm': rise, 'positive_contacts_mm3': positive}),
               flush=True)
     if section_path is not None:
-        section(meshes, section_path)
+        section(meshes, section_path, shoulder_trial)
     assert dict(sim.state) == initial_bank, 'Measurement changed the run bank'
     print(json.dumps({'complete': True, 'all_rises_measured': len(rises),
                       'run_bank_unchanged': True}), flush=True)
@@ -148,6 +179,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rise', type=float, action='append')
     parser.add_argument('--section', type=Path)
+    parser.add_argument('--shoulder-trial', action='store_true',
+                        help='Measure the unadopted collar shoulder fit at the actual root')
     parser.add_argument('--source-sections', type=Path,
                         help='Compare source representations instead of the assembly')
     args = parser.parse_args()
@@ -155,8 +188,8 @@ if __name__ == '__main__':
         parser.error('--rise must be finite')
     logging.disable(logging.INFO)
     if args.source_sections is not None:
-        if args.rise is not None or args.section is not None:
+        if args.rise is not None or args.section is not None or args.shoulder_trial:
             parser.error('--source-sections cannot be combined with assembly options')
         source_sections(args.source_sections)
     else:
-        probe(RISES if args.rise is None else args.rise, args.section)
+        probe(RISES if args.rise is None else args.rise, args.section, args.shoulder_trial)

@@ -442,3 +442,12 @@ The [reproducible survey](collar-seating-investigation-2026-09-21.md) records
 the rejected placement change and the source-fidelity/retention checks owed
 by any subsequent local fit. No geometry, operating law, dependency or task
 checkbox changed; this is not a replacement whole-machine inventory.
+
+The follow-on isolated shoulder-facing trial now passes four scoped checks
+on both runners after rejecting a colliding cutter lip and an invalid encoded
+mesh. It preserves the source stem section while facing only .72 mm from
+the annular underside. A fixture-equivalence check and fresh all-rigid-neighbour
+survey confirm that it removes the spider contact without introducing a new
+positive pair; thrust-ring, nut and pin contacts remain. The operating root
+still uses the unchanged source collar. The linked investigation records the
+red/green trail and the remaining collar acceptance work; no task closes.
