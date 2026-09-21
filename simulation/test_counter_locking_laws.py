@@ -10,17 +10,19 @@ from simulation.cycle import tooth_passage, TURNS_INPUT_END
 
 class CounterLockingLawTest(unittest.TestCase):
     def test_measured_between_knot_collisions_are_refused(self):
-        evidence = json.loads((Path(__file__).parent / 'docs/evidence/'
-            'counter-ones-coarse-profile-rejection-2026-09-21.json').read_text())
-        for kernel, records in evidence['kernels'].items():
-            for row in records:
-                if not row.get('failure'):
-                    continue
-                self.assertGreater(row['common_mm3'], 0)
-                shaft, crank = row['shaft'], row['crank']
-                with self.subTest(kernel=kernel, shaft=shaft, crank=crank):
-                    self.assertGreater(counter_contact_gap(crank, shaft), 0)
-                    self.assertGreater(counter_closing_limit(-crank, -crank, shaft), -crank)
+        files = sorted((Path(__file__).parent / 'docs/evidence').glob(
+            'counter-ones-*-profile-rejection-2026-09-21.json'))
+        self.assertGreaterEqual(len(files), 2)
+        for path in files:
+            for kernel, records in json.loads(path.read_text())['kernels'].items():
+                for row in records:
+                    if not row.get('failure'):
+                        continue
+                    self.assertGreater(row['common_mm3'], 0)
+                    shaft, crank = row['shaft'], row['crank']
+                    with self.subTest(evidence=path.name, kernel=kernel, shaft=shaft, crank=crank):
+                        self.assertGreater(counter_contact_gap(crank, shaft), 0)
+                        self.assertGreater(counter_closing_limit(-crank, -crank, shaft), -crank)
 
     def test_measured_withdrawal_is_free_then_blocked_on_every_revolution(self):
         for revolution in (-2, -1, 0, 1, 2):

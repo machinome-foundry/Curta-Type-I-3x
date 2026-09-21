@@ -24,6 +24,8 @@ class CounterProfileSamplingTest(unittest.TestCase):
         for dense in (False, True):
             self.assertIn(143., sample_shafts(dense=dense))
             self.assertIn(171.50060064697266, sample_angles(143., dense=dense))
+            self.assertIn(141., sample_shafts(dense=dense))
+            self.assertIn(171.2062967529297, sample_angles(141., dense=dense))
 
 
 if __name__ == '__main__':

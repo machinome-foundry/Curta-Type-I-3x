@@ -171,7 +171,8 @@ completion record is present. This finite grid can miss narrow islands;
 refined/between-knot checks and retained operating action-order evidence are
 still required. No counter law is adopted or proposed as settled by this
 collection. A 2° shaft-grid refinement, excluding the already measured 6°
-knots, is active in `counter-ones-upper-envelopes-refine-2deg.log`.
+knots, subsequently completed in `counter-ones-upper-envelopes-refine-2deg.log`;
+see the refinement checks below.
 
 ## Indexed free-band measurement
 
@@ -269,5 +270,35 @@ their knots. Its `--dense` mode additionally checks a 1° shaft / 5° crank
 grid, plus profile knots, midpoints and support edges. Missing sampling-helper
 tests failed first; all three sampling and four compiler tests pass in
 0.007 s (`counter-profile-sampling-{red,green}.log`). This tests the measuring
-instrument, not clearance. The 2° profile refinement remains in progress;
-neither the contact stand-off nor any positive-volume rule was relaxed.
+instrument, not clearance. The 2° profile refinement has completed all 120
+additional shaft rows in both kernels. Recompiling with those records makes
+all eleven compiler, sampling and law tests pass (**30.969 s**), including
+the twenty pinned coarse failures; log `counter-profile-refined-regression.log`.
+Neither the contact stand-off nor any positive-volume rule changed. Dense
+complete-print checks are now running against profile SHA-256
+`59487d13eb37fd4e86947eb7661b86b5816a3325f457c52efd04e61c9b6051de`
+in `counter-ones-profile-refined-dense-{native,faceted}.log`.
+Numeric success is not geometry acceptance or operating adoption.
+
+The dense checks reject that 2° interpolation near
+a contact-curve minimum: shaft 141°, crank 171.2062967529297° has positive
+common **0.000028125040 mm³ native / 0.000029810830 mm³ faceted**. The faceted
+sweep completes **11,138 admitted poses with five failures**. Once rejected,
+the native sweep was intentionally interrupted (exit 130): its last completed
+shaft is 187°, with 1,510 poses and one confirmed failure. It is neither a
+pass nor a full native sweep. Coordinates and profile hashes are retained in
+[refined rejection evidence](evidence/counter-ones-refined-profile-rejection-2026-09-21.json).
+The expanded numeric regression reproduces all six retained kernel/pose
+failures in 0.037 s (`counter-profile-cusp-red.log`). A focused
+independent measurement at offsets 6.5°, 7° and 7.5° from each of the five
+shaft indices completes all fifteen rows in both kernels in
+`counter-ones-envelope-cusp-refinement.log`. It measures each actual source
+flat rather than copying one flat's curve. The rebuilt curve passes all
+eleven compiler/sampling/law tests in **36.244 s**, including both sets of
+discovered collision poses (`counter-profile-cusp-regression.log`).
+Its SHA-256 is
+`eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367`.
+Fresh dense checks are active in
+`counter-ones-profile-cusp-dense-{native,faceted}.log`; only their eventual
+terminal results can establish these finite geometry checks. No operating
+counter fit/bound or changed stand-off follows from this unfinished acceptance.

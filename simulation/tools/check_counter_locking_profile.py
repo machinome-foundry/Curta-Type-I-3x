@@ -20,10 +20,11 @@ from simulation.tools.counter_lockout_probe import station_reader
 
 
 def rejected_poses():
-    evidence = Path(__file__).resolve().parents[1] / 'docs/evidence/' \
-        'counter-ones-coarse-profile-rejection-2026-09-21.json'
+    evidence = (Path(__file__).resolve().parents[1] / 'docs/evidence').glob(
+        'counter-ones-*-profile-rejection-2026-09-21.json')
     return {(row['shaft'], row['crank'])
-            for records in json.loads(evidence.read_text())['kernels'].values()
+            for path in evidence
+            for records in json.loads(path.read_text())['kernels'].values()
             for row in records if row.get('failure')}
 
 

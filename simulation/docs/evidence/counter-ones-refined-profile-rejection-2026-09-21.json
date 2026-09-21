@@ -1,0 +1,73 @@
+{
+  "status": "Rejected 2-degree provisional profile; no counter operating adoption",
+  "native_status": "Intentionally interrupted (exit 130) after contact confirmed; last completed shaft 187, 1510 admitted poses, one failure. No full native sweep claim.",
+  "faceted_status": "Completed (exit 1): 11138 admitted poses, five failures.",
+  "station": 1,
+  "carry": 0,
+  "trial": true,
+  "date": "2026-09-21",
+  "kernels": {
+    "native": [
+      {
+        "kernel": "native",
+        "dense": true,
+        "profile_sha256": "59487d13eb37fd4e86947eb7661b86b5816a3325f457c52efd04e61c9b6051de"
+      },
+      {
+        "failure": true,
+        "shaft": 141,
+        "crank": 171.2062967529297,
+        "common_mm3": 0.000028125039598771737,
+        "kernel": "native"
+      }
+    ],
+    "faceted": [
+      {
+        "kernel": "faceted",
+        "dense": true,
+        "profile_sha256": "59487d13eb37fd4e86947eb7661b86b5816a3325f457c52efd04e61c9b6051de"
+      },
+      {
+        "failure": true,
+        "shaft": 141,
+        "crank": 171.2062967529297,
+        "common_mm3": 0.000029810830309427334,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 213,
+        "crank": 171.2062967529297,
+        "common_mm3": 0.000029830194387172785,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 285,
+        "crank": 171.20460874938965,
+        "common_mm3": 0.00003095572291016011,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 357,
+        "crank": 171.12046606445313,
+        "common_mm3": 0.0001459112877111599,
+        "kernel": "faceted"
+      },
+      {
+        "failure": true,
+        "shaft": 429,
+        "crank": 171.20550520324707,
+        "common_mm3": 0.00003068339881322824,
+        "kernel": "faceted"
+      },
+      {
+        "complete": true,
+        "checked": 11138,
+        "failures": 5,
+        "kernel": "faceted"
+      }
+    ]
+  }
+}
