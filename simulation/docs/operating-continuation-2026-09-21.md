@@ -18,6 +18,16 @@ The handoff's interrupted trial arithmetic gate is rerunning as
 the test module's `OperatingCurta`. The original interrupted log is preserved.
 No arithmetic pass is claimed until the new process completes.
 
+A separate bounded diagnostic queues an empty 360° turn over two seconds
+on `Sim(HigherOperatingTrial(), dt=.1)` and runs only its first .1 second.
+Initialization takes 11.216 s and that first step takes approximately
+53.330 s: the physical crank reaches −18° (driver +18°), with the longer
+request still active. Log: `_build_checks/higher-timed-first-step-diagnostic.log`.
+This establishes substantial per-step execution cost, not an arithmetic
+pass or proof that every later step terminates. The original three-case
+acceptance process is left uninterrupted. An optional debugger attachment
+was unavailable in the host and did not alter the process.
+
 ## Result-bank measuring fixture correction
 
 The first bank-wide .16 mm trial revealed an error in the diagnostic factory,
