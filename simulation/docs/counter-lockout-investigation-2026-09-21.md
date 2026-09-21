@@ -160,9 +160,60 @@ single-pose agreement does not establish a shared profile. Logs:
 `counter-ones-partial-envelope.log` and
 `counter-tens-raised-partial-envelope.log`.
 
-A coarse ones profile collection is running over shaft 134..494° in 6°
+A coarse ones profile collection has completed over shaft 134..494° in 6°
 steps, with a 5° crank grid and bracket refinement in both kernels, in
-`counter-ones-upper-envelopes-coarse.log`. The finite grid can miss narrow
-islands; support-band measurement, refined/between-knot checks and retained
-operating action-order evidence are still required. No counter law is adopted
-or proposed as settled by this collection.
+`counter-ones-upper-envelopes-coarse.log`. Each kernel has 61 shaft records:
+55 have two boundaries and six indexed records have none. The terminal
+completion record is present. This finite grid can miss narrow islands;
+refined/between-knot checks and retained operating action-order evidence are
+still required. No counter law is adopted or proposed as settled by this
+collection. A 2° shaft-grid refinement, excluding the already measured 6°
+knots, is active in `counter-ones-upper-envelopes-refine-2deg.log`.
+
+## Indexed free-band measurement
+
+The measuring tool now accepts `--bands` instead of `--shaft`, with an
+explicit parked `--crank` (default 0). It brackets both complete-print
+locking flanks around each of the station's five actual shaft indices in
+both kernels. A blocked centre or a missing outer contact fails the probe;
+every reported bracket retains its measured zero/positive endpoint volumes.
+The 18 bisections give an angular bracket no wider than 5/2^18 degrees,
+not a tolerated intersection volume. The instrument's missing-function
+test failed first; all three bracketing/negative-control tests then pass
+(0.003 s), including contact as small as 1e-20 mm³.
+
+The complete ones run has ten verified records. The intersection of the two
+kernels' measured free intervals at crank 0 is:
+
+| Shaft index | Last free on lower side | Last free on upper side |
+| --- | ---: | ---: |
+| 134° | 131.304992676° | 134.311031342° |
+| 206° | 203.303943634° | 206.311031342° |
+| 278° | 275.303962708° | 278.307903290° |
+| 350° | 347.310714722° | 350.063819885° |
+| 422° | 419.518196106° | 422.308094025° |
+
+These bands are asymmetric and differ among source flats. They are local
+parked-crank measurements, not a continuous all-crank clearance certificate
+or a reason to use identical repeated sectors. Logs:
+`counter-indexed-band-tool-{red,green}.log` and
+`counter-ones-indexed-bands.log`. The full bracket/volume records are also
+committed as [numeric evidence](evidence/counter-ones-indexed-bands-2026-09-21.json).
+The corresponding tens measurement at
+carry 0, .5 and 1 is active in `counter-tens-indexed-bands.log`.
+
+The first actual-root diagnostic reaches crank 170° and counter shaft
+167.6°, but fails its measurement setup: its drum path omitted the enclosing
+`main_axle_step_drum_1` node. This is not a geometry result. The failed log is
+preserved as `counter-ones-wrong-order-root-probe.log`.
+
+The durable `tools/counter_wrong_order.py` corrects that path and additionally
+checks **all six** complete lower counter prints against both drum halves.
+Its actual operating requests are crank lift to 9 mm, reverser to −4.9425 mm,
+partial crank movement to 170°, separately sampled lever withdrawal toward
+the lower housing stop, and a further crank request. The corrected run is
+active in `counter-ones-wrong-order-root-corrected.log`. Its preparation,
+complete upper/bell contacts and lower-input/both-drum contacts must be read
+before declaring this a clear withdrawal path or a missing counter stop.
+Neither this scope nor a successful diagnostic would certify every unrelated
+interface in the operating root.

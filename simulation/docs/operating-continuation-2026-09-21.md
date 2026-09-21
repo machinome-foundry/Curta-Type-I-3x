@@ -18,10 +18,9 @@ The handoff's interrupted trial arithmetic gate is rerunning as
 the test module's `OperatingCurta`. The original interrupted log is preserved.
 The complete arithmetic gate is not passed until all three cases complete.
 
-The manual-calibration case has now completed successfully. The process has
-advanced to subtraction/borrow and addition undo; the later independent-input
-and successive-addition case is still queued. One passed case is not the
-three-case adoption gate.
+The manual-calibration and subtraction/borrow with addition-undo cases have
+now completed successfully. The independent-input and successive-addition
+case is running. Two passed cases are not the three-case adoption gate.
 
 A separate bounded diagnostic queues an empty 360° turn over two seconds
 on `Sim(HigherOperatingTrial(), dt=.1)` and runs only its first .1 second.
@@ -40,6 +39,19 @@ zero and the longer command active. Log:
 observations under concurrent load, not a controlled benchmark or a diagnosed
 framework defect. No framework change follows from them without its separate
 authorization and cycle.
+
+The pilot subsequently requested a separate framework performance
+investigation. Read-only probes on framework `e6a42c80e6dcc686c180b8a6d94037301c4213a5`
+(runtime tree still unchanged) reproduce a 57.752-second lightly instrumented
+tens first step. About 97% is spent in the two moving crank restraint checks;
+the lower constraint's dependency program includes a 31-member carry block
+and is replayed at 65 sample points. The profiled existing/tens runs and the
+lightly instrumented tens run produce exactly equal 213-coordinate banks.
+Raw profiles and the external investigation report are retained under
+`/tmp/curta-runner-profile-kkvxOQoU/`. This is attribution, not a speed fix or
+an operating acceptance result. The dirty framework-primary gate prevents
+opening a framework change without a separate decision; no executor,
+sample count, contact law or project declaration was changed for the probe.
 
 ## Result-bank measuring fixture correction
 
@@ -110,8 +122,8 @@ contact threshold. Two other sampled residual commons also become empty.
 The trial and bank measuring fixture use that refinement; it is not yet
 production adoption. Six original fit contracts pass faceted (9.79 s) and
 native (75.87 s). The expanded support/material suite passes 5/5 (65.928 s).
-The complete hundreds-station mesh profile passes as recorded below; its
-native counterpart remains pending.
+The complete hundreds-station profile passes on both kernels as recorded
+below.
 
 Additional logs:
 
@@ -178,8 +190,9 @@ material, planar-common and original-tens parity checks pass **5/5 in
 No part, placement or law changed. The completed hundreds measurements use
 the already corrected rigid children and are unaffected by this export fix.
 
-A sequential batch is now checking the refined tens station (faceted then
-native), followed by faceted admission at stations 4–11. Logs use
+A sequential batch has completed the refined tens station's faceted check:
+**23,556/23,556** admitted poses pass. Its native check is running, followed
+by faceted admission at stations 4–11. Logs use
 `result-station-N-profile-certified-KERNEL.log`; only completed terminal
 records count as passes. This is not bank-wide adoption.
 

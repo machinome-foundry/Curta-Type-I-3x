@@ -1,0 +1,229 @@
+{
+  "status": "Measured parked-crank bands; not an adopted constraint or continuous-clearance certificate",
+  "date": "2026-09-21",
+  "model_source_commit": "09f11a6bf15afbf4b9f7b2919fdd9fe23766c950",
+  "framework_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "probe": "python -m simulation.tools.counter_locking_envelope --station 1 --bands --trial",
+  "rows": [
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 134,
+      "bounds": [
+        {
+          "last_free": 131.30499267578125,
+          "first_contact": 131.30497360229492,
+          "free_mm3": 0,
+          "contact_mm3": 3.60308633087554e-12
+        },
+        {
+          "last_free": 134.31103134155273,
+          "first_contact": 134.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 1.3442147853205398e-12
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 134,
+      "bounds": [
+        {
+          "last_free": 131.23819732666016,
+          "first_contact": 131.23817825317383,
+          "free_mm3": 0,
+          "contact_mm3": 3.710307251664514e-14
+        },
+        {
+          "last_free": 134.40531158447266,
+          "first_contact": 134.40533065795898,
+          "free_mm3": 0,
+          "contact_mm3": 9.768590926252638e-15
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 206,
+      "bounds": [
+        {
+          "last_free": 203.3039436340332,
+          "first_contact": 203.30392456054688,
+          "free_mm3": 0,
+          "contact_mm3": 1.3619335891499267e-12
+        },
+        {
+          "last_free": 206.31103134155273,
+          "first_contact": 206.31105041503906,
+          "free_mm3": 0,
+          "contact_mm3": 2.447560606015084e-12
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 206,
+      "bounds": [
+        {
+          "last_free": 203.23709106445312,
+          "first_contact": 203.2370719909668,
+          "free_mm3": 0,
+          "contact_mm3": 4.365605631202419e-14
+        },
+        {
+          "last_free": 206.40525436401367,
+          "first_contact": 206.4052734375,
+          "free_mm3": 0,
+          "contact_mm3": 8.403481665949906e-16
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 278,
+      "bounds": [
+        {
+          "last_free": 275.30396270751953,
+          "first_contact": 275.3039436340332,
+          "free_mm3": 0,
+          "contact_mm3": 8.428990992976852e-13
+        },
+        {
+          "last_free": 278.3079032897949,
+          "first_contact": 278.30792236328125,
+          "free_mm3": 0,
+          "contact_mm3": 1.7100075717975187e-12
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 278,
+      "bounds": [
+        {
+          "last_free": 275.2370910644531,
+          "first_contact": 275.2370719909668,
+          "free_mm3": 0,
+          "contact_mm3": 6.303655993868586e-14
+        },
+        {
+          "last_free": 278.4021644592285,
+          "first_contact": 278.40218353271484,
+          "free_mm3": 0,
+          "contact_mm3": 9.869191117473443e-16
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 350,
+      "bounds": [
+        {
+          "last_free": 347.3107147216797,
+          "first_contact": 347.31069564819336,
+          "free_mm3": 0,
+          "contact_mm3": 2.8134953876005184e-12
+        },
+        {
+          "last_free": 350.0638198852539,
+          "first_contact": 350.06383895874023,
+          "free_mm3": 0,
+          "contact_mm3": 1.5818467117288977e-12
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 350,
+      "bounds": [
+        {
+          "last_free": 347.2439765930176,
+          "first_contact": 347.24395751953125,
+          "free_mm3": 0,
+          "contact_mm3": 7.729004915581614e-14
+        },
+        {
+          "last_free": 350.1592826843262,
+          "first_contact": 350.1593017578125,
+          "free_mm3": 0,
+          "contact_mm3": 5.971449415875841e-16
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "native",
+      "index": 422,
+      "bounds": [
+        {
+          "last_free": 419.51819610595703,
+          "first_contact": 419.5181770324707,
+          "free_mm3": 0,
+          "contact_mm3": 2.9209383746558744e-12
+        },
+        {
+          "last_free": 422.3080940246582,
+          "first_contact": 422.30811309814453,
+          "free_mm3": 0,
+          "contact_mm3": 9.02639020913143e-13
+        }
+      ]
+    },
+    {
+      "station": 1,
+      "carry": 0,
+      "crank": 0,
+      "trial": true,
+      "kernel": "faceted",
+      "index": 422,
+      "bounds": [
+        {
+          "last_free": 419.457218170166,
+          "first_contact": 419.4571990966797,
+          "free_mm3": 0,
+          "contact_mm3": 4.504111582349923e-14
+        },
+        {
+          "last_free": 422.40239334106445,
+          "first_contact": 422.4024124145508,
+          "free_mm3": 0,
+          "contact_mm3": 1.526409743641867e-14
+        }
+      ]
+    }
+  ]
+}
