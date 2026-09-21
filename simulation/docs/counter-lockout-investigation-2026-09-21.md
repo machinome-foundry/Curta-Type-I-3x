@@ -367,9 +367,18 @@ viewer bundle SHA-256 is
 
 The completed original Python stop test did not record full banks or idle
 steps. Its extended invocation now adds those assertions and optional report
-capture (`CURTA_COUNTER_ACCEPTANCE_REPORT`); it is running separately in
-`counter-operating-trial-idle-banks.log`. No cross-executor full-bank parity
-is claimed before that report exists and compares exactly. The three-case
+capture (`CURTA_COUNTER_ACCEPTANCE_REPORT`). That separate invocation passes
+**1/1 in 1500.407 s** (`counter-operating-trial-idle-banks.log`). All four
+stopped/idle banks in the [complete Python report](evidence/counter-ones-python-acceptance-2026-09-21.json)
+match the saved browser banks **exactly**, all **213 coordinates** at both
+targets. The existing strict browser-report validator performs this comparison
+on the saved values; the browser report's original `python_report: null`
+is retained because no Python report existed during that earlier invocation.
+The Python report SHA-256 is
+`113d241d40144a4384de16b7ecd544553b9b3023e7ebee94ba752551b897874b`;
+its log SHA-256 is
+`0e3631bb95c3f7b4141184f0e2d76d175f469e5fc501f31c54a9f814d77d549f`.
+The three-case
 page-53/subtraction/successive-addition-and-clearing arithmetic suite is also
 running against the isolated trial through a temporary test-class patch,
 with production tests unchanged (`counter-operating-trial-arithmetic.log`).
@@ -391,3 +400,60 @@ second short free interval near crank 203.49°..205.79°. This rules out
 feeding all heights to the fixed-height ones compiler unchanged. These are
 sampled heights and angles, not a continuous axial interpolation law or
 an operating higher-counter restraint.
+
+The native component reader now accepts the counter's source stack path,
+with a test proving its ingredients cover exactly the complete bell and upper
+prints at carry 0, .5 and 1: no missing or extra native material. Its existing
+result-tens path is unchanged in both difference directions. Both tests fail
+first on the unsupported counter path, then pass **2/2 in 61.885 s**
+(`counter-components-{red,first}.log`). The new
+`tools/counter_component_contacts.py` always reports complete native/faceted
+commons alongside ingredient labels, never replaces the complete print by
+selected collision surfaces. A five-height, eight-crank-pose measurement at
+tens shaft 156° completes all **40 poses** in
+`counter-tens-contact-components.log`. The upper locking disc is the only
+contact at carry 0/.25. At carry .5 the lower disc also contacts the pentagon
+near the opening, while the upper disc still causes the earlier closing.
+At carry .75/1 the upper disc is clear; the lower disc controls the opening
+and the carry-ring teeth create the late contact intervals. At full carry,
+crank 198° and 202° contact the transmission gear, 204° clears in both kernels,
+and 206° contacts that gear again. A single closing boundary would lose this
+measured free interval. The source prints remain unchanged.
+
+The [complete contact/support evidence](evidence/counter-tens-contact-support-2026-09-21.json)
+retains those rows and all six independent axial brackets. The new
+`tools/counter_axial_support.py` measures complete prints at independently
+posed carry heights, screens a 17-height grid for a unique transition and
+bisects it without a volume tolerance. Its tests fail on the missing module
+first, then pass **3/3 in .003 s**, including tiny positive commons,
+non-finite measurements, absent/multiple transitions and rejection of the
+fixed ones stack (`counter-axial-support-{red,green}.log`).
+
+Three isolated tens poses complete in both kernels:
+
+| Transition | Shaft / crank | Native raw-travel bracket, mm | Faceted raw-travel bracket, mm |
+| --- | --- | --- | --- |
+| Upper disc releases | 156° / 204° | .899999463558 .. .899999713898 | .899998962879 .. .899999213219 |
+| Lower disc enters | 156° / 94° | −.599999570847 .. −.599999320507 | −.600000071526 .. −.599999821186 |
+| Carry teeth enter | 114° / 205° | .300000500679 .. .300000751019 | .300000000000 .. .300000250340 |
+
+Each bracket retains the zero and positive endpoint common; the kernel
+differences are not suppressed or replaced by a contact-volume epsilon.
+Logs are `counter-tens-{upper,lower,tooth}-axial.log`. These finite readings
+identify separate axial supports, not a continuous admission proof or a
+complete higher-counter restraint. Lower-disc and carry-tooth angular
+profiles, intermediate-height admission and actual operating acceptance
+remain to be established.
+
+The combined component/axial/indexed-band/browser-report/result-frame
+regression passes **14/14 in 41.333 s** (`counter-support-regression.log`).
+
+A separate read-only comparison of the coarse carry-zero envelopes supplies
+a possible upper-disc reuse lead, not a new law. Matching tens shaft +20° to
+ones shaft and subtracting 20° from the tens crank brackets gives identical
+transition topology across all 122 kernel/shaft rows. All 110 native brackets
+overlap; 108/110 faceted brackets overlap. The faceted brackets at tens shafts
+120° and 264° are separated by **.000019073486328125°**, retained rather than
+rounded away. The [normalization evidence](evidence/counter-upper-normalization-2026-09-21.json)
+pins both source logs and the comparison. This neither certifies interpolation
+between those coarse samples nor supplies the lower-disc/carry-tooth fields.

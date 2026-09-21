@@ -38,10 +38,18 @@
     "log": "_build_checks/counter-operating-trial-stops.log",
     "log_sha256": "c2e2500277dde616d2b347d9b91c84ba618cd836c6d7a61ac22c4c259c6d7563"
   },
+  "extended_idle_and_browser_parity": {
+    "python_test_seconds": 1500.407,
+    "python_report": "counter-ones-python-acceptance-2026-09-21.json",
+    "browser_report": "counter-ones-browser-acceptance-2026-09-21.json",
+    "exactly_equal_banks": 4,
+    "coordinates_per_bank": 213,
+    "python_log": "_build_checks/counter-operating-trial-idle-banks.log",
+    "python_log_sha256": "0e3631bb95c3f7b4141184f0e2d76d175f469e5fc501f31c54a9f814d77d549f"
+  },
   "limitations": [
     "Finite geometry sampling, not a continuous proof",
     "No ordinary arithmetic acceptance for this counter trial yet",
-    "No Python/browser full-bank comparison yet",
     "No higher-counter restraint acceptance"
   ]
 }

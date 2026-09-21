@@ -1,0 +1,24 @@
+{
+  "model": "simulation.running:OperatingCurta",
+  "project_base": "234f880",
+  "framework": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "actions": [
+    {"input": "digit_8", "to": 3},
+    {"input": "crank_rotation", "to": 260},
+    {"input": "digit_8", "to": 0},
+    {"input": "crank_rotation", "to": 290}
+  ],
+  "prepared_shaft_degrees": 49.6,
+  "prepared_complete_upper_bell_clearance_passed": ["native", "faceted"],
+  "final_request": {
+    "expected_status": "blocked",
+    "actual_status": "completed",
+    "actual_crank_degrees": 290.0,
+    "common_mm3": {"native": 0.3086862316418869, "faceted": 0.3235354171748899}
+  },
+  "result": "intentional production missing-stop regression failed",
+  "seconds": 317.047,
+  "log": "_build_checks/result-bank-eighth-operating-red.log",
+  "log_sha256": "d0fdc397c7001c2e53440e0c7d268cb200c1a0bdf611acceb97be327eedf9ea7",
+  "scope": "complete eighth result upper/bell interface, not whole-machine clearance"
+}

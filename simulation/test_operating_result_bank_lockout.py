@@ -1,6 +1,8 @@
 """Higher result inputs must not leave an unrestrained partial shaft behind."""
 
 import json
+import os
+from pathlib import Path
 import unittest
 
 from machinome.simulation import Sim
@@ -17,6 +19,16 @@ BELL = 'Curta.carry_mechanism.tens_bell.tens_bell_1'
 
 class OperatingResultBankLockoutTest(unittest.TestCase):
     model = OperatingCurta
+
+    @classmethod
+    def setUpClass(cls):
+        cls.acceptance = []
+
+    @classmethod
+    def tearDownClass(cls):
+        output = os.environ.get('CURTA_RESULT_ACCEPTANCE_REPORT')
+        if output:
+            Path(output).write_text(json.dumps(cls.acceptance, indent=2)+'\n')
 
     def check_withdrawal(self, station):
         shift = 20*(station-2)
@@ -63,11 +75,17 @@ class OperatingResultBankLockoutTest(unittest.TestCase):
                 self.assertAlmostEqual(angle, first_angle, places=7)
             first_angle = angle
             stopped = sim.snapshot()
+            stopped_state = dict(sim.state)
             sim.restore(prepared)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
             self.assertEqual(sim.snapshot(), stopped)
             self.assertEqual(sim.move('crank_rotation', by=-.05).status, 'completed')
+            relieved_state = dict(sim.state)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
+            self.assertAlmostEqual(sim.state['crank_rotation'], angle, places=7)
+            self.acceptance.append({'station': station, 'target': target,
+                                    'stopped': stopped_state, 'relieved': relieved_state,
+                                    'replay': True})
 
     def test_hundreds_withdrawal_stops_short_and_long_requests(self):
         self.check_withdrawal(3)

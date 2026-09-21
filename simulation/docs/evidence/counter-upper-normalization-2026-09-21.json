@@ -1,0 +1,25 @@
+{
+  "status": "coarse measured correspondence, not profile adoption",
+  "selection": "trial carry=0; both kernels; 61 shaft rows per station and kernel",
+  "tens_to_ones": {"shaft_offset_degrees": 20, "crank_offset_degrees": -20},
+  "ones_log": "_build_checks/counter-ones-upper-envelopes-coarse.log",
+  "ones_log_sha256": "8f2e5b0c17b8ce6abef76c7eeddca1fa26dbc81eff130cd0788639b164507549",
+  "tens_log": "_build_checks/counter-tens-upper-envelopes-coarse.log",
+  "tens_log_sha256": "b4fb26665d077275434c5c042a18095fe5bc1cdd7119ef918189144f879af6a8",
+  "matched_row_count": 122,
+  "topology_mismatches": 0,
+  "boundary_brackets_compared": 220,
+  "native_brackets_overlap": {"passed": 110, "total": 110},
+  "faceted_brackets_overlap": {"passed": 108, "total": 110},
+  "nonoverlapping_brackets": [
+    {"kernel": "faceted", "tens_shaft": 120, "separation_degrees": 0.000019073486328125},
+    {"kernel": "faceted", "tens_shaft": 264, "separation_degrees": 0.000019073486328125}
+  ],
+  "comparison": "Match kernel and shaft+20; require the same enters_contact sequence; test overlap after subtracting 20 from each tens crank bracket. No tolerance is applied.",
+  "limitations": [
+    "Coarse bracket correspondence is not continuous surface congruence",
+    "Two faceted differences remain explicit",
+    "Does not cover lower-disc or carry-tooth contact",
+    "No higher-counter bound or geometry is adopted"
+  ]
+}

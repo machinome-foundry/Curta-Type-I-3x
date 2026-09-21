@@ -16,9 +16,12 @@ native / 0.3235355698386036 mm³ faceted common**. The test fails the intended
 `_build_checks/result-bank-hundreds-operating-red.log`.
 
 This proves a missing restraint on the named complete-print interface; it
-is not a whole-machine interference inventory. The eighth-input test's
-first production invocation is running in `result-bank-eighth-operating-red.log`;
-it has no terminal result yet. The last three result shafts have
+is not a whole-machine interference inventory. The eighth-input test also
+fails as intended in **317.047 s** (`result-bank-eighth-operating-red.log`):
+set digit 8 to 3, turn to 260°, withdraw it, then request 290°. The prepared
+shaft is 49.6° and the prepared upper/bell pair clears both kernels, but
+the request completes through **0.3086862316418869 mm³ native /
+0.3235354171748899 mm³ faceted common**. The last three result shafts have
 no direct selector, so those cases cannot simply invent inputs 9..11.
 They still need operating carry/action-order coverage.
 
@@ -82,14 +85,28 @@ passes **2/2 in 97.778 s** (`result-bank-operating-fixture-axial-rest.log`). It 
 complete upper against its measured source-specific bench in both native
 difference directions and requires the entire initial bank to equal the
 production bank. Export/channel identity checks pass alongside it. The first
-trial hundreds short/long stop test is now running separately in
-`result-bank-trial-hundreds-operating.log`. No passing operating stop,
-arithmetic or browser result is claimed yet for this bank trial.
+trial hundreds short/long stop test now passes **1/1 in 1112.808 s**
+(`result-bank-trial-hundreds-operating.log`). The 190° request stops at
+**165.22323837279146°**, and the 880° request stops at
+**165.22323837227304°**. Both have zero native/faceted common, positive
+.2° overtravel common, a held shaft, exact snapshot replay and admitted
+.05° relief followed by another stop. Its log SHA-256 is
+`b221e689dcdf37fafc6951f92799aeae5c14fc663dda80b86c37ca420d5634b0`.
+
+The trial's eighth-input case is now running in
+`result-bank-trial-eighth-operating.log`. The test optionally records full
+stopped/relieved banks through `CURTA_RESULT_ACCEPTANCE_REPORT`; only that
+new eighth invocation uses this capture, not the completed hundreds run.
+An isolated export is also running in `result-bank-operating-export.log`.
+No arithmetic or browser result is claimed yet for this bank trial.
 
 Independent dense profile checks continue per station and kernel. Faceted
-stations 2..8 have completed **23,556 admitted poses each**, zero positive
-commons; native stations 2 and 3 have the same completed result. Native
-4..11 and faceted 9..11 remain in their existing queues. No process is
+stations 2..10 have completed **23,556 admitted poses each**, zero positive
+commons; native stations 2..5 have the same completed result. After the
+interruption, process inspection found no native workers for 6..11 or faceted
+worker for 11, and no logs for those unstarted checks. New native queues now
+run 6/8/10 and 7/9/11, and the last faceted station 11 runs separately.
+The live arithmetic and operating tests were left alone. No process is
 restarted merely because it is quiet. These are finite samples, not a
 continuous contact certificate. Default-root adoption remains gated on the
 remaining geometry and actual operating acceptance, not the numeric law alone.

@@ -1,0 +1,1429 @@
+{
+  "status": "independent counter-tens diagnostic; no higher-counter operating restraint adopted",
+  "component_log": "_build_checks/counter-tens-contact-components.log",
+  "component_log_sha256": "da626d9844e71c3c78c49b4dace3415e78a7615c940730df786bd4b2c0afcad1",
+  "component_rows": [
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 93,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.00546962470160313,
+        "faceted": 0.005825379694424539
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.005469624701603103,
+          "centre": [
+            -10.952922299754182,
+            32.49655574953171,
+            -7.049999999999942
+          ],
+          "z_range": [
+            -7.2,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 96,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 196,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 198,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.17555565164588752,
+        "faceted": 0.17654850067103703
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.17555565164588754,
+          "centre": [
+            -11.36707400221248,
+            32.90673541067116,
+            -7.049999999999998
+          ],
+          "z_range": [
+            -7.2,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 202,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.3015017685310092,
+        "faceted": 0.2990850893230518
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.3015017685310092,
+          "centre": [
+            -11.3938379542419,
+            33.08911469768171,
+            -7.049999999999999
+          ],
+          "z_range": [
+            -7.2,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 204,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.30150176853100813,
+        "faceted": 0.29904003340118024
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.3015017685310085,
+          "centre": [
+            -11.3938379542419,
+            33.089114697681715,
+            -7.05
+          ],
+          "z_range": [
+            -7.2,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0,
+      "shaft": 156,
+      "crank": 206,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.30150176853100513,
+        "faceted": 0.2991976022082943
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.30150176853100513,
+          "centre": [
+            -11.393837954241897,
+            33.089114697681715,
+            -7.05
+          ],
+          "z_range": [
+            -7.2,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 93,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.02461331115721409,
+        "faceted": 0.026214231772911902
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.024613311157213977,
+          "centre": [
+            -10.95292229975418,
+            32.4965557495317,
+            -7.574999999999735
+          ],
+          "z_range": [
+            -8.25,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 96,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 196,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 198,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.790000432406494,
+        "faceted": 0.7944689545610482
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.7900004324064942,
+          "centre": [
+            -11.36707400221248,
+            32.90673541067117,
+            -7.5749999999999975
+          ],
+          "z_range": [
+            -8.25,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 202,
+      "trial": true,
+      "complete_mm3": {
+        "native": 1.356757958389542,
+        "faceted": 1.346619407009208
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 1.3567579583895417,
+          "centre": [
+            -11.393837954241901,
+            33.089114697681715,
+            -7.5749999999999975
+          ],
+          "z_range": [
+            -8.25,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 204,
+      "trial": true,
+      "complete_mm3": {
+        "native": 1.3567579583895366,
+        "faceted": 1.3471360168714797
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 1.3567579583895386,
+          "centre": [
+            -11.393837954241901,
+            33.089114697681715,
+            -7.575000000000005
+          ],
+          "z_range": [
+            -8.25,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.25,
+      "shaft": 156,
+      "crank": 206,
+      "trial": true,
+      "complete_mm3": {
+        "native": 1.3567579583895233,
+        "faceted": 1.3478669865480606
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 1.3567579583895233,
+          "centre": [
+            -11.3938379542419,
+            33.08911469768171,
+            -7.575000000000003
+          ],
+          "z_range": [
+            -8.25,
+            -6.9
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 93,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.7950550019086186,
+        "faceted": 0.7983041106483874
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.7841157498923008,
+          "centre": [
+            -11.292763810003487,
+            33.08091972871453,
+            -8.849999999999993
+          ],
+          "z_range": [
+            -9.3,
+            -8.4
+          ]
+        },
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.010939249808908529,
+          "centre": [
+            -10.952922299558553,
+            32.496555748475764,
+            -8.099999991655576
+          ],
+          "z_range": [
+            -8.4,
+            -7.7999998999999995
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.4575933303879778,
+        "faceted": 0.4613185910045088
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.45759333038797767,
+          "centre": [
+            -11.099256205537202,
+            33.042795539170555,
+            -8.849999999999984
+          ],
+          "z_range": [
+            -9.3,
+            -8.4
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 96,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 196,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 198,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.35111131570024345,
+        "faceted": 0.3530970013420743
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.3511113157002435,
+          "centre": [
+            -11.36707399836709,
+            32.90673540692604,
+            -8.099999992048375
+          ],
+          "z_range": [
+            -8.4,
+            -7.7999998999999995
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 202,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.603003582931584,
+        "faceted": 0.5986322978894036
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.603003582931584,
+          "centre": [
+            -11.393837957920375,
+            33.08911470297194,
+            -8.099999982884592
+          ],
+          "z_range": [
+            -8.4,
+            -7.7999998999999995
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 204,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.6030035829315764,
+        "faceted": 0.5989691822178551
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.6030035829315771,
+          "centre": [
+            -11.39383795792037,
+            33.08911470297195,
+            -8.09999998288459
+          ],
+          "z_range": [
+            -8.4,
+            -7.7999998999999995
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.5,
+      "shaft": 156,
+      "crank": 206,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.603003582931573,
+        "faceted": 0.599134342568679
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.6030035829315731,
+          "centre": [
+            -11.393837957920367,
+            33.08911470297194,
+            -8.099999982884588
+          ],
+          "z_range": [
+            -8.4,
+            -7.7999998999999995
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 93,
+      "trial": true,
+      "complete_mm3": {
+        "native": 1.3068596157602088,
+        "faceted": 1.307746763424229
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 1.30685961576021,
+          "centre": [
+            -11.292763808697904,
+            33.08091973053818,
+            -9.599999985965516
+          ],
+          "z_range": [
+            -10.35,
+            -8.8499999
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.7626555679217523,
+        "faceted": 0.7683596396188903
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.7626555679217537,
+          "centre": [
+            -11.099256204465341,
+            33.042795541034934,
+            -9.599999987258625
+          ],
+          "z_range": [
+            -10.35,
+            -8.8499999
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 96,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 196,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 198,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.1538527329635936,
+        "faceted": 0.15385204095565813
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.15385273296359359,
+          "centre": [
+            -16.156947560930252,
+            32.55402585215569,
+            -17.32500000000001
+          ],
+          "z_range": [
+            -17.85,
+            -16.8
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 202,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.06669800669792252,
+        "faceted": 0.06669715943676988
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.06669800669791948,
+          "centre": [
+            -14.120075302653493,
+            33.58682161675657,
+            -17.325000000000056
+          ],
+          "z_range": [
+            -17.85,
+            -16.8
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 204,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 0.75,
+      "shaft": 156,
+      "crank": 206,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.025490739514481196,
+        "faceted": 0.025254187412643975
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.02549073951448153,
+          "centre": [
+            -11.281320813053927,
+            34.56980590538486,
+            -17.324999999999992
+          ],
+          "z_range": [
+            -17.85,
+            -16.8
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 93,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.7841157824987037,
+        "faceted": 0.7821380134506108
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.7841157824987045,
+          "centre": [
+            -11.292763807827491,
+            33.08091973175395,
+            -10.349999985965521
+          ],
+          "z_range": [
+            -10.8,
+            -9.899999900000001
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.45759334766313947,
+        "faceted": 0.4603782250841073
+      },
+      "contacts": [
+        {
+          "bell": "tens_turns_counter_locking_disc",
+          "upper": "pentagonal_lockout",
+          "native_mm3": 0.45759334766314025,
+          "centre": [
+            -11.09925620375075,
+            33.04279554227784,
+            -10.349999987258643
+          ],
+          "z_range": [
+            -10.8,
+            -9.899999900000001
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 96,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 196,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 198,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.1758316948155355,
+        "faceted": 0.1758305446238226
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.17583169481553554,
+          "centre": [
+            -16.156947560930252,
+            32.554025852155675,
+            -17.7
+          ],
+          "z_range": [
+            -18.3,
+            -17.099999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 202,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.07622629336905425,
+        "faceted": 0.07622516929761651
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.07622629336905078,
+          "centre": [
+            -14.120075302653495,
+            33.58682161675656,
+            -17.699999999999935
+          ],
+          "z_range": [
+            -18.3,
+            -17.099999999999998
+          ]
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 204,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0,
+        "faceted": 0
+      },
+      "contacts": []
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "crank": 206,
+      "trial": true,
+      "complete_mm3": {
+        "native": 0.029132273730835618,
+        "faceted": 0.028861869489772037
+      },
+      "contacts": [
+        {
+          "bell": "turns_counter_carry_ring",
+          "upper": "transmission_gear_0_6",
+          "native_mm3": 0.029132273730836003,
+          "centre": [
+            -11.281320813053927,
+            34.569805905384854,
+            -17.700000000000003
+          ],
+          "z_range": [
+            -18.3,
+            -17.1
+          ]
+        }
+      ]
+    }
+  ],
+  "axial_supports": [
+    {
+      "name": "upper",
+      "measurements": [
+        {
+          "station": 2,
+          "shaft": 156,
+          "crank": 204,
+          "trial": true,
+          "kernel": "native",
+          "samples": [
+            [
+              0,
+              0.30150176853100813
+            ],
+            [
+              0.0625,
+              0.5653158159956405
+            ],
+            [
+              0.125,
+              0.8291298634602722
+            ],
+            [
+              0.1875,
+              1.0929439109249046
+            ],
+            [
+              0.25,
+              1.3567579583895366
+            ],
+            [
+              0.3125,
+              1.3944457253254694
+            ],
+            [
+              0.375,
+              1.130631677860838
+            ],
+            [
+              0.4375,
+              0.8668176303962075
+            ],
+            [
+              0.5,
+              0.6030035829315764
+            ],
+            [
+              0.5625,
+              0.33918953546694497
+            ],
+            [
+              0.625,
+              0.07537548800231453
+            ],
+            [
+              0.6875,
+              0
+            ],
+            [
+              0.75,
+              0
+            ],
+            [
+              0.8125,
+              0
+            ],
+            [
+              0.875,
+              0
+            ],
+            [
+              0.9375,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "enters_contact": false,
+          "left": 0.642857015132904,
+          "right": 0.6428570747375488,
+          "left_mm3": 1.7970905812442595e-7,
+          "right_mm3": 0,
+          "travel_bracket": [
+            0.8999994635581972,
+            0.899999713897705
+          ]
+        },
+        {
+          "station": 2,
+          "shaft": 156,
+          "crank": 204,
+          "trial": true,
+          "kernel": "faceted",
+          "samples": [
+            [
+              0,
+              0.2990397069504243
+            ],
+            [
+              0.0625,
+              0.5609430395568271
+            ],
+            [
+              0.125,
+              0.822983238619805
+            ],
+            [
+              0.1875,
+              1.0850757963789104
+            ],
+            [
+              0.25,
+              1.3471343010831527
+            ],
+            [
+              0.3125,
+              1.3847362544257233
+            ],
+            [
+              0.375,
+              1.1229833458243508
+            ],
+            [
+              0.4375,
+              0.8610325279443493
+            ],
+            [
+              0.5,
+              0.5989683088708745
+            ],
+            [
+              0.5625,
+              0.3368771002519908
+            ],
+            [
+              0.625,
+              0.07484388554797454
+            ],
+            [
+              0.6875,
+              0
+            ],
+            [
+              0.75,
+              0
+            ],
+            [
+              0.8125,
+              0
+            ],
+            [
+              0.875,
+              0
+            ],
+            [
+              0.9375,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "enters_contact": false,
+          "left": 0.6428568959236145,
+          "right": 0.6428569555282593,
+          "left_mm3": 1.25576572685029e-7,
+          "right_mm3": 0,
+          "travel_bracket": [
+            0.8999989628791811,
+            0.8999992132186889
+          ]
+        }
+      ]
+    },
+    {
+      "name": "lower",
+      "measurements": [
+        {
+          "station": 2,
+          "shaft": 156,
+          "crank": 94,
+          "trial": true,
+          "kernel": "native",
+          "samples": [
+            [
+              0,
+              0
+            ],
+            [
+              0.0625,
+              0
+            ],
+            [
+              0.125,
+              0
+            ],
+            [
+              0.1875,
+              0
+            ],
+            [
+              0.25,
+              0
+            ],
+            [
+              0.3125,
+              0.05719916629849685
+            ],
+            [
+              0.375,
+              0.19066388766165743
+            ],
+            [
+              0.4375,
+              0.3241286090248172
+            ],
+            [
+              0.5,
+              0.4575933303879778
+            ],
+            [
+              0.5625,
+              0.5910580517511377
+            ],
+            [
+              0.625,
+              0.7245227731142975
+            ],
+            [
+              0.6875,
+              0.7626555679217524
+            ],
+            [
+              0.75,
+              0.7626555679217523
+            ],
+            [
+              0.8125,
+              0.7626555679217524
+            ],
+            [
+              0.875,
+              0.7245227903894595
+            ],
+            [
+              0.9375,
+              0.5910580690263
+            ],
+            [
+              1,
+              0.45759334766313947
+            ]
+          ],
+          "enters_contact": true,
+          "left": 0.28571438789367676,
+          "right": 0.28571444749832153,
+          "left_mm3": 0,
+          "right_mm3": 2.429840991327602e-7,
+          "travel_bracket": [
+            -0.5999995708465575,
+            -0.5999993205070495
+          ]
+        },
+        {
+          "station": 2,
+          "shaft": 156,
+          "crank": 94,
+          "trial": true,
+          "kernel": "faceted",
+          "samples": [
+            [
+              0,
+              0
+            ],
+            [
+              0.0625,
+              0
+            ],
+            [
+              0.125,
+              0
+            ],
+            [
+              0.1875,
+              0
+            ],
+            [
+              0.25,
+              0
+            ],
+            [
+              0.3125,
+              0.057672800568255723
+            ],
+            [
+              0.375,
+              0.1922365003044644
+            ],
+            [
+              0.4375,
+              0.3267875204526763
+            ],
+            [
+              0.5,
+              0.46131872028891757
+            ],
+            [
+              0.5625,
+              0.5958244056174192
+            ],
+            [
+              0.625,
+              0.7302939706694529
+            ],
+            [
+              0.6875,
+              0.7685863646888675
+            ],
+            [
+              0.75,
+              0.768360067361181
+            ],
+            [
+              0.8125,
+              0.7680481633512052
+            ],
+            [
+              0.875,
+              0.7293312275059657
+            ],
+            [
+              0.9375,
+              0.5948342332961352
+            ],
+            [
+              1,
+              0.46037862647219385
+            ]
+          ],
+          "enters_contact": true,
+          "left": 0.2857142686843872,
+          "right": 0.285714328289032,
+          "left_mm3": 0,
+          "right_mm3": 2.110679766728264e-8,
+          "travel_bracket": [
+            -0.6000000715255738,
+            -0.5999998211860658
+          ]
+        }
+      ]
+    },
+    {
+      "name": "tooth",
+      "measurements": [
+        {
+          "station": 2,
+          "shaft": 114,
+          "crank": 205,
+          "trial": true,
+          "kernel": "native",
+          "samples": [
+            [
+              0,
+              0
+            ],
+            [
+              0.0625,
+              0
+            ],
+            [
+              0.125,
+              0
+            ],
+            [
+              0.1875,
+              0
+            ],
+            [
+              0.25,
+              0
+            ],
+            [
+              0.3125,
+              0
+            ],
+            [
+              0.375,
+              0
+            ],
+            [
+              0.4375,
+              0
+            ],
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5625,
+              0.48483909898157085
+            ],
+            [
+              0.625,
+              0.9696781979631417
+            ],
+            [
+              0.6875,
+              1.4545172969447129
+            ],
+            [
+              0.75,
+              1.93935639592629
+            ],
+            [
+              0.8125,
+              2.4241954949078606
+            ],
+            [
+              0.875,
+              2.77050913703749
+            ],
+            [
+              0.9375,
+              2.70124640861162
+            ],
+            [
+              1,
+              2.216407309630045
+            ]
+          ],
+          "enters_contact": true,
+          "left": 0.5000001192092896,
+          "right": 0.5000001788139343,
+          "left_mm3": 0,
+          "right_mm3": 0.0000010665914423325915,
+          "travel_bracket": [
+            0.30000050067901607,
+            0.3000007510185243
+          ]
+        },
+        {
+          "station": 2,
+          "shaft": 114,
+          "crank": 205,
+          "trial": true,
+          "kernel": "faceted",
+          "samples": [
+            [
+              0,
+              0
+            ],
+            [
+              0.0625,
+              0
+            ],
+            [
+              0.125,
+              0
+            ],
+            [
+              0.1875,
+              0
+            ],
+            [
+              0.25,
+              0
+            ],
+            [
+              0.3125,
+              0
+            ],
+            [
+              0.375,
+              0
+            ],
+            [
+              0.4375,
+              0
+            ],
+            [
+              0.5,
+              0
+            ],
+            [
+              0.5625,
+              0.48484067438275014
+            ],
+            [
+              0.625,
+              0.9696813487655
+            ],
+            [
+              0.6875,
+              1.4545185002624972
+            ],
+            [
+              0.75,
+              1.9393591746452419
+            ],
+            [
+              0.8125,
+              2.424196326142239
+            ],
+            [
+              0.875,
+              2.770510087019698
+            ],
+            [
+              0.9375,
+              2.7012466302670624
+            ],
+            [
+              1,
+              2.2164059558843148
+            ]
+          ],
+          "enters_contact": true,
+          "left": 0.5,
+          "right": 0.5000000596046448,
+          "left_mm3": 0,
+          "right_mm3": 7.801374095162407e-7,
+          "travel_bracket": [
+            0.30000000000000004,
+            0.3000002503395083
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Finite sampled poses and one bracket per named transition, not continuous admission proof",
+    "Complete native/faceted commons remain authoritative; ingredient labels are diagnostic",
+    "No result-side contact table is substituted for these measurements"
+  ]
+}

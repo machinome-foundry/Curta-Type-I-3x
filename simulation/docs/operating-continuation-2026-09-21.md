@@ -305,6 +305,8 @@ The [production Python banks](evidence/tens-production-python-acceptance-2026-09
 are now complete. All four 213-coordinate stopped/idle banks match both the
 old trial and the fresh production browser **exactly**, checked independently
 from the saved values. Production neighbouring arithmetic is still running;
+its page-53 calibration case now passes, with subtraction/overflow undo and
+successive-addition/clearing still pending in that invocation.
 the previously completed three-case trial arithmetic gate is not relabelled
 as that production invocation. This implementation step does not close any
 whole-project task or adopt higher-result-bank/counter restraints.
@@ -334,9 +336,10 @@ either stop request; that incomplete report is preserved and not accepted.
 A retry with a finite 60 s capture deadline passes both requests, replay,
 relief/idle and retry with zero page errors; both screenshots were inspected.
 The full 213-coordinate browser banks are preserved in the investigation's
-linked evidence. A fresh Python report/idle run and a separate three-case
-arithmetic run are active. No Python/browser full-bank comparison or
-ordinary-arithmetic acceptance is claimed for this
+linked evidence. The fresh Python report/idle test now passes in 1500.407 s;
+all four stopped/idle banks match the saved browser values **exactly**.
+The separate three-case arithmetic run is active. No ordinary-arithmetic
+acceptance is claimed for this
 isolated counter trial. Higher-counter coarse measurement completes three
 sampled heights, but reveals height-dependent contact windows; higher-counter
 operation remains unimplemented. No whole-project task is closed here.
@@ -354,6 +357,19 @@ fails. The full-root fixture exposed a missing axial normalization at the
 five source stations whose raised raw travel is zero rather than −4.2 mm.
 The corrected law and fixture now pass; all ten complete higher prints match
 their independent benches and all initial bank values match production.
-The trial's hundreds stop test and the production eighth-input red test are
-running. The manifest
+The trial's hundreds short/long test passes in 1112.808 s: both stops clear
+in both kernels, .2° overtravel contacts, the shaft is retained, replay is
+exact and relief/retry pass. The trial's eighth-input test and isolated
+export are now running. The production
+eighth-input test now fails as intended at 290°, with the positive common
+preserved in the new evidence file. The manifest
 and production restraint declarations remain unchanged.
+
+Counter-tens component diagnostics now identify the distinct upper-disc,
+lower-disc and carry-tooth contacts. A 40-pose complete-print survey and six
+native/faceted axial brackets are retained in the counter investigation.
+They show why neither a fixed-height ones law nor a single higher closing
+curve covers the counter. No higher-counter operating law is adopted.
+The combined component/axial/indexed-band/browser-validator/result-frame
+regression passes **14/14 in 41.333 s**
+(`counter-support-regression.log`).

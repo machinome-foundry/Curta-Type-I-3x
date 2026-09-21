@@ -40,7 +40,8 @@ def faceted_common_volume(common):
     return common.volume()
 
 
-def component_shapes(carry, crank, shaft, node_type=HigherLockoutBench):
+def component_shapes(carry, crank, shaft, node_type=HigherLockoutBench, *,
+                     stack_path=('tens', 'p_10220_410003_1_419227')):
     """Place native ingredients with the same operations as their complete print."""
     node = node_type()
     node.set_state(shaft_angle=shaft, crank_angle=crank, carry_position=carry, time=0)
@@ -61,20 +62,24 @@ def component_shapes(carry, crank, shaft, node_type=HigherLockoutBench):
                     raise TypeError(type(operation).__name__)
         return shape
 
-    stack = node.tens.p_10220_410003_1_419227
+    stack = node
+    for name in stack_path:
+        stack = getattr(stack, name)
     bell_parts = {part.name: shape_at(('bell', part.name)) for part in node.bell.children}
-    stack_parts = {part.name: shape_at(('tens', stack.name, part.name))
+    stack_parts = {part.name: shape_at((*stack_path, part.name))
                    for part in stack.children}
     return bell_parts, stack_parts
 
 
-def component_contacts(carry, crank, shaft, node_type=HigherLockoutBench):
+def component_contacts(carry, crank, shaft, node_type=HigherLockoutBench, *,
+                       stack_path=('tens', 'p_10220_410003_1_419227')):
     """Identify native contacting ingredients; never exempt them from a test.
 
     A FusionNode remains one complete printed body in all acceptance checks.
     This diagnostic only identifies which of its ingredients cause contact.
     """
-    bell_parts, stack_parts = component_shapes(carry, crank, shaft, node_type)
+    bell_parts, stack_parts = component_shapes(
+        carry, crank, shaft, node_type, stack_path=stack_path)
     found = []
     for (bell_name, bell), (stack_name, upper) in product(bell_parts.items(), stack_parts.items()):
         common = bell.intersect(upper)
