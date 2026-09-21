@@ -49,7 +49,8 @@ that the author's physical build jams or a manufacturing recommendation.
 The separately isolated [periodic-stop software defect](periodic-lockout-stop-2026-09-20.md)
 is now corrected in both executors. The fixed-height ones profile is
 [wired into the operating crank](operating-ones-lockout-2026-09-20.md), with
-full-root regression in progress. This introduces no further geometry fit
+full-root lockout, neighbouring arithmetic/history and browser acceptance
+passing. This introduces no further geometry fit
 and does not adopt the profile on other channels.
 
 ## Higher result lockout trial — T07, not adopted

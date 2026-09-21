@@ -165,9 +165,10 @@ Both full-root short/long requests failed red before adoption and pass now;
 the installed stop and .2-degree overtravel controls pass both kernels.
 The real pointer also stops there with all 608 paths and 25 controls intact.
 The browser matrix passes seven stop/replay/relief/retry cases and four legal
-three-turn requests. Page-53 calibration and full-bank subtraction/undo also
-pass; the remaining Python
-root regressions are in progress. See
+three-turn requests. Page-53 calibration, full-bank subtraction/undo,
+partial-input replay and reversing-counter history also pass. The original
+batch's old test-field assertion error and its corrected complete rerun are
+recorded separately; no failed invocation is described as green. See
 `simulation/docs/operating-ones-lockout-2026-09-20.md`, including the explicit
 large-tick setup limitation. Other channels and action orders are not inferred
 from this pair. Tasks 6.2/6.3 and the overall 12/23 status remain open.

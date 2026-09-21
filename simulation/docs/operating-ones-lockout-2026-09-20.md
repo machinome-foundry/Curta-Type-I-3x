@@ -35,8 +35,17 @@ Two unchanged numerical profile/tooth-passage checks pass in **42.693 s**
 after the common-law extraction. The four-turn page-53 calibration regression
 also passes on the complete operating root, as does subtraction through both
 full register banks followed by addition back to zero. Partial-input replay
-and reversing-counter history remain in progress at this checkpoint,
-not claimed green prematurely.
+and the four-turn reversing-counter history also pass.
+
+The original six-test batch completes in **5138.438 s** with five passes and
+the one already-corrected `Stop.side` assertion error from its loaded old test
+body. It is not recorded as a green six-test invocation. Its five neighbouring
+tests all pass; the corrected complete lockout test's separate 836.661-second
+rerun passes. Together these close this increment's Python acceptance without
+hiding the original failed invocation. Project content `9359280` commits the
+restraint; framework `e63700e` and viewer `e82b521` remain unchanged and clean
+at this closeout. Higher-channel trials are separate work, not part of this
+production-geometry change.
 
 The historical `AncestorLockoutCurta` diagnostic still declares its original
 125.32-degree local bound. Its parent now supplies the stricter certified

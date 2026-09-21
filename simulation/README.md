@@ -89,7 +89,9 @@ integrated in viewer `e82b521`. The measured fixed-height ones restraint is now
 [wired to the operating crank](docs/operating-ones-lockout-2026-09-20.md): short
 and long wrong-order requests and a real pointer drag stop at 125.223238° for
 the documented withdrawal sequence. Its installed native and published-mesh
-contacts pass; broader regressions remain in progress. This does not certify
+contacts pass, as do calibration, subtraction/undo, partial-input replay and
+reversing-counter history. Seven full-root browser stops and four legal
+three-turn operations also pass. This does not certify
 the higher channels' sliding stacks, other action orders or the whole machine.
 
 For interactive investigation, select the separate **`reverser_inspection`**
