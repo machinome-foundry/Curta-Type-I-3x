@@ -10,6 +10,7 @@ class HigherCounterWrongOrderProbeTest(unittest.TestCase):
     def test_trace_requests_actual_controls_and_reads_the_retained_shaft(self):
         class Machine:
             state = {'crank_rotation': 0, SHAFT: 114}
+            stops = ()
 
             def __init__(self):
                 self.calls = []
@@ -42,6 +43,7 @@ class HigherCounterWrongOrderProbeTest(unittest.TestCase):
     def test_an_unexpected_preparation_stop_is_reported_without_repair(self):
         class Machine:
             state = {'crank_rotation': 12, SHAFT: 123}
+            stops = (SimpleNamespace(coordinate='main_drive.crank.turn', bound='low'),)
 
             def move(self, name, *, to):
                 return SimpleNamespace(status='blocked')
@@ -51,6 +53,7 @@ class HigherCounterWrongOrderProbeTest(unittest.TestCase):
         self.assertEqual(rows[0]['status'], 'blocked')
         self.assertEqual(rows[0]['crank'], 12)
         self.assertEqual(rows[0]['shaft'], 123)
+        self.assertEqual(rows[0]['stops'], [{'coordinate': 'main_drive.crank.turn', 'bound': 'low'}])
 
 
 if __name__ == '__main__':

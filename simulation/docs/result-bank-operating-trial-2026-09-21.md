@@ -115,7 +115,7 @@ test class or root. No arithmetic or successful browser result is claimed yet.
 
 Independent dense profile checks continue per station and kernel. Faceted
 stations 2..11 have completed **23,556 admitted poses each**, zero positive
-commons; native stations 2..7 have the same completed result. After the
+commons; native stations 2..7 and 9 have the same completed result. After the
 interruption, process inspection found no native workers for 6..11 or faceted
 worker for 11, and no logs for those unstarted checks. New native queues now
 run 6/8/10 and 7/9/11. The last faceted station 11 has since completed;
@@ -124,6 +124,10 @@ its log SHA-256 is
 Native 6 and 7 also complete and their queues advance to 8 and 9. Their log
 hashes are `38fe038bbdb9709cbce66d66501b1170331c7dd086e11a22fb4293dbf78bb556`
 and `dc05955f3c7230eee813fc0dd5f93c3d64c0324a60933cd48e766b18ad2a15c4`.
+Native station 9 subsequently completes **23,556 poses, zero failures**,
+log SHA-256 `d864266e4b520320753ba3038fb3e55b80927e99587d7afa2988dfd9ad8d4fd6`,
+and that queue advances to station 11. Station 8 remains running with 10
+behind it. A completed station 9 does not stand in for the unfinished 8.
 The live arithmetic and operating tests were left alone. No process is
 restarted merely because it is quiet. These are finite samples, not a
 continuous contact certificate. Default-root adoption remains gated on the
@@ -171,7 +175,9 @@ as acceptance evidence.
 
 This is a separate viewer-owned lifetime finding exposed by the real Curta
 bank, not evidence that reducing geometry or dropping restraints is valid.
-A separately governed viewer change has been requested, not authorized or
-started. Python operation and independent geometry checks can continue;
+The pilot authorized preparation of a separately governed viewer proposal,
+`keep-expression-references-valid`. Its planning artifacts and strict validation
+are complete in the viewer repository; implementation still awaits approval.
+Python operation and independent geometry checks can continue;
 browser adoption cannot pass this failure. The earlier Python CPU profile
 remains a distinct investigation, not a fix for this mount error.

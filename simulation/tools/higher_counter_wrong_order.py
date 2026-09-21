@@ -46,7 +46,9 @@ def withdrawal_trace(sim, *, contacts=pair_contacts):
         request = sim.move(name, to=value)
         yield {'input': name, 'target': value, 'status': request.status,
                'crank': sim.state['crank_rotation'], 'shaft': sim.state[SHAFT],
-               'common_mm3': contacts(sim), 'bank': dict(sim.state)}
+               'common_mm3': contacts(sim), 'bank': dict(sim.state),
+               'stops': [{'coordinate': stop.coordinate, 'bound': stop.bound}
+                         for stop in sim.stops]}
         if index < len(REQUESTS)-1 and request.status != 'completed':
             return
 

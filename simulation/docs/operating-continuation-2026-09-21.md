@@ -409,10 +409,18 @@ native sweep of the revised profile replaces it. Targeted native edge checks
 pass 175 admitted poses. Intermediate carry-height checks now run in both
 kernels, including the measured axial-support brackets on all five flats.
 The revised counter-tens faceted sweep passes 15,714 poses and its separate
-support-height sweep passes 7,094. The corresponding native runs remain
-open. The first faceted transfer diagnostic passes 787/787/839/839 admitted
+support-height sweep passes 7,094 in both kernels. The full native angular
+sweep remains open. The first faceted transfer diagnostic passes 787/787/839/839 admitted
 poses on counter stations 3/4/5/6; full station sweeps are queued. These
 remain finite geometric checks, not bank-wide operating adoption.
+
+The physical counter-tens withdrawal diagnostic now exposes an earlier
+preparation stop: a 90°→180° crank request stops at 163.42595046793576° while
+the counter-tens shaft remains at 114°, before the intended half-tooth pose.
+Its native counter upper/bell pair is clear there. Attribution to the other
+existing restraints remains open; a fresh full-bank/stop-report trace is
+running without splitting the request or altering any law. The candidate
+record preserves this finding separately from the passing geometry samples.
 
 At the pilot's request, viewer-owned OpenSpec change
 `keep-expression-references-valid` is prepared for approval, with proposal,

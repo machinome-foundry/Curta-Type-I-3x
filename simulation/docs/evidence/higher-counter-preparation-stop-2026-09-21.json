@@ -1,0 +1,73 @@
+{
+  "status": "intended-withdrawal-preparation-blocked",
+  "model": "simulation.running:OperatingCurta",
+  "scope": "Preliminary native counter-tens upper/bell readings only; no full banks or attribution to a bound captured",
+  "rows": [
+    {
+      "input": "crank_elevation",
+      "target": 9,
+      "status": "completed",
+      "crank": 0.0,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "reverser_height",
+      "target": -4.9425,
+      "status": "completed",
+      "crank": 0.0,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "crank_rotation",
+      "target": 90,
+      "status": "completed",
+      "crank": 90.0,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "crank_rotation",
+      "target": 180,
+      "status": "blocked",
+      "crank": 163.42595046793576,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "crank_rotation",
+      "target": 190,
+      "status": "blocked",
+      "crank": 163.4259504680566,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "reverser_height",
+      "target": -6.9425,
+      "status": "completed",
+      "crank": 163.4259504680566,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "input": "crank_rotation",
+      "target": 200,
+      "status": "blocked",
+      "crank": 163.4259504680566,
+      "shaft": 114.0,
+      "native_common_mm3": 0.0
+    },
+    {
+      "complete": true
+    }
+  ],
+  "log": "_build_checks/higher-counter-tens-production-wrong-order-diagnostic.log",
+  "log_sha256": "578838cbe7143cd5579491b32688eb0df4148d67d6bfc8e50e5533c78e778347",
+  "limitations": [
+    "Counter-tens shaft remained 114 degrees; intended partial-input pose was never reached",
+    "The last three requests follow the earlier preparation stop and are not higher-counter acceptance",
+    "No claim that the earlier stop is mechanically justified or a software defect; attribution remains open"
+  ]
+}

@@ -178,7 +178,11 @@ with 72-degree offsets. These include the indexed flat, the mixed-contact
 region, the earlier false-stop pose and the lower-disc edge. Each tests the
 existing angular grid and all applicable profile boundaries. Logs are
 `higher-counter-support-heights-{native,faceted}.log`. Faceted completes
-**7,094 admitted poses, zero positive common**; native remains running.
+**7,094 admitted poses, zero positive common**. The native matrix subsequently
+completes the same **7,094 poses with zero positive common**; its
+[separate record](evidence/higher-counter-native-support-2026-09-21.json)
+pins the exact header, summary and log hash. The full native shaft/angular
+matrix remains running.
 The [scoped geometry record](evidence/higher-counter-lower-edge-admission-2026-09-21.json)
 pins each completed run's actual header, summary, source identities and log
 hash. These finite poses do not establish height-independent clearance or
@@ -225,7 +229,7 @@ viewer cache-reset finding has a separate viewer-owned proposal,
 `keep-expression-references-valid`, prepared at the pilot's request and
 awaiting approval; no viewer fix has been implemented.
 
-## Actual-root withdrawal diagnostic in progress
+## Actual-root withdrawal preparation stops early
 
 `tools/higher_counter_wrong_order.py` preserves the separate production-root
 counter-tens experiment. It uses only these actual requests: crank elevation
@@ -246,10 +250,27 @@ sequence and refusal handling, not geometry or simulator performance.
 CAD/model imports are deferred until real measurement so testing the trace
 does not construct the complete machine.
 
-An earlier equivalent seven-request native-only invocation remains live in
-`higher-counter-tens-production-wrong-order-diagnostic.log`. It has completed
-lift, reverser positioning and crank 90°, each with zero measured upper/bell
-common. The remaining requests are pending. Do not conflate that preliminary
-native-only run with a completed run of the dual-kernel, full-bank tool above.
-It is not a whole-machine interference test; other contacts in its preparation
-will still need checking before an operating restraint is accepted.
+The earlier seven-request native-only invocation has completed in
+`higher-counter-tens-production-wrong-order-diagnostic.log`, but **did not
+reach the intended preparation**. Lift, reverser positioning and crank 90°
+complete. The 90°→180° request is blocked at **163.42595046793576°**, with the
+counter-tens shaft still **114°** and zero native upper/bell common. The
+subsequent 190° attempt remains at the same stop to about 1e−10°, and withdrawing
+the lever then requesting 200° does not advance that shaft either. These later
+requests are not the intended half-tooth withdrawal and establish no missing
+higher-counter restraint. The [preparation-stop evidence](evidence/higher-counter-preparation-stop-2026-09-21.json)
+preserves all seven rows and the log hash.
+
+The preliminary trace did not capture other coordinate banks or identify which
+existing crank restraint caused the earlier stop. It therefore proves neither
+a valid mechanical obstruction nor a software fault. No profile, tolerance,
+request split or production restraint has been changed to pass it. Other
+preparation contacts remain to be checked before operating acceptance.
+
+The reusable tool now also records the public stop coordinate and bound. A
+test fails on the missing stop report, then both trace tests pass
+**2/2 in .000 s** (`higher-counter-wrong-order-stop-report-{red,green}.log`).
+A fresh invocation runs as `higher-counter-tens-production-preparation-stop.log`
+and will stop at the first unexpected preparation refusal while retaining its
+complete bank and both counter-pair contact readings for attribution. This is
+an investigation of the earlier stop, not a bypass of it or an accepted run.
