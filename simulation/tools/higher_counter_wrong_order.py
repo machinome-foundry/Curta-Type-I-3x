@@ -57,7 +57,7 @@ def main():
     from machinome.simulation import Sim
     from simulation.running import OperatingCurta
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(OperatingCurta(), dt=.1, meshes=True, record=64)
     print(json.dumps({'model': 'simulation.running:OperatingCurta',
                       'coordinates': len(sim.state), 'acceptance': 'diagnostic-only'}), flush=True)
     rows = []

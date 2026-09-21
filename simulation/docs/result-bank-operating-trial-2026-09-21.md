@@ -181,3 +181,16 @@ are complete in the viewer repository; implementation still awaits approval.
 Python operation and independent geometry checks can continue;
 browser adoption cannot pass this failure. The earlier Python CPU profile
 remains a distinct investigation, not a fix for this mount error.
+
+## Geometry-worker interruption checkpoint
+
+The later station-8 and station-11 native workers terminated before their
+terminal summaries, at 22,455 and 5,439 admitted poses respectively. Their
+process absence and terminal tool results were verified; the cause is not
+known. These are incomplete runs, not passes. The
+[termination evidence](evidence/geometry-worker-terminations-2026-09-21.json)
+pins both logs alongside the counter workers interrupted at the same
+checkpoint. Previously completed native stations 2..7 and 9 are unaffected.
+A separate full-matrix retry queue now schedules result 8/10/11 after the
+counter-tens retry, writing `result-station-N-profile-certified-native-retry-1.log`
+without overwriting the old logs. The isolated arithmetic batch remains live.

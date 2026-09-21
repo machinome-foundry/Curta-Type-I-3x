@@ -1,12 +1,24 @@
 """The higher-counter diagnostic uses only physical operating requests."""
 
 import unittest
+import sys
 from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
-from simulation.tools.higher_counter_wrong_order import withdrawal_trace, SHAFT
+from simulation.tools.higher_counter_wrong_order import withdrawal_trace, SHAFT, main
 
 
 class HigherCounterWrongOrderProbeTest(unittest.TestCase):
+    def test_real_entry_point_enables_bounded_stop_recording(self):
+        factory = Mock(side_effect=RuntimeError('construction intercepted'))
+        model = object()
+        with patch.dict(sys.modules, {
+                'machinome.simulation': SimpleNamespace(Sim=factory),
+                'simulation.running': SimpleNamespace(OperatingCurta=lambda: model)}):
+            with self.assertRaisesRegex(RuntimeError, 'construction intercepted'):
+                main()
+        factory.assert_called_once_with(model, dt=.1, meshes=True, record=64)
+
     def test_trace_requests_actual_controls_and_reads_the_retained_shaft(self):
         class Machine:
             state = {'crank_rotation': 0, SHAFT: 114}

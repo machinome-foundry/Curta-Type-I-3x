@@ -215,6 +215,14 @@ configured faceted sweeps are now queued in station order 3..6 as
 `higher-counter-station-N-admission-faceted.log`; the queue stops if a station
 fails rather than treating its successor's result as a substitute.
 
+Stations 3 and 4 now each complete **15,714 admitted poses with zero positive
+common**. Their [full faceted records](evidence/higher-counter-stations-3-4-faceted-2026-09-21.json)
+pin the actual headers, terminal summaries and log hashes. Stations 5 and 6
+remain queued/running, and a separate native queue now checks stations 3..6
+as `higher-counter-station-N-admission-native.log`, stopping on a failure.
+The completed 3/4 results do not certify other heights, native solids or
+operating behavior; the candidate remains unadopted.
+
 ## Remaining acceptance
 
 Complete the new candidate's whole-print checks and investigate every failure.
@@ -274,3 +282,66 @@ A fresh invocation runs as `higher-counter-tens-production-preparation-stop.log`
 and will stop at the first unexpected preparation refusal while retaining its
 complete bank and both counter-pair contact readings for attribution. This is
 an investigation of the earlier stop, not a bypass of it or an accepted run.
+
+### Completed preparation trace and result-tens attribution
+
+The complete rerun stops at the identical **163.42595046793576°**, retaining
+counter tens at 114°, result ones at 724°, result tens at
+**699.2537571367207°**, and result-tens upper travel at 0 mm. Both counter
+contact kernels report zero common. The [attribution record](evidence/higher-counter-preparation-attribution-2026-09-21.json)
+retains all 213 stopped coordinates, the terminal summary and source-log hash.
+
+Evaluating the three existing crank bounds at that bank puts the result-tens
+lower bound at −163.42595046806534°, within 1.3e−10° of the retained crank.
+The ones lower bound is −164.42595046793576° and pawl upper bound
+−163.22206896551725°: both leave room at this pose. In the independently
+posed source-backed T07 bench, both complete-print kernels clear the stopped
+result-tens pose and +.05° with the shaft held; at +.1° both contact
+(native .00000832017 mm³, faceted .0000163736 mm³), and +.2° contacts by
+about .001 mm³. This supports the local stop, not the correctness of the
+unfinished carry trajectory that reached it.
+
+The trace's empty `stops` list was a diagnostic recording omission:
+`Sim(..., record=None)` keeps no history by default. The entry point now
+requests `record=64`. A constructor-capture test fails first on the missing
+argument; the three probe tests then pass in .001 s
+(`higher-counter-wrong-order-record-{red,green}.log`). No completed full-root
+run with recording enabled is claimed yet, and no operating law changed.
+The corrected full-root rerun uses the distinct
+`higher-counter-tens-production-preparation-recorded.log` and preserves the
+same requests; it remains running at this checkpoint.
+
+The existing CAD-free `CarryConstraintRepro` and `ConstrainedCarryRepro`
+both complete digit 0, height 9, crank 90° then 180°, ending with ones 724°,
+tens 704° and lever 0 mm. Thus that reduced model **does not reproduce** this
+full-root finding. The log is `result-tens-subtraction-preparation-reduced.log`,
+SHA-256 `469aa4424b951e5f429b17632d8b5dd88521cac514132d2f65718e9dfc9a4f8b`.
+The cause of the full-tree incomplete carry remains open; do not attribute
+it to the framework, split the production request to hide it, or weaken the
+measured stop. The intended counter-tens withdrawal still has not been reached.
+
+Adding the actual ones lower bound as `OnesAndTensCarryRepro` also fails to
+reproduce the stopped preparation: its retained 90°→180° case completes with
+ones 724°, tens 704° and lever 0 mm. The missing-class test fails first; all
+**3 reduced carry tests pass in 103.387 s** after adding the source-backed
+declaration (`result-subtraction-both-bounds-{red,green}.log`). The original
+two cases remain green. This rules out that particular two-bound reduction,
+not an interaction in the complete dependency graph. An earlier inline-class
+attempt in `result-tens-subtraction-preparation-both-bounds.log` fails before
+construction with `OSError: source code not available`; it has no mechanical
+result and is superseded by the real project-owned fixture.
+
+### Interrupted geometry workers
+
+Four older geometry workers terminated while this investigation continued;
+process absence and terminal handles were checked. The cause is unknown.
+The [termination record](evidence/geometry-worker-terminations-2026-09-21.json)
+pins their incomplete logs: counter tens native (12,017 admitted poses),
+counter station 5 faceted (7,280), result station 8 native (22,455), and
+result station 11 native (5,439), each with zero failures so far but **no
+completed acceptance**. Previously completed station results are unaffected.
+
+Full-matrix retries preserve those logs and write separate `-retry-1.log`
+files: one native queue runs counter tens, then result 8/10/11; one faceted
+queue runs counter 5/6. The newer native counter 3..6 queue and both arithmetic
+batches remained live. These are active validation jobs, not passes.

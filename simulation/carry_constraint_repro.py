@@ -16,6 +16,7 @@ from machinome.simulation import Driver
 from simulation.running_laws import shaft_motion, lever_motion, dial_motion
 from simulation.running_parts import RESULT_DIALS
 from simulation.higher_locking_laws import higher_closing_limit
+from simulation.locking_laws import closing_limit
 
 
 class InitialWheel(AssemblyNode):
@@ -98,3 +99,10 @@ class ConstrainedCarryRepro(CarryConstraintRepro):
         higher_closing_limit, reads=(CarryConstraintRepro.bell.turn,
                                     CarryConstraintRepro.tens.turn,
                                     CarryConstraintRepro.lever.travel)), None))
+
+
+class OnesAndTensCarryRepro(ConstrainedCarryRepro):
+    """Also observe ones; this is not the complete operating dependency graph."""
+    ConstrainedCarryRepro.crank.turn.constrain(range=(Bound(
+        closing_limit, reads=(ConstrainedCarryRepro.bell.turn,
+                              ConstrainedCarryRepro.ones.turn)), None))
