@@ -115,12 +115,15 @@ test class or root. No arithmetic or successful browser result is claimed yet.
 
 Independent dense profile checks continue per station and kernel. Faceted
 stations 2..11 have completed **23,556 admitted poses each**, zero positive
-commons; native stations 2..5 have the same completed result. After the
+commons; native stations 2..7 have the same completed result. After the
 interruption, process inspection found no native workers for 6..11 or faceted
 worker for 11, and no logs for those unstarted checks. New native queues now
 run 6/8/10 and 7/9/11. The last faceted station 11 has since completed;
 its log SHA-256 is
 `e18c6e46630b1ee74606296bcfd00fd003016e1cf6bb3aace82b436a419fbec9`.
+Native 6 and 7 also complete and their queues advance to 8 and 9. Their log
+hashes are `38fe038bbdb9709cbce66d66501b1170331c7dd086e11a22fb4293dbf78bb556`
+and `dc05955f3c7230eee813fc0dd5f93c3d64c0324a60933cd48e766b18ad2a15c4`.
 The live arithmetic and operating tests were left alone. No process is
 restarted merely because it is quiet. These are finite samples, not a
 continuous contact certificate. Default-root adoption remains gated on the

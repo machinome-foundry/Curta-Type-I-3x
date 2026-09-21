@@ -1,0 +1,249 @@
+{
+  "status": "coarse candidate rejected; not operating adoption",
+  "station": 2,
+  "trial": true,
+  "profile_sha256": "95e177a44cad8f8a9891e715bbe3a42a107f654496f24ac36d9c253d77a5d87c",
+  "law_sha256": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+  "logs": [
+    {
+      "path": "_build_checks/higher-counter-law-first.log",
+      "sha256": "a5be59ae733c8960f30a81df009af59511bc0b527bac1548f830abb5392084c0"
+    },
+    {
+      "path": "_build_checks/higher-counter-coarse-false-stop.log",
+      "sha256": "52bcf440509cee228849e505e2504b3b76d09962f9535dc7153311d933691239"
+    },
+    {
+      "path": "_build_checks/higher-counter-coarse-false-stops-five-flats.log",
+      "sha256": "d1cca94219a683a86c9d742a285dc1261445e9b333de662a2ee0ec0a886cd75d"
+    },
+    {
+      "path": "_build_checks/higher-counter-tooth-fine-angle-diagnostic.log",
+      "sha256": "f3c8fb6f5275c400e04f823f92f209d4ee6e9b523c59130165d0a761e31ab224"
+    }
+  ],
+  "false_stops": [
+    {
+      "flat": 0,
+      "shaft": 166,
+      "carry": 1,
+      "crank": 206.5,
+      "candidate_gap": 2.1,
+      "complete_mm3": {
+        "native": 0.0,
+        "faceted": 0.0
+      }
+    },
+    {
+      "flat": 1,
+      "shaft": 238,
+      "carry": 1,
+      "crank": 206.5,
+      "candidate_gap": 2.1,
+      "complete_mm3": {
+        "native": 0.0,
+        "faceted": 0.0
+      }
+    },
+    {
+      "flat": 2,
+      "shaft": 310,
+      "carry": 1,
+      "crank": 206.5,
+      "candidate_gap": 2.1,
+      "complete_mm3": {
+        "native": 0.0,
+        "faceted": 0.0
+      }
+    },
+    {
+      "flat": 3,
+      "shaft": 382,
+      "carry": 1,
+      "crank": 206.5,
+      "candidate_gap": 2.1,
+      "complete_mm3": {
+        "native": 0.0,
+        "faceted": 0.0
+      }
+    },
+    {
+      "flat": 4,
+      "shaft": 454,
+      "carry": 1,
+      "crank": 206.5,
+      "candidate_gap": 2.1,
+      "complete_mm3": {
+        "native": 0.0,
+        "faceted": 0.0
+      }
+    }
+  ],
+  "fine_window": {
+    "from": 190,
+    "to": 220,
+    "spacing": 0.25,
+    "base_grid_spacing": 5,
+    "scope": "native pair; finite angular samples, not complete-print certification"
+  },
+  "fine_rows": [
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 150,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5,
+      "boundaries": [
+        {
+          "left": 205.0678791999817,
+          "right": 205.06787943840027,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.82845055928436e-13
+        },
+        {
+          "left": 211.80565738677979,
+          "right": 211.80565762519836,
+          "enters_contact": false,
+          "left_mm3": 6.111171020905385e-13,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 156,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5,
+      "boundaries": [
+        {
+          "left": 197.05271768569946,
+          "right": 197.05271792411804,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.7862391698098515e-13
+        },
+        {
+          "left": 203.4866442680359,
+          "right": 203.48664450645447,
+          "enters_contact": false,
+          "left_mm3": 7.832679697006219e-13,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 205.78767585754395,
+          "right": 205.78767609596252,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 5.028607397426707e-13
+        },
+        {
+          "left": 212.120267868042,
+          "right": 212.12026810646057,
+          "enters_contact": false,
+          "left_mm3": 5.182871478166524e-13,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 166,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5,
+      "boundaries": [
+        {
+          "left": 197.77538132667542,
+          "right": 197.775381565094,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 1.4866464871529567e-13
+        },
+        {
+          "left": 205.22218132019043,
+          "right": 205.222181558609,
+          "enters_contact": false,
+          "left_mm3": 6.390161516839968e-13,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.12622785568237,
+          "right": 207.12622809410095,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 4.1842117465323797e-13
+        },
+        {
+          "left": 212.2746148109436,
+          "right": 212.27461504936218,
+          "enters_contact": false,
+          "left_mm3": 2.7683088281998433e-12,
+          "right_mm3": 0.0
+        }
+      ]
+    },
+    {
+      "station": 2,
+      "carry": 1,
+      "shaft": 168,
+      "trial": true,
+      "component": "carry_tooth",
+      "pair": [
+        "turns_counter_carry_ring",
+        "transmission_gear_0_6"
+      ],
+      "kernel": "native",
+      "step": 5,
+      "boundaries": [
+        {
+          "left": 198.02139520645142,
+          "right": 198.02139544487,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.535917017346388e-13
+        },
+        {
+          "left": 205.42739939689636,
+          "right": 205.42739963531494,
+          "enters_contact": false,
+          "left_mm3": 6.783261162513286e-13,
+          "right_mm3": 0.0
+        },
+        {
+          "left": 207.44334983825684,
+          "right": 207.44335007667542,
+          "enters_contact": true,
+          "left_mm3": 0.0,
+          "right_mm3": 3.1614890363752335e-13
+        },
+        {
+          "left": 212.25336813926697,
+          "right": 212.25336837768555,
+          "enters_contact": false,
+          "left_mm3": 3.070753334083955e-10,
+          "right_mm3": 0.0
+        }
+      ]
+    }
+  ]
+}

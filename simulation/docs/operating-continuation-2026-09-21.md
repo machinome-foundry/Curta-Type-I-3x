@@ -367,7 +367,7 @@ pool while the validator holds an older root. The result-bank investigation
 preserves the unmodified failure and bounded in-memory diagnostic. No package
 source was changed; a separate viewer-owned change is requested but not yet
 authorized. Faceted dense admission now passes at every result station 2..11;
-native 6..11 checks continue. The production
+native 2..7 have passed and 8..11 checks continue. The production
 eighth-input test now fails as intended at 290°, with the positive common
 preserved in the new evidence file. The manifest
 and production restraint declarations remain unchanged.
@@ -389,3 +389,10 @@ Component records are explicitly rejected by the fixed-height whole-print
 compiler; no operating law or geometric acceptance is inferred from them.
 The combined probe/compiler/support regression passes 21/21. The counter
 investigation retains the curves, endpoint volumes and finite-sampling limits.
+
+The new higher-counter compiler and law remain isolated. Their first candidate
+refuses known contacts but incorrectly blocks ordinary carry at five source
+flat poses that both complete-print kernels prove clear. A finer scan reveals
+the missed free interval behind those false stops. The
+[candidate record](higher-counter-restraint-2026-09-21.md) preserves the rejection
+and active refinement; no operating restraint is adopted from a coarse scan.

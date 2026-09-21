@@ -7,6 +7,24 @@ from simulation.tools.counter_component_envelope import component_envelope
 
 
 class CounterComponentEnvelopeTest(unittest.TestCase):
+    def test_extra_angles_retain_a_contact_island_between_base_grid_points(self):
+        volume = lambda angle: 1e-20 if 206 < angle < 207 else 0
+        with patch('simulation.tools.counter_component_envelope.pair_reader', return_value=volume):
+            coarse = component_envelope(2, 1, 166, 'carry_tooth', step=5)
+            refined = component_envelope(2, 1, 166, 'carry_tooth', step=5,
+                                         extra_angles=(206.5,))
+        self.assertEqual(coarse['boundaries'], [])
+        self.assertEqual(len(refined['boundaries']), 2)
+        self.assertIn((206.5, 1e-20), refined['samples'])
+        self.assertEqual(refined['extra_angles'], [206.5])
+        volume = lambda angle: 1e-20 if 190 < angle < 220 and not 206 < angle < 207 else 0
+        with patch('simulation.tools.counter_component_envelope.pair_reader', return_value=volume):
+            coarse = component_envelope(2, 1, 166, 'carry_tooth', step=5)
+            refined = component_envelope(2, 1, 166, 'carry_tooth', step=5,
+                                         extra_angles=(206.5,))
+        self.assertEqual(len(coarse['boundaries']), 2)
+        self.assertEqual(len(refined['boundaries']), 4)
+
     def test_keeps_multiple_intervals_and_positive_endpoints_without_an_epsilon(self):
         def volume(angle, kernel='native'):
             self.assertEqual(kernel, 'native')
@@ -38,7 +56,8 @@ class CounterComponentEnvelopeTest(unittest.TestCase):
     def test_invalid_scope_refuses_before_geometry_is_built(self):
         with patch('simulation.tools.counter_component_envelope.pair_reader') as reader:
             for kwargs in ({'station': 1}, {'carry': 1.1}, {'shaft': float('nan')},
-                           {'step': 0}, {'step': 11}, {'component': 'unknown'}):
+                           {'step': 0}, {'step': 11}, {'component': 'unknown'},
+                           {'extra_angles': (float('nan'),)}, {'extra_angles': (361,)}):
                 args = dict(station=2, carry=1, shaft=156, component='lower_lock')
                 args.update(kwargs)
                 with self.subTest(kwargs=kwargs), self.assertRaises(ValueError):

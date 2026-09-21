@@ -382,6 +382,8 @@ The three-case
 page-53/subtraction/successive-addition-and-clearing arithmetic suite is also
 running against the isolated trial through a temporary test-class patch,
 with production tests unchanged (`counter-operating-trial-arithmetic.log`).
+The page-53 calibration case has now passed; subtraction/overflow undo and
+successive-addition/selective-clearing still await terminal results.
 This is a browser request/render probe, not physical-pointer or mesh-clearance
 acceptance. Its Playwright Promise evaluation and local-file interception
 follow the official Python API documentation fetched through Context7.
@@ -515,3 +517,10 @@ brackets. Lower-disc openings differ by up to one final bisection bracket
 between these heights, while lower closings match. These observations retain
 the endpoint volumes and do not assert exact continuous height invariance.
 Log: `counter-tens-component-intermediate-heights.log`.
+
+The next [higher-counter candidate](higher-counter-restraint-2026-09-21.md)
+compiles these independent fields but fails ordinary carry admission. Both
+complete-print kernels clear five falsely blocked source-flat poses. Finer
+angles expose a real free interval missed by the five-degree scan; the
+rejection is pinned and a two-degree shaft/quarter-degree tooth-window
+refinement is running. This is not an operating adoption.
