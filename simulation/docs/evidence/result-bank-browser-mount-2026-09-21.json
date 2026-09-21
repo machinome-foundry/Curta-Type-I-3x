@@ -1,0 +1,39 @@
+{
+  "status": "failed-before-first-request",
+  "model": "simulation.result_bank_operating_trial:ResultBankOperatingTrial",
+  "framework_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "viewer_commit": "1995aa1f58d44dfeea7bfa62502d71349891327a",
+  "bundle_sha256": "5f3ec29aede4934106bb0cbbdaa7454dcec39d2ba04a233f431a4ce279fef610",
+  "document_sha256": "c545d8807846ec9c8ba404bc253e39e0b98418b50062e49ce006ef25313a5884",
+  "program_identity": "c693fd960131c22da87b2afb9111536a04bb344ea50d18719234536d7377f24c",
+  "coordinates": 213,
+  "inputs": 24,
+  "controls": 25,
+  "completed_requests": 0,
+  "screenshots": [],
+  "error": "Page.evaluate: TypeError: Cannot read properties of undefined (reading 'kind')",
+  "failure_report": {
+    "path": "_build_result_bank_trial/result-bank-browser-acceptance.json",
+    "sha256": "44ccb1197f78d313fa7fc407f5f1d783521017ce6912594fb0aeb617c245965f"
+  },
+  "failure_log": {
+    "path": "_build_checks/result-bank-operating-browser.log",
+    "sha256": "aa3b81c559d21fb54e7f929e53e8d786795eca2d2358ad23c3e321565fc37462"
+  },
+  "diagnostic": {
+    "scope": "in-memory instrumentation only; not an accepted mount or executor fix",
+    "message": "pool-generation-changed-during-binding-roots",
+    "generation_before_expression": 1,
+    "generation_after_expression": 1,
+    "generation_after_bindings": 2,
+    "expression_root_id": 7742,
+    "pool_size_after_expression": 16573,
+    "pool_size_after_bindings": 23478,
+    "binding_count": 30159,
+    "root_index_exists_in_new_pool": true,
+    "script": "_build_checks/result-bank-mount-diagnostic.py",
+    "script_sha256": "671f900897422f705c089e5a818192b4a86e04e20efbcdeeda3fb158bcac3cac",
+    "log": "_build_checks/result-bank-mount-diagnostic.log",
+    "log_sha256": "3bf34bced0208f3634feab9d34afc9e816b455d7c534dca498bac2bd0885ad1e"
+  }
+}

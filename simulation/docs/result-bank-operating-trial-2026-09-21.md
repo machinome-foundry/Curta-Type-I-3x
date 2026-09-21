@@ -97,16 +97,66 @@ The trial's eighth-input case is now running in
 `result-bank-trial-eighth-operating.log`. The test optionally records full
 stopped/relieved banks through `CURTA_RESULT_ACCEPTANCE_REPORT`; only that
 new eighth invocation uses this capture, not the completed hundreds run.
-An isolated export is also running in `result-bank-operating-export.log`.
-No arithmetic or browser result is claimed yet for this bank trial.
+The isolated export completes in `result-bank-operating-export.log`, retaining
+213 coordinates, 24 inputs and 25 controls. Browser mounting fails as recorded
+below. No arithmetic or successful browser result is claimed for this trial.
 
 Independent dense profile checks continue per station and kernel. Faceted
-stations 2..10 have completed **23,556 admitted poses each**, zero positive
+stations 2..11 have completed **23,556 admitted poses each**, zero positive
 commons; native stations 2..5 have the same completed result. After the
 interruption, process inspection found no native workers for 6..11 or faceted
 worker for 11, and no logs for those unstarted checks. New native queues now
-run 6/8/10 and 7/9/11, and the last faceted station 11 runs separately.
+run 6/8/10 and 7/9/11. The last faceted station 11 has since completed;
+its log SHA-256 is
+`e18c6e46630b1ee74606296bcfd00fd003016e1cf6bb3aace82b436a419fbec9`.
 The live arithmetic and operating tests were left alone. No process is
 restarted merely because it is quiet. These are finite samples, not a
 continuous contact certificate. Default-root adoption remains gated on the
 remaining geometry and actual operating acceptance, not the numeric law alone.
+
+## Browser mount failure: expression-pool lifetime
+
+The new `tools/result_bank_operating_browser.py` uses the same public mount,
+snapshot, restore and running-request surface as the accepted counter probe.
+It prepares stations 3 and 8 independently and requires both short/long
+stops, replay, relief/retry and complete coordinate banks. Optional Python
+comparison names its exact station/request scope; it cannot claim station-3
+parity from a station-8-only report. The four report-validation tests first
+fail on the absent module, then pass **4/4 in .001 s**. These are validator
+tests, not browser acceptance.
+The combined result/counter report-validator regression passes **8/8 in
+.004 s** (`result-counter-browser-validators.log`). Playwright's documented
+promise-awaiting evaluation and finite screenshot timeout informed the
+probe; they do not alter the running program or its contact semantics.
+
+The unmodified fresh bundle fails during `MachinomeViewer.mount`, before
+any operating request or screenshot, with `Cannot read properties of
+undefined (reading 'kind')` in expression-shape classification. The partial
+report remains `validation: pending`, with the exception recorded and zero
+cases; it is not accepted. The document/bundle identities and original log
+hashes are preserved in the [mount evidence](evidence/result-bank-browser-mount-2026-09-21.json).
+Reproduce against the existing isolated export (without the geometry tests'
+virtual-memory limit) using the workspace Python:
+
+```text
+python -m simulation.tools.result_bank_operating_browser --build _build_result_bank_trial
+```
+
+Inspection of the delivered bundle shows a 50,000-node expression-pool
+reset threshold. A bounded diagnostic loads that bundle with an in-memory
+assertion around the classifier's expression-root/binding-root acquisition.
+It observes generation **1 → 2** while acquiring the **30,159 bindings**:
+the expression root was obtained in generation 1, but classification would
+continue in generation 2. Its numeric ID 7742 happens to exist in the new
+pool; index existence therefore does not establish reference validity.
+The diagnostic stops at that generation change and does not alter the
+cache limit, any expression, or the saved original failure report. No
+viewer/framework file was edited, and no instrumented execution is used
+as acceptance evidence.
+
+This is a separate viewer-owned lifetime finding exposed by the real Curta
+bank, not evidence that reducing geometry or dropping restraints is valid.
+A separately governed viewer change has been requested, not authorized or
+started. Python operation and independent geometry checks can continue;
+browser adoption cannot pass this failure. The earlier Python CPU profile
+remains a distinct investigation, not a fix for this mount error.

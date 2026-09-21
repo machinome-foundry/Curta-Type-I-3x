@@ -359,8 +359,14 @@ The corrected law and fixture now pass; all ten complete higher prints match
 their independent benches and all initial bank values match production.
 The trial's hundreds short/long test passes in 1112.808 s: both stops clear
 in both kernels, .2° overtravel contacts, the shaft is retained, replay is
-exact and relief/retry pass. The trial's eighth-input test and isolated
-export are now running. The production
+exact and relief/retry pass. The trial's eighth-input test is still running.
+The isolated export completes, but its browser mount fails before any
+requests: loading 30,159 expression bindings resets the viewer's expression
+pool while the validator holds an older root. The result-bank investigation
+preserves the unmodified failure and bounded in-memory diagnostic. No package
+source was changed; a separate viewer-owned change is requested but not yet
+authorized. Faceted dense admission now passes at every result station 2..11;
+native 6..11 checks continue. The production
 eighth-input test now fails as intended at 290°, with the positive common
 preserved in the new evidence file. The manifest
 and production restraint declarations remain unchanged.
