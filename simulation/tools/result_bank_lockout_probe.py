@@ -34,7 +34,8 @@ STATIONS = (
 )
 
 
-def station_bench(station, trial=False):
+def station_channel(station, trial=False):
+    """Reuse a source-specific channel declaration in a bench or full trial."""
     channel, upper_name = STATIONS[station-2]
     if trial:
         # A declared child replacement, not an edit of any source class.
@@ -54,6 +55,11 @@ def station_bench(station, trial=False):
             locals()[upper_name] = TrialUpper(travel=Prismatic(axis=(0, 0, -1)))
 
         channel = TrialChannel
+    return channel
+
+
+def station_bench(station, trial=False):
+    channel = station_channel(station, trial)
 
     class ResultStation(AssemblyNode):
         source_station = Count(station, min=station, max=station)

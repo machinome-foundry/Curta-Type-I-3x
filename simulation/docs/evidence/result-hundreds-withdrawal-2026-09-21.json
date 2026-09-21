@@ -1,0 +1,27 @@
+{
+  "model": "simulation.running:OperatingCurta",
+  "project_base": "d05ab82",
+  "framework": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "actions": [
+    {"input": "digit_3", "to": 3},
+    {"input": "crank_rotation", "to": 160},
+    {"input": "digit_3", "to": 0},
+    {"input": "crank_rotation", "to": 190}
+  ],
+  "prepared_shaft_degrees": 149.6,
+  "prepared_complete_upper_bell_clearance_passed": ["native", "faceted"],
+  "final_request": {
+    "expected_status": "blocked",
+    "actual_status": "completed",
+    "actual_crank_degrees": 190.0,
+    "common_mm3": {
+      "native": 0.30868623164229286,
+      "faceted": 0.3235355698386036
+    }
+  },
+  "result": "intentional production missing-stop regression failed",
+  "seconds": 268.120,
+  "log": "_build_checks/result-bank-hundreds-operating-red.log",
+  "log_sha256": "8adf80361e629ec7a932cc5ba9ce24e4de3559bbf94cbd24dd711b9ee9936d56",
+  "scope": "complete hundreds upper/bell interface, not whole-machine clearance"
+}

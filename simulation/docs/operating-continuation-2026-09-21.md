@@ -331,8 +331,29 @@ and [numeric checkpoint](evidence/counter-ones-trial-acceptance-2026-09-21.json)
 
 Its first browser run timed out during the prepared-state screenshot before
 either stop request; that incomplete report is preserved and not accepted.
-A retry with a finite 60 s capture deadline is pending. No Python/browser
-full-bank comparison or ordinary-arithmetic acceptance is claimed for this
+A retry with a finite 60 s capture deadline passes both requests, replay,
+relief/idle and retry with zero page errors; both screenshots were inspected.
+The full 213-coordinate browser banks are preserved in the investigation's
+linked evidence. A fresh Python report/idle run and a separate three-case
+arithmetic run are active. No Python/browser full-bank comparison or
+ordinary-arithmetic acceptance is claimed for this
 isolated counter trial. Higher-counter coarse measurement completes three
 sampled heights, but reveals height-dependent contact windows; higher-counter
 operation remains unimplemented. No whole-project task is closed here.
+
+## Remaining result-bank operating trial
+
+The production hundreds-channel withdrawal now has a full-machine failing
+test: a physically prepared partial shaft is left behind by its selector,
+then the crank completes 190° through **.308686 mm³ native / .323536 mm³
+faceted upper/bell overlap**, instead of stopping. The measured red and the
+unadopted nine-station bound/print trial are recorded in the
+[result-bank operating investigation](result-bank-operating-trial-2026-09-21.md).
+Numeric station-frame/intersection tests pass and a wrong-sign mutation
+fails. The full-root fixture exposed a missing axial normalization at the
+five source stations whose raised raw travel is zero rather than −4.2 mm.
+The corrected law and fixture now pass; all ten complete higher prints match
+their independent benches and all initial bank values match production.
+The trial's hundreds stop test and the production eighth-input red test are
+running. The manifest
+and production restraint declarations remain unchanged.
