@@ -1,7 +1,9 @@
 # Result-bank carry discrepancy under the same physical request
 
-Status: reproduced project failure, not a framework diagnosis or approved fix.
-Tasks 6.2/6.3 remain open. Production mechanics and contact profiles are unchanged.
+Current status: the [paired source-timing fix is integrated locally](source-timing-integration-2026-09-22.md)
+and all four unchanged project reproductions pass. The record below preserves
+the original red evidence and the earlier authority boundary. Tasks 6.2/6.3
+remain open. Production mechanics and contact profiles are unchanged.
 
 ## Resumption after viewer repair — 2026-09-22
 

@@ -1,0 +1,17 @@
+{
+  "project_content": "885267751eb4870d8a3ded51cce96aa471eca34f",
+  "framework_content": "5d5ba18454837b6a0cab951f6ca117c12fb89a0b",
+  "model": "simulation.running:OperatingCurta",
+  "status": "confirmed missing restraint; not acceptance",
+  "log": "_build_checks/higher-counter-partial-input-integrated-2026-09-22.jsonl",
+  "log_sha256": "84b0cc448e95bc763982155d05551a989e979e1e77009a611b558e46373bb882",
+  "coordinates_per_record": 213,
+  "crank_elevation": 0,
+  "rows": [
+    {"input": "reverser_height", "target": -3, "status": "completed", "crank": 0, "shaft": 114, "native_mm3": 0, "faceted_mm3": 0},
+    {"input": "crank_rotation", "target": 180, "status": "completed", "crank": 180, "shaft": 114, "native_mm3": 0, "faceted_mm3": 0},
+    {"input": "crank_rotation", "target": 190, "status": "completed", "crank": 190, "shaft": 147.6, "native_mm3": 0, "faceted_mm3": 0},
+    {"input": "reverser_height", "target": 3.9075, "status": "completed", "crank": 190, "shaft": 147.6, "native_mm3": 0, "faceted_mm3": 0},
+    {"input": "crank_rotation", "target": 200, "status": "completed", "crank": 200, "shaft": 147.6, "native_mm3": 0.3222787564319185, "faceted_mm3": 0.33989275719740286}
+  ]
+}

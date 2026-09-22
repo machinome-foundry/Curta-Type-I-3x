@@ -1,5 +1,11 @@
 # Operating Curta: resumed after interruption
 
+**Latest continuation:** [integrated carry-timing correction](source-timing-integration-2026-09-22.md).
+Both package fixes are now on local main; all four unchanged carry-graph
+regressions pass. That record also recovers the terminal native station-8
+and isolated result-bank arithmetic results. Pending-worker and approval
+statements below describe earlier checkpoints, not the current state.
+
 The pilot requested a status check and continuation of the operating Curta.
 The project is **unfinished**. `simulate-the-curta` is the active, validated
 spec-driven change, with **12/23 tasks complete**. Its planning artifacts

@@ -9,6 +9,31 @@ from simulation.tools.higher_counter_wrong_order import withdrawal_trace, SHAFT,
 
 
 class HigherCounterWrongOrderProbeTest(unittest.TestCase):
+    def test_partial_input_trace_uses_a_higher_counter_tooth_row(self):
+        from simulation.tools.higher_counter_wrong_order import PARTIAL_INPUT_REQUESTS
+
+        class Machine:
+            state = {'crank_rotation': 0, SHAFT: 114}
+            stops = ()
+
+            def __init__(self):
+                self.calls = []
+
+            def move(self, name, *, to):
+                self.calls.append((name, to))
+                if name == 'crank_rotation':
+                    self.state = dict(self.state, crank_rotation=to)
+                return SimpleNamespace(status='completed')
+
+        sim = Machine()
+        rows = list(withdrawal_trace(sim, requests=PARTIAL_INPUT_REQUESTS,
+                                    contacts=lambda sim: {'native': 0, 'faceted': 0}))
+        self.assertEqual(sim.calls, [
+            ('reverser_height', -3), ('crank_rotation', 180),
+            ('crank_rotation', 190), ('reverser_height', 3.9075),
+            ('crank_rotation', 200)])
+        self.assertEqual(len(rows), 5)
+
     def test_real_entry_point_enables_bounded_stop_recording(self):
         factory = Mock(side_effect=RuntimeError('construction intercepted'))
         model = object()

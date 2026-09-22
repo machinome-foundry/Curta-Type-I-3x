@@ -1,5 +1,15 @@
 ## Current checkpoint — resumed 2026-09-22
 
+Latest: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
+is integrated into both local package mains. All four unchanged carry-graph
+tests pass. Native station 8 and the earlier isolated result-bank arithmetic
+batch have terminal passing summaries, recovered in that record. The actual
+root completes the former stopped preparation. A corrected partial-input
+probe exposes a separate counter-tens collision; its new production test is
+red and the isolated trial passes fixture, short/long stop, native/faceted
+contact, replay and relief checks. Full native/adoption gates remain open;
+no geometry or task is waived.
+
 Start with `simulation/docs/resumption-2026-09-22.md`. The operating model is
 unfinished, **12/23 tasks complete**. The T07 tens restraint is now in the
 default root; the older handoff below predates its adoption. The inherited

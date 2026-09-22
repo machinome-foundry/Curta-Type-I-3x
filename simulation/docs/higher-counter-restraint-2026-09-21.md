@@ -1,5 +1,16 @@
 # Higher-counter restraint candidate
 
+**2026-09-22 continuation:** the paired carry-timing fix is integrated, and
+the original seven-request diagnostic completes. It also proves that its
+raised-crank/reversed setting never engaged the higher input. A separate
+single-tooth preparation now exposes a genuine default-root counter-tens
+collision after withdrawal. The new production test is red. The strictly
+isolated full-tree candidate passes its fixture and raised-stack action-order
+tests, including short/long stops, both contact kernels, replay and relief.
+See [the current evidence](source-timing-integration-2026-09-22.md).
+This advances a scoped behavioral experiment without treating the unfinished
+complete native admission matrix as passed or adopting the candidate.
+
 Status: isolated candidate, **lower-edge refinement under verification**.
 The preceding fine-tooth candidate failed complete-print geometry. Not
 installed in `OperatingCurta`, not a geometry certificate and not an adopted
