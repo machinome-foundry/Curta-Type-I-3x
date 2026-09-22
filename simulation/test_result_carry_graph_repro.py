@@ -10,6 +10,7 @@ import unittest
 from machinome.simulation import Sim
 from simulation.result_carry_graph_repro import (
     ResultCarryGraphRepro, ConstrainedResultCarryGraphRepro)
+from simulation.tools.result_carry_graph_scope import result_graph
 
 
 class ResultCarryGraphReproTest(unittest.TestCase):
@@ -32,6 +33,12 @@ class ResultCarryGraphReproTest(unittest.TestCase):
 
     def test_full_result_graph_with_ones_and_tens_contact_observation(self):
         self.check_preparation(ConstrainedResultCarryGraphRepro)
+
+    def test_six_active_result_stations_preserve_the_first_carry(self):
+        self.check_preparation(result_graph(6))
+
+    def test_adding_the_seventh_station_preserves_the_first_carry(self):
+        self.check_preparation(result_graph(7))
 
 
 if __name__ == '__main__':

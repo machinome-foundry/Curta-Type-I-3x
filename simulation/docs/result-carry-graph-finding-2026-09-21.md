@@ -3,6 +3,63 @@
 Status: reproduced project failure, not a framework diagnosis or approved fix.
 Tasks 6.2/6.3 remain open. Production mechanics and contact profiles are unchanged.
 
+## Resumption after viewer repair — 2026-09-22
+
+The unchanged two-test reproduction still fails on framework `e6a42c8`:
+2/2 failures in 285.152 s. With the two contact constraints it stops at
+163.42595046793576°, with tens at 699.2537571367207°. Without them it reaches
+180° but tens remains at 632° instead of 704°. The repaired viewer is not
+involved in either Python reproduction.
+
+`tools/result_carry_graph_scope.py` now measures a family of intermediate
+dependency graphs. All eleven original dials remain; the source shaft and
+lever laws are activated in station order, using the same four unsplit
+requests and no contact constraints. The first carry has the same independent
+ten-tooth expectation in every case:
+
+| Active result stations | Tens shaft at crank 180° | Expected |
+| --- | ---: | ---: |
+| 2 through 6 | 704° | 704° |
+| 7 | 698.4639999999999° | 704° |
+| 8 | 648.5440000000001° | 704° |
+| 9 through 11 | 632° | 704° |
+
+All requests report completed. Every case finishes, and the eleven-station
+bank exactly matches the existing unconstrained reproduction. This narrows
+the first failing prefix to seven active stations; it is not a claim that
+seven is the smallest possible mechanism reproducing the defect, or that
+the framework cause has been established. Activating a later station must
+not discard part of the earlier shaft's measured carry.
+
+Two additional regressions preserve that distinction: the six-station case
+passes; the seven-station case fails the unchanged 704° expectation (20.380 s
+combined). The original full-bank failures remain in place. This is red
+correctness evidence, not acceptance or an expected-failure waiver. The
+[complete banks, source hashes and log hashes](evidence/result-carry-scope-2026-09-22.json)
+also retain a rejected stdin-based probe that never constructed a simulation.
+
+A fresh-process order control runs **7 → 6 → 7** active stations. Its tens
+values are again 698.464°, 704°, 698.464°, and all three complete banks match
+their original census rows exactly. The failure therefore also reproduces
+when seven is the first constructed diagnostic, not only after the smaller
+prefixes. Reproduce this control with
+`python -m simulation.tools.result_carry_graph_scope --stations 7 --stations 6 --stations 7`.
+
+Reproduce with the workspace Python and framework on `PYTHONPATH`:
+
+```sh
+python -m simulation.tools.result_carry_graph_scope
+python -m unittest simulation.test_result_carry_graph_repro -v
+```
+
+A fresh framework cycle was not opened: primary main `e6a42c8` contains
+unrelated untracked `docs/examples/v8-engine/`, and the shop's framework-change
+skill requires a clean selected base. The pilot was asked whether to permit
+an isolated bench from committed main while preserving that directory.
+No framework, viewer, default operating model or upstream CAD changed in this
+resumption. Independent native result-station validation is separate from
+this correctness gate.
+
 ## Actual operating failure
 
 The counter-tens withdrawal diagnostic cannot reach its intended preparation.
