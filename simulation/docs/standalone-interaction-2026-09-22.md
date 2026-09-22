@@ -57,3 +57,13 @@ test rejects 359.9999, then all four report tests pass. The button case is
 running with an explicit 600-second observation deadline because normal
 default-timestep execution is still slow. That deadline does not change
 the simulated timestep or instruction duration. It is not yet a passing case.
+
+The physical one-revolution click subsequently passes with observed exit zero.
+The actual crank-bearing part at (842.025, 200) receives a press/release,
+without a drag or an instruction-panel click. The instruction outcome is
+completed, crank rotation reads exactly 360.0000 degrees, other visible input
+readouts remain unchanged, and no page error occurs. The screenshot is
+inspected. Report `standalone-crank-revolution-7a620d9.json` has SHA-256
+`60ade952592bdd867e5f0fc6a4596d0fe43353cc45a665987138d0eed35d87a8`.
+This proves the click reaches its specified visible endpoint at the default
+timestep, not that the two simulated seconds execute in two wall-clock seconds.
