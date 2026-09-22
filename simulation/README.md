@@ -19,6 +19,11 @@ current-export pointer/performance gates.
 The [clearing-cover/counter-body seat](docs/clearing-carrier-seat-2026-09-22.md)
 is also adopted, with three passing production checks per runner and an
 inspected native-clear section. Whole-machine contacts remain unresolved.
+The [lower-frame seats](docs/lower-frame-seat-2026-09-22.md) now pass six
+production checks and five enclosure regressions per kernel. The paired
+full-precision rest survey changes from 262 to 259 positive pairs, adding none;
+the [world-mesh precision finding](docs/mesh-probe-precision-2026-09-22.md)
+explains why the earlier float32-world count is not a sufficient clearance gate.
 The [remaining result-bank adoption](docs/result-bank-adoption-2026-09-22.md)
 adds the measured station 3..11 fits and crank restraint, with passing
 production contact, short/long withdrawal, replay and fixture checks. Fresh

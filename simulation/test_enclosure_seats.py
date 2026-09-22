@@ -43,6 +43,13 @@ class EnclosureSeatTest(TestCase):
         source = Enclosure()
         source.assemble()
         source.build_stls()
+        # The later bounded lower-frame fit changes this one print's mesh,
+        # not its datum. Its independent source-removal proof lives in
+        # test_lower_frame_seat; compare placement with that fitted local print.
+        from simulation.lower_frame_parts import SeatedLowerHousing
+        fitted_lower = SeatedLowerHousing()
+        fitted_lower.assemble()
+        fitted_lower.build_stls()
         for path in ('lower_housing_1.lower_housing', 'lower_housing_1.bottom_housing',
                      'base_plate', 'm4x10_419010_6', 'm5x30_countersunk_1',
                      'm5x30_countersunk_2', 'upper_outer_sleeve', 'cover_ring',
@@ -50,6 +57,8 @@ class EnclosureSeatTest(TestCase):
             first, second = source, self.node
             for name in path.split('.'):
                 first, second = getattr(first, name), getattr(second, name)
+            if path == 'lower_housing_1.bottom_housing':
+                first = fitted_lower.bottom_housing
             lower = path.startswith(('lower_housing_1', 'base_plate', 'm4x10', 'm5x30'))
             z = -.05 if path.startswith(('base_plate', 'm5x30')) else 0
             delta = (.406900356, -.745841949, z) if lower else (0, 0, 0)

@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-22",
+  "project_base": "a68c083",
+  "framework": "6dc07a8",
+  "scope": "Production lower-shell upper key flank and lower bearing shoulder",
+  "source_sha256": {
+    "simulation/running_parts.py": "791afdd3cb3e1b95ef5522eaccc694038b7c478663f3105b1186381f68225086",
+    "simulation/lower_frame_parts.py": "3b33e3da2f0a9534ca472e49db55112e22056738634983da4a06391a94363150",
+    "simulation/lower_frame_seat.py": "a685cf5efd6df71981d419141514472fa025cbbfd18b5e66596b6fd57358f9c5",
+    "simulation/test_lower_frame_seat.py": "ef2ff2e39c7b415248ffdc7c1eff2ac49096b1dc2d7a99f23f1c851cec2c0c7e",
+    "simulation/tools/lower_frame_contact.py": "30e6f0f39d4107ca60f325ef2ddc189dcf732888259fb6bf307b5d0b867f07a4"
+  },
+  "production_tests": [
+    {
+      "path": "_build_checks/lower-frame-seat-production-exact.log",
+      "sha256": "908c1bdb27a3a615db0590b79fb5e6c4b84ab3c5d3f65f989414130baaf7c139",
+      "exit": 0,
+      "summary": "6 passed in 23.61s"
+    },
+    {
+      "path": "_build_checks/lower-frame-seat-production-faceted.log",
+      "sha256": "3577af718b0ba21ad0f83bbb2f21f9c96f53a2e3a8ae480fc238608bad14ae0e",
+      "exit": 0,
+      "summary": "6 passed in 22.06s, zero volume epsilon"
+    }
+  ],
+  "neighbour_regressions": [
+    {"path": "_build_checks/lower-frame-enclosure-regression-exact.log", "exit": 0, "summary": "5 passed in 25.28s"},
+    {"path": "_build_checks/lower-frame-enclosure-regression-faceted.log", "exit": 0, "summary": "5 passed in 17.53s"}
+  ],
+  "rest_inventory": {
+    "world_precision_bits": 64,
+    "before": {"path": "_build_checks/lower-frame-before-world64.json", "sha256": "799905c20419702666461428055b8f629a5c561fd6932d6452b2ff3320b0919d", "exit": 0, "positive_pairs": 262},
+    "after": {"path": "_build_checks/lower-frame-production-world64.json", "sha256": "81900340fbd7898dfd322f4d8807bf948b8edbb8e684d95ac8208809c8561ca1", "exit": 0, "positive_pairs": 259},
+    "added": [],
+    "refusals": {},
+    "removed": [
+      "Curta.enclosure.lower_housing_1.bottom_housing / Curta.frame.lower_bearing_plate.bearing_plate",
+      "Curta.enclosure.lower_housing_1.bottom_housing / Curta.frame.upper_frame.main_body",
+      "Curta.enclosure.lower_housing_1.lower_housing / Curta.enclosure.lower_housing_1.bottom_housing"
+    ]
+  },
+  "inspected_image": {
+    "path": "_build_checks/lower-frame-contact-production-2026-09-22.png",
+    "sha256": "8d0045c43d5501438a6402ccf880f4d9b7177f8c79521f3eca23adb3ea3620cb",
+    "native_and_world64_commons_mm3": [0, 0],
+    "coordinates": 213,
+    "bank_unchanged": true
+  },
+  "limits": [
+    "Earlier world-float32 probe lost the positive bearing mesh thickness; no framework assertion was relaxed.",
+    "The third removed raw pair is a tessellation change, not a newly claimed physical seat.",
+    "259 other positive pairs, whole-machine controls and final operation remain open."
+  ]
+}

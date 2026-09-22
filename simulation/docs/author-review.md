@@ -117,6 +117,19 @@ bounded removal/connectivity and an unchanged initial bank. The refreshed
 rest inventory loses only this pair and adds none. This is a simulation fit,
 not a manufacturing instruction or whole-machine clearance certificate.
 
+## Lower housing key and bearing seats — F23
+
+The [lower-frame continuation](lower-frame-seat-2026-09-22.md) retains the
+concentric source datums while relieving the upper key flank's measured
+.39 mm crossing plus .05 mm clearance. Its bounded local cutter is capped
+at R64.4805 and Z128.2..132.1; the deeper key and outer wall remain. A separate
+.05 mm facing of the Z12 bearing shoulder inside R64.111 establishes a real
+seat gap where local-STL rounding otherwise overlaps native-flush faces.
+Production checks pass 6/6 per kernel; the five original enclosure regressions
+also pass per kernel. Both seats retain .1 mm blocking capture. Full world64
+rest inventory adds no pair; other contacts are not waived. No upstream asset
+changes and this is not a manufacturing recommendation.
+
 ## Remaining result locking outlines — F22
 
 The [production bank continuation](result-bank-adoption-2026-09-22.md) adopts

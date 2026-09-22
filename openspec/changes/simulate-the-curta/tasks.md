@@ -19,6 +19,11 @@ now passes production contact, installed-print, short/long withdrawal and
 replay checks. Fresh browser stopped/relieved banks match Python exactly;
 expanded-root arithmetic and full pointer checks remain open. No task checkbox
 changes.
+The [lower-frame seat continuation](../../../simulation/docs/lower-frame-seat-2026-09-22.md)
+passes 6/6 production and 5/5 neighbouring enclosure checks per kernel. The
+paired world64 rest survey changes 262→259 positive pairs with no added pair;
+the older world32 inventory is not directly comparable. Whole-machine task
+1.3 remains open, with no positive common waived.
 
 Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph

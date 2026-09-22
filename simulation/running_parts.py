@@ -22,6 +22,7 @@ from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
 from simulation.counter_lockout_parts import ContactCounterOnes
 from simulation.result_bank_lockout_parts import contact_result_channel
+from simulation.lower_frame_parts import SeatedLowerHousing
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 from simulation.reverser_following import FollowingReverser
 from simulation.reverser_seat_trial import TrialKnob
@@ -101,6 +102,7 @@ class RunningClearingAssembly(ClearingAssembly):
 
 class RunningEnclosure(assemblies.Enclosure):
     decimal_markers = LowerMovableMarkers()
+    lower_housing_1 = SeatedLowerHousing()
 
     def render(self):
         super().render()
