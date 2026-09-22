@@ -130,3 +130,32 @@ evaluation work and the mechanical/pointer gates remain open.
 
 The original source assets, untracked assembly video and untracked
 `screenshots/reverser_inspection.png` are preserved.
+# Later ancestry and performance recheck
+
+All Curta project branches are ancestors of project main at `b531b13`.
+The framework's older branch names that still appear under `--no-merged`
+were independently audited rather than merged blindly:
+
+- `direct-part-motion`: original planning `33206cd` and implementation
+  `53bd983` entered main through `1aac0ff`. Tip `67003f6` is superseded
+  follow-on planning, recreated on the clean hardening line as `8a59ff0`
+  with identical delta specs/tasks and base-related proposal/design wording.
+  Hardened implementation `d1108a4` entered main through `c81a585`, with
+  archived evidence, baseline specs and tests. No missing implementation or
+  requirement remains on the old tip.
+- `curta-running-performance-wart`: `f21c46e` is patch-identical to
+  `f310a3c` already on main. The differing ancestry is not missing work.
+
+The later framework optimizations are integrated through `4bff28e`, and viewer
+through `6da0003`; concurrent unrelated CI/package commits were preserved.
+Each change used its owning repository's isolated worktree and OpenSpec cycle.
+The Bound-read path-demand fix preserves every tested searched level, stop and
+213-coordinate state. Framework's relevant gate passes 827 tests, final
+focused gate 142 and strict specs 34; full discovery ran 3,626 tests with 53
+geometry/build-file errors still unclassified as a group. That full suite is
+not called green. Viewer broad testing likewise retains its two host-sensitive
+throughput failures, beside green focused and exact-state gates.
+
+The remaining older framework branches unrelated to Curta were not merged or
+modified. No branch/worktree was deleted, nothing was pushed, and the pilot's
+untracked framework example directory and project assets remain untouched.
