@@ -73,3 +73,25 @@ The new station-2 run replaces the earlier incomplete process-supervisor
 evidence, not its retained historical log. Native results do not settle the
 world64 intermediate-height failure; the explicit lower-support correction
 and its separate gates above remain necessary.
+
+## Corrected support matrix completed
+
+The revised lower-support law completes the 30-height/18-shaft matrix on
+every higher counter with full-precision placed meshes: stations 2/3/4 each
+admit 5,244 sampled poses, station 5 admits 5,720 and station 6 admits 5,746.
+All **27,198** admitted poses have zero complete-print common, and every
+process exits zero. Native counter tens also completes 5,244 admitted checks
+with zero common and observed exit zero. Each station is independently posed
+in its source frame; it is not a rotated copy of the tens print. The
+[support matrix](evidence/counter-bank-support-clearance-2026-09-22.json)
+pins the shifted shaft grids, source hashes and complete summaries.
+
+On project `a5f6be3` / framework `acebc48`, the corrected counter-tens
+withdrawal and full-root fixture checks pass 2/2 (395.800 s, observed exit
+zero), retaining the prior stop values. Its new full-bank Python report is
+`_build_checks/counter-tens-clearance-python-a5f6be3.json`. The corresponding
+arithmetic and browser runs are still pending at this checkpoint. The first
+browser attempt prepared successfully but timed out taking a screenshot at
+60 seconds under concurrent load; its pending report and failed log are
+preserved, and a separate-output retry is running. That failure is not a
+passing browser result or established viewer defect.
