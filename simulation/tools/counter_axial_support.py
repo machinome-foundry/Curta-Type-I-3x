@@ -13,14 +13,15 @@ import math
 from simulation.tools.counter_lockout_probe import station_reader
 
 
-def axial_boundary(station, shaft, crank, *, trial=False):
+def axial_boundary(station, shaft, crank, *, trial=False, world_precision=64):
     if station not in range(2, 7):
         raise ValueError('axial support requires a sliding counter station 2..6')
     readers = {}
 
     def at(carry, kernel):
         if carry not in readers:
-            readers[carry] = station_reader(station, carry, shaft, reference=crank, trial=trial)
+            readers[carry] = station_reader(station, carry, shaft, reference=crank, trial=trial,
+                                            world_precision=world_precision)
         volume = readers[carry](crank, kernel)
         if not math.isfinite(volume):
             raise ValueError('non-finite common in axial measurement')
@@ -41,6 +42,7 @@ def axial_boundary(station, shaft, crank, *, trial=False):
             else:
                 left = middle
         yield {'station': station, 'shaft': shaft, 'crank': crank, 'trial': trial,
+               'world_precision_bits': world_precision,
                'kernel': kernel, 'samples': samples, 'enters_contact': enters,
                'left': left, 'right': right, 'left_mm3': at(left, kernel),
                'right_mm3': at(right, kernel),
@@ -53,8 +55,10 @@ def main():
     parser.add_argument('--shaft', type=float, required=True)
     parser.add_argument('--crank', type=float, required=True)
     parser.add_argument('--trial', action='store_true')
+    parser.add_argument('--world-precision', type=int, choices=(32, 64), default=64)
     args = parser.parse_args()
-    for record in axial_boundary(args.station, args.shaft, args.crank, trial=args.trial):
+    for record in axial_boundary(args.station, args.shaft, args.crank, trial=args.trial,
+                                 world_precision=args.world_precision):
         print(json.dumps(record), flush=True)
     print(json.dumps({'complete': True, 'station': args.station,
                       'shaft': args.shaft, 'crank': args.crank, 'kernels': 2}), flush=True)

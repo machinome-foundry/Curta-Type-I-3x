@@ -9,6 +9,18 @@ from simulation.higher_counter_locking_laws import higher_counter_contact_gap
 
 
 class HigherCounterLockingLawTest(unittest.TestCase):
+    def test_world64_lower_support_contacts_are_refused(self):
+        data = json.loads((Path(__file__).parent/'docs/evidence/'
+                           'higher-counter-world64-support-rejection-2026-09-22.json').read_text())
+        self.assertEqual(data['summary']['failures'], 96)
+        self.assertEqual(data['header']['world_precision_bits'], 64)
+        self.assertEqual(len(data['admitted_collisions']), 96)
+        for row in data['admitted_collisions']:
+            self.assertGreater(row['common_mm3'], 0)
+            with self.subTest(shaft=row['shaft'], crank=row['crank']):
+                self.assertGreater(higher_counter_contact_gap(
+                    row['crank'], row['shaft'], -1.8+4.2*row['carry']), 0)
+
     def test_measured_complete_print_collisions_are_refused(self):
         data = json.loads((Path(__file__).parent/'docs/evidence/'
                            'higher-counter-fine-profile-rejection-2026-09-21.json').read_text())

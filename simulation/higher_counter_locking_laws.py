@@ -12,6 +12,13 @@ from simulation.counter_locking_laws import counter_contact_gap, CONTACT_STANDOF
 from simulation.higher_counter_locking_profiles import LOWER_LOCK_SECTORS, CARRY_TOOTH_STRIPS
 
 
+# The exported lower-disc face is z=-8.399999618530272, outside its native
+# -8.4 mm face. World64 checks found positive contact before travel=-.6.
+# Refuse the lower sector 0.001 mm before that nominal axial support: a real
+# clearance (the measured free-side probe), never a common-volume tolerance.
+LOWER_LOCK_AXIAL_STANDOFF = .001
+
+
 def higher_counter_contact_gap(crank, shaft, travel):
     shaft = phase(shaft-114)+114
     gap = min(counter_contact_gap(crank-20, shaft+20), .9-travel)
@@ -21,7 +28,8 @@ def higher_counter_contact_gap(crank, shaft, travel):
         closing = piecewise(shaft, [(p[0], p[2]) for p in points])
         contact = min(min(crank-closing+CONTACT_STANDOFF,
                           opening+360+CONTACT_STANDOFF-crank),
-                      min(min(shaft-start, end-shaft), travel+.6))
+                      min(min(shaft-start, end-shaft),
+                          travel+.6+LOWER_LOCK_AXIAL_STANDOFF))
         gap = max(gap, contact)
     for start, end, points in CARRY_TOOTH_STRIPS:
         entering = piecewise(shaft, [(p[0], p[1]) for p in points])

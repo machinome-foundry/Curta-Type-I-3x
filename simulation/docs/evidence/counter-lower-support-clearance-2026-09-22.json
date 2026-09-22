@@ -1,0 +1,273 @@
+{
+  "date": "2026-09-22",
+  "status": "unadopted candidate correction; revised operating acceptance still owed",
+  "axial_standoff_mm": 0.001,
+  "reason": "Placed STL lower-disc face -8.399999618530272 exceeds native -8.4; begin refusal at travel -0.601, with genuine complete-print clearance and no volume epsilon",
+  "red": {
+    "tests": 6,
+    "failures": 96,
+    "exit": 1
+  },
+  "green": {
+    "tests": 15,
+    "seconds": 32.67,
+    "exit": 0
+  },
+  "faceted_support": {
+    "world_precision_bits": 64,
+    "admitted_checks": 5244,
+    "failures": 0,
+    "exit": 0
+  },
+  "files": {
+    "_build_checks/counter-world64-support-law-red-2026-09-22.log": "dd2e8c807c24906033de4619922d0daa28796f2f7ca8f8ff3fb287e0c2aee045",
+    "_build_checks/counter-world64-support-law-and-harness-2026-09-22.log": "769d01b10a132a4f550796b5ba6d061ae7932ef3f0fd8abcb351c1d39f34afa3",
+    "_build_checks/counter-2-support-clearance-world64-faceted-2026-09-22.log": "d01a40f5e6a4747bb237c5d4ae722a26b4f25866d35b843eb68b03b0821eea28",
+    "_build_checks/counter-lower-support-world64-bracket-2026-09-22.log": "8c3120245fb9b5c257c6d6c5ea8233867c858d6905b14d4adfb4137aca3489f4",
+    "_build_checks/counter-lower-support-clearance-poses-2026-09-22.json": "3fed6233705c8a4c648ecb61e485395e8f764c6ee8d5e4dde89311ee3cfafbcb"
+  },
+  "pose_measurements": {
+    "world_precision_bits": 64,
+    "rows": [
+      {
+        "carry": 0.28523809523809524,
+        "travel": -0.6020000000000001,
+        "crank": 94,
+        "shaft": 156,
+        "candidate_gap": -0.0010000000000001128,
+        "complete_mm3": {
+          "native": 0,
+          "faceted": 0
+        }
+      },
+      {
+        "carry": 0.2854761904761905,
+        "travel": -0.601,
+        "crank": 94,
+        "shaft": 156,
+        "candidate_gap": -8.673617379884035e-19,
+        "complete_mm3": {
+          "native": 0,
+          "faceted": 0
+        }
+      },
+      {
+        "carry": 0.2857142686843872,
+        "travel": -0.6000000715255738,
+        "crank": 94,
+        "shaft": 156,
+        "candidate_gap": 0.000999928474426203,
+        "complete_mm3": {
+          "native": 0,
+          "faceted": 1.588931372812175e-7
+        }
+      },
+      {
+        "carry": 0.28571428571428575,
+        "travel": -0.5999999999999999,
+        "crank": 94,
+        "shaft": 156,
+        "candidate_gap": 0.001000000000000111,
+        "complete_mm3": {
+          "native": 0,
+          "faceted": 1.9556078488624247e-7
+        }
+      },
+      {
+        "carry": 0.28595238095238096,
+        "travel": -0.599,
+        "crank": 94,
+        "shaft": 156,
+        "candidate_gap": 0.002000000000000001,
+        "complete_mm3": {
+          "native": 0.000508437033764138,
+          "faceted": 0.0005128463922876502
+        }
+      }
+    ]
+  },
+  "boundary_measurements": [
+    {
+      "station": 2,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "world_precision_bits": 64,
+      "kernel": "native",
+      "samples": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0625,
+          0
+        ],
+        [
+          0.125,
+          0
+        ],
+        [
+          0.1875,
+          0
+        ],
+        [
+          0.25,
+          0
+        ],
+        [
+          0.3125,
+          0.05719916629849685
+        ],
+        [
+          0.375,
+          0.19066388766165743
+        ],
+        [
+          0.4375,
+          0.3241286090248172
+        ],
+        [
+          0.5,
+          0.4575933303879778
+        ],
+        [
+          0.5625,
+          0.5910580517511377
+        ],
+        [
+          0.625,
+          0.7245227731142975
+        ],
+        [
+          0.6875,
+          0.7626555679217524
+        ],
+        [
+          0.75,
+          0.7626555679217523
+        ],
+        [
+          0.8125,
+          0.7626555679217524
+        ],
+        [
+          0.875,
+          0.7245227903894595
+        ],
+        [
+          0.9375,
+          0.5910580690263
+        ],
+        [
+          1,
+          0.45759334766313947
+        ]
+      ],
+      "enters_contact": true,
+      "left": 0.28571438789367676,
+      "right": 0.28571444749832153,
+      "left_mm3": 0,
+      "right_mm3": 2.429840991327602e-7,
+      "travel_bracket": [
+        -0.5999995708465575,
+        -0.5999993205070495
+      ]
+    },
+    {
+      "station": 2,
+      "shaft": 156,
+      "crank": 94,
+      "trial": true,
+      "world_precision_bits": 64,
+      "kernel": "faceted",
+      "samples": [
+        [
+          0,
+          0
+        ],
+        [
+          0.0625,
+          0
+        ],
+        [
+          0.125,
+          0
+        ],
+        [
+          0.1875,
+          0
+        ],
+        [
+          0.25,
+          0
+        ],
+        [
+          0.3125,
+          0.057672935771829956
+        ],
+        [
+          0.375,
+          0.19223681731330702
+        ],
+        [
+          0.4375,
+          0.32678752299649827
+        ],
+        [
+          0.5,
+          0.461318886241071
+        ],
+        [
+          0.5625,
+          0.5958247204714663
+        ],
+        [
+          0.625,
+          0.7302944177897867
+        ],
+        [
+          0.6875,
+          0.7685866706838117
+        ],
+        [
+          0.75,
+          0.7683602960268833
+        ],
+        [
+          0.8125,
+          0.7680483090054943
+        ],
+        [
+          0.875,
+          0.7293312970662117
+        ],
+        [
+          0.9375,
+          0.5948341586731328
+        ],
+        [
+          1,
+          0.46037842425516634
+        ]
+      ],
+      "enters_contact": true,
+      "left": 0.28571414947509766,
+      "right": 0.28571420907974243,
+      "left_mm3": 0,
+      "right_mm3": 3.055637274649997e-8,
+      "travel_bracket": [
+        -0.6000005722045898,
+        -0.6000003218650818
+      ]
+    },
+    {
+      "complete": true,
+      "station": 2,
+      "shaft": 156,
+      "crank": 94,
+      "kernels": 2
+    }
+  ],
+  "source_sha256": "4ed59d07545f0209e33627932d9790f9a37bfa674c40a3db6e2f774e966d327a"
+}

@@ -9,8 +9,9 @@ from simulation.tools.counter_axial_support import axial_boundary
 class CounterAxialSupportTest(unittest.TestCase):
     def test_entry_and_exit_keep_free_and_contact_endpoint_measurements(self):
         for entering in (False, True):
-            def reader(station, carry, shaft, reference=0, trial=False):
+            def reader(station, carry, shaft, reference=0, trial=False, *, world_precision):
                 self.assertEqual((station, shaft, reference, trial), (2, 156, 94, True))
+                self.assertEqual(world_precision, 64)
                 def volume(crank, kernel):
                     self.assertEqual(crank, 94)
                     boundary = .3 if kernel == 'native' else .3001
@@ -21,6 +22,7 @@ class CounterAxialSupportTest(unittest.TestCase):
                 rows = list(axial_boundary(2, 156, 94, trial=True))
             self.assertEqual(len(rows), 2)
             for row in rows:
+                self.assertEqual(row['world_precision_bits'], 64)
                 boundary = .3 if row['kernel'] == 'native' else .3001
                 with self.subTest(kernel=row['kernel'], entering=entering):
                     self.assertEqual(row['enters_contact'], entering)
@@ -42,7 +44,8 @@ class CounterAxialSupportTest(unittest.TestCase):
             list(axial_boundary(1, 134, 94, trial=True))
 
     def test_rejects_multiple_sampled_transitions(self):
-        def reader(station, carry, shaft, reference=0, trial=False):
+        def reader(station, carry, shaft, reference=0, trial=False, *, world_precision):
+            self.assertEqual(world_precision, 64)
             return lambda crank, kernel: 1e-20 if .2 < carry < .4 or carry > .8 else 0
         with patch('simulation.tools.counter_axial_support.station_reader', reader):
             with self.assertRaisesRegex(ValueError, 'got 3'):
