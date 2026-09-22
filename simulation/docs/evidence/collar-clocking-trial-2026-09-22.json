@@ -1,0 +1,511 @@
+{
+  "status": "isolated pin/thread acceptance; full-root trial red and unadopted",
+  "project_parent_commit": "201d5b2",
+  "framework_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "isolated_contracts": {
+    "faceted": {
+      "passed": 6,
+      "failed": 0,
+      "elapsed_s": 0.66
+    },
+    "exact": {
+      "passed": 6,
+      "failed": 0,
+      "elapsed_s": 0.81
+    }
+  },
+  "final_trial_contracts": {
+    "exact": {
+      "passed": 2,
+      "failed": 2,
+      "elapsed_s": 37.44
+    },
+    "passing": [
+      "initial bank equals default root",
+      "independent fixture meshes match"
+    ],
+    "failing": [
+      "all rigid rest neighbours",
+      "moving interfaces (fails before travel)"
+    ],
+    "main_body_reported_common_mm3": 5.5364280329967165e-06,
+    "washer_reported_common_mm3": 4.884981308350689e-15
+  },
+  "rest_probe": [
+    {
+      "scope": "unadopted collar trial; all rigid rest neighbours",
+      "rigid_occurrences": 389,
+      "coordinates": 213
+    },
+    {
+      "pair": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.frame.upper_frame.main_body"
+      ],
+      "precision": "float32",
+      "raw_signed_mm3": -1.1809571843333667e-15,
+      "spatial_mm3": 0.0,
+      "bounds": [
+        -14.799703598022461,
+        -14.799795150756836,
+        7.800000190734863,
+        14.172904968261719,
+        13.672327041625977,
+        7.800000190734863
+      ],
+      "extent_mm": [
+        28.97260856628418,
+        28.472122192382812,
+        0.0
+      ]
+    },
+    {
+      "pair": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.frame.upper_frame.main_body"
+      ],
+      "precision": "float64",
+      "raw_signed_mm3": 3.4720815966530115e-05,
+      "spatial_mm3": 3.4720815966530115e-05,
+      "bounds": [
+        -14.799703784696188,
+        -14.799795341463136,
+        7.799999999990281,
+        14.172905310071274,
+        13.672327041625977,
+        7.800000190734863
+      ],
+      "extent_mm": [
+        28.972609094767463,
+        28.472122383089115,
+        1.9074458190715404e-07
+      ]
+    },
+    {
+      "pair": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.carrier.crank_collar_washer"
+      ],
+      "precision": "float32",
+      "raw_signed_mm3": -3.1086244689504383e-15,
+      "spatial_mm3": 0.0,
+      "bounds": [
+        -19.620608245631985,
+        18.470721157312884,
+        60.29999923706055,
+        -17.473054614876297,
+        20.784949905839483,
+        60.29999923706055
+      ],
+      "extent_mm": [
+        2.147553630755688,
+        2.314228748526599,
+        0.0
+      ]
+    },
+    {
+      "pair": [
+        "Curta.carriage.registers.carrier.crank_collar",
+        "Curta.carriage.registers.carrier.crank_collar_washer"
+      ],
+      "precision": "float64",
+      "raw_signed_mm3": -5.329070518200751e-15,
+      "spatial_mm3": 0.0,
+      "bounds": [
+        -19.620607335280503,
+        18.47071955264044,
+        60.3,
+        -17.473052058302294,
+        20.784949983434277,
+        60.3
+      ],
+      "extent_mm": [
+        2.14755527697821,
+        2.314230430793838,
+        0.0
+      ]
+    },
+    {
+      "complete": true,
+      "pairs_considered": 775,
+      "bank_unchanged": true
+    }
+  ],
+  "nut_phase_survey": [
+    {
+      "scope": "measuring copies only; no placement mutation",
+      "source_bench": false,
+      "nut_phase_bench": true,
+      "collar_bounds": [
+        [
+          -28.5,
+          -28.5,
+          7.799999999990281
+        ],
+        [
+          28.5,
+          28.5,
+          66.3
+        ]
+      ],
+      "pin_bounds": [
+        [
+          [
+            -22.25499999523163,
+            -1.245849609375,
+            37.5
+          ],
+          [
+            -19.74500000476837,
+            1.245849609375,
+            49.5
+          ]
+        ],
+        [
+          [
+            19.74500000476837,
+            -1.245849609375,
+            37.5
+          ],
+          [
+            22.25499999523163,
+            1.245849609375,
+            49.5
+          ]
+        ]
+      ]
+    },
+    {
+      "nut_yaw_delta_deg": 0,
+      "overlap_mm3": 154.14850373200525
+    },
+    {
+      "nut_yaw_delta_deg": 5,
+      "overlap_mm3": 141.42498583756588
+    },
+    {
+      "nut_yaw_delta_deg": 10,
+      "overlap_mm3": 128.30196212639243
+    },
+    {
+      "nut_yaw_delta_deg": 15,
+      "overlap_mm3": 114.81679594195158
+    },
+    {
+      "nut_yaw_delta_deg": 20,
+      "overlap_mm3": 101.19531961800034
+    },
+    {
+      "nut_yaw_delta_deg": 25,
+      "overlap_mm3": 87.54910611119767
+    },
+    {
+      "nut_yaw_delta_deg": 30,
+      "overlap_mm3": 73.87934397520782
+    },
+    {
+      "nut_yaw_delta_deg": 35,
+      "overlap_mm3": 60.19594947036048
+    },
+    {
+      "nut_yaw_delta_deg": 40,
+      "overlap_mm3": 46.50841754737964
+    },
+    {
+      "nut_yaw_delta_deg": 45,
+      "overlap_mm3": 32.81892449325912
+    },
+    {
+      "nut_yaw_delta_deg": 50,
+      "overlap_mm3": 19.127562668977596
+    },
+    {
+      "nut_yaw_delta_deg": 55,
+      "overlap_mm3": 6.84031818090208
+    },
+    {
+      "nut_yaw_delta_deg": 60,
+      "overlap_mm3": 0.8688866914722242
+    },
+    {
+      "nut_yaw_delta_deg": 65,
+      "overlap_mm3": 0.000791728771503544
+    },
+    {
+      "nut_yaw_delta_deg": 70,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 75,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 80,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 85,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 90,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 95,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 100,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 105,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 110,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 115,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 120,
+      "overlap_mm3": 0.0
+    },
+    {
+      "nut_yaw_delta_deg": 125,
+      "overlap_mm3": 0.16321231521151383
+    },
+    {
+      "nut_yaw_delta_deg": 130,
+      "overlap_mm3": 4.048039584630553
+    },
+    {
+      "nut_yaw_delta_deg": 135,
+      "overlap_mm3": 15.497719144433496
+    },
+    {
+      "nut_yaw_delta_deg": 140,
+      "overlap_mm3": 29.229863133759466
+    },
+    {
+      "nut_yaw_delta_deg": 145,
+      "overlap_mm3": 42.98034066388645
+    },
+    {
+      "nut_yaw_delta_deg": 150,
+      "overlap_mm3": 56.73610957554326
+    },
+    {
+      "nut_yaw_delta_deg": 155,
+      "overlap_mm3": 70.48662155367586
+    },
+    {
+      "nut_yaw_delta_deg": 160,
+      "overlap_mm3": 84.21899384980712
+    },
+    {
+      "nut_yaw_delta_deg": 165,
+      "overlap_mm3": 97.9283293972195
+    },
+    {
+      "nut_yaw_delta_deg": 170,
+      "overlap_mm3": 111.61617443376606
+    },
+    {
+      "nut_yaw_delta_deg": 175,
+      "overlap_mm3": 125.28479874652652
+    },
+    {
+      "nut_yaw_delta_deg": 180,
+      "overlap_mm3": 138.93588115188376
+    },
+    {
+      "nut_yaw_delta_deg": 185,
+      "overlap_mm3": 152.46059704222145
+    },
+    {
+      "nut_yaw_delta_deg": 190,
+      "overlap_mm3": 165.59494236448742
+    },
+    {
+      "nut_yaw_delta_deg": 195,
+      "overlap_mm3": 178.2589494691165
+    },
+    {
+      "nut_yaw_delta_deg": 200,
+      "overlap_mm3": 190.2198173766341
+    },
+    {
+      "nut_yaw_delta_deg": 205,
+      "overlap_mm3": 201.37706892278294
+    },
+    {
+      "nut_yaw_delta_deg": 210,
+      "overlap_mm3": 211.73364243845256
+    },
+    {
+      "nut_yaw_delta_deg": 215,
+      "overlap_mm3": 221.28330408514185
+    },
+    {
+      "nut_yaw_delta_deg": 220,
+      "overlap_mm3": 230.01799475896797
+    },
+    {
+      "nut_yaw_delta_deg": 225,
+      "overlap_mm3": 237.93729895000428
+    },
+    {
+      "nut_yaw_delta_deg": 230,
+      "overlap_mm3": 245.0461006747251
+    },
+    {
+      "nut_yaw_delta_deg": 235,
+      "overlap_mm3": 251.34910688789319
+    },
+    {
+      "nut_yaw_delta_deg": 240,
+      "overlap_mm3": 256.8485281568698
+    },
+    {
+      "nut_yaw_delta_deg": 245,
+      "overlap_mm3": 261.5464669340813
+    },
+    {
+      "nut_yaw_delta_deg": 250,
+      "overlap_mm3": 265.44898551824997
+    },
+    {
+      "nut_yaw_delta_deg": 255,
+      "overlap_mm3": 268.56253950163756
+    },
+    {
+      "nut_yaw_delta_deg": 260,
+      "overlap_mm3": 270.8896266832343
+    },
+    {
+      "nut_yaw_delta_deg": 265,
+      "overlap_mm3": 272.4279093739875
+    },
+    {
+      "nut_yaw_delta_deg": 270,
+      "overlap_mm3": 273.17550899474685
+    },
+    {
+      "nut_yaw_delta_deg": 275,
+      "overlap_mm3": 273.130238851553
+    },
+    {
+      "nut_yaw_delta_deg": 280,
+      "overlap_mm3": 272.2928704019
+    },
+    {
+      "nut_yaw_delta_deg": 285,
+      "overlap_mm3": 270.6672543872219
+    },
+    {
+      "nut_yaw_delta_deg": 290,
+      "overlap_mm3": 268.2574127206759
+    },
+    {
+      "nut_yaw_delta_deg": 295,
+      "overlap_mm3": 265.06728694981314
+    },
+    {
+      "nut_yaw_delta_deg": 300,
+      "overlap_mm3": 261.1001078807204
+    },
+    {
+      "nut_yaw_delta_deg": 305,
+      "overlap_mm3": 256.3565524953046
+    },
+    {
+      "nut_yaw_delta_deg": 310,
+      "overlap_mm3": 250.83232758275707
+    },
+    {
+      "nut_yaw_delta_deg": 315,
+      "overlap_mm3": 244.52196654246333
+    },
+    {
+      "nut_yaw_delta_deg": 320,
+      "overlap_mm3": 237.42084369353998
+    },
+    {
+      "nut_yaw_delta_deg": 325,
+      "overlap_mm3": 229.5233290566869
+    },
+    {
+      "nut_yaw_delta_deg": 330,
+      "overlap_mm3": 220.82233299922922
+    },
+    {
+      "nut_yaw_delta_deg": 335,
+      "overlap_mm3": 211.31847087688337
+    },
+    {
+      "nut_yaw_delta_deg": 340,
+      "overlap_mm3": 201.02055496090682
+    },
+    {
+      "nut_yaw_delta_deg": 345,
+      "overlap_mm3": 189.96641028238804
+    },
+    {
+      "nut_yaw_delta_deg": 350,
+      "overlap_mm3": 178.41520793521474
+    },
+    {
+      "nut_yaw_delta_deg": 355,
+      "overlap_mm3": 166.4775654969448
+    },
+    {
+      "nut_yaw_delta_deg": 360,
+      "overlap_mm3": 154.14850373200525
+    },
+    {
+      "complete": true,
+      "bank_unchanged": null,
+      "coordinates": null
+    }
+  ],
+  "source_sha256": {
+    "collar_pin_seat.py": "ae66e0e68d7f9530703795e84f1d6bc900ca27ab05c644e33384cd298fecab74",
+    "collar_seat_trial.py": "134d2de77c2953106bb786d703314ac1d14d3b02e86a3bf76eed854482ef60eb",
+    "operating_collar.py": "be56e9720b58295159c2c239636bf4d23ee588ca8bc493eeea8065f29966af37",
+    "test_collar_pin_seat.py": "665450d373a46cc4b4b9ceb885c777202bfa068b179f5c0a203199b13306f936",
+    "test_operating_collar.py": "6724f20d15020a29c09ccb0d0f0dd2d109e1bbafb210c44ffdd956f003114780",
+    "tools/collar_pin_seating.py": "f243f56815deee94060c69e8ff331f8836e9cb297027e2a8efd7bb1bbd8f13c4",
+    "tools/collar_trial_contacts.py": "623c69fca9353eb1c95783e05b926744ea0be2462d0418bd48cd2b05c5e324af",
+    "running_parts.py": "2e01bcc41cdc1e4673f11281b3da3e70fa72a664cae3655b3a53b44e9672a515"
+  },
+  "log_sha256": {
+    "collar-pin-seat-red-2026-09-22.log": "89615754b7380d75521542c8ca4d5f140bbc799c9b8880324bf71e913d54ff5b",
+    "collar-pin-seat-green-faceted-2026-09-22.log": "f2affe7f9df7e6496515bc7ea2db53b14bb10682b6f0cf508f9c334f0e9943b8",
+    "collar-nut-seat-red-2026-09-22.log": "b063ca577fb21cc8ebeff71ca4e11ab295fb0d475aaf10ebd7f03bae06758b73",
+    "collar-pin-nut-green-faceted-2026-09-22.log": "a3e1f5700928e655594b3a56351c9bf447c0e649941e486704fba68b6c05befd",
+    "collar-pin-nut-green-exact-2026-09-22.log": "bc95b73231f37a7aae6e872332c90991fb00195b162efbe5560068e8677bd4ec",
+    "collar-nut-phase-reproducible-2026-09-22.log": "11e18ddbd69338024e09f49c6813d29b0d2dc1bec80e2f770cf398d7556224a2",
+    "operating-collar-red-2026-09-22.log": "4b364eb9a17c2e2e3395165e3bc0a55678cb1e590e5a9408e6bf80221ce48540",
+    "operating-collar-green-faceted-2026-09-22.log": "7bd756d2182e5ec97d79d00169f8d164eec4031a0340f8bc9e5ba196054eefb7",
+    "operating-collar-isolated-trial-2026-09-22.log": "5b07b12d1c563e39a95478ea0ed166eed6790e75ad494a37bf5aa4fe1791c310",
+    "operating-collar-isolated-trial-exact-2026-09-22.log": "09b16fa33fd41391cafaf6ef422066b213d593e5a6f73abdcac00e6aeee76e1d",
+    "operating-collar-final-trial-exact-2026-09-22.log": "9760601678fc82dc195f267bf1f523feb79cb7456439406eb7831bd5023fc99b",
+    "collar-trial-contacts-labelled-2026-09-22.log": "b052964f90e5ccc425e78216702764c0a00ca4b8e04f98e7628662476356083d"
+  },
+  "inspected_section": {
+    "path": "_build_checks/collar-clocked-trial-sections-labelled-2026-09-22.png",
+    "sha256": "769cc11f931db8827520b5bae8e5550e6041ecedc7b855fae18eddbaf507d6d1"
+  },
+  "limitations": [
+    "Collar contacts remain faceted on both runners.",
+    "No complete moving acceptance.",
+    "No full-machine interference acceptance.",
+    "No volume epsilon or excluded neighbour.",
+    "Default root and source assets unchanged."
+  ]
+}

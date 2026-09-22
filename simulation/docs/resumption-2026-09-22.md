@@ -86,9 +86,19 @@ _build_checks/operating-seats-browser-2026-09-22.png --interlocks`.
 
 ## Outstanding work
 
+- The [complete-result carry discrepancy](result-carry-graph-finding-2026-09-21.md#resumption-after-viewer-repair--2026-09-22)
+  still reproduces after the viewer repair. A new source-law diagnostic
+  narrows its first failing prefix to seven active result stations. Both
+  original failing tests remain; counter-tens operating acceptance cannot
+  proceed through that preparation until this separate correctness gate is
+  resolved. The viewer repair does not fix Python retained arithmetic.
 - Task 1.3: whole-machine rest/frame contacts, including collar shoulder,
   collar nut/pins and other recorded interfaces. The shoulder-facing trial
-  remains separate; seating the thrust ring does not adopt it.
+  remains separate; seating the thrust ring does not adopt it. The new
+  [clocked collar/pin/thread bench](collar-seating-investigation-2026-09-21.md#resumption-pin-and-thread-clocking--2026-09-22)
+  passes six isolated contracts on both runners. Its combined operating-root
+  trial remains unadopted: rest-neighbour and moving-seat tests are red at
+  nominally flush main-body/washer interfaces. The default root is unchanged.
 - Tasks 6.2/6.3: remaining higher-result and counter restraints, interrupted
   arithmetic and geometry gates, and complete action-order coverage.
 - Task 6.4: the printed clearing-loop clip/release path is unresolved;

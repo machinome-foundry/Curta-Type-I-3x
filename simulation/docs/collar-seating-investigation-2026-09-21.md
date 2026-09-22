@@ -4,6 +4,84 @@ This is an unresolved task-1.3 contact investigation, not an adopted fit or a
 claim that the author's printed calculator fails. No source geometry,
 operating placement, spring law or control has changed.
 
+## Resumption: pin and thread clocking — 2026-09-22
+
+The collar's native source has R1.8 blind bores centred at local `(0, ±21)`,
+Z39..42. The recentered carrier's unchanged pins stand at world `(±21, 0)`
+and end at Z49.5. A measuring-copy yaw survey first found clearance at a
+55° increment from the source placement. The actual datums give an installed
+collar angle of **−90°**, rather than the source −144.282220532°. This is an
+alignment correction, not enlarged bores, shorter pins or a height change.
+
+The independent `CollarPinSeat` uses the unchanged collar print and native
+pins. Two of its first three tests failed before the clocking correction;
+all four pin tests then passed. Both pins clear with ±1° collar play and
+block at ±2°; ±.1 mm axial play clears, while a .6 mm downward collar
+perturbation reaches the blind-bore roofs. `SourceCollarPinSeat` preserves
+the original placement and reproduces both contacts.
+
+Correct pin alignment exposes a separate thread-phase error: the unchanged
+nut angle gives **154.148503732 mm³** common at its source height. A 5° nut
+yaw survey finds a sampled clear interval at approximately 16°..66° world
+angle. The trial uses **40°**, keeping Z12.3, all thread material and collar
+height unchanged. The new nut-clearance test failed before this correction.
+All **six isolated tests pass on both faceted and exact runners** (.66 s /
+.81 s). The nut clears with ±.1 mm axial play and captures at ±.4 mm.
+The collar is an STL on both runners; this is not native collar certification.
+The sampled interval is not a continuous thread-clearance proof.
+
+`OperatingCollarBench` combines that clocking with the previous bounded
+shoulder-facing fit in a **separate, unadopted operating-root trial**. A
+temporary default-root experiment was backed out after its whole-neighbour
+contracts failed; `simulation/running_parts.py` is unchanged. No motion law,
+manifest, upstream source asset or operating control is changed. The trial
+mesh fixture matches its independent collar/nut/pin bench to the existing
+.00001 mm vertex/face-centre check, but this does not make the assembly clear.
+
+The restored isolated trial reproduces **1 pass / 2 failures** on each
+runner (22.17 s faceted, 23.32 s exact), with volume epsilon zero:
+
+- Rest-neighbour acceptance fails at collar/main body: runner common
+  **0.000005536428033 mm³**.
+- Moving-seat acceptance fails at the initial collar/washer contact:
+  **4.884981308350689e−15 mm³**. It never reaches its travel loop; no moving
+  acceptance is claimed.
+
+The separate rest diagnostic considers all **775 distinct collar/nut pairs**
+against the **389 rigid occurrences**, preserving all **213 bank coordinates**.
+It compares float32 and float64 representations without a volume epsilon.
+In float64 world meshes the main-body common has positive thickness
+**1.907445819e−7 mm**, volume **0.000034720815967 mm³**, at nominal Z7.8.
+The washer common is exactly planar at Z60.3 in that diagnostic, with a
+small signed tetrahedron sum. Float32 rounding collapses both to zero
+thickness. These representation-dependent diagnostic values do **not**
+override the red runner assertions, and a positive-thickness common is not
+discarded. No additional material is removed to hide either report.
+
+The final exact invocation adds an initial-bank comparison with the unchanged
+default root: **2 passed / 2 failed in 37.44 s**. Bank equality and mesh-fixture
+identity pass; the same two interface checks remain red. The inspected
+`_build_checks/collar-clocked-trial-sections-labelled-2026-09-22.png` shows
+both pins inside the intended bores and the retained thread engagement.
+Sections cannot decide the sub-micrometre contact reports. Source/log/image
+hashes and the complete phase/rest diagnostics are in
+[the clocking-trial evidence](evidence/collar-clocking-trial-2026-09-22.json).
+
+Reproduce with the environment in the section below:
+
+```sh
+python -m simulation.tools.collar_pin_seating --source
+python -m simulation.tools.collar_pin_seating --nut-phase
+machinome test --faceted simulation/collar_pin_seat.py:CollarPinSeat
+machinome test --exact simulation/collar_pin_seat.py:CollarPinSeat
+machinome test --faceted simulation/operating_collar.py:OperatingCollarBench
+python -m simulation.tools.collar_trial_contacts --section _build_checks/collar-clocked-trial-sections-2026-09-22.png
+```
+
+The last assembly contracts are deliberately red. Resolve the source-seat
+representation and independently prove all moving interfaces before adopting
+this trial. The isolated pin/thread result does not complete task 1.3.
+
 ## Complete-neighbour survey
 
 At project `07dc3f3f953d77de481550362627dc6bf947cd2a`, the initial

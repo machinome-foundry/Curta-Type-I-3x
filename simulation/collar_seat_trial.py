@@ -1,9 +1,11 @@
-"""Isolated collar/spider shoulder-facing trial, not operating adoption.
+"""Collar/spider shoulder-facing fit and its independent measuring bench.
 
 The source underside is local Z39 (world 46.8); the installed source spider
 mount reaches world 47.47. The trial measures an additional .05 mm seating
-gap without moving either part. Thread, bore, carrier-pin and full-neighbour
-acceptance remain separate gates. Upstream print files stay untouched.
+gap without moving either part. The separate operating-collar trial combines
+this fit with measured collar/nut clocking; the default root is unchanged.
+Thread, bore, carrier-pin and full-neighbour contracts are separate from this
+shoulder bench. Upstream print files stay untouched.
 """
 
 import manifold3d as manifold

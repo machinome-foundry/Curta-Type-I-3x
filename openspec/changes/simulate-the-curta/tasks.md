@@ -12,6 +12,21 @@ spec sync/archive confirmation is tracked in its own repository. Other
 result-bank/counter trials, complete contact validation and final operation
 acceptance remain open. No interrupted job is counted as a pass.
 
+The subsequent resumption reproduces the separate result-carry correctness
+failure on unchanged framework `e6a42c8`: the full graph still misses a carry
+or meets an early stop. A progressive source-law diagnostic narrows the first
+failing prefix to seven active result stations, with a passing six-station
+control and a new red seven-station regression. See
+`simulation/docs/result-carry-graph-finding-2026-09-21.md` and its September 22
+evidence. This blocks counter-tens preparation, not independent geometry work;
+no operating law or task checkbox changes.
+
+The collar investigation also establishes source-bore clocking and retained
+thread phase, with six passing isolated contracts on each runner. The combined
+`OperatingCollarBench` remains a separate trial: complete rest-neighbour and
+moving-seat checks are red at main-body/washer interfaces. The default model
+is unchanged; see `simulation/docs/collar-seating-investigation-2026-09-21.md`.
+
 ## Historical continuation — finish operating Curta, 2026-09-19
 
 **Fresh-agent checkpoint, 2026-09-21:** start with
