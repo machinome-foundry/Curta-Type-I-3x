@@ -120,3 +120,15 @@ all nine harness tests pass. Those five real production-export pointer cases
 are running separately. Crank turning and its one-revolution button require
 their own arithmetic-aware gate; they are not silently accepted under a test
 that assumes unchanged register turns.
+
+Those five fresh production-export cases now pass with observed process exit
+zero. Crank lift admits 2 mm, reverser -3 mm and carriage lift 2 mm; seated
+carriage rotation stops at .17999999999998786 degrees and seated clearing at
+1.437226368040361 degrees. All other inputs and register-turn coordinates
+remain unchanged, all commands retire, and no refusal/page error is observed.
+The final screenshot is inspected (its closer camera crops the crank tip and
+bottom, so it is an interaction image rather than a whole-machine overview).
+Report `_build_checks/counter-bank-production-noncrank-pointers-7bdd0a3.json`
+has SHA-256 `fecc8086aa0dab8503d7e260c77a8b2ec6f8b1ce120b064e4b882b19793e7e6b`.
+This does not cover lifted-carriage free shift/clearing, crank turning, the
+one-revolution button, or the unmodified standalone page.
