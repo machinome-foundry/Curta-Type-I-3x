@@ -159,3 +159,25 @@ throughput failures, beside green focused and exact-state gates.
 The remaining older framework branches unrelated to Curta were not merged or
 modified. No branch/worktree was deleted, nothing was pushed, and the pilot's
 untracked framework example directory and project assets remain untouched.
+
+## Full framework gate classified
+
+The 53 discovery errors above are now reproduced on untouched framework
+`acebc48800e30f340d1ef74e832c0b676f5b8d52` in its isolated
+`WTs/compile-path-operations` checkout: 3,625 tests, 53 errors and four skips
+in 390.667 s. Candidate `4bff28e` had 3,626 tests, the same 53 errors and
+four skips in 409.957 s. Both used `python -m unittest discover -s tests -t . -q`
+with `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 SOLID_BUILD_DIR=_build_checks`.
+That recursive command incorrectly collects deliberately failing nested
+`tests/meta_project/test_*` fixtures, including uninitialized fixture attributes
+and missing fixture STL-lock parent directories. It is not a product gate.
+The failed runs remain failed evidence, not retrospectively green results.
+
+The proper top-level product collection now passes on integrated `4bff28e`
+from isolated `machinome/WTs/demand-bound-read-paths` using the workspace venv:
+`pytest tests/test_*.py -q` with the same environment. Observed exit zero:
+**3,562 passed, four skipped, 53 warnings and 2,114 subtests passed in
+465.36 s**. These three summaries were captured in the agent's terminal;
+no persistent log artifact or hash is claimed. The independent project
+combined-bank arithmetic also passes all six tests on that framework, as
+recorded in the [counter-bank acceptance](counter-bank-operating-trial-2026-09-22.md).

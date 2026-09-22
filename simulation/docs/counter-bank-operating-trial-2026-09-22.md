@@ -120,3 +120,19 @@ geometry waiver is inferred from its small size.
 Combined-root regressions for the already adopted counter-ones and result
 station 3/8 withdrawals are added unchanged through test subclasses and are
 running separately. The trial is still unadopted, and no OpenSpec task closes.
+
+The three combined-root preservation tests now pass on `4bff28e` in
+374.073 s, observed exit zero. Counter ones still stops at
+174.7853836059494°; result stations 3 and 8 stop at 165.22323837279146°
+and 265.22323837279146° on their short requests. Their unchanged long,
+negative-contact, replay and relief checks also pass. The log
+`_build_checks/counter-bank-preserved-withdrawals-4bff28e-2026-09-22.log`
+has SHA-256 `65a81664aa9f8d29b4657d6fcabeefcd87788680a6bf4e004ca96c0a6ad29452`.
+
+Parallel browser attempts for stations 2, 4 and 5 time out at the prepared
+screenshot before their actual gates. Those `d903dd7` reports remain pending.
+A sequential station-4 retry completes both requests and captures an inspected
+stopped image, but fails the same sole p9 detent-coordinate comparison as
+station 6 (4.16e-17 difference, all other 212 coordinates exact). Its separate
+report and images remain in `_build_counter_bank_fourth_retry_d9c1833/`.
+Neither screenshot timeouts nor that exact-bank failure count as acceptance.
