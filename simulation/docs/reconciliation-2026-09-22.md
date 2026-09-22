@@ -62,18 +62,39 @@ job started before framework reconciliation; it does not certify later
 performance changes or later physical adoptions. No partial run is counted
 as a pass, and no task checkbox changes merely because commits are on main.
 
+The outstanding native result-profile jobs for stations 10 and 11 now finish
+with observed zero exits, each checking 23,556 admitted poses with no positive
+common. The counter-tens candidate's four unchanged arithmetic tests also
+finish, 4/4 in 1,729.122 s. The
+[completion record](evidence/bank-validation-completion-2026-09-22.json)
+pins their logs, measurement headers and limits. The arithmetic batch started
+before production counter-ones adoption; it is not a combined ones+tens check.
+
 The counter-tens candidate's native finite profile emitted a complete summary:
 15,714 admitted poses, zero failures, covering 466 shaft rows at each of
 carry 0/.5/1. Its [evidence record](evidence/counter-tens-native-completion-2026-09-22.json)
 includes source hashes, the full log hash and the anomalous later supervisor
-status 143; a zero process-exit observation is not claimed. Candidate
-arithmetic, additional heights/action orders and browser adoption remain
+status 143; a zero process-exit observation is not claimed. The completed
+arithmetic above, additional heights/action orders and browser adoption are
 separate gates.
 
 The [collar continuation](collar-seat-completion-2026-09-22.md) combines the
 measured pin/thread clocking with bounded axial facings and verifies complete
 rigid neighbours and captured moving seats. Its production acceptance is
 tracked there, not inferred from the branch merge.
+
+A refreshed [faceted rigid-rest inventory](evidence/operating-rest-inventory-2026-09-22-faceted.json)
+has 389 rigid occurrences, 253 positive pairs and no refused intersections.
+It includes the collar/thrust fits and the counter-ones working change, not
+the new isolated clearing-cover/counter-body seat trial. The largest remaining
+common is that cover/body pair, 468.059392 mm³ faceted, independently measured
+as 468.259260 mm³ native. No positive contact is waived by this survey.
+The subsequent [outer-seat fit](clearing-carrier-seat-2026-09-22.md) is now
+adopted, with three production checks passing on each runner. Its refreshed
+survey removes only that pair: 252 remain, with no added pair or refusal.
+The [counter-ones production checkpoint](counter-ones-adoption-2026-09-22.md)
+is committed at `eb520bf`; its original failed batch and separate passing
+reruns remain distinguished in the evidence.
 
 ## Performance findings
 
@@ -90,6 +111,22 @@ profiling names repeated path binding and expression scope construction.
 The pilot approved a clean framework worktree from verified main while leaving
 the unrelated untracked example directory untouched, and reaffirmed that all
 framework edits must be in worktrees because other agents are working.
+
+Framework port enumeration, graph-order and path-order optimizations are
+integrated, the last at `471d00a` after preserving the concurrent CI and
+exact-leaf histories. The fixture-exposed exact-leaf repair is `4112d76`.
+The pilot explicitly reaffirmed autonomous reconciliation of concurrent-main
+updates in isolated worktrees, preserving histories and revalidating.
+
+Viewer caches are integrated at `3ef7482`; later CI/evidence-only changes
+reach `1f91191`. The pinned older export completes a no-WebGL full turn in
+192.371 s and replay in 181.700 s, with identical 213-coordinate terminal
+banks and snapshots. The harness exits 1 on an incorrect cumulative-recorder
+comparison because restore clears those rings; that failure is preserved.
+Corrected turn-local accounting passes a small fixture but has not yet
+completed a new full Curta run. These are not usable two-second gestures,
+fresh-current-export checks, or real-pointer completion. Further measured
+evaluation work and the mechanical/pointer gates remain open.
 
 The original source assets, untracked assembly video and untracked
 `screenshots/reverser_inspection.png` are preserved.

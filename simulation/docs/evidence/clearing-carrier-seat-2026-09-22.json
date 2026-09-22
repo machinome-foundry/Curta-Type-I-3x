@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-22",
+  "project_base": "eb520bf",
+  "framework": "471d00a",
+  "scope": "Production clearing-cover/counter-body outer seat only",
+  "source_sha256": {
+    "simulation/running_parts.py": "04c0cf2781de4e7b4cf792e1f25d045c35779b20f59f8b4c073e1501fdf525fc",
+    "simulation/clearing_carrier_parts.py": "4eac3af6a7e97cdea5ae55a614c2b41b78c78cf1824c149c68374786436afcea",
+    "simulation/clearing_carrier_seat.py": "5238a408a2654152e72598c90090f8a8f6102c12a429e3feac476472237021f1",
+    "simulation/test_clearing_carrier_seat.py": "800ab9c094df5bb7e824577fa776827b3814fbd146f34c7f29fa99389713b185",
+    "simulation/tools/clearing_carrier_section.py": "704c66e7697699793443f411d37881bb6f1231cbac9aab05a2755cb559744151"
+  },
+  "tests": [
+    {
+      "path": "_build_checks/clearing-carrier-seat-red-faceted.log",
+      "sha256": "b1702cf2eac4b27aeb9a85106338c6636a0b899d931383ac5b30d622c8273565",
+      "process_exit_observed": 1,
+      "summary": "Ran 2 tests in 7.83 seconds: 0 passed, 2 failed (faceted kernel, volume epsilon 0 mm³)"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-red-exact.log",
+      "sha256": "4cd73205d6a8492634cd97bcc87f1c7b75178d80040c6f724087be6c7449f3b4",
+      "process_exit_observed": 1,
+      "summary": "Ran 2 tests in 7.38 seconds: 0 passed, 2 failed"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-first-faceted.log",
+      "sha256": "4b9a803c2eebe030644e7df6f8307fd90ad2288d04037291c3b64dfe9c1fb318",
+      "process_exit_observed": 1,
+      "summary": "Ran 2 tests in 37.45 seconds: 1 passed, 1 failed (faceted kernel, volume epsilon 0 mm³)"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-first-exact.log",
+      "sha256": "df166e273b029d36179baf7e6fb31ef20253b90907801e5c5d189e7c6152e14f",
+      "process_exit_observed": 1,
+      "summary": "Ran 2 tests in 37.76 seconds: 1 passed, 1 failed"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-final-trial-faceted.log",
+      "sha256": "1d1ea6432591a9707eee1db3370c4384329c71834621890bc35089d6e4c27e04",
+      "process_exit_observed": 0,
+      "summary": "Ran 3 tests in 47.88 seconds: 3 passed, 0 failed (faceted kernel, volume epsilon 0 mm³)"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-final-trial-exact.log",
+      "sha256": "c17829b50f0683fd71ac0fce2797401d6fb93b39d387d172b319f69a20842dfe",
+      "process_exit_observed": 0,
+      "summary": "Ran 3 tests in 50.80 seconds: 3 passed, 0 failed"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-production-red.log",
+      "sha256": "e1e35923a2911124997b6897f2d91ba025b43e86bb928fc2809f315b3a52eff1",
+      "process_exit_observed": 1,
+      "summary": "Ran 3 tests in 7.37 seconds: 1 passed, 2 failed (faceted kernel, volume epsilon 0 mm³)"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-production-faceted.log",
+      "sha256": "2649cf4ab7d499d81efe55c4430266859d336460e9b4e9e130b6a29be4f5c84e",
+      "process_exit_observed": 0,
+      "summary": "Ran 3 tests in 56.75 seconds: 3 passed, 0 failed (faceted kernel, volume epsilon 0 mm³)"
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-production-exact.log",
+      "sha256": "ad8ff021cfdf77f8f182bf9868a793b794330f988dcffa3d92085fbf9b8f3b97",
+      "process_exit_observed": 0,
+      "summary": "Ran 3 tests in 58.12 seconds: 3 passed, 0 failed"
+    }
+  ],
+  "sections": [
+    {
+      "path": "_build_checks/clearing-carrier-seat-trial-2026-09-22.png",
+      "sha256": "31099834d7ae1c6be77709c3580954c4ddeb8850504cf54b69188d8cdd103897",
+      "inspected": true
+    },
+    {
+      "path": "_build_checks/clearing-carrier-seat-production-2026-09-22.png",
+      "sha256": "3c9a411d29aa4528d7d5aad279f919fb16aa8ad6b3788163bdee1dd1a80617a8",
+      "inspected": true
+    }
+  ],
+  "production_section": {
+    "model": "simulation.running:OperatingCurta",
+    "native_common_mm3": 0,
+    "coordinates": 213,
+    "bank_unchanged": true,
+    "section": "_build_checks/clearing-carrier-seat-production-2026-09-22.png"
+  },
+  "rest_inventory": {
+    "logs": [
+      {
+        "path": "_build_checks/operating-rest-current-faceted.json",
+        "sha256": "9ba0679d1d57a84a73271f5c50f9987752e33ce70bc1fec08486ec13b519e97e",
+        "process_exit_observed": 0
+      },
+      {
+        "path": "_build_checks/operating-rest-clearing-seat-faceted.json",
+        "sha256": "1119e7fbefd7141bb9a37db92af3f1946660aba72ee0e7c792eb7ed25decb9dc",
+        "process_exit_observed": 0
+      }
+    ],
+    "before": 253,
+    "after": 252,
+    "removed": [
+      "Curta.carriage.registers.clearing_ring.clearing_cover / Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body"
+    ],
+    "added": [],
+    "refusals": {}
+  },
+  "limits": [
+    "No positive common or other part is exempted.",
+    "The first trial sweep test probed wrong local direction; retained failures are not implementation passes.",
+    "Not a whole-machine, flexible-parts, full action-order or manufacturing certificate."
+  ]
+}

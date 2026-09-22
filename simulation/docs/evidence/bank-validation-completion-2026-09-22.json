@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-22",
+  "status": "finite candidate evidence; not operating adoption",
+  "result_native": [
+    {
+      "station": 10,
+      "path": "_build_checks/reconcile-result-10-profile-native.log",
+      "sha256": "de8b363891a0a3adebcf86f1a59076229018d3c4b61c88063369add047f9c57d",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 10,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows": 1881,
+      "process_exit_observed": 0
+    },
+    {
+      "station": 11,
+      "path": "_build_checks/reconcile-result-11-profile-native.log",
+      "sha256": "f3e7d7ef12b7adae5a53b35e8dca5e50808b35ec7b402f28900dec5d8b6a7c4d",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 11,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows": 1881,
+      "process_exit_observed": 0
+    }
+  ],
+  "counter_tens_arithmetic": {
+    "path": "_build_checks/reconcile-counter-tens-arithmetic.log",
+    "sha256": "c5330b3778326cfee32f519ffaca6af86fa582f297b991f24a62a67e3ace93b2",
+    "tests": 4,
+    "passed": 4,
+    "seconds": 1729.122,
+    "process_exit_observed": 0,
+    "model": "simulation.counter_tens_operating_trial:CounterTensOperatingTrial",
+    "scope": "Unmodified subtraction/overflow undo, shifted arithmetic, four-turn reversing-counter direction, and unseated-lever entry tests. Started before production counter-ones adoption; not a combined ones+tens regression."
+  },
+  "limits": [
+    "Only the reported finite samples were measured.",
+    "Header source hashes identify measurement inputs; collection head is not claimed to be a start-time whole-project pin.",
+    "No browser or physical-pointer acceptance follows from these runs."
+  ]
+}

@@ -16,6 +16,9 @@ The [counter-ones fit and restraint](docs/counter-ones-adoption-2026-09-22.md)
 are now in the default root with production stop/replay/contact and fixture
 checks passing; this does not adopt the higher counters or complete the
 current-export pointer/performance gates.
+The [clearing-cover/counter-body seat](docs/clearing-carrier-seat-2026-09-22.md)
+is also adopted, with three passing production checks per runner and an
+inspected native-clear section. Whole-machine contacts remain unresolved.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.

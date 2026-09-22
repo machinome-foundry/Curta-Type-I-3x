@@ -17,7 +17,7 @@ from simulation.selectors import IndependentSelectors
 from simulation.standard.layers import CrankAssembly
 from simulation.print_parts import CounterBodyStopPin
 from simulation.clearing_seat_fit import FittedClearingPin
-from simulation.carriage_frame_fit import FittedCounterBody
+from simulation.clearing_carrier_parts import ClearingSeatCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
 from simulation.counter_lockout_parts import ContactCounterOnes
@@ -70,7 +70,7 @@ class RetainedTurnsDials(TurnsDials):
 
 
 class RetainedAxleCarrier(FittedAxleCarrier):
-    counter_body = FittedCounterBody()
+    counter_body = ClearingSeatCounterBody()
     counter_body_stop_pin = CounterBodyStopPin()
     clearing_pin = FittedClearingPin(slide=Prismatic(axis=(0, 0, -1)))
     pin_drive = clearing_pin.slide.drives(FittedAxleCarrier.press)

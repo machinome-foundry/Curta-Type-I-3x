@@ -10,6 +10,10 @@ The [counter-ones production continuation](../../../simulation/docs/counter-ones
 now passes its short/long stop, replay, complete-print contact and fixture
 checks after the separate framework exact-leaf fix. Higher counters and
 fresh full pointer/performance acceptance remain open.
+The [clearing-cover/counter-body seat](../../../simulation/docs/clearing-carrier-seat-2026-09-22.md)
+is adopted with 3/3 production checks per runner; the refreshed faceted rest
+inventory removes only that contact, leaving 252 positive pairs and no new
+pair or refused intersection. Whole-machine task 1.3 remains open.
 
 Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph

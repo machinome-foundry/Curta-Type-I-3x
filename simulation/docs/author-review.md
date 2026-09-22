@@ -105,6 +105,18 @@ bug exposed by its fixture is fixed in `4112d76`; the final two-test fixture
 rerun passes. The higher-counter trial below retains its historical status;
 those five stations are not adopted by F20.
 
+## Clearing-cover / counter-body seat — F21
+
+The [outer-seat continuation](clearing-carrier-seat-2026-09-22.md) removes
+only the counter body's local Z0..0.85 land outside R46.75 to clear the actual
+R46.8 cover shoulder, with a .05 mm radial/axial gap. The source body datum,
+inner bearings, bores, indexing geometry, extents and remaining flange are
+preserved; the cover and clearing teeth are unchanged. Production checks pass
+3/3 per runner, including sampled sweep/shift clearance, retained axial stop,
+bounded removal/connectivity and an unchanged initial bank. The refreshed
+rest inventory loses only this pair and adds none. This is a simulation fit,
+not a manufacturing instruction or whole-machine clearance certificate.
+
 ## Higher result lockout — T07 adoption under verification
 
 The [higher-result investigation](higher-result-lockout-2026-09-21.md) records

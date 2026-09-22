@@ -1,5 +1,16 @@
 # Higher-counter restraint candidate
 
+**Later September 22 evidence:** the complete native tens profile and four
+candidate arithmetic cases now have terminal summaries; their provenance and
+limits are in [the reconciliation](reconciliation-2026-09-22.md). A separate
+[intermediate-height admission check](evidence/counter-tens-support-height-admission-2026-09-22.json)
+passes 5,352 complete-print poses on each kernel with observed zero exits:
+18 explicitly selected shafts at 30 heights, including measured contact
+brackets and both sides of the nominal support planes. This is not the full
+shaft grid at every height, proof of free-path admission, another station's
+validation, or production/browser adoption. The historical interruption
+records below are preserved rather than relabeled as passes.
+
 **2026-09-22 continuation:** the paired carry-timing fix is integrated, and
 the original seven-request diagnostic completes. It also proves that its
 raised-crank/reversed setting never engaged the higher input. A separate
