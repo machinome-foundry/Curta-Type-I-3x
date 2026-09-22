@@ -43,3 +43,20 @@ def higher_counter_contact_gap(crank, shaft, travel):
 
 def higher_counter_closing_limit(own, rotating_part, shaft, travel):
     return rotating_part+higher_counter_contact_gap(-rotating_part, shaft, travel)
+
+
+def counter_bank_closing_limit(own, rotating_part, *coordinates):
+    """Unadopted stations 2..6 candidate in actual, not tens-local, frames.
+
+    Every counter's upper travels -1.8..2.4 mm in its source channel. Unlike
+    the result bank, no station-dependent axial rest conversion is needed.
+    """
+    if len(coordinates) != 10:
+        raise ValueError('counter bank requires shaft/travel pairs for stations 2..6')
+    limit = rotating_part-1
+    for station, (shaft, travel) in enumerate(zip(coordinates[::2], coordinates[1::2]), 2):
+        shift = 20*(station-2)
+        candidate = higher_counter_closing_limit(
+            own+shift, rotating_part+shift, shaft+shift, travel)-shift
+        limit = max(limit, candidate)
+    return limit
