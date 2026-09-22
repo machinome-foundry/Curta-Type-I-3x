@@ -65,8 +65,21 @@ argument, then the seven precision/probe tests passed in 0.015 s. Logs are
 `counter-operating-precision-{red,green}.log`. The combined-root counter-tens
 trial is being rerun; changing the probe alone does not establish acceptance.
 
-The
-running higher-counter station-three native job and station-six world32 job
+The higher-counter station-three native job and station-six world32 job
 began before this reader update; their pinned headers and original precision
 remain unchanged. The latter finished 17,030 sampled admissions without a
 positive common, with observed exit zero, but is explicitly world32 evidence.
+The station-three native run has also finished with observed exit zero:
+15,714 sampled admissions, zero positive commons. Its retained log
+`reconcile-counter-3-profile-native-2026-09-22.log` has SHA256
+`8a8251cd32a7e3fe3a161e090f1d78093ed64f2de9f5e57c3853945b1816271d`.
+
+The expanded-root counter-tens trial's two operating/fixture tests passed
+in 401.395 s, observed exit zero. The short 200° and long 920° requests stop
+at 194.7853836059494° after partial input withdrawal, with world64/native
+clearance, positive forced +.2° contact, full snapshot replay, -.05° relief
+and blocked retry. Log `counter-tens-expanded-trial-world64-2026-09-22.log`
+has SHA256 `5b4aa16902456cadb4f9e62caef5b6170223296da6798f14db4236ce5b6a7872`.
+It loaded framework `4d24d79` and project content `a8ee3e7`, before the crank
+seat trial. Counter tens is still not adopted; its expanded arithmetic and
+fresh browser gates remain outstanding.
