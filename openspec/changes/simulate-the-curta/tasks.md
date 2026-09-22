@@ -3,7 +3,12 @@
 Start with `simulation/docs/resumption-2026-09-22.md`. The operating model is
 unfinished, **12/23 tasks complete**. The T07 tens restraint is now in the
 default root; the older handoff below predates its adoption. The inherited
-thrust-seat work is being verified in the actual operating assembly. Other
+thrust-seat work is adopted and passes focused faceted/exact checks in the
+actual operating assembly (`1fc3e00`). The separately approved viewer cache
+repair (`9a755e5`) passes final result-bank browser acceptance, including
+the captured eighth-station 213-coordinate Python banks. The default root's
+pointer prerequisites/interlocks also pass with the repaired bundle; viewer
+spec sync/archive confirmation is tracked in its own repository. Other
 result-bank/counter trials, complete contact validation and final operation
 acceptance remain open. No interrupted job is counted as a pass.
 

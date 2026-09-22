@@ -31,6 +31,20 @@ def fixture():
 
 
 class ResultBankBrowserReportTest(unittest.TestCase):
+    def test_idle_evidence_is_complete_and_unchanged(self):
+        report = fixture()
+        report['initial_bank'] = dict(report['prepared'][0]['bank'])
+        report['idle_bank'] = dict(report['initial_bank'])
+        validate_report(report)
+        report['idle_bank']['unrelated_dial'] = 1
+        with self.assertRaises(AssertionError):
+            validate_report(report)
+        report['idle_bank'] = dict(report['initial_bank'])
+        for key in ('initial_bank', 'idle_bank'):
+            report[key].pop('unrelated_dial')
+        with self.assertRaises(AssertionError):
+            validate_report(report)
+
     def test_complete_report_and_explicit_partial_python_comparison_scope(self):
         report = fixture()
         self.assertEqual(validate_report(report), [])

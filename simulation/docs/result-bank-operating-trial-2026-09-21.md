@@ -1,5 +1,13 @@
 # Remaining result-bank operating trial
 
+**2026-09-22 follow-up:** the separately approved viewer cache repair now
+passes this trial's four browser stop/relief/retry/replay cases. Both captured
+eighth-station stopped/relieved bank pairs match Python exactly, all 213
+coordinates. See [the resumption record](resumption-2026-09-22.md#viewer-blocker-retired--remaining-result-bank-trial)
+and [saved browser report](evidence/result-bank-browser-acceptance-2026-09-22.json).
+The mount failure below is historical. This trial is still not adopted and
+its interrupted arithmetic/native acceptance is still outstanding.
+
 Status: isolated candidate for tasks 6.2/6.3, not the manifest default and
 not whole-bank acceptance. Production still has the proven result ones/tens
 and pawl restraints; counter work has its separate isolated trial.

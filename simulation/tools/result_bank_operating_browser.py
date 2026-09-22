@@ -11,6 +11,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+import time
 from urllib.parse import unquote, urlsplit
 
 from playwright.sync_api import sync_playwright
@@ -23,6 +24,9 @@ def validate_report(report, expected=None):
     assert not report['errors'], report['errors']
     ids = set(report['coordinate_ids'])
     assert ids and len(ids) == len(report['coordinate_ids'])
+    if 'idle_bank' in report:
+        assert set(report['initial_bank']) == set(report['idle_bank']) == ids
+        assert report['idle_bank'] == report['initial_bank'], 'idle bank changed'
     required = [(station, target) for station in CHANNELS
                 for target in (170+20*(station-2), 860+20*(station-2))]
     assert [(row['station'], row['target']) for row in report['cases']] == required
@@ -114,19 +118,32 @@ def main():
             page.route('http://result-bank.test/**', serve)
             page.goto('http://result-bank.test/')
             page.add_script_tag(content=bundle.decode())
+            started = time.perf_counter()
             page.evaluate('''async () => {
                 window.curta=await MachinomeViewer.mount('#view','manifest.json',{
                     autoplay:false,run:{dt:.1},partControls:'none'});
                 curta.run().pause();
                 window.resultInitial=await curta.run().snapshot();
             }''')
+            report['mount_seconds'] = time.perf_counter()-started
+            report['initial_bank'] = page.evaluate('curta.run().state()')
+            started = time.perf_counter()
+            report['idle_bank'] = page.evaluate('''async () => {
+                await curta.run().step(1); return curta.run().state();
+            }''')
+            report['first_idle_step_seconds'] = time.perf_counter()-started
+            print(json.dumps({'mount_seconds': report['mount_seconds'],
+                              'first_idle_step_seconds': report['first_idle_step_seconds'],
+                              'idle_unchanged': report['initial_bank'] == report['idle_bank']}), flush=True)
             for station in CHANNELS:
                 bank = page.evaluate('''async station => {
                     const run=curta.run(); await run.restore(resultInitial);
                     const shift=20*(station-2);
                     for(const [input,to] of [[`digit_${station}`,3],
                         ['crank_rotation',140+shift],[`digit_${station}`,0]]) {
+                        const started=performance.now();
                         const result=await run.move(input,{to});
+                        window.resultFirstMoveMs ??= performance.now()-started;
                         if(result.some(row=>row.status!=='completed'))
                             throw Error(JSON.stringify(result));
                     }
@@ -134,6 +151,7 @@ def main():
                     return run.state();
                 }''', station)
                 report['prepared'].append({'station': station, 'bank': bank})
+                report['first_move_ms'] = page.evaluate('window.resultFirstMoveMs')
                 print(json.dumps({'station': station, 'prepared': bank['crank_rotation']}), flush=True)
                 for target in (170+20*(station-2), 860+20*(station-2)):
                     row = page.evaluate('''async ({station,target}) => {

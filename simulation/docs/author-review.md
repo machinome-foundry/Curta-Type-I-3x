@@ -1,5 +1,12 @@
 # Author review: simulation fits and unresolved findings
 
+**2026-09-22 follow-up:** the placement-only thrust-ring/spring seating
+candidate is now in the operating root (`1fc3e00`); source solids are unchanged.
+Its scoped geometry, motion and browser evidence is in
+[the resumption record](resumption-2026-09-22.md). The September 21 status
+below predates that adoption. Higher-result/counter candidates and the
+clearing-loop clip remain unresolved; no whole-machine acceptance is claimed.
+
 Review checkpoint: 2026-09-21. This is a review agenda, **not a list of proven
 defects in the author's working printed calculator**, nor instructions to
 modify a physical machine. The simulation reconstructs the supplied assembly

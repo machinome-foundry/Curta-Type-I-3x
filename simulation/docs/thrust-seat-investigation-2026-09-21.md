@@ -1,5 +1,12 @@
 # Thrust ring and carriage spring: placement-only candidate
 
+**2026-09-22 follow-up:** adopted in the operating root by `1fc3e00` after
+red-first root tests, source/mutation negative controls, faceted/exact
+interface and motion checks, a fresh build and inspected browser images.
+See [resumption evidence](resumption-2026-09-22.md). The original investigation
+below records the earlier isolated candidate; its "not adopted" status is
+historical. The collar-shoulder facing candidate remains separate.
+
 Status: **isolated, not adopted**. The source ring, collar and sleeve need no
 material removal for this candidate. Their operating placements and the
 production spring law are unchanged. This advances task 1.3's seat investigation,

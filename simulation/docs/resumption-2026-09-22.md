@@ -99,6 +99,62 @@ _build_checks/operating-seats-browser-2026-09-22.png --interlocks`.
 The remaining-result-bank browser export exposes a separate viewer
 expression-cache lifetime bug. Viewer change `keep-expression-references-valid`
 was approved for implementation by the pilot on 2026-09-22, after its
-planning-only preparation. Work continues in the viewer repository under
-that change. No result-bank browser pass is inferred from its proposal or
-from the default-root browser acceptance above.
+planning-only preparation. The repaired bundle now passes the original
+result-bank browser acceptance below. This does not adopt that trial into
+the default root or complete its interrupted arithmetic/native gates.
+
+## Viewer blocker retired — remaining-result-bank trial
+
+The pinned export is unchanged: SHA-256
+`c545d8807846ec9c8ba404bc253e39e0b98418b50062e49ce006ef25313a5884`,
+program `c693fd960131c22da87b2afb9111536a04bb344ea50d18719234536d7377f24c`.
+Final repaired viewer bundle SHA-256:
+`20880099c6490adca932f7152c987751a645dddd1bf089ff197342db3c81727c`.
+Viewer implementation commit: **`9a755e5`**. Its complete widget suite passes
+1,423 tests; Python/browser validation passes 193 tests plus 20 subtests,
+with both optional Curta drawing tests enabled and no skips. Build and
+typecheck pass. The viewer OpenSpec change remains active solely for its
+pending pilot sync/archive confirmation; nothing was pushed or published.
+
+All four public running-request cases pass, with no page errors:
+
+| Station | Requested crank target | Admitted crank stop |
+| --- | ---: | ---: |
+| Hundreds | 190° | 165.22323837279146° |
+| Hundreds | 880° | 165.22323837227304° |
+| Eighth | 290° | 265.22323837279146° |
+| Eighth | 980° | 265.22323837227304° |
+
+Each case blocks, replays its complete snapshot exactly, admits .05° relief
+and blocks the retry at the same stop. The complete initial/idle banks are
+unchanged. The eighth station's two stopped/relieved bank pairs match the
+saved Python report **exactly: four states × 213 coordinates**. Hundreds
+stop angles match its recorded Python test, but no captured hundreds Python
+full-bank oracle exists, so that comparison is not claimed.
+
+Both final station screenshots were inspected: the assembled calculator,
+readable markings, crank pose and displayed request state are coherent.
+They remain generated artifacts in `_build_result_bank_repaired_2026_09_22/`.
+The [complete numeric report](evidence/result-bank-browser-acceptance-2026-09-22.json)
+has SHA-256 `ca8a84e07b330cf70964d8126b8804709d1f922fbf0893f297c68508ef646b39`.
+The report validator was extended red-first to reject incomplete initial/idle
+banks; all five report tests pass, and the saved real report was revalidated
+against that guard and its Python oracle.
+
+Reproduce from this project with the workspace Python and this command:
+
+```sh
+python -m simulation.tools.result_bank_operating_browser --build _build_result_bank_repaired_2026_09_22 --python-report simulation/docs/evidence/result-bank-eighth-python-acceptance-2026-09-21.json
+```
+
+Mount took 28.334 s, first idle step .737 s, first move 1,666.9 ms in the
+final run, initially concurrent with other validation. These are observations,
+not speed requirements. The separate source census peaked at 94,854 nodes
+during load and returned to zero on disposal. No Python speedup is claimed.
+
+The **default seated OperatingCurta** was also rerun with that same final
+bundle: mount, crank-lift and first-selector real-pointer prerequisites,
+seated carriage-shift and clearing interlocks all pass with no page errors.
+Its fresh screenshot was inspected. JSON/image evidence is in
+`_build_checks/operating-seats-browser-repaired-viewer-2026-09-22.*`.
+This remains scoped pointer coverage, not a complete action-order matrix.
