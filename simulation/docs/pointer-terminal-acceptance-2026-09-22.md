@@ -83,3 +83,23 @@ class and produced two setup errors; that log is retained as
 corrected `...-green-...` result. The full matrix is running again under
 `counter-bank-pointer-awaited-5872ce1`; no result is inferred from the earlier
 single-selector pass or the corrected unit test.
+
+## Eight selectors and first marker
+
+The corrected awaited matrix preserves eight passing selector cases in
+`_build_checks/counter-bank-pointer-awaited-5872ce1.json`: all intended moves
+retire, no command remains and all other drivers/register turns are unchanged.
+The process then fails on marker 1, so the report remains pending and is not
+full-matrix acceptance. A separate marker diagnostic shows the first vertical
+drag submitted no quantum: release is observed, tick stays zero, and both
+outcomes and pending commands are empty. This is not evidence of a stuck engine.
+
+The harness now preserves settled no-op directions as attempts and tries the
+next cardinal direction. Such attempts never count as coverage, and unrelated
+motion/refusal is rejected before trying again. Eight validator/barrier tests
+pass (`operating-pointer-noop-direction-green-2026-09-22.log`). A fresh marker-1
+run passes with final admitted rotation 3 degrees and three completed quanta,
+no pending command and no unrelated input/register change. Its screenshot is
+inspected; artifacts are `counter-bank-pointer-marker-directions-190b1bd`
+under `_build_checks/`. It uses the frozen combined-trial export and unchanged
+default dt; remaining markers and standalone/full-control coverage are owed.

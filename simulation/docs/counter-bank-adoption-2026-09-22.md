@@ -52,8 +52,13 @@ The fixture log is `counter-bank-production-fixture-first-2026-09-22.log`,
 SHA-256 `fcaee90b24d4d760c9ec9757940a9ea22bcd7c755d14bdcaf27dd20e296c894d`.
 
 The nine-test default-root arithmetic and earlier ones/result withdrawal
-preservation batch is still running at this checkpoint. A fresh production
-export, browser checks and rest-inventory comparison remain separate gates.
+preservation batch subsequently passes in 815.869 s (observed process exit
+zero). It includes all six `RunningCurtaTest` cases and counter ones plus
+result hundreds/eighth withdrawal checks. Its log is
+`counter-bank-production-arithmetic-preservation-190b1bd.log`, SHA-256
+`7c575612fb4ff123ddcafcddde8dce9b02f6c6c95b6495626d02f9f5b66838f3`.
+A fresh production export, browser checks and rest-inventory comparison remain
+separate gates.
 
 ## Browser prerequisite, not production-export acceptance
 

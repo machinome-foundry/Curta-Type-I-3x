@@ -3,7 +3,7 @@
 from copy import deepcopy
 import unittest
 
-from simulation.tools.operating_pointer_matrix import validate_case, wait_for_gesture
+from simulation.tools.operating_pointer_matrix import validate_case, validate_attempt, wait_for_gesture
 
 
 class PointerReportTest(unittest.TestCase):
@@ -28,6 +28,16 @@ class PointerReportTest(unittest.TestCase):
         self.case['release']['observed'] = False
         with self.assertRaises(AssertionError):
             validate_case(self.case)
+
+    def test_noop_direction_is_not_coverage_and_cannot_hide_unrelated_motion(self):
+        self.case['after'] = dict(self.case['before'])
+        self.case['outcomes'] = []
+        validate_attempt(self.case)
+        with self.assertRaises(AssertionError):
+            validate_case(self.case)
+        self.case['after']['digit_2'] = 1
+        with self.assertRaises(AssertionError):
+            validate_attempt(self.case)
 
     def test_rejects_refusal_and_cancel_only(self):
         for status in ('refused', 'cancelled'):
@@ -71,5 +81,8 @@ class PointerAsyncBarrierTest(unittest.TestCase):
                 snapshot = wait_for_gesture(page, 'digit_1')
                 self.assertEqual(snapshot['commands'], [])
                 self.assertEqual(page.evaluate('calls'), 3)
+                page.evaluate('pointerOutcomes=[]')
+                self.assertEqual(wait_for_gesture(page, 'digit_1')['commands'], [])
+                self.assertEqual(page.evaluate('calls'), 4)
             finally:
                 browser.close()

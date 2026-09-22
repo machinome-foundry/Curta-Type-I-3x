@@ -22,20 +22,25 @@ INPUTS = {**{f'digit_{n}': f'set digit {n}' for n in range(1, 9)},
           **{f'marker_{n}_rotation': f'move decimal marker {n}' for n in range(1, 11)}}
 
 
-def validate_case(case):
+def validate_attempt(case):
     name = case['input']
     assert case['release']['observed'], 'viewer pointer release was not observed'
     assert not case['commands'], 'pointer command has not retired'
-    outcomes = [row for row in case['outcomes'] if row['input'] == name]
-    assert outcomes and outcomes[-1]['status'] in ('completed', 'blocked'), outcomes
     assert not any(row['status'] == 'refused' for row in case['outcomes'])
     before, after = case['before'], case['after']
     assert set(before) == set(after)
-    assert after[name] != before[name], 'no admitted pointer motion'
     assert case['register_coordinates'], 'no register coordinates were checked'
     for key in (*case['drivers'], *case['register_coordinates']):
         if key != name:
             assert after[key] == before[key], (name, 'unrelated motion', key)
+
+
+def validate_case(case):
+    validate_attempt(case)
+    name = case['input']
+    outcomes = [row for row in case['outcomes'] if row['input'] == name]
+    assert outcomes and outcomes[-1]['status'] in ('completed', 'blocked'), outcomes
+    assert case['after'][name] != case['before'][name], 'no admitted pointer motion'
 
 
 def wait_for_gesture(page, name):
@@ -46,8 +51,7 @@ def wait_for_gesture(page, name):
         while(performance.now()<deadline) {
             if(pointerRelease.observed) {
                 const snapshot=await curta.run().snapshot();
-                if(snapshot.commands.length===0 && pointerOutcomes.some(
-                    row=>row.input===name && ['completed','blocked','refused'].includes(row.status)))
+                if(snapshot.commands.length===0)
                     return snapshot;
             }
             await new Promise(resolve=>setTimeout(resolve,100));
@@ -107,6 +111,8 @@ def main():
                 return curta.run().dt();
             }''', document_path.name)
             for name in args.inputs:
+                report['active_input'] = name
+                print(json.dumps({'starting': name}), flush=True)
                 control_name = INPUTS[name]
                 passed = False
                 for dx, dy in ((0, 60), (60, 0), (0, -60), (-60, 0)):
@@ -163,15 +169,13 @@ def main():
                     }''', name)
                     case.update(before=before, gesture={'point': point, 'dx': dx, 'dy': dy})
                     report['attempts'].append(case)
-                    assert not any(row['status'] == 'refused' for row in case['outcomes']), case
-                    try:
-                        validate_case(case)
-                    except AssertionError:
-                        # Preserve every unsuccessful real direction. A later
-                        # useful drag cannot hide a refusal or unrelated motion.
-                        if case['after'][name] != before[name]:
-                            raise
+                    # An axis-aligned drag can submit no angular quantum.
+                    # Keep it as a no-op attempt, never as accepted coverage;
+                    # a later direction cannot hide unrelated motion/refusal.
+                    validate_attempt(case)
+                    if case['after'][name] == before[name]:
                         continue
+                    validate_case(case)
                     report['cases'].append(case)
                     print(json.dumps({'input': name, 'outcome': case['outcomes'][-1],
                                       'admitted': case['after'][name]-before[name]}), flush=True)
@@ -189,6 +193,14 @@ def main():
             report['validation'] = 'passed'
         except Exception as error:
             report['failure'] = f'{type(error).__name__}: {error}'
+            try:
+                report['failure_context'] = page.evaluate('''async () => ({
+                    release:window.pointerRelease, outcomes:window.pointerOutcomes,
+                    snapshot:window.curta ? await curta.run().snapshot() : null,
+                    controls:window.curta ? curta.controls() : []
+                })''')
+            except Exception as capture_error:
+                report['failure_context_error'] = str(capture_error)
             raise
         finally:
             browser.close()
