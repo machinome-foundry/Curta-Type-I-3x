@@ -3,7 +3,7 @@
 Uses only visible DOM and pointer events: never remounts, obtains a hidden run
 handle or issues host movement calls. Four-decimal input readouts and terminal
 UI outcomes are evidence at that precision, not a full retained-bank proof.
-Hosted tests separately inspect pending commands and all 213 coordinates.
+Hosted tests separately inspect pending commands and the complete coordinate bank.
 """
 
 import argparse
@@ -23,6 +23,8 @@ def validate_report(report):
     before, after = report['before'], report['after']
     assert set(before) == set(after) == set(report['declared_inputs'])
     assert float(after[report['input']]) != float(before[report['input']])
+    if report.get('partial_turn'):
+        assert 0 < float(after[report['input']])-float(before[report['input']]) < 360
     if report.get('expected_delta') is not None:
         assert float(after[report['input']])-float(before[report['input']]) == report['expected_delta']
     for name in before:
@@ -48,6 +50,8 @@ def main():
     parser.add_argument('--drag', nargs=2, type=float, default=(0, -60))
     parser.add_argument('--press', action='store_true', help='Click the actual button-bearing part')
     parser.add_argument('--expected-delta', type=float)
+    parser.add_argument('--partial-turn', action='store_true',
+                        help='Require a positive visible crank delta below 360 degrees, not a timing-specific quantum')
     parser.add_argument('--deadline-seconds', type=float, default=120)
     args = parser.parse_args()
     assert not args.report.exists(), 'preserve earlier reports'
@@ -58,11 +62,14 @@ def main():
     assert 0 < args.deadline_seconds <= 1200
     control = manifest['controls'][args.control]
     assert (control['kind'] == 'button') == args.press
+    if args.partial_turn:
+        assert args.input == 'crank_rotation' and not args.press
     report = dict(validation='pending', errors=[], control=args.control, input=args.input,
                   declared_inputs=list(manifest['drivers']),
                   coverage='unmodified standalone page; visible input readouts at four decimals',
                   program_identity=manifest['program']['identity'],
                   expected_delta=args.expected_delta, deadline_seconds=args.deadline_seconds,
+                  partial_turn=args.partial_turn,
                   asset_sha256={name: hashlib.sha256((build/name).read_bytes()).hexdigest()
                       for name in ('manifest.json', 'index.html', 'machinome-viewer.js')})
     with sync_playwright() as playwright:

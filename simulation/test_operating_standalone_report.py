@@ -42,3 +42,13 @@ class StandaloneReportTest(unittest.TestCase):
             validate_report(self.report)
         self.report['after']['crank_elevation'] = '360.0000'
         validate_report(self.report)
+
+    def test_partial_turn_must_be_positive_and_less_than_a_full_turn(self):
+        self.report['partial_turn'] = True
+        for value in ('0.0000', '-1.0000', '360.0000', '361.0000', 'nan', 'inf'):
+            self.report['after']['crank_elevation'] = value
+            with self.subTest(value=value), self.assertRaises(AssertionError):
+                validate_report(self.report)
+        for value in ('1.0000', '2.0000', '359.9999'):
+            self.report['after']['crank_elevation'] = value
+            validate_report(self.report)

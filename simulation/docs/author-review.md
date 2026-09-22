@@ -266,6 +266,10 @@ unadopted; it is not a force/preload calculation or whole-machine acceptance.
 
 ## Current candidate and unresolved work
 
+The [positioning-ball orbit candidate](positioning-ball-following-2026-09-22.md)
+is rejected: it clears the bell but penetrates the stationary frame. Its scoped
+passes are not whole-machine acceptance; radial following remains to investigate.
+
 The [fork/follower continuation](reverser-fork-and-follower-2026-09-20.md)
 preserves trial IDs T01–T04 and their rejected variants. The tested candidate
 is now wired into `OperatingCurta` (F01/F16/F17, A05/R05 above). This is scoped

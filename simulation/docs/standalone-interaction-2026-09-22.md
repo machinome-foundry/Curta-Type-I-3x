@@ -67,3 +67,42 @@ inspected. Report `standalone-crank-revolution-7a620d9.json` has SHA-256
 `60ade952592bdd867e5f0fc6a4596d0fe43353cc45a665987138d0eed35d87a8`.
 This proves the click reaches its specified visible endpoint at the default
 timestep, not that the two simulated seconds execute in two wall-clock seconds.
+
+The distinct partial-turn handle also passes on the same unchanged production
+export. The actual labelled handle at (805.875, 254.25) receives a 60-pixel
+rightward drag; crank rotation reads 1.0000 degree with a completed outcome.
+All other visible input readouts are unchanged, no page error occurs, the
+process exits zero and its screenshot is inspected. This is a partial turn,
+not another full-turn button action. Report
+`_build_checks/standalone-partial-crank-3fefd59.json` has SHA-256
+`22816a000fb8f0ea0adfd929484d5c16181025540800979437787faf51b4fa02`.
+Resume/wrong-order cases and the remaining standalone controls are still open.
+
+## Fresh paired standing-cache export
+
+Export `_build_operating_standing_cache_884b01e` uses framework `a500a99` and
+viewer runtime `5149fe1` (later evidence-only `c5541f1` changes no bundle).
+Its program is exactly equal to the prior production export, identity
+`3e1d505123b75832f6e1b4353d7e9d7f5c5856375bcb67454ca15b602f140c20`,
+with 213 coordinates. Manifest SHA-256 is
+`001469d01ad5113b5620db782be3ca26b8f3280bb8751d168ef9888639811495`;
+bundle SHA-256 is
+`0d16382708d1672904572bf8f20277c5af60ed0ba8befc1c6cd53723423fdf84`.
+The rejected ball-orbit candidate is not included.
+
+A fresh physical partial-crank drag passes: 2.0000 degrees, completed,
+unchanged other visible inputs, no page error and observed process exit zero.
+The actual screenshot is inspected. Report
+`_build_checks/standing-cache-standalone-partial-range-884b01e.json` SHA-256:
+`261dec8087ea40542c38def6a7c08a1480ba0df9d479b44cba8ecbffead5be89`.
+
+Two preceding failed harness attempts remain intact: one confused the later
+labelled-handle location with the part's initial hover point; the next reached
+2 degrees but incorrectly demanded the previous run's timing-specific 1-degree
+quantum. A physical partial drag does not promise a fixed delta for identical
+screen displacement at different runtime speeds. The diagnostic now explicitly
+requires a finite positive partial turn below 360 degrees, preserving the
+separate full-revolution button's exact 360-degree requirement. The added test
+fails red before implementation, then all five report tests pass; negative,
+zero, full-turn, beyond-full-turn and nonfinite values are rejected. Logs are
+`_build_checks/standalone-partial-range-{red,green}-884b01e.log`.

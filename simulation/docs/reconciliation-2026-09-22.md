@@ -181,3 +181,45 @@ from isolated `machinome/WTs/demand-bound-read-paths` using the workspace venv:
 no persistent log artifact or hash is claimed. The independent project
 combined-bank arithmetic also passes all six tests on that framework, as
 recorded in the [counter-bank acceptance](counter-bank-operating-trial-2026-09-22.md).
+
+## Standing-bind cache and production baseline
+
+Framework main now includes `a500a99`, following planning commit `642d4fc`
+in isolated worktree `WTs/cache-standing-bound-bind`. The archived change
+retains exact frozen/current Curta ordered Bound-level, bank, stop and replay
+comparisons. The candidate's full top-level gate passes 3,566 tests and 2,118
+subtests with four skips; primary post-integration smoke passes 15 tests and
+12 subtests. One run-owned cache entry per traced constraint can reuse only
+proven identical finite standing inputs; each first moving point is still
+evaluated. No timestep, clearance threshold or sampling schedule changes.
+Measured first-48-default-tick process-CPU reductions are 25–33% in Python
+under the recorded concurrent host load, not a real-time full-turn claim.
+
+Before integration, the production interlock/partial-input/reverser/marker/
+ones-lockout batch completes 21 tests in 1,214.262 s on the old primary
+framework `a659cc7` (runtime `4bff28e`). It includes all 24 combinations of
+carriage shift, crank mode and counter reversal. Log
+`_build_checks/operating-production-interlocks-e5636f8.log` SHA-256:
+`b6613042a1dbf6fb7cdb8d06694377777f6177a0f9eecbf8904c576b59130df7`.
+Integration deliberately waited for that process to terminate, preserving a
+consistent imported framework throughout the run. The later positioning-ball
+motion correction is not retroactively covered by this earlier 213-coordinate
+baseline; its fresh evidence is linked separately.
+
+Viewer main also includes its separate standing-bind cycle, planning `224853f`
+and completed/archive `5149fe1`. The rebuilt primary bundle SHA-256
+`0d16382708d1672904572bf8f20277c5af60ed0ba8befc1c6cd53723423fdf84`
+matches the isolated browser-tested bundle. Full widget rerun passes all
+1,476 tests, alongside 49 Python viewer E2E tests, type checking and strict
+documentation/browser checks. An earlier broad-run throughput-floor failure
+remains documented, not relabelled as a pass. The pinned production export's
+first 48 default ticks use 20.0603 then 17.1970 process-CPU seconds (-14.3%),
+with identical 6,240 ordered Bound samples and all 213 coordinates. An actual
+auto-mounted standalone selector drag completes 0→2 with no page errors;
+its inspected screenshot is in the viewer's own evidence record. No installed
+package is published and nothing is pushed.
+
+The later ball-orbit candidate was rejected by its whole-machine survey and
+removed from production before commit. Production therefore retains 213
+coordinates; the [negative trial and radial investigation](positioning-ball-following-2026-09-22.md)
+preserve that finding without implying its scoped tests finished the model.

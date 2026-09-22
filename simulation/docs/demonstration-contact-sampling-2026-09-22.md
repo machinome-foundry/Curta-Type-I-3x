@@ -27,3 +27,22 @@ profile tests or establish continuous clearance between samples.
 New contacts will be investigated as measured findings, not automatically
 cut away. All demonstrations, both geometry paths and flexible-interface
 coverage remain required before the demonstration geometry task closes.
+
+The first addition diagnostic subsequently completes all 44 samples in
+263.098 seconds and exits zero. Its two turns retain the expected result and
+counter outcomes (3, 1), then (5, 2). The JSON-lines file has SHA-256
+`e7aa38533735a886081bed370dab62fd5e7ff5bd0b95f66f2cb0f07bed9cb4f8`.
+Rest still has 249 positive pairs. Motion adds contacts between the rotating
+bell and the static positioning ball #419094, and between the reverse-nose
+plate and the lower drum. The former reaches tens of cubic millimetres;
+the latter is small but remains positive and is not exempted. Neither is a
+passing contact. The ball is the source's 7.5 mm-diameter occurrence, despite
+its `6mm ball` name, not one of the seventeen 6 mm register balls.
+
+The [ball-motion investigation](positioning-ball-following-2026-09-22.md)
+rejects an orbiting-ball candidate after a second full-rigid replay finds a
+larger ball/frame collision. Its isolated bell-clearance checks were not enough.
+Production remains unchanged while radial following is measured. The small
+reverse-nose/drum common is independently native-clear at eight phases but
+positive in world64 STL geometry, with a 0.000001525879 mm face crossing at
+world Z -119.85; that representation finding remains unwaived.

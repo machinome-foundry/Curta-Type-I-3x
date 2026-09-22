@@ -39,6 +39,9 @@ world64 rest inventory drops from 259 to 258 positive pairs, adding none.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.
+The [positioning-ball investigation](docs/positioning-ball-following-2026-09-22.md)
+finds a missing moving interface but rejects a simple orbit: it clears the bell
+and penetrates the stationary frame. That candidate is not adopted.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production
