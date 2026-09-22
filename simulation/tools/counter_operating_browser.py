@@ -1,4 +1,4 @@
-"""Exercise counter ones or tens withdrawal on an isolated full-model export.
+"""Exercise any counter station's withdrawal on an isolated full-model export.
 
 Uses public running requests, not arithmetic shortcuts or the pilot's live
 session. This tests the browser executor and render; it does not claim real
@@ -17,12 +17,15 @@ from urllib.parse import unquote, urlsplit
 from playwright.sync_api import sync_playwright
 
 
-SHAFT = 'transmission.turns.ones.turn'
+SHAFTS = tuple(f'transmission.turns.{name}.turn'
+               for name in ('ones', 'tens', 'hundreds', 'digit_4', 'digit_5', 'digit_6'))
+SHAFT = SHAFTS[0]
 
 
 def validate_report(report, expected=None, *, station=1):
-    assert station in (1, 2)
-    shaft = SHAFT if station == 1 else 'transmission.turns.tens.turn'
+    assert station in range(1, 7)
+    assert report.get('station', station) == station
+    shaft = SHAFTS[station-1]
     shift = 20*(station-1)
     shaft_angle = 167.6-shift
     ids = set(report['coordinate_ids'])
@@ -59,18 +62,18 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--python-report', type=Path)
-    parser.add_argument('--station', type=int, choices=(1, 2), default=1)
+    parser.add_argument('--station', type=int, choices=range(1, 7), default=1)
     args = parser.parse_args()
     build = args.build.resolve()
     expected = json.loads(args.python_report.read_text()) if args.python_report else None
     document = json.loads((build/'manifest.json').read_text())
     shift = 20*(args.station-1)
-    shaft = SHAFT if args.station == 1 else 'transmission.turns.tens.turn'
+    shaft = SHAFTS[args.station-1]
     requests = ([['crank_elevation', 9], ['reverser_height', -4.9425],
                  ['crank_rotation', 90], ['crank_rotation', 160], ['crank_rotation', 170],
                  ['reverser_height', -6.9425]] if args.station == 1 else
-                [['reverser_height', -3], ['crank_rotation', 180],
-                 ['crank_rotation', 190], ['reverser_height', 3.9075]])
+                [['reverser_height', -3], ['crank_rotation', 160+shift],
+                 ['crank_rotation', 170+shift], ['reverser_height', 3.9075]])
     viewer = json.loads(subprocess.check_output(
         [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()

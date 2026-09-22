@@ -10,7 +10,7 @@ def fixture():
     state = {'crank_rotation': 174.78, 'main_drive.crank.turn': -174.78,
              'transmission.turns.ones.turn': 167.6}
     idle = dict(state, crank_rotation=174.73, **{'main_drive.crank.turn': -174.73})
-    return {'errors': [], 'coordinate_ids': list(state), 'prepared': dict(state, crank_rotation=170,
+    return {'station': 1, 'errors': [], 'coordinate_ids': list(state), 'prepared': dict(state, crank_rotation=170,
                                           **{'main_drive.crank.turn': -170}),
             'cases': [{'target': target, 'status': 'blocked', 'replay': True,
                        'relief_status': 'completed', 'retry_status': 'blocked',
@@ -21,6 +21,7 @@ def fixture():
 class CounterBrowserReportTest(unittest.TestCase):
     def test_counter_tens_uses_its_own_preparation_and_request_bounds(self):
         report = fixture()
+        report['station'] = 2
         report['coordinate_ids'][-1] = 'transmission.turns.tens.turn'
         for bank in [report['prepared'], *[case[name] for case in report['cases']
                                           for name in ('stopped', 'idle', 'retry')]]:
@@ -33,6 +34,33 @@ class CounterBrowserReportTest(unittest.TestCase):
         report['prepared']['transmission.turns.tens.turn'] += .1
         with self.assertRaises(AssertionError):
             validate_report(report, station=2)
+
+    def test_remaining_counters_keep_their_own_frames_and_request_targets(self):
+        for station, channel in ((3, 'hundreds'), (4, 'digit_4'),
+                                 (5, 'digit_5'), (6, 'digit_6')):
+            report = fixture()
+            report['station'] = station
+            shift = 20*(station-1)
+            shaft = f'transmission.turns.{channel}.turn'
+            report['coordinate_ids'][-1] = shaft
+            for bank in [report['prepared'], *[case[name] for case in report['cases']
+                                              for name in ('stopped', 'idle', 'retry')]]:
+                bank[shaft] = bank.pop('transmission.turns.ones.turn')-shift
+                bank['crank_rotation'] += shift
+                bank['main_drive.crank.turn'] -= shift
+            for case in report['cases']:
+                case['target'] += shift
+            with self.subTest(station=station):
+                validate_report(report, deepcopy(report['cases']), station=station)
+                report['cases'][0]['stopped'][shaft] += .1
+                with self.assertRaises(AssertionError):
+                    validate_report(report, station=station)
+
+    def test_report_cannot_claim_another_station(self):
+        report = fixture()
+        report['station'] = 2
+        with self.assertRaises(AssertionError):
+            validate_report(report, station=1)
 
     def test_every_exported_coordinate_is_required_without_a_python_report(self):
         report = fixture()

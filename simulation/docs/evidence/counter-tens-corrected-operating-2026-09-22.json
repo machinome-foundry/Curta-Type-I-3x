@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-22",
+  "status": "unadopted trial; scoped operating arithmetic and browser acceptance",
+  "project_content": "a5f6be3",
+  "framework_content": "acebc48",
+  "viewer_content": "1b06139",
+  "python": {
+    "tests": 2,
+    "seconds": 395.8,
+    "process_exit_observed": 0
+  },
+  "arithmetic": {
+    "tests": 6,
+    "seconds": 869.334,
+    "process_exit_observed": 0
+  },
+  "browser_process_exit_observed": 0,
+  "browser_screenshot_inspected": true,
+  "failed_first_browser_attempt": {
+    "process_exit_observed": 1,
+    "reason": "Screenshot timeout after successful preparation under concurrent load",
+    "not_a_passing_result": true
+  },
+  "files": {
+    "_build_checks/counter-tens-clearance-python-a5f6be3.log": "c011b6fe3c69f364d3fc5bbb9fcc7690f7935ecbe61980489228510a15666abf",
+    "_build_checks/counter-tens-clearance-python-a5f6be3.json": "82979b6eb58a93f5f7397ca26e61891768924ef88dab66c1f56e9d0a127fdeb0",
+    "_build_checks/counter-tens-clearance-arithmetic-a5f6be3.log": "2653b12b0a84952e79d30155a3aacd283da192ba478b80f1257690ab0ff72555",
+    "_build_checks/counter-tens-clearance-browser-a5f6be3.log": "4a2951073b18277a6fabe9be6811d1d3c62104544f2f0b6eb8ea942adb5a6cdc",
+    "_build_counter_tens_clearance_a5f6be3/counter-browser-acceptance.json": "3725a60296ddb53a7edc79eaab9ed87049e83e147ab65f7f742522d23ab99424",
+    "_build_checks/counter-tens-clearance-browser-retry-a5f6be3.log": "93b45f19022336cf075e81b358c23715bad75efadf6e726e64c4d96244d9e399",
+    "_build_counter_tens_clearance_retry_a5f6be3/counter-browser-acceptance.json": "8e7de833a1978dd3563b35aa05840b1acf98d1156676bf3f1a6895e84bcd2038",
+    "_build_counter_tens_clearance_retry_a5f6be3/counter-withdrawal-stopped.png": "347c2a7b040ef6e8d8477cc18d645d7c899764f8ca5bc864681e9f13eb9dbf3b"
+  },
+  "browser": {
+    "validation": "passed",
+    "station": 2,
+    "bundle_sha256": "f1f2cd4ce7ea630b95044631d2b53435dae1114b6c2c72321a381df5266570f7",
+    "document_sha256": "8ed33198aa2e24ae1e596b71d4abfd518e6d8097b2235bd4bcde3521abcba134",
+    "program_identity": "5183e78832bc74af34505b5684edf8bc185614f372c169b34c4ea4d23fc9a254",
+    "python_report": "_build_checks/counter-tens-clearance-python-a5f6be3.json",
+    "errors": []
+  },
+  "coordinate_count": 213,
+  "requests": [
+    {
+      "target": 200,
+      "status": "blocked",
+      "stop": 194.7853836059494,
+      "replay": true,
+      "relief": "completed",
+      "retry": "blocked"
+    },
+    {
+      "target": 920,
+      "status": "blocked",
+      "stop": 194.78538360544917,
+      "replay": true,
+      "relief": "completed",
+      "retry": "blocked"
+    }
+  ]
+}

@@ -95,3 +95,25 @@ browser attempt prepared successfully but timed out taking a screenshot at
 60 seconds under concurrent load; its pending report and failed log are
 preserved, and a separate-output retry is running. That failure is not a
 passing browser result or established viewer defect.
+
+## Corrected tens arithmetic and browser gates completed
+
+The previously pending six unchanged arithmetic scenarios finish in
+869.334 s with observed exit zero. This is a correctness result, not a
+paired timing benchmark against the older run under different host load.
+The separate-output browser retry also exits zero: targets 200° and 920°
+block at 194.7853836059494° / 194.78538360544917°, replay exactly, admit
+.05° relief, preserve idle, and block on retry. All 213 stopped and idle
+coordinates match the fresh corrected-law Python report for both requests.
+The final screenshot was inspected; the assembly and displayed stopped
+crank are coherent. These remain hosted requests, not physical gestures.
+
+The retry copies the identical exported assets into
+`_build_counter_tens_clearance_retry_a5f6be3` and uses CPUs 12–13; the failed
+first attempt and its pending report are untouched. Manifest SHA256 is
+`8ed33198aa2e24ae1e596b71d4abfd518e6d8097b2235bd4bcde3521abcba134`;
+viewer bundle `f1f2cd4ce7ea630b95044631d2b53435dae1114b6c2c72321a381df5266570f7`.
+The [corrected acceptance index](evidence/counter-tens-corrected-operating-2026-09-22.json)
+pins all logs, both browser outcomes and the inspected image. Production is
+still unchanged while the [combined higher-counter trial](counter-bank-operating-trial-2026-09-22.md)
+tests the remaining stations rather than adopting them by symmetry.
