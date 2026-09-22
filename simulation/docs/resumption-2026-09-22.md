@@ -84,6 +84,49 @@ and `simulation/test_running_motion.py`. The root probe is
 _build_operating_seats_2026_09_22/operating_curta --screenshot
 _build_checks/operating-seats-browser-2026-09-22.png --interlocks`.
 
+## Resumed investigation checkpoint — 2026-09-22 12:44 UTC
+
+Two focused project commits retain this continuation:
+
+- `1c3dfde`: the seven-station carry failure, passing six-station control,
+  original full-bank failures and fresh-process 7→6→7 order control.
+- `cdf33c5`: isolated collar pin/thread clocking acceptance and the separate
+  combined trial. Six isolated tests pass on each runner. The final full-root
+  exact trial has two passes (initial bank, mesh fixture) and two interface
+  failures; it is not adopted. No default-root source change remains.
+
+Strict OpenSpec validation and `git diff --check` pass. The author-provided
+assembly video and `screenshots/reverser_inspection.png` remain untracked and
+untouched. Task count remains **12/23**.
+
+**Two workers are still live at this checkpoint, not completed results.**
+Inspect these processes and their existing logs before any retry; do not
+restart a quiet worker or overwrite either log:
+
+| Worker | PID at checkpoint | Log under `_build_checks/` | Last observed state |
+| --- | ---: | --- | --- |
+| Native result station 8, full knot matrix | 3218297 | `result-station-8-profile-native-2026-09-22.log` | 17,513 admitted poses, zero failures so far; carry=1, shaft=84°; no terminal summary |
+| Isolated result-bank arithmetic batch | 3228593 | `result-bank-arithmetic-resumed-2026-09-22.log` | Page-53 calibration test running; no completed case or batch result yet |
+
+The native command is
+`python -u -m simulation.tools.check_higher_locking_profile --kernel native --station 8 --knots`.
+Native stations 10 and 11 have **not** been restarted by this continuation.
+The arithmetic worker runs the unchanged `RunningCurtaTest` methods below
+under a scoped `unittest.mock.patch.object(test_running, 'OperatingCurta',
+ResultBankOperatingTrial)`, without changing the production file:
+
+1. `test_manual_calibration_carries`
+2. `test_subtraction_borrows_through_both_registers_and_addition_undoes_it`
+3. `test_independent_inputs_and_two_successive_additions`
+
+Both jobs use the unchanged framework content `e6a42c8`. No terminal success
+is inferred from partial progress. The framework correctness investigation
+awaits the pilot's permission to create an isolated bench from committed main
+while preserving its unrelated untracked `docs/examples/v8-engine/` directory;
+the framework-change skill treats a dirty selected base as a stop condition.
+No framework worktree or proposal has been created, and no framework/viewer
+file has been edited in this continuation.
+
 ## Outstanding work
 
 - The [complete-result carry discrepancy](result-carry-graph-finding-2026-09-21.md#resumption-after-viewer-repair--2026-09-22)
