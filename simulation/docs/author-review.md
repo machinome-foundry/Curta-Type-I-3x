@@ -195,7 +195,18 @@ continuation. The [checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.j
 retains all 100 measured poses. These small rigid-simulation overlaps do not
 establish that the author's physical builds fail.
 
-## Counter lockout trial — T08, not adopted
+## Higher-counter locking outlines — F25
+
+The [production counter-bank continuation](counter-bank-adoption-2026-09-22.md)
+adopts the independently measured T08 .15 → .16 mm outer-profile relief at
+stations 2..6, retaining each complete source upper, key, height and pivot.
+Five default-root short/long withdrawal tests pass native/world64 clearance,
+positive overtravel contact, replay, relief and idle/retry checks; their reports
+are byte-identical to the independent trial. Six production parts/fixture/law
+tests pass. Further final acceptance gates are recorded separately; there is
+no upstream asset change, whole-machine clearance claim or manufacturing advice.
+
+## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)
 records indexed-position native contact on all six counter stations with the

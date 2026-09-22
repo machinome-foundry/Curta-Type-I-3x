@@ -21,13 +21,12 @@ from simulation.clearing_carrier_parts import ClearingSeatCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
 from simulation.counter_lockout_parts import ContactCounterOnes
+from simulation.counter_bank_lockout_parts import contact_counter_channel
 from simulation.result_bank_lockout_parts import contact_result_channel
 from simulation.lower_frame_parts import SeatedLowerHousing
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 from simulation.reverser_following import FollowingReverser
 from simulation.reverser_seat_trial import TrialKnob
-from simulation.reverser_inputs import (ReversingTens, ReversingHundreds,
-    ReversingFourth, ReversingFifth, ReversingSixth)
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
 
@@ -218,11 +217,9 @@ class ResultShafts(AssemblyNode):
 
 class TurnsShafts(AssemblyNode):
     ones = ContactCounterOnes()
-    tens = ReversingTens()
-    hundreds = ReversingHundreds()
-    digit_4 = ReversingFourth()
-    digit_5 = ReversingFifth()
-    digit_6 = ReversingSixth()
+    for _station in range(2, 7):
+        locals()[CHANNEL_NAMES[_station-1]] = contact_counter_channel(_station)()
+    del _station
 
     def simulate(self):
         from simulation.fit import INPUT_CLOCKING

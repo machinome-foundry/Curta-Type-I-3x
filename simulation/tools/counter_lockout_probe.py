@@ -3,9 +3,9 @@
 This pose instrument uses actual shaft and crank angles, not result-side
 phase normalization. It adopts no production fit or restraint. Higher counter
 carry travel is -1.8..2.4 mm; the fixed ones lockout does not share that travel.
-The refined bell is native-equivalent to production; upper prints are the
-existing source-backed fits by default. --trial measures a separately bounded
-T08 .15 -> .16 mm outer skin with refined upper meshes, not an operating fit.
+The refined bell is native-equivalent to production; upper prints default to
+the adopted source-backed fits. --trial retains the independent T08 candidate;
+SOURCE_STATIONS preserves the earlier .15 mm baseline for removal checks.
 """
 
 import argparse
@@ -23,6 +23,7 @@ from simulation.reverser_inputs import (
 from simulation.higher_lockout_trial import TrialContactBell
 from simulation.fit import FittedCarryLockout
 from simulation.counter_lockout_parts import ContactCounterOnes
+from simulation.counter_bank_lockout_parts import contact_counter_channel
 from simulation.standard import printed
 from simulation.tools.higher_locking_envelope import contact_reader
 
@@ -35,10 +36,12 @@ SOURCE_STATIONS = (
     (ReversingFifth, 'p_10220_410003_1_419107'),
     (ReversingSixth, 'p_10220_410003_1_419238'),
 )
-# Ones has adopted T08; the remaining defaults retain their earlier fits.
+# All six installed stations now use their independently checked fits.
 # Keep an explicit source baseline for removal tests instead of comparing
 # an adopted production print with an identical candidate.
-STATIONS = ((ContactCounterOnes, 'p_10222_1'), *SOURCE_STATIONS[1:])
+STATIONS = ((ContactCounterOnes, 'p_10222_1'),
+            *((contact_counter_channel(station), SOURCE_STATIONS[station-1][1])
+              for station in range(2, 7)))
 
 
 class TrialCounterLockout(FittedCarryLockout):

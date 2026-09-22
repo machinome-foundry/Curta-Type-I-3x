@@ -1,4 +1,4 @@
-"""Unadopted counter-tens restraint candidate; complete-print checks are owed.
+"""Measured higher-counter restraint, adopted after complete-print trial gates.
 
 The upper-disc chart is the independently measured counter-ones chart in the
 tens frame. Coarse native/mesh comparison supports that registration, not a
@@ -46,7 +46,7 @@ def higher_counter_closing_limit(own, rotating_part, shaft, travel):
 
 
 def counter_bank_closing_limit(own, rotating_part, *coordinates):
-    """Unadopted stations 2..6 candidate in actual, not tens-local, frames.
+    """Stations 2..6 in actual, not tens-local, frames.
 
     Every counter's upper travels -1.8..2.4 mm in its source channel. Unlike
     the result bank, no station-dependent axial rest conversion is needed.

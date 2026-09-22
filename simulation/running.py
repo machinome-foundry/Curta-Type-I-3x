@@ -23,6 +23,8 @@ from simulation.locking_laws import closing_limit
 from simulation.higher_locking_laws import higher_closing_limit, result_bank_closing_limit
 from simulation.result_bank_lockout_parts import RESULT_CONTACT_STATIONS
 from simulation.counter_locking_laws import counter_closing_limit
+from simulation.higher_counter_locking_laws import counter_bank_closing_limit
+from simulation.counter_bank_lockout_parts import COUNTER_CONTACT_STATIONS
 
 
 def sources(*ends):
@@ -88,8 +90,7 @@ class OperatingCurta(LayeredSource):
     # The fixed-height ones lockout meets the source bell after premature
     # selector withdrawal. Intersect the crank's existing pawl restraint;
     # preserve its assembly path and read actual retained part coordinates.
-    # Tens additionally reads its actual axial carry position. The remaining
-    # higher result/counter channels still need their own certification.
+    # Higher banks additionally read each upper's actual axial carry position.
     main_drive.crank.turn.constrain(range=(Bound(
         closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.result.ones.turn)), None))
@@ -98,7 +99,7 @@ class OperatingCurta(LayeredSource):
         reads=(carry_mechanism.tens_bell.turn, transmission.result.tens.turn,
                transmission.result.tens.p_10220_410003_1_419227.travel)), None))
     # Counter ones uses its separately measured fixed-height contact profile.
-    # Higher counter channels are not covered by this restraint.
+    # The higher counters have a separate source-specific bank restraint below.
     main_drive.crank.turn.constrain(range=(Bound(
         counter_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.turns.ones.turn)), None))
@@ -111,6 +112,17 @@ class OperatingCurta(LayeredSource):
         result_bank_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, *_result_readings)), None))
     del _station, _upper_name, _shaft, _result_readings
+
+    # Counter uppers retain their own -1.8..2.4 mm travel; do not use the
+    # result bank's station-dependent rest-height conversion for these parts.
+    _counter_readings = []
+    for _station, (_, _upper_name) in enumerate(COUNTER_CONTACT_STATIONS, 2):
+        _shaft = getattr(transmission.turns, CHANNEL_NAMES[_station-1])
+        _counter_readings.extend((_shaft.turn, getattr(_shaft, _upper_name).travel))
+    main_drive.crank.turn.constrain(range=(Bound(
+        counter_bank_closing_limit,
+        reads=(carry_mechanism.tens_bell.turn, *_counter_readings)), None))
+    del _station, _upper_name, _shaft, _counter_readings
 
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {

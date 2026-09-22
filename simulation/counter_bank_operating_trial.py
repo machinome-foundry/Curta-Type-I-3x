@@ -1,11 +1,11 @@
-"""Unadopted complete higher-counter trial; never the default operating root.
+"""Independent complete-print counterpart of the adopted higher-counter bank.
 
-Each upper remains its source-specific print. Profile evidence alone is not
-adoption: actual withdrawal, carry, replay, arithmetic and browser checks are
-still required. No user input, source gear or retained coordinate is replaced.
+Each upper remains its source-specific print. Its measured trial definitions
+remain separate from the production parts for equivalence checks. The root now
+inherits the adopted bank restraint; do not install the same Bound twice.
 """
 
-from machinome.motion.joints import Bound, Prismatic
+from machinome.motion.joints import Prismatic
 from machinome.parameters import Count, Length
 from simulation.fit import FittedCarryLockout
 from simulation.standard import printed
@@ -13,7 +13,6 @@ from simulation.reverser_inputs import (
     ReversingTens, ReversingHundreds, ReversingFourth, ReversingFifth, ReversingSixth)
 from simulation.running import OperatingCurta
 from simulation.running_parts import TurnsShafts, RetainedTransmission, CHANNEL_NAMES
-from simulation.higher_counter_locking_laws import counter_bank_closing_limit
 
 
 COUNTER_TRIAL_STATIONS = (
@@ -60,11 +59,3 @@ class TrialCounterTransmission(RetainedTransmission):
 
 class CounterBankOperatingTrial(OperatingCurta):
     transmission = TrialCounterTransmission()
-    _readings = []
-    for _station, (_, _upper_name) in enumerate(COUNTER_TRIAL_STATIONS, 2):
-        _shaft = getattr(transmission.turns, CHANNEL_NAMES[_station-1])
-        _readings.extend((_shaft.turn, getattr(_shaft, _upper_name).travel))
-    OperatingCurta.main_drive.crank.turn.constrain(range=(Bound(
-        counter_bank_closing_limit,
-        reads=(OperatingCurta.carry_mechanism.tens_bell.turn, *_readings)), None))
-    del _station, _upper_name, _shaft, _readings

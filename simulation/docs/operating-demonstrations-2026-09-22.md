@@ -32,8 +32,8 @@ After the missing-module red baseline, the definition and actual replay tests
 pass on framework `4bff28e`: two tests in 740.222 s, observed exit zero.
 The replay test runs all six sequences twice, checks every command/readout
 and compares the complete snapshots and outcome lists exactly. This was the
-production root before higher-counter adoption, at project `ad841f2` with
-the new demonstration files. The retained log
+production root before higher-counter adoption (the mechanism is unchanged
+between `5872ce1` and `ad841f2`), with the new demonstration files. The retained log
 `_build_checks/operating-demonstrations-first-2026-09-22.log` has SHA-256
 `859f188f5f8df927d721d936ed35dc4f088aca91a5c1d0fafc735adcf5d116c4`.
 
