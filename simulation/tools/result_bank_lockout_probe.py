@@ -1,10 +1,10 @@
 """Measure each installed result station before sharing the tens contact law.
 
-These source-backed pose instruments neither seed an operating run nor adopt
-fits. --trial substitutes the measured T07 outer skin and refines the upper
-print's mesh, keeping each station's source assembly, pivot, upper-stack
-placement and carry stroke. Both modes use the refined, native-equivalent
-bell mesh. Tessellation changes no native material.
+These source-backed pose instruments never seed an operating run. The default
+selects the production fit; --trial retains its independent measured parts,
+and --source selects the pre-adoption .15 mm baseline for preservation and
+negative controls. Each keeps its source assembly, pivot, upper-stack placement
+and carry stroke. All modes use the same native-equivalent refined bell mesh.
 """
 
 import argparse
@@ -17,6 +17,8 @@ from machinome.parameters import Count
 from machinome.simulation import Driver
 from simulation.standard import channels, printed
 from simulation.higher_lockout_trial import TrialContactBell, TrialTensLockout
+from simulation.higher_lockout_parts import ContactTens
+from simulation.result_bank_lockout_parts import contact_result_channel
 from simulation.tools.higher_locking_envelope import contact_reader
 
 
@@ -34,8 +36,12 @@ STATIONS = (
 )
 
 
-def station_channel(station, trial=False):
+def station_channel(station, trial=False, *, source=False):
     """Reuse a source-specific channel declaration in a bench or full trial."""
+    if station not in range(2, 12):
+        raise ValueError('Choose a higher result station 2..11')
+    if source and trial:
+        raise ValueError('Choose source or trial, not both')
     channel, upper_name = STATIONS[station-2]
     if trial:
         # A declared child replacement, not an edit of any source class.
@@ -55,15 +61,18 @@ def station_channel(station, trial=False):
             locals()[upper_name] = TrialUpper(travel=Prismatic(axis=(0, 0, -1)))
 
         channel = TrialChannel
+    elif not source:
+        channel = ContactTens if station == 2 else contact_result_channel(station)
     return channel
 
 
-def station_bench(station, trial=False):
-    channel = station_channel(station, trial)
+def station_bench(station, trial=False, *, source=False):
+    channel = station_channel(station, trial, source=source)
 
     class ResultStation(AssemblyNode):
         source_station = Count(station, min=station, max=station)
         trial_fit = Count(int(trial), min=int(trial), max=int(trial))
+        source_fit = Count(int(source), min=int(source), max=int(source))
         shaft_angle = Driver(default=4-20*(station-1), unit='deg')
         crank_angle = Driver(default=0, unit='deg')
         carry_position = Driver(default=0, range=(0, 1))
@@ -77,11 +86,11 @@ def station_bench(station, trial=False):
     return ResultStation
 
 
-def station_reader(station, carry, shaft, trial=False):
+def station_reader(station, carry, shaft, trial=False, *, source=False):
     """Arguments/results use tens-local angles; placement stays source-owned."""
     shift = 20*(station-2)
     read = contact_reader(carry, reference=140+shift, shaft=shaft-shift,
-                          node_type=station_bench(station, trial),
+                          node_type=station_bench(station, trial, source=source),
                           stack_path='Curta.shaft.'+STATIONS[station-2][1])
     return lambda crank, kernel: read(crank+shift, kernel)
 
@@ -89,16 +98,19 @@ def station_reader(station, carry, shaft, trial=False):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--station', type=int, choices=range(2, 12), action='append')
-    parser.add_argument('--trial', action='store_true')
+    selection = parser.add_mutually_exclusive_group()
+    selection.add_argument('--trial', action='store_true')
+    selection.add_argument('--source', action='store_true')
     args = parser.parse_args()
     for station in args.station or range(2, 12):
         for carry in (0, 1):
             for flat in range(5):
                 shaft = -16+72*flat
-                read = station_reader(station, carry, shaft, args.trial)
+                read = station_reader(station, carry, shaft, args.trial, source=args.source)
                 values = {kernel: read(180, kernel) for kernel in ('native', 'faceted')}
                 print(json.dumps({'station': station, 'carry': carry, 'flat': flat,
-                                  'trial': args.trial, 'indexed_mm3': values}), flush=True)
+                                  'trial': args.trial, 'source': args.source,
+                                  'indexed_mm3': values}), flush=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-22",
+  "project_base": "f7e4945",
+  "framework": "70d0bd9",
+  "scope": "Production result stations 3..11 fit and measured crank restraint",
+  "source_sha256": {
+    "simulation/running.py": "bf32eeaf6ffd4fae3a038889af17d38616ab6a0824e8dc38b4f3c106150a825a",
+    "simulation/running_parts.py": "9b7f755ee9c33fa12cb2b8a6b341153b454472af8c01e061a23cdb8aedeae1f8",
+    "simulation/result_bank_lockout_parts.py": "7b6a709ea64878a7ee37df6ce454ca17a772bb7ad96d7cf1c3776f804aa67b82",
+    "simulation/higher_locking_laws.py": "561ec3b96185b6a44f26012a3db2c9bd1013de3a868a4c9ad8af03cf7d6372c6",
+    "simulation/higher_locking_profiles.py": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+  },
+  "runs": [
+    {
+      "path": "_build_checks/result-bank-production-adoption-red.log",
+      "sha256": "1886462a05dab985a58e96feaa71e25a5431117a1edbd816806352c1f70244b3",
+      "exit": 1,
+      "summary": "1 test failed in 39.916s; unrestrained hundreds withdrawal completes into contact"
+    },
+    {
+      "path": "_build_checks/result-bank-production-adoption-green.log",
+      "sha256": "50d7bece809c0e70d3c285917fdddcda685b1eea0cc1c52f31325a281069daa2",
+      "exit": 0,
+      "summary": "2 tests passed in 721.719s; four short/long stops, both kernels, replay, relief and retry"
+    },
+    {
+      "path": "_build_checks/result-bank-production-actual-fixture.log",
+      "sha256": "fc48c698f7439d29c98af3b4c4247f75a1ca9d111e535deee9c2c10a48344963",
+      "exit": 0,
+      "summary": "2 tests passed in 34.992s; actual and independent trial installed prints and fixed initial bank"
+    },
+    {
+      "path": "_build_checks/result-bank-production-contact-regression.log",
+      "sha256": "02b83e126ac78b2d2e7cdc1bc85e881e5251653adb32182bcc2d6fe1c6bb16ae",
+      "exit": 0,
+      "summary": "5 tests passed in 158.566s; contact, fixture parity and all-station bound laws"
+    }
+  ],
+  "acceptance_banks": {
+    "path": "_build_checks/result-bank-production-acceptance.json",
+    "sha256": "e403e14e051c65e6a49c819fadd076b209f36f5de4656cca4fb9f49b6f1c9b1b",
+    "cases": 4,
+    "coordinates_per_bank": 213,
+    "fresh_browser_comparison": "pending"
+  },
+  "profile_matrix": "result-bank-complete-profile-matrix-2026-09-22.json",
+  "limits": [
+    "Finite complete-print sampling does not certify every continuous action order.",
+    "Fresh combined-root arithmetic and browser pointer acceptance remain open.",
+    "No whole-machine contact is waived and no OpenSpec checkbox changes."
+  ]
+}

@@ -20,7 +20,8 @@ from simulation.running_parts import (IndependentInputs, RetainedCarriage, Runni
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
 from simulation.running_laws import shaft_motion, dial_motion, lever_motion, reading
 from simulation.locking_laws import closing_limit
-from simulation.higher_locking_laws import higher_closing_limit
+from simulation.higher_locking_laws import higher_closing_limit, result_bank_closing_limit
+from simulation.result_bank_lockout_parts import RESULT_CONTACT_STATIONS
 from simulation.counter_locking_laws import counter_closing_limit
 
 
@@ -101,6 +102,15 @@ class OperatingCurta(LayeredSource):
     main_drive.crank.turn.constrain(range=(Bound(
         counter_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.turns.ones.turn)), None))
+    # Each remaining result upper keeps its own measured frame and carry datum.
+    _result_readings = []
+    for _station, (_, _upper_name) in enumerate(RESULT_CONTACT_STATIONS, 3):
+        _shaft = getattr(transmission.result, CHANNEL_NAMES[_station-1])
+        _result_readings.extend((_shaft.turn, getattr(_shaft, _upper_name).travel))
+    main_drive.crank.turn.constrain(range=(Bound(
+        result_bank_closing_limit,
+        reads=(carry_mechanism.tens_bell.turn, *_result_readings)), None))
+    del _station, _upper_name, _shaft, _result_readings
 
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {

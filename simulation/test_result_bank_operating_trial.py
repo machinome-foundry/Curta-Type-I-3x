@@ -1,5 +1,7 @@
 """The whole-bank trial must install each measured print in its own frame."""
 
+import hashlib
+import json
 import unittest
 
 from machinome.simulation import Sim
@@ -16,10 +18,16 @@ class ResultBankOperatingTrialTest(operating_tests.OperatingResultBankLockoutTes
 
 
 class ResultBankOperatingFixtureTest(unittest.TestCase):
+    model = ResultBankOperatingTrial
+
     def test_installed_bank_matches_measured_prints_and_preserves_initial_state(self):
-        sim = Sim(ResultBankOperatingTrial(), dt=.1, meshes=True)
-        original = Sim(OperatingCurta(), dt=.1)
-        self.assertEqual(dict(sim.state), dict(original.state))
+        sim = Sim(self.model(), dt=.1, meshes=True)
+        # Fixed pre-adoption witness, not two aliases of the fitted default.
+        bank = dict(sim.state)
+        self.assertEqual(len(bank), 213)
+        encoded = json.dumps(bank, sort_keys=True, separators=(',', ':')).encode()
+        self.assertEqual(hashlib.sha256(encoded).hexdigest(),
+                         'ea39d95d50f06580db66c894f5b3f700ab6ed930cee113b2b9ffe4689935f5b7')
         paths = {f'Curta.transmission.result.{CHANNEL_NAMES[station-1]}.{upper}'
                  for station, (_, upper) in enumerate(STATIONS, 2)}
         actual = world_solids(sim.node, selected=paths)
@@ -41,6 +49,10 @@ class ResultBankOperatingFixtureTest(unittest.TestCase):
                 self.assertTrue(installed.isValid())
                 self.assertEqual(installed.cut(expected).Volume(), 0)
                 self.assertEqual(expected.cut(installed).Volume(), 0)
+
+
+class OperatingResultBankFixtureTest(ResultBankOperatingFixtureTest):
+    model = OperatingCurta
 
 
 if __name__ == '__main__':

@@ -21,6 +21,7 @@ from simulation.clearing_carrier_parts import ClearingSeatCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
 from simulation.counter_lockout_parts import ContactCounterOnes
+from simulation.result_bank_lockout_parts import contact_result_channel
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 from simulation.reverser_following import FollowingReverser
 from simulation.reverser_seat_trial import TrialKnob
@@ -201,15 +202,9 @@ class RetainedCarries(assemblies.CarryMechanism):
 class ResultShafts(AssemblyNode):
     ones = channels.ResultOnes()
     tens = ContactTens()
-    hundreds = channels.ResultHundreds()
-    digit_4 = channels.ResultDigit4()
-    digit_5 = channels.ResultDigit5()
-    digit_6 = channels.ResultDigit6()
-    digit_7 = channels.ResultDigit7()
-    digit_8 = channels.ResultDigit8()
-    digit_9 = channels.ResultDigit9()
-    digit_10 = channels.ResultDigit10()
-    digit_11 = channels.ResultDigit11()
+    for _station in range(3, 12):
+        locals()[CHANNEL_NAMES[_station-1]] = contact_result_channel(_station)()
+    del _station
 
     def simulate(self):
         from simulation.fit import INPUT_CLOCKING

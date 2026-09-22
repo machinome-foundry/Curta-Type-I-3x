@@ -1,0 +1,535 @@
+{
+  "date": "2026-09-22",
+  "scope": "Finite independent complete-print admission matrix for source-specific T07 stations2..11",
+  "profile": "simulation/higher_locking_profiles.py",
+  "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+  "checks": [
+    {
+      "station": 2,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-2-profile-certified-faceted.log",
+      "sha256": "28a2fcdca39598756389a1f9c9ef42d9a3a0cedde5c66eed9c75df88f049d127",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 2,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 2,
+      "kernel": "native",
+      "path": "_build_checks/result-station-2-profile-certified-native.log",
+      "sha256": "915c23f0171d22a7634050eb5cbf74dcd1ad8c20bbbd015a8f3bb4b8bf6df86a",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 2,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 3,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-3-profile-certified-faceted.log",
+      "sha256": "b2fa4b845d791ecfef602bbb6e9a1e28b6bb38767d4d6e307008933b0c182c04",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 3,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 3,
+      "kernel": "native",
+      "path": "_build_checks/result-station-3-profile-certified-native.log",
+      "sha256": "359c84ad6392761b2f03475c08b996080b5058069af77f9a754ad9e1b861b01f",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 3,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 4,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-4-profile-certified-faceted.log",
+      "sha256": "32f70f30cd7c82fbd99798065c27069d3b2b7e8055f6007a71d47724d7f192fc",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 4,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 4,
+      "kernel": "native",
+      "path": "_build_checks/result-station-4-profile-certified-native.log",
+      "sha256": "ec88cfbbe58093585342c5387f42980269c3da2d6a813d58e54995eb9ee97a01",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 4,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 5,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-5-profile-certified-faceted.log",
+      "sha256": "05ec80c55ac4e47d1bcac3a52ac5503fcec8c613d08caa02d27673f526117edd",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 5,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 5,
+      "kernel": "native",
+      "path": "_build_checks/result-station-5-profile-certified-native.log",
+      "sha256": "45ead7d458f257786d172d284a6e9f4e6bbba7aea00060d6f263fcaba9abcf4a",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 5,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 6,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-6-profile-certified-faceted.log",
+      "sha256": "243babd8916ac122c96a1196b12074af7cf1e28fbc7b8ff89205aa48546c5de3",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 6,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 6,
+      "kernel": "native",
+      "path": "_build_checks/result-station-6-profile-certified-native.log",
+      "sha256": "38fe038bbdb9709cbce66d66501b1170331c7dd086e11a22fb4293dbf78bb556",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 6,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 7,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-7-profile-certified-faceted.log",
+      "sha256": "c609d5428b24304f74c1ee0e713272970b21dad1a01434490056107e0ca303d2",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 7,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 7,
+      "kernel": "native",
+      "path": "_build_checks/result-station-7-profile-certified-native.log",
+      "sha256": "dc05955f3c7230eee813fc0dd5f93c3d64c0324a60933cd48e766b18ad2a15c4",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 7,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 8,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-8-profile-certified-faceted.log",
+      "sha256": "ce031968248e5180b33b527575e63edd416a7248cc1ee9e72ffc62420c7b0e1e",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 8,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 8,
+      "kernel": "native",
+      "path": "_build_checks/result-station-8-profile-native-2026-09-22.log",
+      "sha256": "6d0508712111ad3a929d690c6899bd925e954491b54cc80ece4fd1c5efca5c44",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 8,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 9,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-9-profile-certified-faceted.log",
+      "sha256": "f35af90b601e7811209117b52e29b37ccebcd56c14660829f4e598bddbce4d7b",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 9,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 9,
+      "kernel": "native",
+      "path": "_build_checks/result-station-9-profile-certified-native.log",
+      "sha256": "d864266e4b520320753ba3038fb3e55b80927e99587d7afa2988dfd9ad8d4fd6",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 9,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 10,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-10-profile-certified-faceted.log",
+      "sha256": "65d944391881274de6414fb106962729e849b70772d1a44b5dbf746a79d81caa",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 10,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 10,
+      "kernel": "native",
+      "path": "_build_checks/reconcile-result-10-profile-native.log",
+      "sha256": "de8b363891a0a3adebcf86f1a59076229018d3c4b61c88063369add047f9c57d",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 10,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": 0
+    },
+    {
+      "station": 11,
+      "kernel": "faceted",
+      "path": "_build_checks/result-station-11-profile-certified-faceted.log",
+      "sha256": "e18c6e46630b1ee74606296bcfd00fd003016e1cf6bb3aace82b436a419fbec9",
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "station": 11,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": null
+    },
+    {
+      "station": 11,
+      "kernel": "native",
+      "path": "_build_checks/reconcile-result-11-profile-native.log",
+      "sha256": "f3e7d7ef12b7adae5a53b35e8dca5e50808b35ec7b402f28900dec5d8b6a7c4d",
+      "header": {
+        "kernel": "native",
+        "carry": null,
+        "step": 6,
+        "station": 11,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529"
+      },
+      "terminal": {
+        "complete": true,
+        "kernel": "native",
+        "checked": 23556,
+        "failures": 0
+      },
+      "shaft_rows_by_carry": {
+        "0": 627,
+        "1": 627,
+        "0.5": 627
+      },
+      "process_exit_observed": 0
+    }
+  ],
+  "total_admitted_pose_kernel_checks": 471120,
+  "limits": [
+    "Historical completion is established from terminal log records; process exit is null where not observed in this continuation.",
+    "Knots, midpoints, edges and sampled carries are finite checks, not a continuous certificate.",
+    "Candidate arithmetic/free-path and installed-root/browser adoption are separate gates.",
+    "Only the profile hash is embedded by these historical tools; a whole-project start-time pin is not fabricated."
+  ]
+}

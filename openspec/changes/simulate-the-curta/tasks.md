@@ -14,6 +14,10 @@ The [clearing-cover/counter-body seat](../../../simulation/docs/clearing-carrier
 is adopted with 3/3 production checks per runner; the refreshed faceted rest
 inventory removes only that contact, leaving 252 positive pairs and no new
 pair or refused intersection. Whole-machine task 1.3 remains open.
+The [remaining result-bank adoption](../../../simulation/docs/result-bank-adoption-2026-09-22.md)
+now passes production contact, installed-print, short/long withdrawal and
+replay checks. Fresh expanded-root arithmetic and browser/pointer checks
+remain open; no task checkbox changes.
 
 Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph

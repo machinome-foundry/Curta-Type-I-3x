@@ -117,7 +117,19 @@ bounded removal/connectivity and an unchanged initial bank. The refreshed
 rest inventory loses only this pair and adds none. This is a simulation fit,
 not a manufacturing instruction or whole-machine clearance certificate.
 
-## Higher result lockout — T07 adoption under verification
+## Remaining result locking outlines — F22
+
+The [production bank continuation](result-bank-adoption-2026-09-22.md) adopts
+the T07 .15 → .16 mm outer-profile relief at stations 3..11. Each source-specific
+complete upper print, keyed core, axial extent and installed pivot is retained;
+the fitted prints equal their independent trial. All ten higher stations pass
+indexed-clearance and two-sided-contact checks; the finite dense matrix has
+471,120 admitted native/faceted checks. Actual hundreds/eighth withdrawal
+stops, short/long requests, overtravel contact, exact replay and reverse relief
+pass. Fresh expanded-root arithmetic and browser acceptance remain open.
+No upstream asset changes and this is not a manufacturing recommendation.
+
+## Higher result lockout — historical T07 adoption checkpoints
 
 The [higher-result investigation](higher-result-lockout-2026-09-21.md) records
 **T07**, a .15 → .16 mm outer-profile trial on the result tens lockout. Its
@@ -146,12 +158,12 @@ so final adoption acceptance remains open. See
 the [continuation record](operating-continuation-2026-09-21.md).
 This is not a manufacturing recommendation.
 
-The new independently placed result-bank probe also finds indexed contact on
+The then-new independently placed result-bank probe also finds indexed contact on
 all ten higher result stations with the existing .15 mm simulation fit:
 normalized flat 3, both carry seats. The complete-print indexed test is red
 with 30 kernel/station/seat failures. No bank-wide .16 mm fit or shared
-restraint is adopted; its trial and engagement/admission checks remain next
-work. The [checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.json)
+restraint was adopted at that checkpoint; F22 above records the later production
+continuation. The [checkpoint evidence](evidence/handoff-checkpoint-2026-09-21.json)
 retains all 100 measured poses. These small rigid-simulation overlaps do not
 establish that the author's physical builds fail.
 

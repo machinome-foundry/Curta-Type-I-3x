@@ -12,6 +12,15 @@ from simulation.tools.result_bank_lockout_probe import STATIONS, station_bench, 
 
 
 class ResultBankFixtureTest(unittest.TestCase):
+    def test_station_selection_keeps_source_and_production_distinct(self):
+        for station in (0, 1, 12):
+            with self.subTest(station=station), self.assertRaises(ValueError):
+                station_bench(station)
+        with self.assertRaises(ValueError):
+            station_bench(3, trial=True, source=True)
+        self.assertNotEqual(station_bench(3)().uniq_id,
+                            station_bench(3, source=True)().uniq_id)
+
     def test_station_exports_keep_distinct_root_and_trial_channel_identities(self):
         for trial in (False, True):
             with self.subTest(trial=trial, level='root'):
@@ -49,7 +58,9 @@ class ResultBankFixtureTest(unittest.TestCase):
         # shared cached artifact would put another station's print on this
         # shaft even though its enclosing assembly uses the correct pivot.
         for station, (_, upper_name) in enumerate(STATIONS, 2):
-            before_node = station_bench(station)()
+            # Keep the original .15 mm source-side simulation fit as the
+            # preservation baseline after the operating bank adopts .16 mm.
+            before_node = station_bench(station, source=True)()
             after_node = station_bench(station, trial=True)()
             for node in (before_node, after_node):
                 node.set_state(shaft_angle=0, crank_angle=0, carry_position=0, time=0)
@@ -86,9 +97,8 @@ class ResultBankFixtureTest(unittest.TestCase):
 
 
 class ResultBankContactTest(unittest.TestCase):
-    # Deliberately red handoff fixture: .15 mm simulation fit has measured
-    # indexed overlaps. Do not hide them or select the .16 mm trial until
-    # its whole-bank material/engagement/admission checks justify adoption.
+    # Default instrumentation follows the actual production fit. The explicit
+    # source mode above keeps the .15 mm preservation/negative baseline.
     trial = False
 
     def test_all_indexed_flats_clear_at_both_actual_carry_seats(self):
