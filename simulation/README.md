@@ -1,8 +1,10 @@
 # Curta simulation — implementation resumed
 
-**Fresh-agent starting point:** [2026-09-21 handoff](docs/handoff-2026-09-21.md).
-It distinguishes completed engine/trial validation from the still-unfinished
-operating model, with exact next actions and reproduction commands.
+**Current starting point:** [2026-09-22 resumption](docs/resumption-2026-09-22.md).
+The operating model remains unfinished, with 12/23 OpenSpec tasks complete.
+The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
+adoption was completed in the subsequent continuation, while the other
+result-bank and counter trials still await acceptance.
 The [continuation record](docs/operating-continuation-2026-09-21.md) adds the
 result-bank fixture correction, intermediate-carry mesh checks and the
 separate [counter-lockout investigation](docs/counter-lockout-investigation-2026-09-21.md)
@@ -175,8 +177,11 @@ python -m unittest simulation.test_running.RunningCurtaTest
 python -m simulation.tools.probe
 ```
 
-Without activating the workspace environment, use `../../../.venv/bin/machinome`
-and `../../../.venv/bin/python` in this checkout. The exact root test is
+Without activating the workspace environment, use
+`/home/asa/devel/machinome-studio/.venv/bin/machinome` and the adjacent
+`python` executable. This project's catalogue path is a symlink to its own
+repository, so parent-relative paths do not locate the shop environment.
+The exact root test is
 intentionally failing until the recorded source findings are resolved. A
 successful build alone is not an assembly-validation result.
 

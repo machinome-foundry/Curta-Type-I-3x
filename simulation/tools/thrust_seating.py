@@ -40,7 +40,7 @@ def probe(section_path=None, seated=False):
                                  and abs(f.normalAt().z) > .999]
                           for path, shape in native.items()
                           if path in ('Curta.thrust_ring', 'Curta.carriage_spring_sleeve')},
-                      'not_adopted': True}), flush=True)
+                      'operating_root_used': False}), flush=True)
     refusals = []
     rises = (0,) if seated else (0, .5, 1, 2, 3, 4, 5, 6, 7, 7.4, 7.45,
                                 7.4775, 7.5, 7.5275, 7.55, 8, 9, 10)
@@ -72,7 +72,7 @@ def probe(section_path=None, seated=False):
             for number, line in enumerate(cut.discrete):
                 axis.plot(line[:, 0], line[:, 2], color=f'C{index}',
                           label=name if number == 0 else None)
-        title = ('Unadopted seated positioning candidate' if seated
+        title = ('Seated positioning bench' if seated
                  else 'Source positioning stack, no correction')
         axis.set(xlim=(8, 22), ylim=(22, 61), aspect='equal',
                  xlabel='World X (mm)', ylabel='World Z (mm)',

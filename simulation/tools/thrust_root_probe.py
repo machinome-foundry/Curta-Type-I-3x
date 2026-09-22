@@ -1,4 +1,4 @@
-"""Check the seated thrust/spring measuring copy against the actual rest root.
+"""Check the operating thrust/spring seats against the independent seat bench.
 
 No operating model or run bank is changed. Every rigid occurrence plus the
 changed spring wire is included; this is not an all-flexible motion audit.
@@ -30,40 +30,40 @@ def probe():
     sim = Sim(OperatingCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
-    original = {path: node.mesh for path, node in leaves.items()}
-    original[WIRE] = sim.node.carriage.positioning.carriage_spring.wire.mesh
+    operating = {path: node.mesh for path, node in leaves.items()}
+    operating[WIRE] = sim.node.carriage.positioning.carriage_spring.wire.mesh
     baseline = ThrustSeatBench()
     baseline.set_state(travel=0, shift=0)
     baseline.assemble()
     baseline.build_stls()
-    mappings = {
-        COLLAR: baseline.collar.mesh,
-        RING: baseline.thrust_ring.mesh,
-        WIRE: baseline.carriage_spring.wire.mesh,
-        PREFIX + 'carriage_spring_sleeve': baseline.carriage_spring_sleeve.mesh,
-        PREFIX + 'spring_sleeve_c_clip': baseline.spring_sleeve_c_clip.mesh,
-    }
-    distances = {}
-    for path, mesh in mappings.items():
-        a = np.concatenate((mesh.vertices, mesh.triangles_center))
-        b = np.concatenate((original[path].vertices, original[path].triangles_center))
-        d = float(max(cKDTree(a).query(b)[0].max(), cKDTree(b).query(a)[0].max()))
-        if d > .00001:
-            raise ValueError(('Source instrument differs from actual root', path, d))
-        distances[path] = d
     candidate = SeatedThrustBench()
     candidate.set_state(travel=0, shift=0)
     candidate.assemble()
     candidate.build_stls()
-    trial = dict(original)
-    trial[RING] = candidate.thrust_ring.mesh
-    trial[WIRE] = candidate.carriage_spring.wire.mesh
-    print(json.dumps({'scope': 'two changed measuring meshes against every rigid occurrence',
+    mappings = {
+        COLLAR: candidate.collar.mesh,
+        RING: candidate.thrust_ring.mesh,
+        WIRE: candidate.carriage_spring.wire.mesh,
+        PREFIX + 'carriage_spring_sleeve': candidate.carriage_spring_sleeve.mesh,
+        PREFIX + 'spring_sleeve_c_clip': candidate.spring_sleeve_c_clip.mesh,
+    }
+    distances = {}
+    for path, mesh in mappings.items():
+        a = np.concatenate((mesh.vertices, mesh.triangles_center))
+        b = np.concatenate((operating[path].vertices, operating[path].triangles_center))
+        d = float(max(cKDTree(a).query(b)[0].max(), cKDTree(b).query(a)[0].max()))
+        if d > .00001:
+            raise ValueError(('Seated instrument differs from actual root', path, d))
+        distances[path] = d
+    original = dict(operating)
+    original[RING] = baseline.thrust_ring.mesh
+    original[WIRE] = baseline.carriage_spring.wire.mesh
+    print(json.dumps({'scope': 'operating seats and source negative control against every rigid occurrence',
                       'rigid_occurrences': len(leaves), 'coordinates': len(bank),
-                      'source_fixture_distances_mm': distances,
+                      'seated_fixture_distances_mm': distances,
                       'kernel': 'published/source meshes, Manifold',
-                      'not_adopted': True}), flush=True)
-    for name, meshes in (('original', original), ('candidate', trial)):
+                      'operating_root_used': True}), flush=True)
+    for name, meshes in (('source_negative_control', original), ('operating', operating)):
         solids, positive, checked = {}, {}, set()
         for first in (RING, WIRE):
             for second in meshes:

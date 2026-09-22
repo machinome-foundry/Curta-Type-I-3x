@@ -1,4 +1,13 @@
-## Current continuation — finish operating Curta, 2026-09-19
+## Current checkpoint — resumed 2026-09-22
+
+Start with `simulation/docs/resumption-2026-09-22.md`. The operating model is
+unfinished, **12/23 tasks complete**. The T07 tens restraint is now in the
+default root; the older handoff below predates its adoption. The inherited
+thrust-seat work is being verified in the actual operating assembly. Other
+result-bank/counter trials, complete contact validation and final operation
+acceptance remain open. No interrupted job is counted as a pass.
+
+## Historical continuation — finish operating Curta, 2026-09-19
 
 **Fresh-agent checkpoint, 2026-09-21:** start with
 `simulation/docs/handoff-2026-09-21.md`. The refined T07 full-tree trial now

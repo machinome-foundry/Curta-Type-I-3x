@@ -14,7 +14,7 @@ from machinome.motion.joints import Bound
 from machinome.simulation import Driver, Instruction, Button, Turn, Slide
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
-from simulation.positioning import CarriagePositioning
+from simulation.positioning import SeatedCarriagePositioning
 from simulation.running_parts import (IndependentInputs, RetainedCarriage, RunningMainDrive, RunningEnclosure,
     RetainedCarries, RetainedTransmission, RESULT_DIALS, TURNS_DIALS,
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
@@ -43,7 +43,7 @@ def lever_ends(bank, count, counter):
 
 
 class RunningCarriage(AssemblyNode):
-    positioning = CarriagePositioning()
+    positioning = SeatedCarriagePositioning()
     registers = RetainedCarriage()
     registers.lift.drives(positioning.lift)
 
