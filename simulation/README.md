@@ -22,7 +22,8 @@ inspected native-clear section. Whole-machine contacts remain unresolved.
 The [remaining result-bank adoption](docs/result-bank-adoption-2026-09-22.md)
 adds the measured station 3..11 fits and crank restraint, with passing
 production contact, short/long withdrawal, replay and fixture checks. Fresh
-expanded-root arithmetic and browser/pointer acceptance remain open.
+browser stopped/relieved banks match Python exactly; expanded-root arithmetic
+and full pointer acceptance remain open.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.

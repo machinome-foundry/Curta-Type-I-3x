@@ -16,8 +16,9 @@ inventory removes only that contact, leaving 252 positive pairs and no new
 pair or refused intersection. Whole-machine task 1.3 remains open.
 The [remaining result-bank adoption](../../../simulation/docs/result-bank-adoption-2026-09-22.md)
 now passes production contact, installed-print, short/long withdrawal and
-replay checks. Fresh expanded-root arithmetic and browser/pointer checks
-remain open; no task checkbox changes.
+replay checks. Fresh browser stopped/relieved banks match Python exactly;
+expanded-root arithmetic and full pointer checks remain open. No task checkbox
+changes.
 
 Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph

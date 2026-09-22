@@ -42,11 +42,23 @@ Four stopped/relieved full 213-coordinate banks are saved for independent
 browser comparison. The [evidence index](evidence/result-bank-production-2026-09-22.json)
 pins source and log hashes.
 
+## Fresh browser comparison
+
+A separate public export from committed project `7586002` passes the
+project-owned browser acceptance harness. All four short/long station 3/8
+cases match the production Python stopped and relieved 213-coordinate banks
+exactly; snapshot replay, reverse relief and blocked retry pass. The report
+exits zero with no browser errors. Its two full-assembly screenshots were
+inspected, showing the retained 165.2232° and 265.2232° stops with the input
+withdrawn. The evidence index pins the fresh manifest, report and images.
+This browser harness issues hosted requests; it is not an actual-pointer
+gesture test of every control.
+
 ## Remaining gates
 
 The inherited isolated trial's arithmetic and browser evidence is retained,
 not relabelled as fresh acceptance of this expanded production root. Fresh
-combined-root arithmetic, browser bank comparison and physical pointer
+combined-root arithmetic and physical pointer
 gestures remain to run. Normal operation is still too slow; independent
 framework/viewer work is addressing measured evaluator costs without changing
 the mechanism's laws, timestep or coordinate bank. Whole-machine positive

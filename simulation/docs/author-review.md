@@ -126,7 +126,8 @@ the fitted prints equal their independent trial. All ten higher stations pass
 indexed-clearance and two-sided-contact checks; the finite dense matrix has
 471,120 admitted native/faceted checks. Actual hundreds/eighth withdrawal
 stops, short/long requests, overtravel contact, exact replay and reverse relief
-pass. Fresh expanded-root arithmetic and browser acceptance remain open.
+pass. Fresh browser stopped/relieved banks match Python exactly in all four
+cases. Expanded-root arithmetic and full pointer acceptance remain open.
 No upstream asset changes and this is not a manufacturing recommendation.
 
 ## Higher result lockout — historical T07 adoption checkpoints

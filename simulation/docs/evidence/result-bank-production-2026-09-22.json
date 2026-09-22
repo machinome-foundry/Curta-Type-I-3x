@@ -41,12 +41,40 @@
     "sha256": "e403e14e051c65e6a49c819fadd076b209f36f5de4656cca4fb9f49b6f1c9b1b",
     "cases": 4,
     "coordinates_per_bank": 213,
-    "fresh_browser_comparison": "pending"
+    "fresh_browser_comparison": "passed"
+  },
+  "browser": {
+    "project": "7586002",
+    "framework": "6dc07a8",
+    "viewer": "1f91191",
+    "manifest": "_build_current_operating_7586002/manifest.json",
+    "manifest_sha256": "c36432b1080387eeb40234532f516a9ae05f8a9822fd3f47f44ffbbb42f889d1",
+    "program_identity": "be125f4048c8be00ce4e73d646311d4a50ac75a59aa739f93bf2f38c992fa195",
+    "report": "_build_current_operating_7586002/result-bank-browser-acceptance.json",
+    "report_sha256": "b6413b275933834ea4453397b44ad33d8af8e24ef3af5225095040749b4e645e",
+    "exit": 0,
+    "validation": "passed",
+    "errors": [],
+    "python_compared_cases": [[3, 190], [3, 880], [8, 290], [8, 980]],
+    "full_bank_comparison": "exact stopped and relieved 213-coordinate banks in all four cases",
+    "replay_and_retry": "exact replay, completed relief and blocked retry in every case",
+    "screenshots": [
+      {
+        "path": "_build_current_operating_7586002/result-station-3-withdrawal.png",
+        "sha256": "e3202ad7f957470ee59f1363c4e3ff1874d6a069bc9eeac89ebcb60c691e6b0c",
+        "inspected": true
+      },
+      {
+        "path": "_build_current_operating_7586002/result-station-8-withdrawal.png",
+        "sha256": "51b61fbbf476ccaf35cdda7d6ed0aef5caf1ea65bf6e371f83c41424ec955cb1",
+        "inspected": true
+      }
+    ]
   },
   "profile_matrix": "result-bank-complete-profile-matrix-2026-09-22.json",
   "limits": [
     "Finite complete-print sampling does not certify every continuous action order.",
-    "Fresh combined-root arithmetic and browser pointer acceptance remain open.",
+    "Fresh combined-root arithmetic and actual pointer acceptance remain open; the browser bank harness uses hosted requests.",
     "No whole-machine contact is waived and no OpenSpec checkbox changes."
   ]
 }
