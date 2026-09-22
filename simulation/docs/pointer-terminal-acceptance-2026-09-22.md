@@ -33,3 +33,33 @@ needing a better observation barrier or a viewer defect is being diagnosed in
 the viewer repository. No timing change, command truncation or relaxation of
 the terminal gate has been adopted. Existing earlier prerequisite pointer
 readbacks are not retrospectively relabelled as full terminal acceptance.
+
+## Release-aware first-selector gate
+
+The viewer review finds that a drag may issue successive quanta, and that
+`onOutcome` precedes the planner's completion callback. Its pointer-up handler
+ends the gesture and prevents subsequent queuing. The harness now first
+observes pointer-up bubbling through the actual `#view` mount, then requests
+a fresh public snapshot and waits for an empty command bank and terminal
+outcome. It retains every outcome rather than assuming one command per drag.
+The missing-release validator is mutation-tested red; all six validator tests
+pass after restoration. No viewer code or timestep changes for this correction.
+
+The first-selector real-browser rerun now passes with observed exit zero:
+three one-digit commands retire completed, the final digit is 3, all other
+inputs and all register turns remain unchanged, and no pending command or page
+error remains. The final screenshot is inspected. This is one hosted selector,
+not the entire pointer matrix or an assertion of real-time performance.
+
+Retained artifacts under `_build_checks/`:
+
+- `counter-bank-pointer-first-release-b15695b.json`, SHA-256
+  `94f326dfca3d800523c79d5fefd1606cb6a0c81c704145e99ed0010998abea6c`.
+- `counter-bank-pointer-first-release-b15695b.png`, SHA-256
+  `fad202c6300c30acaa2a92f7afb7b8394eee5557c78585464e286ceff57b07d5`.
+- `operating-pointer-release-validator-red-2026-09-22.log` and
+  `operating-pointer-release-validator-2026-09-22.log` keep the mutation and
+  passing validator results separate.
+
+The full selector/marker matrix is running in a separate report. Its result
+is not inferred from this first selector.

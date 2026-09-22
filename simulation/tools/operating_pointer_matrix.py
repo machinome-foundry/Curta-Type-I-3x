@@ -24,6 +24,7 @@ INPUTS = {**{f'digit_{n}': f'set digit {n}' for n in range(1, 9)},
 
 def validate_case(case):
     name = case['input']
+    assert case['release']['observed'], 'viewer pointer release was not observed'
     assert not case['commands'], 'pointer command has not retired'
     outcomes = [row for row in case['outcomes'] if row['input'] == name]
     assert outcomes and outcomes[-1]['status'] in ('completed', 'blocked'), outcomes
@@ -121,11 +122,20 @@ def main():
                         if point:
                             break
                     assert point, f'No actual reachable control for {control_name}'
+                    page.evaluate('''() => {
+                        window.pointerRelease={observed:false};
+                        window.addEventListener('pointerup', event=>{
+                            if(event.composedPath().includes(document.querySelector('#view')))
+                                pointerRelease={observed:true,tick:curta.run().tick(),
+                                    outcome_count:pointerOutcomes.length};
+                        },{once:true});
+                    }''')
                     page.mouse.move(point['x'], point['y'])
                     page.mouse.down()
                     page.mouse.move(point['x']+dx, point['y']+dy, steps=12)
                     page.mouse.up()
                     page.wait_for_function('''async name => {
+                        if(!pointerRelease.observed) return false;
                         const snapshot=await curta.run().snapshot();
                         return snapshot.commands.length===0 && pointerOutcomes.some(
                             row=>row.input===name && ['completed','blocked','refused'].includes(row.status));
@@ -133,7 +143,8 @@ def main():
                     case = page.evaluate('''async name => {
                         const snapshot=await curta.run().snapshot();
                         return {input:name,after:snapshot.bank,commands:snapshot.commands,
-                            outcomes:[...pointerOutcomes],drivers:Object.keys(curta.drivers()),
+                            outcomes:[...pointerOutcomes],release:pointerRelease,
+                            drivers:Object.keys(curta.drivers()),
                             register_coordinates:Object.keys(snapshot.bank).filter(key=>
                                 /\\.(result_register|turns_register)\\..*\\.turn$/.test(key))};
                     }''', name)
@@ -156,6 +167,11 @@ def main():
                 assert passed, f'No admitted terminal pointer movement for {name}'
             assert not report['errors'], report['errors']
             assert len(report['cases']) == len(args.inputs)
+            page.evaluate('''async () => {
+                curta.run().pause();
+                await new Promise(requestAnimationFrame);
+                await new Promise(requestAnimationFrame);
+            }''')
             page.screenshot(path=str(args.report.with_suffix('.png')))
             report['validation'] = 'passed'
         except Exception as error:

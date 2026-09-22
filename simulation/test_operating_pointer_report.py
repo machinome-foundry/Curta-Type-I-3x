@@ -12,6 +12,7 @@ class PointerReportTest(unittest.TestCase):
             'input': 'digit_1', 'before': {'digit_1': 0, 'digit_2': 0, 'dial.turn': 0},
             'after': {'digit_1': 1, 'digit_2': 0, 'dial.turn': 0},
             'commands': [], 'outcomes': [{'input': 'digit_1', 'status': 'completed'}],
+            'release': {'observed': True},
             'drivers': ['digit_1', 'digit_2'], 'register_coordinates': ['dial.turn'],
         }
 
@@ -20,6 +21,11 @@ class PointerReportTest(unittest.TestCase):
 
     def test_rejects_intermediate_readback(self):
         self.case['commands'] = [{'input': 'digit_1'}]
+        with self.assertRaises(AssertionError):
+            validate_case(self.case)
+
+    def test_rejects_a_missing_pointer_release(self):
+        self.case['release']['observed'] = False
         with self.assertRaises(AssertionError):
             validate_case(self.case)
 
