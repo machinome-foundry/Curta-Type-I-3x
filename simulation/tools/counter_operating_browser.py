@@ -3,12 +3,15 @@
 Uses public running requests, not arithmetic shortcuts or the pilot's live
 session. This tests the browser executor and render; it does not claim real
 pointer coverage or geometric clearance from pixels. Optional Python reports
-are compared across every retained coordinate, exactly.
+are compared across every retained coordinate, exactly by default. An explicit
+option classifies the independently traced three-ULP p9 cam-path residual;
+it records that difference and never changes a geometric contact check.
 """
 
 import argparse
 import hashlib
 import json
+import math
 from pathlib import Path
 import subprocess
 import sys
@@ -20,9 +23,28 @@ from playwright.sync_api import sync_playwright
 SHAFTS = tuple(f'transmission.turns.{name}.turn'
                for name in ('ones', 'tens', 'hundreds', 'digit_4', 'digit_5', 'digit_6'))
 SHAFT = SHAFTS[0]
+P9_DETENT = 'carriage.registers.dial_detents.p_6mm_ball_419241_9.lift'
 
 
-def validate_report(report, expected=None, *, station=1):
+def compare_banks(actual, expected, *, allow_measured_detent_rounding=False):
+    """Keep all IDs/other values exact; optionally report one measured residue."""
+    assert set(actual) == set(expected), 'bank coordinate mismatch'
+    differences = []
+    for key, value in actual.items():
+        reference = expected[key]
+        if value == reference:
+            continue
+        assert allow_measured_detent_rounding and key == P9_DETENT, (key, value, reference)
+        assert math.isfinite(value) and math.isfinite(reference), (key, value, reference)
+        ulps = abs(value-reference)/max(math.ulp(value), math.ulp(reference))
+        assert ulps <= 3, (key, value, reference, ulps)
+        differences.append({'coordinate': key, 'browser': value, 'python': reference,
+                            'ulps': ulps})
+    return differences
+
+
+def validate_report(report, expected=None, *, station=1, allow_measured_detent_rounding=False):
+    differences = []
     assert station in range(1, 7)
     assert report.get('station', station) == station
     shaft = SHAFTS[station-1]
@@ -55,7 +77,10 @@ def validate_report(report, expected=None, *, station=1):
         if expected is not None:
             other = next(row for row in expected if row['target'] == case['target'])
             for state in ('stopped', 'idle'):
-                assert case[state] == other[state], (case['target'], state, 'bank mismatch')
+                for difference in compare_banks(case[state], other[state],
+                        allow_measured_detent_rounding=allow_measured_detent_rounding):
+                    differences.append(dict(difference, target=case['target'], state=state))
+    return differences
 
 
 def main():
@@ -63,6 +88,8 @@ def main():
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--python-report', type=Path)
     parser.add_argument('--station', type=int, choices=range(1, 7), default=1)
+    parser.add_argument('--allow-measured-detent-rounding', action='store_true',
+                        help='Record the traced p9 cam-path residue, at most three ULPs; all other state remains exact.')
     args = parser.parse_args()
     build = args.build.resolve()
     expected = json.loads(args.python_report.read_text()) if args.python_report else None
@@ -143,7 +170,10 @@ def main():
                                   'stop': case['stopped']['crank_rotation'],
                                   'replay': case['replay']}), flush=True)
             page.screenshot(path=str(build/'counter-withdrawal-stopped.png'))
-            validate_report(report, expected, station=args.station)
+            report['bank_differences'] = validate_report(report, expected, station=args.station,
+                allow_measured_detent_rounding=args.allow_measured_detent_rounding)
+            report['bank_comparison'] = ('exact except explicitly measured p9 cam residual <=3 ULPs'
+                if args.allow_measured_detent_rounding else 'exact')
             report['validation'] = 'passed'
         finally:
             browser.close()

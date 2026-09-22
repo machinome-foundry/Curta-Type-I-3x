@@ -63,3 +63,23 @@ Retained artifacts under `_build_checks/`:
 
 The full selector/marker matrix is running in a separate report. Its result
 is not inferred from this first selector.
+
+## Async polling correction
+
+The complete-matrix attempt `counter-bank-pointer-matrix-b15695b` fails on
+its first selector despite observing release. Inspection of the installed
+Playwright implementation finds the harness error: `Page.wait_for_function`
+tests the async predicate's Promise for truthiness before its boolean resolves.
+The active command had not retired; the diagnostic was correctly rejected by
+the final report validator. This is not evidence of a viewer queue defect.
+
+The harness now uses `page.evaluate` to await an explicit asynchronous polling
+loop, which awaits each snapshot before examining pending commands. A small
+browser regression returns active snapshots twice, then empty, and requires
+all three calls before the helper returns. Seven report/barrier tests pass.
+An initial test-placement edit put two existing methods in the wrong test
+class and produced two setup errors; that log is retained as
+`operating-pointer-async-barrier-first-2026-09-22.log`, distinct from the
+corrected `...-green-...` result. The full matrix is running again under
+`counter-bank-pointer-awaited-5872ce1`; no result is inferred from the earlier
+single-selector pass or the corrected unit test.

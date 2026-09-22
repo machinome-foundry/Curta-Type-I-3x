@@ -38,6 +38,24 @@ def validate_case(case):
             assert after[key] == before[key], (name, 'unrelated motion', key)
 
 
+def wait_for_gesture(page, name):
+    # Playwright's Page.wait_for_function tests Promise truthiness, not the
+    # resolved boolean. page.evaluate explicitly awaits this async loop.
+    return page.evaluate('''async name => {
+        const deadline=performance.now()+120000;
+        while(performance.now()<deadline) {
+            if(pointerRelease.observed) {
+                const snapshot=await curta.run().snapshot();
+                if(snapshot.commands.length===0 && pointerOutcomes.some(
+                    row=>row.input===name && ['completed','blocked','refused'].includes(row.status)))
+                    return snapshot;
+            }
+            await new Promise(resolve=>setTimeout(resolve,100));
+        }
+        throw Error('Pointer release/command retirement deadline exceeded: '+name);
+    }''', name)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--build', type=Path, required=True)
@@ -134,12 +152,7 @@ def main():
                     page.mouse.down()
                     page.mouse.move(point['x']+dx, point['y']+dy, steps=12)
                     page.mouse.up()
-                    page.wait_for_function('''async name => {
-                        if(!pointerRelease.observed) return false;
-                        const snapshot=await curta.run().snapshot();
-                        return snapshot.commands.length===0 && pointerOutcomes.some(
-                            row=>row.input===name && ['completed','blocked','refused'].includes(row.status));
-                    }''', arg=name, polling=100, timeout=120_000)
+                    wait_for_gesture(page, name)
                     case = page.evaluate('''async name => {
                         const snapshot=await curta.run().snapshot();
                         return {input:name,after:snapshot.bank,commands:snapshot.commands,

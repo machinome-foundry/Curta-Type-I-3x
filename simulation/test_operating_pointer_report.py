@@ -3,7 +3,7 @@
 from copy import deepcopy
 import unittest
 
-from simulation.tools.operating_pointer_matrix import validate_case
+from simulation.tools.operating_pointer_matrix import validate_case, wait_for_gesture
 
 
 class PointerReportTest(unittest.TestCase):
@@ -36,6 +36,7 @@ class PointerReportTest(unittest.TestCase):
             with self.subTest(status=status), self.assertRaises(AssertionError):
                 validate_case(row)
 
+
     def test_rejects_motion_of_another_input_or_register(self):
         for key in ('digit_2', 'dial.turn'):
             row = deepcopy(self.case)
@@ -49,3 +50,26 @@ class PointerReportTest(unittest.TestCase):
             row[field] = value
             with self.subTest(field=field), self.assertRaises(AssertionError):
                 validate_case(row)
+
+
+class PointerAsyncBarrierTest(unittest.TestCase):
+    def test_async_snapshot_is_resolved_before_its_command_bank_is_tested(self):
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            try:
+                page = browser.new_page()
+                page.evaluate('''() => {
+                    window.pointerRelease={observed:true}; window.calls=0;
+                    window.pointerOutcomes=[{input:'digit_1',status:'completed'}];
+                    window.curta={run:()=>({snapshot:async()=>{
+                        await new Promise(resolve=>setTimeout(resolve,10));
+                        calls++;
+                        return {commands:calls<3?[{status:'active'}]:[]};
+                    }})};
+                }''')
+                snapshot = wait_for_gesture(page, 'digit_1')
+                self.assertEqual(snapshot['commands'], [])
+                self.assertEqual(page.evaluate('calls'), 3)
+            finally:
+                browser.close()

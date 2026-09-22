@@ -1,9 +1,10 @@
 """A browser restraint report must prove both requests, replay and retained state."""
 
 from copy import deepcopy
+import math
 import unittest
 
-from simulation.tools.counter_operating_browser import validate_report
+from simulation.tools.counter_operating_browser import validate_report, compare_banks, P9_DETENT
 
 
 def fixture():
@@ -19,6 +20,31 @@ def fixture():
 
 
 class CounterBrowserReportTest(unittest.TestCase):
+    def test_measured_detent_rounding_is_explicit_and_reported(self):
+        actual = {P9_DETENT: .08929057589867746, 'unrelated': 1.0}
+        expected = {P9_DETENT: .0892905758986775, 'unrelated': 1.0}
+        with self.assertRaises(AssertionError):
+            compare_banks(actual, expected)
+        differences = compare_banks(actual, expected, allow_measured_detent_rounding=True)
+        self.assertEqual(len(differences), 1)
+        self.assertEqual(differences[0]['coordinate'], P9_DETENT)
+        self.assertEqual(differences[0]['ulps'], 3)
+
+    def test_larger_detent_error_or_any_other_coordinate_drift_is_rejected(self):
+        expected = {P9_DETENT: .08929057589867746, 'unrelated': 1.0}
+        for key, delta in ((P9_DETENT, 4*math.ulp(expected[P9_DETENT])),
+                           ('unrelated', math.ulp(1.0))):
+            actual = dict(expected)
+            actual[key] += delta
+            with self.subTest(key=key), self.assertRaises(AssertionError):
+                compare_banks(actual, expected, allow_measured_detent_rounding=True)
+
+    def test_rounding_option_does_not_ignore_nonfinite_or_missing_state(self):
+        expected = {P9_DETENT: .08929057589867746}
+        for actual in ({}, {P9_DETENT: float('nan')}, {P9_DETENT: float('inf')}):
+            with self.subTest(actual=actual), self.assertRaises(AssertionError):
+                compare_banks(actual, expected, allow_measured_detent_rounding=True)
+
     def test_counter_tens_uses_its_own_preparation_and_request_bounds(self):
         report = fixture()
         report['station'] = 2
