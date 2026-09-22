@@ -33,10 +33,18 @@ def contact_shapes(node):
     return shapes[BELL], shapes[LOCKOUT]
 
 
-def mesh_solid(mesh):
-    result = manifold.Manifold(manifold.Mesh(
-        np.asarray(mesh.vertices, dtype=np.float32),
-        np.asarray(mesh.faces, dtype=np.uint32)))
+def mesh_solid(mesh, *, world_precision=32):
+    """Convert placed meshes; use 64 to avoid a second world-float32 rounding."""
+    if world_precision == 64:
+        result = manifold.Manifold(manifold.Mesh64(
+            np.asarray(mesh.vertices, dtype=np.float64),
+            np.asarray(mesh.faces, dtype=np.uint64)))
+    elif world_precision == 32:
+        result = manifold.Manifold(manifold.Mesh(
+            np.asarray(mesh.vertices, dtype=np.float32),
+            np.asarray(mesh.faces, dtype=np.uint32)))
+    else:
+        raise ValueError('world_precision must be 32 or 64')
     assert result.status() == manifold.Error.NoError, result.status()
     return result
 

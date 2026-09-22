@@ -85,10 +85,10 @@ def station_bench(station, trial=False, *, source=False):
     return CounterStation
 
 
-def station_reader(station, carry, shaft, reference=0, trial=False):
+def station_reader(station, carry, shaft, reference=0, trial=False, *, world_precision=32):
     return contact_reader(
         carry, reference=reference, shaft=shaft, node_type=station_bench(station, trial),
-        stack_path='Curta.shaft.'+STATIONS[station-1][1])
+        stack_path='Curta.shaft.'+STATIONS[station-1][1], world_precision=world_precision)
 
 
 CounterOnesLockoutBench = station_bench(1)

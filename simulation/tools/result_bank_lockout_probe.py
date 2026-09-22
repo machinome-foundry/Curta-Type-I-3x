@@ -86,12 +86,13 @@ def station_bench(station, trial=False, *, source=False):
     return ResultStation
 
 
-def station_reader(station, carry, shaft, trial=False, *, source=False):
+def station_reader(station, carry, shaft, trial=False, *, source=False, world_precision=32):
     """Arguments/results use tens-local angles; placement stays source-owned."""
     shift = 20*(station-2)
     read = contact_reader(carry, reference=140+shift, shaft=shaft-shift,
                           node_type=station_bench(station, trial, source=source),
-                          stack_path='Curta.shaft.'+STATIONS[station-2][1])
+                          stack_path='Curta.shaft.'+STATIONS[station-2][1],
+                          world_precision=world_precision)
     return lambda crank, kernel: read(crank+shift, kernel)
 
 

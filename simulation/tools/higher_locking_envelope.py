@@ -94,14 +94,15 @@ def component_contacts(carry, crank, shaft, node_type=HigherLockoutBench, *,
 
 
 def contact_reader(carry=0, reference=140, shaft=169.6, node_type=HigherLockoutBench,
-                   *, stack_path=STACK, bell_path=BELL):
+                   *, stack_path=STACK, bell_path=BELL, world_precision=32):
     node = node_type()
     node.set_state(shaft_angle=shaft, crank_angle=reference, carry_position=carry, time=0)
     node.assemble()
     node.build_stls()
     native = world_solids(node, selected={bell_path, stack_path})
     leaves = dict(rigid_leaves(node))
-    faceted = {path: mesh_solid(leaves[path].mesh) for path in (bell_path, stack_path)}
+    faceted = {path: mesh_solid(leaves[path].mesh, world_precision=world_precision)
+               for path in (bell_path, stack_path)}
 
     def volume(crank, kernel):
         if kernel == 'native':

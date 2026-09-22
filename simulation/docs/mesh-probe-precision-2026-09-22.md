@@ -35,3 +35,22 @@ placed STL contact. Their independent native measurements and framework CLI
 contracts retain their own meaning. Final geometric acceptance must include
 the strict CLI and full-precision placed meshes. No task or positive common
 is waived by this finding, and no historical run is relabelled as a rerun.
+
+## Precision-preserving contact rechecks
+
+The shared contact reader and both station readers now expose an explicit
+`world_precision=64` path. Their default 32 remains for historical scripts;
+the result-bank and higher-counter profile CLIs default to 64, report that
+choice, and hash the conversion/reader code as well as the profiles. A
+two-test red/green fixture demonstrates that both the conversion and reader
+retain the positive shoulder thickness. The combined precision/sampling
+regressions pass 12/12 in 0.064 s. Logs are
+`contact-world-precision-{red,green,regression}.log` under `_build_checks/`.
+
+New full-precision faceted rechecks began with counter tens and result station
+three. They have not completed at this checkpoint; their outcomes belong in
+their terminal evidence, not inferred from the older world32 matrices. The
+running higher-counter station-three native job and station-six world32 job
+began before this reader update; their pinned headers and original precision
+remain unchanged. The latter finished 17,030 sampled admissions without a
+positive common, with observed exit zero, but is explicitly world32 evidence.

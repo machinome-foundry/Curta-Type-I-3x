@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import json
 import logging
+import math
 from pathlib import Path
 
 from machinome.math import piecewise
@@ -37,6 +38,8 @@ def candidate_angles(shaft):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--kernel', choices=('native', 'faceted'), required=True)
+    parser.add_argument('--world-precision', type=int, choices=(32, 64), default=64,
+                        help='64 preserves placed STL coordinates; 32 reproduces historical probes')
     parser.add_argument('--carry', type=float, action='append')
     parser.add_argument('--step', type=float, default=6)
     parser.add_argument('--knots', action='store_true')
@@ -47,9 +50,15 @@ def main():
     assert 0 < args.step <= 12
     profile_path = Path(__file__).resolve().parents[1]/'higher_locking_profiles.py'
     print(json.dumps({'kernel': args.kernel, 'carry': args.carry, 'step': args.step,
+                      'world_precision_bits': args.world_precision,
                       'station': args.station or 2,
                       'knots': args.knots, 'profile_sha256': hashlib.sha256(
-                          profile_path.read_bytes()).hexdigest()}), flush=True)
+                          profile_path.read_bytes()).hexdigest(),
+                      'probe_sha256': {name: hashlib.sha256((profile_path.parent/name).read_bytes()).hexdigest()
+                          for name in ('tools/check_higher_locking_profile.py',
+                                       'tools/higher_locking_envelope.py',
+                                       'tools/ancestor_lockout_contact.py',
+                                       'tools/result_bank_lockout_probe.py')}}), flush=True)
     shafts = {-16+args.step*i for i in range(int(360/args.step)+1)}
     if args.knots:
         for profiles, shift in ((SECTORS, 20), (LOWER_LOCK_SECTORS, 0),
@@ -63,13 +72,17 @@ def main():
     for carry in args.carry or (0, .5, 1):
         assert 0 <= carry <= 1
         for shaft in sorted(shafts):
-            volume = (station_reader(args.station, carry, shaft, trial=True)
+            volume = (station_reader(args.station, carry, shaft, trial=True,
+                                     world_precision=args.world_precision)
                       if args.station else
-                      contact_reader(carry, shaft=shaft, node_type=HigherLockoutFitBench))
+                      contact_reader(carry, shaft=shaft, node_type=HigherLockoutFitBench,
+                                     world_precision=args.world_precision))
             for crank in candidate_angles(shaft):
                 if higher_contact_gap(crank, shaft, carry*4.2-4.2) > 0:
                     continue
                 overlap = volume(crank, args.kernel)
+                if not math.isfinite(overlap) or overlap < 0:
+                    raise ValueError(f'Invalid common at {carry}, {shaft}, {crank}: {overlap}')
                 checked += 1
                 if overlap > 0:
                     failures += 1

@@ -98,6 +98,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--station', type=int, choices=range(2, 7), default=2)
     parser.add_argument('--kernel', choices=('native', 'faceted'), required=True)
+    parser.add_argument('--world-precision', type=int, choices=(32, 64), default=64,
+                        help='64 preserves placed STL coordinates; 32 reproduces historical probes')
     carry_group = parser.add_mutually_exclusive_group()
     carry_group.add_argument('--carry', type=float, action='append')
     carry_group.add_argument('--support-heights', action='store_true',
@@ -113,6 +115,7 @@ def main():
         parser.error('shaft must be finite')
     source = Path(__file__).resolve().parents[1]
     print(json.dumps({'station': args.station, 'trial': True, 'kernel': args.kernel,
+                      'world_precision_bits': args.world_precision,
                       'carry': carries, 'support_heights': args.support_heights,
                       'shafts': args.shaft, 'dense': args.dense,
                       'source_sha256': {name: hashlib.sha256((source/name).read_bytes()).hexdigest()
@@ -120,6 +123,8 @@ def main():
                                                      'higher_counter_locking_laws.py',
                                                      'counter_locking_profiles.py',
                                                      'tools/counter_lockout_probe.py',
+                                                     'tools/ancestor_lockout_contact.py',
+                                                     'tools/higher_locking_envelope.py',
                                                      'tools/check_higher_counter_locking_profile.py',
                                                      'docs/evidence/counter-tens-contact-support-2026-09-21.json')}}), flush=True)
     checked = failures = 0
@@ -127,7 +132,8 @@ def main():
     shafts = args.shaft or {shaft-shift for shaft in sample_shafts(dense=args.dense)}
     for carry in carries:
         for shaft in sorted(shafts):
-            volume = station_reader(args.station, carry, shaft, trial=True)
+            volume = station_reader(args.station, carry, shaft, trial=True,
+                                    world_precision=args.world_precision)
             for row in admitted_contacts(volume, carry, shaft, args.kernel,
                                          angles={angle+shift for angle in sample_angles(
                                              shaft+shift, dense=args.dense)},
