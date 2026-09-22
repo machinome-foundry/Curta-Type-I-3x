@@ -32,7 +32,7 @@ PARTIAL_INPUT_REQUESTS = (
 )
 
 
-def pair_contacts(sim):
+def pair_contacts(sim, *, world_precision=32):
     from simulation.tools.interference import world_solids, rigid_leaves
     from simulation.tools.ancestor_lockout_contact import mesh_solid
     from simulation.tools.higher_locking_envelope import faceted_common_volume
@@ -45,7 +45,8 @@ def pair_contacts(sim):
     values = {
         'native': common.Volume(),
         'faceted': faceted_common_volume(
-            mesh_solid(leaves[UPPER].mesh) ^ mesh_solid(leaves[BELL].mesh)),
+            mesh_solid(leaves[UPPER].mesh, world_precision=world_precision)
+            ^ mesh_solid(leaves[BELL].mesh, world_precision=world_precision)),
     }
     if any(not math.isfinite(value) or value < 0 for value in values.values()):
         raise ValueError(f'Invalid counter-tens contact measurement: {values}')

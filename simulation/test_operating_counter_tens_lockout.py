@@ -23,7 +23,7 @@ class OperatingCounterTensLockoutTest(unittest.TestCase):
         for name, value in PARTIAL_INPUT_REQUESTS[:-1]:
             self.assertEqual(sim.move(name, to=value).status, 'completed', (name, value))
         self.assertAlmostEqual(sim.state[SHAFT], 147.6, places=8)
-        self.assertEqual(pair_contacts(sim), {'native': 0, 'faceted': 0})
+        self.assertEqual(pair_contacts(sim, world_precision=64), {'native': 0, 'faceted': 0})
         prepared = sim.snapshot()
         for target in (200, 920):
             sim.restore(prepared)
@@ -32,7 +32,7 @@ class OperatingCounterTensLockoutTest(unittest.TestCase):
             self.assertGreater(angle, 190)
             self.assertLess(angle, 200)
             self.assertAlmostEqual(sim.state[SHAFT], 147.6, places=8)
-            self.assertEqual(pair_contacts(sim), {'native': 0, 'faceted': 0})
+            self.assertEqual(pair_contacts(sim, world_precision=64), {'native': 0, 'faceted': 0})
             shapes = world_solids(sim.node, selected={UPPER, BELL})
             leaves = dict(rigid_leaves(sim.node))
             common = shapes[UPPER].intersect(shapes[BELL].rotate(
@@ -40,8 +40,8 @@ class OperatingCounterTensLockoutTest(unittest.TestCase):
             self.assertTrue(common.isValid())
             self.assertGreater(common.Volume(), 0)
             self.assertGreater(faceted_common_volume(
-                mesh_solid(leaves[UPPER].mesh)
-                ^ mesh_solid(leaves[BELL].mesh).rotate((0, 0, -.2))), 0)
+                mesh_solid(leaves[UPPER].mesh, world_precision=64)
+                ^ mesh_solid(leaves[BELL].mesh, world_precision=64).rotate((0, 0, -.2))), 0)
             stopped = sim.snapshot()
             sim.restore(prepared)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')

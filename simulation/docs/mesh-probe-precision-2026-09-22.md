@@ -47,9 +47,25 @@ retain the positive shoulder thickness. The combined precision/sampling
 regressions pass 12/12 in 0.064 s. Logs are
 `contact-world-precision-{red,green,regression}.log` under `_build_checks/`.
 
-New full-precision faceted rechecks began with counter tens and result station
-three. They have not completed at this checkpoint; their outcomes belong in
-their terminal evidence, not inferred from the older world32 matrices. The
+New full-precision faceted rechecks completed with observed exit zero:
+counter tens (trial) passed 15,714 sampled admissions and result station three
+(production) passed 23,556, each with zero positive commons. Their logs are
+`counter-2-profile-world64-faceted-2026-09-22.log` (SHA256
+`8354355dd1ec5eb800f11b5d6f3f4d74c389cfad7266ab5224dd9dec392887f7`)
+and `result-3-profile-world64-faceted-2026-09-22.log` (SHA256
+`55edccf56fba1d296886a92d0ed14e136de0d63fcaec99b667c7cda390ac9eaa`)
+under `_build_checks/`. Both headers pin the probe and profile source hashes.
+These are finite profile samples, not every possible pose or full operating
+acceptance. The remaining station matrices have not been rerun at world64.
+
+The actual counter-tens pair reader now also exposes explicit precision, and
+the operating withdrawal test requests world64 for its admitted and forced
+contact measurements. A shoulder regression failed first on the missing
+argument, then the seven precision/probe tests passed in 0.015 s. Logs are
+`counter-operating-precision-{red,green}.log`. The combined-root counter-tens
+trial is being rerun; changing the probe alone does not establish acceptance.
+
+The
 running higher-counter station-three native job and station-six world32 job
 began before this reader update; their pinned headers and original precision
 remain unchanged. The latter finished 17,030 sampled admissions without a

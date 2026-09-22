@@ -37,6 +37,17 @@ class ContactProbePrecisionTest(unittest.TestCase):
                                   stack_path='upper', bell_path='lower', world_precision=64)
             self.assertGreater(read(0, 'faceted'), 0)
 
+    def test_operating_counter_pair_preserves_requested_mesh_precision(self):
+        from simulation.tools.higher_counter_wrong_order import pair_contacts, UPPER, BELL
+        lower, upper = shoulder_meshes()
+        common = SimpleNamespace(isValid=lambda: True, Volume=lambda: 0)
+        shapes = {UPPER: SimpleNamespace(intersect=lambda other: common), BELL: object()}
+        leaves = [(UPPER, SimpleNamespace(mesh=upper)), (BELL, SimpleNamespace(mesh=lower))]
+        with patch('simulation.tools.interference.world_solids', return_value=shapes), \
+             patch('simulation.tools.interference.rigid_leaves', return_value=leaves):
+            self.assertGreater(pair_contacts(SimpleNamespace(node=object()),
+                                             world_precision=64)['faceted'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()
