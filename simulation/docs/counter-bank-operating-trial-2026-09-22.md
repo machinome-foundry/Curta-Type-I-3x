@@ -43,3 +43,23 @@ Logs are retained in `_build_checks/`: `counter-hundreds-operating-production-re
 `counter-bank-hundreds-python-2026-09-22.*`. All use framework `acebc48`.
 No OpenSpec task is closed, no upstream CAD asset is changed, and this trial
 is not a fabrication recommendation.
+
+## Hundreds withdrawal gate completed
+
+The full hundreds trial completes in 312.870 s, observed exit zero. Both
+220° and 940° requests stop at 214.7853836059494° /
+214.78538360544917°, clear in native and world64 complete-print commons.
+Forcing another .2° contacts in both kernels. Full snapshots replay exactly,
+.05° relief succeeds, idle preserves it and retry blocks at the same stop.
+All 213 stopped/idle coordinates are captured in the Python report for the
+independent browser check. This retires the corresponding measured production
+failure only in the isolated trial, not by adopting the remaining stations.
+
+The ordinary-height world64 profile matrix also completes for all five higher
+counters: **80,710 admitted poses, zero contacts**, every process observed
+exit zero. Station 2's run used the earlier support law; its later axial
+correction only removes admissions. Stations 3..6 use the corrected law.
+Their precise source headers remain in the
+[world64 matrix](evidence/counter-bank-full-world64-completion-2026-09-22.json),
+beside the separate corrected intermediate-height support evidence. No
+continuous or full action-order claim follows from those finite matrices.

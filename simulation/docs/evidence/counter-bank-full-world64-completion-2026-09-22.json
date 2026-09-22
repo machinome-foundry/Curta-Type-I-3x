@@ -1,0 +1,187 @@
+{
+  "date": "2026-09-22",
+  "scope": "Finite complete-print admissions at ordinary carry heights0/.5/1, actual source station frames, world64",
+  "note": "Station2 run predates lower axial standoff; that correction only removes admissions. All stations separately pass corrected intermediate support-height matrix. Each exact source header is retained.",
+  "results": [
+    {
+      "log": "_build_checks/counter-2-profile-world64-faceted-2026-09-22.log",
+      "sha256": "8354355dd1ec5eb800f11b5d6f3f4d74c389cfad7266ab5224dd9dec392887f7",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 2,
+        "trial": true,
+        "kernel": "faceted",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 2,
+        "kernel": "faceted",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "log": "_build_checks/counter-3-full-clearance-world64-faceted-2026-09-22.log",
+      "sha256": "2c4e93d50210f9e42fee24bdcb7f0c72580f1189182128894e369a746105bad1",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 3,
+        "trial": true,
+        "kernel": "faceted",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "4ed59d07545f0209e33627932d9790f9a37bfa674c40a3db6e2f774e966d327a",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 3,
+        "kernel": "faceted",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "log": "_build_checks/counter-4-full-clearance-world64-faceted-2026-09-22.log",
+      "sha256": "a2bda14321a1c22585ef31a4a46626162bcd8a7c7826771adc0aafb5151f342a",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 4,
+        "trial": true,
+        "kernel": "faceted",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "bbb79bb7cace7c1a7e9cd324b2657d3200f67d11e2f154de64214edf55309f89",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 4,
+        "kernel": "faceted",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "log": "_build_checks/counter-5-full-clearance-world64-faceted-2026-09-22.log",
+      "sha256": "5c6c283474c1650f5aef2d01b5216b5c6dcde081dba69e5b4fb7c41a391a70fe",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 5,
+        "trial": true,
+        "kernel": "faceted",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "4ed59d07545f0209e33627932d9790f9a37bfa674c40a3db6e2f774e966d327a",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 5,
+        "kernel": "faceted",
+        "checked": 16538,
+        "failures": 0
+      }
+    },
+    {
+      "log": "_build_checks/counter-6-full-clearance-world64-faceted-2026-09-22.log",
+      "sha256": "4446074a91c2f02d6888cf3a0aa3c6de3ba3339d3915bf583af9708511692866",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 6,
+        "trial": true,
+        "kernel": "faceted",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "bbb79bb7cace7c1a7e9cd324b2657d3200f67d11e2f154de64214edf55309f89",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 6,
+        "kernel": "faceted",
+        "checked": 17030,
+        "failures": 0
+      }
+    }
+  ]
+}
