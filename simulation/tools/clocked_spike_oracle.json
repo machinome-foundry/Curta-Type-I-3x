@@ -1,0 +1,1609 @@
+{
+ "framework": "81c53646f5bdf603a7c2b45d03203032be7dd366",
+ "dt": 0.1,
+ "construct_seconds": 5.41895713302074,
+ "scenarios": {
+  "calibration_page_53": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "after 0",
+     "result": 0,
+     "turns": 1,
+     "dial_result": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "after 1",
+     "result": 1,
+     "turns": 2,
+     "dial_result": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "after 9",
+     "result": 10,
+     "turns": 3,
+     "dial_result": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "after 90",
+     "result": 100,
+     "turns": 4,
+     "dial_result": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      4.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 62.59939408500213,
+   "ticks": 80
+  },
+  "subtraction_borrow_and_undo": {
+   "readings": [
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": 9.0,
+     "admitted": 9.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "borrowed",
+     "result": 99999999999,
+     "turns": 999999,
+     "dial_result": [
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ]
+    },
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": -9.0,
+     "admitted": -9.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "undone",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      10.0,
+      10.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 35.49208995496156,
+   "ticks": 40
+  },
+  "shift_reassociates": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "nine",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 40.0,
+     "admitted": 40.0
+    },
+    {
+     "label": "shifted",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "three hundred",
+     "result": 309,
+     "turns": 101,
+     "dial_result": [
+      9.0,
+      0.0,
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 33.94880583899794,
+   "ticks": 46
+  },
+  "two_additions_and_selective_clearing": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "three",
+     "result": 3,
+     "turns": 1,
+     "dial_result": [
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "label": "selector only",
+     "result": 3,
+     "turns": 1,
+     "dial_result": [
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "five",
+     "result": 5,
+     "turns": 2,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "label": "lifted",
+     "result": 5,
+     "turns": 2,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "result cleared",
+     "result": 0,
+     "turns": 2,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "counter cleared",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": -360,
+     "admitted": -360.0
+    },
+    {
+     "label": "reverse sweep",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 34.858102460973896,
+   "ticks": 48
+  },
+  "partial_crank_release_and_resume": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 90,
+     "admitted": 90.0
+    },
+    {
+     "label": "quarter turn",
+     "result": 6,
+     "turns": 0,
+     "dial_result": [
+      5.911111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 270,
+     "admitted": 270.0
+    },
+    {
+     "label": "completed",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 15.263583995983936,
+   "ticks": 20
+  },
+  "seated_carriage_does_not_clear": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "five",
+     "result": 5,
+     "turns": 1,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "seated sweep",
+     "result": 5,
+     "turns": 1,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 17.402919968008064,
+   "ticks": 24
+  },
+  "half_sweeps_reach_different_banks": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "five",
+     "result": 5,
+     "turns": 1,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": -180,
+     "admitted": -180.0
+    },
+    {
+     "label": "counter half sweep",
+     "result": 5,
+     "turns": 0,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.013889,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "back to rest",
+     "result": 5,
+     "turns": 0,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.013889,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "result half sweep",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.013889,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 19.665319222956896,
+   "ticks": 28
+  },
+  "mid_stroke_selector_change": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "half stroke",
+     "result": 3,
+     "turns": 1,
+     "dial_result": [
+      3.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "completed",
+     "result": 7,
+     "turns": 1,
+     "dial_result": [
+      7.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 15.384175429993775,
+   "ticks": 20
+  },
+  "mid_stroke_carriage_shift": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 20.0,
+     "admitted": 20.0
+    },
+    {
+     "label": "shifted mid stroke",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "completed",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 16.274850461049937,
+   "ticks": 22
+  },
+  "mid_stroke_reversing_lever": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": 9.0,
+     "admitted": 9.0
+    },
+    {
+     "label": "lifted mid stroke",
+     "result": 4,
+     "turns": 1,
+     "dial_result": [
+      4.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "completed",
+     "result": 99986420004,
+     "turns": 975311,
+     "dial_result": [
+      4.0,
+      0.0,
+      0.0,
+      0.422222,
+      2.2,
+      3.977778,
+      5.755556,
+      7.533333,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      1.0,
+      1.422222,
+      3.2,
+      4.977778,
+      6.755556,
+      8.533333
+     ]
+    }
+   ],
+   "seconds": 17.110625465982594,
+   "ticks": 22
+  },
+  "mid_stroke_carriage_lift_and_sweep": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "cleared mid stroke",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 180,
+     "admitted": 180.0
+    },
+    {
+     "label": "completed",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      9.986111,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 19.5702146589756,
+   "ticks": 28
+  },
+  "crank_reversal": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "nine",
+     "result": 9,
+     "turns": 1,
+     "dial_result": [
+      9.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": -360,
+     "admitted": -360.0
+    },
+    {
+     "label": "reversed",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      10.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 28.973661896015983,
+   "ticks": 40
+  },
+  "blocked_crank_lift": {
+   "readings": [
+    {
+     "command": "crank_lift",
+     "status": "blocked",
+     "requested": 12.0,
+     "admitted": 9.0
+    },
+    {
+     "label": "overlifted",
+     "result": 0,
+     "turns": 0,
+     "dial_result": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "subtracted",
+     "result": 99999999999,
+     "turns": 999999,
+     "dial_result": [
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ]
+    }
+   ],
+   "seconds": 19.399237628036644,
+   "ticks": 22
+  },
+  "between_detent_carriage": {
+   "readings": [
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 12.0,
+     "admitted": 12.0
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "snapped detent",
+     "result": 10,
+     "turns": 10,
+     "dial_result": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 18.19422027200926,
+   "ticks": 26
+  },
+  "sweep_stopped_between_teeth": {
+   "readings": [
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "five",
+     "result": 5,
+     "turns": 1,
+     "dial_result": [
+      5.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "ring",
+     "status": "completed",
+     "requested": 20.08,
+     "admitted": 20.08
+    },
+    {
+     "label": "rack between teeth",
+     "result": 8,
+     "turns": 1,
+     "dial_result": [
+      7.500056,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "dial_turns": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   ],
+   "seconds": 17.358184032025747,
+   "ticks": 24
+  },
+  "subtract_at_carriage_0": {
+   "readings": [
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 0.0,
+     "admitted": 0.0
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": 9.0,
+     "admitted": 9.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "subtracted",
+     "result": 99999999993,
+     "turns": 999999,
+     "dial_result": [
+      3.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ]
+    }
+   ],
+   "seconds": 22.67819975700695,
+   "ticks": 28
+  },
+  "subtract_at_carriage_2": {
+   "readings": [
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 40.0,
+     "admitted": 40.0
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": 9.0,
+     "admitted": 9.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "subtracted",
+     "result": 99999999300,
+     "turns": 999900,
+     "dial_result": [
+      0.0,
+      0.0,
+      3.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ]
+    }
+   ],
+   "seconds": 22.85301929200068,
+   "ticks": 28
+  },
+  "subtract_at_carriage_5": {
+   "readings": [
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": 6.0,
+     "admitted": 6.0
+    },
+    {
+     "command": "carriage_turn",
+     "status": "completed",
+     "requested": 100.0,
+     "admitted": 100.0
+    },
+    {
+     "command": "carriage_lift",
+     "status": "completed",
+     "requested": -6.0,
+     "admitted": -6.0
+    },
+    {
+     "command": "crank_lift",
+     "status": "completed",
+     "requested": 9.0,
+     "admitted": 9.0
+    },
+    {
+     "command": "crank",
+     "status": "completed",
+     "requested": 360,
+     "admitted": 360.0
+    },
+    {
+     "label": "subtracted",
+     "result": 99999300000,
+     "turns": 900000,
+     "dial_result": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      3.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0,
+      9.0
+     ],
+     "dial_turns": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      9.0
+     ]
+    }
+   ],
+   "seconds": 22.20044094102923,
+   "ticks": 28
+  }
+ }
+}
