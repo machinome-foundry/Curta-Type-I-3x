@@ -60,6 +60,7 @@ def inventory(root, exact=False, progress=False, *, world_precision=32):
     solids, overlaps, refusals = {}, {}, {}
     native = world_solids(root) if exact else {}
     contact_sums = {}
+    nonspatial_sums = {}
 
     def solid(path):
         if path not in solids:
@@ -93,6 +94,16 @@ def inventory(root, exact=False, progress=False, *, world_precision=32):
                 if overlap.status() != manifold.Error.NoError:
                     raise ValueError(str(overlap.status()))
                 volume = overlap.volume()
+                common_bounds = overlap.bounding_box()
+                if any(common_bounds[axis] >= common_bounds[axis+3]
+                       for axis in range(3)):
+                    # A strictly planar common has zero spatial volume even
+                    # if its signed tetrahedron sum rounds positive. Retain
+                    # the raw diagnostic and exact bounds; use no epsilon.
+                    if volume != 0:
+                        nonspatial_sums[key] = {
+                            'signed_sum_mm3': volume, 'bounds': list(common_bounds)}
+                    continue
             if volume > 0:
                 overlaps[key] = volume
                 if progress:
@@ -111,6 +122,7 @@ def inventory(root, exact=False, progress=False, *, world_precision=32):
             'world_precision_bits': world_precision,
             'kernel': 'OCCT with source-STL interfaces' if exact else 'Manifold, faceted',
             'overlap_mm3': overlaps, 'refusals': refusals,
+            'nonspatial_contact_sums': nonspatial_sums,
             'nonpositive_contact_sums_mm3': contact_sums}
 
 

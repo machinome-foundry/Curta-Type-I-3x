@@ -83,3 +83,22 @@ has SHA256 `5b4aa16902456cadb4f9e62caef5b6170223296da6798f14db4236ce5b6a7872`.
 It loaded framework `4d24d79` and project content `a8ee3e7`, before the crank
 seat trial. Counter tens is still not adopted; its expanded arithmetic and
 fresh browser gates remain outstanding.
+# Exact common dimensionality — later inventory correction
+
+A read-only recheck of the 258 positive sums in the post-crank world64 rest
+inventory found nine commons whose Z minimum and maximum are exactly equal.
+These are planar boundaries, with numerical signed sums from 2.22e-16 to
+2.81e-14 mm³, not spatial overlaps. The inventory now preserves each raw
+nonzero sum and all six exact bounds in `nonspatial_contact_sums`, separately
+from positive spatial contacts. It uses no magnitude tolerance: the red-first
+regression retains a 1e-30 mm³ common with positive 1e-15 mm thickness, while
+separating the same sum at exactly zero thickness. Invalid kernels still fail.
+
+The rerun completes with observed exit zero and **249 positive spatial pairs**,
+no added pair, no changed remaining volume and no refusal. All nine removed
+positive entries are accounted for by their saved planar bounds. This is a
+diagnostic classification correction, not a geometric fit or a waiver of the
+remaining contacts. It cannot hide the positive-thickness lower-frame or
+counter-support overlaps that motivated world64. Both focused tests pass;
+the [dimension evidence](evidence/rest-common-dimensions-2026-09-22.json)
+pins the original survey, new inventory and red/green logs.

@@ -1,0 +1,115 @@
+{
+  "old_positive_pairs": 258,
+  "new_positive_spatial_pairs": 249,
+  "added_pairs": [],
+  "changed_remaining": {},
+  "removed_to_planar": {
+    "Curta.frame.lower_bearing_plate.bearing_plate / Curta.frame.lower_bearing_plate.reverse_nose_plate": {
+      "signed_sum_mm3": 2.8125071716011973e-14,
+      "bounds": [
+        -19.490585396218567,
+        -7.860000133514404,
+        -119.85,
+        -7.979757785797119,
+        8.244011800508105,
+        -119.85
+      ]
+    },
+    "Curta.input_selectors.bearings.setting_axle_holding_plate_1 / Curta.input_selectors.bearings.m4x10_419010_3": {
+      "signed_sum_mm3": 2.220446049250313e-16,
+      "bounds": [
+        38.54206308228184,
+        -42.34173050971601,
+        -141.45,
+        38.96289520807833,
+        -41.76704477145827,
+        -141.45
+      ]
+    },
+    "Curta.input_selectors.bearings.setting_axle_holding_plate_2 / Curta.input_selectors.bearings.m4x10_419010_4": {
+      "signed_sum_mm3": 5.478595867951014e-16,
+      "bounds": [
+        -2.2930592505537906,
+        -59.38419023188739,
+        -141.45,
+        3.2583591587418734,
+        -57.849818983351334,
+        -141.45
+      ]
+    },
+    "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_bottom / Curta.input_selectors.bearings.selector_shaft_bearing_5": {
+      "signed_sum_mm3": 8.101158632811689e-16,
+      "bounds": [
+        43.18223665946994,
+        -40.745261357372414,
+        -127.775,
+        47.75548812880329,
+        -34.47722125594417,
+        -127.775
+      ]
+    },
+    "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_bottom / Curta.input_selectors.bearings.selector_shaft_bearing_3": {
+      "signed_sum_mm3": 5.2735593669694936e-15,
+      "bounds": [
+        26.416190045777274,
+        -53.12101807966891,
+        -127.775,
+        32.37830245624958,
+        -47.9848586386609,
+        -127.775
+      ]
+    },
+    "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_bottom / Curta.input_selectors.bearings.selector_shaft_bearing_1": {
+      "signed_sum_mm3": 4.614364446098307e-16,
+      "bounds": [
+        -12.060577796371705,
+        -60.728436988519526,
+        -127.775,
+        -7.198646013886753,
+        -55.31173827257363,
+        -127.775
+      ]
+    },
+    "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_bottom / Curta.input_selectors.bearings.selector_shaft_bearing_2": {
+      "signed_sum_mm3": 3.608224830031759e-15,
+      "bounds": [
+        -32.145288291634564,
+        -53.78679103498593,
+        -127.775,
+        -26.123378369732084,
+        -49.948931560285686,
+        -127.775
+      ]
+    },
+    "Curta.main_drive.crank.crank_handle_1.main_crank / Curta.main_drive.crank.crank_handle_1.crank_handle": {
+      "signed_sum_mm3": 8.648463889482372e-15,
+      "bounds": [
+        43.21905110831782,
+        6.1045282211060625,
+        94.35,
+        56.271391121897565,
+        20.808105236534423,
+        94.35
+      ]
+    },
+    "Curta.main_drive.zero_positioning.follower.zero_positioning_lever / Curta.main_drive.zero_positioning.follower.disc_roller_bolt_sleeve": {
+      "signed_sum_mm3": 9.214864656915955e-15,
+      "bounds": [
+        37.05147866773851,
+        -3.75,
+        -153.3,
+        44.22265839576721,
+        3.453293795142392,
+        -153.3
+      ]
+    }
+  },
+  "all_nonspatial_signed_sums": 16,
+  "refusals": {},
+  "files": {
+    "_build_checks/rest-positive-common-dimensions-a5f6be3.json": "553e47f0aa5dfc43b676c678ddeca49a09c38a6567631cb797d33d424001cc56",
+    "_build_checks/rest-spatial-inventory-a5f6be3.json": "8ad9fb7f49e6d1e6161eae130224e3e398443b6c7c829aab64f06a2a76f8501b",
+    "_build_checks/rest-contact-dimensions-red-2026-09-22.log": "d7854cdf380ac7dcf91d6d2b879d16ad64dfddca47c75d7e9325d7e34cf6bebf",
+    "_build_checks/rest-contact-dimensions-green-2026-09-22.log": "279538fe812d165bb22f5a84ab94b40efa9072957816601b6c80f1ba281fa35e"
+  }
+}
