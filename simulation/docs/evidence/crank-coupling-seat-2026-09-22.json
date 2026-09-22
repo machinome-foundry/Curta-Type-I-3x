@@ -1,0 +1,38 @@
+{
+  "framework_content": "4d24d79",
+  "project_parent": "b809963",
+  "model": "simulation.running:OperatingCurta",
+  "status": "scoped crank seat accepted; whole operating model unfinished",
+  "source_sha256": {
+    "simulation/crank_coupling_parts.py": "760dd92f89bbd9b20cd43fca2e5144654e182e074aec02719fd6622c463d050d",
+    "simulation/test_crank_coupling_seat.py": "d7979141fa7da4fdca708e3f9aab7d6a8dc01573291954fdf66bd989b1507cec",
+    "simulation/running_parts.py": "77866af33669a8677271ba3ec0dbd00f289b600994a2c49f7f5dcdd675ae6ca2"
+  },
+  "contracts": [
+    {"kernel": "exact", "passed": 7, "failed": 0, "seconds": 142.83, "exit_code": 0,
+     "log": "_build_checks/crank-coupling-legal-modes-exact.log",
+     "sha256": "47cf6e4a69daf153a32576ca14b595c11d326b79ca66e6132b30cc8fac69a65b"},
+    {"kernel": "faceted", "passed": 7, "failed": 0, "seconds": 133.72, "exit_code": 0,
+     "volume_epsilon_mm3": 0,
+     "log": "_build_checks/crank-coupling-legal-modes-faceted.log",
+     "sha256": "8abe14da0e802b8b5dc1a4f7ad734406d3bceb361c94ce88c12401728b31d021"}
+  ],
+  "inventory": {
+    "world_precision_bits": 64, "rigid_occurrences": 389,
+    "before_positive_pairs": 259, "after_positive_pairs": 258,
+    "removed": ["Curta.main_drive.crank.crank_handle_1.main_crank / Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1"],
+    "added": [], "refusals": {}, "exit_code": 0,
+    "before": "_build_checks/lower-frame-production-world64.json",
+    "before_sha256": "81900340fbd7898dfd322f4d8807bf948b8edbb8e684d95ac8208809c8561ca1",
+    "after": "_build_checks/crank-coupling-production-world64.json",
+    "after_sha256": "731f6d0dfc37e1a01192d75f7ca9b416020d8963afd877cabf6c0622bd1629d7"
+  },
+  "inspection": {
+    "report": "_build_checks/crank-drum-final-section-2026-09-22.json",
+    "report_sha256": "228427cb77c8ee4a9b942ca7f5f5e50dfd1d4ea94dcf9f2626c666c708bfbed4",
+    "image": "_build_checks/crank-drum-final-section-2026-09-22.png",
+    "image_sha256": "fcee113f32c0edf6f0d343a497b9c97c16c0801e873d449216f61516133fd87f",
+    "image_inspected": true, "native_mm3": 0, "world64_mm3": 0,
+    "coordinates": 213, "bank_unchanged": true, "exit_code": 0
+  }
+}

@@ -14,7 +14,7 @@ from simulation.cover_fits import FittedAxleCarrier
 from simulation.clearing_stop_motion import following as clearing_stop_following
 from simulation.registers import ResultDials, TurnsDials
 from simulation.selectors import IndependentSelectors
-from simulation.standard.layers import CrankAssembly
+from simulation.crank_coupling_parts import SeatedCrankAssembly
 from simulation.print_parts import CounterBodyStopPin
 from simulation.clearing_seat_fit import FittedClearingPin
 from simulation.clearing_carrier_parts import ClearingSeatCounterBody
@@ -149,7 +149,7 @@ class RunningMainDrive(MainDrive):
     # joint admits the measured addition-to-subtraction stroke in Python too.
     anti_reversal = RetainedAntiReversal()
     reversing_lever = RunningReversingAssembly()
-    crank = CrankAssembly(turn=Revolute(axis=(0, 0, 1), range=(None,
+    crank = SeatedCrankAssembly(turn=Revolute(axis=(0, 0, 1), range=(None,
                           Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))),
                           lift=Prismatic(axis=(0, 0, 1), range=(0, 9)))
 

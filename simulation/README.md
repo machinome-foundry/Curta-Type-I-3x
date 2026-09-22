@@ -28,7 +28,11 @@ The [remaining result-bank adoption](docs/result-bank-adoption-2026-09-22.md)
 adds the measured station 3..11 fits and crank restraint, with passing
 production contact, short/long withdrawal, replay and fixture checks. Fresh
 browser stopped/relieved banks match Python exactly; expanded-root arithmetic
-and full pointer acceptance remain open.
+now passes all six tests, while full pointer acceptance remains open.
+The [pinned crank seat](docs/crank-coupling-seat-2026-09-22.md) aligns the
+handle with the actual shaft and relieves only its internal roof. Seven checks
+pass per kernel, including two crank modes and retained pin capture; the paired
+world64 rest inventory drops from 259 to 258 positive pairs, adding none.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.

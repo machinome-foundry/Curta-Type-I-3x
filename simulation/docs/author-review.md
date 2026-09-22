@@ -130,6 +130,17 @@ also pass per kernel. Both seats retain .1 mm blocking capture. Full world64
 rest inventory adds no pair; other contacts are not waived. No upstream asset
 changes and this is not a manufacturing recommendation.
 
+## Pinned crank coupling — F24
+
+The [crank seat correction](crank-coupling-seat-2026-09-22.md) translates the
+complete handle assembly (-.091031728, .337283020, 0) onto the unchanged
+shaft and pin axis. Only the R4.56 internal pocket roof is extended to local
+Z29.15, .05 mm beyond the installed shaft tip. The transverse bore, pin,
+crank clocking and height are retained. Seven contracts pass per kernel,
+including actual two-mode turning, bounded removal/connectivity, unchanged
+initial bank and ±.75 mm pin capture. The rest inventory loses only the
+crank/axle pair and adds none. This is not a manufacturing recommendation.
+
 ## Remaining result locking outlines — F22
 
 The [production bank continuation](result-bank-adoption-2026-09-22.md) adopts
@@ -140,7 +151,10 @@ indexed-clearance and two-sided-contact checks; the finite dense matrix has
 471,120 admitted native/faceted checks. Actual hundreds/eighth withdrawal
 stops, short/long requests, overtravel contact, exact replay and reverse relief
 pass. Fresh browser stopped/relieved banks match Python exactly in all four
-cases. Expanded-root arithmetic and full pointer acceptance remain open.
+cases. Expanded-root arithmetic now passes all six tests; full pointer
+acceptance remains open. Historical faceted matrices used world32; the
+[precision record](mesh-probe-precision-2026-09-22.md) identifies the new
+world64 rechecks and their finite sampling boundary.
 No upstream asset changes and this is not a manufacturing recommendation.
 
 ## Higher result lockout — historical T07 adoption checkpoints
