@@ -4,6 +4,8 @@ import unittest
 
 from machinome.simulation import Sim
 from simulation import test_operating_counter_tens_lockout as counter_tests
+from simulation import test_operating_counter_lockout as counter_ones_tests
+from simulation import test_operating_result_bank_lockout as result_tests
 from simulation.counter_bank_operating_trial import CounterBankOperatingTrial, COUNTER_TRIAL_STATIONS
 from simulation.running import OperatingCurta
 from simulation.running_parts import CHANNEL_NAMES
@@ -29,6 +31,18 @@ class CounterBankFifthTrialTest(CounterBankTensTrialTest):
 
 class CounterBankSixthTrialTest(CounterBankTensTrialTest):
     station = 6
+
+
+class CounterBankPreservesOnesTest(counter_ones_tests.OperatingCounterLockoutTest):
+    """Adding higher stops must preserve the previously adopted ones stop."""
+
+    model = CounterBankOperatingTrial
+
+
+class CounterBankPreservesResultsTest(result_tests.OperatingResultBankLockoutTest):
+    """Both existing result withdrawal scenarios run on the combined bank."""
+
+    model = CounterBankOperatingTrial
 
 
 class CounterBankFixtureTest(unittest.TestCase):
