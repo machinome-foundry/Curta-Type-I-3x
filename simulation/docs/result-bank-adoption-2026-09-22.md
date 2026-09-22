@@ -54,12 +54,27 @@ withdrawn. The evidence index pins the fresh manifest, report and images.
 This browser harness issues hosted requests; it is not an actual-pointer
 gesture test of every control.
 
+## Expanded-root arithmetic recheck
+
+The actual expanded production root passed all six `RunningCurtaTest` cases
+in 1570.635 s, with observed exit zero: independent selectors, successive
+addition, manual carry calibration, partial-crank snapshot/replay, shifted
+register association, and subtraction/borrow through both registers followed
+by addition undo. This run loaded framework `6dc07a8`, the adopted result
+bank and lower-frame fit, before the later crank-seat trial. Its retained log
+is `_build_checks/expanded-root-running-arithmetic-2026-09-22.log`, SHA256
+`98d96ce6aa1bea553aeebde8f329f5ee939a7880e36abfe1ed3421b45f85a14b`.
+The loaded runtime source hashes were `running.py`
+`bf32eeaf6ffd4fae3a038889af17d38616ab6a0824e8dc38b4f3c106150a825a`
+and `running_parts.py`
+`791afdd3cb3e1b95ef5522eaccc694038b7c478663f3105b1186381f68225086`.
+
 ## Remaining gates
 
 The inherited isolated trial's arithmetic and browser evidence is retained,
-not relabelled as fresh acceptance of this expanded production root. Fresh
-combined-root arithmetic and physical pointer
-gestures remain to run. Normal operation is still too slow; independent
+not relabelled as fresh acceptance of this expanded production root. The
+fresh arithmetic result above is scoped to its loaded sources; the full
+physical pointer gesture matrix remains to run. Normal operation is still too slow; independent
 framework/viewer work is addressing measured evaluator costs without changing
 the mechanism's laws, timestep or coordinate bank. Whole-machine positive
 contacts, higher counters and clearing-loop deployment remain open. No
