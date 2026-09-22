@@ -1,0 +1,45 @@
+{
+  "setup": "099, input 1, crank 0, addition, carriage fixed at zero",
+  "kind": "Exact static diagnostic of the existing prescribed pose; not running acceptance",
+  "selected_parts": [
+    "Curta.carriage.registers.result_register.p_10203_1.number_roll_carry_pin_half",
+    "Curta.carriage.registers.result_register.p_10203_2.number_roll_carry_pin_half",
+    "Curta.carriage.registers.result_register.p_10205_1.number_roll_carry_pin_half",
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing",
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results",
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slide_bearing",
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slider_for_results",
+    "Curta.carry_mechanism.tens_bell.m4x10_419159_1",
+    "Curta.carry_mechanism.tens_bell.m4x10_419159_2",
+    "Curta.carry_mechanism.tens_bell.retaining_ring_for_tens_bell",
+    "Curta.carry_mechanism.tens_bell.tens_bell_1",
+    "Curta.carry_mechanism.tens_bell.tens_bell_c_clip",
+    "Curta.carry_mechanism.tens_bell.tens_bell_spring.left_hook",
+    "Curta.carry_mechanism.tens_bell.tens_bell_spring.mount",
+    "Curta.carry_mechanism.tens_bell.tens_bell_spring.right_hook",
+    "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_gear_tip",
+    "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_shaft",
+    "Curta.transmission.result.hundreds.p_10220_410003_1_419086",
+    "Curta.transmission.result.hundreds.p_10230_410008_1_419088",
+    "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+    "Curta.transmission.result.ones.p_10208_1.transmission_gear_tip",
+    "Curta.transmission.result.ones.p_10219_410002_1",
+    "Curta.transmission.result.ones.p_10221_1",
+    "Curta.transmission.result.tens.p_10207_1_419228.transmission_gear_tip",
+    "Curta.transmission.result.tens.p_10207_1_419228.transmission_shaft",
+    "Curta.transmission.result.tens.p_10220_410003_1_419227",
+    "Curta.transmission.result.tens.p_10230_410008_1_419229"
+  ],
+  "boolean_pairs": 12,
+  "overlaps": [],
+  "invalid_booleans": [],
+  "lever_engagement_fractions": [
+    0.27692416666666614,
+    0.27692416666666614
+  ],
+  "lever_drop_mm": [
+    1.1630814999999979,
+    1.1630814999999979
+  ],
+  "wall_seconds": 32.95188498900097
+}

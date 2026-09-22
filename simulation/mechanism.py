@@ -19,6 +19,7 @@ from simulation.standard.carry import ResultsCarry, TurnsCarry
 from simulation.positioning import CarriagePositioning
 from simulation.pawl import AntiReversal, PawlBearingPlate
 from simulation.standard.parts import M4x10_419159
+from simulation.frame_fits import CarryPassageFrame
 from simulation.retaining_spring import RetainingSpring, SEAT_GAP as SPRING_SEAT_GAP
 from simulation.bell_spring_motion import positioning as spring_positioning
 from simulation.register_detents import RegisterDetents
@@ -32,6 +33,8 @@ class Inputs(SourceInputs):
 
 
 class UpperFrame(layers.UpperFrame):
+    main_body = CarryPassageFrame()
+
     def render(self):
         super().render()
         self.m4x10_419159_1.omit()

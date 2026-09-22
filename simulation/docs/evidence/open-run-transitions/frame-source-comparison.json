@@ -1,0 +1,205 @@
+{
+  "kind": "frame-source-comparison",
+  "native_mesh_bounds_mm": [
+    [
+      -68.03048706054688,
+      -68.02561950683594,
+      -22.200000762939453
+    ],
+    [
+      67.729736328125,
+      68.03048706054688,
+      61.79999923706055
+    ]
+  ],
+  "native_mesh_volume_mm3": 198873.60198270206,
+  "native_volume_mm3": 199456.9281226627,
+  "records": [
+    {
+      "drop_mm": 0,
+      "native_mm3": 4.626577658591639,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 4.6407636073432075,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 0,
+      "native_mm3": 0.5104840003223615,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.49974067548241996,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 1.1630815,
+      "native_mm3": 0,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 1.1630815,
+      "native_mm3": 0.5104840003223615,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.49974067548241996,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 2.562,
+      "native_mm3": 0,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 2.562,
+      "native_mm3": 0.5104840003223615,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.49974067548241996,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 4.2,
+      "native_mm3": 0.09922499999999418,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0.09922584800557785,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 4.2,
+      "native_mm3": 0.5104840003223615,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.49974067548241996,
+      "source_STL_status": "Error.NoError",
+      "version": "source"
+    },
+    {
+      "drop_mm": 0,
+      "native_mm3": 4.626577658591639,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 4.6407636073432075,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 0,
+      "native_mm3": 0.4737487007363278,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.4658725182507324,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 1.1630815,
+      "native_mm3": 0,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 1.1630815,
+      "native_mm3": 0.4733846353559044,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.4655253542029844,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 2.562,
+      "native_mm3": 0,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 2.562,
+      "native_mm3": 0.47378729373548917,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.4658884680311884,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 4.2,
+      "native_mm3": 0.09922499999999418,
+      "native_valid": true,
+      "part": "slider",
+      "source_STL_mm3": 0.09922584800557785,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    },
+    {
+      "drop_mm": 4.2,
+      "native_mm3": 0.4727434983489614,
+      "native_valid": true,
+      "part": "spring",
+      "source_STL_mm3": 0.4655170281820938,
+      "source_STL_status": "Error.NoError",
+      "version": "fitted"
+    }
+  ],
+  "registration": "Identity; supplied source coordinates, no best fit or recentering",
+  "source_spring_limitation": "Original source wire is static, not an alternative moving spring law",
+  "source_stl": "STLs/9 - Tens Bell & Main Body/main body.stl",
+  "source_stl_bounds_mm": [
+    [
+      -68.02392578125,
+      -68.02561950683594,
+      -22.19999885559082
+    ],
+    [
+      68.02748107910156,
+      68.02392578125,
+      61.79999923706055
+    ]
+  ],
+  "source_stl_sha256": "2b489b92d31f79452d920390ee344834548075201d22bcaa082baed7907cc3f4",
+  "source_stl_triangles": 50354,
+  "source_stl_volume_mm3": 199413.5460567789,
+  "source_stl_watertight": true,
+  "source_stl_winding_consistent": true,
+  "provenance": {
+    "measured_on_utc": "2026-09-13",
+    "project_commit": "60979adbc795785fc51a28a386f85d1a49bfedf7",
+    "framework_commit": "6e41f2da132a8604f9b68895967247fb8876fc4d",
+    "diagnostic": "simulation/tools/open_run_frame_sources.py",
+    "diagnostic_sha256": "f64e734bd979988df8ff169dc91a53cd611d8bede24a1c3ce3ca0320fd7354d7",
+    "manual": "Manual/Curta Build Manual.pdf",
+    "manual_sha256": "af2a7e512063ec485ae992bbf490f5f1e14aac5dc35277183603ff725fb2ab7c",
+    "manual_pages_visually_inspected": [
+      30,
+      31
+    ],
+    "python": "/home/asa/devel/libresolid-studio/.venv/bin/python",
+    "arguments": "-m simulation.tools.open_run_frame_sources",
+    "build_dir": "_build_open_run_evidence",
+    "environment_record": "manifest.json",
+    "address_space_limit_KiB": 8388608,
+    "timeout_seconds": 300,
+    "exit_code": 0,
+    "exit_meaning": "Comparison completed; contacts are reported, not accepted as clearance",
+    "guard_result": "16 valid native results and 16 Manifold Error.NoError results"
+  }
+}

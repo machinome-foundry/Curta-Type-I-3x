@@ -1,0 +1,37 @@
+{
+  "bindings": 9969,
+  "document": "/home/asa/devel/libresolid-studio/projects/Calculators/Curta-Type-I-3x/WTs/open-run-simulation/_build_open_run_evidence/viewer.json",
+  "document_sha256": "6e8b0eb44a3ba79475767e56597a77a2b3b4641789b7aa4cd27f2d78820ddee2",
+  "drivers": [
+    "carriage_lift",
+    "carriage_position",
+    "clear",
+    "crank_turns",
+    "initial_result",
+    "initial_turns",
+    "operand",
+    "subtract"
+  ],
+  "fitted_frame": {
+    "model": "simulation/_source/curta-CarryPassageFrame,running_gap=0.05-cb6f971502b5.stl",
+    "sha256": "3e522b2b272233c6748108955a61d5dba8df2dd195566ff95e7714b34ce68187"
+  },
+  "fitted_frame_native_volume_mm3": 199441.6249710615,
+  "flexible_occurrences": 38,
+  "instructions": [
+    "Clear both",
+    "Lift carriage",
+    "Rest",
+    "Seat carriage",
+    "Set one",
+    "Shift ×10",
+    "Turn crank"
+  ],
+  "kind": "carry-frame-root-publication",
+  "rigid_occurrences": 390,
+  "version": 4,
+  "complete_generated_artifact_manifest": {
+    "path": "_build_evidence/carry-frame-publication.json",
+    "sha256": "87b6c125a5f988f68e0c6b998d5ec9fed41d9e80a710a012ee68c73450d62d92"
+  }
+}

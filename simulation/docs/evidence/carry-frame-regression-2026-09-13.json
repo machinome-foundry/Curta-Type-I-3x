@@ -1,0 +1,2242 @@
+{
+  "address_space_bytes": 8589934592,
+  "elapsed_seconds": 4149.905667102008,
+  "kind": "carry-frame-regression",
+  "numerical_threads": 1,
+  "results": [
+    {
+      "assertions": [],
+      "elapsed_seconds": 10.209473319002427,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-assemblies.log",
+      "log_sha256": "7e12710824f6e681191a95e3e4501ee48ac985e731a9bea965b78093e379bf0e",
+      "matches_recorded_baseline": true,
+      "module": "assemblies",
+      "resource": [
+        [
+          "10.20",
+          "614884",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "7.14",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [
+        "body should not intersect transmission_gear_tip (intersection volume 3.240210274700639e-06)"
+      ],
+      "elapsed_seconds": 3.2295827560010366,
+      "exit": 1,
+      "failed_tests": [
+        "ShaftBearingTest.test_tip_clears_frame_through_a_turn"
+      ],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-bearing.log",
+      "log_sha256": "9388853dbf734d2e87b07c89656866504ded2eb5fcc396feddb55d1af7cd8a33",
+      "matches_recorded_baseline": true,
+      "module": "bearing",
+      "resource": [
+        [
+          "3.22",
+          "614504",
+          "1"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.24",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 34.417458283001906,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-bell_spring.log",
+      "log_sha256": "72d7f0db31af8c1c091c732b675df9a7a78df5c4d91de5e65e1a89261d5838ba",
+      "matches_recorded_baseline": true,
+      "module": "bell_spring",
+      "resource": [
+        [
+          "34.41",
+          "759308",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "8",
+          "14.32",
+          "8",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.452771547003067,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-bevel.log",
+      "log_sha256": "160135851837b72aa7c1f3285805b9e57269409ef9171b81ad0065a49e860da5",
+      "matches_recorded_baseline": true,
+      "module": "bevel",
+      "resource": [
+        [
+          "3.44",
+          "614984",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.21",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 27.97848189799697,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-bevel_bank.log",
+      "log_sha256": "640e677567f3f91daffe9ca787387ef2e223b38016703ccf720aaf2336a25fcc",
+      "matches_recorded_baseline": true,
+      "module": "bevel_bank",
+      "resource": [
+        [
+          "27.97",
+          "615132",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "7.78",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.259648188002757,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry.log",
+      "log_sha256": "ae8317e9d12ea32fcd93e3fa05fdeb91f4c6b7c289490c043c586ed598578a85",
+      "matches_recorded_baseline": true,
+      "module": "carry",
+      "resource": [
+        [
+          "5.25",
+          "732456",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "12",
+          "2.24",
+          "12",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 234.52563818999624,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_bank.log",
+      "log_sha256": "21ba53a5c132856dd9362cb489a1d510281460a5eedc7d3c67c00528b494af23",
+      "matches_recorded_baseline": true,
+      "module": "carry_bank",
+      "resource": [
+        [
+          "234.52",
+          "615076",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "214.20",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 50.02434025100956,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_contact.log",
+      "log_sha256": "78209d69cc6837082a9560010b0655175a8b0c784b78d6ef5add669a9e5d7585",
+      "matches_recorded_baseline": true,
+      "module": "carry_contact",
+      "resource": [
+        [
+          "50.02",
+          "615028",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "46.44",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 20.73834935699415,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_fits.log",
+      "log_sha256": "56e0ca505bc52dc81587137a76577fdd9bc3696e45638cda6d45623ce3ca4701",
+      "matches_recorded_baseline": true,
+      "module": "carry_fits",
+      "resource": [
+        [
+          "20.73",
+          "799132",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "8",
+          "17.58",
+          "8",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.8576121829974,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_heads.log",
+      "log_sha256": "cedf696b62031a0de2bc3a01e7707b0299c4aba2861de44eede1075326a8e44e",
+      "matches_recorded_baseline": true,
+      "module": "carry_heads",
+      "resource": [
+        [
+          "3.85",
+          "614220",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.85",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.992080665004323,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_mesh.log",
+      "log_sha256": "3128d17cf98f8c2b29a931890f5af507ae8de71c0f8a254afefebe74e36cc342",
+      "matches_recorded_baseline": true,
+      "module": "carry_mesh",
+      "resource": [
+        [
+          "5.98",
+          "614764",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "2.32",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 4.46622388799733,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-clearing.log",
+      "log_sha256": "0a515df605acd5ecfe1dcd80e869ee1ed7272788fc256cdaf16697c949676909",
+      "matches_recorded_baseline": true,
+      "module": "clearing",
+      "resource": [
+        [
+          "4.46",
+          "665756",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "1.23",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 83.0807115159987,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-clearing_contact.log",
+      "log_sha256": "7734d7cf6fff18b2e692a47523c5139e9e11e42994b1cf887d9f8bea6a1c809a",
+      "matches_recorded_baseline": true,
+      "module": "clearing_contact",
+      "resource": [
+        [
+          "83.07",
+          "614840",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "5",
+          "78.43",
+          "5",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 4.952151171994046,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-clearing_fasteners.log",
+      "log_sha256": "70619f051575a1df53d8a227bc4c5028c56a3f04d670690b9deac41fa28adca7",
+      "matches_recorded_baseline": true,
+      "module": "clearing_fasteners",
+      "resource": [
+        [
+          "4.94",
+          "615196",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.49",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 40.37837204700918,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-clearing_stop.log",
+      "log_sha256": "262bdefd16b9bc7dc59d118be82c322b895f4d747dc075d9fbb7c0b0482ba2b5",
+      "matches_recorded_baseline": true,
+      "module": "clearing_stop",
+      "resource": [
+        [
+          "40.37",
+          "614828",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "20.52",
+          "7",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 44.16311549799866,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-covers.log",
+      "log_sha256": "6c91ffc1bca0919966310adf1b9f9d2853bfd23bc4173ca78392b369d12b2bcb",
+      "matches_recorded_baseline": true,
+      "module": "covers",
+      "resource": [
+        [
+          "44.15",
+          "760720",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "24.27",
+          "7",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [
+        "digits_cover should not interfere with upper_housing (intersection volume 224.32750533797636)"
+      ],
+      "elapsed_seconds": 34.31438703300955,
+      "exit": 1,
+      "failed_tests": [
+        "CurtaTest.test_assembly_integrity"
+      ],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-curta.log",
+      "log_sha256": "77886fb3a4b48aa2069d7d4b78cf8581fdc25faceed1ef111968e5aaa55ce47a",
+      "matches_recorded_baseline": true,
+      "module": "curta",
+      "resource": [
+        [
+          "34.30",
+          "807960",
+          "1"
+        ]
+      ],
+      "summary": [
+        [
+          "13",
+          "14.79",
+          "12",
+          "1"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 50.3237716260046,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-demo.log",
+      "log_sha256": "641c5f502e1910c1c7a132b42a4f127c954dd3cb47e9d8ec350ba3f3de9ec93e",
+      "matches_recorded_baseline": true,
+      "module": "demo",
+      "resource": [
+        [
+          "50.29",
+          "614668",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "29.40",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 99.24553072800336,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-dial_detent_bank.log",
+      "log_sha256": "3f17ba54a37634568580fbbefe1aab8aaeac7a73cc7efa12b476297e5a1cf6b9",
+      "matches_recorded_baseline": true,
+      "module": "dial_detent_bank",
+      "resource": [
+        [
+          "99.23",
+          "614868",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "79.54",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 24.86428684499697,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-dial_detents.log",
+      "log_sha256": "c7ce89ffb630ff32175cb25bbd150c4237f92790114fc4b21dee7282782b3c7a",
+      "matches_recorded_baseline": true,
+      "module": "dial_detents",
+      "resource": [
+        [
+          "24.86",
+          "615004",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "5",
+          "4.91",
+          "5",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.007064746008837,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-dial_fits.log",
+      "log_sha256": "1af58580f308661fcd6c60857f78b4be8b6a930fd88613d29ea448afa5ded875",
+      "matches_recorded_baseline": true,
+      "module": "dial_fits",
+      "resource": [
+        [
+          "5.00",
+          "614116",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "2.09",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 22.97144107699569,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-display.log",
+      "log_sha256": "af9432e5f105fa0924ce8d9d808bebb5ba5f4f9046e5597b9a20a12605a63f48",
+      "matches_recorded_baseline": true,
+      "module": "display",
+      "resource": [
+        [
+          "22.96",
+          "615104",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "2.82",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.377775216009468,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-drive.log",
+      "log_sha256": "6bf84f43992757557525d7615ff08bdb0a8aa18bffd8f85576d65f8f528cc48c",
+      "matches_recorded_baseline": true,
+      "module": "drive",
+      "resource": [
+        [
+          "3.37",
+          "614988",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.36",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 9.787735865000286,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-engagement.log",
+      "log_sha256": "f1f87ee2aa6541b896058d6d8bca7143a18c6e87cb31c1f1112931c66b088773",
+      "matches_recorded_baseline": true,
+      "module": "engagement",
+      "resource": [
+        [
+          "9.78",
+          "614556",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "6.57",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.330247870006133,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-flexibles.log",
+      "log_sha256": "afafebd802a361523c60bae777ce834bfaf93d95ffd77a570294b12b83474517",
+      "matches_recorded_baseline": true,
+      "module": "flexibles",
+      "resource": [
+        [
+          "3.32",
+          "539728",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.38",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.4254329570103437,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-frame.log",
+      "log_sha256": "e7eae28827b0311eee95c66a139a83d22f753bfc25571ddf831ce354bcd1f116",
+      "matches_recorded_baseline": true,
+      "module": "frame",
+      "resource": [
+        [
+          "3.42",
+          "614992",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.63",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.464097418996971,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-input_mesh.log",
+      "log_sha256": "beeec2f7fa64688452ff6a33cb94808c034d1a3bd3affd0ca42ebf0212bcd148",
+      "matches_recorded_baseline": true,
+      "module": "input_mesh",
+      "resource": [
+        [
+          "3.46",
+          "614440",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.21",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 6.26206025700958,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-pawl.log",
+      "log_sha256": "e628c7d1133ec3688f9b42529915df6e7878db5e7dcb2cd5c09f43a566d5eef3",
+      "matches_recorded_baseline": true,
+      "module": "pawl",
+      "resource": [
+        [
+          "6.25",
+          "634956",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "2.94",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.7810160249937326,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-positioning.log",
+      "log_sha256": "1939a5c287167dec6cbacb42325081a7feeb8ea27bec1335477dfd04d6af3f50",
+      "matches_recorded_baseline": true,
+      "module": "positioning",
+      "resource": [
+        [
+          "3.77",
+          "614816",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.72",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.6947123930003727,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-prints.log",
+      "log_sha256": "dab2f7039568c67185a29a1f24ae2c75ff4c2354958e6ece38cf0a42c1bc3ae8",
+      "matches_recorded_baseline": true,
+      "module": "prints",
+      "resource": [
+        [
+          "3.69",
+          "614412",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.69",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.45022513299773,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-registers.log",
+      "log_sha256": "5c6f5ae4e0d791b9d3dca30bf1ec497fc697cc3ff8a5674a0c1acd06557a0ee7",
+      "matches_recorded_baseline": true,
+      "module": "registers",
+      "resource": [
+        [
+          "3.44",
+          "614440",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.33",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 4.072869170995546,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-selectors.log",
+      "log_sha256": "3b2e6e04eb51a4450818bf43558d6477836ca67a92256d8af99cd04cbf3d4a4a",
+      "matches_recorded_baseline": true,
+      "module": "selectors",
+      "resource": [
+        [
+          "4.06",
+          "614976",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.46",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 29.095721324993065,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-spider_bank.log",
+      "log_sha256": "dc1633f61d712a39d39bd831816407086d7933a786cd063047e4bf0382ee8dcd",
+      "matches_recorded_baseline": true,
+      "module": "spider_bank",
+      "resource": [
+        [
+          "29.09",
+          "614620",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "25.96",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 41.620007580000674,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-spider_shape.log",
+      "log_sha256": "e2dcb1d4b74cf0330085c091668141398819e2b62d9c0e9cefec00ad2e19ef73",
+      "matches_recorded_baseline": true,
+      "module": "spider_shape",
+      "resource": [
+        [
+          "41.61",
+          "818284",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "38.41",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 21.94929265099927,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-standard-assembly.log",
+      "log_sha256": "a43684b3091f3f438e908d1c46dd66c4d1e89545103367260f2a3c1f3e893435",
+      "matches_recorded_baseline": true,
+      "module": "standard/assembly",
+      "resource": [
+        [
+          "21.94",
+          "788524",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "18.78",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.9176725010038354,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-transmission.log",
+      "log_sha256": "42e34a8f7d68f0de7f79667891ad33e63616d7c1c2361ffa25eaf34c3267e492",
+      "matches_recorded_baseline": true,
+      "module": "transmission",
+      "resource": [
+        [
+          "3.91",
+          "614656",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.23",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 23.11506782399374,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-zero.log",
+      "log_sha256": "80fcc6b54cb07b4cde8b4bf34d5b4e6ba47423626162f894ff8e5b0a8ed2ff8d",
+      "matches_recorded_baseline": true,
+      "module": "zero",
+      "resource": [
+        [
+          "23.11",
+          "618536",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "19.94",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 31.593988824999542,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-carry_frame.log",
+      "log_sha256": "a3b634305c20c85bad314b58e1671f22e29552896b3c94508f28dadcbdf7babd",
+      "matches_recorded_baseline": true,
+      "module": "carry_frame",
+      "resource": [
+        [
+          "31.58",
+          "743900",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "10",
+          "26.88",
+          "10",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 55.51498305700079,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "faceted",
+      "log": "_build_evidence/carry-frame-regression-faceted-frame_fits.log",
+      "log_sha256": "7fb40e4ef024f8a397124424c6e061b11dc4de2703ac005a5ebfdd6cc9116ae6",
+      "matches_recorded_baseline": true,
+      "module": "frame_fits",
+      "resource": [
+        [
+          "55.51",
+          "822576",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "52.21",
+          "7",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 10.17985114500334,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-assemblies.log",
+      "log_sha256": "704e119de8d76b20faca82eda092ee9c419eea681934fe76891c38a54a31013e",
+      "matches_recorded_baseline": true,
+      "module": "assemblies",
+      "resource": [
+        [
+          "10.17",
+          "614800",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "7.06",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.9976694540091557,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-bearing.log",
+      "log_sha256": "c93d40475646d4dd72e716adaac9fd7fb422634d1cb6074fac708540c1293821",
+      "matches_recorded_baseline": true,
+      "module": "bearing",
+      "resource": [
+        [
+          "3.99",
+          "614636",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.88",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 899.0653745460004,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-bell_spring.log",
+      "log_sha256": "b10d47e6d9c9dc2f02b4626cc66c6d653923bcb53a5495ae290bb6db7f45ecf0",
+      "matches_recorded_baseline": true,
+      "module": "bell_spring",
+      "resource": [
+        [
+          "899.06",
+          "985860",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "8",
+          "879.17",
+          "8",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.22259799099993,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-bevel.log",
+      "log_sha256": "bc4cdb26189198910c1fb5a4ba854ff990070e3287d315788a1db23e3b32bc5a",
+      "matches_recorded_baseline": true,
+      "module": "bevel",
+      "resource": [
+        [
+          "5.21",
+          "614500",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "2.02",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 47.493760259996634,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-bevel_bank.log",
+      "log_sha256": "8fc7674216bd27927dfdb3f5e238b2a1e8160da69f986a18d878abc045267ecc",
+      "matches_recorded_baseline": true,
+      "module": "bevel_bank",
+      "resource": [
+        [
+          "47.48",
+          "674996",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "27.26",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 35.047238766012015,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry.log",
+      "log_sha256": "156cb8a008700694c9c5652769aa75b5bd3d8d45f97127bc91d3b3cd7901fffd",
+      "matches_recorded_baseline": true,
+      "module": "carry",
+      "resource": [
+        [
+          "35.04",
+          "614664",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "12",
+          "31.84",
+          "12",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 517.036074425996,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_bank.log",
+      "log_sha256": "0972890bbdfeca2039f0f42c83e2e856f87497567014ca3a4684d62b4be70dbb",
+      "matches_recorded_baseline": true,
+      "module": "carry_bank",
+      "resource": [
+        [
+          "517.03",
+          "614540",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "496.53",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 117.70155077200616,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_contact.log",
+      "log_sha256": "973f39bb440b8e1b33bc5c66b0a340a95d8ebad06457fa399a3064a454707e5b",
+      "matches_recorded_baseline": true,
+      "module": "carry_contact",
+      "resource": [
+        [
+          "117.69",
+          "773916",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "113.69",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 4.192937276995508,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_fits.log",
+      "log_sha256": "7e3f8637101fc79eef739e0c8996e88b1b206f738d542f666e348fe4bf42a528",
+      "matches_recorded_baseline": true,
+      "module": "carry_fits",
+      "resource": [
+        [
+          "4.18",
+          "613668",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "8",
+          "1.34",
+          "8",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.965235826006392,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_heads.log",
+      "log_sha256": "a2a8290ab972bc4e8f08267781a69a8530c4ec7d2b812a18df2414a7d52bb9a6",
+      "matches_recorded_baseline": true,
+      "module": "carry_heads",
+      "resource": [
+        [
+          "3.96",
+          "614096",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.89",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 32.44266654198873,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_mesh.log",
+      "log_sha256": "f2738e5ffe3c06466f3792fa64ee32009a8aff706cdd58b2eb9aa074ca98d41e",
+      "matches_recorded_baseline": true,
+      "module": "carry_mesh",
+      "resource": [
+        [
+          "32.43",
+          "627988",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "28.85",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 4.3816552399948705,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-clearing.log",
+      "log_sha256": "53e0ea06022f8f57f2dafbd441d2702bcd0b9a5d0f9225dfd74620e21e74b636",
+      "matches_recorded_baseline": true,
+      "module": "clearing",
+      "resource": [
+        [
+          "4.37",
+          "664936",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "1.23",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 84.64721480399021,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-clearing_contact.log",
+      "log_sha256": "fadb9683877faa8629e8106668fd736fbbfd1ba092ad24be3017fad7c81ce801",
+      "matches_recorded_baseline": true,
+      "module": "clearing_contact",
+      "resource": [
+        [
+          "84.64",
+          "614576",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "5",
+          "80.17",
+          "5",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.177026418008609,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-clearing_fasteners.log",
+      "log_sha256": "5bfbf2565b7f0b07398f403a8686994712a9e4e1ddb8478f3f3e06972a41751f",
+      "matches_recorded_baseline": true,
+      "module": "clearing_fasteners",
+      "resource": [
+        [
+          "5.17",
+          "614616",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.47",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 156.06671827500395,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-clearing_stop.log",
+      "log_sha256": "cc760b2363bb64aba03bf7e431898a9603830128ad1519b9acfa8939de862521",
+      "matches_recorded_baseline": true,
+      "module": "clearing_stop",
+      "resource": [
+        [
+          "156.06",
+          "615260",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "136.51",
+          "7",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 46.28776466099953,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-covers.log",
+      "log_sha256": "9455118b1a0bd6bf03e80f945c8fac7b8c9cc1736d08166cb77982c29dceb392",
+      "matches_recorded_baseline": true,
+      "module": "covers",
+      "resource": [
+        [
+          "46.28",
+          "769248",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "26.26",
+          "7",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [
+        "digits_cover should not interfere with upper_housing (intersection volume 224.32750533797636)"
+      ],
+      "elapsed_seconds": 35.60131328699936,
+      "exit": 1,
+      "failed_tests": [
+        "CurtaTest.test_assembly_integrity"
+      ],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-curta.log",
+      "log_sha256": "50ba99b4515d76f9275d058c6b8b5cbfc4326bc8c38e7f658f40f201d6a63a7e",
+      "matches_recorded_baseline": true,
+      "module": "curta",
+      "resource": [
+        [
+          "35.59",
+          "855396",
+          "1"
+        ]
+      ],
+      "summary": [
+        [
+          "13",
+          "15.02",
+          "12",
+          "1"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 48.47639484600222,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-demo.log",
+      "log_sha256": "0b060e3b932596e4e42a88dbef9998075ca7ca16a3b64d55a4d476c30df12643",
+      "matches_recorded_baseline": true,
+      "module": "demo",
+      "resource": [
+        [
+          "48.45",
+          "615000",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "28.91",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 442.5102198730019,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-dial_detent_bank.log",
+      "log_sha256": "74ba704ff6abc3b52ccddc783b270bbcd4f35e8076ad72b5493b4d4f25cc0911",
+      "matches_recorded_baseline": true,
+      "module": "dial_detent_bank",
+      "resource": [
+        [
+          "442.50",
+          "654336",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "422.24",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 30.131525481003337,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-dial_detents.log",
+      "log_sha256": "1fc69dece031a4cf6ccee12bcb5acd8ebcea8cfc2b200f594957ff473cccc97d",
+      "matches_recorded_baseline": true,
+      "module": "dial_detents",
+      "resource": [
+        [
+          "30.12",
+          "614524",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "5",
+          "9.92",
+          "5",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.061025860995869,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-dial_fits.log",
+      "log_sha256": "33e7ac29ad4abf618b25e364f51039c475b2f9efa76a3a64525dabbbd0fab47c",
+      "matches_recorded_baseline": true,
+      "module": "dial_fits",
+      "resource": [
+        [
+          "5.05",
+          "613572",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "4",
+          "2.11",
+          "4",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 22.586074973994982,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-display.log",
+      "log_sha256": "ccb54f16d6ab66ba7671a908db7281172dfb054f8e43a6476c043d5b00a24994",
+      "matches_recorded_baseline": true,
+      "module": "display",
+      "resource": [
+        [
+          "22.58",
+          "614668",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "2.71",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.656944182002917,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-drive.log",
+      "log_sha256": "b32ac5556c54f032fe45378d15645fa50cf748fe7be229b1b07ed05ca9e51073",
+      "matches_recorded_baseline": true,
+      "module": "drive",
+      "resource": [
+        [
+          "3.65",
+          "614696",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.38",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 166.87773704899882,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-engagement.log",
+      "log_sha256": "ee9af3b315079a9e6e678e7827557e8b3e1cd325337d93d465e510a50225cf18",
+      "matches_recorded_baseline": true,
+      "module": "engagement",
+      "resource": [
+        [
+          "166.87",
+          "1275384",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "162.81",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.232463362000999,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-flexibles.log",
+      "log_sha256": "686954435b7f957b2463cc859bea0287341a21855798f138ba1572648600549b",
+      "matches_recorded_baseline": true,
+      "module": "flexibles",
+      "resource": [
+        [
+          "3.22",
+          "540056",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.40",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 5.332155363998027,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-frame.log",
+      "log_sha256": "bd4b76c9b83bc798cc5c0a66a830a18c408d549c741006b9c7cf475d5360dbc1",
+      "matches_recorded_baseline": true,
+      "module": "frame",
+      "resource": [
+        [
+          "5.32",
+          "614972",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "2.22",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.7732220709876856,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-input_mesh.log",
+      "log_sha256": "e7502c4e6da99649e9c753cb5c0f288c2ab5d9c75eddfd7153b88841d0f020d5",
+      "matches_recorded_baseline": true,
+      "module": "input_mesh",
+      "resource": [
+        [
+          "3.77",
+          "614656",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.69",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 49.63969920099771,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-pawl.log",
+      "log_sha256": "75029c02e994439615a587384b2dd637400b6c559a23ad25c901f170e8c2e4ff",
+      "matches_recorded_baseline": true,
+      "module": "pawl",
+      "resource": [
+        [
+          "49.63",
+          "939660",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "46.23",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.8033898480061907,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-positioning.log",
+      "log_sha256": "1827ca1f90d309c9f127e09c81f3b77923bf28d84015b1fa66d1293296bd6cad",
+      "matches_recorded_baseline": true,
+      "module": "positioning",
+      "resource": [
+        [
+          "3.79",
+          "615040",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.75",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.7542226590012433,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-prints.log",
+      "log_sha256": "ab46fbab04d6f9a84704cd098f0f2f8b8ac0d67b9b6a7e3c499b2a8c49f9e886",
+      "matches_recorded_baseline": true,
+      "module": "prints",
+      "resource": [
+        [
+          "3.75",
+          "614892",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.67",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.4852196240099147,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-registers.log",
+      "log_sha256": "ea5c695addfbb3f01621cb5ea374f02a1ba5cf7ab2cd5eff4e18046db80b1875",
+      "matches_recorded_baseline": true,
+      "module": "registers",
+      "resource": [
+        [
+          "3.48",
+          "614836",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "3",
+          "0.40",
+          "3",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.9797119440045208,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-selectors.log",
+      "log_sha256": "45c7bd10bae9d19af6359306301d566c703c5447943c75563dfd6e40bc5458f7",
+      "matches_recorded_baseline": true,
+      "module": "selectors",
+      "resource": [
+        [
+          "3.97",
+          "615288",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "0.41",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 28.416288713007816,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-spider_bank.log",
+      "log_sha256": "5e375d951273791d7d4fe04ff5e4197cdb9ebdb7902215f876590f2fcb9c1cb1",
+      "matches_recorded_baseline": true,
+      "module": "spider_bank",
+      "resource": [
+        [
+          "28.41",
+          "614624",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "25.31",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 25.117395110006328,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-spider_shape.log",
+      "log_sha256": "290a8a3472b0de06edd83f145f6592dbd06b48530f310133ed8188330d55ed9b",
+      "matches_recorded_baseline": true,
+      "module": "spider_shape",
+      "resource": [
+        [
+          "25.11",
+          "614484",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "22.15",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 21.71146926601068,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-standard-assembly.log",
+      "log_sha256": "cc3d2026f469847ee8ad7ee5e12aa78a48a797a728ca7e30f29cd6728122497e",
+      "matches_recorded_baseline": true,
+      "module": "standard/assembly",
+      "resource": [
+        [
+          "21.70",
+          "789120",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "1",
+          "18.40",
+          "1",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 3.7393847280036425,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-transmission.log",
+      "log_sha256": "669063430634c42a15b6e54f48dc586b57b4a201afe0caf7ee67dafa6a40123b",
+      "matches_recorded_baseline": true,
+      "module": "transmission",
+      "resource": [
+        [
+          "3.73",
+          "614596",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "2",
+          "0.23",
+          "2",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 43.760587350989226,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-zero.log",
+      "log_sha256": "847b6a1f9ae963fd74c8dcc41f302ac21f04f3a7e3fd0c850e3f1bc0b43e3cfb",
+      "matches_recorded_baseline": true,
+      "module": "zero",
+      "resource": [
+        [
+          "43.75",
+          "830112",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "6",
+          "40.26",
+          "6",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 94.17960908700479,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-carry_frame.log",
+      "log_sha256": "ad8faf8a8c13648574456a3ff8a5e2a01cd10e20f3b07fc63e83439373c1e9e2",
+      "matches_recorded_baseline": true,
+      "module": "carry_frame",
+      "resource": [
+        [
+          "94.17",
+          "645748",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "10",
+          "89.36",
+          "10",
+          "0"
+        ]
+      ]
+    },
+    {
+      "assertions": [],
+      "elapsed_seconds": 56.58380121999653,
+      "exit": 0,
+      "failed_tests": [],
+      "kernel": "exact",
+      "log": "_build_evidence/carry-frame-regression-exact-frame_fits.log",
+      "log_sha256": "ccc2d9c871e527b3122a21ab36641d0aa9f0c1e103815f21d5070a7abff7a88c",
+      "matches_recorded_baseline": true,
+      "module": "frame_fits",
+      "resource": [
+        [
+          "56.58",
+          "822120",
+          "0"
+        ]
+      ],
+      "summary": [
+        [
+          "7",
+          "53.34",
+          "7",
+          "0"
+        ]
+      ]
+    }
+  ],
+  "sources_sha256": {
+    "simulation/__init__.py": "c84357fea17e5847823a33598ae4f2ec29e54c251c49a1828b044922a2e59fb2",
+    "simulation/arithmetic.py": "bb22d905f58f134cce9361a2b78e35bf2953576d7aacc0145900c556f0ff563c",
+    "simulation/assemblies.py": "ed5badfc0c8ed64a92695f5ae19ad35ea4d466e6af9b5cf4097972bc27a7bd48",
+    "simulation/bearing.py": "ad11c243a31995a75c480ca90abb5b0f0ba4ab00847b65ac1bb68ec0dda0e1e4",
+    "simulation/bell_spring.py": "faac336c6e908e92c553afb47c8b1c0e5968996aa0ad971da9bd53d2dfab64d3",
+    "simulation/bell_spring_motion.py": "14a71a4c27d683924bb91ee4220595fc64e57d9ae4e02ce9ceb49161f0f014ce",
+    "simulation/bevel.py": "0fd65ab9817aa5840e5c003d034a521c78d75cba4827f26f818554b748475953",
+    "simulation/bevel_bank.py": "759695439577ac3830c322cb2ff7e00819824f785202ae62aaaaad27b8b5fba3",
+    "simulation/carry.py": "942f855f66527cd4f7987ce95df76d882fc6a385ff83c12d566985781d4f7afa",
+    "simulation/carry_bank.py": "c82e7681cb21914cd0225e0e64bf5f593ea84b3273388a6b1c4f8d9ead194d4b",
+    "simulation/carry_contact.py": "db7766bc407781ecf015e1e1c840e57b9fe95fe7d316b5d5483c6827f874e162",
+    "simulation/carry_fits.py": "15a9538b97b278422b9d71afe1efe6f56c2262c2b88a691920b3106adf527510",
+    "simulation/carry_frame.py": "76f61b61ed803ed99195513a2bdd605f2e1f222b42570d4705a575d742ff738b",
+    "simulation/carry_heads.py": "44436a3f07a99ffae6e62236fc20e3dbf7475a60bb1d3477b57c1ad8023c5e8d",
+    "simulation/carry_mesh.py": "bb61320c524f11aad178d06b3f095f992da91472d71025ba99fc547028c1e6b6",
+    "simulation/carry_motion.py": "e3651b3c504bee406d473b268ea0ed06c5eeba8baabf52d8d9feb163685239de",
+    "simulation/carry_profiles.py": "b047f5f8f219e549485a3dfc6b8b6fed601573c36fae80c95d5caec8a097ff86",
+    "simulation/carry_seat.py": "8456d02f6229650a0906f45005a89701b4d2f1e30be48735002fe17c3930f41c",
+    "simulation/carry_spring.py": "68cff8e1e2b819d37d8ac6e6124ec3809ea52f6aecd0e204ada6b9ec37f07836",
+    "simulation/clearing.py": "6f5cbe0e3bdb75197f408ab287626e4fefea84d045d739adb583b6a1e363585e",
+    "simulation/clearing_contact.py": "d73f022753bd150536d2b754fe98c178885cf850ab2ee9507bab98546c68d8e2",
+    "simulation/clearing_fasteners.py": "3884b9f3d370f0cd28da86e492171014c849146188115c1d46d9e815997fa354",
+    "simulation/clearing_stop.py": "8c97a42487a5b808a8a710c1d2a44550f548750e75eb0b0e8f3a435b0e8194ec",
+    "simulation/clearing_stop_motion.py": "b9aa7f4f751f70bdcb14ff6c172ffdc175ed6c94a3cbb043a4e2d86dd5715ae9",
+    "simulation/clearing_stop_spring.py": "69312689eeec184ed1a2625f0b8ab239bdbf8c3506d113ab91c43b2f017d9256",
+    "simulation/colors.py": "470dd41181c2be6f759dc1bbe2537a45a810ae003cc87c8b71b0361560e87450",
+    "simulation/contracts.py": "ed8d9314eaf93c90b6bd33a5dbc8f657c6a93549619e1af343b4d7ed5be784d5",
+    "simulation/cover_fits.py": "19ba545dc60eb5f06f50eb7f1fa680b3bab20ed917d66fdffef74b0335874d0f",
+    "simulation/covers.py": "4370224a402a5f967a2707adab47392d9c79873d293f412999df3a7893330788",
+    "simulation/curta.py": "db6bcb78b30f9e8366659450242df1fa6e41f5b346fb32973330639bbb6ce877",
+    "simulation/cycle.py": "03d66e18afc4d0fdf225d0b36966a49b7f84e4f97ef58fcb896d3bfd7a241ea7",
+    "simulation/demo.py": "1f49b3ae0192f70df03cf14bdf2ce4da18960df9b8f4043dc66aca1853b06a40",
+    "simulation/detents.py": "124a1fa4f33de578ccc2857ef3df8285755d451fbb301d3c9fa4b23de1ea46a5",
+    "simulation/dial_cam.py": "b8cafeb3d7f340f2bf0180e9f995ccfc01909ea133254300fb077e1f3118233e",
+    "simulation/dial_detent_bank.py": "48b28f3a9c42e633fa97a00b5ba10c24b69f080d15d6ee75c4957a3468d0f94a",
+    "simulation/dial_detent_motion.py": "15943b5d6bb1d7fa51bbf4e1872658d97cdec901cd9e59e9b83b6a26595e043a",
+    "simulation/dial_detents.py": "83cc66c5680d8e58197a6623b8c34f8fa07cb2bfef0c599c70a2c744bdd321b3",
+    "simulation/dial_fits.py": "bc5275bc86a967da7af50641aa4e4519b4ec3cb3de2f391728a5c4f233c44a76",
+    "simulation/display.py": "b5319640d7c67b6d2b4e650a773ab626a11ab476517c77693b0f88a07cd0fb72",
+    "simulation/drive.py": "4b0806258f47428554aa55a74e0d3f9af9fd00aa47f32849a359608273609827",
+    "simulation/engagement.py": "d3f48895074f060d93be199a638aa357f2f0b451dcda17f4121a2fe476252008",
+    "simulation/fit.py": "5f151d9419541bf299c5d9ddacfc921e73e1f4b95d7dfa331799b7e665f18175",
+    "simulation/flexibles.py": "e7bb5386e66f2f48bc4681fbd2bc61fa8a73b6b831b382f19d3ecaf2cd54e39e",
+    "simulation/frame.py": "edfab064a391cc5d4fde85bf8d24de48dcec59b7ef71caf29b0556c4e644137f",
+    "simulation/frame_fits.py": "2cff217143c3f94b85b05664c694d0f77866b974decaede4f2424f39599a3138",
+    "simulation/input_mesh.py": "ea8f1a78f4c3e1e7e38ce33aa5b01a850cda7e10e5ce53a8c163c7a2a60632e9",
+    "simulation/mechanism.py": "8f57fe8256cf9165ed842cf0ab06d51d002e723c16dbf05bcfe490f8b17de9f0",
+    "simulation/pawl.py": "619a7b303a141ae9401560581a8c87654b1c9b00d7b1776faa35911ee2aa758c",
+    "simulation/pawl_spring.py": "5254ddbdaab1c67679edc08b9fddca4e347ccaf049816263557c6029cac6d686",
+    "simulation/pin_mounts.py": "b23770db31d81adef00e9aca03fe91fc5c632bf631abee8ac2ad6876fd901656",
+    "simulation/positioning.py": "82ad9482eb250e82856e841687ed0fbf83d3ae84763f57777c02b05741886f04",
+    "simulation/print_parts.py": "a822c5d3d02c4b62aae199e7a43282cf13bebc5d731bab99a0d85662a67ee038",
+    "simulation/prints.py": "63f11a56eac7d12ad4ee64eaf9a017c387f87069e6582a2f48a66a55c4d3c7d3",
+    "simulation/register_detents.py": "679efe7735bdb2a9fe93d7d1efad973c69bd2a043574bc2d172862004c3d7a9e",
+    "simulation/registers.py": "df5c7b71d56c627f6318f48ef5e682546b1e3035e915637b278328afccf040a1",
+    "simulation/retaining_spring.py": "306a98a056fb12d21cf216a59feb0bb6c296baa07e943782a6f2b9e86e7fa791",
+    "simulation/selectors.py": "f0b9a0ed2bdadbfbb81f5bd66fa7d5316f9dd07012f0148b782080ae3d0d973e",
+    "simulation/source.py": "ba63dbf1991e59a051a4ad0f053855dd6cbb9ab7f5a53372a642d3cae072f6ed",
+    "simulation/spider.py": "8d6b4b5a01b44e6d7509a02541dd13c551d8afe401ca517ed87e4aad87b14451",
+    "simulation/spider_bank.py": "05c32bb17be87459134dff547d7ebde40489b5114be0773d005ba4b354eaeeb2",
+    "simulation/spider_shape.py": "35b5f8d7a14e2478c889bc6101084fc04c3c84e6442e843ba9bc93aa4ff29fe0",
+    "simulation/standard/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "simulation/standard/assembly.py": "cd9cd6ab9e61e9e8d6a1fe782403c99441aea86229fc490d861af68588fec2ae",
+    "simulation/standard/carry.py": "8c6f502312ec657c12ccd0d7f20f6b47b98f09cef3fac1625dfaa02d00f4afa6",
+    "simulation/standard/channels.py": "37aa7b2840aafc2a2b7f04d4e4e2abcd9eec9768f398e54334b9820db1790f39",
+    "simulation/standard/layers.py": "46db99c8dacdfe28a6ae2e94c6dae91776790901111bc1ff55e7d46c86b81e2c",
+    "simulation/standard/parts.py": "f6e9afc0fb1b5872936bf84ebc2c8d128f68fdbf92048566ac422e09250c6d9e",
+    "simulation/standard/printed.py": "d4201e93fcd042b1685b7d1f1a0ca32da1b4b9e162f0b90a53eb7259d4182705",
+    "simulation/standard/test_assembly.py": "3dafab3e96e2b50a482cbd4315370c5eaf668344bd964811e9798909e5d7c4a7",
+    "simulation/test_arithmetic.py": "c01d4d4856a6a2800c538f0624a8f76cb4c1e4f4bf4d3d89dcd09c5d834768da",
+    "simulation/test_assemblies.py": "fd2a228fc08ccd30c95198ba73598a5d33995bdbc674779ae09ccbc76d717db7",
+    "simulation/test_bearing.py": "dc68493b70d0e50d5906245669e699ad3bf1f7ff3173191c284cb7437a4077ff",
+    "simulation/test_bell_spring.py": "f6a6b78c5c81937c56c329c7d55ac623c4a1066b16a0c9b7fcb217c0425fc997",
+    "simulation/test_bevel.py": "35c0d1b994e8260673a4d492fbee9dcfdbb087a745fce9b3be49cacd7b84a297",
+    "simulation/test_bevel_bank.py": "663fb3ab32236f99a25efe0b19a23e018cf1f5dc2ffe8fcae8aff58b79645bd4",
+    "simulation/test_carry.py": "7ee40ef96fb24a8e06d288c3f8001513996eb1fa42bf03716933e5cc618e3acd",
+    "simulation/test_carry_bank.py": "c8a062175257562f374d0975cf776767a3bef7b5b25c9dc10702d21d4f641137",
+    "simulation/test_carry_contact.py": "8b5c2455388ab299fc07bd9ab01c6ddb9456fb08310a23c22735908bfe1f031c",
+    "simulation/test_carry_fits.py": "403ef5991c218f9a223b125d44740b8d537843153046bcbf86167877283e8850",
+    "simulation/test_carry_frame.py": "692645cdebf8801bce469e45ee1a3c38f24aaabed8702a9b63cf5a4b4759eb1d",
+    "simulation/test_carry_heads.py": "7444325664bae84a38c6884642b335acd532f76fe88076f49cd7abb6a8a1a652",
+    "simulation/test_carry_mesh.py": "d117fc1b808dbb066af68986b78e371f9cf107fae95dfff61e720f6129cb6a35",
+    "simulation/test_carry_timing.py": "5a1570dcce340cb970e827b618a8a16a1d1ab5f63b75fdc45024ad69cd08a7d4",
+    "simulation/test_clearing.py": "04da5a1059b0625c159f1278e4c9f81e68c1b7e6e3f41ae1f470d735e25f6a5b",
+    "simulation/test_clearing_contact.py": "684f6bb6d3f9273adda7c674c085a674460fe947a2ee5c650b0f4c79a21c8964",
+    "simulation/test_clearing_fasteners.py": "ad6cca0e5bccc6dffe154586e802cf1083f2602bee681214df9240f384840a75",
+    "simulation/test_clearing_stop.py": "1a42c4f1f972740fa77efc719da3f8026a04b60132fc9aaa13af0d1c2a301749",
+    "simulation/test_contracts.py": "2ff74befafcd3cc052d6dd8ddd3fc58eda2e081fa58c6a9dea51ffd560b72301",
+    "simulation/test_covers.py": "5b245937bccfcdddfce7ea4f672682d835003d3c37cce7ae72179abe7bd2cee4",
+    "simulation/test_curta.py": "aa1c5fe4e2c14cfb18e69a8b5b3bf64c408e56aea0e1efba6ab2aa9aa417f9ea",
+    "simulation/test_cycle.py": "15602ea3b68ec083b68348d25f40ffc1ca9052af7c517c34f47059aebf721df0",
+    "simulation/test_demo.py": "fa8bc6dbb77597c4c1c21ebc178e8eb69a75677b6fbcec3319911e71d1a404ef",
+    "simulation/test_dial_cam_law.py": "7fb34dd66776625a74a56e1296d96fa68bb031f1073880199b13d1456241a50a",
+    "simulation/test_dial_detent_bank.py": "0cac54c6d4385b9900788234897bf2243fe8ca49e917536f84fa2036b8ed643e",
+    "simulation/test_dial_detents.py": "4ef6cdc7fd7e52812e642cb66ff08b424737f58dd906fb5c9e35585386d9b8dd",
+    "simulation/test_dial_fits.py": "5396f01ba6fb64ed475b78d9b4a774a91491fda836c7ebdec521706b1668a141",
+    "simulation/test_display.py": "c23f1fed469de4412d1fb31bd0fa72baf7ad3f4d96d2b64f0817f1055d3524cb",
+    "simulation/test_drive.py": "e02ebd3cbac450bd1d275aea8a8da4aa203dc0a66d870130c889dc90e9cc5e7b",
+    "simulation/test_engagement.py": "e5765872044712470f99f571629a7f6cd7568952d2780356aac45d670ee8ca9f",
+    "simulation/test_expression_size.py": "6890b28e27e24b30c188b0b4e4d2e2dca49a29ba05e1600d28030d01050b56b5",
+    "simulation/test_flexibles.py": "56a1e668f6866453e1d473130080b60b98c8361b5c9de6c658b4712337560655",
+    "simulation/test_frame.py": "7e46bcbc5db3bd97d45795af3cf7adf7b187282c2401bb175bc4ee02b5a0cbcd",
+    "simulation/test_frame_fits.py": "27f2f98869d08f69028764a41f664240f8865f03835012e4517d2a8315120f45",
+    "simulation/test_input_mesh.py": "4df69bb0349a9eda1fd30a5a9a3a1e45d6aef38006628e2f23f2425027ecba68",
+    "simulation/test_pawl.py": "9b7cee2c534a9fdc95b37fd061a4dd51378dfa61b38d77cc854e997e566504d6",
+    "simulation/test_positioning.py": "ceec4639d42c7f6a42073d480b5056304d71ff61014c56e14b56d0605ce33bf3",
+    "simulation/test_prints.py": "ff885d1cb12d3a781821a4971eee622d56d5f50ae33955120096369581390b60",
+    "simulation/test_registers.py": "ed1e0efcf6379919e1f6b082d90fdf04138b1d82e058b94ef25a9625b9dc5f27",
+    "simulation/test_selectors.py": "ed8bfd3f11992a84505e180884cfab4624a9c052fd496ee41a91413068bf5b44",
+    "simulation/test_source.py": "604805b565b9c52423bb8858221f0dd58bb060273aee1ebb17afdb726cd9cc7f",
+    "simulation/test_spider_bank.py": "940f5c50f37bdf41c21ae4b3366b37751f37c3e399f484b2c74a4df1f6f7b372",
+    "simulation/test_spider_shape.py": "ad531933b27321a104a77001a240055a86d0316bd3ce534e978597d27f07dda9",
+    "simulation/test_transmission.py": "cd10bcbeb0cb118fa45a8817d8c2d812c9b5c51fabd63784d6bf34e3b6db4a6a",
+    "simulation/test_zero.py": "fce2f313716a800cf8c6e5478cb02746b1cf7a0b66d8456538e02374c865ddac",
+    "simulation/tools/bell_spring.py": "3a488501eba114c83b99d5f3b0603955d200f3b50c5d6997f6814097f11fbbae",
+    "simulation/tools/bell_spring_fit.py": "6d96213d0cf886fed566e2d2889935b42b1830cf1c164aad2be39f620b6884cd",
+    "simulation/tools/bell_spring_phase.py": "1adde5b2aef7be4aadebb2a1ef2fe6ecd9b344ce7db90104b940b906291aac9b",
+    "simulation/tools/bevel_bank.py": "38a4436a55f57f3f0f3dd4b021eeafe1cb972b6053b824e17a60f9d70cd871c4",
+    "simulation/tools/bevel_phase.py": "203bf50ff7310370b340650ca4b152b19db31fb717bd195af7d3d7f1801798a3",
+    "simulation/tools/bevel_play.py": "386d7872821a903c56226d63df2f156de4221610bf6af39f13bdb4f80c89b1b8",
+    "simulation/tools/carry_bank_contact.py": "7132f7ee5b13e04e00f240759dcfaa63da62db2cac123fb1a8ea2fabb25c0a1f",
+    "simulation/tools/carry_contact.py": "d17686f91dc0ec2cf8b07f471e4cad8d6ee6cc756c25478ea9e8e1e26ffa9981",
+    "simulation/tools/carry_frame_fit_report.py": "a82f26b756e75f1fbf8e6125765abccb7f4afe0fe7068b948b8458e64eea414e",
+    "simulation/tools/carry_frame_interval.py": "2c210935e1ca65961a337821e366a6a237c152dccd65f517b296bcf263c4c570",
+    "simulation/tools/carry_frame_protected.py": "0d65dab9c39e2dcfc677baa72c9067bfffddc9cc4ab288e270240b71c75de822",
+    "simulation/tools/carry_frame_publication.py": "f4ae98e27f63f1074af464f67e1a969b38617b297352b65d21fc73f28fe9ccd9",
+    "simulation/tools/carry_frame_regression.py": "d332995b2e028c13cdc3eecdc603924bdb11ecca071fb361b59899cd1ba86d65",
+    "simulation/tools/carry_frame_seat_gate.py": "03fc0be68bbd60fb9eca20388841307b1bd18d66b8f6fae827c443e29a9c227a",
+    "simulation/tools/carry_frame_sections.py": "1c58aca9ab232de354acb0f69bed12a3fa5f89d5c44b035b9724046d86a1b26e",
+    "simulation/tools/carry_frame_supports.py": "422e1615f4d043c92e94748b8cfb8b7b7a692abb2fb751c9e26d40d80bd061b9",
+    "simulation/tools/carry_frame_swept.py": "5188af83242b006a32b2c731fe3dc511f8e54419fe84a49316f80c346191c729",
+    "simulation/tools/carry_frame_validation.py": "6906500cfbb74c9e6a31f6bfb350d8d0967c2ec89f331086d7a3763b1df4a4c9",
+    "simulation/tools/carry_frames.py": "9626a07bcbfc271c1eddfec256d93d1fb9452d8b074cd1cdfc7888b253214d5a",
+    "simulation/tools/carry_import.py": "e93a2ddf0be86febbd66dd24afac43ae06a48242458b91d1953002cd259d830a",
+    "simulation/tools/carry_phase.py": "0b2a109044edcbea23048aae32398d665af49084c0649e292579e2a744cc662c",
+    "simulation/tools/carry_pin_frames.py": "d219415b1ec3a4390ec787f691791cffb8ebbdb8ecd6df0f716688fff352ca34",
+    "simulation/tools/carry_probe.py": "e345d0858e3c32c5d25ebc51ae0b4ceadcfa329045001b95140a13ceabba96fc",
+    "simulation/tools/carry_profile.py": "57e0d6bbe3343a1c5672283adf66527d937406fcc5b1c6f093e5601d1b48501a",
+    "simulation/tools/carry_reset.py": "d567b7824fa1beb7c7836d97e795b79341a62d3af05fa7b2d8f7867e29b23fb3",
+    "simulation/tools/carry_reset_profile.py": "60becf33881d3c98a73bf1b3f1377484b303a68104b539963099a6b83a4ff96d",
+    "simulation/tools/carry_sections.py": "84807246f321b00f599c14fddb6507cb7f7c7a08778a6fa4f4f436c6382f27a0",
+    "simulation/tools/carry_side_clearance.py": "480e73ae8ed2dae53c1585f2e4f80b64e4969d65b4622b78cbc3e2fb40033c7e",
+    "simulation/tools/carry_spring.py": "c4c5388b75d5a14a0379b36e8036963fe73639c9a76cdc6265675c135fda3044",
+    "simulation/tools/carry_trigger.py": "51fbfbca1de10f7db02ab5bebf5ff6bcc4df26c01fee15c1a87e6d8f53e377d6",
+    "simulation/tools/check_calculator.py": "9250fa7bc08e17771a754e1c10021d2c385233914be3bb0096e7b3a59b341b14",
+    "simulation/tools/clearing_fastener.py": "ebde2e0e66eaf7bd30ae6a65125c43cec16bd5fb6c4d6faf6aca9b216a70bebf",
+    "simulation/tools/clearing_fit.py": "b91b3bdb7d55880dbe000c5320d846271b0f9ffb887087b287a044e5e0e2b078",
+    "simulation/tools/clearing_phase.py": "bcbfdae56a37280605450a429204f5812f48aad11fbc9b3b9f4fcaa45475e4a0",
+    "simulation/tools/clearing_probe.py": "13b440557864ebc47677cf70c615f09758af5fafe9dfd98dc424a0a7fcf3ad22",
+    "simulation/tools/clearing_relief.py": "55de12fcd21f948fe81e893888fb2e38ae5825feaeac091f41c52762c3bfda54",
+    "simulation/tools/clearing_stop.py": "34ff792336cefae6b44b34f1a6eafe43f1330c09f54551b34a35b87883165bd3",
+    "simulation/tools/clearing_zero.py": "70aafe9d291df93918bc9070356f394c65e60d7278875c6d49be812b6092da4e",
+    "simulation/tools/compact_import.py": "f723c244f9575b035d6004b416b6a73671512f3a405998eb0b2f97d14af91569",
+    "simulation/tools/compile_bell_spring.py": "63b8d3e674562cfc1b59b3758bbe05539f82b31488ef36e81c1d6f7612552def",
+    "simulation/tools/compile_carry_motion.py": "372546d815025a9c4de3fecfda56982d76b5256342e69e1f5f6ee7bbcb665af9",
+    "simulation/tools/compile_clearing_stop.py": "e8a2102baaa7c663be2ba01b22c0585f8ebde2fdd23be55cedec10add8e88ef4",
+    "simulation/tools/compile_detents.py": "713a70e1a811bd43c7f840fbad032047154267f178e5e3ead763f1aa17f762da",
+    "simulation/tools/compile_dial_detent.py": "fe39469bfb3395bc89da72e2abcd39d850a06d5deec3a6907c14e3c6460a6418",
+    "simulation/tools/cover_fit.py": "fa58b81eb15ee99b2f653e35fcb5e8fe89379e18d5f9c3791b695796b0a07a17",
+    "simulation/tools/cover_neighbors.py": "2351f9c969072942242dfea530dbf0012ed8ab2d216cc605439e6c40d7b99400",
+    "simulation/tools/dial_cam.py": "011dac874d616593186c1d093563c8478dcefa970ddaf32f268080fe6af5eda4",
+    "simulation/tools/dial_detent.py": "92c71f107832df657e71d6890c295856a2af0a81bfa4257ba7b3dca6d7c36d29",
+    "simulation/tools/dial_phase.py": "a83b0555cc8194582d9f9292a37c9c4fc39edc478f0647db49d0f950b8e007a1",
+    "simulation/tools/dial_zero.py": "50471f218ea8f53e7df6df45a62704f691cd5719312dfa5b75c00841f4d67760",
+    "simulation/tools/engagement_probe.py": "c523d81ab249d9abdbe0483d39058dd691e30086fb04fffcce54fe27db2e0e95",
+    "simulation/tools/expression_size.py": "200be9d17d91507e1fb1d9d01d05a3236dc1416b3b90dd3b2efc4fa4f0038666",
+    "simulation/tools/input_contact.py": "527832b0633d0f28b6c4138797856b32f0ce0d6304ecefa543e8c984c24da415",
+    "simulation/tools/input_fit.py": "7f62d0ed2d41ff67e12e866c3e1957df3927147396c17d8c176dd2eda337c10c",
+    "simulation/tools/input_phase.py": "983db16ea6f855e41961719de8dcf37e479fb05e66512403da9993b5becd9925",
+    "simulation/tools/interference.py": "6e8d3990bab03e9060378798f6ee4e5fa138f284f3de24b9425158196bb930bd",
+    "simulation/tools/layer_import.py": "507f41d64f18bf6a9eb79e8d224a2621fe0f17fa8f95f4567eeb046ec73dfff3",
+    "simulation/tools/moving_seats.py": "6f6f6371a12639e110a696ba07c6679926b672f2a538f68d6cf4e1a13677b480",
+    "simulation/tools/open_run_contact_sections.py": "5f1b761422eb1ead190c7f0b24355c0bc6d4512371873140cb465287d288a759",
+    "simulation/tools/open_run_frame_sources.py": "f64e734bd979988df8ff169dc91a53cd611d8bede24a1c3ce3ca0320fd7354d7",
+    "simulation/tools/open_run_transitions.py": "904ccf97ff3dbb4f4033e804c1f810a6c07e6910c10edd183710e60fc557eeed",
+    "simulation/tools/pawl_profile.py": "5d7b517733357a32af9775b97088267b9fb93b2f8f38f1820f58329f28243e78",
+    "simulation/tools/pawl_spring.py": "60615122ecaf0e0a7ef628fdbe81a0a599d973cdb5e8e48ff7231cd4f0e6b0be",
+    "simulation/tools/print_import.py": "0680dcd829772a226a85fb7ca46c01fc22d2223f94e60f68fb36366df7b4ef47",
+    "simulation/tools/probe.py": "299eca60f1f48f4ee78d7ad26869bb5afded765269ea417615faa9ddf83b2104",
+    "simulation/tools/register_import.py": "25ab4a256f3efd27e872012f19137b86fb42e66991cd0cc8b785a6bde6255bbe",
+    "simulation/tools/selector_import.py": "654ac0903645275c040957a357455310aefabd52e8a1a2646ce07773bf9a69e3",
+    "simulation/tools/spider_mount.py": "1e893317fb88c646bb05ca5525d61f7cb9dae66836faff1735bd69441289c220",
+    "simulation/tools/spider_section.py": "422bbeeb891fceb0efeff6157b587ba1f71ea54b3fec51c550d208b5593a06d7",
+    "simulation/tools/transmission_import.py": "b02e89a0058a1440bc9efaf8f4addc20aa3b5f7930f2b5ee271e59530cae9bec",
+    "simulation/tools/zero_profile.py": "ccc0c12eb95649554174d18c7eead17ab07139e0b710fdbf303d7530e3177213",
+    "simulation/transmission.py": "e3a70e34bf6496ca722f28305ee105b1b62edd936e5d004f0613042032c272ce",
+    "simulation/viewer/calculator.mjs": "da38e3a680446c3ed6db50802a1d035ec493946c97ef266fea1f85519818484c",
+    "simulation/viewer/calculator.test.mjs": "7da7b7fa3e4ecca137cc1d2ee577bdda7018300e5f632d34796777ecf55016a7",
+    "simulation/viewer/page.mjs": "4fa2f65aea51f200e98cd5aea97787b1078b883e60965f1bc7d7970472adf97d",
+    "simulation/views.py": "36b9000fd2b3c49a2070844f25b33efb48f08c30c8cd2db44b1812a06aad4d5c",
+    "simulation/zero.py": "cf07f734bcd64fe7f8369c0bac3c455987d27bc4222028bc915490c129c4322f"
+  },
+  "unchanged_sources": true
+}

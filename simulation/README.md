@@ -1,5 +1,10 @@
 # Curta simulation — implementation resumed
 
+The earlier [frame and selector investigation](docs/open-run-handoff-2026-09-13.md)
+and [clocked research](docs/clocked-spike-2026-09-16.md) are now retained on
+the same main branch as the operating model. Their dated findings describe
+their original checkpoints; current operating acceptance is recorded below.
+
 **Current starting point:** [2026-09-22 resumption](docs/resumption-2026-09-22.md).
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
@@ -160,6 +165,37 @@ Work starts from the previous [assessment](assessment.md). The new
 spring, distinguish the hardware products sharing names, and document why the
 rest assembly's integrity tests currently fail. The invalid spring has an
 explicitly authorized, documented replacement; upstream geometry is untouched.
+
+## Selected carry/frame correction — verified locally
+
+The first two result-carry stations now use a local, stationary upper-frame
+fit, with a named 0.05 mm running gap. The source frame and all moving parts
+remain unchanged; only the operating frame adapter removes material. The
+pilot approved the tightly bounded guide-seat-edge exception: each station
+retains 73.415 of its original 73.575 mm² registration contact.
+
+All 17 new contracts pass on both runners, and both installed trips and resets
+pass at 41 poses against all 428 physical bodies. Continuous frame-clearance
+enclosures complement the sampled checks, with inspected native sections and
+OpenSCAD assembly views. Full regression is 159/161 faceted and 160/161 native,
+with only the unchanged bearing-facet and housing/thread findings. This does
+not deliver history-dependent running or complete the original simulation. See the
+[focused validation record](docs/carry-frame-validation-2026-09-13.md).
+
+The subsequent [stationary-home selector audit](docs/open-run-selector-evidence-2026-09-13.md)
+finds nine intersecting pairs when between-detent poses are included, in both
+initial and post-cascade fixtures. The pending second carry is held unchanged.
+This diagnostic changes no operating geometry; selected-input clearance and
+installed-detent acceptance remain open before the running slice can proceed.
+
+The ratified selector alignment revision is committed as `da432fb`. Subsequent
+diagnostics verify the ten candidate nominal seats, local wall/back-seat
+feasibility and two fixed-source joints, but leave spring seating, moving
+capture, working-play retention and full installed travel unresolved. The
+latest native selector suite is **4 passing / 19 expected red**; the new
+`selector_fit.py` bench and `tools/selector_fit_*.py` are diagnostic only and
+are not wired into `Curta`. See the
+[implementation evidence](docs/selector-fit-implementation-2026-09-13.md).
 
 ## Run
 

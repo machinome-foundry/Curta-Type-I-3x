@@ -1,0 +1,1808 @@
+{
+  "candidate_neighbours": {
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire": [
+      "Curta.carriage.registers.covers.upper_housing",
+      "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing",
+      "Curta.enclosure.lower_housing_1.bottom_housing",
+      "Curta.enclosure.upper_outer_sleeve",
+      "Curta.frame.upper_frame.main_body"
+    ],
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results": [
+      "Curta.carriage.registers.carrier.crank_collar",
+      "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body",
+      "Curta.carriage.registers.covers.upper_housing",
+      "Curta.carriage.registers.result_register.p_10203_1.results_dial_type_1",
+      "Curta.carriage.registers.result_register.p_10203_2.results_dial_type_1",
+      "Curta.carry_mechanism.lever_pivots.m4x16_hex_6",
+      "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire",
+      "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing",
+      "Curta.carry_mechanism.tens_bell.tens_bell_1",
+      "Curta.enclosure.cover_ring",
+      "Curta.enclosure.lower_housing_1.bottom_housing",
+      "Curta.enclosure.upper_outer_sleeve",
+      "Curta.frame.upper_frame.main_body",
+      "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1",
+      "Curta.transmission.result.tens.p_10207_1_419228.transmission_gear_tip",
+      "Curta.transmission.result.tens.p_10207_1_419228.transmission_shaft",
+      "Curta.transmission.result.tens.p_10220_410003_1_419227"
+    ],
+    "Curta.transmission.result.tens.p_10220_410003_1_419227": [
+      "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slider_for_results",
+      "Curta.carry_mechanism.tens_bell.tens_bell_1",
+      "Curta.enclosure.lower_housing_1.bottom_housing",
+      "Curta.enclosure.upper_outer_sleeve",
+      "Curta.frame.upper_frame.main_body",
+      "Curta.transmission.result.hundreds.p_10220_410003_1_419086",
+      "Curta.transmission.result.tens.p_10207_1_419228.transmission_shaft"
+    ]
+  },
+  "comparisons": {
+    "faceted": 261,
+    "native": 0
+  },
+  "event": {
+    "crank_deg": 117.06043976712944,
+    "driving_digit": 9.31648353485595,
+    "end_drop_mm": 4.2,
+    "name": "trip1",
+    "stage": 1,
+    "start_drop_mm": 2.562
+  },
+  "frame_and_stroke_guards_passed": true,
+  "full_physical_inventory_sha256": "af09629ffdd781d4b798e8a0edc400c149d3fbc43139dfab99ccbb3044eac6cb",
+  "invalid_pairs": {},
+  "kernel": "faceted",
+  "kind": "result",
+  "limitation": "Discrete pose checks only, not a continuous path or spring-force certificate",
+  "mesh_only_bodies": [
+    "Curta.carriage.registers.carrier.crank_collar",
+    "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+    "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+    "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+    "Curta.carriage.registers.covers.digits_cover",
+    "Curta.carriage.registers.covers.upper_housing"
+  ],
+  "method": "Frozen prescribed background; independent slider/sleeve/spring transition; no source geometry edits",
+  "moving_paths": [
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results",
+    "Curta.transmission.result.tens.p_10220_410003_1_419227",
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire"
+  ],
+  "native_bodies": 422,
+  "negative_volume_diagnostics": {},
+  "original_prescribed_drop_mm": 2.562000000000003,
+  "physical_bodies": 428,
+  "physical_inventory": [
+    {
+      "path": "Curta.carriage.positioning.carriage_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.carriage_spring_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.p_6mm_ball_419094",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.spring_sleeve_c_clip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.positioning.thrust_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar_nut",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.crank_collar_washer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_pin_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.clearing_stop_pin_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_pin_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.counter_body_stop_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_16",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_17",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.carrier.upper_carriage_body_1.digits_axle_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_cover",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring_rivet_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.clearing_ring_rivet_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_10.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_6.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_7.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_8.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.decimal_markers.decimal_marker_9.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.m4x10_419010_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.inner_teeth",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.outer_teeth",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.clearing_ring.tooth_stack.spacer",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.covers.digits_cover",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.covers.upper_housing",
+      "representation": "source-mesh"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_16",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_17",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.p_6mm_ball_419241_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.mount",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_1.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_1.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_10.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_10.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_11.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_11.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_2.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_2.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_3.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_3.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_4.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_4.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_5.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_5.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_6.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_6.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_7.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_7.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_8.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_8.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_9.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.result_9.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_1.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_1.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_2.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_2.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_3.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_3.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_4.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_4.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_5.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_5.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_6.arm",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.dial_detents.spider_spring.turns_6.tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_1.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_1.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_2.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10203_2.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_1.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_1.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_2.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_2.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_3.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_3.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_4.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_4.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_5.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_5.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_6.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10204_6.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_1.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_1.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_2.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.p_10205_2.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.result_register.results_dial_type_2_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_3.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_3.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_4.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10203_4.results_dial_type_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10204_7.number_roll_carry_pin_full",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10204_7.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_3.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_3.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_4.number_roll_carry_pin_half",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.p_10205_4.results_dial_type_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carriage.registers.turns_register.results_dial_type_2_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_10",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_11",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_12",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_13",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_14",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_15",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.lever_pivots.m4x16_hex_9",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_10.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_2.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_3.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_4.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_5.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_6.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_7.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_8.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_9.tens_slider_for_results",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.m4x10_419159_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.m4x10_419159_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.retaining_ring_for_tens_bell",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_c_clip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.left_arm.body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.left_hook",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.mount",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.right_arm.body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.tens_bell.tens_bell_spring.right_hook",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_1.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_2.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_3.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_4.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.carry_lever_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.tens_slide_bearing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.carry_mechanism.turns_carries.turns_tens_lever_assembly_5.tens_slider_for_turns_counter",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.base_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.cover_ring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_1.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_2.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_3.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_4.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.decimal_marker_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.p_3mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.decimal_markers.decimal_marker_5.position_marker",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.lower_housing_1.bottom_housing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.lower_housing_1.lower_housing",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_countersink_screw_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m3x10_pan_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m4x10_419010_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m5x30_countersunk_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.m5x30_countersunk_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.enclosure.upper_outer_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.fasteners.m4_nut_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.bearing_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.bearing_plate_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.lower_bearing_plate.reverse_nose_plate",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.frame_support_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.m4_nut_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.frame.upper_frame.main_body",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.m4x10_419010_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_5",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_6",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_7",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.selector_shaft_bearing_8",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.setting_axle_holding_plate_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.bearings.setting_axle_holding_plate_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_knob_1_419057.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_1.selector_shaft_top_1_419054.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_knob_1_419152.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_top_1_419153.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_2.selector_shaft_top_1_419153.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_knob_1_419225.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_top_1_419224.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_3.selector_shaft_top_1_419224.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_knob_1_419084.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_top_1_419083.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_4.selector_shaft_top_1_419083.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_knob_1_419177.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_top_1_419178.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_5.selector_shaft_top_1_419178.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_knob_1_419141.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_top_1_419142.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_6.selector_shaft_top_1_419142.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_knob_1_419102.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_top_1_419103.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_7.selector_shaft_top_1_419103.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.digit_selector_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.selector_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_knob_1_419155.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_bottom",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_top_1_419156.number_roll",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.input_selectors.selectors.digit_selector_axle_8.selector_shaft_top_1_419156.selector_shaft_top",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.anti_reversal_m5_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.documented_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.m5x15_hex_bolt_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.anti_reversal.reverse_rotation_prevention_pawl",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.crank_handle",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.crank_handle_pin_screw",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_1.main_crank",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.crank.crank_handle_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.lower_reversing_lever_spacer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.p_5mm_ball",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.reversing_actuator",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.reversing_lever_knob",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.reversing_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.selector_knob_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.reversing_lever.reversing_lever_1.upper_reversing_lever_spacer",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_bottom_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_top_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.stepped_drum.main_axle_step_drum_1.step_drum_joining_pin_3",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.documented_spring.wire",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.disc_roller_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.m5_nut_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.m5x15_hex_bolt_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.zero_positioning_disc_roller",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.follower.zero_positioning_lever",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.m5_nut_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.m5x30_hex_bolt",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc_pin",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_disc_securing_spring",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.main_drive.zero_positioning.zero_positioning_m5_bolt_sleeve",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10209_1_419116.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10209_1_419116.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10220_410003_1_419117",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.p_10230_410008_1_419118",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.spring_clip_for_transmission_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_10.spring_clip_for_transmission_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10209_1_419112.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10209_1_419112.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10220_410003_1_419114",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.p_10230_410008_1_419111",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.spring_clip_for_transmission_axle_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_11.spring_clip_for_transmission_axle_2",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10207_1_419233.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10207_1_419233.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10220_410003_1_419234",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_4.p_10230_410008_1_419232",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10207_1_419091.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10207_1_419091.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10220_410003_1_419093",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_5.p_10230_410008_1_419092",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10207_1_419065.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10207_1_419065.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10220_410003_1_419064",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_6.p_10230_410008_1_419066",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10207_1_419036.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10207_1_419036.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10220_410003_1_419039",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_7.p_10230_410008_1_419032",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10207_1_419076.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10207_1_419076.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10220_410003_1_419074",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_8.p_10230_410008_1_419075",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10209_1_419138.p_9_10_11_digits_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10209_1_419138.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10220_410003_1_419139",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.digit_9.p_10230_410008_1_419137",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10207_1_419087.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10220_410003_1_419086",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.hundreds.p_10230_410008_1_419088",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10208_1.ones_transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10208_1.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10219_410002_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.ones.p_10221_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10207_1_419228.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10207_1_419228.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10220_410003_1_419227",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.result.tens.p_10230_410008_1_419229",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10207_1_419180.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10207_1_419180.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10220_410003_1_419181",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_4.p_10230_410008_1_419182",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10207_1_419106.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10207_1_419106.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10220_410003_1_419107",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_5.p_10230_410008_1_419105",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10207_1_419236.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10207_1_419236.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10220_410003_1_419238",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.digit_6.p_10230_410008_1_419237",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10207_1_419069.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10207_1_419069.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10220_410003_1_419070",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.hundreds.p_10230_410008_1_419068",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10216_1.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10216_1.transmission_shaft_type_4",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10218_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.ones.p_10222_1",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10207_1_419079.transmission_gear_tip",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10207_1_419079.transmission_shaft",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10220_410003_1_419081",
+      "representation": "native"
+    },
+    {
+      "path": "Curta.transmission.turns.tens.p_10230_410008_1_419080",
+      "representation": "native"
+    }
+  ],
+  "positive_pairs": {
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.carry_lever_spring.wire / Curta.frame.upper_frame.main_body": {
+      "drop_mm": 2.562,
+      "kernel": "faceted",
+      "volume_mm3": 0.4658854940483082
+    },
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results / Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slide_bearing": {
+      "drop_mm": 4.2,
+      "kernel": "faceted",
+      "volume_mm3": 4.440892098500626e-16
+    },
+    "Curta.carry_mechanism.result_carries.results_tens_lever_assembly_1.tens_slider_for_results / Curta.frame.upper_frame.main_body": {
+      "drop_mm": 4.2,
+      "kernel": "faceted",
+      "volume_mm3": 0.09922595314922947
+    }
+  },
+  "samples": 9,
+  "wall_seconds": 32.31888496699685
+}

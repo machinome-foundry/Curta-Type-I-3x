@@ -129,6 +129,18 @@ The standalone spring snapshot was visually inspected. Native connectivity
 alone is insufficient here: the exact connectivity check sees one solid and
 passes, while native validity and the faceted connectivity check expose defects.
 
+### Later selected-input readiness audit, 2026-09-13
+
+The [frozen-home selector evidence](open-run-selector-evidence-2026-09-13.md)
+extends the placement-only selector tests above. Eight selected movers are
+checked against all 428 installed physical bodies at initial and post-cascade
+home, without re-evaluating the old operand law or releasing the pending second
+carry. Ten seated settings have eight native intersecting pairs; adding nine
+half-detents finds a ninth, between the shaft and screw. The source ball named
+5 mm is natively a 5.4 mm sphere, and its fixed placement enters the shaft more
+deeply between digits. Housing-slot/window, spring-seat and co-moving fit
+findings are retained separately; no geometry is repaired or overlap waived.
+
 ## F2: Unreliable digits-cover / upper-housing boolean
 
 Both STEP products individually report valid native solids. The digits-cover
@@ -1429,6 +1441,49 @@ snapshot poses and remaining mechanical work are in the
 [resumption validation report](resumption-validation-2026-09-11.md).
 The change remains active and unarchived: no source/thread contact or remaining
 frame interface is waived by these successful scoped checks.
+
+## Selected result-carry frame passages — 2026-09-13
+
+The frame-only correction is verified in `open-run-simulation`;
+its [validation record](carry-frame-validation-2026-09-13.md) contains the
+complete two-kernel regression, native path certificates, dimensional and
+negative controls, installed transition checks and inspected images. This
+closes local frame clearance, not the still-open running evidence gate.
+
+Station one uses the source world frame; station two is its -20° rotation
+about world Z. The fixed frame adapter removes material in three contact
+families per station: the raised slider shoulder, lowered slider edge and two
+separate spring-leg windows. Slider travel remains 4.2 mm, and `099 + 1`
+retains the measured 1.1630815 mm preload at both stations.
+
+The raised cutter offsets the raw slider shoulder outline, whose source
+vertices are (54.225, -6.42), (47.8575, -6.42),
+(47.8575, -8.2505221358), (48.5925, -9.5235794794),
+(51.4219426564, -7.89), (54.225, -7.89) mm at Z=-21.6 mm.
+The default 0.05 mm offset extends from Z=-22.25 to -21.55 mm and stops
+at X=52.85 mm. The lowered window is X=52.675–52.85,
+Y=-7.94–-6.37, Z=-16.85–-15.85 mm. The left and right spring windows
+are respectively X=53.451–54.247 and 60.358–61.154, both
+Y=-11.372–-10.96, Z=-19.516–-15.85 mm. Only their intersections with
+the original frame are removed, not those complete boxes as new geometry.
+
+The independently measured relief-normal gaps are 0.050000 mm for both
+slider sites, 0.050096 mm for the left spring window and 0.050511 mm for
+the right, at both stations. Trials at 0.04 and 0.06 mm verify the declared
+parameter's dimensional effect; the complete motion certificates concern
+the default 0.05 mm fit, not a manufacturing tolerance or a global minimum
+for all unchanged passages.
+
+The approved frame-side guide-seat-edge loss is 0.160 mm² per station;
+73.415 of the original 73.575 mm² native registration contact remains.
+All remaining contact lands and the complete source geometry outside eight
+independent local passage bounds are protected. The source cylinder audit
+finds only 4.211119 mm² lost from the large R49.5 mm inner wall at the two
+shoulder passages; the other 104 cylindrical surfaces remain unchanged.
+The total removed volume, 15.303152 mm³, is not used as a preservation budget.
+All 13 non-selected carry guides, M4 fasteners, supports/nuts and shaft
+references remain outside the removed material. No structural-strength,
+spring-force or whole-machine acceptance is claimed.
 
 ## Historical initial validation boundary
 
