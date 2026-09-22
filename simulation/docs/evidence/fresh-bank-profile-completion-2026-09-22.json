@@ -1,0 +1,459 @@
+{
+  "date": "2026-09-22",
+  "scope": "Independent complete-print finite profiles, not whole-machine or continuous acceptance",
+  "results": [
+    {
+      "bank": "result",
+      "station": 3,
+      "kernel": "faceted",
+      "log": "_build_checks/result-3-profile-world64-faceted-2026-09-22.log",
+      "sha256": "55edccf56fba1d296886a92d0ed14e136de0d63fcaec99b667c7cda390ac9eaa",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 3,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 4,
+      "kernel": "faceted",
+      "log": "_build_checks/result-4-profile-world64-faceted-2026-09-22.log",
+      "sha256": "287214ceb13f2ac559e0d029991002cfcf86002ac793c9ff694bcc1e4f94ed4b",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 4,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 5,
+      "kernel": "faceted",
+      "log": "_build_checks/result-5-profile-world64-faceted-2026-09-22.log",
+      "sha256": "ff1ffc6a916646a54bdf4862d902f4dae69efe3aae721e3f86e1e838425dfffc",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 5,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 6,
+      "kernel": "faceted",
+      "log": "_build_checks/result-6-profile-world64-faceted-2026-09-22.log",
+      "sha256": "2df8bd0931d9ca60c8391b5eaae3a6765dc4ed740b087bd9a4ae988b90dc9f24",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 6,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 7,
+      "kernel": "faceted",
+      "log": "_build_checks/result-7-profile-world64-faceted-2026-09-22.log",
+      "sha256": "7f13b1f1218a6fbbfbf54efc1f3ec32f252d2914050b1121e538951261c702e0",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 7,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 8,
+      "kernel": "faceted",
+      "log": "_build_checks/result-8-profile-world64-faceted-2026-09-22.log",
+      "sha256": "5649c6d89d5b4aadff3ec2dc3987874fa691632347ce24e52b948b7aff988724",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 8,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 9,
+      "kernel": "faceted",
+      "log": "_build_checks/result-9-profile-world64-faceted-2026-09-22.log",
+      "sha256": "5b5d0fde7d98969530f1f79e5fc58876db20bc6c253d14674dd768d1c3be2e3d",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 9,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 10,
+      "kernel": "faceted",
+      "log": "_build_checks/result-10-profile-world64-faceted-2026-09-22.log",
+      "sha256": "213b13e0ff5a503b9741ce434bd20967b7f7a13dbd2a718b2c3486e3d73ca3e8",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 10,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "result",
+      "station": 11,
+      "kernel": "faceted",
+      "log": "_build_checks/result-11-profile-world64-faceted-2026-09-22.log",
+      "sha256": "70b182851940ca49a613876a6f31bd50892778be1ebec1b3af6d31be57981167",
+      "process_exit_observed": 0,
+      "header": {
+        "kernel": "faceted",
+        "carry": null,
+        "step": 6,
+        "world_precision_bits": 64,
+        "station": 11,
+        "knots": true,
+        "profile_sha256": "1cf2bed3b1be41ba66bccc2eb788fb24ddc5c21698853478e8d0f02813e10529",
+        "probe_sha256": {
+          "tools/check_higher_locking_profile.py": "b753b5b13b9af357a770fbb3b822939306b42ca22abba3fe8f3d9910853288a8",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/result_bank_lockout_probe.py": "e0fb0786ccdc5f441baa74b8533b84f5abb43df67b8437b8c3c68618b24f2772"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "kernel": "faceted",
+        "checked": 23556,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "counter",
+      "station": 2,
+      "kernel": "native",
+      "log": "_build_checks/counter-2-profile-world64-native-2026-09-22.log",
+      "sha256": "fa37af46bd9955b55c096e0094541e658c8f5e6a974de135e38534f183bb0629",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 2,
+        "trial": true,
+        "kernel": "native",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 2,
+        "kernel": "native",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "counter",
+      "station": 3,
+      "kernel": "native",
+      "log": "_build_checks/reconcile-counter-3-profile-native-2026-09-22.log",
+      "sha256": "8a8251cd32a7e3fe3a161e090f1d78093ed64f2de9f5e57c3853945b1816271d",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 3,
+        "trial": true,
+        "kernel": "native",
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "314b716dd7aadfea03c02ee53b31e93915f1a9192348f42a39d4749634ea8273",
+          "tools/check_higher_counter_locking_profile.py": "0e8cac5491e435aa376995774fd9192823dedd86bd129ccdeaedbe49a696cf12",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 3,
+        "kernel": "native",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "counter",
+      "station": 4,
+      "kernel": "native",
+      "log": "_build_checks/counter-4-profile-world64-native-2026-09-22.log",
+      "sha256": "10794a7bf7a2060ed746215007e36fde71556b48aecbe5ad544b1e5bc7cea641",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 4,
+        "trial": true,
+        "kernel": "native",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 4,
+        "kernel": "native",
+        "checked": 15714,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "counter",
+      "station": 5,
+      "kernel": "native",
+      "log": "_build_checks/counter-5-profile-world64-native-2026-09-22.log",
+      "sha256": "1160a4fd4ac461ece0d93d95903d47162e463501f649f746668de42ffe3479a2",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 5,
+        "trial": true,
+        "kernel": "native",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 5,
+        "kernel": "native",
+        "checked": 16538,
+        "failures": 0
+      }
+    },
+    {
+      "bank": "counter",
+      "station": 6,
+      "kernel": "native",
+      "log": "_build_checks/counter-6-profile-world64-native-2026-09-22.log",
+      "sha256": "a74040547d477fc03546fac5c0cc99020ccb0145771661064529d03dd4504d7a",
+      "process_exit_observed": 0,
+      "header": {
+        "station": 6,
+        "trial": true,
+        "kernel": "native",
+        "world_precision_bits": 64,
+        "carry": [
+          0,
+          0.5,
+          1
+        ],
+        "support_heights": false,
+        "shafts": null,
+        "dense": false,
+        "source_sha256": {
+          "higher_counter_locking_profiles.py": "c24f22af55a86e7419ca417e03a829c6287934566d75f18de52891e4103f5816",
+          "higher_counter_locking_laws.py": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+          "counter_locking_profiles.py": "eaa3bd7dfbdb58e20a32549a748e11745737b8d2598d4d37ff7496c46ce4f367",
+          "tools/counter_lockout_probe.py": "042f378d2f5febb16dcb8b337066a48ed199ad2f85c647debabd5ac67d99d296",
+          "tools/ancestor_lockout_contact.py": "e2699a8ef1790e82144576ddc9988ae65b98c94427019e6574d76e3b1e7cd53c",
+          "tools/higher_locking_envelope.py": "08def8400af8bf602839d92e813372a7c3c06b930819dbbc009dba9d392cfb70",
+          "tools/check_higher_counter_locking_profile.py": "f5f749509b897356ec6fc3d2ececd0bee669286cf8bd443cd9271515bf21e81d",
+          "docs/evidence/counter-tens-contact-support-2026-09-21.json": "6eab6f8e29b1018b5af3e6ba3613351c76a05c424ce3b7e1d9c150a81cb0c573"
+        }
+      },
+      "summary": {
+        "complete": true,
+        "station": 6,
+        "kernel": "native",
+        "checked": 17030,
+        "failures": 0
+      }
+    }
+  ]
+}

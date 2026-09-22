@@ -60,3 +60,16 @@ actually failed two old test doubles after precision became explicit; it is
 retained as a failed run, not acceptance. Updated doubles require world64.
 Revised native support, operating, arithmetic and browser checks remain owed;
 none of this adopts counter tens or declares continuous geometric coverage.
+
+## Native ordinary-height profiles recovered with terminal exits
+
+Fresh native runs now complete at all five higher-counter stations: 15,714
+admitted checks each at stations 2/3/4, 16,538 at station 5 and 17,030 at
+station 6, **80,710 total**, zero contacts and observed exit zero. These
+processes loaded the pre-clearance law hash `a824d339...` and use carry
+0/.5/1; their source headers and exact digests are in the
+[fresh profile index](evidence/fresh-bank-profile-completion-2026-09-22.json).
+The new station-2 run replaces the earlier incomplete process-supervisor
+evidence, not its retained historical log. Native results do not settle the
+world64 intermediate-height failure; the explicit lower-support correction
+and its separate gates above remain necessary.

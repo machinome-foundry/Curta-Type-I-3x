@@ -71,6 +71,15 @@ and `running_parts.py`
 
 ## Remaining gates
 
+The later world64 recheck now completes for every adopted remaining station
+3..11: **23,556 admitted poses per station, 212,004 total, zero positive
+commons**, with observed exit zero for all nine processes. Unlike the earlier
+world32 matrix, these queries retain placed STL coordinates in double
+precision. The [fresh profile index](evidence/fresh-bank-profile-completion-2026-09-22.json)
+records each exact source header, terminal summary and log digest. This
+strengthens the existing finite profile evidence; it is not a continuous
+contact certificate or full action-order coverage.
+
 The inherited isolated trial's arithmetic and browser evidence is retained,
 not relabelled as fresh acceptance of this expanded production root. The
 fresh arithmetic result above is scoped to its loaded sources; the full
