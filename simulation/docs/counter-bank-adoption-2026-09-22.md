@@ -115,3 +115,22 @@ Concurrent framework/viewer documentation commits advance main to `a659cc7`
 and `5a20293`; their runtime contents are unchanged from the explicitly tested
 pair. Other station production browser checks and production demonstration
 replay continue independently.
+
+All four remaining station browser processes subsequently exit zero. The
+stopped screenshots are inspected. Tens and hundreds have no bank difference;
+fourth/fifth each report only the same named three-ULP p9 residue in four
+stopped/idle comparisons. All statuses, replay checks, coordinate IDs and
+other coordinates pass the unchanged gates. Artifacts are
+`_build_counter_bank_production_<station>_35906bd`:
+
+| Station | Acceptance report SHA-256 |
+|---|---|
+| Tens | `713216d7e8cd3e536be946871bb9d2b679d556a7c2621069b625f51cdb78c800` |
+| Hundreds | `1c5b29e350f9b8f41416a7eeb6ae487544b7e6119067a7692905234933c12898` |
+| Fourth | `d268ec8395f41e044f9f4c84ffadd3240936ad64eb873fe6695a60405101c975` |
+| Fifth | `79d43bbd7d4ef998e031a3021c6d6755a33f97d3d7dbf22d3722ab0197f72695` |
+| Sixth (earlier retry) | `5bbe678ee1e871c965b73bb6501c504527a8a6f7e6f7d6a85581c0b9dd268ce0` |
+
+These are fresh production-export results, not retrospective reclassification
+of the old trial reports. Default-timestep real-pointer performance and whole
+geometry obligations remain separate.

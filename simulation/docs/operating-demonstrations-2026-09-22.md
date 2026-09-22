@@ -37,8 +37,15 @@ between `5872ce1` and `ad841f2`), with the new demonstration files. The retained
 `_build_checks/operating-demonstrations-first-2026-09-22.log` has SHA-256
 `859f188f5f8df927d721d936ed35dc4f088aca91a5c1d0fafc735adcf5d116c4`.
 
+The fresh adopted production root (`7107b1c`, unchanged runtime through
+`e5636f8`) subsequently passes the same two tests in 840.603 s, observed exit
+zero. All six demonstrations replay twice with exact snapshots/outcomes.
+The log `_build_checks/operating-demonstrations-production-7107b1c.log` has
+SHA-256 `d17e96d71a9444cddcd221cf8e76ad45d8e300269bae128c86dfb9a81462c6b8`.
+Framework `a659cc7` has unchanged runtime from `4bff28e`.
+
 Callers may install `sim.every` sampling before replay. Fresh native/world64
-moving-interface checks throughout these demonstrations, current combined-bank
-replay, browser demonstration delivery and final layer/whole-machine acceptance
+moving-interface checks throughout these demonstrations, browser demonstration
+delivery and final layer/whole-machine acceptance
 remain separate obligations. No OpenSpec checkbox closes from this replay
 result alone.
