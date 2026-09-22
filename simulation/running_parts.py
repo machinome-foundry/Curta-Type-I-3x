@@ -20,10 +20,11 @@ from simulation.clearing_seat_fit import FittedClearingPin
 from simulation.carriage_frame_fit import FittedCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
 from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
+from simulation.counter_lockout_parts import ContactCounterOnes
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 from simulation.reverser_following import FollowingReverser
 from simulation.reverser_seat_trial import TrialKnob
-from simulation.reverser_inputs import (ReversingOnes, ReversingTens, ReversingHundreds,
+from simulation.reverser_inputs import (ReversingTens, ReversingHundreds,
     ReversingFourth, ReversingFifth, ReversingSixth)
 import simulation.standard.carry as carry
 import simulation.standard.channels as channels
@@ -219,7 +220,7 @@ class ResultShafts(AssemblyNode):
 
 
 class TurnsShafts(AssemblyNode):
-    ones = ReversingOnes()
+    ones = ContactCounterOnes()
     tens = ReversingTens()
     hundreds = ReversingHundreds()
     digit_4 = ReversingFourth()

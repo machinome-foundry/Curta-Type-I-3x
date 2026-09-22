@@ -36,7 +36,7 @@ class OperatingCounterLockoutTest(unittest.TestCase):
         for target in (180, 900):
             sim.restore(prepared)
             request = sim.move('crank_rotation', to=target)
-            # Intentionally fails on the installed model until adoption.
+            # Production regression: the old unrestrained root completed it.
             self.assertEqual(request.status, 'blocked')
             stop_angle = sim.state['crank_rotation']
             self.assertGreater(stop_angle, 170)

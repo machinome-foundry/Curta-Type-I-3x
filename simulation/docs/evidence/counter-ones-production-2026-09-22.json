@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-22",
+  "project_base": "1f807fb",
+  "framework_final_fixture": "4112d76",
+  "scope": "Production counter-ones only; fresh current-export pointer/performance gates remain open",
+  "source_sha256": {
+    "simulation/running.py": "588ff2a3e59931a6a002106648f82c6ab7f9055b2565e7e24d4bd9bafc5ad385",
+    "simulation/running_parts.py": "f732d76439c82cd4c659b8fb9a56fa291f95baa4433565df0c60a00fb0ec17a8",
+    "simulation/counter_lockout_parts.py": "f6a5d7184354ef715069e82e5c1efb9f646a74a8d04763f7ec23a129b2319cda",
+    "simulation/counter_operating_trial.py": "9ec81188e67857aadcc985d5a5d26a38c1821a58f318d017a728ccaea010f887",
+    "simulation/test_operating_counter_lockout.py": "9fbe166bda7336b791d056f2343fe429ea9efb4d0b07e25635639a483a382405",
+    "simulation/test_counter_lockout_fixture.py": "43f8101a39793761c206d05ce05359be8ba006995ecc477393a95f618a9a5b60",
+    "simulation/test_counter_lockout_parts.py": "5172785b43bf7ca5ae09c83947e626435fd68f1055f7f3c82557e6726ba06c3a",
+    "simulation/tools/counter_lockout_probe.py": "314b716dd7aadfea03c02ee53b31e93915f1a9192348f42a39d4749634ea8273"
+  },
+  "logs": [
+    {
+      "path": "_build_checks/counter-ones-production-recheck-red.log",
+      "sha256": "facbcbe2d95a847f7f20d6b7a4a045e1d6f4f0ac789d640f608761b7988eba31",
+      "process_exit_observed": 1,
+      "note": "Production regression: completed instead of blocked"
+    },
+    {
+      "path": "_build_checks/counter-ones-production-adoption-green.log",
+      "sha256": "172d44705e07d94632241e5cbd7f35bfebc86a7c9db101fbaa0a152d8be562c7",
+      "process_exit_observed": 1,
+      "note": "One passed production short/long stop test, then two errors; filename is not a green verdict"
+    },
+    {
+      "path": "_build_checks/counter-ones-production-fixtures-rerun.log",
+      "sha256": "99c875d3b5364a2392467a85bf4f2c016f0a06f3ebfbc8e5e67b027442862e0d",
+      "process_exit_observed": 1,
+      "note": "Framework exact-artifact error reproduced; corrected parts comparison passes"
+    },
+    {
+      "path": "_build_checks/counter-ones-production-fixtures-final.log",
+      "sha256": "6b13a563cc263714333510877c020df8f5fbe358574b701b5e8119344ecd7a6a",
+      "process_exit_observed": 0,
+      "note": "2 tests pass,30.760s after framework4112d76"
+    },
+    {
+      "path": "_build_checks/counter-ones-fixtures-current-green.log",
+      "sha256": "49b597827fc6ac575c525a147e92e207962b42f1344ff36f5bdfc318c4bba60e",
+      "process_exit_observed": 0,
+      "note": "6 tests pass,114.060s"
+    },
+    {
+      "path": "_build_checks/counter-ones-parts-final.log",
+      "sha256": "9079b59d9daa0d11ad8af67af7879d41dee004076361360124582a78348f7948",
+      "process_exit_observed": 0,
+      "note": "1 corrected parts test passes,23.52s"
+    },
+    {
+      "path": "_build_checks/reconcile-counter-ones-clearing.log",
+      "sha256": "815850ee22e7b9b48ff4dffbb71b6bcfbeb38dc496915db60fe8048900a22c73",
+      "process_exit_observed": 0,
+      "note": "1 unchanged candidate arithmetic/clearing test passes,329.387s"
+    }
+  ],
+  "stops": [
+    {
+      "requested": 180,
+      "actual": 174.7853836059494
+    },
+    {
+      "requested": 900,
+      "actual": 174.78538360544917
+    }
+  ],
+  "limits": [
+    "No passing status assigned to the three-test combined batch.",
+    "A parts test was corrected while that long-lived process still held its prior imported definition.",
+    "No whole-machine or higher-counter acceptance claimed."
+  ]
+}

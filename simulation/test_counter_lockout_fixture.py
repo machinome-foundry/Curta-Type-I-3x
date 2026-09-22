@@ -17,10 +17,15 @@ class CounterLockoutFixtureTest(unittest.TestCase):
                               for station in range(1, 7) for trial in (False, True)}), 12)
         self.assertEqual(len({station_bench(station, True)().shaft.uniq_id
                               for station in range(1, 7)}), 6)
+        self.assertNotEqual(station_bench(1)().uniq_id,
+                            station_bench(1, source=True)().uniq_id)
 
     def test_trial_removes_only_the_bounded_outer_skin_of_each_source_lockout(self):
         for station, (_, upper_name) in enumerate(STATIONS, 1):
-            nodes = [station_bench(station, trial)() for trial in (False, True)]
+            # Compare with the pre-adoption .15 mm fit even after a station
+            # adopts its candidate; production-to-itself is not fidelity proof.
+            nodes = [station_bench(station, source=True)(),
+                     station_bench(station, trial=True)()]
             for node in nodes:
                 node.set_state(shaft_angle=0, crank_angle=0, carry_position=0, time=0)
                 node.assemble()
@@ -55,6 +60,8 @@ class CounterLockoutFixtureTest(unittest.TestCase):
         for station in (0, 7):
             with self.subTest(station=station), self.assertRaises(ValueError):
                 station_bench(station)
+        with self.assertRaises(ValueError):
+            station_bench(1, trial=True, source=True)
 
     def test_higher_stroke_moves_only_its_own_upper_print_downward(self):
         for station, (_, upper) in enumerate(STATIONS, 1):

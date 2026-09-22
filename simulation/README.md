@@ -12,6 +12,10 @@ operating tests. The [collar fit](docs/collar-seat-completion-2026-09-22.md)
 is adopted with four passing production checks per geometry runner. Normal
 crank operation is still too slow; separately owned framework/viewer
 performance corrections and remaining mechanical acceptance are in progress.
+The [counter-ones fit and restraint](docs/counter-ones-adoption-2026-09-22.md)
+are now in the default root with production stop/replay/contact and fixture
+checks passing; this does not adopt the higher counters or complete the
+current-export pointer/performance gates.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.

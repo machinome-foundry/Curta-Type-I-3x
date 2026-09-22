@@ -13,6 +13,11 @@ washer-end facings. The default operating assembly passes all four scoped
 collar contracts on both runners; see F19 below. Historical trial descriptions
 later in this register retain their original checkpoint status.
 
+**Counter-ones follow-up:** F20 below installs only the fixed-height T08
+counter-ones fit and measured crank restraint. Production stop/replay/contact
+and independent fixture checks pass; fresh final pointer/performance
+acceptance and every higher counter remain separate obligations.
+
 Review checkpoint: 2026-09-21. This is a review agenda, **not a list of proven
 defects in the author's working printed calculator**, nor instructions to
 modify a physical machine. The simulation reconstructs the supplied assembly
@@ -82,6 +87,23 @@ They pass 4/4 on each runner. The collar remains faceted geometry in both.
 An independent 1,161-pair survey has no residual collar/nut/washer contact;
 the whole-machine inventory remains separate. This is a simulation fitting
 record, not a physical manufacturing recommendation.
+
+## Counter-ones locking outline — F20
+
+The [production continuation](counter-ones-adoption-2026-09-22.md) adopts only
+the counter-ones portion of T08: existing .15 mm outer-profile relief becomes
+.16 mm, with finer complete-print tessellation. The keyed core, axial extent,
+source placement and two-sided locking remain. The production part equals
+the independently measured trial; an explicit pre-adoption fixture preserves
+the bounded-removal proof after adoption. Both short/long actual crank stops
+are clear on native and mesh geometry, with positive .2° overtravel,
+snapshot replay, reverse relief and retained idle state.
+
+This fit changes no upstream asset and is not a physical-build failure claim
+or manufacturing recommendation. The separate framework stale-exact-artifact
+bug exposed by its fixture is fixed in `4112d76`; the final two-test fixture
+rerun passes. The higher-counter trial below retains its historical status;
+those five stations are not adopted by F20.
 
 ## Higher result lockout — T07 adoption under verification
 

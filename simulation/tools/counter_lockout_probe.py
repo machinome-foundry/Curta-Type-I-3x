@@ -22,11 +22,12 @@ from simulation.reverser_inputs import (
 )
 from simulation.higher_lockout_trial import TrialContactBell
 from simulation.fit import FittedCarryLockout
+from simulation.counter_lockout_parts import ContactCounterOnes
 from simulation.standard import printed
 from simulation.tools.higher_locking_envelope import contact_reader
 
 
-STATIONS = (
+SOURCE_STATIONS = (
     (ReversingOnes, 'p_10222_1'),
     (ReversingTens, 'p_10220_410003_1_419081'),
     (ReversingHundreds, 'p_10220_410003_1_419070'),
@@ -34,16 +35,22 @@ STATIONS = (
     (ReversingFifth, 'p_10220_410003_1_419107'),
     (ReversingSixth, 'p_10220_410003_1_419238'),
 )
+# Ones has adopted T08; the remaining defaults retain their earlier fits.
+# Keep an explicit source baseline for removal tests instead of comparing
+# an adopted production print with an identical candidate.
+STATIONS = ((ContactCounterOnes, 'p_10222_1'), *SOURCE_STATIONS[1:])
 
 
 class TrialCounterLockout(FittedCarryLockout):
     flank_relief = Length(.16, min=0)
 
 
-def station_bench(station, trial=False):
+def station_bench(station, trial=False, *, source=False):
     if station not in range(1, 7):
         raise ValueError('Counter station must be 1..6')
-    channel, upper_name = STATIONS[station-1]
+    if source and trial:
+        raise ValueError('Choose the source baseline or the trial, not both')
+    channel, upper_name = (SOURCE_STATIONS if source else STATIONS)[station-1]
     if trial:
         upper = getattr(printed, 'Part'+upper_name[2:])
 
@@ -61,6 +68,7 @@ def station_bench(station, trial=False):
 
     class CounterStation(AssemblyNode):
         source_station = Count(station, min=station, max=station)
+        source_fit = Count(int(source), min=int(source), max=int(source))
         trial_fit = Count(int(trial), min=int(trial), max=int(trial))
         shaft_angle = Driver(default=134-20*(station-1), unit='deg')
         crank_angle = Driver(default=0, unit='deg')

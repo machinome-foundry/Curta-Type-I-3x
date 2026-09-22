@@ -21,6 +21,7 @@ from simulation.running_parts import (IndependentInputs, RetainedCarriage, Runni
 from simulation.running_laws import shaft_motion, dial_motion, lever_motion, reading
 from simulation.locking_laws import closing_limit
 from simulation.higher_locking_laws import higher_closing_limit
+from simulation.counter_locking_laws import counter_closing_limit
 
 
 def sources(*ends):
@@ -95,6 +96,11 @@ class OperatingCurta(LayeredSource):
         higher_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.result.tens.turn,
                transmission.result.tens.p_10220_410003_1_419227.travel)), None))
+    # Counter ones uses its separately measured fixed-height contact profile.
+    # Higher counter channels are not covered by this restraint.
+    main_drive.crank.turn.constrain(range=(Bound(
+        counter_closing_limit,
+        reads=(carry_mechanism.tens_bell.turn, transmission.turns.ones.turn)), None))
 
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {

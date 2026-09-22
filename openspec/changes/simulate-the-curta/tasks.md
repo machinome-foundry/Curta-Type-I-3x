@@ -6,6 +6,10 @@ Six baseline operating arithmetic tests pass. The [collar fit](../../../simulati
 is adopted with 4/4 production checks on each runner. Counter/result-bank
 admission and real-viewer performance work continue. No task checkbox changes
 from these scoped checks; whole-machine and loop obligations remain open.
+The [counter-ones production continuation](../../../simulation/docs/counter-ones-adoption-2026-09-22.md)
+now passes its short/long stop, replay, complete-print contact and fixture
+checks after the separate framework exact-leaf fix. Higher counters and
+fresh full pointer/performance acceptance remain open.
 
 Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph
