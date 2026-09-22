@@ -6,6 +6,18 @@ import unittest
 from simulation.tools.operating_pointer_matrix import validate_case, validate_attempt, wait_for_gesture
 
 
+class PointerInputCoverageTest(unittest.TestCase):
+    def test_physical_noncrank_inputs_are_selectable_without_waiving_independence(self):
+        from simulation.tools.operating_pointer_matrix import INPUTS
+        self.assertEqual({name: INPUTS[name] for name in (
+            'crank_elevation', 'reverser_height', 'carriage_elevation',
+            'carriage_rotation', 'clearing_rotation')}, {
+            'crank_elevation': 'lift crank', 'reverser_height': 'reverse counter',
+            'carriage_elevation': 'lift carriage', 'carriage_rotation': 'shift carriage',
+            'clearing_rotation': 'clear registers'})
+        self.assertEqual(len(INPUTS), 23)
+
+
 class PointerReportTest(unittest.TestCase):
     def setUp(self):
         self.case = {

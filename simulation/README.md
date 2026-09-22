@@ -14,8 +14,11 @@ crank operation is still too slow; separately owned framework/viewer
 performance corrections and remaining mechanical acceptance are in progress.
 The [counter-ones fit and restraint](docs/counter-ones-adoption-2026-09-22.md)
 are now in the default root with production stop/replay/contact and fixture
-checks passing; this does not adopt the higher counters or complete the
-current-export pointer/performance gates.
+checks passing. The subsequent [higher-counter bank adoption](docs/counter-bank-adoption-2026-09-22.md)
+adds stations 2..6 with five passing default-root withdrawal checks, six
+parts/fixture/law checks, and a nine-test arithmetic/earlier-lockout batch.
+Its fresh rest inventory is unchanged; current-export full pointer/performance
+acceptance remains open.
 The [clearing-cover/counter-body seat](docs/clearing-carrier-seat-2026-09-22.md)
 is also adopted, with three passing production checks per runner and an
 inspected native-clear section. Whole-machine contacts remain unresolved.
@@ -38,7 +41,8 @@ in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
-result-bank and counter trials still await acceptance.
+result-bank and counter trials have since reached the scoped production
+checkpoints above. Final whole-machine acceptance remains open.
 The [continuation record](docs/operating-continuation-2026-09-21.md) adds the
 result-bank fixture correction, intermediate-carry mesh checks and the
 separate [counter-lockout investigation](docs/counter-lockout-investigation-2026-09-21.md)

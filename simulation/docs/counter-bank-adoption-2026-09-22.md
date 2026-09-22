@@ -73,3 +73,45 @@ Neither is relabelled as a fresh default-root browser run.
 Whole-machine clearance, the unresolved zero clip/clearing-loop path and full
 pointer acceptance are not established by this fit. This record is not a
 claim that the author's physical machine fails or a manufacturing instruction.
+
+## Production export, inventory and sixth-station browser
+
+The fresh default export is `_build_counter_bank_production_bound_7107b1c`.
+Its manifest SHA-256 is
+`03099125a8642ee28c9dcfe73e2c6a82c3538794ba36ba0300eb738d5049ede9`;
+program identity is
+`3e1d505123b75832f6e1b4353d7e9d7f5c5856375bcb67454ca15b602f140c20`.
+It contains 213 coordinates, 25 controls and 149 distinct pieces. Compared
+with the frozen combined trial, every program field except identity and edge
+attribution is identical. All 273 edges are identical after omitting only
+`stated_by`; 119 now identify `OperatingCurta` instead of the trial root.
+The changed identity is retained, not overridden for replay compatibility.
+
+The first direct export call omitted declared-driver default binding and
+failed with an unbound `crank_rotation`. The corrected call performs the same
+default binding as the normal loader. Both logs remain; this was a diagnostic
+invocation error, not a change to the framework or operating law.
+
+Fresh production world64 rest inventory is byte-identical to the preceding
+inventory: 389 rigid occurrences, 249 positive spatial pairs, zero refusals and
+16 separately classified nonspatial sums. Its SHA-256 remains
+`8ad9fb7f49e6d1e6161eae130224e3e398443b6c7c829aab64f06a2a76f8501b`;
+the new file is `_build_checks/counter-bank-production-rest-7107b1c.json`.
+No old contact is waived by that comparison.
+
+The fresh sixth-station production browser gate passes with observed exit zero
+at `_build_counter_bank_production_sixth_retry_7107b1c`. Both short/long stops,
+replay, relief, idle and retry pass. All IDs and 212 coordinates match exactly;
+only the named p9 detent has the already traced three-ULP residual in four
+stopped/idle comparisons. The report explicitly enables and lists that narrow
+classification; it does not claim bitwise equality for the full bank. Its
+stopped screenshot is inspected. The browser uses the diagnostic's existing
+dt=.1, not ordinary-pointer/default-dt performance acceptance. The original
+sixth-station attempt used a models symlink outside the fixture's allowed
+asset root and failed 404; its pending report/log remain separate. The retry
+copies the actual exported assets without widening the route boundary.
+
+Concurrent framework/viewer documentation commits advance main to `a659cc7`
+and `5a20293`; their runtime contents are unchanged from the explicitly tested
+pair. Other station production browser checks and production demonstration
+replay continue independently.

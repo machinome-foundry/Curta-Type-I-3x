@@ -1,5 +1,14 @@
 ## Current checkpoint — resumed 2026-09-22
 
+Latest production continuation: the [higher-counter bank](../../../simulation/docs/counter-bank-adoption-2026-09-22.md)
+is adopted at all five remaining stations. Five actual withdrawal tests, six
+parts/fixture/law tests and the nine-test arithmetic/previous-lockout batch pass.
+The fresh world64 rest inventory is unchanged (249 positive spatial pairs,
+zero refused intersections). Ten marker and eight selector hosted pointer
+cases have terminal-state evidence on the independent combined trial;
+production and standalone full-control gates remain separate. No checkbox
+changes: whole-machine geometry and clearing-loop obligations are still open.
+
 Latest: the [branch reconciliation](../../../simulation/docs/reconciliation-2026-09-22.md)
 integrates all Curta branches and related outstanding package corrections.
 Six baseline operating arithmetic tests pass. The [collar fit](../../../simulation/docs/collar-seat-completion-2026-09-22.md)

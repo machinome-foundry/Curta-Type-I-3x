@@ -103,3 +103,20 @@ no pending command and no unrelated input/register change. Its screenshot is
 inspected; artifacts are `counter-bank-pointer-marker-directions-190b1bd`
 under `_build_checks/`. It uses the frozen combined-trial export and unchanged
 default dt; remaining markers and standalone/full-control coverage are owed.
+
+The subsequent nine-marker run now also exits zero and passes. Marker 2..10
+each admits a completed or neighbour-blocked movement, with observed release,
+an empty command bank and unchanged other drivers/register turns. The final
+screenshot is inspected. Its report
+`_build_checks/counter-bank-pointer-markers-190b1bd.json` has SHA-256
+`403a2f7660ac0e93b72bb292e4c694ab031ee05a4523d251715dd5e0395e4ab7`.
+This completes the ten-marker hosted reset-case matrix on that frozen trial,
+not free travel through neighbours or production/standalone coverage.
+
+The tool now additionally offers crank lift, reverser, carriage lift, seated
+carriage shift and seated clearing, retaining the same independence assertions.
+The selectable-input regression fails red for missing `crank_elevation`, then
+all nine harness tests pass. Those five real production-export pointer cases
+are running separately. Crank turning and its one-revolution button require
+their own arithmetic-aware gate; they are not silently accepted under a test
+that assumes unchanged register turns.

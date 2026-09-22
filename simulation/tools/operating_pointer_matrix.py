@@ -1,4 +1,4 @@
-"""Independent selector/marker pointer gates on an ordinary public hosted viewer.
+"""Independent noncrank pointer gates on an ordinary public hosted viewer.
 
 This is not standalone-page coverage, loop coverage, or a geometry certificate.
 No motion is requested through the host API: reset is separate case setup.
@@ -19,7 +19,10 @@ from playwright.sync_api import sync_playwright
 
 
 INPUTS = {**{f'digit_{n}': f'set digit {n}' for n in range(1, 9)},
-          **{f'marker_{n}_rotation': f'move decimal marker {n}' for n in range(1, 11)}}
+          **{f'marker_{n}_rotation': f'move decimal marker {n}' for n in range(1, 11)},
+          'crank_elevation': 'lift crank', 'reverser_height': 'reverse counter',
+          'carriage_elevation': 'lift carriage', 'carriage_rotation': 'shift carriage',
+          'clearing_rotation': 'clear registers'}
 
 
 def validate_attempt(case):
@@ -75,7 +78,7 @@ def main():
         [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = {'validation': 'pending', 'errors': [], 'cases': [], 'attempts': [],
-              'coverage': 'ordinary-hosted selector/marker pointers; default timestep',
+              'coverage': 'ordinary-hosted noncrank pointers from reset; default timestep',
               'program_identity': document['program']['identity'],
               'bundle_sha256': hashlib.sha256(bundle).hexdigest(),
               'document_sha256': hashlib.sha256(document_path.read_bytes()).hexdigest()}
