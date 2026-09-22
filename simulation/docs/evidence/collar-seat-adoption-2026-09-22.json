@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-22",
+  "project_base": "5f101ae",
+  "tested_framework": "c81a585",
+  "model": "simulation.running:OperatingCurta",
+  "acceptance_wrapper": "simulation.operating_collar:OperatingCollarBench",
+  "source_assets_changed": false,
+  "volume_epsilon_mm3": 0,
+  "production_checks": {
+    "faceted": {
+      "passed": 4,
+      "failed": 0,
+      "seconds": 123.71
+    },
+    "exact": {
+      "passed": 4,
+      "failed": 0,
+      "seconds": 133.48
+    }
+  },
+  "geometry_scope_note": "The collar remains source-STL geometry on both runners. This is not whole-machine clearance, force/preload or manufacturing certification.",
+  "survey": {
+    "rigid_occurrences": 389,
+    "pairs_considered": 1161,
+    "residual_contacts": 0,
+    "bank_coordinates": 213
+  },
+  "initial_bank_sha256": "ea39d95d50f06580db66c894f5b3f700ab6ed930cee113b2b9ffe4689935f5b7",
+  "sha256": {
+    "simulation/operating_collar_parts.py": "89879cd88b8af1ea663b86b063bdccd11a6e2501ec05942e3611127de674070b",
+    "simulation/collar_pin_seat.py": "2cd0f007d2db954bce19f9241f87a72160b7ab77a9ad9cb8ee52101576740e7f",
+    "simulation/running_parts.py": "540c617dce2c863f3230726302ad2c75af3a1b621010f3db789a34b576043f93",
+    "simulation/operating_collar.py": "aafdbfb97967423803b8b2d8323d0e7d6c319b9e808f2a7164fb9d114d78a529",
+    "simulation/test_operating_collar.py": "083571c7cc378a2bf482e9ac1d1e08104e3800bd58f383cf7cf462b4c9595ab3",
+    "simulation/test_operating_collar_parts.py": "188fa1a7e0c390c37bead7b0ed8c2b0df9a1868b9bcf9f6c0cca3ce284d90de8",
+    "simulation/tools/collar_trial_contacts.py": "272f5a3863c74171ff3b5cfb41c94bfa8b68bf10e6dbf429b8c3c85ec85592b3",
+    "_build_checks/reconcile-collar-red.log": "197f3e3ec71bc7db2f82945988d934d54157ff5ffde7b6c6399a3aff8b5202b9",
+    "_build_checks/collar-washer-two-seats-red.log": "8c191c47102d28da2ac261afa31dda461b3641566a96275ad92d2583d4ac64d9",
+    "_build_checks/collar-washer-two-seats-final.log": "876191b04ef89f031bc5457511b8be64a3e8a5dc2fe9bc212dc7ee6d9ea3bd38",
+    "_build_checks/collar-seated-operating-v2-faceted.log": "8c962657cedd7ba1ec307fdcecb1929290c23670ec8a24d9027624f6a3aef71d",
+    "_build_checks/collar-seated-operating-v2-exact.log": "02e6879692dd6f7ac7a4cb4846f68add5d8fe927a6cd838feb4072f8c59a4a2b",
+    "_build_checks/collar-production-wrapper-red.log": "ec224a51c7c379d4fc4c1015b96679a07ddee8154d60b2d047a63b12940b2594",
+    "_build_checks/collar-production-adoption-faceted.log": "41223372a5dd702edf63291a7d91894a3e79a05c06953092760e0c37d8825f7c",
+    "_build_checks/collar-production-adoption-exact.log": "3f5b36d260c91fba03f9840098792835ec4717ac2565a786e1cb878f9f76abb3",
+    "_build_checks/collar-seat-facings-neighbours.log": "8f435f399cd0d549598689bc4c8f3927c6bd27afb84980b8351000cb7f4c93cf",
+    "_build_checks/collar-seat-facings-2026-09-22.png": "6fd7b4b05bf0d2e4bf58bb75952eaf06d50b61ca7cbb16f4aa2276765e0eb616",
+    "_build_checks/collar-pre-adoption-bank.log": "f909144c460b108552c49bcf2842443eea89936881551b01c583aebf29be6369"
+  }
+}

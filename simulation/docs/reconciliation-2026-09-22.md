@@ -39,15 +39,57 @@ Logs are in ignored `_build_checks/`, named
 
 The active `simulate-the-curta` change reports 12/23 completed tasks. Existing
 carry timing corrections are already on framework main `5d5ba18` and viewer
-main `684c583`. The additional unmerged framework `harden-direct-part-motion`
-and viewer `draw-at-the-declared-tempo` cycles are undergoing reconciliation
-and verification in their own repositories.
+main `684c583`. The additional framework `harden-direct-part-motion` cycle is
+now merged at `c81a585`; the viewer `draw-at-the-declared-tempo` cycle is merged
+at `fcecb1a`. Their existing branches and records are preserved, with renamed
+package paths reconciled against current main rather than reverted.
 
-The actual default remains `simulation.running:OperatingCurta`. Arithmetic,
-complete counter-tens candidate admission and collar acceptance are running
-against the recovered state. No partial run is reported as a pass, no pending
-physical trial is adopted by this branch reconciliation, and no task checkbox
-is changed merely because its commits are now on main.
+Framework verification includes 571 affected tests and 34 strict OpenSpec
+specifications. The full run had 3,534 passes and two stale version assertions;
+those assertions were corrected and included in the passing affected rerun.
+Viewer verification includes type checking, bundle build, the actual browser
+calculator gesture, 106 documentation tests and ten strict specifications.
+Its loaded broad unit run passed 1,454/1,456 tests; the two throughput checks
+passed in an isolated rerun. This is not a claim that the original loaded run
+was green. The primary viewer bundle was rebuilt after integration.
+
+The actual default remains `simulation.running:OperatingCurta`. The unchanged
+six-test operating arithmetic batch completes with six passes in 1,883.841 s
+(`_build_checks/reconcile-running-arithmetic.log`). It covers independent
+selectors, successive additions/selective clearing, manual calibration,
+partial-turn replay, carriage shifting and subtraction/overflow undo. This
+job started before framework reconciliation; it does not certify later
+performance changes or later physical adoptions. No partial run is counted
+as a pass, and no task checkbox changes merely because commits are on main.
+
+The counter-tens candidate's native finite profile emitted a complete summary:
+15,714 admitted poses, zero failures, covering 466 shaft rows at each of
+carry 0/.5/1. Its [evidence record](evidence/counter-tens-native-completion-2026-09-22.json)
+includes source hashes, the full log hash and the anomalous later supervisor
+status 143; a zero process-exit observation is not claimed. Candidate
+arithmetic, additional heights/action orders and browser adoption remain
+separate gates.
+
+The [collar continuation](collar-seat-completion-2026-09-22.md) combines the
+measured pin/thread clocking with bounded axial facings and verifies complete
+rigid neighbours and captured moving seats. Its production acceptance is
+tracked there, not inferred from the branch merge.
+
+## Performance findings
+
+A real crank click in the current standalone viewer was received, remained
+running and reached only 96 degrees after a 45-second observation. The
+displayed frame lagged behind at 60 degrees. There were no page errors and
+the independent selector gesture passed. This is not a usable completed
+operating check. Subsequent no-WebGL profiling also found substantial run
+engine cost, so software rendering contention alone does not explain it.
+
+The Sol agents are pursuing separately owned framework and viewer fixes.
+Python profiling names repeated port-declaration enumeration; browser
+profiling names repeated path binding and expression scope construction.
+The pilot approved a clean framework worktree from verified main while leaving
+the unrelated untracked example directory untouched, and reaffirmed that all
+framework edits must be in worktrees because other agents are working.
 
 The original source assets, untracked assembly video and untracked
 `screenshots/reverser_inspection.png` are preserved.

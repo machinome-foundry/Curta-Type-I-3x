@@ -6,6 +6,12 @@ the same main branch as the operating model. Their dated findings describe
 their original checkpoints; current operating acceptance is recorded below.
 
 **Current starting point:** [2026-09-22 resumption](docs/resumption-2026-09-22.md).
+The later [reconciliation](docs/reconciliation-2026-09-22.md) merges the
+remaining project/framework/viewer work and records six passing baseline
+operating tests. The [collar fit](docs/collar-seat-completion-2026-09-22.md)
+is adopted with four passing production checks per geometry runner. Normal
+crank operation is still too slow; separately owned framework/viewer
+performance corrections and remaining mechanical acceptance are in progress.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
 The operating model remains unfinished, with 12/23 OpenSpec tasks complete.

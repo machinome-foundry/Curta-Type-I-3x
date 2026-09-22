@@ -19,6 +19,7 @@ from simulation.print_parts import CounterBodyStopPin
 from simulation.clearing_seat_fit import FittedClearingPin
 from simulation.carriage_frame_fit import FittedCounterBody
 from simulation.carriage_index_motion import minimum_carriage_lift
+from simulation.operating_collar_parts import SeatedCollar, SeatedCollarWasher
 from simulation.decimal_markers import LowerMovableMarkers, UpperMovableMarkers, LOWER_CENTER
 from simulation.reverser_following import FollowingReverser
 from simulation.reverser_seat_trial import TrialKnob
@@ -80,6 +81,16 @@ class RetainedAxleCarrier(FittedAxleCarrier):
 
 class RetainedCarriageStructure(CarriageStructure):
     upper_carriage_body_1 = RetainedAxleCarrier()
+    crank_collar = SeatedCollar()
+    crank_collar_washer = SeatedCollarWasher()
+
+    def render(self):
+        super().render()
+        # Source +/-Y collar bores face the recentered +/-X carrier pins.
+        # The independent seat bench proves the final -90 degree clocking.
+        self.crank_collar.rotate(54.282220532, (0, 0, 1))
+        # Retain the measured nut Z and thread geometry, at world phase 40.
+        self.crank_collar_nut.rotate(94.282220532, (0, 0, 1))
 
 
 class RunningClearingAssembly(ClearingAssembly):

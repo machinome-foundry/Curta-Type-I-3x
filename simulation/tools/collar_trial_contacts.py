@@ -1,4 +1,4 @@
-"""Locate every residual collar/nut contact; no acceptance tolerance or waiver."""
+"""Locate collar/nut/washer contacts; no acceptance tolerance or waiver."""
 
 import argparse
 import json
@@ -24,10 +24,11 @@ def main():
     leaves = dict(rigid_leaves(sim.node))
     carrier = sim.node.carriage.registers.carrier
     solids, checked = {}, set()
-    print(json.dumps({'scope': 'unadopted collar trial; all rigid rest neighbours',
+    print(json.dumps({'scope': 'operating collar; all rigid rest neighbours',
                       'rigid_occurrences': len(leaves), 'coordinates': len(bank)}),
           flush=True)
-    for changed in (carrier.crank_collar, carrier.crank_collar_nut):
+    for changed in (carrier.crank_collar, carrier.crank_collar_nut,
+                    carrier.crank_collar_washer):
         first = next(path for path, node in leaves.items() if node is changed)
         for second, other in leaves.items():
             pair = tuple(sorted((first, second)))
@@ -64,6 +65,7 @@ def main():
             ('spider mount', sim.node.carriage.registers.dial_detents.spider_spring.mount),
             ('left pin', carrier.upper_carriage_body_1.counter_body_pin_1),
             ('right pin', carrier.upper_carriage_body_1.counter_body_pin_2),
+            ('clearing cover', sim.node.carriage.registers.clearing_ring.clearing_cover),
         )
         for axis, origin, normal, columns in (
                 (axes[0], (0, 0, 0), (0, 1, 0), (0, 2)),
@@ -79,7 +81,7 @@ def main():
             axis.grid()
             axis.legend(fontsize=8)
         axes[0].set(xlim=(-26, 26), ylim=(5, 68), xlabel='X (mm)',
-                    ylabel='Z (mm)', title='Unadopted trial: Y=0 section')
+                    ylabel='Z (mm)', title='Operating collar: Y=0 section')
         axes[1].set(xlim=(-25, 25), ylim=(-25, 25), xlabel='X (mm)',
                     ylabel='Y (mm)', title='Pin alignment: Z=48 mm')
         figure.tight_layout()

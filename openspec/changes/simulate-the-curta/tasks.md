@@ -1,6 +1,13 @@
 ## Current checkpoint — resumed 2026-09-22
 
-Latest: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
+Latest: the [branch reconciliation](../../../simulation/docs/reconciliation-2026-09-22.md)
+integrates all Curta branches and related outstanding package corrections.
+Six baseline operating arithmetic tests pass. The [collar fit](../../../simulation/docs/collar-seat-completion-2026-09-22.md)
+is adopted with 4/4 production checks on each runner. Counter/result-bank
+admission and real-viewer performance work continue. No task checkbox changes
+from these scoped checks; whole-machine and loop obligations remain open.
+
+Earlier checkpoint: the [paired carry-timing correction](../../../simulation/docs/source-timing-integration-2026-09-22.md)
 is integrated into both local package mains. All four unchanged carry-graph
 tests pass. Native station 8 and the earlier isolated result-bank arithmetic
 batch have terminal passing summaries, recovered in that record. The actual

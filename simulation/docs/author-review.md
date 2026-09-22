@@ -7,6 +7,12 @@ Its scoped geometry, motion and browser evidence is in
 below predates that adoption. Higher-result/counter candidates and the
 clearing-loop clip remain unresolved; no whole-machine acceptance is claimed.
 
+**Later September 22 reconciliation:** the collar shoulder and pin/thread
+clocking are now adopted together with bounded .05 mm collar-bottom and
+washer-end facings. The default operating assembly passes all four scoped
+collar contracts on both runners; see F19 below. Historical trial descriptions
+later in this register retain their original checkpoint status.
+
 Review checkpoint: 2026-09-21. This is a review agenda, **not a list of proven
 defects in the author's working printed calculator**, nor instructions to
 modify a physical machine. The simulation reconstructs the supplied assembly
@@ -59,6 +65,23 @@ is now corrected in both executors. The fixed-height ones profile is
 full-root lockout, neighbouring arithmetic/history and browser acceptance
 passing. This introduces no further geometry fit
 and does not adopt the profile on other channels.
+
+## Collar seats — F19
+
+The [completed collar fit](collar-seat-completion-2026-09-22.md) removes the
+previously measured .72 mm annular shoulder skin, .05 mm at the collar bottom,
+and .05 mm from each washer end. It does not translate the collar or washer,
+change their radial datums or remove thread/pin-roof material. The collar is
+clocked to world -90° to meet the actual carrier pins, and the unchanged nut
+is phased to 40° at its retained Z12.3 seat. All source assets are unchanged.
+
+The default-root checks prove complete rigid rest neighbours, moving
+clearance and capture at all six carriage positions and both clearing-ring
+rest positions, plus the independent fixture and unchanged initial bank.
+They pass 4/4 on each runner. The collar remains faceted geometry in both.
+An independent 1,161-pair survey has no residual collar/nut/washer contact;
+the whole-machine inventory remains separate. This is a simulation fitting
+record, not a physical manufacturing recommendation.
 
 ## Higher result lockout — T07 adoption under verification
 

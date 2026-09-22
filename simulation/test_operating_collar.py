@@ -1,5 +1,8 @@
 """Collar fitting must survive carriage travel without losing its retainers."""
 
+import hashlib
+import json
+
 from machinome.simulation import Sim
 from machinome.test import TestCase
 from simulation.operating_collar import OperatingCollarBench
@@ -8,19 +11,23 @@ from simulation.operating_collar import OperatingCollarBench
 class OperatingCollarTest(TestCase):
     node = OperatingCollarBench
 
-    def test_initial_bank_matches_the_unchanged_default_root(self):
-        from simulation.running import OperatingCurta
-
+    def test_initial_bank_matches_the_pre_adoption_default_root(self):
         trial = Sim(self.node, dt=.1)
-        original = Sim(OperatingCurta(), dt=.1)
-        self.assertEqual(dict(trial.state), dict(original.state))
+        # Captured before adoption at project 5f101ae / framework c81a585.
+        # A fixed witness keeps this meaningful once the default adopts the
+        # same parts; comparing two aliases of the fitted root would not.
+        bank = dict(trial.state)
+        self.assertEqual(len(bank), 213)
+        encoded = json.dumps(bank, sort_keys=True, separators=(',', ':')).encode()
+        self.assertEqual(hashlib.sha256(encoded).hexdigest(),
+                         'ea39d95d50f06580db66c894f5b3f700ab6ed930cee113b2b9ffe4689935f5b7')
 
     def test_operating_parts_match_the_independent_seating_bench(self):
         import numpy as np
         from scipy.spatial import cKDTree
-        from simulation.collar_pin_seat import FittedCollarPinSeat
+        from simulation.collar_pin_seat import SeatedCollarPinSeat
 
-        bench = FittedCollarPinSeat()
+        bench = SeatedCollarPinSeat()
         bench.assemble()
         bench.build_stls()
         carrier = self.node.carriage.registers.carrier
@@ -43,7 +50,8 @@ class OperatingCollarTest(TestCase):
         sim = Sim(self.node, dt=.1, meshes=True)
         try:
             carrier = self.node.carriage.registers.carrier
-            for changed in (carrier.crank_collar, carrier.crank_collar_nut):
+            for changed in (carrier.crank_collar, carrier.crank_collar_nut,
+                            carrier.crank_collar_washer):
                 for path, other in rigid_leaves(self.node):
                     if changed is not other:
                         with self.subTest(changed=changed.name, neighbour=path):
@@ -56,11 +64,20 @@ class OperatingCollarTest(TestCase):
         registers = self.node.carriage.registers
         carrier = registers.carrier
         collar, nut = carrier.crank_collar, carrier.crank_collar_nut
+        washer = carrier.crank_collar_washer
+        cover = registers.clearing_ring.clearing_cover
         spider = registers.dial_detents.spider_spring.mount
         pins = (carrier.upper_carriage_body_1.counter_body_pin_1,
                 carrier.upper_carriage_body_1.counter_body_pin_2)
 
         def check():
+            self.assertNotIntersecting(washer, collar)
+            self.assertNotIntersecting(washer, cover)
+            for neighbour, direction in ((collar, (0, 0, -1)), (cover, (0, 0, 1))):
+                self.assertFreeWithin(washer, .04, against=neighbour,
+                                      along=direction, directions='forward')
+                self.assertBlockedBeyond(washer, .1, against=neighbour,
+                                         along=direction, directions='forward')
             self.assertNotIntersecting(collar, spider)
             self.assertFreeWithin(spider, .04, against=collar, along=(0, 0, 1))
             self.assertBlockedBeyond(spider, .1, against=collar,
@@ -84,7 +101,9 @@ class OperatingCollarTest(TestCase):
                 check()
             for shift in (0, 20, 40, 60, 80, 100):
                 self.assertEqual(sim.move('carriage_rotation', to=shift).status, 'completed')
-                for clearing in (0, 180):
+                # The printed clearing cam has its two rest pockets at 0
+                # and 230 degrees. Half a turn is intentionally not a seat.
+                for clearing in (0, 230):
                     self.assertEqual(sim.move('clearing_rotation', to=clearing).status,
                                      'completed')
                     check()
@@ -93,5 +112,9 @@ class OperatingCollarTest(TestCase):
                     check()
                     self.assertEqual(sim.move('carriage_elevation', to=6).status,
                                      'completed')
+            self.assertEqual(sim.move('clearing_rotation', to=180).status, 'completed')
+            self.assertEqual(sim.move('carriage_elevation', to=0).status, 'blocked')
+            self.assertAlmostEqual(sim.state['carriage.registers.lift'], 4.810085)
+            check()
         finally:
             sim.reset()

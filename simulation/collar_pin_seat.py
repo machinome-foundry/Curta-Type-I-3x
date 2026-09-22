@@ -10,6 +10,7 @@ from machinome.parameters import Angle
 from simulation.print_parts import CrankCollar
 from simulation.standard.parts import CounterBodyPin, CrankCollarNut
 from simulation.collar_seat_trial import TrialShoulderCollar
+from simulation.operating_collar_parts import SeatedCollar
 
 
 class CollarPinSeat(AssemblyNode):
@@ -40,3 +41,8 @@ class SourceCollarPinSeat(CollarPinSeat):
 class FittedCollarPinSeat(CollarPinSeat):
     """Combine the measured clocking with the independently proven shoulder fit."""
     collar = TrialShoulderCollar()
+
+
+class SeatedCollarPinSeat(CollarPinSeat):
+    """Same measured datums, with the separately bounded lower-seat facing."""
+    collar = SeatedCollar()
