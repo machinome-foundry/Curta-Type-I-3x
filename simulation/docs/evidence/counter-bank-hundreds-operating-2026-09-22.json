@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-22",
+  "scope": "Unadopted full higher-counter trial, station3 actual operating withdrawal only",
+  "framework_content": "acebc48",
+  "python": {
+    "tests": 1,
+    "seconds": 312.87,
+    "process_exit_observed": 0
+  },
+  "browser_process_exit_observed": 0,
+  "full_stopped_idle_banks_equal": true,
+  "screenshot_inspected": true,
+  "pointer_coverage": false,
+  "files": {
+    "_build_checks/counter-bank-hundreds-python-2026-09-22.log": "6148f7ad6ef98f80eb79496fd8be730864884d506d71d58fc3ce2b6af85c5638",
+    "_build_checks/counter-bank-hundreds-python-2026-09-22.json": "9d2c39bc58741515fc9afbfd7e40b39dded2ea94a434025511bb62aeecad5355",
+    "_build_checks/counter-bank-hundreds-browser-c895dba.log": "235752e64ba9cb9ca257eeda6dc5ab87a79c44b1834f1a6f3f5c21980056d2b2",
+    "_build_counter_bank_trial_c895dba/counter-browser-acceptance.json": "04ec3f02c448dfb32e35855c126b322de518150e38793db8681b2cf90bbdaa6b",
+    "_build_counter_bank_trial_c895dba/counter-withdrawal-stopped.png": "7f5bbd2f1ec63093b28dc2f6f3c08b0017f54409a674859a83a2b0d1f68f6ba3",
+    "_build_checks/counter-bank-complete-fixture-2026-09-22.log": "373b0e99c3b067ff8766d8299b73a5bf3137fc26e032bb99d27b03a341e11c31",
+    "_build_checks/counter-bank-law-final-2026-09-22.log": "85d116f67bba25cfc6a6997236223148268412883999fdf734e92a5963d09c55",
+    "_build_checks/counter-bank-browser-validator-red-2026-09-22.log": "de0ce1bcccf5bc6efd9a21b3b755f8470c9cc593871a33c1f82358d61fc8f351",
+    "_build_checks/counter-bank-browser-validator-green-2026-09-22.log": "698d16d7b93c4bd9707d3cfacda6fb1e0fea99ed0cda6e69bedc42772940540a"
+  },
+  "browser": {
+    "validation": "passed",
+    "station": 3,
+    "document_sha256": "f58da4f21142d452bd6de58adc901fafa131d81fcaaf301df7fc767f2269dc67",
+    "program_identity": "4127d33c87f1501a024ee5c7391d1897ce3af65309b946c811d4244c7fd68da2",
+    "bundle_sha256": "f1f2cd4ce7ea630b95044631d2b53435dae1114b6c2c72321a381df5266570f7",
+    "python_report": "_build_checks/counter-bank-hundreds-python-2026-09-22.json",
+    "errors": []
+  },
+  "coordinates": 213,
+  "requests": [
+    {
+      "target": 220,
+      "stop": 214.7853836059494,
+      "status": "blocked",
+      "replay": true,
+      "relief": "completed",
+      "retry": "blocked"
+    },
+    {
+      "target": 940,
+      "stop": 214.78538360544917,
+      "status": "blocked",
+      "replay": true,
+      "relief": "completed",
+      "retry": "blocked"
+    }
+  ]
+}

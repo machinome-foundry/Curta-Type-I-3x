@@ -63,3 +63,16 @@ Their precise source headers remain in the
 [world64 matrix](evidence/counter-bank-full-world64-completion-2026-09-22.json),
 beside the separate corrected intermediate-height support evidence. No
 continuous or full action-order claim follows from those finite matrices.
+
+The independent hosted browser hundreds check now also completes with observed
+exit zero. It uses export identity `4127d33c87f1501a024ee5c7391d1897ce3af65309b946c811d4244c7fd68da2`
+and bundle `f1f2cd4ce7ea630b95044631d2b53435dae1114b6c2c72321a381df5266570f7`,
+loaded before the later Bound-demand viewer merge. Both stops and all 213
+stopped/idle coordinates match the captured Python report exactly; snapshot
+replay, relief and retry pass without page errors. The final screenshot was
+inspected. This is hosted API coverage, not a pointer gesture matrix or
+acceptance of the later viewer bundle. The
+[hundreds evidence](evidence/counter-bank-hundreds-operating-2026-09-22.json)
+pins the reports, image and red/green validator results (8 tests passing).
+The complete-bank arithmetic batch and sixth-station operating gate are
+running; neither is claimed complete here.
