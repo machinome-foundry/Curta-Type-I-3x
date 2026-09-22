@@ -37,3 +37,23 @@ The report pins the original index, manifest, bundle, hover attempts and exact
 screen coordinates. Its bundle is `8a03c3a3...`, manifest `03099125...`, and
 program `3e1d5051...`; these are the existing production export, not a newly
 built viewer candidate. Other controls remain to be tested.
+
+## Selector and next controls
+
+The first coarse hover search misses selector 1 and exits one. Its untouched
+pending report/image remain `standalone-selector-one-e5636f8` under
+`_build_checks/`. A denser search over the visible selector band finds the
+actual `set digit 1` hit at (842.025, 620). A 60-pixel downward drag passes:
+digit 1 reads 4.0000, its outcome is completed, other visible inputs remain
+unchanged and no page error occurs. The screenshot is inspected and the
+process exits zero. Report `standalone-selector-one-dense-7a620d9.json` has
+SHA-256 `76b66ec38efbc8442d4c85f6cc56efa6ac0de1abddb3dac39f92685c716d525a`.
+No control proxy or hidden-part shortcut was added to find it.
+
+The diagnostic now also supports an ordinary empty-canvas orbit gesture
+(asserting no input changed), and physical button presses. A full-revolution
+report may require an exact 360.0000-degree visible delta; a new red-first
+test rejects 359.9999, then all four report tests pass. The button case is
+running with an explicit 600-second observation deadline because normal
+default-timestep execution is still slow. That deadline does not change
+the simulated timestep or instruction duration. It is not yet a passing case.

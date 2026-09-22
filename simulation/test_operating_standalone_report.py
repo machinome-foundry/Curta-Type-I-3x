@@ -34,3 +34,11 @@ class StandaloneReportTest(unittest.TestCase):
             row['after'] = after
             with self.subTest(after=after), self.assertRaises(AssertionError):
                 validate_report(row)
+
+    def test_named_full_revolution_requires_its_complete_visible_delta(self):
+        self.report['expected_delta'] = 360
+        self.report['after']['crank_elevation'] = '359.9999'
+        with self.assertRaises(AssertionError):
+            validate_report(self.report)
+        self.report['after']['crank_elevation'] = '360.0000'
+        validate_report(self.report)
