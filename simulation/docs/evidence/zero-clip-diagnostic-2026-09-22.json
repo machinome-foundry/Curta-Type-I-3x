@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-22",
+  "status": "unresolved; diagnostic only, no fit adopted",
+  "process_exit_observed": 0,
+  "images_inspected": true,
+  "files": {
+    "_build_checks/zero-clip-initial-2026-09-22.json": "fa1c69b8ca1ecf3ef1aba16ed1517fa771b221126daa93d040a7f817a8135f55",
+    "_build_checks/zero-clip-axial-survey-2026-09-22.json": "61771b29c76758cc968e92725e6022a65852e3848ec64df13481db10c1f98d55",
+    "_build_checks/zero-clip-axial-survey-2026-09-22.png": "58fb8e72dac923ffd75c549aec20c9c85f7862e2487e61c2172addc61dd7c406",
+    "_build_checks/zero-clip-manual-page16.png": "283af65dc85d4f1b1aaed846a39a215a7101edc724217639715f63f94aa3503e"
+  },
+  "initial_common_mm3": {
+    "native": 36.589675184315446,
+    "world64": 36.266678283090016
+  },
+  "axial_shift_contacts_mm3": [
+    {
+      "shift": 0,
+      "contacts": {
+        "Curta.main_drive.zero_positioning.zero_positioning_disc": {
+          "native": 36.589675184110746,
+          "world64": 36.26667828309002
+        },
+        "Curta.frame.lower_bearing_plate.bearing_plate": {
+          "native": 8.41767588320608,
+          "world64": 7.284743154609227
+        }
+      }
+    },
+    {
+      "shift": 0.45,
+      "contacts": {
+        "Curta.main_drive.zero_positioning.zero_positioning_disc": {
+          "native": 29.789420966779183,
+          "world64": 29.6062232501811
+        },
+        "Curta.frame.lower_bearing_plate.bearing_plate": {
+          "native": 26.961029302097764,
+          "world64": 25.69726036104894
+        }
+      }
+    },
+    {
+      "shift": 0.509,
+      "contacts": {
+        "Curta.main_drive.zero_positioning.zero_positioning_disc": {
+          "native": 29.78942092007871,
+          "world64": 29.605858249650428
+        },
+        "Curta.frame.lower_bearing_plate.bearing_plate": {
+          "native": 30.60788799510707,
+          "world64": 29.318388169419247
+        }
+      }
+    },
+    {
+      "shift": 0.55,
+      "contacts": {
+        "Curta.main_drive.zero_positioning.zero_positioning_disc": {
+          "native": 29.789420966833887,
+          "world64": 29.6056134175935
+        },
+        "Curta.frame.lower_bearing_plate.bearing_plate": {
+          "native": 33.142172459918136,
+          "world64": 31.834765121000164
+        }
+      }
+    },
+    {
+      "shift": 1,
+      "contacts": {
+        "Curta.main_drive.zero_positioning.zero_positioning_disc": {
+          "native": 41.58139488514877,
+          "world64": 41.395687537360544
+        },
+        "Curta.frame.lower_bearing_plate.bearing_plate": {
+          "native": 60.9570315629791,
+          "world64": 59.45353654077433
+        }
+      }
+    }
+  ],
+  "coordinates": 213,
+  "bank_unchanged": true
+}
