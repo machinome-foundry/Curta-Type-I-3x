@@ -161,3 +161,9 @@ Next work remains the collar's independent thrust seat, threaded fit and pin
 clearance/capture, with any operating adoption verified in the real assembly.
 This trial is a source-backed simulation candidate, not a manufacturing
 recommendation or complete collar acceptance. Task 1.3 remains open.
+
+The subsequent [thrust-seat investigation](thrust-seat-investigation-2026-09-21.md)
+finds a placement-only candidate for the internal ring and spring: it uses the
+collar's existing Z33 ledge and the sleeve's Z54.3 underside, without cutting
+either part. Scoped seat/capture tests and initial-root neighbour checks pass;
+it is not adopted, and nut/pin contacts still need independent resolution.

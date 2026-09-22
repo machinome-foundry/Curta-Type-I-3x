@@ -451,3 +451,13 @@ survey confirm that it removes the spider contact without introducing a new
 positive pair; thrust-ring, nut and pin contacts remain. The operating root
 still uses the unchanged source collar. The linked investigation records the
 red/green trail and the remaining collar acceptance work; no task closes.
+
+The [thrust-ring/spring trial](thrust-seat-investigation-2026-09-21.md) then
+locates the collar's existing inner ledge and sleeve seat. Relocating the ring
+and prescribing spring height from those seats clears the interface without
+material removal. Five scoped tests pass on both runners after source-placement
+failures and a corrected test-direction argument. The source fixture matches
+all five actual-root meshes exactly; the rest measuring copy removes all three
+original ring/wire contacts and has no positive pair among 777 checked pairs.
+The operating model and bank remain unchanged. Combined adoption, nut/pin fits
+and full operating acceptance are still open.

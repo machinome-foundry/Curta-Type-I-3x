@@ -1,0 +1,585 @@
+{
+  "date": "2026-09-21",
+  "project_parent_commit": "a5be5ce555a8de95966fcb3d1e6d56c02d59dccf",
+  "framework_content_commit": "e6a42c80e6dcc686c180b8a6d94037301c4213a5",
+  "status": "isolated placement-only candidate, not adopted; task 1.3 open",
+  "dimensions_mm": {
+    "collar_ledge_z": 33,
+    "sleeve_seat_z": 54.3,
+    "named_seat_gap": 0.05,
+    "ring_bottom": 33.05,
+    "ring_top": 34.55,
+    "ring_rise": 7.5275,
+    "spring_lower_cap": 35.5,
+    "spring_upper_cap": 53.35,
+    "spring_height_at_rest": 17.85,
+    "spring_height_at_full_lift": 11.85,
+    "wire_radius": 0.9,
+    "coil_centreline_radius": 13.2
+  },
+  "spring_turns": 4,
+  "prescribed_shape_not_force_or_preload_model": true,
+  "tests": {
+    "source_red": {
+      "path": "_build_checks/thrust-seat-trial-red.log",
+      "sha256": "a8467cb183c7cfcfe5473773c424c4883c0a674de8285e7560f7a75b7bcc2c3e",
+      "summary": "Ran 4 tests in 1.11 seconds: 1 passed, 3 failed (faceted kernel, volume epsilon 0 mm³)",
+      "failures": [
+        "AssertionError: np.float64(27.0225) != 35.5 within 6 places (np.float64(8.4775) difference)",
+        "AssertionError: thrust_ring should be free displaced 0.04mm along [0, 0, 1] against collar (intersection volume 219.96699566785045)",
+        "AssertionError: wire should not intersect thrust_ring (intersection volume 6.599205817242415)"
+      ]
+    },
+    "candidate_direction_setup_error_faceted": {
+      "path": "_build_checks/thrust-seat-trial-faceted.log",
+      "sha256": "ebc22927bfa00cfa9cdf126f69a0ed588c15f70314398a32b8786b240dfac5f2",
+      "summary": "Ran 5 tests in 1.27 seconds: 3 passed, 2 failed (faceted kernel, volume epsilon 0 mm³)",
+      "failures": [
+        "ValueError: assertBlockedBeyond/assertFreeWithin: directions must be 'both' or 'forward', got 'reverse'",
+        "ValueError: assertBlockedBeyond/assertFreeWithin: directions must be 'both' or 'forward', got 'reverse'"
+      ]
+    },
+    "candidate_direction_setup_error_exact": {
+      "path": "_build_checks/thrust-seat-trial-exact.log",
+      "sha256": "d64030e2e7995265d4dff87dd76ddba4ed311ef4c45d626ddf291cad26cd7129",
+      "summary": "Ran 5 tests in 4.24 seconds: 3 passed, 2 failed",
+      "failures": [
+        "ValueError: assertBlockedBeyond/assertFreeWithin: directions must be 'both' or 'forward', got 'reverse'",
+        "ValueError: assertBlockedBeyond/assertFreeWithin: directions must be 'both' or 'forward', got 'reverse'"
+      ]
+    },
+    "final_faceted": {
+      "path": "_build_checks/thrust-seat-trial-direction-faceted.log",
+      "sha256": "79774c12be15ecd77a3ce3727e2be4a594ccde598fd54b5ede4ef2134c429eaa",
+      "summary": "Ran 5 tests in 1.75 seconds: 5 passed, 0 failed (faceted kernel, volume epsilon 0 mm³)",
+      "failures": []
+    },
+    "final_exact": {
+      "path": "_build_checks/thrust-seat-trial-direction-exact.log",
+      "sha256": "5f1c6dc43b04245e6109a1a9c364d2abd24b5362dad436414e20edb8f814455e",
+      "summary": "Ran 5 tests in 20.34 seconds: 5 passed, 0 failed",
+      "failures": []
+    }
+  },
+  "source_pose_scan": [
+    {
+      "scope": "source positioning instrument, pose-only ring rise",
+      "bounds_mm": {
+        "collar": [
+          [
+            -28.49776279974528,
+            -28.49776279974528,
+            7.799999999990281
+          ],
+          [
+            28.49776279974528,
+            28.49776279974528,
+            66.3
+          ]
+        ],
+        "thrust_ring": [
+          [
+            -16.265701916171125,
+            -16.34697359580492,
+            25.5225
+          ],
+          [
+            16.265701916171125,
+            16.34697359580492,
+            27.0225
+          ]
+        ],
+        "carriage_spring_sleeve": [
+          [
+            -16.44700050354004,
+            -16.327083587646488,
+            42.6
+          ],
+          [
+            16.44700050354004,
+            16.327083587646484,
+            57.6
+          ]
+        ],
+        "spring_sleeve_c_clip": [
+          [
+            -14.994036674499512,
+            -15.786676406860352,
+            57.6
+          ],
+          [
+            14.994036674499512,
+            16.3017635345459,
+            59.55000004768372
+          ]
+        ],
+        "spring_wire": [
+          [
+            -14.099463268378692,
+            -14.099328952210254,
+            26.124845885550492
+          ],
+          [
+            14.099809791362373,
+            14.09982769537806,
+            51.91999952091189
+          ]
+        ]
+      },
+      "spring_cap_centres_mm": [
+        [
+          10.717111798448322,
+          7.706069990569756,
+          27.0225
+        ],
+        [
+          10.717111798448329,
+          7.706069990569746,
+          51.0225
+        ]
+      ],
+      "native_horizontal_faces": {
+        "Curta.thrust_ring": [
+          {
+            "z_mm": 27.022499999999997,
+            "normal_z": 1,
+            "area_mm2": 364.52684957765837,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          },
+          {
+            "z_mm": 25.5225,
+            "normal_z": -1,
+            "area_mm2": 364.52684957765837,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          }
+        ],
+        "Curta.carriage_spring_sleeve": [
+          {
+            "z_mm": 57.599999999999994,
+            "normal_z": 1,
+            "area_mm2": 382.43909248144274,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          },
+          {
+            "z_mm": 50.1,
+            "normal_z": 1,
+            "area_mm2": 9.994376983198663,
+            "xy_bounds_mm": [
+              -16.447,
+              -16.447,
+              16.447,
+              16.447
+            ]
+          },
+          {
+            "z_mm": 42.6,
+            "normal_z": -1,
+            "area_mm2": 142.95443206475318,
+            "xy_bounds_mm": [
+              -16.447,
+              -16.447000000000003,
+              16.447,
+              16.446999999999996
+            ]
+          },
+          {
+            "z_mm": 54.300000000000004,
+            "normal_z": -1,
+            "area_mm2": 249.47903739988794,
+            "xy_bounds_mm": [
+              -15,
+              -15,
+              15,
+              15
+            ]
+          }
+        ]
+      },
+      "not_adopted": true
+    },
+    {
+      "ring_rise_mm": 0,
+      "collar_common_mm3": 225.52306507620042
+    },
+    {
+      "ring_rise_mm": 0.5,
+      "collar_common_mm3": 157.44950351646952
+    },
+    {
+      "ring_rise_mm": 1,
+      "collar_common_mm3": 108.31538595817753
+    },
+    {
+      "ring_rise_mm": 2,
+      "collar_common_mm3": 78.9058621283333
+    },
+    {
+      "ring_rise_mm": 3,
+      "collar_common_mm3": 78.9058621283333
+    },
+    {
+      "ring_rise_mm": 4,
+      "collar_common_mm3": 78.9058621283333
+    },
+    {
+      "ring_rise_mm": 5,
+      "collar_common_mm3": 78.9058621283333
+    },
+    {
+      "ring_rise_mm": 6,
+      "collar_common_mm3": 77.72232235672455
+    },
+    {
+      "ring_rise_mm": 7,
+      "collar_common_mm3": 25.118414271169016
+    },
+    {
+      "ring_rise_mm": 7.4,
+      "collar_common_mm3": 4.076851036946872
+    },
+    {
+      "ring_rise_mm": 7.45,
+      "collar_common_mm3": 1.446655632668857
+    },
+    {
+      "ring_rise_mm": 7.4775,
+      "refused_common_mm3": -0.000001383272149133314
+    },
+    {
+      "ring_rise_mm": 7.5,
+      "collar_common_mm3": 0
+    },
+    {
+      "ring_rise_mm": 7.5275,
+      "collar_common_mm3": 0
+    },
+    {
+      "ring_rise_mm": 7.55,
+      "collar_common_mm3": 0
+    },
+    {
+      "ring_rise_mm": 8,
+      "collar_common_mm3": 0
+    },
+    {
+      "ring_rise_mm": 9,
+      "collar_common_mm3": 0
+    },
+    {
+      "ring_rise_mm": 10,
+      "collar_common_mm3": 0
+    },
+    {
+      "source_pair": [
+        "spring_wire",
+        "thrust_ring"
+      ],
+      "common_mm3": 6.599187812399682
+    },
+    {
+      "source_pair": [
+        "spring_wire",
+        "carriage_spring_sleeve"
+      ],
+      "common_mm3": 0
+    },
+    {
+      "source_pair": [
+        "spring_wire",
+        "collar"
+      ],
+      "common_mm3": 0
+    },
+    {
+      "complete": true,
+      "refused_measurements": [
+        {
+          "ring_rise_mm": 7.4775,
+          "refused_common_mm3": -0.000001383272149133314
+        }
+      ]
+    }
+  ],
+  "candidate_seated_probe": [
+    {
+      "scope": "isolated positioning instrument, pose-only ring rise",
+      "seated_candidate": true,
+      "bounds_mm": {
+        "collar": [
+          [
+            -28.49776279974528,
+            -28.49776279974528,
+            7.799999999990281
+          ],
+          [
+            28.49776279974528,
+            28.49776279974528,
+            66.3
+          ]
+        ],
+        "thrust_ring": [
+          [
+            -16.265701916171125,
+            -16.34697359580492,
+            33.05
+          ],
+          [
+            16.265701916171125,
+            16.34697359580492,
+            34.55
+          ]
+        ],
+        "carriage_spring_sleeve": [
+          [
+            -16.44700050354004,
+            -16.327083587646488,
+            42.6
+          ],
+          [
+            16.44700050354004,
+            16.327083587646484,
+            57.6
+          ]
+        ],
+        "spring_sleeve_c_clip": [
+          [
+            -14.994036674499512,
+            -15.786676406860352,
+            57.6
+          ],
+          [
+            14.994036674499512,
+            16.3017635345459,
+            59.55000004768372
+          ]
+        ],
+        "spring_wire": [
+          [
+            -14.09954041225091,
+            -14.099313251178792,
+            34.601299929080085
+          ],
+          [
+            14.09979827096321,
+            14.099702089434894,
+            54.247916348928044
+          ]
+        ]
+      },
+      "spring_cap_centres_mm": [
+        [
+          10.717111798448322,
+          7.706069990569756,
+          35.49999999999999
+        ],
+        [
+          10.717111798448329,
+          7.706069990569746,
+          53.35
+        ]
+      ],
+      "native_horizontal_faces": {
+        "Curta.thrust_ring": [
+          {
+            "z_mm": 34.55,
+            "normal_z": 1,
+            "area_mm2": 364.52684957765837,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          },
+          {
+            "z_mm": 33.05,
+            "normal_z": -1,
+            "area_mm2": 364.52684957765837,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          }
+        ],
+        "Curta.carriage_spring_sleeve": [
+          {
+            "z_mm": 57.599999999999994,
+            "normal_z": 1,
+            "area_mm2": 382.43909248144274,
+            "xy_bounds_mm": [
+              -16.35,
+              -16.35,
+              16.35,
+              16.35
+            ]
+          },
+          {
+            "z_mm": 50.1,
+            "normal_z": 1,
+            "area_mm2": 9.994376983198663,
+            "xy_bounds_mm": [
+              -16.447,
+              -16.447,
+              16.447,
+              16.447
+            ]
+          },
+          {
+            "z_mm": 42.6,
+            "normal_z": -1,
+            "area_mm2": 142.95443206475318,
+            "xy_bounds_mm": [
+              -16.447,
+              -16.447000000000003,
+              16.447,
+              16.446999999999996
+            ]
+          },
+          {
+            "z_mm": 54.300000000000004,
+            "normal_z": -1,
+            "area_mm2": 249.47903739988794,
+            "xy_bounds_mm": [
+              -15,
+              -15,
+              15,
+              15
+            ]
+          }
+        ]
+      },
+      "not_adopted": true
+    },
+    {
+      "ring_rise_mm": 0,
+      "collar_common_mm3": 0
+    },
+    {
+      "pair": [
+        "spring_wire",
+        "thrust_ring"
+      ],
+      "common_mm3": 0
+    },
+    {
+      "pair": [
+        "spring_wire",
+        "carriage_spring_sleeve"
+      ],
+      "common_mm3": 0
+    },
+    {
+      "pair": [
+        "spring_wire",
+        "collar"
+      ],
+      "common_mm3": 0
+    },
+    {
+      "complete": true,
+      "refused_measurements": []
+    }
+  ],
+  "actual_root_measuring_probe": [
+    {
+      "scope": "two changed measuring meshes against every rigid occurrence",
+      "rigid_occurrences": 389,
+      "coordinates": 213,
+      "source_fixture_distances_mm": {
+        "Curta.carriage.registers.carrier.crank_collar": 0,
+        "Curta.carriage.positioning.thrust_ring": 0,
+        "Curta.carriage.positioning.carriage_spring.wire": 0,
+        "Curta.carriage.positioning.carriage_spring_sleeve": 0,
+        "Curta.carriage.positioning.spring_sleeve_c_clip": 0
+      },
+      "kernel": "published/source meshes, Manifold",
+      "not_adopted": true
+    },
+    {
+      "case": "original",
+      "pairs_considered": 777,
+      "positive_common_mm3": {
+        "Curta.carriage.positioning.thrust_ring / Curta.carriage.registers.carrier.crank_collar": 225.52306507620042,
+        "Curta.carriage.positioning.carriage_spring.wire / Curta.carriage.positioning.thrust_ring": 6.599188000395971,
+        "Curta.carriage.positioning.carriage_spring.wire / Curta.carriage.positioning.p_6mm_ball_419094": 0.4734980714474985
+      }
+    },
+    {
+      "case": "candidate",
+      "pairs_considered": 777,
+      "positive_common_mm3": {}
+    },
+    {
+      "complete": true,
+      "run_bank_unchanged": true
+    }
+  ],
+  "process_outcomes": {
+    "initial_source_scan": {
+      "exit_code": 1,
+      "reason": "Stopped on negative common at exactly coincident ledge"
+    },
+    "completed_source_scan": {
+      "exit_code": 1,
+      "reason": "All samples measured; one negative common explicitly refused"
+    },
+    "initial_candidate_section": {
+      "exit_code": 1,
+      "reason": "Missing shift driver setup, corrected without changing geometry"
+    },
+    "final_candidate_section": {
+      "exit_code": 0
+    },
+    "actual_root_probe": {
+      "exit_code": 0
+    }
+  },
+  "inspected_images": [
+    "_build_checks/thrust-seat-source-section.png",
+    "_build_checks/thrust-seated-trial-section-final.png"
+  ],
+  "limits": [
+    "Collar contacts are faceted on both runners",
+    "Five lift heights and eleven collar rotations, not continuous motion certification",
+    "Root check covers every rigid occurrence plus changed spring wire, not all other flexible wires or moving root states",
+    "No operating adoption, source print modification or manufacturing recommendation"
+  ],
+  "sha256": {
+    "simulation/thrust_seat_trial.py": "9c69f3308b53f911d3e7437cb8f1663774d81a00131ac93dfe74f25419aaed63",
+    "simulation/test_thrust_seat_trial.py": "1e643e6071a83e43b83249a0bf841c6ca532ddb23770e56d0ce74576ea072a3e",
+    "simulation/tools/thrust_seating.py": "c1e27cb278a5b08814804e7b873817b6ec25b35e626cfe04d7b83b73fa8fab8b",
+    "simulation/tools/thrust_root_probe.py": "fdf87ca03366c4692fcf8cfe724458e2b819be977ff254ab2dd1fd9c5861fdb2",
+    "CAD/Curta Assembly.step": "943ec7545d9cbcbe69266f0e8b1b65e912f80fa46cad0c974dea164bdcbbbee3",
+    "STLs/43 - Clearing Cover & Collar/crank collar.stl": "fd70390be6142f1b86f219d89b1d3109db72d587dde6b17e90fe820477c4c8cd",
+    "_build_checks/thrust-seat-source-diagnostic.log": "f36f35307c12b401ed0519a935ed3d388755f105fc6cf91fa0639fb47652d9aa",
+    "_build_checks/thrust-seat-source-complete.log": "af9195a7c729248d43c3c60ae415daa7df2618ba13dc413a803b9e5423af1ab7",
+    "_build_checks/thrust-seat-source-section.png": "43d42e8c583a3cd866dae0951783b47a52082fa634250d98a90285e551e23f8f",
+    "_build_checks/thrust-seated-trial-section.log": "119bfef42462617ef97aafc93435a9daac95db57e7ed01a61783cd74c68374ab",
+    "_build_checks/thrust-seated-trial-section-final.log": "3500604afb7d82e7bc039ee68b84066af42ac2966b01950f19cd4f1d83ca6dde",
+    "_build_checks/thrust-seated-trial-section-final.png": "0b3fc614404bf073e4a404114a5043824bf69a9f726172a559b0e150a45f07e0",
+    "_build_checks/thrust-seat-root-neighbours.log": "1d7c4faab25be03e6c1fea396200ea7da4c5e874414f207639fd9183f5d06993"
+  },
+  "native_geometry_availability_verified": {
+    "ring": true,
+    "sleeve": true,
+    "spring_wire": true,
+    "collar": false
+  }
+}

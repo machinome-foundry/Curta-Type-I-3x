@@ -123,6 +123,14 @@ negative control. The actual-root measuring copy clears the spider but still
 contacts the thrust ring, nut and two pins. No complete collar fit, operating
 adoption or manufacturing recommendation follows from this trial.
 
+The separate [thrust-ring/spring seating candidate](thrust-seat-investigation-2026-09-21.md)
+uses the existing collar ledge and sleeve underside, with .05 mm seating gaps.
+It raises the ring 7.5275 mm and prescribes coil height from the two seats,
+retaining wire size, radius and turn count. No rigid print is cut. Five tests
+pass on both runners, and the actual-root rest measuring copy clears all
+777 ring/wire neighbour pairs without changing the run bank. This remains
+unadopted; it is not a force/preload calculation or whole-machine acceptance.
+
 | ID | Correction or explicit assumption | Record |
 |---|---|---|
 | A01 | Register carriage recentered by (.537721035, −.038177283, 0) mm and clocked .549916905°; result tens shaft X corrected −.079764273 mm. | [F3](measurements.md#f3-register-bank-alignment-and-bevel-seating), [fit.py](../fit.py). |
