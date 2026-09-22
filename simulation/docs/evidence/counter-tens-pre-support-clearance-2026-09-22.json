@@ -1,0 +1,52 @@
+{
+  "date": "2026-09-22",
+  "status": "unadopted: world64 support-height gate failed",
+  "project_content": "a3dde6f",
+  "law_sha256": "a824d3397ca6cb6bb098d37022dc99d3cc40ecfbd5bc064af8e39f60dca2d5f2",
+  "python": {
+    "framework_content": "3afb3f7",
+    "tests": 2,
+    "seconds": 438.395,
+    "process_exit_observed": 0
+  },
+  "arithmetic": {
+    "framework_content": "4d24d79",
+    "tests": 6,
+    "seconds": 1744.637,
+    "process_exit_observed": 0,
+    "scope": "Inherited unchanged RunningCurtaTest, trial factory only; crank-fit geometry already present before its commit"
+  },
+  "browser": {
+    "bundle_sha256": "2b23132094a25265db02f4be826b412c6418e96e3b17d5cd0bdc43843cf5e888",
+    "program_identity": "07d4f8d3341eded541ed5b6495fab160946bfe34e2912e9c73f2deb3328a5936",
+    "process_exit_observed": 0,
+    "coordinate_count": 213,
+    "targets": [
+      200,
+      920
+    ],
+    "stops": [
+      194.7853836059494,
+      194.78538360544917
+    ],
+    "full_bank_comparison": "All 213 coordinates match Python exactly for stopped and idle states, both targets; independent post-run validator exit 0",
+    "scope": "Hosted public running requests, not pointer coverage",
+    "screenshot_inspected": true
+  },
+  "rejection": {
+    "checks": 5352,
+    "failures": 96,
+    "world_precision_bits": 64,
+    "process_exit_observed": 1
+  },
+  "files": {
+    "_build_checks/counter-tens-python-a3dde6f.log": "9e9f1030c9516877a462fc9517c92ce6f772f91460dbd06875798eb81672b918",
+    "_build_checks/counter-tens-python-a3dde6f.json": "82979b6eb58a93f5f7397ca26e61891768924ef88dab66c1f56e9d0a127fdeb0",
+    "_build_checks/counter-tens-expanded-arithmetic-trial-2026-09-22.log": "99ec5625b004e1d9e7bb387277a6109d039f425b1a04721355df5ec87a6bb700",
+    "_build_counter_tens_trial_a3dde6f/manifest.json": "9c275092cc6effb800ffa8c79e950e666416d9f58fd4a4b3395700a239828e5f",
+    "_build_counter_tens_trial_a3dde6f/counter-browser-acceptance.json": "33be8cbeb586dc863d2a8bd676755959b3124c804f46942cd80134ad05a4dc81",
+    "_build_counter_tens_trial_a3dde6f/counter-withdrawal-stopped.png": "347c2a7b040ef6e8d8477cc18d645d7c899764f8ca5bc864681e9f13eb9dbf3b",
+    "_build_checks/counter-tens-full-bank-comparison-a3dde6f.log": "eab0b3eb657d110670a66bbfbeee1752542e050bbc8ac751506f981699d1e4d3",
+    "_build_checks/counter-2-support-heights-world64-faceted-2026-09-22.log": "4d40cce4aeb2ab92aa43ae5c85aa5c03c72c42eafd12bcb7ba1041ed4b177bac"
+  }
+}

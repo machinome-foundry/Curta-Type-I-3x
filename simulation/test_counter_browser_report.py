@@ -10,7 +10,7 @@ def fixture():
     state = {'crank_rotation': 174.78, 'main_drive.crank.turn': -174.78,
              'transmission.turns.ones.turn': 167.6}
     idle = dict(state, crank_rotation=174.73, **{'main_drive.crank.turn': -174.73})
-    return {'errors': [], 'prepared': dict(state, crank_rotation=170,
+    return {'errors': [], 'coordinate_ids': list(state), 'prepared': dict(state, crank_rotation=170,
                                           **{'main_drive.crank.turn': -170}),
             'cases': [{'target': target, 'status': 'blocked', 'replay': True,
                        'relief_status': 'completed', 'retry_status': 'blocked',
@@ -19,6 +19,27 @@ def fixture():
 
 
 class CounterBrowserReportTest(unittest.TestCase):
+    def test_counter_tens_uses_its_own_preparation_and_request_bounds(self):
+        report = fixture()
+        report['coordinate_ids'][-1] = 'transmission.turns.tens.turn'
+        for bank in [report['prepared'], *[case[name] for case in report['cases']
+                                          for name in ('stopped', 'idle', 'retry')]]:
+            bank['transmission.turns.tens.turn'] = bank.pop('transmission.turns.ones.turn')-20
+            bank['crank_rotation'] += 20
+            bank['main_drive.crank.turn'] -= 20
+        for case in report['cases']:
+            case['target'] += 20
+        validate_report(report, deepcopy(report['cases']), station=2)
+        report['prepared']['transmission.turns.tens.turn'] += .1
+        with self.assertRaises(AssertionError):
+            validate_report(report, station=2)
+
+    def test_every_exported_coordinate_is_required_without_a_python_report(self):
+        report = fixture()
+        report['coordinate_ids'].append('unrelated_dial')
+        with self.assertRaises(AssertionError):
+            validate_report(report)
+
     def test_complete_report_and_full_bank_comparison(self):
         report = fixture()
         validate_report(report, deepcopy(report['cases']))

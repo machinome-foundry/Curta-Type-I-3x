@@ -5,6 +5,9 @@ adopted. This is one raised-stack action order, not complete counter coverage.
 """
 
 import unittest
+import json
+import os
+from pathlib import Path
 
 from machinome.simulation import Sim
 from simulation.running import OperatingCurta
@@ -17,6 +20,16 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 class OperatingCounterTensLockoutTest(unittest.TestCase):
     model = OperatingCurta
+
+    @classmethod
+    def setUpClass(cls):
+        cls.acceptance = []
+
+    @classmethod
+    def tearDownClass(cls):
+        output = os.environ.get('CURTA_COUNTER_TENS_ACCEPTANCE_REPORT')
+        if output:
+            Path(output).write_text(json.dumps(cls.acceptance, indent=2)+'\n')
 
     def test_partial_input_withdrawal_stops_before_complete_print_contact(self):
         sim = Sim(self.model(), dt=.1, meshes=True, record=64)
@@ -43,13 +56,18 @@ class OperatingCounterTensLockoutTest(unittest.TestCase):
                 mesh_solid(leaves[UPPER].mesh, world_precision=64)
                 ^ mesh_solid(leaves[BELL].mesh, world_precision=64).rotate((0, 0, -.2))), 0)
             stopped = sim.snapshot()
+            stopped_state = dict(sim.state)
             sim.restore(prepared)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
             self.assertEqual(sim.snapshot(), stopped)
             self.assertEqual(sim.move('crank_rotation', by=-.05).status, 'completed')
+            sim.run(.1)
             self.assertAlmostEqual(sim.state['crank_rotation'], angle-.05, places=7)
+            idle_state = dict(sim.state)
             self.assertEqual(sim.move('crank_rotation', to=target).status, 'blocked')
             self.assertAlmostEqual(sim.state['crank_rotation'], angle, places=7)
+            self.acceptance.append({'target': target, 'stopped': stopped_state,
+                                    'idle': idle_state, 'replay': True})
             print(f'PASS counter tens withdrawal: target={target}, stop={angle}', flush=True)
 
 
