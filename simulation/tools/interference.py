@@ -4,7 +4,9 @@ Run: python -m simulation.tools.interference
 Uses the native Manifold result's status and volume. Converting a boolean result
 back through Trimesh's automatic vertex welding can destroy small valid regions
 at nearly coincident source faces; that conversion is deliberately unnecessary.
-This is a faceted diagnostic, not an exact-kernel certification.
+This is a faceted diagnostic, not an exact-kernel certification. Use
+--world-precision 64 for acceptance: the historical 32-bit world cast can
+collapse a positive local-STL/placement contact to a coincident plane.
 """
 
 import json
@@ -50,7 +52,9 @@ def world_solids(root, include_flexible=False, selected=None):
     return found
 
 
-def inventory(root, exact=False, progress=False):
+def inventory(root, exact=False, progress=False, *, world_precision=32):
+    if world_precision not in (32, 64):
+        raise ValueError('world_precision must be 32 or 64')
     meshes = {path: node.mesh for path, node in rigid_leaves(root)}
     bounds = {path: mesh.bounds for path, mesh in meshes.items()}
     solids, overlaps, refusals = {}, {}, {}
@@ -60,9 +64,14 @@ def inventory(root, exact=False, progress=False):
     def solid(path):
         if path not in solids:
             mesh = meshes[path]
-            value = manifold.Manifold(manifold.Mesh(
-                np.asarray(mesh.vertices, dtype=np.float32),
-                np.asarray(mesh.faces, dtype=np.uint32)))
+            if world_precision == 64:
+                value = manifold.Manifold(manifold.Mesh64(
+                    np.asarray(mesh.vertices, dtype=np.float64),
+                    np.asarray(mesh.faces, dtype=np.uint64)))
+            else:
+                value = manifold.Manifold(manifold.Mesh(
+                    np.asarray(mesh.vertices, dtype=np.float32),
+                    np.asarray(mesh.faces, dtype=np.uint32)))
             if value.status() != manifold.Error.NoError:
                 raise ValueError(f'{path}: {value.status()}')
             solids[path] = value
@@ -99,6 +108,7 @@ def inventory(root, exact=False, progress=False):
                 print(json.dumps({'pair': key, 'refusal': str(error)}),
                       file=sys.stderr, flush=True)
     return {'rigid_occurrences': len(meshes),
+            'world_precision_bits': world_precision,
             'kernel': 'OCCT with source-STL interfaces' if exact else 'Manifold, faceted',
             'overlap_mm3': overlaps, 'refusals': refusals,
             'nonpositive_contact_sums_mm3': contact_sums}
@@ -111,6 +121,8 @@ if __name__ == '__main__':
                         help='Inventory the initial retained operating assembly')
     parser.add_argument('--progress', action='store_true',
                         help='Write each positive pair/refusal to stderr as measured')
+    parser.add_argument('--world-precision', type=int, choices=(32, 64), default=32,
+                        help='Use 64 to preserve world placements; 32 reproduces historical reports')
     args = parser.parse_args()
     logging.disable(logging.INFO)
     if args.operating:
@@ -125,4 +137,5 @@ if __name__ == '__main__':
         root.set_state(time=0, **root.instructions['Rest'].targets)
         root.assemble()
         root.build_stls()
-    print(json.dumps(inventory(root, exact=args.exact, progress=args.progress), indent=2))
+    print(json.dumps(inventory(root, exact=args.exact, progress=args.progress,
+                               world_precision=args.world_precision), indent=2))
