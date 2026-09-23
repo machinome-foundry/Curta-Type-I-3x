@@ -1,8 +1,40 @@
 # Actual standalone-page interaction evidence
 
+## September 23: adopted simulation-only loop mounting
+
+All **26 declared controls** on the adopted 216-coordinate operating model
+now have passing independent physical gestures in the ordinary standalone
+page. The [current evidence index](evidence/standalone-loop-controls-2026-09-23.json)
+checks the exact control set, all 25 initial input readouts and identical
+production manifest, index and viewer-bundle hashes. It combines 22 validated
+cases from an explicitly interrupted broad scan with four successful targeted
+probes (marker 5, selectors 2/3 and the reversing knob). The interrupted source
+report remains pending; the index accepts its individually checked cases,
+not its overall run. The index SHA-256 is
+`3d5985900a1d09bf8f1b9c1198ea878c3543b7a51f2ec1e83529b41a48e6b830`.
+
+Each accepted gesture observes release, a terminal outcome, admitted movement,
+unchanged other visible inputs and no page errors. The four targeted captures
+are inspected and show the complete assembly. The marker's numeric row is
+below the viewport and is checked through its DOM readout, not visible pixels.
+Coverage includes both distinct clearing-ring handles, a partial crank drag
+and the actual part-button's full revolution. This establishes independent
+reachability, not every full stroke, action ordering or hidden state value.
+
+A fresh wrong-order standalone test first uses the visible crank input to
+reach 90 degrees, then physically drags the reversing knob. It stops at
+1.0595 mm with `blocked after -0.848 mm`; all other 24 visible inputs remain
+unchanged. Release, terminal outcome, zero page errors, process exit zero and
+the complete-assembly screenshot pass. Report
+`_build_checks/operating-loop-production-standalone-wrong-order-01.json`
+SHA-256 `b295c50a825a81a0268f80dbbda7118cd551fcfc706a52680f7eeb6f9580a75f`;
+PNG `8d57ce05101685924b1670dd0bca12a64b33ec385c118a368c3eff0b8e4546a7`.
+Full-bank hosted parity is recorded separately in the
+[mounting record](clearing-loop-replacement-2026-09-23.md).
+
 ## September 23: fitted-shoulder production continuation
 
-All **25 currently declared controls** now have passing independent physical
+All **25 controls declared at this historical stage** have passing independent physical
 gestures on the same unmodified fitted-shoulder export and viewer bundle.
 The [consolidated evidence index](evidence/standalone-current-controls-2026-09-23.json)
 matches the manifest's exact control-name set and all 24 driver names; each

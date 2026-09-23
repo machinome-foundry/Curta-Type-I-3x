@@ -439,5 +439,75 @@ matrix, revalidates each accepted case, checks the exact export hashes and
 program identity, requires fresh default input readouts, and rejects missing
 or duplicate controls. It never changes a source report's status. Its missing-
 module baseline is red; 12 coverage/matrix/report tests pass after
-implementation. Targeted browser completion and the final index remain
-pending here; these unit tests do not supply missing pointer evidence.
+implementation. The subsequent targeted completion below supplies the four
+missing cases; these unit tests themselves supply no pointer evidence.
+
+## Completed default standalone coverage and reverser refresh
+
+The four targeted standalone probes all exit zero with passing reports:
+marker 5 reaches -2.0000 degrees, selectors 2/3 reach 4.0000 and 1.0000,
+and the reversing knob moves independently after an ordinary camera orbit.
+All require actual part hover, pointer motion, observed release, a terminal
+outcome, unchanged other visible inputs and no page errors. Their four
+complete-assembly captures are inspected. The durable index
+`simulation/docs/evidence/standalone-loop-controls-2026-09-23.json` validates
+the exact 26-control set across five pinned sources, including the 22 accepted
+cases in the still-pending interrupted report. Its SHA-256 is
+`3d5985900a1d09bf8f1b9c1198ea878c3543b7a51f2ec1e83529b41a48e6b830`.
+The index retains each raw report/image hash, input readouts and source status.
+This is independent reachability, not continuous-sequence or full-stroke
+acceptance for every control.
+
+Fresh standalone wrong-order evidence on the same default export uses the
+visible crank input to reach 90 degrees, followed by an actual reversing-knob
+drag. The lever stops at 1.0595 mm, `blocked after -0.848 mm`, with all other
+24 inputs unchanged. Release, terminal checks, zero errors, process exit zero
+and inspected complete-assembly capture pass. Report SHA-256:
+`b295c50a825a81a0268f80dbbda7118cd551fcfc706a52680f7eeb6f9580a75f`;
+image `8d57ce05101685924b1670dd0bca12a64b33ec385c118a368c3eff0b8e4546a7`.
+
+The fresh hosted reverser test also passes nine Python/browser cases:
+prepare, pre-contact, blocked, retry, replay, relief, reverse-first,
+alternate crank and alternate withdrawal. Each compares all 216 IEEE-754
+coordinate encodings and the terminal status; all nine are identical.
+The actual pointer attempt completes two approach commands and then blocks
+at 1.0594999999999941 mm, with all commands retired and no page errors.
+The root independently checks every bank/status comparison and inspects the
+close hosted capture (not a whole-assembly overview). Report
+`_build_checks/operating-loop-production-reverser-hosted-01.json` SHA-256
+`83a4ea4d0d126aa41f811d314f29afba52074a353a6012c5c81bedd828b40e7f`;
+image `3d64bea365cd1103828ef3553e9fdb5f9a6b4c75f9f21b985eff1ef04de7c4c9`.
+All use the production manifest `68f16a67…`, program `9d5a13cc…`, viewer
+bundle `4e458033…` and normal 1/240-second timestep. Concurrent functional
+browser runs are CPU-isolated, not performance benchmarks.
+
+## Current solver-only performance diagnostic
+
+A separate Sol-agent diagnostic loads this same production manifest into the
+viewer-main `bcbf55a` Engine without WebGL. It triggers the document's normal
+`Turn crank` instruction (relative 360°, duration 2 s) and advances 480 ticks
+at the unchanged 1/240 s timestep, pinned to CPU 14. Loading takes 1.688488
+process-CPU / 1.692676 wall seconds separately. The instruction takes
+296.746115 process-CPU / 297.283138 wall seconds; it completes at tick 480,
+clock 2, crank 360, with 216 coordinates and no pending commands.
+
+These figures are reconstructed from terminal JSON output: there is no
+retained raw log, profile or dedicated full-turn harness. The diagnostic
+uses the archived viewer `reuse-constant-block-motion/curta_cache_probe.mjs`
+in-memory esbuild/Engine-loading pattern, not that reference file unchanged.
+That reference file's SHA-256 is
+`1b022881301cb9dfb898062e50eaaf438390692f1e3078c7b5ad45d121ae1e94`.
+For reproduction, load the pinned production manifest with
+`Engine.load(doc, {dt: 1/240, record: null})`, measure `trigger('Turn crank')`
+and 480 `advance(1)` calls using `process.cpuUsage()` and `performance.now()`.
+Check requested/admitted travel 360, terminal status, tick/clock and empty
+`commands()`. Hash sorted state names as UTF-8 plus NUL followed by each
+float64 little-endian value; the reported final bank hash is
+`bbd6fcc4135e8d66371d814b7bf20c6bc66eb2350ab0d138da59173507870ab5`.
+
+The process overlaps other acceptance work and is not a paired speedup
+benchmark. Its CPU-only duration is comparable to the standalone button's
+approximately 248.75-second case interval (which also includes reset/hover);
+solver work alone can account for much of the delay. Subtracting these
+separate runs would not measure rendering cost. No additional optimization
+is validated by this diagnostic, and real-time operation is not claimed.

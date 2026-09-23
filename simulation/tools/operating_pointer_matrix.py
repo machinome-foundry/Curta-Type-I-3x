@@ -26,6 +26,11 @@ INPUTS = {**{f'digit_{n}': f'set digit {n}' for n in range(1, 9)},
           'loop_deployment': 'deploy loop (simulation-only mounting)'}
 
 
+def checkpoint_report(path, report):
+    """Save diagnostic progress without changing the run's acceptance status."""
+    path.write_text(json.dumps(report, indent=2)+'\n')
+
+
 def validate_attempt(case):
     name = case['input']
     assert case['release']['observed'], 'viewer pointer release was not observed'
@@ -114,6 +119,7 @@ def main():
                 curta.run().onOutcome(row=>pointerOutcomes.push(row));
                 return curta.run().dt();
             }''', document_path.name)
+            checkpoint_report(args.report, report)
             for name in args.inputs:
                 report['active_input'] = name
                 print(json.dumps({'starting': name}), flush=True)
@@ -181,6 +187,7 @@ def main():
                         continue
                     validate_case(case)
                     report['cases'].append(case)
+                    checkpoint_report(args.report, report)
                     print(json.dumps({'input': name, 'outcome': case['outcomes'][-1],
                                       'admitted': case['after'][name]-before[name]}), flush=True)
                     passed = True
@@ -196,6 +203,7 @@ def main():
             page.screenshot(path=str(args.report.with_suffix('.png')))
             report['validation'] = 'passed'
         except Exception as error:
+            report['validation'] = 'failed'
             report['failure'] = f'{type(error).__name__}: {error}'
             try:
                 report['failure_context'] = page.evaluate('''async () => ({
@@ -208,7 +216,7 @@ def main():
             raise
         finally:
             browser.close()
-            args.report.write_text(json.dumps(report, indent=2)+'\n')
+            checkpoint_report(args.report, report)
 
 
 if __name__ == '__main__':
