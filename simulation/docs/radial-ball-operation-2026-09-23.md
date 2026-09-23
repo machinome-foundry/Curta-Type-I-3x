@@ -264,6 +264,30 @@ seconds versus 4.55 with the static reference. Independent framework/viewer
 performance work remains in their own repositories and must preserve this
 verified behavior.
 
+The later expanded reverser/clearing process also completed successfully:
+eight tests in 3,189.725 s, including all 24 carriage-position × subtraction ×
+counter-reversal combinations and the all-digit/all-station bidirectional
+clearing-law matrix. Log `operating-controls-reverser-clearing-a139fe0.log`,
+SHA-256 `67343c5b266e66c13795e5f1477c19a0e82be3c7e4fd1ea23729508825343779`.
+It used the frozen production graph and pinned prerequisite framework
+`f4c48f6`; it is not relabelled as a performance-candidate run. The subsequent
+paired package optimization and its exact-state gates are recorded in the
+[reconciliation continuation](reconciliation-2026-09-22.md).
+
+The new full-production ratchet case reaches 10 degrees with input 3, then
+requests reverse travel to zero. It checks the independent measured stop
+9.342758620689654 degrees, physical crank sign, seated pawl, unchanged operand,
+bit-identical complete bank on three retries, and exact snapshot replay.
+The same contract fails at the blocked-status assertion when a declarative
+negative-control root omits only the crank's pawl restraint. The two paired
+tests pass in 50.778 s on integrated framework `23857e9`; neither production
+geometry nor its graph changed. Log
+`operating-full-root-ratchet-paired-262378b.log`, SHA-256
+`80254f7084a72ffbb4ed60202cf226c7e20152281ebe521b1098ba873310f1a7`.
+The first negative-fixture attempt defined CAD classes through stdin and
+failed construction because no source path existed; that is a harness error,
+not the required mechanical negative. Its failed log is retained separately.
+
 After this local completion, carry-guide contacts, clearing-loop release, zero-cam clip,
 input-selector fit and whole-machine interaction/geometry acceptance remain
 separate open work. The umbrella's 12/23 tasks are not advanced by this record.

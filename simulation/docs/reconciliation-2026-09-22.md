@@ -1,5 +1,57 @@
 # Operating Curta reconciliation and completion
 
+## September 23: retained radial ball and latest integration
+
+The scoped [radial-ball adoption](radial-ball-operation-2026-09-23.md) is
+complete at project `64719ce`, with the subsequent native-witness proof
+record at `262378b`. This is the current 214-coordinate production graph,
+not the earlier static-ball 213-coordinate baseline below. Overall mechanical
+and interaction acceptance remains open; source geometry findings are not
+waived by successful branch integration.
+
+Framework main is `23857e9`: the successful-prefix reuse implementation
+`b99c3f1` (plan `e64eb16`) was reconciled in its isolated worktree with the
+native boundary-witness correction `5e1404e`. The nonconflicting merge
+preserves both histories. The combined gate passed 3,606 tests, four skips
+and 2,131 subtests; all 34 strict specs and the post-integration 23-test smoke
+gate pass. Actual raised-carriage contact/replay passed again after merging;
+all four production radial-ball history tests passed on the optimization
+before that geometry-only merge. Five unchanged production crank ticks
+improved from 32.916 to 19.307 CPU seconds on CPU 14, with identical full
+214-coordinate bank SHA-256
+`5d22f014f27c1f19098dd20f472ab804610bf1c8ee47bafe98360641b7f16f78`.
+The cache does not change sampling, timestep, laws or tolerances. This is
+still not real-time execution.
+
+Viewer runtime `572648f` (plan `3b65215`) supplies its separately owned
+successful-prefix cache. Final bundle SHA-256 is
+`0d602f50532ffe3c906b0bea285352cf60c5165da9b77d818d948f75f5e113df`.
+All eight production hosted-browser stages match the frozen Python oracle
+at every one of 214 coordinates, including outward push and retained return.
+Focused 203-test, type-check and 1,480-test functional gates pass. Two earlier
+broad runs each passed 1,492/1,493, failing only the host-sensitive 3,000-tick/s
+floor at 2,991 and 2,980; the same floor passed isolated at 3,146. Those broad
+runs remain failed evidence. Five free crank ticks measured 6.086→4.455 CPU
+seconds; ordered Bound samples and bank bits are identical. The raised-stop
+case preserves its trace but does not demonstrate a reliable speedup.
+The viewer archive `2026-09-23-follow-prefix-replay-cache/evidence.md`
+preserves exact scope, error-order checks, trace digests and artifact paths.
+
+Viewer main subsequently reached `08d70fb` through two evidence-only merges:
+`4a6508f` brings in rejected clean-rebind tip `4ecccb1`, and `08d70fb` brings
+in rejected flat-scope tip `06dee52`. Their original negative reports are
+retained, and their unaccepted plans live under `workflow/archive/rejected/`,
+not active OpenSpec changes or accepted baseline specifications. The reviewed
+diff contains only those records; no runtime code or bundle changed. Every
+viewer and project branch is now an ancestor of its own main. The separately
+audited patch-equivalent/superseded framework tips described below remain
+preserved; unrelated framework branches are outside this reconciliation.
+
+All framework edits used isolated worktrees. The framework primary's
+untracked `docs/examples/v8-engine/`, the project video and inspection image,
+and unrelated shop files remain untouched. No push, publication or branch
+deletion was performed.
+
 The pilot requested that all prior Curta work be integrated into the owning
 repositories' local main branches, followed by completion of the operating
 calculator. The pilot also authorized autonomous framework/viewer corrections
