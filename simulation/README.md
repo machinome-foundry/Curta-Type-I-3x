@@ -56,6 +56,11 @@ reliefs preserve the moving parts and supports; native and world64 full-travel
 checks, conservative between-sample enclosures and six exact demonstration
 replays pass. Separate guide/slider obstructions remain open. This is local
 frame-clearance completion, not whole-machine acceptance.
+The [thrust-ring passage](docs/thrust-ring-passage-2026-09-23.md) is also
+adopted, preserving both support seats while clearing the radial-ball trial.
+Production support/lift/shift/replay checks pass in both kernels. The ball's
+new motion itself is not yet adopted; its remaining interfaces and final
+operating acceptance are still being verified.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production

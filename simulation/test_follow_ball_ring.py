@@ -1,4 +1,4 @@
-"""The radial follower still owes clearance of its actual seated thrust ring."""
+"""The radial trial must clear its actual seated production thrust ring."""
 
 import logging
 import unittest
@@ -13,8 +13,10 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 
 class FollowBallRingTest(unittest.TestCase):
+    model = RadialBallTrial
+
     def test_actual_outward_following_clears_the_seated_ring(self):
-        sim = Sim(RadialBallTrial(), dt=.1, meshes=True)
+        sim = Sim(self.model(), dt=.1, meshes=True)
         command = sim.move('crank_rotation', to=90, duration=.5)
         sim.run(.5)
         self.assertEqual(command.status, 'completed')

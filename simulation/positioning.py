@@ -5,6 +5,7 @@ from machinome.motion.joints import Prismatic
 from machinome.motion.ports import Port
 from simulation.standard.layers import CarriagePositioning as SourcePositioning
 from simulation.standard.parts import ThrustRing
+from simulation.thrust_ring_parts import BallPassageThrustRing
 from simulation.flexibles import MountedCarriageSpring
 from math import cos, sin, radians
 
@@ -38,11 +39,12 @@ class CarriagePositioning(SourcePositioning):
 
 
 class SeatedCarriagePositioning(CarriagePositioning):
-    """Seat the unchanged ring and source-sized coil on their actual supports.
+    """Seat the locally fitted ring and source-sized coil on their supports.
 
     The ring rises with the collar, while the sleeve stays on the main shaft.
     The source-pose bench is retained above as an independent negative control.
     """
+    thrust_ring = BallPassageThrustRing(slide=Prismatic(axis=(0, 0, 1)))
     spring_compression = CarriagePositioning.lift.drives(
         CarriagePositioning.carriage_spring.height,
         ratio=-1, offset=SPRING_TOP - SPRING_BOTTOM)

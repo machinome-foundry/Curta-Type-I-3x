@@ -244,6 +244,18 @@ spring/fork capture and six exact demonstration replays pass. The separate
 unchanged guide/slider contacts remain unresolved. This is a simulation fit,
 not manufacturing advice or whole-machine clearance certification.
 
+## Positioning-ball thrust-ring passage — F29
+
+The [bounded ring passage](thrust-ring-passage-2026-09-23.md) removes
+2.428916 mm³ only from the lower inner lip for the unchanged R3.75 ball's
+supported radial path. The complete upper spring seat, outer collar support,
+installed heights and all other parts remain unchanged. Native continuous
+enclosure, 2,501 native/world64 poses, negative controls and production
+seat/capture/lift/shift/replay checks pass. The paired radial addition replay
+removes exactly the ball/ring contact and changes no other pair. Only the ring
+is adopted: production ball motion and whole-machine acceptance remain open.
+Upstream assets are unchanged; this is not manufacturing or strength advice.
+
 ## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)
