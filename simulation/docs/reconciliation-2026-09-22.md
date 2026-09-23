@@ -223,3 +223,27 @@ The later ball-orbit candidate was rejected by its whole-machine survey and
 removed from production before commit. Production therefore retains 213
 coordinates; the [negative trial and radial investigation](positioning-ball-following-2026-09-22.md)
 preserve that finding without implying its scoped tests finished the model.
+
+## Repeated path-bind cache integrated
+
+Framework main advances to `a8fa3ce` through isolated
+`WTs/reuse-identical-path-binds`, planning `40931d5`, implementation/archive
+`a8fa3ce` and ADR-140. A per-path last-successful-bind cache reuses only
+identical graph identity, moving coordinates and finite built-in input bits.
+Uncertain inputs retain the original eager behavior; failed binds cannot
+publish cache entries. The pinned current Curta's first 48 default ticks
+decrease from 32.213 to 26.602 process-CPU seconds (17.4%), with exact
+213-coordinate bank and 6,240 ordered Bound samples. Complete turns and
+stop/replay pass at the project test cadence; no full default-cadence turn
+timing is claimed.
+
+The framework gate passes 3,570 tests and 2,121 subtests with four skips;
+post-integration smoke passes 19 tests and 15 subtests. The preceding
+`a500a99` worktree remains available for already-pinned project trials.
+Primary still contains only the pilot's preserved untracked V8 directory.
+
+Viewer analysis finds that its evaluator already skips the corresponding
+unchanged bindings (341,214 of 353,850 measured calls), so no redundant
+runtime change was made there. Evidence-only commit `c5541f1` is on viewer
+main; the verified bundle is unchanged. These are local integrations, not
+pushes or releases.

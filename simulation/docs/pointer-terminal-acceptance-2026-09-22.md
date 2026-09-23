@@ -1,5 +1,28 @@
 # Pointer completion is a separate acceptance gate
 
+## Fresh complete non-crank matrix
+
+All **23 non-crank controls** now pass in one production-export hosted-browser
+run: eight selectors, ten decimal markers, crank lift, reversal, carriage lift,
+seated carriage shift and seated clearing. This uses the unchanged default
+`dt=1/240`, program `3e1d5051...` with all 213 coordinates, and integrated
+standing-cache bundle `0d163827...` in `_build_operating_standing_cache_884b01e`.
+Every case uses a real hit/handle, observes release, waits for an empty pending
+command bank and a completed/blocked outcome, and checks other drivers and all
+register turns unchanged. No page errors occur; process exit zero is observed.
+The final screenshot is inspected: it is a close control view cropped at top
+and bottom, not a whole-machine alignment view or 23 separate pose screenshots.
+
+Report `_build_checks/standing-cache-production-all-noncrank-pointers-884b01e.json`
+SHA-256: `e0636948315868a93cd9e0d20fcb650a9e7fb82705ce27172e20e903ba218073`.
+Named no-op attempts remain in the report and are not counted as coverage.
+Marker neighbours, seated carriage shift and clearing encounter their declared
+physical stops. Crank rotation/full-turn arithmetic, released-carriage operation,
+wrong-order sequences and the full standalone-page matrix remain separate
+gates. This result is not whole-machine mechanical clearance.
+
+## Earlier diagnostic history
+
 `tools/operating_pointer_matrix.py` exercises actual selector and marker
 parts through public hosted-viewer controls, at the unchanged default
 `dt=1/240`. It uses camera changes and real nearest-hit gesture targets, not
