@@ -15,8 +15,8 @@ default model. Production contact/replay, six arithmetic tests, all four crank
 modes and fourteen interlock/marker checks pass. Fresh hosted and unmodified
 standalone tests show the actual lever stopping on a wrong-order request;
 hosted Python/browser banks agree bit-for-bit. This is a scoped operating fix,
-not whole-machine completion: the remaining geometry findings and final full
-interaction matrix are still open.
+not whole-machine completion: the remaining geometry findings are still open.
+All 26 controls now have actual standalone and hosted pointer evidence.
 
 ## Operate the current model
 
@@ -56,11 +56,10 @@ pair. Reload/re-export older pages to pick up the compatible bundle; a version-1
 model document alone does not establish viewer compatibility. Execution is
 still slower than real time. The
 [latest acceptance record](docs/clearing-loop-replacement-2026-09-23.md)
-distinguishes tested arithmetic, replay and actual-pointer behavior from the
-unfinished full interaction matrix and whole-machine geometry. OpenSpec progress
-is 15/23 tasks; the umbrella change remains active. The mounting task is
-complete; the final hosted control batch and current-root demonstration
-refresh are still running.
+distinguishes tested arithmetic, replay and actual-pointer behavior from
+whole-machine geometry. OpenSpec progress is 16/23 tasks; the umbrella change
+remains active. Mounting and interaction acceptance are complete; the
+current-root demonstration refresh is still running.
 
 ### Separate operating demonstrations
 

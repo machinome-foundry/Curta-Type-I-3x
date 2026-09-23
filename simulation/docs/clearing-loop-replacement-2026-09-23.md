@@ -481,7 +481,7 @@ All use the production manifest `68f16a67…`, program `9d5a13cc…`, viewer
 bundle `4e458033…` and normal 1/240-second timestep. Concurrent functional
 browser runs are CPU-isolated, not performance benchmarks.
 
-## Current solver-only performance diagnostic
+## Final hosted crank acceptance and solver-only diagnostic
 
 The hosted crank-pointer refresh subsequently passes both a real partial-turn
 handle drag (1 degree) and the actual part-button's full 360-degree instruction.
@@ -532,3 +532,52 @@ approximately 248.75-second case interval (which also includes reset/hover);
 solver work alone can account for much of the delay. Subtracting these
 separate runs would not measure rendering cost. No additional optimization
 is validated by this diagnostic, and real-time operation is not claimed.
+
+## Checkpointed hosted noncrank refresh
+
+The first unsplit 24-control process is terminated externally before producing
+its final report (exit 143). The cause is unknown, and its progress is not
+accepted as a passing matrix. A harness-only correction saves a pending
+checkpoint after mounting and every validated case, without changing pointer
+requests, timestep, assertions or source report statuses. Its missing-helper
+baseline fails and the checkpoint tests subsequently pass. The repeat uses
+two bounded batches on CPU 9/14/15, independently of other functional tests.
+
+Batch A passes all twelve inputs (selectors 1–8, markers 1–4), with 16
+attempts, no page errors and process exit zero. The root independently
+revalidates each case and inspects the final complete-assembly screenshot.
+Some marker readouts are below the viewport; their full banks and terminal
+outcomes are report evidence, not visible numeric pixels in this capture.
+Manifest, program identity and bundle are the exact production assets pinned
+above, and the timestep is 1/240 second.
+
+- `_build_checks/operating-loop-production-hosted24-a-01.json`:
+  `0b74c967dd65f0271a173e40757877449bef16ac299c6e43afd9ffd5b32450e2`.
+- Corresponding PNG:
+  `2b355022b1f5d7e50208dbe2028ed939c61b065f883e19052bae1789841645c8`.
+- Corresponding log:
+  `b01896b56e91f684d4565dd3e74ce34d36865479b6bd1078da25990bf2544a35`.
+
+Batch B subsequently passes its twelve inputs (markers 5–10, crank lift,
+reverser, carriage lift/shift, clearing and loop deployment), with 19 attempts,
+no page errors and process exit zero. Its inspected final image is a close
+control view with the top grip and bottom cropped, not a whole-assembly
+overview. It shows the two distinct loop handles. Batch A and both crank
+captures provide complete-assembly views separately.
+
+- `_build_checks/operating-loop-production-hosted24-b-01.json`:
+  `2850c8d472a37a2f2e651a6a050e25abfeef290fb717dca1fba0577ced57147f`.
+- Corresponding PNG:
+  `6b56907b655db390b4c098b647fc3391e6ac3e9a9abc022d558de0844b51c6a3`.
+- Corresponding log:
+  `cc20a10332768cb82ef8321c2d162161b081e4549a49fb60e9af42e51e39f0e7`.
+
+Both the Sol verifier and root independently revalidate the exact union:
+24 unique noncrank inputs, no missing/duplicate case, identical production
+document/program/bundle, normal timestep, all terminal case assertions and
+all 24 initial 216-coordinate banks equal to the crank baseline bit-for-bit.
+Together with the two actual crank controls, these establish all 26 hosted
+controls. The separate standalone index covers the same complete control set.
+Fresh wrong-order, partial-crank and deployment/end-pose evidence supplies
+the additional task 6.5 checks; independent pointer coverage does not claim
+every possible action sequence or a whole-machine contact certificate.

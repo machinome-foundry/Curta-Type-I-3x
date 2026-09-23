@@ -14,11 +14,18 @@ main bundle matches the browser-tested candidate exactly.
 The adopted root has 216 coordinates and 26 controls. Native and faceted
 mounting checks, installed travel/capture/stops, seven-state preservation,
 default operation, historical fixture witnesses and the 20-test production
-interlock/marker/ratchet batch pass. Actual loop gestures pass in the hosted
-and unmodified standalone pages; the full production matrices are still
-running. The linked record distinguishes trial arithmetic from default-root
-checks and pins the evidence. This does not close the whole-machine geometry
-inventory or claim recovery of the original elastic clipping motion.
+interlock/marker/ratchet batch pass. All six default-root arithmetic tests
+also pass. All 26 controls now pass actual pointers in both hosted and
+unmodified standalone pages, including distinct loop handles and both crank
+actions. The fresh nine-case reverser comparison matches all 216 coordinate
+encodings and terminal statuses between Python and browser; wrong-order
+physical gestures stop without moving other inputs. The full hosted button's
+state also matches the independent solver-only diagnostic. The linked record
+pins reports, inspected images, asset hashes and interrupted runs excluded
+from acceptance. Mounting and interaction tasks 6.4/6.5 are complete; the
+fresh current-root demonstration replay is still running. This does not close
+the whole-machine geometry inventory, claim real-time performance or recover
+the original elastic clipping motion.
 
 The refreshed ancestry check finds every project and viewer branch on its
 own main. The same two older Curta framework tips remain accounted for by
