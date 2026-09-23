@@ -101,7 +101,7 @@ Framework validation passed 3,595 tests and 2,131 subtests, with four skips;
 98 post-archive focused tests and seven subtests also passed. The primary
 checkout still contains only the untouched untracked V8 examples.
 
-The final guard source SHA-256 is
+The initial integrated guard source SHA-256 is
 `9eb6be3b251ec92473a99096f884f323d6086e690e315a309bf38c7c4d8b2e93`.
 Production geometry passed all three tests against this source in 60.824 s,
 including strict interior witnesses for both outer axial capture directions.
@@ -128,6 +128,34 @@ and `operating-radial-ball-final-guard-neighbours-group2-9eb6be3.jsonl`,
 SHA-256 respectively
 `8a972edb62c4616c2841f344c3a0e980e764cbc3948efd6598220d8b6a1b98cd`
 and `3ca5e196eb7829a29e8e088b81644d1ef1cbef786f4ad2aa67fcd075d7377764`.
+
+### Boundary-witness correction and repeated proof
+
+The later [carry-guide diagnostic](carry-guide-contact-2026-09-23.md) exposed
+zero-tolerance native classification calling a nominal boundary point IN.
+Framework `5e1404e` resolves this by requiring a witness's distance from every
+face to exceed that face's native uncertainty. It does not zero a positive
+common or introduce an overlap allowance. The corrected guard source SHA-256
+is `1529c4c75fff7e1879752dee2d22597d0afb2262ebdfeeebf72cc09ea6ffc7dc`.
+
+The unchanged production ball passed all three geometry tests again in
+56.727 s, retaining the two strict-interior negative controls. The continuous
+native bell/ball proof passed 2,441 checks over 1,251 certified intervals in
+528.065 s, refining 187 refused coarse enclosures. The conservative
+mesh/native-frame proof again passed 667 checks over 604 intervals, in
+16.930 s. Both interval proofs leave the retained bank unchanged. The lower
+refinement count reflects resolved boundary candidates, not fewer requested
+path intervals or changed ball/profile geometry. Logs and SHA-256:
+
+- `operating-ball-resolved-witness-616c7bd.log`:
+  `ba46c9c6f25534238b3af51a6c0b6112ef9bbf4f686e76938a321b2b68171e95`.
+- `operating-ball-resolved-witness-interval-616c7bd.jsonl`:
+  `d57230f6de6d5a4d874ffec1fa337db3e3efefb84e4e568107fb72a2065fc1b3`.
+- `operating-ball-resolved-witness-mesh-616c7bd.jsonl`:
+  `8f2001e8c2060b63cb4ffe79b0dbf5790b9e56c008e78937d1c6a271b3efc827`.
+
+The six-demo neighbour audits above remain explicitly pinned to the earlier,
+more conservative guard; they are not relabelled as runs of this correction.
 
 ## Current production viewer artifact
 

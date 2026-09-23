@@ -47,12 +47,21 @@ the nominally coincident planar boundary: nearest face distances are only
 opposite solids, not both. Zero-tolerance classification reporting IN alone
 is not sufficient evidence of strict interior here.
 
-A separate isolated framework correction is underway to resolve witness
-certainty against native face uncertainty. It must not turn positive volume
-into zero, add an overlap allowance, or lose the radial ball's independently
-verified strict interior controls. The native .59535 mm³ counter obstruction
-is nonempty and is unaffected by this distinction. Tiny mesh commons and
-nominal source tangencies are not silently reclassified as accepted clearance.
+A separate isolated framework correction is integrated at `5e1404e`
+(planning `b09ca46`, archived `require-resolved-exact-witness`). A proposed
+interior witness must now also be farther from every face than that face's
+own native kernel uncertainty. Unresolved boundary candidates are skipped;
+invalid distance/tolerance results refuse verification. This changes witness
+certainty, not measured volume or the zero-overlap acceptance rule.
+
+The production six-row survey now completes without a refusal in 9.581 s;
+the native .59535 mm³ counter obstruction remains positive. The radial ball's
+two independently verified strict interior controls still raise, and its
+three production geometry tests and continuous native/mesh proofs pass again
+as recorded in [radial-ball adoption](radial-ball-operation-2026-09-23.md).
+Tiny mesh commons and nominal source tangencies are not silently reclassified
+as accepted clearance. The framework's broad gate passed 3,600 tests and
+2,131 subtests, with four skips.
 
 ## Evidence and reproduction
 
@@ -69,6 +78,8 @@ that log is retained and the harness call is corrected.
   `774b4d1c53adc0dab21b584aa9b3c94b75fbb62f1b2dbab625be4a73644d1823`.
 - Inspected `carry-guide-profile-a139fe0.png`:
   `5189f4cdeccac8af83e7f395f56cb9a8fc4edaaedd8397328229607dc9ab4bc4`.
+- Final corrected-guard `carry-guide-resolved-witness-616c7bd.jsonl`:
+  `1cc432835d158753f8cc8b8cd8d4a2e538899c8e004db915167fc66e643112dd`.
 
 These ignored artifacts live in `_build_checks/`. Reproduce on the recorded
 framework with fresh output paths:
