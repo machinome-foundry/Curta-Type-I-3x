@@ -13,7 +13,7 @@ from math import radians
 from simulation.curta import Curta
 
 
-def world_frames(root):
+def world_frames(root, *, include_assemblies=False):
     frames = {}
 
     def visit(node, path, parent):
@@ -28,9 +28,9 @@ def world_frames(root):
                 raise TypeError(type(operation).__name__)
             local = matrix @ local
         world = parent @ local
-        if node.rigid:
+        if node.rigid or include_assemblies:
             frames[path] = world
-        else:
+        if not node.rigid:
             for child in node.children:
                 visit(child, path + '.' + child.name, world)
 
