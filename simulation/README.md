@@ -58,7 +58,9 @@ still slower than real time. The
 [latest acceptance record](docs/clearing-loop-replacement-2026-09-23.md)
 distinguishes tested arithmetic, replay and actual-pointer behavior from the
 unfinished full interaction matrix and whole-machine geometry. OpenSpec progress
-is 14/23 tasks; the umbrella change remains active.
+is 15/23 tasks; the umbrella change remains active. The mounting task is
+complete; the final hosted control batch and current-root demonstration
+refresh are still running.
 
 ### Separate operating demonstrations
 

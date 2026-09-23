@@ -483,6 +483,27 @@ browser runs are CPU-isolated, not performance benchmarks.
 
 ## Current solver-only performance diagnostic
 
+The hosted crank-pointer refresh subsequently passes both a real partial-turn
+handle drag (1 degree) and the actual part-button's full 360-degree instruction.
+Both observe release and terminal completion, retire every command and leave
+all other drivers unchanged. With all input digits zero, the full turn leaves
+all eleven result dials and five higher counter dials unchanged while rotating
+the counter-ones dial by -36 degrees. The two whole-assembly screenshots are
+inspected. The 216-coordinate bank hash after the button is
+`bbd6fcc4135e8d66371d814b7bf20c6bc66eb2350ab0d138da59173507870ab5`,
+identical to the separate solver-only diagnostic below. The browser report
+stores float64 encodings explicitly, retaining signed zero across JSON.
+
+`_build_checks/operating-loop-production-hosted-crank-01.json` exits zero and
+has SHA-256 `f035d2bd43df5cba178d4338de2ca983a0ba641d3abcf7f02321e8ba5166ee9a`.
+The `-turn.png` image hashes to
+`685e93fba1cd2befb4436631bacbd8bf3d1c49b2196f98f1651d3466c83740a1`;
+`-button.png` hashes to
+`b3eb7b2e20245ec33c0ac378f7a92b422724ef1201428f79d2e2be47e87ed396`.
+The checkpoint, crank and existing hosted/standalone report validators pass
+all 28 unit tests together. This is acceptance of these pointer requests,
+not a claim that the hosted noncrank matrix has finished.
+
 A separate Sol-agent diagnostic loads this same production manifest into the
 viewer-main `bcbf55a` Engine without WebGL. It triggers the document's normal
 `Turn crank` instruction (relative 360°, duration 2 s) and advances 480 ticks

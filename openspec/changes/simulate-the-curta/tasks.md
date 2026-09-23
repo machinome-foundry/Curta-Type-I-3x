@@ -2,9 +2,13 @@
 
 The pilot's September 23 decision authorizes a clearly labeled simulation-only
 clearing-loop replacement mounting. The proposal, design and both delta specs
-record this bounded exception. Task 6.4 remains open until its own source mapping,
-full travel, retention, end stops and independent operating/pointer evidence
-pass; the source clip investigation remains preserved, not retroactively green.
+record this bounded exception. Task 6.4 now passes its source mapping,
+full travel, retention, end stops and independent operating/pointer gates;
+the source clip investigation remains preserved, not retroactively green.
+The adopted default has 216 coordinates and 26 controls. All standalone
+controls, fresh wrong-order reverser parity and both hosted crank controls
+pass. Final hosted noncrank batches and the current-root demonstration refresh
+remain in progress, so tasks 6.5/6.6 stay open at this checkpoint (15/23).
 
 Latest September 23: the [production reverser adoption](../../../simulation/docs/reverser-operating-adoption-2026-09-23.md)
 resolves the scoped crank-90 wrong-order and reversed crank-82.432377 failures
@@ -545,6 +549,6 @@ their tasks open. These results are checkpoints, not final delivery evidence.
 - [x] 6.1 Verify the ratified framework/viewer prerequisites are available as a tested content pair before relying on Slide or selected-joint controls. Framework b9b64dd and viewer 2912006 (API 21, bundle SHA-256 a5a5542762c3326aa53fa68875f7d3da698ae0253681366ba325528446afa614) load the actual version-7 operating build with all 24 controls. Real pointer drags use the distinct selected crank-lift target and the first selector; retained readback proves lift without crank turn and independent selector/shaft motion. Public run reset is test setup between cases. Full standalone/hosted interaction and wrong-order coverage remain task 6.5.
 - [x] 6.2 Write red run tests for independent selector changes, retained arithmetic across operand/mode changes, partial crank travel, direction reversal attempts, carriage interlocks and repeatable snapshot/replay. The historical red/mutation records and current production regressions are consolidated in simulation/docs/reverser-operating-adoption-2026-09-23.md; the actual-root unrestrained-ratchet negative control still fails the same stop contract.
 - [x] 6.3 Migrate the mechanism to Time.running with run-owned state and independent physical inputs; make those tests green without a page-local calculator, direct register setters or automatic operation preparation. Production 8668330 passes six arithmetic/partial-motion/replay checks, nine carriage/clearing interlock checks, the actual-root ratchet retry/replay contract and its negative control, and two crank-lift limits. Five reverser contact/path checks and all four prepared crank modes also pass. This closes the named migration contracts, not loop deployment, every control-action permutation or whole-machine geometry acceptance.
-- [ ] 6.4 Add and prove the reversing lever, selective bidirectional clearing, clearing-loop deployment and each decimal marker's independent movement and mechanical limits; preserve source provenance and existing geometric evidence. The September 23 pilot-authorized loop uses a labeled simulation-only replacement mounting: first prove source mapping, connected material, native/published-mesh full travel, radial/axial capture and physical end stops red-to-green; then adopt independent run-owned deployment, prove partial motion/stop/retry/replay, inspect installed pixels and validate actual hosted/standalone gestures with neighbouring arithmetic/clearing regressions.
+- [x] 6.4 Add and prove the reversing lever, selective bidirectional clearing, clearing-loop deployment and each decimal marker's independent movement and mechanical limits; preserve source provenance and existing geometric evidence. The September 23 pilot-authorized simulation-only mounting passes source mapping, connected material, native/published-mesh full travel, radial/axial capture, physical end stops and pin-removal negative controls. Adopted default e39d05a passes partial motion/stop/retry/replay, seven-state preservation, six arithmetic and twenty interlock/marker/ratchet checks. Installed travel/envelope evidence and actual hosted/standalone loop gestures pass with inspected pixels; see simulation/docs/clearing-loop-replacement-2026-09-23.md. This does not recover the source elastic clip or certify whole-machine geometry.
 - [ ] 6.5 Bind every input to its actual visible part; test real pointer interactions in standalone and ordinary hosted viewers, including wrong-order attempts and partial motion, and inspect rest/moving/interlock snapshots.
 - [ ] 6.6 Replace obsolete calculator-page instructions and demos, update the simulation README and acceptance evidence, and report remaining whole-machine geometric gaps separately from the control migration.
