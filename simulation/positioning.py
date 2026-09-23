@@ -4,7 +4,7 @@ from machinome.simulation import Driver
 from machinome.motion.joints import Prismatic
 from machinome.motion.ports import Port
 from simulation.standard.layers import CarriagePositioning as SourcePositioning
-from simulation.standard.parts import ThrustRing
+from simulation.standard.parts import ThrustRing, Part6mmBall419094
 from simulation.thrust_ring_parts import BallPassageThrustRing
 from simulation.flexibles import MountedCarriageSpring
 from math import cos, sin, radians
@@ -53,6 +53,15 @@ class SeatedCarriagePositioning(CarriagePositioning):
         super().render()
         self.thrust_ring.translate((0, 0, RING_BOTTOM - 25.5225))
         self.carriage_spring.translate((0, 0, SPRING_BOTTOM - 27.0225))
+
+
+class RadialCarriagePositioning(SeatedCarriagePositioning):
+    """The source sphere translates in its stationary parent-X guide."""
+    p_6mm_ball_419094 = Part6mmBall419094(slide=Prismatic(axis=(1, 0, 0)))
+
+    def simulate(self):
+        if self.p_6mm_ball_419094.slide.value is None:
+            self.p_6mm_ball_419094.slide = 0
 
 
 class PositioningBench(CarriagePositioning):

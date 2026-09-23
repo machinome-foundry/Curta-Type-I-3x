@@ -12,9 +12,14 @@ class CrankLiftBench(AssemblyNode):
     time = Time.running()
     crank_elevation = Driver(default=0, unit='mm')
     crank_rotation = Driver(default=0, unit='deg')
+    # RunningMainDrive now contains the independently operated reversing
+    # assembly. This isolated crank fixture must bind its normal rest too;
+    # leaving it unbound prevents the existing stroke/ratchet tests starting.
+    reverser_height = Driver(default=3.9075, unit='mm')
     drive = RunningMainDrive()
     crank_elevation.drives(drive.subtract, ratio=1 / 9)
     crank_rotation.drives(drive.turn)
+    reverser_height.drives(drive.reversing_lever.reversing_lever_1.displacement)
 
 
 class ReverserLiftBench(AssemblyNode):

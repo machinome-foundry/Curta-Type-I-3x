@@ -15,6 +15,7 @@ import trimesh
 import cadquery as cq
 
 from machinome.simulation import Sim
+from machinome.exact import intersect_shapes
 from simulation.running import OperatingCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE, COLLAR_ENVELOPE, collar_limit
 from simulation.tools.positioning_ball_contact import BALL, BELL, COLLAR, FRAME
@@ -84,7 +85,7 @@ def main():
         (radial[0], 0, 30), (1, 0, 0)).fuse(
             cq.Solid.makeSphere(3.751, (radial[0], 0, 30), angleDegrees1=-90),
             cq.Solid.makeSphere(3.751, (radial[1], 0, 30), angleDegrees1=-90)).clean()
-    native_common = native_frame.intersect(native_sweep)
+    native_common = intersect_shapes(native_frame, native_sweep, FRAME, 'conservative ball sweep')
     assert native_common.isValid() and native_common.Volume() == 0
     print(json.dumps(dict(kind='frame-and-ring', whole_radial_domain=radial,
         ring_lift_domain=[0, 6], sphere_encloser_outer_radius_mm=outer,

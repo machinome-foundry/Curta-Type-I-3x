@@ -53,6 +53,8 @@ def main():
     parser.add_argument('--partial-turn', action='store_true',
                         help='Require a positive visible crank delta below 360 degrees, not a timing-specific quantum')
     parser.add_argument('--deadline-seconds', type=float, default=120)
+    parser.add_argument('--capture-timeout-seconds', type=float, default=180,
+                        help='Screenshot readback cap; does not change command deadlines')
     args = parser.parse_args()
     assert not args.report.exists(), 'preserve earlier reports'
     build = args.build.resolve()
@@ -60,6 +62,7 @@ def main():
     assert args.control in manifest['controls']
     assert args.input in manifest['drivers']
     assert 0 < args.deadline_seconds <= 1200
+    assert 0 < args.capture_timeout_seconds <= 1200
     control = manifest['controls'][args.control]
     assert (control['kind'] == 'button') == args.press
     if args.partial_turn:
@@ -69,6 +72,7 @@ def main():
                   coverage='unmodified standalone page; visible input readouts at four decimals',
                   program_identity=manifest['program']['identity'],
                   expected_delta=args.expected_delta, deadline_seconds=args.deadline_seconds,
+                  capture_timeout_seconds=args.capture_timeout_seconds,
                   partial_turn=args.partial_turn,
                   asset_sha256={name: hashlib.sha256((build/name).read_bytes()).hexdigest()
                       for name in ('manifest.json', 'index.html', 'machinome-viewer.js')})
@@ -177,13 +181,15 @@ def main():
             report['release_observed'] = page.evaluate('standaloneRelease')
             report['after'] = readouts(page)
             validate_report(report)
-            page.screenshot(path=str(args.report.with_suffix('.png')))
+            page.screenshot(path=str(args.report.with_suffix('.png')),
+                            timeout=args.capture_timeout_seconds * 1000)
             report['validation'] = 'passed'
         except Exception as error:
             report['failure'] = f'{type(error).__name__}: {error}'
             if 'page' in locals():
                 report['failure_readouts'] = readouts(page)
-                page.screenshot(path=str(args.report.with_suffix('.png')))
+                page.screenshot(path=str(args.report.with_suffix('.png')),
+                                timeout=args.capture_timeout_seconds * 1000)
             raise
         finally:
             browser.close()

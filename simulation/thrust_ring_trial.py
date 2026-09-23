@@ -5,9 +5,9 @@ from simulation.operating_collar_parts import SeatedCollar
 from simulation.thrust_seat_trial import SeatedThrustBench
 from simulation.thrust_ring_parts import BallPassageThrustRing
 from simulation.positioning_ball_trial import RadialBallTrial, RadialCarriageTrial, RadialPositioningTrial
-from simulation.positioning import SeatedCarriagePositioning
+from simulation.positioning import SeatedCarriagePositioning, RadialCarriagePositioning
 from simulation.standard.parts import ThrustRing
-from simulation.running import OperatingCurta, RunningCarriage
+from simulation.running import OperatingCurta, StaticBallOperatingCurta, RunningCarriage, RadialRunningCarriage
 
 
 class InstalledThrustBench(SeatedThrustBench):
@@ -43,7 +43,7 @@ class OriginalRingCarriage(RunningCarriage):
     positioning = OriginalRingPositioning()
 
 
-class OriginalRingOperatingReference(OperatingCurta):
+class OriginalRingOperatingReference(StaticBallOperatingCurta):
     carriage = OriginalRingCarriage()
 
 
@@ -55,5 +55,17 @@ class FittedRingCarriage(RunningCarriage):
     positioning = FittedRingPositioning()
 
 
-class FittedRingOperatingTrial(OperatingCurta):
+class FittedRingOperatingTrial(StaticBallOperatingCurta):
     carriage = FittedRingCarriage()
+
+
+class OriginalRingRadialPositioning(RadialCarriagePositioning):
+    thrust_ring = ThrustRing(slide=Prismatic(axis=(0, 0, 1)))
+
+
+class OriginalRingRadialCarriage(RadialRunningCarriage):
+    positioning = OriginalRingRadialPositioning()
+
+
+class OriginalRingRadialOperatingReference(OperatingCurta):
+    carriage = OriginalRingRadialCarriage()

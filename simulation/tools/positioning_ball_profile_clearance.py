@@ -5,6 +5,7 @@ import logging
 import time
 
 from machinome.simulation import Sim
+from machinome.exact import intersect_shapes
 from simulation.running import OperatingCurta
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -38,7 +39,7 @@ def main():
             row = dict(kind=kind, value=value, offset=offset, native_mm3={}, world64_mm3={})
             for name, shape in ((BELL, native[BELL].rotate((0, 0, 0), (0, 0, 1), -angle)),
                                 (FRAME, native[FRAME])):
-                common = ball.intersect(shape)
+                common = intersect_shapes(ball, shape, BALL, name)
                 assert common.isValid(), (kind, value, name, 'invalid native common')
                 row['native_mm3'][name] = common.Volume()
             for name in (BELL, FRAME, COLLAR):

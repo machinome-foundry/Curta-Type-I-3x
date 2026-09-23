@@ -67,12 +67,19 @@ corresponding independent geometry or retained-state checks.
 
 Export the adopted root with the integrated producer/viewer pair. Check full
 bank equality at rest, outward, retained return, raised-carriage stop, idle,
-replay and relief in hosted and standalone viewers, plus real part-pointer
-gestures and inspected rest/moving/blocked images. The earlier viewer-cycle
+replay and relief through the hosted viewer's public run handle. Verify the
+unmodified auto-mounted standalone page through real part-pointer gestures,
+terminal outcomes, four-decimal input readouts and inspected images. The
+standalone page intentionally exposes no public live-bank lookup; do not
+remount it or extract hidden handles and call that standalone coverage. Both
+surfaces use the exact same exported program and bundle. The earlier viewer-cycle
 trial proves engine compatibility but does not substitute for current
 production-geometry acceptance. Preserve exact bundle/export hashes. Use a
 screenshot timeout sufficient for the already measured software-renderer
 readback cost; do not change simulation behavior to capture an image.
+
+This evidence-surface clarification changes neither the retained-state
+requirement nor the viewer API. It avoids a speculative API solely for a test.
 
 ## Risks / Trade-offs
 

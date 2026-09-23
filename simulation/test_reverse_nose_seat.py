@@ -78,6 +78,8 @@ class ReverseNoseSeatTest(unittest.TestCase):
 
     def test_initial_bank_is_unchanged(self):
         bank = dict(self.sim.state)
+        self.assertEqual(len(bank), 214)
+        self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)
         self.assertEqual(hashlib.sha256(json.dumps(bank, sort_keys=True,
             separators=(',', ':')).encode()).hexdigest(),

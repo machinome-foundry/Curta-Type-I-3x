@@ -18,6 +18,8 @@ class ClearingCarrierSeatTest(TestCase):
     def test_initial_bank_retains_the_measured_pre_fit_witness(self):
         sim = Sim(self.node, dt=.1)
         bank = dict(sim.state)
+        self.assertEqual(len(bank), 214)
+        self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)
         encoded = json.dumps(bank, sort_keys=True, separators=(',', ':')).encode()
         self.assertEqual(hashlib.sha256(encoded).hexdigest(),

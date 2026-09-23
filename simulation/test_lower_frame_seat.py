@@ -17,6 +17,8 @@ class LowerFrameSeatTest(TestCase):
     def test_initial_bank_retains_fixed_pre_fit_witness(self):
         sim = Sim(self.node, dt=.1)
         bank = dict(sim.state)
+        self.assertEqual(len(bank), 214)
+        self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)
         self.assertEqual(hashlib.sha256(json.dumps(bank, sort_keys=True,
                          separators=(',', ':')).encode()).hexdigest(),

@@ -8,6 +8,8 @@ import time
 import numpy as np
 
 from machinome.simulation import Sim
+from machinome.exact import intersect_shapes
+from simulation.running import OperatingCurta
 from simulation.operating_demonstrations import DEMONSTRATIONS, replay
 from simulation.positioning_ball_trial import RadialBallTrial
 from simulation.test_carry_bank_trial import flexible_meshes
@@ -21,9 +23,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--demonstrations', nargs='+', choices=tuple(DEMONSTRATIONS),
                         default=list(DEMONSTRATIONS))
+    parser.add_argument('--model', choices=('trial', 'production'), default='trial')
     args = parser.parse_args()
     started = time.monotonic()
-    sim = Sim(RadialBallTrial(), dt=.1, meshes=True)
+    sim = Sim((OperatingCurta if args.model == 'production' else RadialBallTrial)(), dt=.1, meshes=True)
     initial = sim.snapshot()
     current, count, findings = None, 0, []
 
@@ -46,7 +49,7 @@ def main():
             mesh_volume = faceted_common_volume(ball_mesh ^ mesh_solid(meshes[path]))
             native_volume = None
             if path in native:
-                common = native[BALL].intersect(native[path])
+                common = intersect_shapes(native[BALL], native[path], BALL, path)
                 assert common.isValid(), (current, sim.time, path)
                 native_volume = common.Volume()
             if mesh_volume > 0 or native_volume is not None and native_volume > 0:
@@ -69,7 +72,8 @@ def main():
         outcomes = replay(sim, name, initial)
         print(json.dumps(dict(kind='demonstration-completed', name=name, outcomes=outcomes)), flush=True)
     print(json.dumps(dict(kind='finished', samples=count, positive_samples=len(findings),
-        seconds=time.monotonic()-started, acceptance='Candidate ball interface only; other pairs not waived')), flush=True)
+        seconds=time.monotonic()-started, model=args.model,
+        acceptance='Ball interface only; other pairs not waived')), flush=True)
 
 
 if __name__ == '__main__':

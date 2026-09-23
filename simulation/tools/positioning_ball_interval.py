@@ -17,6 +17,7 @@ import cadquery as cq
 import numpy as np
 
 from machinome.simulation import Sim
+from machinome.exact import intersect_shapes
 from simulation.running import OperatingCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE
 from simulation.tools.positioning_ball_contact import BALL, BELL
@@ -58,15 +59,22 @@ def main():
             cq.Solid.makeSphere(radius, first, angleDegrees1=-90),
             cq.Solid.makeSphere(radius, last, angleDegrees1=-90)).clean()
         capsule = capsule.rotate((0, 0, 0), (0, 0, 1), mid)
-        common = capsule.intersect(bell)
         checks += 1
-        valid = common.isValid()
+        if checks % 100 == 0:
+            print(json.dumps(dict(kind='enclosure-progress', start=a, end=b, depth=depth,
+                                  checks=checks, certified_intervals=len(accepted))), flush=True)
+        try:
+            common = intersect_shapes(capsule, bell, 'conservative ball capsule', BELL)
+            valid = common.isValid()
+            refusal = None if valid else 'invalid Boolean'
+        except RuntimeError as error:
+            valid, refusal = False, str(error)
         if not valid:
             invalid_coarse += 1
         if valid and common.Volume() == 0:
             accepted.append((a, b, radius))
             return
-        assert depth < 14, (a, b, common.Volume() if valid else 'invalid Boolean', 'unresolved enclosure')
+        assert depth < 14, (a, b, common.Volume() if valid else refusal, 'unresolved enclosure')
         prove(a, mid, depth+1)
         prove(mid, b, depth+1)
 

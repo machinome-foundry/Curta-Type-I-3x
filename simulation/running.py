@@ -11,10 +11,11 @@ from operator import and_
 from machinome.node import AssemblyNode
 from machinome.motion.ports import Time, Port
 from machinome.motion.joints import Bound
-from machinome.simulation import Driver, Instruction, Button, Turn, Slide
+from machinome.simulation import Driver, Instruction, Button, Turn, Slide, Follow
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
-from simulation.positioning import SeatedCarriagePositioning
+from simulation.positioning import SeatedCarriagePositioning, RadialCarriagePositioning
+from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.running_parts import (IndependentInputs, RetainedCarriage, RunningMainDrive, RunningEnclosure,
     RetainedCarries, RetainedTransmission, RESULT_DIALS, TURNS_DIALS,
     RESULT_RESTS, TURNS_RESTS, CHANNEL_NAMES)
@@ -52,7 +53,8 @@ class RunningCarriage(AssemblyNode):
     registers.lift.drives(positioning.lift)
 
 
-class OperatingCurta(LayeredSource):
+class StaticBallOperatingCurta(LayeredSource):
+    """Historical static-ball reference; preserves its geometry counterexample."""
     time = Time.running()
     digit_1 = Driver(default=0, range=(0, 9), unit='digit')
     digit_2 = Driver(default=0, range=(0, 9), unit='digit')
@@ -227,6 +229,25 @@ class OperatingCurta(LayeredSource):
         del _bank, _register, _levers
     del _index, _knob, _counter, _dial_table, _rests, _bank_name
     del _wheel_ends, _shaft_ends, _lever_ends, _name, _rest
+
+
+class RadialRunningCarriage(RunningCarriage):
+    positioning = RadialCarriagePositioning()
+
+
+class OperatingCurta(StaticBallOperatingCurta):
+    """Source-sized radial ball, pushed by contacts and retained in free slack."""
+    carriage = RadialRunningCarriage()
+    carriage.positioning.p_6mm_ball_419094.slide.constrain(range=(
+        Bound(lambda travel, turn: bell_limit(turn),
+              reads=(StaticBallOperatingCurta.carry_mechanism.tens_bell.turn,)),
+        Bound(lambda travel, lift: collar_limit(lift),
+              reads=(carriage.registers.lift,))))
+    (StaticBallOperatingCurta.carry_mechanism.tens_bell.turn & carriage.registers.lift &
+     carriage.positioning.p_6mm_ball_419094.slide).drives(
+        carriage.positioning.p_6mm_ball_419094.slide,
+        law=Follow(lower=lambda turn, lift: bell_limit(turn),
+                   upper=lambda turn, lift: collar_limit(lift)))
 
 
 def register_reading(sim, counter=False):

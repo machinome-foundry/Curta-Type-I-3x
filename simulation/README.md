@@ -44,8 +44,8 @@ finds a missing moving interface but rejects a simple orbit: it clears the bell
 and penetrates the stationary frame. That candidate is not adopted.
 The [reverse-nose drum seat](docs/reverse-nose-seat-2026-09-23.md) now has
 a bounded .05 mm gap: five production checks pass, and paired addition
-surveys remove only that moving contact. The ball's radial motion and
-remaining whole-machine contacts are still unresolved.
+surveys remove only that moving contact. Remaining whole-machine contacts
+are still unresolved.
 The [crank-grip lower seat](docs/crank-grip-seat-2026-09-23.md) also has a
 bounded .05 mm gap, with four passing production tests and an inspected
 section. Its addition replay removes two small positive contacts; the existing
@@ -58,9 +58,16 @@ replays pass. Separate guide/slider obstructions remain open. This is local
 frame-clearance completion, not whole-machine acceptance.
 The [thrust-ring passage](docs/thrust-ring-passage-2026-09-23.md) is also
 adopted, preserving both support seats while clearing the radial-ball trial.
-Production support/lift/shift/replay checks pass in both kernels. The ball's
-new motion itself is not yet adopted; its remaining interfaces and final
-operating acceptance are still being verified.
+Production support/lift/shift/replay checks pass in both kernels. The
+[radial positioning ball](docs/radial-ball-operation-2026-09-23.md) is now
+adopted: contact pushes the unchanged sphere along its existing guide, free
+return retains it, and incompatible crank/carriage requests stop without
+automatic preparation. Continuous native/mesh interface proofs, all six
+ball-neighbour audits, exact demonstration replay, historical-coordinate and
+other-part preservation, and current hosted/standalone evidence pass.
+This adds no control and does not resolve the carry-guide, clearing-loop,
+zero-clip or selector findings. Follow-bound execution is still too slow;
+separate framework/viewer optimizations are being verified.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production
@@ -374,7 +381,10 @@ reproducible pose, not a claim that a physical crank can run backward.
 - `clearing_stop_spring.py`, `clearing_stop_motion.py`: the source stop pin
   follows the clearing-cover cam and compresses its eight-turn spring between
   measured seats. Seven contracts pass both kernels.
-- `positioning.py`: moving spring seat and port-driven carriage spring compression.
+- `positioning.py`: moving spring seat, port-driven carriage spring compression
+  and the source ball's radial guide. `positioning_ball_profiles.py` supplies
+  independently geometry-checked contact limits; the running root owns its
+  retained Follow law and paired motion bounds.
 - `zero.py`: retained zero cam, sliding drive pin, grouped roller/lever and moving
   spring terminal, with six passing contact/mount contracts on both kernels.
 - `pawl.py`, `pawl_spring.py`: measured anti-reversal ratchet following, reverse

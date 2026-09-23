@@ -17,6 +17,8 @@ class OperatingCollarTest(TestCase):
         # A fixed witness keeps this meaningful once the default adopts the
         # same parts; comparing two aliases of the fitted root would not.
         bank = dict(trial.state)
+        self.assertEqual(len(bank), 214)
+        self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)
         encoded = json.dumps(bank, sort_keys=True, separators=(',', ':')).encode()
         self.assertEqual(hashlib.sha256(encoded).hexdigest(),

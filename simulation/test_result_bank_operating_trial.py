@@ -24,6 +24,8 @@ class ResultBankOperatingFixtureTest(unittest.TestCase):
         sim = Sim(self.model(), dt=.1, meshes=True)
         # Fixed pre-adoption witness, not two aliases of the fitted default.
         bank = dict(sim.state)
+        self.assertEqual(len(bank), 214)
+        self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)
         encoded = json.dumps(bank, sort_keys=True, separators=(',', ':')).encode()
         self.assertEqual(hashlib.sha256(encoded).hexdigest(),
