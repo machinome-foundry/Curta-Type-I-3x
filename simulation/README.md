@@ -50,6 +50,12 @@ The [crank-grip lower seat](docs/crank-grip-seat-2026-09-23.md) also has a
 bounded .05 mm gap, with four passing production tests and an inspected
 section. Its addition replay removes two small positive contacts; the existing
 screw/grip common remains recorded, not waived.
+The [complete carry-bank frame fit](docs/carry-bank-frame-investigation-2026-09-23.md)
+is adopted for all ten result and five counter stations. Bounded stationary
+reliefs preserve the moving parts and supports; native and world64 full-travel
+checks, conservative between-sample enclosures and six exact demonstration
+replays pass. Separate guide/slider obstructions remain open. This is local
+frame-clearance completion, not whole-machine acceptance.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production

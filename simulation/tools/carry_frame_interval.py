@@ -18,7 +18,7 @@ import cadquery as cq
 import numpy as np
 
 from simulation.carry_frame import CarryFrameBench
-from simulation.detents import RESULTS
+from simulation.detents import RESULTS, TURNS
 from simulation.tools.open_run_transitions import bounds
 
 
@@ -45,11 +45,19 @@ def matrix(operations):
     return result
 
 
+def station_nodes(root, station):
+    nodes = [root]
+    for name in station.split('.'):
+        nodes.append(getattr(nodes[-1], name))
+    return nodes
+
+
 def wire_frame(root, station):
-    carry = getattr(root, station)
+    nodes = station_nodes(root, station)
+    carry = nodes[-1]
     spring = carry.carry_lever_spring
     return matrix([*spring.wire.operations, *spring.operations,
-                   *carry.operations, *root.operations])
+                   *(operation for node in reversed(nodes) for operation in node.operations)])
 
 
 def literal(value, params):
@@ -162,19 +170,23 @@ def at(piece, u):
     return (1-u)**3*p[0]+3*u*(1-u)**2*p[1]+3*u*u*(1-u)*p[2]+u**3*p[3]
 
 
-def certify(station, max_depth=24):
+def certify(station, max_depth=24, *, model=None, counter=False, frame=None, output=None):
     started = monotonic()
     # This proof's affine parameter/placement hypothesis is the reviewed
     # project law, not a claim to infer arbitrary Python functions from samples.
     model_hash = hashlib.sha256(Path('simulation/carry_spring.py').read_bytes()).hexdigest()
-    if model_hash != '68cff8e1e2b819d37d8ac6e6124ec3809ea52f6aecd0e204ada6b9ec37f07836':
+    # Re-audited against 3afcac9: the only source changes are the three
+    # solid_node -> machinome imports from a6e6a9f. All constants, shape
+    # expressions, affine spread coordinates and placement are unchanged.
+    if model_hash != '2f8501ea46e12d1319428a225dc14a819c95c791670b54322fd1274f4045e623':
         raise ValueError('Re-audit the changed spring law before using its continuous certificate')
-    model = CarryFrameBench()
+    model = CarryFrameBench() if model is None else model
+    points = TURNS if counter else RESULTS
     captures = []
-    for drop in (4.2, 2.562):
+    for drop in ((.42, 2.562) if counter else (4.2, 2.562)):
         model.set_state(drop_mm=drop)
         model.assemble()
-        wire = getattr(model, station).carry_lever_spring.wire
+        wire = station_nodes(model, station)[-1].carry_lever_spring.wire
         shape = wire.render()
         document = shape.to_dict()
         params = {name: getattr(wire, name).value for name in shape.params}
@@ -186,8 +198,8 @@ def certify(station, max_depth=24):
             if 'param' in json.dumps(primitive.get(name)):
                 raise ValueError('This enclosure requires fixed path angles and tangent directions')
     assert np.max(np.abs(captures[0][1][:3, :3]-captures[1][1][:3, :3])) < 1e-14
-    spread_bounds = (min(y for _, y in RESULTS), max(y for _, y in RESULTS))
-    assert spread_bounds == (.094711, 1.327148)
+    spread_bounds = (min(y for _, y in points), max(y for _, y in points))
+    assert spread_bounds == ((0, 1.451294) if counter else (.094711, 1.327148))
     cache = {}
 
     def curve(fraction):
@@ -201,10 +213,10 @@ def certify(station, max_depth=24):
     # Cross-check the independent definition against actual evaluated ring
     # centres and driver-owned values at every detent knot and the preload.
     max_error = 0
-    for drop in sorted({4.2*x for x, _ in RESULTS} | {1.1630815}):
+    for drop in sorted({4.2*x for x, _ in points} | {1.1630815}):
         model.set_state(drop_mm=drop)
         model.assemble()
-        carry = getattr(model, station)
+        carry = station_nodes(model, station)[-1]
         wire = carry.carry_lever_spring.wire
         shape = wire.render()
         values = {name: getattr(wire, name).value for name in shape.params}
@@ -222,7 +234,7 @@ def certify(station, max_depth=24):
         max_error = max(max_error, float(error))
         if error > 1e-9:
             raise ValueError(f'Independent centerline does not match Molejo: {error}')
-    frame = model.frame.main_body.shape()
+    frame = model.frame.main_body.shape() if frame is None else frame
     whole = [enclosure(a, b, 0, 1) for a, b in zip(curve(0), curve(1))]
     centerline_bounds = np.array([np.min([box[0] for box in whole], axis=0),
                                  np.max([box[1] for box in whole], axis=0)])
@@ -274,7 +286,7 @@ def certify(station, max_depth=24):
                   unresolved=unresolved, queued=len(stack), passed=not unresolved and not stack,
                   elapsed_seconds=monotonic()-started,
                   model_sha256=model_hash)
-    path = Path('_build_evidence/carry-frame-interval-'+station+'.json')
+    path = Path(output) if output is not None else Path('_build_evidence/carry-frame-interval-'+station+'.json')
     path.write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps(result), flush=True)
     return result['passed']

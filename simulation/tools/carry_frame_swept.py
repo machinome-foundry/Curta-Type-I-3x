@@ -24,14 +24,20 @@ def prism(box):
     return cq.Solid.makeBox(*(box[1]-box[0]), cq.Vector(*box[0]))
 
 
-def certify(station, max_depth=36, part='slider'):
+def certify(station, max_depth=36, part='slider', *, source_shapes=None,
+            alignment=None, output=None):
     start = monotonic()
-    model = CarryFrameBench()
-    model.set_state(drop_mm=0)
-    model.assemble()
-    path = 'Curta.'+station+'.tens_slider_for_results'
-    shapes = world_solids(model, selected={path, 'Curta.frame.main_body'})
-    slider, frame = shapes[path], shapes['Curta.frame.main_body']
+    if source_shapes is None:
+        model = CarryFrameBench()
+        model.set_state(drop_mm=0)
+        model.assemble()
+        path = 'Curta.'+station+'.tens_slider_for_results'
+        shapes = world_solids(model, selected={path, 'Curta.frame.main_body'})
+        slider, frame = shapes[path], shapes['Curta.frame.main_body']
+    else:
+        if part != 'slider' or alignment is None or output is None:
+            raise ValueError('Explicit source geometry requires slider, alignment and output')
+        slider, frame = source_shapes
     if part == 'sleeve':
         from simulation.curta import Curta
         root = Curta()
@@ -49,7 +55,7 @@ def certify(station, max_depth=36, part='slider'):
     # A common rigid rotation preserves every contact and the vertical travel.
     # Work in station-local axes so boxes follow the measured slider profile;
     # retaining world-axis boxes at station two wastes many empty subdivisions.
-    angle = 0 if station == 'first' else 20
+    angle = (0 if station == 'first' else 20) if alignment is None else alignment
     slider = slider.rotate((0, 0, 0), (0, 0, 1), angle)
     frame = frame.rotate((0, 0, 0), (0, 0, 1), angle)
     source_bounds = bounds(slider)
@@ -104,7 +110,7 @@ def certify(station, max_depth=36, part='slider'):
                   queued=len(stack), passed=not unresolved and not stack,
                   elapsed_seconds=monotonic()-start)
     suffix = '' if part == 'slider' else '-'+part
-    path = Path('_build_evidence/carry-frame-swept-'+station+suffix+'.json')
+    path = Path(output) if output is not None else Path('_build_evidence/carry-frame-swept-'+station+suffix+'.json')
     path.write_text(json.dumps(result, indent=2)+'\n')
     print(json.dumps(result), flush=True)
     return result['passed']

@@ -230,6 +230,20 @@ not bit-identical; that overlap is explicitly retained as a finding. Upstream
 assets remain untouched. This is not manufacturing advice or whole-machine
 acceptance.
 
+## Complete carry-bank frame passages — F28
+
+The [bank-wide frame fit](carry-bank-frame-investigation-2026-09-23.md)
+extends the verified first pair to all ten result and five counter stations.
+Only independently bounded shoulder and spring-leg passages change, with a
+.05 mm running gap and at least 99.78% of the mapped guide registration lands
+retained. The frame remains one valid connected solid; protected bores,
+fasteners, moving parts, placements and laws stay unchanged. All fifteen
+slider/spring paths have native conservative enclosure proofs and native/
+world64 sampled clearance. Production material/stroke and root-identity checks,
+spring/fork capture and six exact demonstration replays pass. The separate
+unchanged guide/slider contacts remain unresolved. This is a simulation fit,
+not manufacturing advice or whole-machine clearance certification.
+
 ## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)
