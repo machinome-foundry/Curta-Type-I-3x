@@ -10,6 +10,7 @@ import cadquery as cq
 from simulation.standard.parts import MainCrank
 from simulation.standard.assembly import CrankHandle1
 from simulation.standard.layers import CrankAssembly
+from simulation.crank_grip_parts import SeatedCrankGrip
 
 
 class SeatedMainCrank(MainCrank):
@@ -23,6 +24,7 @@ class SeatedMainCrank(MainCrank):
 
 class SeatedCrankHandle(CrankHandle1):
     main_crank = SeatedMainCrank()
+    crank_handle = SeatedCrankGrip()
 
     def render(self):
         super().render()

@@ -54,3 +54,10 @@ pair or volume changes. Both runs also reproduce a separate tiny crank/handle
 contact at two poses, so it is not caused by the fit. That contact and the
 missing ball-following motion remain open; this is not a passed demonstration
 clearance gate.
+
+The subsequent [crank-grip seat](crank-grip-seat-2026-09-23.md) removes those
+two crank/handle contacts in a complete 44-sample addition survey. No pair is
+added. The only changed surviving pair is the existing screw/grip overlap;
+native geometric differences prove its material unchanged, while its measured
+volumes are recorded without a tolerance. Ball following and all other
+whole-machine obligations remain open.

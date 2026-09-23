@@ -46,6 +46,10 @@ The [reverse-nose drum seat](docs/reverse-nose-seat-2026-09-23.md) now has
 a bounded .05 mm gap: five production checks pass, and paired addition
 surveys remove only that moving contact. The ball's radial motion and
 remaining whole-machine contacts are still unresolved.
+The [crank-grip lower seat](docs/crank-grip-seat-2026-09-23.md) also has a
+bounded .05 mm gap, with four passing production tests and an inspected
+section. Its addition replay removes two small positive contacts; the existing
+screw/grip common remains recorded, not waived.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production

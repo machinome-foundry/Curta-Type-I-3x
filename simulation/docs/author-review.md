@@ -218,6 +218,18 @@ moving contact, adding no pair or changing any other spatial overlap.
 Five production checks pass. This is a simulation fit, not manufacturing
 advice or a whole-machine clearance claim; upstream assets stay unchanged.
 
+## Crank-grip lower face — F27
+
+The [grip-seat fit](crank-grip-seat-2026-09-23.md) removes only .05 mm from
+the source bottom face, leaving its bore, screw seat, placement and motion
+unchanged. Four production tests prove moving clearance, bounded removal and
+retained axial capture. The paired addition survey removes two tiny positive
+crank/grip contacts and adds no pair. The existing screw/grip common's native
+material is unchanged, while its scalar native/faceted volume results are
+not bit-identical; that overlap is explicitly retained as a finding. Upstream
+assets remain untouched. This is not manufacturing advice or whole-machine
+acceptance.
+
 ## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)

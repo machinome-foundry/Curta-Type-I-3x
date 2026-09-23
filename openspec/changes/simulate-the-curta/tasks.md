@@ -1,5 +1,10 @@
 ## Current checkpoint — resumed 2026-09-22
 
+September 23 continuation: the [crank-grip seat](../../../simulation/docs/crank-grip-seat-2026-09-23.md)
+passes four production tests and the 44-sample paired addition diagnostic,
+removing its two positive crank contacts. The remaining source screw common
+is measured explicitly. No whole-machine clearance or task checkbox changes.
+
 September 23: the [reverse-nose drum-seat fit](../../../simulation/docs/reverse-nose-seat-2026-09-23.md)
 passes five production checks and paired 44-sample addition surveys: only its
 moving overlap is removed. The ball-following investigation and remaining
