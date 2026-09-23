@@ -14,6 +14,36 @@ def twice_area(points):
 
 
 class ReverserProfileCoverTest(unittest.TestCase):
+    def test_native_remainder_needs_zero_or_a_checked_exclusion_union(self):
+        from simulation.tools.reverser_profile_cover import checked_native_remainder
+
+        class Difference:
+            def __init__(self, volume, valid=True, after=None):
+                self.volume, self.valid, self.after = volume, valid, after
+            def Volume(self):
+                return self.volume
+            def isValid(self):
+                return self.valid
+            def copy(self):
+                return self
+            def cut(self, other):
+                return self.after
+
+        exclusion = Difference(1)
+        for value in (1e-30, -1e-30, float('nan'), float('inf')):
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                checked_native_remainder(Difference(value))
+        remainder = Difference(.01, after=Difference(0))
+        self.assertEqual(checked_native_remainder(remainder, exclusion), (.01, 0))
+        remainder.after = Difference(1e-30)
+        with self.assertRaises(ValueError):
+            checked_native_remainder(remainder, exclusion)
+        remainder.after = Difference(0, valid=False)
+        with self.assertRaises(ValueError):
+            checked_native_remainder(remainder, exclusion)
+        with self.assertRaises(ValueError):
+            checked_native_remainder(Difference(0), Difference(1, valid=False))
+
     def test_convex_neighbours_merge_without_changing_footprint(self):
         points = [(0., 0.), (2., 0.), (2., 1.), (0., 1.)]
         result = convex_partition(points, [(0, 1, 2), (0, 3, 2)])
@@ -33,6 +63,13 @@ class ReverserProfileCoverTest(unittest.TestCase):
             self.assertTrue(all(cross(a, b, c) >= 0 for a, b, c in
                                 zip(vertices, vertices[1:]+vertices[:1],
                                     vertices[2:]+vertices[:2])))
+
+    def test_folded_triangle_neighbours_are_not_a_conforming_cover(self):
+        # Both CCW faces use the shared edge in the same direction: they
+        # overlap on one side rather than tile adjacent parts of a face.
+        with self.assertRaises(ValueError):
+            convex_partition([(0., 0.), (2., 0.), (1., 1.), (1., 2.)],
+                             [(0, 1, 2), (0, 1, 3)])
 
     def test_degenerate_or_nonfinite_input_is_refused(self):
         for points, triangles in (([(0, 0), (1, 0), (2, 0)], [(0, 1, 2)]),

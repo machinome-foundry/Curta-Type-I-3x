@@ -46,6 +46,10 @@ def convex_partition(points, triangles):
         polygons.append([a, b, c] if sign > 0 else [a, c, b])
     if not polygons:
         raise ValueError('Expected at least one triangle')
+    directed = Counter((u, v) for polygon in polygons
+                       for u, v in zip(polygon, polygon[1:]+polygon[:1]))
+    if any(count != 1 for count in directed.values()):
+        raise ValueError('Folded or overlapping triangle neighbours')
     while True:
         edges = {}
         merged = False
@@ -213,8 +217,32 @@ def profiles_overlap(first, second):
     return False
 
 
+def checked_native_remainder(outside, native_exclusion=None):
+    """Require exact zero outside the cover/exclusion union, with valid results."""
+    volume = outside.Volume()
+    if not outside.isValid() or not isfinite(volume) or volume < 0:
+        raise ValueError(f'Unresolved native cover difference: {volume!r} mm3')
+    uncovered = outside
+    if native_exclusion is not None:
+        if not native_exclusion.isValid():
+            raise ValueError('Invalid independently supplied native exclusion')
+        if volume > 0:
+            uncovered = outside.copy().cut(native_exclusion.copy())
+    union_volume = uncovered.Volume()
+    if not uncovered.isValid() or not isfinite(union_volume) or union_volume != 0:
+        raise ValueError(f'Candidate does not contain native profile: {volume!r} mm3')
+    return volume, union_volume
+
+
 def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
-                  angular_deflection=.025, join='arc', include_mesh=False):
+                  angular_deflection=.025, join='arc', include_mesh=False,
+                  native_exclusion=None):
+    """Cover the source, optionally with a separately proved exclusion solid.
+
+    The caller owes geometric separation of any exclusion from its mating
+    prints. This instrument checks coverage of the union; it never turns an
+    uncovered positive volume into zero with a numeric tolerance.
+    """
     import cadquery as cq
 
     if not isfinite(allowance) or allowance <= 0:
@@ -242,9 +270,7 @@ def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
     if not cover.isValid():
         raise ValueError('Invalid candidate cover')
     outside = shape.copy().cut(cover.copy())
-    volume = outside.Volume()
-    if not outside.isValid() or not isfinite(volume) or volume != 0:
-        raise ValueError(f'Candidate does not contain native profile: {volume!r} mm3')
+    volume, union_volume = checked_native_remainder(outside, native_exclusion)
     report = dict(part=type(part).__name__, allowance_mm=allowance,
                 offset_join=join,
                 linear_deflection=linear_deflection, angular_deflection=angular_deflection,
@@ -252,6 +278,10 @@ def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
                 points=points, triangles=triangles, polygons=polygons, boundary=boundary,
                 source_height=[box.zmin, box.zmax],
                 scope='Offline native profile cover; installed meshes and operation unproved')
+    if native_exclusion is not None:
+        report['native_outside_cover_and_exclusion_mm3'] = union_volume
+        report['scope'] = ('Native cover plus caller-supplied exclusion; caller owes '
+                           'exclusion separation and installed mesh/operation proofs')
     if include_mesh:
         from simulation.cover_fits import mesh_solid
         part.assemble()

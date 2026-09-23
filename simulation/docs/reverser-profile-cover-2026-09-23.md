@@ -248,3 +248,93 @@ SHA-256 `079ea1bd2cdc26c3fb5475e78f316abf59afe86da26a056fbf7cd64480351b1f`.
 This establishes the radial exclusion only. Native outer-profile covers,
 actual fused-mesh axial slabs, retained admission and browser parity remain
 separate obligations; no production constraint is adopted by this result.
+
+## Installed native and fused-mesh covers
+
+The next instrument, `simulation.tools.reverser_installed_profile_cover`,
+finishes the geometric coverage investigation for the current complete prints.
+It first verifies all six input envelopes at R6.3 and both entire drum envelopes
+at R36.62, using valid zero native differences and every published mesh vertex.
+R36.4 was explicitly rejected: native remainders are .19275438499672798 mm³
+and 32.22295710717067 mm³, and the mesh radii reach 36.50265777061964 and
+36.60000173200467 mm. The final envelope follows those measurements, not a
+volume tolerance.
+
+The input's R3.86 central material is separated from the entire drum envelope.
+The drum's R34.1 core is separated from the R6.3 input envelopes. Lower-drum
+material below Z −72 is also excluded: the minimum actual native/mesh input
+height, transformed across the explicit reverser −6.9425..3.9075 and drum-lift
+0..9 ranges, is −71.80000076293945 in the drum frame. The tool checks these
+driver ranges; changed ranges or geometry require regeneration and proof.
+
+An attempted cover of each radially clipped input tooth was **rejected**.
+Its native remainder is .000027789705103557994 mm³, at radius
+3.86..3.8616078163929. A separately separated R3.87 cylinder contains that
+native residue with exactly zero remainder, but the candidate triangulation
+has nine reversed triangles among 260 and 22 inconsistent directed edges.
+Its extruded mesh refuses `NotManifold`. Neither a source mesh nor this
+candidate is repaired. A new red regression catches folded triangle
+neighbours before convex merging; all four earlier source decompositions
+remain unchanged under that check. The exact-zero remainder helper also has
+red-first checks for tiny positive/negative, nonfinite and invalid results;
+an optional exclusion is checked geometrically, never used as a threshold.
+
+Instead, the complete, previously checked source pinion covers are placed at
+the actual installed tooth bands. All remainder tests are then performed on
+the **complete installed prints**, not on the source ingredients alone.
+Drum covers come directly from the radially clipped installed native solids.
+The resulting 27 profiles are:
+
+- Three ones bands at Z −45.35..−43.85, −40.85..−39.35 and −36.35..−34.85;
+  five higher input bands at −40.85..−39.35. Each uses 591 convex pieces.
+- Nine upper-drum components, 19–21 pieces each: one −54.2..−43.7 continuous
+  tooth and eight −49.7..−48.2 teeth.
+- Ten lower-drum components, 20–23 pieces each: one −72..−66.3 continuous
+  tooth and nine −67.8..−66.3 teeth.
+
+Every complete-print native remainder is valid and exactly zero after the
+stated exclusions and covers. The complete input meshes and upper drum have
+empty, zero mesh remainders. The lower mesh has a valid positive remainder of
+.0007006970741025602 mm³, whose **entire vertex set** lies within radius
+34.11579905290836. That cylinder is strictly separated from every R6.3 input
+envelope (minimum axis radius 40.49999999955998); its volume is not waived.
+The inscribed polygon used for the first core subtraction need not contain
+every radially irrelevant facet: the residual cylinder proves the remainder
+irrelevant independently. All mesh results have `Error.NoError`.
+
+Removing the covers leaves positive contact-region control volumes for all
+eight prints (ones 118.3807743697585 mm³, higher inputs about 35.94165 mm³,
+upper drum 90.88653561914697 mm³, lower drum 88.68881347057243 mm³). Thus an
+empty result is not merely a probe that excluded the entire print.
+
+The final reproducible 44-row run exits 0; the artifact includes each profile's
+actual reference shaft angle and reverser height:
+
+```sh
+PYTHONPATH=/home/asa/devel/machinome-studio/machinome/WTs/curta-reverser-profile-validation:. /home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.reverser_installed_profile_cover --source-profiles _build_checks/reverser-native-and-mesh-profile-cover-4035917.jsonl --output _build_checks/reverser-installed-profile-new-run.jsonl
+```
+
+Evidence: `_build_checks/reverser-installed-profile-reference-a428dea.jsonl`,
+SHA-256 `d41e1b46ee7f4c92b61d2ddae586f01242574213942d7dd93f0e9c4aefad01a3`.
+The earlier successful file without explicit reference fields has SHA-256
+`a41fbbc97b72ade7ed17535d4322852f645ee12a1de5b947d58940ce4771392f`.
+Both use the pinned source-profile input `68ff82c8…` and the unchanged
+validation framework bench. The failed nine-row candidate prefixes remain
+diagnostics, not complete evidence.
+
+All 27 published polygon sets also construct successfully under the new
+framework worktree's exact-binary `ConvexProfile` validator. That is a
+development capability check, not reliance on an already integrated API.
+The inspected two-panel plot
+`_build_checks/reverser-installed-profile-histories.png` shows the expected
+overlap at crank 90 / shaft 134 and clear gap at shaft 231.6 in the relevant
+XY profiles. It is not a retained-root or continuous-motion certificate.
+
+This advances **geometry coverage**, including the actual fused meshes and
+the lower drum. It does not yet prove the portable Bound implementation,
+available play, stop/relief/retry/replay, cross-runtime parity or full changing
+crank/lift admission. No production law or umbrella task checkbox changes.
+The final focused run passes 29 tests (profile cover, phase boundaries, pose
+cache/refusal, phase compiler and refinement-resume modules) in .003 seconds;
+the ten profile-cover tests include both new red-first regressions. These
+small tests complement, not replace, the terminated 44-row geometry run.
