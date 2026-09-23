@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from time import monotonic
 from urllib.parse import unquote, urlsplit
 
 from playwright.sync_api import sync_playwright
@@ -76,6 +77,14 @@ def main():
                   partial_turn=args.partial_turn,
                   asset_sha256={name: hashlib.sha256((build/name).read_bytes()).hexdigest()
                       for name in ('manifest.json', 'index.html', 'machinome-viewer.js')})
+    started = monotonic()
+    report['timings_seconds'] = {}
+
+    def checkpoint(stage):
+        elapsed = monotonic() - started
+        report['timings_seconds'][stage] = elapsed
+        print(json.dumps(dict(stage=stage, elapsed_seconds=elapsed)), flush=True)
+
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True, args=[
             '--enable-unsafe-swiftshader', '--use-gl=angle', '--use-angle=swiftshader'])
@@ -102,6 +111,7 @@ def main():
             report['instruction_rows'] = page.locator('.run-instruction-control').count()
             rectangle = canvas.bounding_box()
             report['canvas'] = rectangle
+            checkpoint('page_ready')
             if args.orbit:
                 ox = rectangle['x'] + rectangle['width']*.9
                 oy = rectangle['y'] + rectangle['height']*.15
@@ -145,6 +155,7 @@ def main():
                 box = handle.bounding_box()
                 x, y = box['x']+box['width']/2, box['y']+box['height']/2
             report['gesture'] = dict(point=[x, y], drag=None if args.press else args.drag)
+            checkpoint('visible_part_acquired')
             page.evaluate('''()=>{
                 window.standaloneRelease=false;
                 window.addEventListener('pointerup', event=>{
@@ -157,6 +168,7 @@ def main():
             if not args.press:
                 page.mouse.move(x+args.drag[0], y+args.drag[1], steps=12)
             page.mouse.up()
+            checkpoint('pointer_released')
             # Async loop is awaited explicitly, not an async wait_for_function
             # predicate. This observes UI retirement, not hidden command state.
             report['outcome'] = page.evaluate('''async ({name,instruction,seconds})=>{
@@ -181,11 +193,14 @@ def main():
             report['release_observed'] = page.evaluate('standaloneRelease')
             report['after'] = readouts(page)
             validate_report(report)
+            checkpoint('terminal_readouts_verified')
             page.screenshot(path=str(args.report.with_suffix('.png')),
                             timeout=args.capture_timeout_seconds * 1000)
+            checkpoint('screenshot_complete')
             report['validation'] = 'passed'
         except Exception as error:
             report['failure'] = f'{type(error).__name__}: {error}'
+            checkpoint('failed')
             if 'page' in locals():
                 report['failure_readouts'] = readouts(page)
                 page.screenshot(path=str(args.report.with_suffix('.png')),
