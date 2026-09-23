@@ -308,3 +308,60 @@ the accepted `0e73249a…` hash above, and `machinome viewer` resolves that asse
 with API 26/document versions 1–13. The primary source checkout remains clean.
 This refresh changes what new launches/exports load; it does not reload an
 already-open browser. Nothing was pushed or published.
+
+## Primary build and standalone refresh
+
+After evidence commit `c44e5bc` reached project main, the normal
+`machinome build operating_curta` completed with exit 0 against installed
+framework `46851be` (runtime unchanged from `1b136de`) and viewer `2274dd2`.
+The primary `_build/operating_curta/viewer.json` has the same program identity
+`086dc890…` as the acceptance export. Build-log SHA-256:
+`6ba655b5a223164466d6a4f0583b90e9eeaad999adca2e563c06d7e479aec6ff`;
+viewer-document SHA-256:
+`d21207d32a3c30a1f948241f8178834ecbf32988dbf88b9c6295418044a37cd7`.
+
+The named-model CLI export to the previously absent primary `_build_operating/`
+also completed with exit 0. Its page and viewer bundle match the final accepted
+hashes above, and a recursive byte comparison finds all `models/` assets
+identical to `reverser-production-final-v13`. The manifest differs only in
+source `mtime` metadata: sorted JSON comparison after removing only those
+fields is identical. This is checked artifact equivalence, not an additional
+browser interaction run. Export manifest SHA-256:
+`5024aaa7c9b725f939c5655980e0e33b6916dc8f2e416dc408b29f8fd3ceea7d`;
+export-log SHA-256:
+`956f2ccb9266c4b5436687f6bad53d51f4078d672b45165617f1f89643b305a7`.
+Both logs are in primary `_build_checks/`; generated artifacts remain ignored.
+The user's video and inspection PNG remain the only primary untracked files.
+
+## Complete existing non-crank hosted pointer matrix
+
+`reverser-production-final-pointers-01.json` finishes with exit 0 and
+`validation: passed` on production runtime `8668330`, stable framework
+`1b136de` and the final viewer bundle above. All 23 existing non-crank inputs
+are exercised on their actual visible parts at the ordinary default timestep
+1/240 s: eight selectors, ten markers, crank lift, reversing lever, carriage
+lift/shift and clearing ring. Camera changes only find visible picking sites;
+run reset is separate case setup, and no movement is requested through the
+host API. Every accepted case has admitted motion, observed pointer release,
+a completed/blocked terminal outcome and no active command. Other inputs and
+all register coordinates remain unchanged. No browser errors occur.
+
+The seated carriage shift stops after 0.18 degrees; clearing admits its initial
+one-degree movement and then stops after a further 0.437226368040361 degrees.
+Marker neighbour stops are likewise preserved. Root inspected the final
+screenshot, including the visible blocked readouts. This is hosted coverage
+of the existing controls, not new all-control standalone coverage, loop
+deployment or a whole-machine clearance certificate.
+
+- JSON SHA-256: `f875274940f7abb781a8407e1531e992c289464d63677c96f5205084538fd979`.
+- PNG SHA-256: `ce36129d6894bfb1b8b1fdcc423c8f755d520d990b32cb06277537b93efa2d47`.
+
+During this final gate the pilot authorized a labeled simulation-only loop
+mounting. Planning commit `1152d81` records that separate continuation. The
+214-coordinate export and results above predate its implementation and must
+not be relabeled as acceptance of the future additional loop input.
+
+The final existing-root demonstration gate also passes: all six named physical
+sequences replay twice with exactly matching snapshots and outcome lists
+(2 tests in 1,935.036 s, exit 0). Its [own record](operating-demonstrations-2026-09-22.md#production-reverser-checkpoint--2026-09-23)
+pins the log and concurrent-load scope. It likewise predates loop adoption.

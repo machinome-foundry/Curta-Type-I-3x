@@ -33,6 +33,8 @@ heights are +3.9075 mm (normal) and −4.9425 mm (reversed). Partial settings an
 wrong-order requests are not automatically corrected: a restraint can stop
 motion, and the user must relieve it. Clearing-ring motion exists, but the
 printed loop's deploy/stow clipping path is **not implemented**.
+The pilot has now authorized a clearly labeled simulation-only mounting;
+its isolated design and verification do not yet change the default root.
 
 The locally integrated framework/viewer corrections are required. The installed
 viewer bundle is verified against the production export; reload/re-export older
@@ -41,6 +43,16 @@ pages to pick it up. Execution is still slower than real time. The
 distinguishes tested arithmetic, replay and actual-pointer behavior from the
 unfinished full interaction matrix and whole-machine geometry. OpenSpec progress
 is 14/23 tasks; the umbrella change remains active.
+
+### Separate operating demonstrations
+
+`simulation.operating_demonstrations` provides addition, carry, overflow,
+subtraction, shift and clearing replays. Each restores a documented fresh-machine
+snapshot and requests physical movements; it never assigns a register result.
+They are separate Python fixtures, not buttons that prepare normal operation.
+See the [demonstration guide](docs/operating-demonstrations-2026-09-22.md)
+for the runnable example and the exact checkpoint tested. Their arithmetic and
+replay checks do not certify every moving contact or provide loop deployment.
 
 ## Dated implementation history
 
@@ -404,7 +416,10 @@ reproducible pose, not a claim that a physical crank can run backward.
 - `input_mesh.py`, `bevel.py`: exact-verified single-interface engagement benches.
 - `bevel_bank.py`: the installed seventeen-channel interface, including all six
   carriage detents and lifted intermediate positions; both kernels pass.
-- `demo.py`: stepped demonstrations and replay checks shared with the page examples.
+- `operating_demonstrations.py`: six separate physical-action replays for the
+  retained operating model, with documented snapshot setup and no register setters.
+- `demo.py`: historical prescribed-pose demonstrations for `fast_curta` and
+  its legacy calculator page, not the operating demonstration implementation.
 - `engagement.py`: complete printed-drum contact sweeps, passing both kernels.
 - `carry.py`, `standard/carry.py`: fifteen sliding carry levers and stationary bearings.
 - `carry_spring.py`, `detents.py`, `carry_seat.py`: spreading U-wires, measured
