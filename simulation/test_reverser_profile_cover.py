@@ -121,6 +121,18 @@ class ReverserProfileCoverTest(unittest.TestCase):
         self.assertEqual(len(placed), 2)
         self.assertEqual(placed[1], [(2., 3.), (3., 3.), (2., 4.)])
 
+    def test_axial_cover_allowance_is_independent_of_xy_offset(self):
+        report = dict(points=[(0., 0.), (1., 0.), (0., 1.)],
+                      triangles=[(0, 1, 2)], boundary=[0, 1, 2],
+                      source_height=(0., 3.), allowance_mm=.005,
+                      axial_allowance_mm=.001)
+        vertices, _ = cover_mesh_arrays(report)
+        self.assertEqual({p[2] for p in vertices}, {-.001, 3.001})
+        for bad in (0., -.001, float('nan'), float('inf')):
+            report['axial_allowance_mm'] = bad
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                cover_mesh_arrays(report)
+
 
 if __name__ == '__main__':
     unittest.main()

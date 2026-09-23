@@ -13,7 +13,7 @@ from math import cos, hypot, isfinite, radians, sin
 from pathlib import Path
 
 
-def probe(source_profiles):
+def probe(source_profiles, *, axial_allowance_mm=None, model=None):
     import cadquery as cq
     import manifold3d as mf
     import numpy as np
@@ -24,10 +24,11 @@ def probe(source_profiles):
     from simulation.tools.interference import rigid_leaves, world_solids
     from simulation.tools.reverser_profile_cover import (profile_cover, cover_mesh_arrays,
                                                         checked_native_remainder,
-                                                        convex_partition)
+                                                        convex_partition, axial_allowance)
     from simulation.tools.reverser_tooth_envelope import DRUMS
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    model = OperatingCurta if model is None else model
+    sim = Sim(model(), dt=.1, meshes=True)
     for key in ('FittedCounterPinion', 'ReversingCounterPinion'):
         report = source_profiles[key]
         if convex_partition(report['points'], report['triangles']) != report['polygons']:
@@ -68,9 +69,9 @@ def probe(source_profiles):
                    native_outside_mm3=volume, mesh_radius_mm=mesh_radius)
 
     # Driver endpoints are checked explicitly; changed controls invalidate the probe.
-    if tuple(OperatingCurta.reverser_height.range) != (-6.9425, 3.9075):
+    if tuple(model.reverser_height.range) != (-6.9425, 3.9075):
         raise ValueError('Reverser driver range changed')
-    if tuple(OperatingCurta.crank_elevation.range) != (0, 9):
+    if tuple(model.crank_elevation.range) != (0, 9):
         raise ValueError('Crank-elevation driver range changed')
     bottom_clip = -72.0
     minimum_z = min(min(native[p].BoundingBox().zmin, float(leaves[p].mesh.bounds[0, 2]))
@@ -122,16 +123,19 @@ def probe(source_profiles):
                 report['points'] = [(c*x-s*y+axis[0], s*x+c*y+axis[1])
                                     for x, y in report['points']]
                 report['source_height'] = [low, high]
+                if axial_allowance_mm is not None:
+                    report['axial_allowance_mm'] = axial_allowance_mm
                 report.pop('mesh_cover_polygons', None)
                 reports.append(report)
         else:
-            reports = [profile_cover(Candidate(solid), join='intersection')
+            reports = [profile_cover(Candidate(solid), join='intersection',
+                                     axial_allowance_mm=axial_allowance_mm)
                        for solid in outside.Solids()]
         native_remainder = outside
         count = 0
         for index, report in enumerate(reports):
             low, high = report['source_height']
-            allowance = report['allowance_mm']
+            allowance = axial_allowance(report)
             wire = cq.Wire.makePolygon([(report['points'][i][0], report['points'][i][1],
                                          low-allowance) for i in report['boundary']], close=True)
             native_cover = cq.Solid.extrudeLinear(wire, [], cq.Vector(0, 0, high-low+2*allowance))
@@ -181,6 +185,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source-profiles', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--axial-allowance', type=float,
+                        help='Independent positive Z-cover length; default uses the XY allowance')
     args = parser.parse_args()
     if args.output.exists():
         parser.error(f'Preserve existing evidence: {args.output}')
@@ -188,7 +194,7 @@ def main():
     source_profiles = {row['part']: row for row in map(json.loads, raw.splitlines())}
     count = 0
     with args.output.open('x') as output:
-        for row in probe(source_profiles):
+        for row in probe(source_profiles, axial_allowance_mm=args.axial_allowance):
             row['source_profiles_sha256'] = hashlib.sha256(raw).hexdigest()
             print(json.dumps(row), file=output, flush=True)
             print(json.dumps({key: row[key] for key in

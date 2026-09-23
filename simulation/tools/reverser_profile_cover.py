@@ -146,6 +146,14 @@ def projected_mesh_triangles(vertices, faces):
     return polygons
 
 
+def axial_allowance(report):
+    """Read a declared axial length, keeping old isotropic evidence readable."""
+    value = report.get('axial_allowance_mm', report['allowance_mm'])
+    if not isfinite(value) or value <= 0:
+        raise ValueError('Name a positive axial cover allowance')
+    return value
+
+
 def cover_mesh_arrays(report):
     """Extrude the planar triangulation using shared topological indices.
 
@@ -155,7 +163,7 @@ def cover_mesh_arrays(report):
     """
     points, boundary = report['points'], list(report['boundary'])
     low, high = report['source_height']
-    allowance = report['allowance_mm']
+    allowance = axial_allowance(report)
     count = len(points)
     vertices = [(x, y, z) for z in (low-allowance, high+allowance) for x, y in points]
     faces = []
@@ -236,7 +244,7 @@ def checked_native_remainder(outside, native_exclusion=None):
 
 def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
                   angular_deflection=.025, join='arc', include_mesh=False,
-                  native_exclusion=None):
+                  native_exclusion=None, axial_allowance_mm=None):
     """Cover the source, optionally with a separately proved exclusion solid.
 
     The caller owes geometric separation of any exclusion from its mating
@@ -247,6 +255,8 @@ def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
 
     if not isfinite(allowance) or allowance <= 0:
         raise ValueError('Name a positive outward cover allowance')
+    axial = axial_allowance(dict(allowance_mm=allowance,
+        axial_allowance_mm=allowance if axial_allowance_mm is None else axial_allowance_mm))
     if any(not isfinite(v) or v <= 0 for v in (linear_deflection, angular_deflection)):
         raise ValueError('Expected positive candidate tessellation settings')
     shape = part.shape().copy()
@@ -264,14 +274,15 @@ def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
     polygons = convex_partition(points, triangles)
     boundary = outer_boundary(triangles)
     box = shape.BoundingBox()
-    wire = cq.Wire.makePolygon([(points[i][0], points[i][1], box.zmin-allowance)
+    wire = cq.Wire.makePolygon([(points[i][0], points[i][1], box.zmin-axial)
                                 for i in boundary], close=True)
-    cover = cq.Solid.extrudeLinear(wire, [], cq.Vector(0, 0, box.zlen+2*allowance))
+    cover = cq.Solid.extrudeLinear(wire, [], cq.Vector(0, 0, box.zlen+2*axial))
     if not cover.isValid():
         raise ValueError('Invalid candidate cover')
     outside = shape.copy().cut(cover.copy())
     volume, union_volume = checked_native_remainder(outside, native_exclusion)
     report = dict(part=type(part).__name__, allowance_mm=allowance,
+                axial_allowance_mm=axial,
                 offset_join=join,
                 linear_deflection=linear_deflection, angular_deflection=angular_deflection,
                 source_volume_mm3=shape.Volume(), native_outside_volume_mm3=volume,

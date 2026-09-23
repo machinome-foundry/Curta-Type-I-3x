@@ -338,3 +338,137 @@ The final focused run passes 29 tests (profile cover, phase boundaries, pose
 cache/refusal, phase compiler and refinement-resume modules) in .003 seconds;
 the ten profile-cover tests include both new red-first regressions. These
 small tests complement, not replace, the terminated 44-row geometry run.
+
+## Portable installed trial — two remaining failures
+
+The independent eight installed-pose witnesses now run reproducibly through
+`simulation.tools.probe_reverser_installed_profiles` against the developing
+framework predicate. They match the earlier native results: home and both
+crank-90/shaft-231.6 poses are clear; crank-90/shaft-134 at heights 1.0475 and
+0 contacts; the half-degree witness remains native-positive and covered.
+The height-1.0775 control and lowered-lever/raised-drum endpoint are clear.
+The eight-row command exits 0; evidence
+`_build_checks/reverser-installed-profile-witnesses-a0b4539.jsonl` has SHA-256
+`9469337aa95250cf6fd620119cda8b85cbc21ad70638852191873b3261d94560`.
+
+The installed trial groups equal-height drum components without angular
+symmetry and uses all six independent input phases. Its lower-drum omission
+has a further axial proof: the lowest covered input tooth is −56.205 over
+all reverser travel, while the highest covered lower-drum tooth is −57.295
+over all crank lift. Radially excluded input cores were already checked
+against the complete drum. Thus complete-print lower material was measured
+before this optimization, not discarded from the original whole-print bounds.
+
+`InstalledReverserProfileTrialTest` fails red before its factory exists.
+After implementation against the isolated framework candidate, its four
+inherited retained tests terminate in 244.918 seconds: the original
+penetrating request and long-request/retry/replay/relief tests pass; the
+precontact endpoint and alternate-history preparation fail. The production
+root remains unchanged. The endpoint at 1.0675000000000001 is just below the
+candidate's conservatively expanded limit 1.067500000000004. This is a
+representation/coverage-choice failure, not permission to add a volume or
+contact epsilon. Axial cover padding must be independently justified if
+revised.
+
+The alternate-history trial stops the crank at 81.93237719286117 with ones
+shaft 179.9672140343115 and lever −4.9425. All six native input/drum commons
+are zero there and at +.01 and +.1 crank degrees along the measured 6.4-degree
+shaft advance per crank degree. But farther along that same motion there
+is a **real previously untested contact**:
+
+| Crank / shaft | Native ones/top-drum mm³ | Published mesh mm³ |
+| --- | ---: | ---: |
+| 82.43237719286117 / 183.16721403431148 | .0019561049905521917 | .00079150041326653 |
+| 82.93237719286117 / 186.3672140343115 | .004558793175615966 | .0028154123562718443 |
+
+The new `ReverserContactPathTest` reproduces the first contact in the actual
+unconstrained retained production root, not just an independently transformed
+bench. The request completes and the expected shaft is reached, but both
+zero-common assertions fail: native .0019561049905521813 and mesh
+.0007915004132666966 mm³. That run terminates with two failed subtests in
+23.713 seconds against the unchanged validation framework bench. The earlier
+clear 90-degree endpoint never proved the intervening path clear. The
+alternate-history completion assertion is preserved, not weakened; a bounded
+fit candidate must also retain the fork's axial capture and source fidelity.
+
+Independent Sol timing isolates another framework limitation: five running
+ticks for a .5-second crank request use 49.75 CPU seconds without CAD meshes,
+with 7,800 predicate calls consuming 33.36 seconds and 15,600 repeated profile
+placements consuming 17.44 seconds. The held-angle axial request costs .91
+seconds, with only 24 calls. Paired package completion is held for an
+evidence-backed scoped-reuse review; global caches, relaxed validation,
+changed sampling and truncated profiles are not accepted remedies.
+
+## Inner-flank candidate and independent axial allowance
+
+The retained collision's source-pinion survey used 81 native poses from
+80 through 88 degrees at .1-degree spacing. Maximum native commons at
+83 degrees were .000330821745259808 mm³ for .40 mm uniform relief,
+.0001427492171062817 for .405 and .000032512695330331293 for .41.
+.415 and .42 had zero native common at these samples. This is a bounded
+diagnostic, not a full-motion certificate.
+
+The isolated .415 uniform candidate cleared the actual retained regression
+in both representations (1 test, 40.234 seconds), but failed the existing
+fork capture contract at lowered lever/crank 75. No production fit changed.
+The fork's contact was localized to the middle tooth, at radii
+6.165746366181353–6.226209785896065, while the crank-83 drum interference
+was at radii 4.508289922567249–4.619494848745804. Both directions of .3 mm
+axial perturbation lost their former .001151693969354527 mm³ native contact
+under the uniform fit.
+
+`reverser_ones_fit_trial.py` therefore tests an inner-flank-only candidate:
+the existing .36 mm fitted outline remains outside R6, and .415 mm relief
+is applied inside R6. It changes neither tooth phase, keyed bore, height,
+fork nor upstream design. Native fidelity checks find one valid solid,
+zero added volume, 2.9432728962945607 mm³ removed, and zero removal outside
+R6 or inside the protected R3.5 keyed region. The existing 15 faceted seat,
+capture, whole-bank sampled sweep and engagement contracts pass (27.40 s).
+The new retained-root collision test also passes on both native and world64
+geometry (41.649 s). Exact whole-bank and installed-Bound acceptance remain
+separate gates at this checkpoint.
+
+The inspected image
+`_build_checks/reverser-inner-flank-profile-comparison.png` compares the two
+outward XY covers: it shows their coincident protected tips and the recessed
+inner contact flank. These are labelled .005 mm outward covers, not source
+outlines or a rendered full machine.
+
+The axial cover thickness is now an independently declared geometric length.
+Old records retain their isotropic .005 mm default; a new record may declare
+`axial_allowance_mm=.001` without changing its .005 mm XY offset. A new unit
+test fails red with the old isotropic extrusion, then all 11 cover tests pass
+after both native and shared-index mesh extrusion read the declared length.
+Zero, negative and nonfinite axial allowances refuse. A reduced length is
+not accepted merely because it makes a Bound test pass: full native and
+published-mesh containment is rerun before that record is consumed.
+
+That rerun completed all 44 records on the isolated inner-flank root:
+`_build_checks/reverser-inner-flank-installed-cover-a0b4539.jsonl`, SHA-256
+`1cc0cf7f434318d66a813c5cb62046433ae283b0985a5117d2c671edc91da0ff`.
+Its new source pinion has 637 convex pieces and zero native uncovered volume.
+All eight complete installed prints have valid zero native uncovered volume.
+All six input meshes and the upper drum are empty after subtraction; the
+lower drum retains the same .0007006970741025602 mm³ residual inside the
+independently separated radial region, never dismissed by volume size.
+The .001 mm axial allowance thus has its own complete-print coverage check.
+The original pinned evidence and trial remain available unchanged in meaning;
+new evidence/model arguments select this candidate explicitly.
+
+The exact 15-test seat suite subsequently passes in 420.62 seconds. The
+installed inner-flank trial terminates **3/4 passing** in 151.567 seconds:
+wrong-order penetration, long request/retry/replay/relief and precontact play
+pass. Alternate-history crank preparation remains blocked. Independent XY
+checks identify the cover contact from about 82.6 through 83.4 degrees;
+native minimum distance at 83 degrees is only .00043888341213706866 mm,
+smaller than the two .005 mm outward covers. The native minimum distances
+at 82.8 and 83.2 are .0037773569213893025 and .001954919621565924 mm.
+The .415 inner fit is therefore a geometry/capture checkpoint, **not an
+adopted operating restraint**. No completion assertion is relaxed.
+
+The repeatable coverage entry point is
+`python -m simulation.tools.reverser_inner_flank_cover --source-profiles
+_build_checks/reverser-native-and-mesh-profile-cover-4035917.jsonl
+--source-output <new-source.json> --installed-output <new-installed.jsonl>`.
+It covers the explicitly named current trial, keeps prior evidence, and
+requires the entire output stream to terminate successfully before use.
