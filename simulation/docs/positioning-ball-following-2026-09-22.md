@@ -217,3 +217,63 @@ Artifacts under `_build_checks/` (SHA-256):
   `97f1aa80f6bad1ff6f6980c0df71884cb7f5e820955147224b58260cc9485647`.
 - Desired ring-clearance red log:
   `f1428ff41dcef1630b2241083a043fc03dcca1dd856cc2284e754f7034dd5a89`.
+
+## Integrated prerequisites and bounded ring completion
+
+Framework main is `f4c48f61a88f183f7e11ccb3e0bbc7158b8e6b9d`; the separate
+viewer Follow cycle is integrated at `fe1a7082d1f4e7907ae50c0268e6d26fd19e444b`
+(implementation `77df96c`, planning `56f9f48`). The installed source viewer
+reports package 0.7.0, API25 and document versions 1..12, including through the
+framework's public viewer report. This states local installed content, not
+publication. The primary framework's untracked V8 directory is untouched.
+
+The viewer's archived `follow-two-envelopes` evidence records 1,490 widget
+tests, 196 Python tests plus 22 subtests, documentation/distribution checks,
+and exact Python/browser equality across eight 214-coordinate trial states.
+The hosted actual-mesh trial and auto-mounted standalone crank-pointer test
+pass and their screenshots were inspected. These exports are the earlier
+project trial at `4cd6ec4`, not final production geometry. A 60-second project
+screenshot timeout initially failed; same-bundle paused-frame comparisons
+measured 46.855 s on v11 and 64.011 s on v12. The unchanged standalone probe
+passes with a 180-second screenshot timeout; product capture already allows
+300 seconds. That is not evidence of a new Follow simulation-loop failure.
+
+The [bounded ring passage](thrust-ring-passage-2026-09-23.md) is now adopted
+at project `3f7e0c9`. It preserves the ring's support seats and clears the
+radial trial in both kernels. Its paired complete-rigid addition inventory
+removes exactly ball/ring and changes no other pair. Production still has
+the static ball: this resolves the ring prerequisite, not ball-motion adoption.
+
+## Continuous native bell clearance
+
+`tools/positioning_ball_interval.py` encloses the complete supported retained
+radial interval from the profile's local minimum through R11.950001 mm for
+each bell-angle interval. It rotates that capsule into the fixed source bell
+frame and inflates its radius by an angular-displacement bound, using the
+outward-rounded ball radius 3.750002 mm. Adaptive subdivision accepts only
+valid native Boolean results with exactly zero volume. It thus covers both
+unsampled angles and radial slack, rather than just points on the envelope.
+
+The complete 0..360-degree run passes 1,371 enclosure checks and 716 accepted
+intervals in 253.401 s; the narrowest interval is .25 degrees. It refines
+142 invalid coarse Booleans, accepting none of them. The run leaves the entire
+production bank unchanged and records profile SHA-256
+`cf0382d6cea269bff7c66dfdf8651bd857f5457396ffec80778fe6ca7d591af4`.
+This proves the native bell interface only; the published bell mesh, collar
+under carriage shift, remaining neighbours and final retained operating/viewer
+gates are not certified by that result.
+
+An earlier instrument aborted at an invalid coarse 2..3-degree Boolean;
+subdivision then supplied valid smaller enclosures covering that interval.
+A proposed cylinder shortcut subsequently failed with a null CAD shape and
+was removed; the complete capsule proof above is the retained implementation.
+Neither failed instrument is counted as a clearance pass.
+
+Artifacts under `_build_checks/`, SHA-256:
+
+- Initial coarse-Boolean refusal, `positioning-ball-native-interval-8d6490c.jsonl`:
+  `ed3c3984802e0aba8a4bc3b2ef27ffef08840898e80bcbf76a62a9d04f143610`.
+- Complete `positioning-ball-native-interval-refined-8d6490c.jsonl`:
+  `3373d0363e8618ceae082bf11c7dc1e982abf13ce84dafef0f394823472c153b`.
+- Rejected cylinder shortcut:
+  `8a8edbc3fdd3093438560c3518b956f7696e8d3ed24b5770ee04701971dea85a`.
