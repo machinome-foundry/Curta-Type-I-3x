@@ -134,6 +134,10 @@ radius/length and the upper pivot axis. This eccentric lower mounting is part
 of the authorized replacement, not a correction to the source files or a
 claim that the original glued fit was verified. Its clearance and connectivity
 must pass again before adoption.
+The full-precision published mesh subsequently rejects the nominally flush
+pivot shoulder, despite a zero native common. A named .01 mm mounting rise
+provides actual clearance from the cover face; it is a placement change, not
+an intersection tolerance. Recheck capture and stop-pin engagement after it.
 
 Keep all three original source occurrences accounted for and all source files
 unchanged. Name the replacement in the visible loop control and documentation.
