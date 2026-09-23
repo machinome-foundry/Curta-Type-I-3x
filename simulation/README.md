@@ -448,11 +448,14 @@ the complete nominal overlap inventory is not yet established. See the measureme
 for the current diagnostic evidence. Working motion and arithmetic are not a
 claim of complete physical validation or fabrication readiness.
 
-The project-owned OpenSpec change is `simulate-the-curta`. Its planning commit is
-`05165d3`; it remains active and unarchived. Current controls describe an operation
-from explicit starting registers: changing crank progress is reproducible, rather
-than accumulating hidden Python state. The calculation-facing page retains
-completed operations while the underlying model stays scrub-friendly.
+The project-owned umbrella change is `simulate-the-curta`. Its planning commit
+is `05165d3`; it remains active and unarchived. The default operating model
+uses independent physical inputs and run-owned retained joint state. Its
+register readouts decode that state; there are no starting-register setters
+or hidden page-local calculator driving the mechanism. Explicit snapshots
+provide reproducible setup and replay. The prescribed-pose `fast_curta` sibling
+and its legacy calculator page remain separate historical studies, not the
+default operation surface or evidence of whole-machine acceptance.
 
 ## Attribution
 
