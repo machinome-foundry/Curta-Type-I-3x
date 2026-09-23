@@ -1,5 +1,16 @@
 # Operating Curta reconciliation and completion
 
+## September 23: confirmed mid-cycle reverser gap
+
+The current all-25 standalone control gate does not imply mechanical
+wrong-order acceptance. The [actual-root reverser regression](reverser-wrong-order-2026-09-23.md)
+now fails on positive native and world64 gear/drum contact when the lever is
+moved with the crank at 90°. Its paired free-play test passes. The measured
+first-contact pose and inspected native section identify a project-law gap;
+no production restraint or geometry is changed by this diagnostic checkpoint.
+Framework CI commits `a87abc5` and `e05d9c5` are reconfirmed ancestors of current
+framework main `82bf530`; user files and other worktrees remain untouched.
+
 ## September 23: remaining viewer runtime cost
 
 A follow-up Sol investigation profiles the pinned shoulder export on viewer

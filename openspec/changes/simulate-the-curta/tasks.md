@@ -1,5 +1,13 @@
 ## Current checkpoint — resumed 2026-09-22
 
+September 23: the [mid-cycle reverser regression](../../../simulation/docs/reverser-wrong-order-2026-09-23.md)
+confirms a missing project restraint on the actual retained root. At crank
+90°, the lever admits gear/drum penetration below the measured first-contact
+height. The two-test gate has one passing free-play test and one failing
+penetration test (three assertions fail across both kernels and status).
+The native section is inspected. No operating law, geometry or task checkbox
+changes; the phase-dependent restraint and its full acceptance remain open.
+
 September 23 continuation: the [crank-grip seat](../../../simulation/docs/crank-grip-seat-2026-09-23.md)
 passes four production tests and the 44-sample paired addition diagnostic,
 removing its two positive crank contacts. The remaining source screw common
