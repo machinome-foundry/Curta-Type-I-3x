@@ -1,10 +1,11 @@
 """Replacement mounting acceptance, distinct from the source clip studies."""
 
 import cadquery as cq
+from math import cos, sin, radians
 from machinome.test import TestCase
 from simulation.clearing_loop_mounting import ReplacementLoopBench
 from simulation.standard.parts import ClearingRing, ClearingRingRivet
-from simulation.tools.interference import rigid_leaves
+from simulation.tools.interference import rigid_leaves, world_solids
 
 
 class ReplacementLoopMountTest(TestCase):
@@ -93,3 +94,22 @@ class ReplacementLoopMountTest(TestCase):
             self.node.set_state(deployment=angle, release_height=0)
             self.assertIntersecting(self.node.loop.clearing_ring,
                                     self.node.loop.clearing_ring_rivet_1)
+
+    def test_omitting_the_new_pin_removes_both_stops(self):
+        pivot_path = 'Curta.loop.clearing_ring_rivet_1'
+        loop_path = 'Curta.loop.clearing_ring'
+        # Independent source placement: the pin is at peg-local (-6, 0).
+        theta = radians(-74.282220532)
+        pin_x = 39.372124643 - 6*cos(theta)
+        pin_y = 10.943003894 - 6*sin(theta)
+        remove_pin = cq.Solid.makeCylinder(.61, 1.6,
+                                           cq.Vector(pin_x, pin_y, 61.6))
+        for angle in (-90.6, .6):
+            self.node.set_state(deployment=angle, release_height=0)
+            native = world_solids(self.node, selected={pivot_path, loop_path})
+            peg, loop = native[pivot_path], native[loop_path]
+            without_pin = peg.cut(remove_pin).clean()
+            self.assertTrue(without_pin.isValid())
+            self.assertEqual(len(without_pin.Solids()), 1)
+            self.assertGreater(loop.intersect(peg).Volume(), 0)
+            self.assertEqual(loop.intersect(without_pin).Volume(), 0)

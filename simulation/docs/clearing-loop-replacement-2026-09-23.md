@@ -115,6 +115,18 @@ explicit source-STL fallbacks above. Report
 `139ed8bb39a6cb7b3a3b9372e7e2ede0e30ae663f4aead2612166bdca7ecbccc`.
 All raw reports, logs and images are under the worktree's ignored `_build_checks/`.
 
+The shared-shape refactor separates the diagnostic unbounded swivel/rise from
+the prospective operating part's bounded swivel; it does not change the
+mounting solid. The expanded eight-test gates pass natively (17.58 s) and
+faceted (17.37 s). The new negative check removes only the new pin from the
+native placed pivot: both previously positive overtravel commons become zero,
+while the remaining pivot stays one valid solid. This particular causal check
+uses native geometry in both invocations; the other free/blocked assertions
+use each runner's selected representation.
+
+- Shared-shape native-02 log SHA-256: `ef0f5e6a42d503bbbc52be1b163c2f360c232aefabe6c5f3fbb22f81788d82ee`.
+- Shared-shape faceted-01 log SHA-256: `2b8debba4fb7027066c4bb7f0e46ed079956bf01902240c9d81e228658f224f5`.
+
 ## Operating adoption still owed
 
 The default root still has no `loop_deployment` input. Two production-facing

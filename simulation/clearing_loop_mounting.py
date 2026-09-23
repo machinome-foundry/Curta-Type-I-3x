@@ -8,8 +8,9 @@ and the two mounting posts change. Production adoption awaits installed proof.
 from math import cos, sin, radians
 import cadquery as cq
 from machinome.parameters import Length
-from simulation.standard.parts import ClearingRingRivet
-from simulation.clearing_loop import ProbeLoop, LoopMountAssembly, LoopMountBench
+from machinome.motion.joints import Prismatic, Revolute
+from simulation.standard.parts import ClearingRing, ClearingRingRivet
+from simulation.clearing_loop import LoopMountAssembly, LoopMountBench
 
 
 def _polar(radius, angle):
@@ -37,7 +38,7 @@ def stop_slot(radius, half_width, depth):
     return sector.translate((40.5, 0, -.1)).clean()
 
 
-class CaptiveSimulationLoop(ProbeLoop):
+class CaptiveLoopShape(ClearingRing):
     boss_radius = Length(8)
     bore_radius = Length(3.85)
     stop_radius = Length(6)
@@ -54,6 +55,12 @@ class CaptiveSimulationLoop(ProbeLoop):
         return (shape.fuse(boss).cut(bore)
                 .cut(stop_slot(self.stop_radius, self.slot_radius,
                                self.slot_depth)).clean())
+
+
+class CaptiveSimulationLoop(CaptiveLoopShape):
+    """Diagnostic pose joints; the production part has no release-height joint."""
+    swivel = Revolute(axis=(0, 0, -1), at=(40.5, 0, 0))
+    rise = Prismatic(axis=(0, 0, -1))
 
 
 class SimulationPivot(ClearingRingRivet):
