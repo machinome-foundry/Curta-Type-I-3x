@@ -1,5 +1,28 @@
 # Actual standalone-page interaction evidence
 
+## September 23: current retained-ball export
+
+The fresh `_build_checks/operating-prefix-23857e9-572648f/` export pairs
+framework `23857e9` with viewer runtime `572648f` (later viewer `08d70fb`
+adds rejected-experiment history only). It has the production 214-coordinate
+program `b81b2ce7af6556c12a68829fa3444d1dc6efc7c110d2cd88aff57fff0b9700f4`.
+Its manifest and index are byte-identical to the earlier radial-ball export;
+only the separately verified viewer bundle changes. SHA-256:
+
+- Manifest: `bab5b1248bf8f100b764bf37bfd00065770df876bb83ec191b44549a9727569b`.
+- Index: `16238dda75b0b88224bd1bcaf0c9dfd77a6f43d75652b2972f4af5ed00111bb2`.
+- Bundle: `0d602f50532ffe3c906b0bea285352cf60c5165da9b77d818d948f75f5e113df`.
+
+On the unmodified auto-mounted page, an actual first-selector drag at
+(842.025, 620) reaches digit 2, reports completed after observed release,
+leaves the other 23 visible input readouts unchanged and produces no page
+error. Process exit zero is observed. The screenshot is inspected: complete
+assembly, changed selector and matching visible 2.0000 readout. This is not
+the full standalone control matrix or sub-readout bank parity. Report
+`operating-prefix-standalone-selector1-262378b.json` SHA-256
+`56862d315d3ade178dd671d7a09e5ae37544c3f7344aecc5ea21f51f652e6ffd`;
+image SHA-256 `a9adee9dbe265769cb2e0957b47dd122e66cd2c6d943a8e87d483512fc3af1b0`.
+
 `tools/operating_standalone_probe.py` serves the unmodified exported index,
 manifest, bundle and contained model assets. It never remounts the viewer,
 obtains a hidden run handle, modifies the page implementation, or submits

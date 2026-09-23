@@ -287,6 +287,10 @@ geometry nor its graph changed. Log
 The first negative-fixture attempt defined CAD classes through stdin and
 failed construction because no source path existed; that is a harness error,
 not the required mechanical negative. Its failed log is retained separately.
+The complete ratchet/limits rerun then passed all nine tests in 80.513 s,
+including the original all-tooth/closing-tooth cases and both new full-root
+cases. Log `operating-ratchet-limits-complete-262378b.log`, SHA-256
+`7e4990b2290476098857f12cf828fdd96f3c0ad5474b059578d97c2ab3b913c9`.
 
 After this local completion, carry-guide contacts, clearing-loop release, zero-cam clip,
 input-selector fit and whole-machine interaction/geometry acceptance remain
