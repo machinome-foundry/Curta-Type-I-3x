@@ -10,6 +10,14 @@ and preserve its documented rest placement and the project's attribution.
   to their physically joined printed group, and no optional modification is substituted
 - **AND** every transcribed placement agrees with its source within 0.01 mm
 
+#### Scenario: Inspect the authorized replacement loop mounting
+- **WHEN** the maker uses the operating model's clearing-loop mounting
+- **THEN** it is identified as a simulation-only replacement, with the original
+  loop and both rivet occurrences explicitly mapped to preserved or replaced
+  geometry and the original STEP/STL files unchanged
+- **AND** its own travel, capture and neighbouring clearance are verified;
+  this exception does not waive any other source or whole-machine contract
+
 ### Requirement: Honest physical interfaces
 The simulation SHALL verify connected rigid parts and measured assembly
 interfaces, recording any source defect that prevents a passing contract.

@@ -38,6 +38,9 @@ source, geometry and arithmetic contracts.
 
 Non-goals: redesigning print geometry, optional modifications, contact dynamics,
 friction, spring-force prediction, or fabrication certification.
+The pilot explicitly authorized one bounded exception on 2026-09-23: a
+simulation-only replacement clearing-loop mounting. Other print redesigns and
+manufacturing claims remain outside that exception.
 
 ## Decisions
 
@@ -102,6 +105,44 @@ friction, spring-force prediction, or fabrication certification.
     recursive navigation and exports retain them without altering geometry.
 
 ## Findings
+
+### Authorized simulation-only clearing-loop mounting — 2026-09-23
+
+The pilot chose "Design a simulation-only replacement mounting" after the
+source-backed investigation could not establish the original clip deformation.
+The 111-pose trial finds body-side second-rivet obstructions, not merely a
+flexible free lip; its endpoint fit is not a deploy/stow mechanism. Preserve
+those negative results and the unadopted T05/T06 trials.
+
+The working design is a captive rotary bearing on the first rivet's measured
+axis, retaining the source finger-loop geometry and nominal stowed orientation.
+A local closed bearing boss replaces the first open clip. A headed pivot with
+a stop pin engaging a bounded arc recess provides axial/radial capture and
+explicit angular stops over approximately 90 degrees of deployment. A flush
+plug replaces the obstructing second rivet while preserving its cover-hole
+datum; no source cover, collar, crank or clearing-tooth geometry is changed.
+Dimensions and angular allowances are simulation design values to be measured
+and tested, not inferred original print tolerances. If the local boss or stop
+arrangement fails installed clearance, revise this same bounded mounting and
+record the rejected candidate before adoption.
+
+Keep all three original source occurrences accounted for and all source files
+unchanged. Name the replacement in the visible loop control and documentation.
+One independent deployment driver acts on the visible finger loop, below the
+existing clearing-ring motion, and requests no automatic lifting, clearing,
+crank preparation or register change. Partial deployment and restore/replay
+remain run-owned. Assembly/disassembly of the new captive bearing is fixture
+setup, not an additional user control or an invented metal release button.
+
+Adoption requires red-first source-preservation, valid connected material,
+native/published-mesh full-path clearance, radial/axial capture and free/blocked
+end-stop contracts. Inspect local and installed pixels; check carriage/clearing
+transport and crank neighbours throughout the permitted deployment path.
+Prove independent running requests, partial motion, stops/retry and exact
+snapshot replay, then hosted and unmodified standalone actual-part gestures.
+Rerun retained arithmetic/clearing and existing controls after adoption. A
+passing replacement does not prove how the source elastic clip works or close
+unrelated whole-machine contact findings.
 
 ### Counter lockout indexed fit — 2026-09-21
 

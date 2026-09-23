@@ -19,6 +19,11 @@ and expressive with the motion api."
 - Verify source identity, rigid parts, assembly interfaces and the author's
   arithmetic calibration sequence; record source defects and fidelity limits.
 - Add the project manifest, build instructions, measurements and visual evidence.
+- Under the pilot's September 23 decision, design a clearly labeled
+  simulation-only clearing-loop mounting in place of the unresolved elastic
+  clip mounting. Preserve upstream assets and map each replaced occurrence;
+  verify the replacement's own travel and retention rather than attributing
+  its behavior to the original printed design.
 
 ## Capabilities
 
@@ -42,7 +47,9 @@ source material. Uses the workspace's machinome motion API and exact STEP
 adapter. Keeps the project's existing license and attribution.
 
 This is prescribed kinematics with explicit arithmetic state, not a force,
-friction or spring-force solver. Optional modifications are not selected.
+friction or spring-force solver. Upstream optional modifications are not selected.
+The explicitly authorized simulation-only clearing-loop mounting is a new
+project-owned exception, not an original-source or fabrication claim.
 Delivery requires honest geometric evidence: an unresolved source defect or
 unproven drive interface is recorded as unfinished work, never a passing test.
 

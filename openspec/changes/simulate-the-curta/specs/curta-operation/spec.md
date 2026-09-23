@@ -128,8 +128,11 @@ the carriage, finish a sweep, or reset an untouched register.
 
 #### Scenario: Handle the clearing loop
 - **WHEN** the maker deploys or stows the printed clearing loop
-- **THEN** it moves around its actual rivet mounting and respects the printed
-  retention, without inventing the original metal Curta's release button
+- **THEN** it moves around the explicitly labeled simulation-only replacement
+  mounting authorized on 2026-09-23, remains captive and respects that
+  mounting's physical travel stops without moving another control
+- **AND** the replacement is not presented as the original elastic clip's
+  motion and does not invent the original metal Curta's release button
 
 #### Scenario: Replay a demonstration
 - **WHEN** the same documented snapshot and physical-action sequence are replayed
