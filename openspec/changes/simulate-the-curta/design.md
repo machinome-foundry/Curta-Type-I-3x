@@ -126,6 +126,15 @@ and tested, not inferred original print tolerances. If the local boss or stop
 arrangement fails installed clearance, revise this same bounded mounting and
 record the rejected candidate before adoption.
 
+Installed verification rejects the first candidate's unchanged lower stems:
+the two source rivet axes are about .38755 mm off the unchanged cover bores,
+giving positive native commons. The replacement therefore offsets only each
+lower stem onto its measured cover-hole axis, preserving the source stem
+radius/length and the upper pivot axis. This eccentric lower mounting is part
+of the authorized replacement, not a correction to the source files or a
+claim that the original glued fit was verified. Its clearance and connectivity
+must pass again before adoption.
+
 Keep all three original source occurrences accounted for and all source files
 unchanged. Name the replacement in the visible loop control and documentation.
 One independent deployment driver acts on the visible finger loop, below the
