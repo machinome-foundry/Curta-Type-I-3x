@@ -79,6 +79,8 @@ class ToothEnvelopeReader:
         self.native = world_solids(sim.node, selected=set(self.paths))
         leaves = dict(rigid_leaves(sim.node))
         self.faceted = {p: mesh_solid(leaves[p].mesh) for p in self.paths}
+        self._drum_pose_key = None
+        self._posed_drums = None
 
     def posed(self, crank, shaft, height, lift=0, *, kernel='world64'):
         if kernel not in ('world64', 'native'):
@@ -90,14 +92,25 @@ class ToothEnvelopeReader:
             tip = (origin[0], origin[1], origin[2]+1)
             gear = self.native[self.gear].rotate(origin, tip, angle).translate(
                 (0, 0, displacement))
-            drums = {p: self.native[p].rotate((0, 0, 0), (0, 0, 1), -crank).translate(
-                (0, 0, lift)) for p in DRUMS}
         else:
             gear = self.faceted[self.gear].translate(tuple(-x for x in origin)).rotate(
                 (0, 0, angle)).translate(origin).translate((0, 0, displacement))
-            drums = {p: self.faceted[p].rotate((0, 0, -crank)).translate(
-                (0, 0, lift)) for p in DRUMS}
-        return {self.gear: gear, **drums}
+        key = kernel, crank, lift
+        # Native Boolean sequences can contaminate a reused posed BRep even
+        # while its own isValid() remains true. Keep fresh native drum poses;
+        # only the immutable world64 mesh path may reuse a placement here.
+        if kernel == 'native' or key != self._drum_pose_key:
+            if kernel == 'native':
+                drums = {p: self.native[p].rotate((0, 0, 0), (0, 0, 1), -crank).translate(
+                    (0, 0, lift)) for p in DRUMS}
+            else:
+                drums = {p: self.faceted[p].rotate((0, 0, -crank)).translate(
+                    (0, 0, lift)) for p in DRUMS}
+            # Reader-local and capped at one drum pose. Rigid transforms make
+            # new shapes; neither subsequent gear queries nor callers mutate it.
+            self._posed_drums = drums
+            self._drum_pose_key = key
+        return {self.gear: gear, **self._posed_drums}
 
     def volumes(self, crank, shaft, height, lift=0, *, kernel='world64'):
         bodies = self.posed(crank, shaft, height, lift, kernel=kernel)
@@ -106,7 +119,9 @@ class ToothEnvelopeReader:
             if kernel == 'native':
                 common = intersect_shapes(bodies[self.gear], bodies[drum], self.gear, drum)
                 if not common.isValid():
-                    raise ValueError('Invalid native common')
+                    raise ValueError(f'Invalid native common: crank={crank!r}, '
+                                     f'shaft={shaft!r}, height={height!r}, lift={lift!r}, '
+                                     f'pair=({self.gear!r}, {drum!r})')
                 values[drum] = common.Volume()
             else:
                 values[drum] = faceted_common_volume(bodies[self.gear] ^ bodies[drum])

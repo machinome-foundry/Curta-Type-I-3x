@@ -340,6 +340,85 @@ at those sampled poses, but the top pair's boxes overlap. A possible local
 placement cache or conservative cull needs separate paired proof; none was
 implemented, no guard was weakened, and no framework cycle was opened.
 
+## Midpoint refinement and project-tool placement reuse
+
+A trial retained just one pair of posed drum bodies, keyed by kernel, crank
+angle and drum lift. Changing the shaft or reverser height still built the gear
+pose independently; changing any drum-pose key invalidated the cache. It did
+not cache intersections, alter either geometry kernel, or remove the
+invalid/false-empty common checks. The reuse unit test failed before the change
+and passed afterward, including invalidation checks. **Native reuse was then
+withdrawn** after the sequence-dependent failure below: the current tool reuses
+only world64 drum placements and always constructs fresh native drum poses.
+
+Both ten-probe rejection sequences were rerun, grouped by kernel so adjacent
+queries actually reuse the drum placement. **Every recorded field is exactly
+equal** to the corresponding uncached record, including the four positive
+commons in each kernel. These probe commands still correctly exit 1:
+
+- `_build_checks/reverser-phase-cached-native-48d71c9.json`, SHA-256
+  `e8731e0d8c20b3dac91b1b9e50cebcda544dda3be1202921b8f16d5b06e5b9de`.
+- `_build_checks/reverser-phase-cached-world64-48d71c9.json`, SHA-256
+  `3f9215b489c5e3dd24f2eb532f403359adfdf1f63f91321e2e7fdd311d6a7074`.
+
+The actual-root pose/contact fixture also passes both tests in **96.187 s**.
+A bounded placement-only timing (16 native shaft poses at crank 90°, height/lift
+zero, alternating uncached/cached passes) measured 1.00252/.14957 and
+.95809/.15613 CPU seconds. That is evidence about placement cost only, not
+whole-machine runtime or total native survey speed. The native speedup is an
+unsuccessful trial, not an accepted optimization.
+
+`simulation.tools.refine_reverser_intervals` uses interpolated angles only as
+search seeds, expanding a local interval until it independently measures the
+expected clear/positive transition. It refuses a wrong transition or an
+unbracketed seed. All five sectors remain separate. The completed four-worker
+world64 run adds **59 midpoint rows and 590 observed brackets**: 75…177° at
+height zero, and 165…177° at height −3, both in 2° steps. It does not measure
+native clearance or exclude additional unsampled islands.
+
+Raw midpoint file: `_build_checks/reverser-phase-midpoints-world64-48d71c9.jsonl`,
+SHA-256 `a6955cab207cf1a6dbd24f1beaf73bd49db2750b115d3611d004026a12f7f00a`.
+Compared against the old linear predictions, 375 of the 590 edges move inward;
+360 differ inward by more than .1°. The largest measured inward difference is
+about 2.357056° at crank 81°, height zero, on each upper sector edge. This is
+further evidence for refinement, not for enlarging an arbitrary angular guard.
+
+The native midpoint run **failed**, exit 1, on an invalid native common during
+bisection. It preserves four complete rows (cranks 165/167/169/171°, height −3)
+in `_build_checks/reverser-phase-midpoints-native-48d71c9.jsonl`, SHA-256
+`4c465085fe8c711dc7857d9266fa2ebecf271042432c29b53bd497c9d0c1f441`.
+It is neither a completed native survey nor a passing geometry result. The
+invalid result is not relabelled empty; diagnostics now include the exact
+crank, shaft, axial positions and body pair.
+
+The independent Sol check reproduced the failure on query 40 at crank 173°,
+shaft 207.5123519897461°, height −3 and lift zero against the top drum. The last
+valid bracket was clear at shaft 207.51234436035156° and positive at
+207.51235961914062° (1.767487067998046e−11 mm³). Reusing the swept drum gave an
+invalid two-solid common with a bogus volume of 1241.4637972376165 mm³, although
+both operands still reported valid. At the same query, forcing a fresh drum
+pose gave a valid positive common of 2.8890132738894073e−12 mm³; a fresh reader
+agreed. Thus the earlier twenty paired queries were insufficient evidence for
+native reuse. No positive value is waived. With fresh native placements, the
+complete crank-173° refinement now succeeds at both heights −3 and 0: twenty
+boundaries, exit 0. Raw file
+`_build_checks/reverser-phase-native-fresh173-48d71c9.jsonl`, SHA-256
+`159206126174a74c828493f2a3850f49514229c867c06453c26aa5ebb9f02878`.
+The framework investigation of input mutation is continuing separately.
+
+**Do not resume from the four cached-native rows.** They are diagnostic
+evidence only: detecting an invalid common late in the sequence does not prove
+that earlier, nominally valid results were unaffected by mutated input
+tolerances. The 610-bracket native survey in the preceding section predates
+this cache experiment and used fresh native placements.
+
+The compiler now joins multiple measurement files while checking each native
+record against its own world64 source hash. Unknown sources, duplicate poses
+and missing native records are rejected. The focused boundary, resume, cache,
+midpoint, compiler and probe gate passes **23 tests**, including refusal to
+reuse a native drum even with an identical pose key. These tools still do not
+change the production law, controls, or umbrella completion state.
+
 ## Remaining implementation
 
 Measure the axial admission envelope against **actual retained shaft phase**,

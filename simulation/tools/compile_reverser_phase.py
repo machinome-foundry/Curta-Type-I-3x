@@ -77,20 +77,20 @@ def chart_windows(windows, crank, station=1):
     return tuple(chosen)
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--world64', type=Path, required=True)
-    parser.add_argument('--native', type=Path, action='append', required=True)
-    parser.add_argument('--output', type=Path, required=True)
-    args = parser.parse_args()
-    if args.output.exists():
-        parser.error(f'Preserve existing evidence: {args.output}')
-    raw = args.world64.read_bytes()
-    digest = hashlib.sha256(raw).hexdigest()
-    rows = [json.loads(line) for line in raw.splitlines()]
-    native = [json.loads(line) for path in args.native for line in path.read_bytes().splitlines()]
-    if remaining_rows(rows, native, digest):
-        parser.error('Native refinement records are incomplete')
+def compile_rows(worlds, native):
+    """Keep each native refinement tied to its actual mesh measurement file."""
+    digests = {digest for digest, _ in worlds}
+    if len(digests) != len(worlds):
+        raise ValueError('Duplicate world64 source')
+    if any(row.get('input_sha256') not in digests for row in native):
+        raise ValueError('Native refinement names an unknown world64 source')
+    rows = [row for _, source in worlds for row in source]
+    if len({row_key(row) for row in rows}) != len(rows):
+        raise ValueError('Duplicate world64 pose across measurement files')
+    for digest, source in worlds:
+        records = [row for row in native if row['input_sha256'] == digest]
+        if remaining_rows(source, records, digest):
+            raise ValueError('Native refinement records are incomplete')
     observed = {row_key(row): row for row in native}
     candidates = []
     for row in rows:
@@ -106,8 +106,26 @@ def main():
             item.update(status='measured_knot_only', windows=windows,
                         chart=chart_windows(windows, row['crank'], row['station']))
         candidates.append(item)
+    return candidates
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--world64', type=Path, action='append', required=True)
+    parser.add_argument('--native', type=Path, action='append', required=True)
+    parser.add_argument('--output', type=Path, required=True)
+    args = parser.parse_args()
+    if args.output.exists():
+        parser.error(f'Preserve existing evidence: {args.output}')
+    worlds = []
+    for path in args.world64:
+        raw = path.read_bytes()
+        worlds.append((hashlib.sha256(raw).hexdigest(),
+                       [json.loads(line) for line in raw.splitlines()]))
+    native = [json.loads(line) for path in args.native for line in path.read_bytes().splitlines()]
+    candidates = compile_rows(worlds, native)
     report = dict(scope='Candidate measured knots; NOT an adopted running restraint',
-                  world64_sha256=digest,
+                  world64_sha256=[digest for digest, _ in worlds],
                   native_sha256=[hashlib.sha256(path.read_bytes()).hexdigest()
                                  for path in args.native],
                   outstanding=['native clearance outside measured transitions',
