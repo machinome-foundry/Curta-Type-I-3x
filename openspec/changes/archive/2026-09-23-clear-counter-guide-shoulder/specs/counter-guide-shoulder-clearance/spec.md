@@ -1,3 +1,8 @@
+## Purpose
+
+Let the counter carry shoulders traverse their full stroke past the fixed guide
+ledges while preserving working interfaces and keeping other contact findings explicit.
+
 ## ADDED Requirements
 
 ### Requirement: The counter shoulder clears its unchanged guide ledge

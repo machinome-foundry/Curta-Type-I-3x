@@ -65,9 +65,12 @@ return retains it, and incompatible crank/carriage requests stop without
 automatic preparation. Continuous native/mesh interface proofs, all six
 ball-neighbour audits, exact demonstration replay, historical-coordinate and
 other-part preservation, and current hosted/standalone evidence pass.
-This adds no control and does not resolve the carry-guide, clearing-loop,
-zero-clip or selector findings. Follow-bound execution is still too slow;
-separate framework/viewer optimizations are being verified.
+This adds no control. The [counter shoulder fit](docs/counter-guide-shoulder-2026-09-23.md)
+now clears the measured guide ledge through the full stroke at all five stations,
+with continuous native/mesh proofs, unchanged working contacts and exact retained
+banks. Other guide contacts/capture, clearing-loop, zero-clip and selector findings
+remain unresolved. The separately verified framework/viewer performance fixes
+are integrated locally; execution is improved but still not real-time.
 The [2026-09-21 handoff](docs/handoff-2026-09-21.md) is historical: its tens
 adoption was completed in the subsequent continuation, while the other
 result-bank and counter trials have since reached the scoped production

@@ -16,6 +16,7 @@ from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.cover_fits import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume
 from simulation.test_carry_bank_trial import flexible_meshes
+from simulation.counter_shoulder_operating_trial import ShoulderFittedStaticBallReference
 
 
 class OperatingRadialBallGeometryTest(unittest.TestCase):
@@ -94,7 +95,10 @@ class OperatingRadialBallHistoryTest(_RetainedContract):
 
 class OperatingRadialBallPreservationTest(unittest.TestCase):
     def test_shared_bank_and_every_other_mesh_are_unchanged(self):
-        before = Sim(StaticBallOperatingCurta(), dt=.1, meshes=True)
+        # Compare the ball-only change with the same accepted shoulder fit
+        # on both sides. The explicit original-shoulder reference has its own
+        # all-other-geometry/214-bank preservation contract.
+        before = Sim(ShoulderFittedStaticBallReference(), dt=.1, meshes=True)
         after = Sim(OperatingCurta(), dt=.1, meshes=True)
         for commands in ((), (('crank_rotation', 90),), (('crank_rotation', 360),),
                          (('carriage_elevation', 6), ('carriage_rotation', 40))):

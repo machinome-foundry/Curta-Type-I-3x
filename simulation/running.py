@@ -26,6 +26,7 @@ from simulation.result_bank_lockout_parts import RESULT_CONTACT_STATIONS
 from simulation.counter_locking_laws import counter_closing_limit
 from simulation.higher_counter_locking_laws import counter_bank_closing_limit
 from simulation.counter_bank_lockout_parts import COUNTER_CONTACT_STATIONS
+from simulation.counter_shoulder_running_parts import ShoulderRetainedCarries
 
 
 def sources(*ends):
@@ -237,13 +238,14 @@ class RadialRunningCarriage(RunningCarriage):
 
 class OperatingCurta(StaticBallOperatingCurta):
     """Source-sized radial ball, pushed by contacts and retained in free slack."""
+    carry_mechanism = ShoulderRetainedCarries()
     carriage = RadialRunningCarriage()
     carriage.positioning.p_6mm_ball_419094.slide.constrain(range=(
         Bound(lambda travel, turn: bell_limit(turn),
-              reads=(StaticBallOperatingCurta.carry_mechanism.tens_bell.turn,)),
+              reads=(carry_mechanism.tens_bell.turn,)),
         Bound(lambda travel, lift: collar_limit(lift),
               reads=(carriage.registers.lift,))))
-    (StaticBallOperatingCurta.carry_mechanism.tens_bell.turn & carriage.registers.lift &
+    (carry_mechanism.tens_bell.turn & carriage.registers.lift &
      carriage.positioning.p_6mm_ball_419094.slide).drives(
         carriage.positioning.p_6mm_ball_419094.slide,
         law=Follow(lower=lambda turn, lift: bell_limit(turn),
