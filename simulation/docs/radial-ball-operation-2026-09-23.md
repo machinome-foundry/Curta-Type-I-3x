@@ -7,6 +7,15 @@ and the separately completed [ring passage](thrust-ring-passage-2026-09-23.md).
 
 ## Scope and preserved references
 
+The fresh production retained-arithmetic run against framework `23857e9`
+passes all seven tests in 937.795 s: independent selectors, successive additions,
+manual carry calibration, partial-crank release/replay, carriage reassociation,
+subtraction with borrow and its undo, and partial-selector tooth/history behavior.
+The production geometry and 214-coordinate graph are unchanged. Log
+`_build_checks/operating-retained-arithmetic-current-e1a4899.log`, SHA-256
+`b2d9fe3f8c7a89db4bea16bb2f1cc843e4faf09c9348f2c3e2deb2a1094197a9`.
+This is the named arithmetic gate, not completion of every remaining umbrella task.
+
 The source sphere remains R3.75, centred initially at (9.627860318, 0, 30).
 `StaticBallOperatingCurta` preserves the previous root. `OperatingCurta` derives
 from it and adds only the radial positioning declaration and its two-contact

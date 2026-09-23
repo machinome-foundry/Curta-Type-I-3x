@@ -1,5 +1,30 @@
 # Pointer completion is a separate acceptance gate
 
+## September 23: current radial-ball production matrix
+
+The current 214-coordinate production export also passes all **23 non-crank
+controls** in one hosted-browser run, exit zero and no page errors. It uses
+program `b81b2ce7af6556c12a68829fa3444d1dc6efc7c110d2cd88aff57fff0b9700f4`,
+manifest `bab5b1248bf8f100b764bf37bfd00065770df876bb83ec191b44549a9727569b`
+and viewer bundle `0d602f50532ffe3c906b0bea285352cf60c5165da9b77d818d948f75f5e113df`.
+Every case observes the actual pointer gesture and release, terminal outcome,
+empty pending bank, unchanged other inputs and unchanged register turns.
+The inspected final PNG shows coherent assembly and visible control outcomes;
+its close view clips the crank top and machine base, so it is not a whole-model
+alignment image. The seated shift stops at .18 degrees and seated clearing at
+1.437226368040361 degrees. Neither is relabelled a completed free movement.
+
+Artifacts in `_build_checks/`:
+
+- `operating-final-prefix-all-noncrank-262378b.json`, SHA-256
+  `7bd03a0854f8e114eeaeb43f37f18639364348f94f57f5691f094319628d0bb9`.
+- `operating-final-prefix-all-noncrank-262378b.png`, SHA-256
+  `5374ebb98305966015c4d7311997211938d7b9dc2264aa9dec96d4d1379ce665`.
+
+This supersedes the older 213-coordinate non-crank gate below. It does not
+complete crank gestures, wrong-order sequences, the standalone matrix or
+mechanical clearance acceptance.
+
 ## Fresh complete non-crank matrix
 
 All **23 non-crank controls** now pass in one production-export hosted-browser

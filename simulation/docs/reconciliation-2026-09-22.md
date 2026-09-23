@@ -9,7 +9,19 @@ not the earlier static-ball 213-coordinate baseline below. Overall mechanical
 and interaction acceptance remains open; source geometry findings are not
 waived by successful branch integration.
 
-Framework main is `23857e9`: the successful-prefix reuse implementation
+Framework main subsequently reached `82bf530` through the isolated
+`cache-folded-law-graphs` cycle (plan `65e13d1`). Its private tick-local cache
+reuses only successful folds with identical expression identity and exact
+finite built-in substitutions; it preserves signed zero, bounded capacity,
+failure behavior and tick/restore boundaries. Against `23857e9`, the same five
+production crank ticks improved 22.717→19.793 CPU seconds on CPU 12. All 768
+ordered Bound levels, full 214-coordinate banks and actual restore/replay
+remain identical. The broad gate before final test-only additions was 3,613
+passes, four skips and 2,131 subtests; the final focused gate was 28 passes.
+The framework archive records the exact serialization and hashes. This is
+another measured optimization, not a real-time claim or a graph change.
+
+The preceding framework main was `23857e9`: the successful-prefix reuse implementation
 `b99c3f1` (plan `e64eb16`) was reconciled in its isolated worktree with the
 native boundary-witness correction `5e1404e`. The nonconflicting merge
 preserves both histories. The combined gate passed 3,606 tests, four skips
