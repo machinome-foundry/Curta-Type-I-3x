@@ -13,7 +13,7 @@ from math import cos, hypot, isfinite, radians, sin
 from pathlib import Path
 
 
-def probe(source_profiles, *, axial_allowance_mm=None, model=None):
+def probe(source_profiles, *, axial_allowance_mm=None, drum_allowance_mm=.005, model=None):
     import cadquery as cq
     import manifold3d as mf
     import numpy as np
@@ -128,7 +128,7 @@ def probe(source_profiles, *, axial_allowance_mm=None, model=None):
                 report.pop('mesh_cover_polygons', None)
                 reports.append(report)
         else:
-            reports = [profile_cover(Candidate(solid), join='intersection',
+            reports = [profile_cover(Candidate(solid), allowance=drum_allowance_mm, join='intersection',
                                      axial_allowance_mm=axial_allowance_mm)
                        for solid in outside.Solids()]
         native_remainder = outside

@@ -13,6 +13,7 @@ from pathlib import Path
 
 def main():
     from simulation.reverser_ones_fit_trial import TrialOnesPinion, TrialOperatingCurta
+    from simulation.reverser_inputs import ReversingCounterPinion
     from simulation.tools.reverser_profile_cover import profile_cover
     from simulation.tools.reverser_installed_profile_cover import probe
 
@@ -20,6 +21,12 @@ def main():
     parser.add_argument('--source-profiles', type=Path, required=True)
     parser.add_argument('--source-output', type=Path, required=True)
     parser.add_argument('--installed-output', type=Path, required=True)
+    parser.add_argument('--xy-allowance', type=float, default=.005,
+                        help='Positive outward XY cover length; whole-print proof is rerun')
+    parser.add_argument('--ones-xy-allowance', type=float,
+                        help='Independent ones cover length; defaults to --xy-allowance')
+    parser.add_argument('--higher-xy-allowance', type=float,
+                        help='Independent higher-input cover length; defaults to --xy-allowance')
     args = parser.parse_args()
     if any(path.exists() for path in (args.source_output, args.installed_output)):
         parser.error('Preserve existing evidence; choose two new output paths')
@@ -27,17 +34,23 @@ def main():
         parser.error('Source and installed evidence need distinct paths')
     raw = args.source_profiles.read_bytes()
     profiles = {row['part']: row for row in map(json.loads, raw.splitlines())}
-    candidate = profile_cover(TrialOnesPinion(), axial_allowance_mm=.001,
+    ones_allowance = args.xy_allowance if args.ones_xy_allowance is None else args.ones_xy_allowance
+    candidate = profile_cover(TrialOnesPinion(), allowance=ones_allowance, axial_allowance_mm=.001,
                               include_mesh=True)
+    higher_allowance = args.xy_allowance if args.higher_xy_allowance is None else args.higher_xy_allowance
+    higher = profile_cover(ReversingCounterPinion(), allowance=higher_allowance,
+                           axial_allowance_mm=.001, include_mesh=True)
     with args.source_output.open('x') as output:
-        json.dump(candidate, output)
+        json.dump(dict(FittedCounterPinion=candidate, ReversingCounterPinion=higher), output)
     candidate_digest = hashlib.sha256(args.source_output.read_bytes()).hexdigest()
     profiles['FittedCounterPinion'] = candidate
+    profiles['ReversingCounterPinion'] = higher
     count = 0
     with args.installed_output.open('x') as output:
-        for row in probe(profiles, axial_allowance_mm=.001, model=TrialOperatingCurta):
+        for row in probe(profiles, axial_allowance_mm=.001, drum_allowance_mm=args.xy_allowance,
+                         model=TrialOperatingCurta):
             row['source_profiles_sha256'] = hashlib.sha256(raw).hexdigest()
-            row['ones_candidate_profile_sha256'] = candidate_digest
+            row['candidate_profiles_sha256'] = candidate_digest
             print(json.dumps(row), file=output, flush=True)
             print(json.dumps({key: row[key] for key in
                 ('kind', 'path', 'component', 'separated', 'remainder_mm3') if key in row}),

@@ -6,8 +6,11 @@ finds contact at .41 mm but none at .415 mm over 80--88 degrees at .1 degree
 spacing. That sampling does not establish whole-stroke clearance or capture.
 Uniform .415 relief loses axial fork capture at crank 75. That capture uses
 the outer tips at radii 6.1657--6.2262, whereas the crank-83 drum collision
-is at radii 4.5083--4.6195. Retain the existing .36 profile outside R6 and
-test .415 relief only inside that radius. No fork or tooth phase changes.
+is at radii 4.5083--4.6195. Retain the existing .36 profile outside R6.
+Inner .415 relief passes native clearance/capture but leaves only .00035 mm
+at the closest measured passage. The .43 candidate adds a named .01 mm
+minimum flank gap to accommodate both .005 mm outward contact covers,
+without changing the preserved tips, fork or tooth phase.
 This fixture keeps every current operating part except the three ones teeth.
 """
 
@@ -23,7 +26,7 @@ from simulation.running import OperatingCurta
 
 
 class TrialOnesPinion(FittedCounterPinion):
-    inner_flank_relief = Length(.415, min=0)
+    inner_flank_relief = Length(.43, min=0)
     preserved_tip_radius = Length(6., min=0)
 
     def adjust(self, shape):

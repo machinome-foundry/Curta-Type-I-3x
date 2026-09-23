@@ -16,6 +16,22 @@ class OnesFitSeatTrialTest(seat_contracts.ReverserSeatTrialTest):
 
 
 class OnesFlankFidelityTest(unittest.TestCase):
+    def test_inner_flanks_leave_room_for_both_outward_contact_covers(self):
+        from simulation.standard.parts import NineToothTurnsStepDrumSegment
+
+        source = TrialOnesPinion().shape()
+        drum = NineToothTurnsStepDrumSegment().shape().rotate(
+            (0, 0, 0), (0, 0, 1), 2.604082802).translate(
+                (-.016356142, .223394941, 0))
+        for step in range(25):
+            crank = 82.4 + step*.05
+            shaft = 134 + 6.4*(crank-74.75)
+            gear = source.rotate((0, 0, 0), (0, 0, 1), shaft).translate(
+                (-26.032898192, 31.024799946, 0))
+            other = drum.rotate((0, 0, 0), (0, 0, 1), -crank)
+            with self.subTest(crank=crank):
+                self.assertGreaterEqual(gear.copy().distance(other.copy()), 2*.005)
+
     def test_only_inner_flanks_are_removed_from_existing_fit(self):
         import cadquery as cq
         from simulation.fit import FittedCounterPinion
