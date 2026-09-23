@@ -419,6 +419,54 @@ midpoint, compiler and probe gate passes **23 tests**, including refusal to
 reuse a native drum even with an identical pose key. These tools still do not
 change the production law, controls, or umbrella completion state.
 
+## Higher-counter independent surveys
+
+The five higher input prints each have a separate completed world64 survey:
+crank 0…360° and one complete shaft revolution, both in 2° steps, at heights
+0 and −4 with zero drum lift. Each command terminated with exit 0 and records
+362 rows, 65,522 coarse pair poses and 610 refined transition brackets.
+Every active row has ten observed transitions; this does not exclude islands
+between samples. No native result or operating restraint follows from these
+world64-only files.
+
+The higher print has one pinion and a different fitted tooth relief from the
+ones print. Its height-zero samples meet the one-tooth row; height −4 meets
+the nine-tooth row. Copying the ones height/phase profile would therefore be
+wrong. The observed crank ranges are:
+
+| Counter station | Height 0: 8 active rows | Height −4: 53 active rows |
+| --- | --- | --- |
+| 2 | 184…198° | 94…198° |
+| 3 | 204…218° | 114…218° |
+| 4 | 224…238° | 134…238° |
+| 5 | 244…258° | 154…258° |
+| 6 | 264…278° | 174…278° |
+
+These are independently measured files, not shifted copies. Their common
+row counts and 20° offsets do not establish identical tooth profiles or
+identical clear-window edges.
+
+- `_build_checks/reverser-station2-world64-48d71c9.jsonl`, SHA-256
+  `1b2ff9a95e73100680c074f469b410cc0bfa207ec8f2ffceecc78d4f6afba087`.
+- `_build_checks/reverser-station3-world64-48d71c9.jsonl`, SHA-256
+  `36f167eac0b9214dc348a56b4b6ea4cabe5687d116636219e10c7440c0940d53`.
+- `_build_checks/reverser-station4-world64-0cb681a.jsonl`, SHA-256
+  `97c8a332fe0036276a5ad64f29fec55f4dcf74c8826563c9ea539f0b582a87a8`.
+- `_build_checks/reverser-station5-world64-0cb681a.jsonl`, SHA-256
+  `e58d5438a19c41d1b269c5583f06efcf66b1fe3d2c51dc09ab40e1f4fea8259d`.
+- `_build_checks/reverser-station6-world64-0cb681a.jsonl`, SHA-256
+  `c626e46f0c55ba53688684b8d7246d86f7225bd2f658ca8db7ed5fe2efee8073`.
+
+`test_higher_station_surveys_match_actual_retained_requests` passes in
+435.661 s on framework `82bf530` (exit 0). Its fifteen retained poses cover
+all five higher inputs: height −4 during nine-tooth passage, height zero
+during one-tooth passage, and height zero with a raised drum. Both kernels'
+independent placements match the actual complete-print bounds, and both
+gear/drum commons match their actual-root classification and measured volume.
+This validates the survey instrument's placement, not clearance of those
+poses, an operating restraint, or the complete action-order matrix. The
+production model remains unchanged.
+
 ## Remaining implementation
 
 Measure the axial admission envelope against **actual retained shaft phase**,

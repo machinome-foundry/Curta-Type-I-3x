@@ -3,14 +3,71 @@
 import unittest
 
 import numpy as np
+from machinome.exact import intersect_shapes
 from machinome.simulation import Sim
+from simulation.cover_fits import mesh_solid
 from simulation.running import OperatingCurta
 from simulation.test_running_reverser_wrong_order import DRUM, commons, prepare
-from simulation.tools.reverser_tooth_envelope import ToothEnvelopeReader
+from simulation.tools.higher_locking_envelope import faceted_common_volume
 from simulation.tools.interference import rigid_leaves, world_solids
+from simulation.tools.reverser_tooth_envelope import DRUMS, ToothEnvelopeReader
 
 
 class ReverserToothEnvelopeTest(unittest.TestCase):
+    def test_higher_station_surveys_match_actual_retained_requests(self):
+        # Higher inputs have a different print/relief and a single pinion.
+        # Exercise both surveyed axial rows, plus a raised-drum placement;
+        # do not infer their placement from the ones fixture or symmetry.
+        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        empty = sim.snapshot()
+        for station in range(2, 7):
+            reader = ToothEnvelopeReader(station)
+            joint = reader.gear.removeprefix('Curta.').rsplit('.', 1)[0]+'.turn'
+            for height, lift, crank in ((-4, 0, 150+20*(station-2)),
+                                        (0, 0, 190+20*(station-2)),
+                                        (0, 9, 90)):
+                with self.subTest(station=station, height=height, lift=lift):
+                    sim.restore(empty)
+                    for name, value in (('reverser_height', height),
+                                        ('crank_elevation', lift)):
+                        self.assertEqual(sim.move(name, to=value).status, 'completed')
+                    command = sim.move('crank_rotation', to=crank, duration=.5)
+                    sim.run(.5)
+                    self.assertEqual(command.status, 'completed')
+                    coordinates = (sim.state['crank_rotation'], sim.state[joint],
+                                   sim.state['reverser_height'],
+                                   sim.state['crank_elevation'])
+                    native = world_solids(sim.node, selected=set(reader.paths))
+                    measured = reader.posed(*coordinates, kernel='native')
+                    leaves = dict(rigid_leaves(sim.node))
+                    faceted = reader.posed(*coordinates, kernel='world64')
+                    for path in reader.paths:
+                        a, b = native[path].BoundingBox(), measured[path].BoundingBox()
+                        np.testing.assert_allclose(
+                            (a.xmin, a.ymin, a.zmin, a.xmax, a.ymax, a.zmax),
+                            (b.xmin, b.ymin, b.zmin, b.xmax, b.ymax, b.zmax),
+                            rtol=0, atol=1e-10, err_msg=path)
+                        np.testing.assert_allclose(leaves[path].mesh.bounds.ravel(),
+                                                   faceted[path].bounding_box(),
+                                                   rtol=0, atol=1e-10, err_msg=path)
+                    for kernel in ('native', 'world64'):
+                        volumes = reader.volumes(*coordinates, kernel=kernel)
+                        for drum in DRUMS:
+                            if kernel == 'native':
+                                common = intersect_shapes(native[reader.gear], native[drum],
+                                                          reader.gear, drum)
+                                self.assertTrue(common.isValid())
+                                actual = common.Volume()
+                            else:
+                                actual = faceted_common_volume(
+                                    mesh_solid(leaves[reader.gear].mesh) ^
+                                    mesh_solid(leaves[drum].mesh))
+                            self.assertEqual(volumes[drum] > 0, actual > 0)
+                            if actual == 0:
+                                self.assertEqual(volumes[drum], 0)
+                            else:
+                                self.assertAlmostEqual(volumes[drum], actual, places=10)
+
     def test_transformed_complete_prints_match_admitted_contact_and_clearance(self):
         reader = ToothEnvelopeReader()
         sim = prepare()
