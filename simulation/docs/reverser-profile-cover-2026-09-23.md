@@ -644,3 +644,43 @@ That historical report retains `validation: pending` alongside its explicit
 assertion failure; it is not a pass. The tool now labels future exceptions
 `failed`. Earlier reports 01–03 also remain failed diagnostic evidence.
 Production geometry/wiring and completion checkboxes remain unchanged.
+
+The final .43 mm inner-flank pinion is also inspected in independent
+OpenSCAD isometric and axial orthographic snapshots, produced through the
+public snapshot command on `simulation.reverser_ones_fit_trial:TrialOnesPinion`.
+The five source-derived tips, keyed bore and extruded plate remain visibly
+present. These views complement, rather than replace, the preserved-material,
+capture and two-kernel clearance contracts above. Both commands exit zero,
+using the clean scalar-evaluation worktree at framework `1a34b3c`:
+
+- `_build_checks/reverser-inner043-pinion-iso-7f56368.png`, SHA-256
+  `7880cef5242b526c7c5bdeea686015761b3c78fbac9a87f7dfa2fbce8ac4ea4a`;
+- `_build_checks/reverser-inner043-pinion-axial-7f56368.png`, SHA-256
+  `92fd763284abdae5a4a522628c7a61c1559c235beadd8c383ff9c2fe03dcdd74`.
+
+The separate scalar-evaluation framework cycle is integrated locally at
+`1a34b3cd0eb85f20c7769f6f3f5c28ebfef01cd1` (plan `a507412`). Its full
+suite passes 3,660 tests, with four skips and 2,153 subtests; the final focused
+gate passes 45 and the merged-state smoke gate 28. On the older pinned
+installed-profile tick, six alternating runs preserve all 439,729 ordered
+numeric results and the full 214-coordinate bank. Median process CPU improves
+8.843014→8.481218 seconds; one pair is slower. This modest measured gain
+does not change contact evaluation, timestep, exported documents or the viewer,
+and does not establish real-time operation. The framework owns the complete
+archive at `2026-09-23-streamline-graph-numeric-evaluation/evidence.md`.
+
+The six unchanged `test_running.RunningCurtaTest` arithmetic contracts now
+pass against `CompiledReverserTrial` in **1193.279 seconds**, with an observed
+zero exit. The test process substitutes only the module's model factory with
+`unittest.mock.patch.object`; expected readings, initial state, timestep .1
+and public command sequences are unchanged. Coverage is independent selectors,
+successive additions/selective clearing, manual carry calibration, partial
+crank release/snapshot replay, carriage reassociation and subtraction/borrow
+through both registers followed by addition undo. This is a trial acceptance
+batch, not production-root or whole-machine geometry acceptance.
+
+The process imported framework main at `8d0fd15` before the separate scalar
+cycle advanced that checkout to `1a34b3c`. It retained those imported modules;
+the run is not relabelled as a post-integration test of the scalar change or
+of the still-unfinished endpoint correction. These observations are the
+terminal test summary, not a separately captured raw log file.
