@@ -1,6 +1,8 @@
 # Simulation-only clearing-loop mounting
 
-Status: isolated replacement under verification, not adopted in `OperatingCurta`.
+Status: adopted in `OperatingCurta`; final production viewer matrix and
+cross-repository integration are being verified. Earlier trial checkpoints
+below preserve their original status and do not describe the final default.
 The pilot explicitly chose "Design a simulation-only replacement mounting";
 planning commit `1152d81` records the exception in the existing project change.
 This does not explain or reproduce the original elastic clip's motion, certify
@@ -282,6 +284,98 @@ It is not a full installed-machine image and does not expose every underside
 feature. Image SHA-256:
 `0c7e6af08d2d0d1e30437173b8d185b20b4e87fe33c8f258ef4da4714712b706`.
 
-Next: exercise actual hosted and standalone gestures with the compatible
-viewer, then adopt and verify the production root. No task closes from the
-isolated mounting alone.
+## Paired gestures and production adoption
+
+The API-27 loader correction exposed a second, real viewer defect: moving
+onto a named loop handle raycast the crank behind its overlay and replaced
+the handle before pointerdown. The first hosted attempt therefore admitted
+nothing. The separate viewer cycle added a red hover-crossing regression and
+a narrow owned-visible-handle hover guard. The final candidate bundle is
+`4e4580332e33c75042c2e188f80fbd3b8712280dabc1e56a895310651160339c`.
+
+The hosted trial then passes both actual pointers at the default 1/240 s
+timestep. Clearing admits +1 while deployment stays zero; deployment admits
+four +1 requests while clearing stays zero. Pointer release is observed,
+all commands retire, and unrelated inputs/registers stay unchanged. Report
+SHA-256 `eeebe9139cb60acbbe3ef9e8e63c466e923c201b4c0dedcaa88bbbd4239ac1c5`;
+inspected image `d322c2b3723261340349fa589ff36af2f85913143dae818e84d27613de5b6b42`.
+
+The fresh normal export's unmodified standalone page passes independently
+using only visible DOM and actual pointer events, without obtaining a hidden
+run handle or requesting movement through a host API. The initial generic
+hover grid misses the small loop and is preserved as a failed search, not a
+gesture or model failure. An inspected visible loop pixel at (897, 331) names
+both controls; the test then selects the requested accessible handle.
+Deployment completes at 4.0000°. Clearing admits 1.4372° total before its
+existing seated-carriage restraint blocks the last quantum after 0.437226°;
+the loop remains 0.0000°. Both release and terminal outcomes are observed,
+every other visible input readout is unchanged, and there are no page errors.
+These standalone bank claims have the UI's four-decimal precision, not the
+hosted test's complete-bank precision.
+
+- Deployment report: `56c1fd137b07afa09c7eb73d22976cdc8ac0aa5ef28eff088e20bbd9f50bc6d6`;
+  inspected image: `785bdff34712c17b2776a6dbc448c7c84b55afc018ab386f11a8a9c913eee649`.
+- Clearing report: `900e2e1eadda261056b918e28604f8d677047b1913607ac87ba9bf839135397d`;
+  inspected image: `6a9fe19ab17b10b596f30290ce5f29860970889099484cb3d350b0c260554c1a`.
+
+The producer fix is integrated locally at framework `e4ff031`. Production
+`OperatingCurta` now declares the same mounting and independent control as
+the accepted trial. `ReverserOperatingCurta` preserves the 214-coordinate
+pre-loop reference, so old geometry-preservation comparisons do not silently
+compare two aliases of the new root. Historical bank witnesses explicitly
+check and remove only the two new zero-at-rest entries before retaining their
+original 213-coordinate hash; no old value is updated to fit the new result.
+
+The actual default passes both operation tests and the seven-state complete
+preservation test: 3/3 in 128.907 s. Log SHA-256:
+`ded28916c4e94e6ff35f96697eb1ad747cc0bbb7e0d56205c76e2df5a9be2df4`.
+Its fresh normal export has identity
+`9d5a13cc3d37b89eb2f0aaff00558d93b53a6a6dfbef4a7d975e409c315d157c`
+and manifest SHA-256
+`68f16a67d7823d259e7e170cb92d349caaa37e6e69a597fa664f9dd9f0840ec9`.
+Compared with the accepted trial export, only the root class name, program
+identity, edge `stated_by` labels and two assembly timestamps change. All
+other document data and every exported model asset match exactly. The
+standalone HTML and candidate bundle are also unchanged. This is explicit
+export equivalence, not a claim that differently named roots share snapshots.
+
+The installed default-root end poses were inspected at 0° and 90°. Only the
+deployment input and its swivel coordinate change; the other 214 coordinates
+remain identical and all commands retire. This pose capture uses public
+movement for setup, not pointer evidence. Report SHA-256:
+`90fb75ea21bcdf8e6ff7b0d0638fa0fcdc6e8032942f880f677565ef5d1b6d38`.
+The inspected stowed and deployed images are respectively
+`dd818b5f2d56a1c3aebb3fd324fe3fdc7169188f4e130eb7a677e740c35c73b6`
+and `19fb7f1e6778c1db9e5f0b78ad28989e2c88bdb24fb41dd62373e17821022787`.
+
+Seven historical witness/preservation tests pass in 308.939 s (log
+`9c77491b599ea29b9befcae15018f81585ae31ec0e841db42ce54cc6451d3557`).
+The collar, lower-frame seat, clearing-carrier seat and crank-coupling seat
+fixture benches pass all 20 contracts with each explicitly selected kernel:
+20 exact and 20 faceted. The earlier attempt to run those four fixture
+classes through plain unittest lacked the framework's instance setup and
+failed with TypeErrors; these normal `machinome test` runs replace that
+invalid invocation, not a failed geometric contract.
+
+The actual default root also passes all 20 interlock, marker and ratchet
+regressions in 438.352 s, including wrong-order requests, partial motion,
+neighbor stops, repeated reverse requests and snapshot replay. Log SHA-256:
+`56d21b867785ed2698e141640a9790fff9c110bcd04c9eb9fdf1bb72c05e0e20`.
+
+The production standalone two-control smoke test passes using real pointers
+and visible Reset between cases. Its first attempt used an incorrect
+accessible name for Reset and failed before any search or gesture; the
+corrected harness uses the page's actual accessible name. Accepted report
+SHA-256 `022a152ae1f7a7052d425f926908233488df9ac51556c36f01b941068f161fc5`;
+inspected image `a6799c6cb70fea0c795daf36dc5ccf5409f1b1a111aa6b682d0bdfbe7a68001b`.
+
+The viewer cycle is archived and integrated locally at `bcbf55a`, with
+planning commit `b491878`. Its rebuilt main bundle matches the accepted
+candidate SHA-256 above. Merged-state checks pass: 94 focused widget tests,
+type checking and 19 documentation/bundle Python tests. The cycle records
+the preceding full widget suite (1,583 passed, two skipped), Python suite
+(198 passed and 22 subtests), strict manual build and browser link checks.
+No package was pushed or published by this work.
+
+Remaining gate: the complete production pointer matrices. Whole-machine
+geometry findings stay separate from this bounded mounting change.

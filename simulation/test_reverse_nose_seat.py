@@ -78,6 +78,11 @@ class ReverseNoseSeatTest(unittest.TestCase):
 
     def test_initial_bank_is_unchanged(self):
         bank = dict(self.sim.state)
+        self.assertEqual(len(bank), 216)
+        # The separately proved loop adds only these two zero-at-rest entries;
+        # retain the entire original bank hash below, not a new fitted witness.
+        self.assertEqual(bank.pop('loop_deployment'), 0)
+        self.assertEqual(bank.pop('carriage.registers.clearing_ring.clearing_ring.swivel'), 0)
         self.assertEqual(len(bank), 214)
         self.assertEqual(bank.pop('carriage.positioning.p_6mm_ball_419094.slide'), 0)
         self.assertEqual(len(bank), 213)

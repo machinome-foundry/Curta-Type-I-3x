@@ -1,8 +1,8 @@
 """Direct-operation migration on the source-backed Curta parts.
 
-The manifest selects this root. Selection is not acceptance: the outstanding
-interlock, reverser wrong-order, clearing-loop and whole-machine geometry contracts remain
-recorded in the project-owned operating completion record.
+The manifest selects this root, including the explicitly simulation-only
+clearing-loop mounting. Whole-machine geometry and final acceptance remain
+recorded separately in the project-owned operating completion record.
 """
 
 from functools import reduce
@@ -29,6 +29,7 @@ from simulation.counter_bank_lockout_parts import COUNTER_CONTACT_STATIONS
 from simulation.counter_shoulder_running_parts import ShoulderRetainedCarries
 from simulation.reverser_operating_parts import ReverserContactTransmission
 from simulation.reverser_profile_laws import lower_limit, upper_limit
+from simulation.clearing_loop_operating_parts import LoopRetainedCarriage
 
 
 def sources(*ends):
@@ -254,8 +255,8 @@ class RadialBallOperatingCurta(StaticBallOperatingCurta):
                    upper=lambda turn, lift: collar_limit(lift)))
 
 
-class OperatingCurta(RadialBallOperatingCurta):
-    """Retained machine with measured six-input reversing-lever restraints."""
+class ReverserOperatingCurta(RadialBallOperatingCurta):
+    """Pre-loop reference with measured six-input reversing-lever restraints."""
     transmission = ReverserContactTransmission()
     _reads = (RadialBallOperatingCurta.main_drive.crank.turn,
               transmission.turns.ones.turn,
@@ -268,6 +269,23 @@ class OperatingCurta(RadialBallOperatingCurta):
     RadialBallOperatingCurta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift.constrain(
         range=(Bound(lower_limit, reads=_reads), Bound(upper_limit, reads=_reads)))
     del _reads
+
+
+class LoopRunningCarriage(RadialRunningCarriage):
+    registers = LoopRetainedCarriage()
+
+
+class OperatingCurta(ReverserOperatingCurta):
+    """Retained machine with the labeled simulation-only loop mounting."""
+    carriage = LoopRunningCarriage()
+    loop_deployment = Driver(default=0, range=(-.4, 90.4), unit='deg')
+    loop_deployment.drives(carriage.registers.clearing_ring.deployment)
+    controls = {
+        **ReverserOperatingCurta.controls,
+        'deploy loop (simulation-only mounting)': Turn(
+            carriage.registers.clearing_ring.clearing_ring, loop_deployment,
+            coordinate=carriage.registers.clearing_ring.clearing_ring.swivel),
+    }
 
 
 def register_reading(sim, counter=False):

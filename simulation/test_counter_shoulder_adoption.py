@@ -10,7 +10,7 @@ from simulation import test_counter_shoulder_operating_trial as trial_tests
 class OperatingCounterShoulderTest(unittest.TestCase):
     def test_every_production_counter_uses_the_verified_shoulder(self):
         sim = Sim(OperatingCurta(), dt=.1)
-        self.assertEqual(len(sim.state), 214)
+        self.assertEqual(len(sim.state), 216)
         expected = ShoulderClearedTurnsSlider().shape()
         carries = sim.node.carry_mechanism.turns_carries
         for index in range(1, 6):

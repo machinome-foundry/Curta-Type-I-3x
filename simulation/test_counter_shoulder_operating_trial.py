@@ -55,7 +55,7 @@ class CounterShoulderOperatingIdentityTest(unittest.TestCase):
                     sim.run(1)
                     self.assertEqual(command.status, 'completed')
             self.assertEqual(dict(before.state), dict(after.state))
-            self.assertEqual(len(after.state), 214)
+            self.assertEqual(len(after.state), 216)
             a, b = dict(rigid_leaves(before.node)), dict(rigid_leaves(after.node))
             self.assertEqual(set(a), set(b))
             changed = set()

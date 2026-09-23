@@ -7,7 +7,7 @@ from simulation.thrust_ring_parts import BallPassageThrustRing
 from simulation.positioning_ball_trial import RadialBallTrial, RadialCarriageTrial, RadialPositioningTrial
 from simulation.positioning import SeatedCarriagePositioning, RadialCarriagePositioning
 from simulation.standard.parts import ThrustRing
-from simulation.running import OperatingCurta, StaticBallOperatingCurta, RunningCarriage, RadialRunningCarriage
+from simulation.running import OperatingCurta, StaticBallOperatingCurta, RunningCarriage, LoopRunningCarriage
 
 
 class InstalledThrustBench(SeatedThrustBench):
@@ -63,7 +63,7 @@ class OriginalRingRadialPositioning(RadialCarriagePositioning):
     thrust_ring = ThrustRing(slide=Prismatic(axis=(0, 0, 1)))
 
 
-class OriginalRingRadialCarriage(RadialRunningCarriage):
+class OriginalRingRadialCarriage(LoopRunningCarriage):
     positioning = OriginalRingRadialPositioning()
 
 

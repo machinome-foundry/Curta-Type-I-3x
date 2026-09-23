@@ -53,7 +53,7 @@ class ThrustRingRootTest(unittest.TestCase):
 class ThrustRingProductionRootTest(ThrustRingRootTest):
     model = OperatingCurta
     before_model = OriginalRingRadialOperatingReference
-    coordinates = 214
+    coordinates = 216
 
 
 if __name__ == '__main__':

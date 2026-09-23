@@ -424,5 +424,7 @@ control is explicitly labeled simulation-only.
 This is a newly designed simulation exception, not another recovered source
 fit or a recommended printable modification. Native, faceted and full-world
 Mesh64 checks, retention, physical stop negatives and retained operation are
-recorded separately. The operating adoption and paired viewer interaction
-remain pending in that record; the original clip question above stays open.
+recorded separately. The default root now adopts this mounting; the paired
+hosted and standalone handles have independent-motion evidence in that record.
+The original clip question above stays open, as do unrelated whole-machine
+geometry findings.

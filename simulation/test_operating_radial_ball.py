@@ -7,7 +7,7 @@ import cadquery as cq
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta, StaticBallOperatingCurta
+from simulation.running import OperatingCurta, StaticBallOperatingCurta, ReverserOperatingCurta
 from simulation.positioning_ball_trial import RadialBallTrial, ReversedRadialBallTrial, PullingBallTrial
 from simulation.test_radial_positioning_ball import RadialPositioningBallTest as _RetainedContract
 from simulation.tools.positioning_ball_contact import BALL, BELL, FRAME, COLLAR
@@ -22,12 +22,13 @@ from simulation.counter_shoulder_operating_trial import ShoulderFittedStaticBall
 class OperatingRadialBallGeometryTest(unittest.TestCase):
     model = OperatingCurta
 
-    def test_default_adds_only_the_named_coordinate_and_no_ball_control(self):
+    def test_default_retains_the_radial_coordinate_and_no_ball_control(self):
         sim = Sim(self.model(), dt=.1)
         self.assertIn('carriage.positioning.p_6mm_ball_419094.slide', sim.state)
         self.assertEqual(sim.state['carriage.positioning.p_6mm_ball_419094.slide'], 0)
-        self.assertEqual(len(sim.state), 214)
-        self.assertEqual(set(self.model.controls), set(StaticBallOperatingCurta.controls))
+        self.assertEqual(len(sim.state), 216)
+        self.assertEqual(set(self.model.controls), set(StaticBallOperatingCurta.controls) | {
+            'deploy loop (simulation-only mounting)'})
         self.assertFalse(any('ball' in name for name in self.model.controls))
 
     def test_actual_source_sphere_moves_radially_and_clears_its_neighbours(self):
@@ -97,9 +98,10 @@ class OperatingRadialBallPreservationTest(unittest.TestCase):
     def test_shared_bank_and_every_other_mesh_are_unchanged(self):
         # Compare the ball-only change with the same accepted shoulder fit
         # on both sides. The explicit original-shoulder reference has its own
-        # all-other-geometry/214-bank preservation contract.
+        # all-other-geometry preservation contract. Freeze this ball-only
+        # comparison before the separately proved three-part loop replacement.
         before = Sim(ShoulderFittedStaticBallReference(), dt=.1, meshes=True)
-        after = Sim(OperatingCurta(), dt=.1, meshes=True)
+        after = Sim(ReverserOperatingCurta(), dt=.1, meshes=True)
         for commands in ((), (('crank_rotation', 90),), (('crank_rotation', 360),),
                          (('carriage_elevation', 6), ('carriage_rotation', 40))):
             for sim in (before, after):

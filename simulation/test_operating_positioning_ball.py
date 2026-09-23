@@ -65,7 +65,7 @@ class OperatingPositioningBallTest(unittest.TestCase):
 
     def test_default_model_has_not_adopted_the_rejected_orbit(self):
         sim = Sim(OperatingCurta(), dt=.1)
-        self.assertEqual(len(sim.state), 214)
+        self.assertEqual(len(sim.state), 216)
         self.assertEqual(sim.state['carriage.positioning.p_6mm_ball_419094.slide'], 0)
         self.assertNotIn('carriage.positioning.p_6mm_ball_419094.turn', sim.state)
 

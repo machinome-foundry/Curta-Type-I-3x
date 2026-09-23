@@ -5,7 +5,7 @@ import numpy as np
 from machinome.simulation import Sim
 from simulation.test_operating_loop import OperatingLoopTest as _Contract
 from simulation.clearing_loop_operating_trial import LoopOperatingTrial
-from simulation.running import OperatingCurta
+from simulation.running import OperatingCurta, ReverserOperatingCurta
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.operating_loop_contacts import PARTS
 from simulation.test_carry_bank_trial import flexible_meshes
@@ -33,9 +33,11 @@ class LoopClearingTest(_ClearingContract):
 
 
 class LoopPreservationTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_only_the_three_named_occurrences_and_two_new_coordinates_change(self):
-        before = Sim(OperatingCurta(), dt=.1, meshes=True)
-        after = Sim(LoopOperatingTrial(), dt=.1, meshes=True)
+        before = Sim(ReverserOperatingCurta(), dt=.1, meshes=True)
+        after = Sim(self.model(), dt=.1, meshes=True)
         self.assertEqual(set(after.state)-set(before.state), {
             'loop_deployment', 'carriage.registers.clearing_ring.clearing_ring.swivel'})
         self.assertEqual(len(before.state), 214)

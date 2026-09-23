@@ -91,7 +91,7 @@ class ReverserToothEnvelopeTest(unittest.TestCase):
                         self.assertEqual(observed, 0)
                     else:
                         self.assertAlmostEqual(observed, expected, places=10)
-        self.assertEqual(len(reader.bank), 214)
+        self.assertEqual(len(reader.bank), 216)
         self.assertEqual(reader.bank['crank_rotation'], 0)
         self.assertEqual(reader.bank['reverser_height'], 3.9075)
 

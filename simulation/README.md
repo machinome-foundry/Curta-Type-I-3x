@@ -1,13 +1,22 @@
 # Curta simulation — operating model, acceptance in progress
 
-The latest [operating reverser adoption](docs/reverser-operating-adoption-2026-09-23.md)
+The latest [clearing-loop replacement](docs/clearing-loop-replacement-2026-09-23.md)
+adds independent deploy/stow motion through an explicitly simulation-only
+captive mounting. The default root has 216 coordinates and 26 controls.
+Geometry, retention, physical stops, retained operation and preservation gates
+pass; the full-root trial also passes the existing arithmetic and interlocks.
+Both loop handles have actual hosted and unmodified standalone pointer evidence.
+This does not recover the original elastic clip motion or certify a printable
+modification; the author's source assets remain unchanged.
+
+The preceding [operating reverser adoption](docs/reverser-operating-adoption-2026-09-23.md)
 adds the measured inner-flank fit and phase-dependent lever restraint to the
 default model. Production contact/replay, six arithmetic tests, all four crank
 modes and fourteen interlock/marker checks pass. Fresh hosted and unmodified
 standalone tests show the actual lever stopping on a wrong-order request;
 hosted Python/browser banks agree bit-for-bit. This is a scoped operating fix,
-not whole-machine completion: clearing-loop clipping and the remaining geometry
-findings are still open.
+not whole-machine completion: the remaining geometry findings and final full
+interaction matrix are still open.
 
 ## Operate the current model
 
@@ -21,7 +30,7 @@ python -m http.server 8766 --bind 127.0.0.1 --directory _build_operating
 
 Open `http://127.0.0.1:8766/`. Use the controls on the actual visible parts:
 eight selector knobs, the crank's turn/lift controls, reversing lever,
-carriage lift/shift, clearing ring and ten independent decimal markers.
+carriage lift/shift, clearing ring, independent loop deployment and ten decimal markers.
 The crank also has a one-revolution button. Registers retain mechanical state;
 the page has no starting-register setters or automatic preparation sequence.
 Changing a selector does not itself turn the crank.
@@ -31,15 +40,22 @@ crank lift 0 mm for addition or 9 mm for subtraction; lift the carriage before
 shifting and seat it at a detent before cranking. The reversing lever's working
 heights are +3.9075 mm (normal) and −4.9425 mm (reversed). Partial settings and
 wrong-order requests are not automatically corrected: a restraint can stop
-motion, and the user must relieve it. Clearing-ring motion exists, but the
-printed loop's deploy/stow clipping path is **not implemented**.
-The pilot has now authorized a clearly labeled simulation-only mounting;
-its isolated design and verification do not yet change the default root.
+motion, and the user must relieve it.
 
-The locally integrated framework/viewer corrections are required. The installed
-viewer bundle is verified against the production export; reload/re-export older
-pages to pick it up. Execution is still slower than real time. The
-[latest acceptance record](docs/reverser-operating-adoption-2026-09-23.md)
+Hover the visible clearing loop and choose its named handle: **clear registers**
+turns the clearing assembly, while **deploy loop (simulation-only mounting)**
+swivels just the loop. An undecided body drag selects neither. Deployment is
+nominally 0° stowed to 90° deployed, with measured stop play to −0.4°/90.4°.
+Deploying the loop does not lift the carriage or clear a register. The source
+print's elastic clipping path remains unimplemented; the captive replacement
+is the pilot-authorized simulation exception, not a source-reconstruction claim.
+
+The locally developed framework/viewer corrections are required, including
+viewer API 27 for the loop's two selected-joint handles. API 26 refuses that
+pair. Reload/re-export older pages to pick up the compatible bundle; a version-13
+model document alone does not establish viewer compatibility. Execution is
+still slower than real time. The
+[latest acceptance record](docs/clearing-loop-replacement-2026-09-23.md)
 distinguishes tested arithmetic, replay and actual-pointer behavior from the
 unfinished full interaction matrix and whole-machine geometry. OpenSpec progress
 is 14/23 tasks; the umbrella change remains active.
@@ -52,7 +68,7 @@ snapshot and requests physical movements; it never assigns a register result.
 They are separate Python fixtures, not buttons that prepare normal operation.
 See the [demonstration guide](docs/operating-demonstrations-2026-09-22.md)
 for the runnable example and the exact checkpoint tested. Their arithmetic and
-replay checks do not certify every moving contact or provide loop deployment.
+replay checks do not certify every moving contact or exercise loop deployment.
 
 ## Dated implementation history
 
