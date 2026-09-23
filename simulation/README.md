@@ -1,11 +1,13 @@
-# Curta simulation — operating model, acceptance in progress
+# Curta simulation — operating controls complete, geometry acceptance open
 
 The latest [clearing-loop replacement](docs/clearing-loop-replacement-2026-09-23.md)
 adds independent deploy/stow motion through an explicitly simulation-only
 captive mounting. The default root has 216 coordinates and 26 controls.
 Geometry, retention, physical stops, retained operation and preservation gates
-pass; the full-root trial also passes the existing arithmetic and interlocks.
-Both loop handles have actual hosted and unmodified standalone pointer evidence.
+pass. The adopted default passes six arithmetic tests, twenty interlock/marker/
+ratchet checks and all six demonstration replays twice. All 26 controls have
+actual hosted and unmodified standalone pointer evidence, including both loop
+handles, partial crank and the full-turn part button.
 This does not recover the original elastic clip motion or certify a printable
 modification; the author's source assets remain unchanged.
 
@@ -57,9 +59,11 @@ model document alone does not establish viewer compatibility. Execution is
 still slower than real time. The
 [latest acceptance record](docs/clearing-loop-replacement-2026-09-23.md)
 distinguishes tested arithmetic, replay and actual-pointer behavior from
-whole-machine geometry. OpenSpec progress is 16/23 tasks; the umbrella change
-remains active. Mounting and interaction acceptance are complete; the
-current-root demonstration refresh is still running.
+whole-machine geometry. Direct-operation tasks 6.1–6.6 are complete. OpenSpec
+progress is 17/23 tasks; the umbrella change remains active and unarchived.
+The whole-machine positive-contact inventory, moving-contact sampling and
+final every-node two-kernel acceptance remain open. This is an operating
+simulation, not a fabrication-ready or fully geometry-certified reconstruction.
 
 ### Separate operating demonstrations
 

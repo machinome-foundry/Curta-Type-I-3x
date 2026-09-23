@@ -575,9 +575,39 @@ captures provide complete-assembly views separately.
 Both the Sol verifier and root independently revalidate the exact union:
 24 unique noncrank inputs, no missing/duplicate case, identical production
 document/program/bundle, normal timestep, all terminal case assertions and
-all 24 initial 216-coordinate banks equal to the crank baseline bit-for-bit.
+all 24 serialized initial 216-coordinate banks equal to the crank baseline.
+These initial-bank JSON comparisons do not independently preserve signed
+zero; the crank terminal and nine-case reverser reports use explicit IEEE
+encodings for their separate bit-level claims.
 Together with the two actual crank controls, these establish all 26 hosted
 controls. The separate standalone index covers the same complete control set.
 Fresh wrong-order, partial-crank and deployment/end-pose evidence supplies
 the additional task 6.5 checks; independent pointer coverage does not claim
 every possible action sequence or a whole-machine contact certificate.
+
+## Operating acceptance complete; whole-machine work remains separate
+
+The last current-root demonstration refresh passes both unchanged tests in
+1,919.092 seconds with observed exit zero. All six named physical-action
+sequences run twice from fresh snapshots and reproduce complete snapshots
+and outcome lists. Log
+`_build_checks/operating-loop-production-demonstrations-01.log` SHA-256:
+`c591a668b37355385886341a0805d6f043c6532899e6df4a2d6c53faab8eccb5`.
+The test uses its established Python timestep `.1`; every browser gate above
+uses the normal 1/240-second timestep. These concurrent functional runs do
+not establish a speedup or real-time operation.
+
+This completes the named direct-operation tasks 6.1–6.6, including the
+pilot-authorized simulation-only mounting, retained arithmetic, independently
+reachable controls, tested restraints, replay, operating instructions and
+evidence. The source STEP/STL files remain untouched. Normal project export
+`_build_operating/` already carries this runtime and the verified API27 bundle;
+the later record/test-tool commits do not change its model or asset identity.
+
+The umbrella change is **17/23 tasks**, active and unarchived. Whole-machine
+tasks 1.3 and 5.1–5.5 remain open: the positive-contact inventory is not cleared,
+every moving interface throughout every demonstration is not certified, and
+the final every-node two-kernel regression/whole-machine snapshot/archive
+gates have not been represented as complete. The replacement is not a verified
+fabrication design or recovered source elastic clip. These limits are separate
+from completing the operating-control implementation.

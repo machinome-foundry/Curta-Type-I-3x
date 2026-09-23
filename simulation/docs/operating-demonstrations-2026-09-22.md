@@ -1,5 +1,25 @@
 # Separate retained-operation demonstrations
 
+## Current loop-enabled production checkpoint — 2026-09-23
+
+The adopted 216-coordinate `OperatingCurta` now passes both unchanged tests:
+2/2 in 1,919.092 seconds, observed exit zero. All six named demonstrations run
+twice from their fresh-machine snapshots, with every requested action and
+retained reading checked and complete snapshots/outcome lists equal after
+replay. The runtime is project `e39d05a` (unchanged through documentation and
+test-tool head `4486849`), framework `e4ff031`; the process uses CPU 12 and
+the test's unchanged `dt=.1`, not the browser timestep.
+
+Log `_build_checks/operating-loop-production-demonstrations-01.log` SHA-256:
+`c591a668b37355385886341a0805d6f043c6532899e6df4a2d6c53faab8eccb5`.
+This supersedes the older 214-coordinate root for arithmetic/replay acceptance.
+It does not certify moving contacts throughout every demonstration; that
+whole-machine obligation remains open. Loop deployment has its own travel,
+retention, stop/replay and actual-pointer gates in the
+[mounting record](clearing-loop-replacement-2026-09-23.md).
+
+## Demonstration interface and historical evidence
+
 `simulation.operating_demonstrations` supplies six named physical-request
 sequences: addition, carry, overflow, subtraction, shift and clearing.
 They are not added to the ordinary part-control surface and do not replace

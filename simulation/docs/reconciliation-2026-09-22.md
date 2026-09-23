@@ -22,8 +22,10 @@ encodings and terminal statuses between Python and browser; wrong-order
 physical gestures stop without moving other inputs. The full hosted button's
 state also matches the independent solver-only diagnostic. The linked record
 pins reports, inspected images, asset hashes and interrupted runs excluded
-from acceptance. Mounting and interaction tasks 6.4/6.5 are complete; the
-fresh current-root demonstration replay is still running. This does not close
+from acceptance. The fresh current-root demonstration replay also passes:
+six sequences twice, matching complete snapshots and outcome lists, both
+tests green in 1,919.092 seconds with observed exit zero. All direct-operation
+tasks 6.1–6.6 are complete, with 17/23 umbrella tasks complete. This does not close
 the whole-machine geometry inventory, claim real-time performance or recover
 the original elastic clipping motion.
 
