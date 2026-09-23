@@ -23,6 +23,51 @@ the full standalone control matrix or sub-readout bank parity. Report
 `56862d315d3ade178dd671d7a09e5ae37544c3f7344aecc5ea21f51f652e6ffd`;
 image SHA-256 `a9adee9dbe265769cb2e0957b47dd122e66cd2c6d943a8e87d483512fc3af1b0`.
 
+Three further current-export attempts reached their required visible terminal
+states without page errors, but **exited one on screenshot timeout**. Their
+reports remain pending, not passing visual acceptance:
+
+- `operating-prefix-standalone-revolution-55846d3.json`: actual crank button,
+  completed 360.0000 degrees, other 23 input readouts unchanged; SHA-256
+  `2b35d0c98fdf8574d6046f9eda32172e4b488dce4a71fe33c1d96ed51306702e`.
+- `operating-prefix-standalone-lift-carriage-94f0ce2.json`: actual labelled
+  carriage-lift handle, completed 2.0000 mm, other readouts unchanged; SHA-256
+  `d40d3481894972fd8789b43835111bc6e2f663b9e74abf3d742e7937be814616`.
+- `operating-prefix-standalone-partial-timed-94f0ce2.json`: actual partial-turn
+  handle, completed 1.0000 degree, other readouts unchanged; SHA-256
+  `5826dd134ff928e38e2f09b511699140387f568c4b5c3fb55f3fa80b8fed4a1b`.
+
+The timed partial case reached page-ready at 6.342 s, observed pointer release
+at 22.427 s, verified terminal readouts at 85.385 s, then exhausted the
+180-second screenshot deadline (and a separate fallback). These runs overlapped
+other SwiftShader browsers. Contention is a hypothesis, not an established
+viewer defect: the hosted non-crank screenshot subsequently succeeded and a
+read-only idle-render comparison showed no reliable improvement from suppressing
+animation frames. Serial same-bundle reproduction is the next gate; no timestep,
+render behavior or visual acceptance requirement has been changed.
+
+The serial same-bundle reruns now pass for partial crank and carriage lift,
+including successful screenshot capture, inspected pixels and observed exit zero:
+
+- Partial crank: actual labelled handle at (805.875, 254.25), completed
+  1.0000 degree; terminal readouts at 25.626 s and screenshot at 72.831 s.
+  Report `operating-prefix-standalone-partial-serial-e8d3612.json`, SHA-256
+  `5dff547a5ee8b3981ba2ddd68931365b7f739839acf1a6f3bdb8e4aa011ac307`;
+  PNG SHA-256 `19af63abf0560fd9b9ba81eb612ef42f6ee6671cc8f26ad6cf4ae33f4467c83c`.
+- Carriage lift: actual labelled handle, completed 3.0000 mm; terminal
+  readouts at 47.974 s and screenshot at 95.494 s. Report
+  `operating-prefix-standalone-carriage-serial-e8d3612.json`, SHA-256
+  `1837ec8d7f67f44838c6929140fcf23377ae930b5e26ce8849134499b540bce9`;
+  PNG SHA-256 `f07f6047507e803ce625422600cd2a19377cc01f977e30654a20506c07a9e4db`.
+
+Both retain all other visible input readouts and have no page errors. The
+images show the complete machine, actual selected handles, matching values
+and completed outcomes. Gesture quantization can produce a different admitted
+amount under different load (the earlier carriage attempt reached 2 mm);
+these probes assert independent admitted movement, not a fixed mouse-to-millimetre
+delta. No viewer repair was needed for these serial captures. This supports
+contention as the earlier capture explanation without proving it uniquely.
+
 `tools/operating_standalone_probe.py` serves the unmodified exported index,
 manifest, bundle and contained model assets. It never remounts the viewer,
 obtains a hidden run handle, modifies the page implementation, or submits
