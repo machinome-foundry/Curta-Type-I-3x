@@ -1,5 +1,14 @@
 ## Current checkpoint — resumed 2026-09-22
 
+Latest September 23: the [production reverser adoption](../../../simulation/docs/reverser-operating-adoption-2026-09-23.md)
+resolves the scoped crank-90 wrong-order and reversed crank-82.432377 failures
+recorded below. Five production contact/path checks, six arithmetic tests,
+four complete crank modes and fourteen interlock/marker tests pass. Fresh
+hosted and unmodified standalone actual-part gestures stop as expected; the
+hosted banks match Python exactly across all 214 coordinates in nine cases.
+No checkbox changes: clearing-loop clipping, remaining whole-machine contacts
+and full final-regression obligations are separate and remain open.
+
 September 23: the [mid-cycle reverser regression](../../../simulation/docs/reverser-wrong-order-2026-09-23.md)
 confirms a missing project restraint on the actual retained root. At crank
 90°, the lever admits gear/drum penetration below the measured first-contact

@@ -18,6 +18,13 @@ class StandaloneReportTest(unittest.TestCase):
     def test_accepts_terminal_visible_independent_movement(self):
         validate_report(self.report)
 
+    def test_requested_blocked_outcome_is_not_satisfied_by_completion(self):
+        self.report['expect_blocked'] = True
+        with self.assertRaises(AssertionError):
+            validate_report(self.report)
+        self.report['outcome'] = 'blocked after -0.8480 mm'
+        validate_report(self.report)
+
     def test_rejects_missing_hit_release_terminal_or_movement(self):
         for key, value in (('hover', 'turn crank'), ('release_observed', False),
                 ('outcome', 'running…'), ('outcome', 'refused'),

@@ -27,6 +27,8 @@ from simulation.counter_locking_laws import counter_closing_limit
 from simulation.higher_counter_locking_laws import counter_bank_closing_limit
 from simulation.counter_bank_lockout_parts import COUNTER_CONTACT_STATIONS
 from simulation.counter_shoulder_running_parts import ShoulderRetainedCarries
+from simulation.reverser_operating_parts import ReverserContactTransmission
+from simulation.reverser_profile_laws import lower_limit, upper_limit
 
 
 def sources(*ends):
@@ -236,8 +238,8 @@ class RadialRunningCarriage(RunningCarriage):
     positioning = RadialCarriagePositioning()
 
 
-class OperatingCurta(StaticBallOperatingCurta):
-    """Source-sized radial ball, pushed by contacts and retained in free slack."""
+class RadialBallOperatingCurta(StaticBallOperatingCurta):
+    """Pre-reverser-restraint diagnostic base with the retained radial ball."""
     carry_mechanism = ShoulderRetainedCarries()
     carriage = RadialRunningCarriage()
     carriage.positioning.p_6mm_ball_419094.slide.constrain(range=(
@@ -250,6 +252,22 @@ class OperatingCurta(StaticBallOperatingCurta):
         carriage.positioning.p_6mm_ball_419094.slide,
         law=Follow(lower=lambda turn, lift: bell_limit(turn),
                    upper=lambda turn, lift: collar_limit(lift)))
+
+
+class OperatingCurta(RadialBallOperatingCurta):
+    """Retained machine with measured six-input reversing-lever restraints."""
+    transmission = ReverserContactTransmission()
+    _reads = (RadialBallOperatingCurta.main_drive.crank.turn,
+              transmission.turns.ones.turn,
+              transmission.turns.tens.turn,
+              transmission.turns.hundreds.turn,
+              transmission.turns.digit_4.turn,
+              transmission.turns.digit_5.turn,
+              transmission.turns.digit_6.turn,
+              RadialBallOperatingCurta.main_drive.crank.lift)
+    RadialBallOperatingCurta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift.constrain(
+        range=(Bound(lower_limit, reads=_reads), Bound(upper_limit, reads=_reads)))
+    del _reads
 
 
 def register_reading(sim, counter=False):

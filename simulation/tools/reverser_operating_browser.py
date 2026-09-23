@@ -71,8 +71,11 @@ def main():
     parser.add_argument('--build', type=Path, required=True)
     parser.add_argument('--report', type=Path, required=True)
     parser.add_argument('--trial', action='store_true')
+    parser.add_argument('--capture-timeout-seconds', type=float, default=180,
+                        help='Screenshot readback cap; does not change command deadlines')
     args = parser.parse_args()
     assert not args.report.exists(), 'Preserve previous acceptance reports'
+    assert 0 < args.capture_timeout_seconds <= 1200
     build = args.build.resolve()
     raw = (build/'manifest.json').read_bytes()
     document = json.loads(raw)
@@ -87,6 +90,7 @@ def main():
         model=model.__name__, viewer=viewer, coverage='hosted retained requests and wrong-order pointer',
         program_identity=document['program']['identity'],
         expected_statuses=EXPECTED_STATUSES,
+        capture_timeout_seconds=args.capture_timeout_seconds,
         document_sha256=hashlib.sha256(raw).hexdigest(),
         bundle_sha256=hashlib.sha256(bundle).hexdigest())
     try:
@@ -220,7 +224,8 @@ def main():
                     break
                 assert passed, 'No terminal wrong-order pointer stop observed'
                 assert not report['errors'], report['errors']
-                page.screenshot(path=str(args.report.with_suffix('.png')))
+                page.screenshot(path=str(args.report.with_suffix('.png')),
+                                timeout=args.capture_timeout_seconds * 1000)
                 # Keep unexpected statuses as diagnostic evidence through the
                 # paired browser replay, but never mark the report accepted.
                 assert [c['status'] for c in report['python']] == EXPECTED_STATUSES, [

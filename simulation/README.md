@@ -1,5 +1,14 @@
 # Curta simulation — implementation resumed
 
+The latest [operating reverser adoption](docs/reverser-operating-adoption-2026-09-23.md)
+adds the measured inner-flank fit and phase-dependent lever restraint to the
+default model. Production contact/replay, six arithmetic tests, all four crank
+modes and fourteen interlock/marker checks pass. Fresh hosted and unmodified
+standalone tests show the actual lever stopping on a wrong-order request;
+hosted Python/browser banks agree bit-for-bit. This is a scoped operating fix,
+not whole-machine completion: clearing-loop clipping and the remaining geometry
+findings are still open.
+
 The earlier [frame and selector investigation](docs/open-run-handoff-2026-09-13.md)
 and [clocked research](docs/clocked-spike-2026-09-16.md) are now retained on
 the same main branch as the operating model. Their dated findings describe

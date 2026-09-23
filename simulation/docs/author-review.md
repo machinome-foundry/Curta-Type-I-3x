@@ -256,6 +256,26 @@ removes exactly the ball/ring contact and changes no other pair. Only the ring
 is adopted: production ball motion and whole-machine acceptance remain open.
 Upstream assets are unchanged; this is not manufacturing or strength advice.
 
+## Reversing ones inner-flank fit — F30
+
+The [operating adoption record](reverser-operating-adoption-2026-09-23.md)
+records the three ones pinions' .43 mm flank relief inside R6 only. Outside
+that radius the existing .36 mm fitted profile is retained, preserving the
+fork-capture tips; the keyed core, axial extent and phase are unchanged.
+The five higher input pinions retain their existing .42 mm fit. This is a
+source-derived simulation fit, not an upstream CAD edit or manufacturing
+tolerance recommendation.
+
+Uniform relief was rejected because it lost fork capture. The protected
+inner-only adjustment passes one-valid-solid, no-added-material and bounded
+removal checks, and the 25-pose closest-passage survey retains at least .01 mm
+native separation. Installed native/published-mesh outward cover proofs and
+the earlier capture evidence are retained in the
+[contact-cover investigation](reverser-profile-cover-2026-09-23.md).
+Five default-root contact/path tests now pass with the compiled lever bound;
+fresh arithmetic, export and production browser checks remain distinct gates.
+This does not certify the whole machine or continuous swept clearance.
+
 ## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)

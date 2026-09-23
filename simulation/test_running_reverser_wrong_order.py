@@ -39,8 +39,46 @@ def commons(sim):
     return common.Volume(), faceted_common_volume(faceted)
 
 
+class RunningReverserStrokeTest(unittest.TestCase):
+    model = OperatingCurta
+
+    def test_all_four_prepared_modes_complete_a_full_crank_stroke(self):
+        for lever, lift in ((-4.9425, 0), (3.9075, 9), (3.9075, 0), (-4.9425, 9)):
+            with self.subTest(lever=lever, lift=lift):
+                sim = Sim(self.model(), dt=.1, meshes=False)
+                self.assertEqual(sim.move('reverser_height', to=lever).status, 'completed')
+                self.assertEqual(sim.move('crank_elevation', to=lift).status, 'completed')
+                request = sim.move('crank_rotation', to=360, duration=2)
+                sim.run(2)
+                self.assertEqual(request.status, 'completed')
+                self.assertEqual(sim.state['crank_rotation'], 360)
+
+
 class RunningReverserWrongOrderTest(unittest.TestCase):
     model = OperatingCurta
+
+    def test_long_request_cannot_cross_contact_into_a_later_clear_band(self):
+        sim = prepare(self.model)
+        saved = sim.snapshot()
+        original = dict(sim.state)
+        request = sim.move('reverser_height', to=-3)
+        self.assertEqual(request.status, 'blocked')
+        self.assertGreaterEqual(sim.state['reverser_height'], FIRST_CONTACT)
+        self.assertLess(sim.state['reverser_height'], 3.9075)
+        self.assertEqual(commons(sim), (0, 0))
+        expected = sim.snapshot()
+        request = sim.move('reverser_height', to=-3)
+        self.assertEqual(request.status, 'blocked')
+        self.assertEqual(sim.snapshot(), expected)
+        sim.restore(saved)
+        sim.move('reverser_height', to=-3)
+        self.assertEqual(sim.snapshot(), expected)
+        self.assertEqual(sim.state['crank_rotation'], original['crank_rotation'])
+        self.assertEqual(sim.state['transmission.turns.ones.turn'],
+                         original['transmission.turns.ones.turn'])
+        # Relief is an explicit user request, not scheduled completion.
+        self.assertEqual(sim.move('reverser_height', to=3.9075).status, 'completed')
+        self.assertEqual(sim.snapshot(), saved)
 
     def test_actual_retained_request_cannot_enter_an_engaged_tooth(self):
         sim = prepare(self.model)

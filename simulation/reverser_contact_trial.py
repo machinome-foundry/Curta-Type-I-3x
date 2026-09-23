@@ -13,7 +13,9 @@ No print, joint axis, driver or retained shaft law is changed.
 from machinome.math import floor, min, max
 from machinome.motion.joints import Bound
 from simulation.reverser_modes import PINION_STARTS, THICKNESS
-from simulation.running import OperatingCurta
+# Keep this intentionally local diagnostic independent of the adopted full
+# angular restraint and its additional ones-pinion fit.
+from simulation.running import RadialBallOperatingCurta as OperatingCurta
 
 
 # Explicit free-side admission stand-off, not an accepted overlap volume.

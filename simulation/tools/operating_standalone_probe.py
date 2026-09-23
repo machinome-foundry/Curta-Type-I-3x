@@ -21,6 +21,8 @@ def validate_report(report):
     assert report['control'] in report['hover'].split(' · ')
     assert report['release_observed']
     assert report['outcome'] == 'completed' or report['outcome'].startswith('blocked after ')
+    if report.get('expect_blocked'):
+        assert report['outcome'].startswith('blocked after ')
     before, after = report['before'], report['after']
     assert set(before) == set(after) == set(report['declared_inputs'])
     assert float(after[report['input']]) != float(before[report['input']])
@@ -53,6 +55,10 @@ def main():
     parser.add_argument('--expected-delta', type=float)
     parser.add_argument('--partial-turn', action='store_true',
                         help='Require a positive visible crank delta below 360 degrees, not a timing-specific quantum')
+    parser.add_argument('--prepare-crank', type=float,
+                        help='Separate setup: ask the visible crank nudge UI for this positive travel over .2 s')
+    parser.add_argument('--expect-blocked', action='store_true',
+                        help='Require the real part gesture to reach a blocked terminal outcome')
     parser.add_argument('--deadline-seconds', type=float, default=120)
     parser.add_argument('--capture-timeout-seconds', type=float, default=180,
                         help='Screenshot readback cap; does not change command deadlines')
@@ -68,6 +74,8 @@ def main():
     assert (control['kind'] == 'button') == args.press
     if args.partial_turn:
         assert args.input == 'crank_rotation' and not args.press
+    if args.prepare_crank is not None:
+        assert 0 < args.prepare_crank <= 360
     report = dict(validation='pending', errors=[], control=args.control, input=args.input,
                   declared_inputs=list(manifest['drivers']),
                   coverage='unmodified standalone page; visible input readouts at four decimals',
@@ -75,6 +83,7 @@ def main():
                   expected_delta=args.expected_delta, deadline_seconds=args.deadline_seconds,
                   capture_timeout_seconds=args.capture_timeout_seconds,
                   partial_turn=args.partial_turn,
+                  expect_blocked=args.expect_blocked,
                   asset_sha256={name: hashlib.sha256((build/name).read_bytes()).hexdigest()
                       for name in ('manifest.json', 'index.html', 'machinome-viewer.js')})
     started = monotonic()
@@ -112,6 +121,34 @@ def main():
             rectangle = canvas.bounding_box()
             report['canvas'] = rectangle
             checkpoint('page_ready')
+            if args.prepare_crank is not None:
+                # Separate case preparation through the ordinary visible UI,
+                # never a hidden handle, bank setter or part-gesture shortcut.
+                before = readouts(page)
+                row = page.locator('.run-input[data-input="crank_rotation"]')
+                amount, seconds = row.locator('.run-amount'), row.locator('.run-seconds')
+                old_amount, old_seconds = amount.input_value(), seconds.input_value()
+                amount.fill(str(args.prepare_crank))
+                seconds.fill('0.2')
+                row.get_by_role('button', name='Nudge crank_rotation up', exact=True).click()
+                page.wait_for_function('''() => {
+                    const text=document.querySelector(
+                        '.run-input[data-input="crank_rotation"] .run-outcome').textContent;
+                    return text==='completed' || text==='refused' || text.startsWith('blocked after ');
+                }''', timeout=args.deadline_seconds * 1000)
+                outcome = row.locator('.run-outcome').text_content()
+                after = readouts(page)
+                report['preparation'] = dict(input='crank_rotation', by=args.prepare_crank,
+                    duration=.2, before=before, after=after, outcome=outcome,
+                    surface='visible nudge UI')
+                assert outcome == 'completed', report['preparation']
+                assert float(after['crank_rotation'])-float(before['crank_rotation']) == args.prepare_crank
+                assert all(after[name] == value for name, value in before.items()
+                           if name != 'crank_rotation')
+                amount.fill(old_amount)
+                seconds.fill(old_seconds)
+                report['before'] = after
+                checkpoint('crank_preparation_complete')
             if args.orbit:
                 ox = rectangle['x'] + rectangle['width']*.9
                 oy = rectangle['y'] + rectangle['height']*.15
@@ -199,7 +236,9 @@ def main():
             checkpoint('screenshot_complete')
             report['validation'] = 'passed'
         except Exception as error:
+            report['validation'] = 'failed'
             report['failure'] = f'{type(error).__name__}: {error}'
+            print(json.dumps(dict(failure=report['failure'])), flush=True)
             checkpoint('failed')
             if 'page' in locals():
                 report['failure_readouts'] = readouts(page)
