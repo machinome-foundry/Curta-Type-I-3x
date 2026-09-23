@@ -517,9 +517,41 @@ native evidence. No negative value is clamped, absolutized or called clear.
 The reader now refuses nonfinite/negative volumes immediately with the exact
 crank, shaft, axial positions, kernel, part pair and value in the error. Its
 new regression first failed for all three injected negative/NaN/infinite
-cases. The fine mesh failure is being reproduced and assessed independently
-for its project, framework and viewer implications; the completed native
-input-preservation fix is not changed by this separate mesh finding.
+cases. All 24 focused project-tool tests then pass (0.002 s).
+
+The independent reproduction identifies the first failed query precisely:
+station 1, crank 167.5°, shaft 283.63498306274414°, height −3, lift zero,
+ones input against the top drum. Both mesh inputs and the common report
+`Error.NoError`. The nonempty common has 16 triangles, 12 vertices and two
+components, with signed volume −1.2666721010143703e−24 mm³. Its X/Y extents
+are approximately 5.3e−10/5.7e−10 mm and its Z extent is 6 mm: it is not an
+exactly planar, zero-extent result. A fresh native query at the identical
+pose instead produces a valid positive common of 0.00035702743847650293 mm³;
+the bottom-drum common is zero. Neither the negative mesh result nor its
+small magnitude establishes clearance. The mesh bracket remains unresolved.
+
+The Sol framework review finds no violated framework or viewer contract in
+this sample. The framework's faceted contract deliberately retains signed
+negative measurements; this project's phase instrument requires nonnegative
+volumes and correctly refuses. The viewer does not perform mesh Boolean
+volume verdicts. No framework/viewer change, epsilon, absolute value, native
+fallback disguised as mesh evidence, or completed half-degree survey follows.
+The input-preservation cycle is unaffected. Framework main subsequently
+advanced from `26cbd63` to `b2bfa1f` through review notes only; its `exact.py`
+hash remains `ffc57c6146adafe4f880e5227bc859df05a034ca214dc5b21f56474b6cbfc1dd`.
+That completed worktree was subsequently removed by concurrent workspace
+cleanup. Further geometric probes use a new launcher-managed clean bench,
+`machinome/WTs/curta-reverser-profile-validation`, pinned to `b2bfa1f`, rather
+than relying on the concurrently moving main checkout. Its source is unchanged
+from the verified input-preservation implementation.
+
+The [native profile-cover investigation](reverser-profile-cover-2026-09-23.md)
+now explores a geometric alternative to interpolated angle tables. It has
+source-profile containment and eight isolated placement witnesses, but also
+exposes missing drum-mesh coverage and an impractically large eager expression
+graph. Separate framework/viewer proposals address only efficient evaluation
+of an explicit profile predicate. No profile law is adopted and no task is
+completed by those proposals.
 
 ## Higher-counter independent surveys
 
