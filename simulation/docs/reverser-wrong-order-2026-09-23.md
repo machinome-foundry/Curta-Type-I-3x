@@ -263,9 +263,82 @@ python -m simulation.tools.refine_reverser_native \
   --output _build_checks/reverser-angular-full-native-2590f38.jsonl
 ```
 
-Continue observing that existing process/output; do not overwrite or relabel
-a partial file as a complete profile. Neither the local trial nor this survey
-changes any umbrella task checkbox, source print, production law or control.
+That was the state at commit `3d26928`; the completed continuation is recorded
+below. Neither the local trial nor this survey changes any umbrella task
+checkbox, source print, production law or control.
+
+## Completed native knots and rejected interpolation
+
+The original serial refinement was intentionally interrupted after 90 complete
+records (eight active rows, 80 boundaries). Its exit 130 is not a completed
+survey. The complete records were preserved, validated against the input hash,
+and resumed into a **different** file using four independent spawned readers.
+The resumed process completed with exit 0 and 272 additional records. Combined,
+the two files cover all 362 input poses with no duplicates or missing poses:
+61 active rows retain all **610 native brackets**; the other 301 rows remain
+explicitly unchecked in native geometry.
+
+The resume validator rejects mismatched input hashes, unknown/duplicate poses,
+missing transitions, incomplete endpoints and positive volumes relabelled zero.
+Parallel workers own separate geometry; only the parent writes the output, in
+input order. No native Boolean, false-empty guard or positivity rule changed.
+
+- Serial prefix: `_build_checks/reverser-angular-full-native-2590f38.jsonl`,
+  SHA-256 `34fa2e360718ed70d6e604ab0874d0c3f39717cbc85875f2bec4df4fd2c26660`.
+- Completed continuation:
+  `_build_checks/reverser-angular-native-parallel-3d26928.jsonl`, SHA-256
+  `d967af30b5bb44391b4fbd4f75bf7358cd0766c4f5624d040bba6d2ded1e5af0`.
+
+`simulation.tools.compile_reverser_phase` joins the stricter boundary from
+each kernel: enter contact when either kernel does, and leave only after both
+are clear. All five measured source sectors are retained independently, not
+averaged or replicated. Subtracting `6.4*crank` merely unwraps their coordinate
+chart; it imposes no shaft motion. Missing native rows remain unmeasured.
+The narrowest measured free interval is about 13.292053° at crank 80°, height
+0, chart sector 2. These are **candidate knots, not an adopted restraint**.
+
+Candidate: `_build_checks/reverser-phase-candidate-3d26928.json`, SHA-256
+`f9827262773dba8f9f7c597e06af7333b2a8e51fd4dfd7064bc0e659b631a678`.
+
+An independent challenge linearly interpolated chart sector 0 between adjacent
+2° knots at crank 79°, 89°, 99°, 109° and 139°, height/lift zero. Each predicted
+free edge was inset by .01°. Of 20 complete-print probes (two edges, five
+cranks, two kernels), **eight overlap**: four physical poses rejected by both
+kernels. The probe command correctly exits 1. This rules out adoption of that
+coarse interpolation; a stand-off is not permission to accept positive common.
+
+| Crank | Edge | World64 common, mm³ | Native common, mm³ |
+| --- | --- | --- | --- |
+| 79° | upper | .004573496588 | .004596454622 |
+| 89° | upper | .002199620784 | .002220950961 |
+| 109° | upper | .013203428927 | .013203098173 |
+| 139° | lower | .001751155498 | .003005561564 |
+
+Raw rejection: `_build_checks/reverser-phase-interpolation-rejection-3d26928.json`,
+SHA-256 `28b08cee9dc9188857ef984e5d3a118761e64666e6ad8e8504704669d60aad0d`.
+The exact shaft angles and both drum volumes are retained there. Reproduce with:
+
+```sh
+python -m simulation.tools.probe_reverser_phase \
+  --input _build_checks/reverser-phase-candidate-3d26928.json \
+  --output _build_checks/reverser-phase-interpolation-rerun.json \
+  --crank 79 --crank 89 --crank 99 --crank 109 --crank 139 \
+  --sector 0 --kernel world64 --kernel native
+```
+
+The boundary/resume/compiler/probe unit gate passes **16 tests**. It proves the
+evidence plumbing, not a green production reverser regression. Interpolation
+cannot skip an unmeasured row, extrapolate, collapse a free interval or silently
+replace the selected source sector.
+
+A bounded Sol investigation on framework `82bf530` found no framework defect
+behind the native survey cost: four station-1 queries at crank 90°, height/lift
+zero and shafts 152.23°/174.07° took .36–.43 CPU seconds apiece. Approximately
+51% was OCCT Boolean work, 28% project-tool rigid placement, and 19% strict
+false-empty verification. The bottom drum was separated in Z by over 4.44 mm
+at those sampled poses, but the top pair's boxes overlap. A possible local
+placement cache or conservative cull needs separate paired proof; none was
+implemented, no guard was weakened, and no framework cycle was opened.
 
 ## Remaining implementation
 
