@@ -116,7 +116,9 @@ class ToothEnvelopeReader:
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--station', type=int, choices=range(1, 7), default=1)
-    parser.add_argument('--crank', type=float, action='append', required=True)
+    parser.add_argument('--crank', type=float, action='append')
+    parser.add_argument('--crank-step', type=float,
+                        help='Survey one complete 0..360° crank revolution')
     parser.add_argument('--shaft', type=float, action='append')
     parser.add_argument('--shaft-step', type=float,
                         help='Survey a full 360° shaft revolution from its actual rest')
@@ -128,6 +130,14 @@ def main():
     parser.add_argument('--boundaries', action='store_true',
                         help='Retain samples and refine every observed phase transition')
     args = parser.parse_args()
+    if bool(args.crank) == (args.crank_step is not None):
+        parser.error('Choose explicit --crank values or --crank-step')
+    if args.crank_step is not None:
+        if not 0 < args.crank_step <= 360:
+            parser.error('--crank-step must be in (0, 360]')
+        args.crank = [i*args.crank_step for i in range(int(360/args.crank_step)+1)]
+        if args.crank[-1] < 360:
+            args.crank.append(360)
     if args.shaft_step is not None and not 0 < args.shaft_step <= 360:
         parser.error('--shaft-step must be in (0, 360]')
     if args.shaft_step is not None and args.shaft:

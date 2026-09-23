@@ -188,6 +188,85 @@ file is preserved. The instrument supports stations 1…6, but the current
 fixture and phase evidence are explicitly **station 1**, not proof of the
 five different higher-counter prints.
 
+## Local admission experiment and full-revolution survey
+
+`reverser_contact_trial.LocalReverserContactTrial` is an **unadopted, deliberately
+local experiment**. It is not selected by the manifest. It constrains only the
+measured crank-90°, zero-drum-lift fixture and uses the measured free angular
+interval 152.3…174° with a .01 mm axial free-side stand-off. The temporary
+72° phase chart is checked only by the two retained histories below; it is
+not an assertion of exact source symmetry across the five sectors. Outside
+that fixture the added bound falls through to the existing physical window.
+This experiment cannot complete the operating restraint requirement.
+
+The first draft incorrectly expressed a signed contact level relative to the
+bound's `own` argument. The framework deliberately holds that argument at the
+start of a segment (including for `Bound` with reads), preserving ratchet
+semantics. The erroneous fallback `own-1` therefore stopped a normal parked
+lever after 1 mm and allowed retry drift. Four tests ran in 100.073 s with two
+failures. An earlier draft also stopped at construction because the project's
+expression `max` is binary, not variadic (four errors in 5.753 s). Both are
+local implementation errors, not framework limitations or passing results.
+
+The corrected trial selects **absolute axial stop planes** from the held
+position and reads the live angular state. Its four tests pass in **97.838 s**:
+
+- The original native/world64 penetration request stops clear of the tooth.
+- The .01 mm pre-contact free request remains admitted.
+- The different retained phase still permits the sampled withdrawal sequence.
+- A long request to −3 mm cannot cross the obstructing band even though that
+  endpoint is clear. Repeating it leaves the complete snapshot unchanged;
+  restore/replay is exact, and explicit relief returns to the saved snapshot.
+
+The production test was rerun **after importing the trial** to verify that
+the subclass declaration did not mutate the default model. It still fails
+the same native/world64/status assertions (one test, three failures, 24.364 s).
+The production defect remains open rather than being hidden by a test-only
+class or an accidental global constraint.
+
+The inspected native trial section shows zero common for both requests. The
+1.0475 mm request is blocked at 1.0674999999999986 mm; the 1.0675 mm request
+completes. The .01 mm gap is a declared placement stand-off, not an accepted
+positive overlap. Both full 214-coordinate banks are retained in:
+
+- `_build_checks/reverser-local-trial-2590f38.json`, SHA-256
+  `08584f25ff8ead420007e14ae81b6384776bd8b93d95563777cfd8fc373f54f7`.
+- `_build_checks/reverser-local-trial-2590f38.png`, SHA-256
+  `a20ac7db61974bea40033eeb10af0fc462780a63ee734f730f16c9878d21d123`.
+
+The section command above accepts `--local-trial` and requires fresh output
+names. Without that flag it continues to inspect the unchanged production root.
+
+The independent complete-print world64 survey now spans **both full angular
+revolutions**: crank 0…360° and shaft 134…494°, each at 2° spacing, with lever
+heights 0 and −3 mm. It completes with exit 0: 362 rows, 65,522 coarse pair
+samples, and 610 refined observed transition brackets in 61 active rows.
+The active sampled crank angles are 74…178° at height 0 and 164…178° at height
+−3; the other sampled rows have no observed transitions. This still does not
+exclude unsampled islands or prove native clearance between angular knots.
+
+Raw file: `_build_checks/reverser-angular-full-world64-2590f38.jsonl`, SHA-256
+`ae56f0c5f0fa896ca61168061ed4e84d0dff93b6475368e70d01a52bf83e347e`.
+Reproduce with `--crank-step 2 --shaft-step 2 --height 0 --height -3 --boundaries`
+and a new `--output` path on `simulation.tools.reverser_tooth_envelope`.
+
+`simulation.tools.refine_reverser_native` independently brackets and refines
+each observed transition in native geometry. It retains both endpoint
+classifications, expansion attempts and the input file's SHA-256. Rows without
+a faceted transition are explicitly `not_checked_no_world64_transition`, never
+copied as a native clearance pass. The full refinement has been launched at
+this checkpoint and is **pending**, not counted as completed acceptance:
+
+```sh
+python -m simulation.tools.refine_reverser_native \
+  --input _build_checks/reverser-angular-full-world64-2590f38.jsonl \
+  --output _build_checks/reverser-angular-full-native-2590f38.jsonl
+```
+
+Continue observing that existing process/output; do not overwrite or relabel
+a partial file as a complete profile. Neither the local trial nor this survey
+changes any umbrella task checkbox, source print, production law or control.
+
 ## Remaining implementation
 
 Measure the axial admission envelope against **actual retained shaft phase**,

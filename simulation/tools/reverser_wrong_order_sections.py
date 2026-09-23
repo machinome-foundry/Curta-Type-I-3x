@@ -23,11 +23,17 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', type=Path, required=True)
     parser.add_argument('--report', type=Path, required=True)
+    parser.add_argument('--local-trial', action='store_true',
+                        help='Inspect the explicitly limited crank-90 constraint experiment')
     args = parser.parse_args()
     for path in (args.image, args.report):
         if path.exists():
             parser.error(f'Preserve existing evidence: {path}')
-    sim = prepare()
+    if args.local_trial:
+        from simulation.reverser_contact_trial import LocalReverserContactTrial
+        sim = prepare(LocalReverserContactTrial)
+    else:
+        sim = prepare()
     prepared = sim.snapshot()
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     records = []
@@ -54,13 +60,14 @@ def main():
         records.append(dict(request=requested, status=command.status,
                             bank=dict(sim.state), native_mm3=volumes[0],
                             world64_mm3=volumes[1]))
-    fig.suptitle('Crank 90°; native section at world Y = 26.3 mm\n'
+    fig.suptitle(('Local constraint trial; ' if args.local_trial else '')+
+                 'Crank 90°; native section at world Y = 26.3 mm\n'
                  'Axial scale expanded; these are admitted poses, not a clearance claim')
     fig.tight_layout()
     fig.savefig(args.image, dpi=160)
     plt.close(fig)
     args.report.write_text(json.dumps(dict(
-        gear=GEAR, drum=DRUM, records=records,
+        gear=GEAR, drum=DRUM, records=records, local_trial=args.local_trial,
         scope='Two retained requests; sampled contact witness only, no continuous proof',
     ), indent=2)+'\n')
     print(json.dumps(dict(image=str(args.image), report=str(args.report),

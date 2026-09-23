@@ -21,8 +21,8 @@ DRUM = ('Curta.main_drive.stepped_drum.main_axle_step_drum_1.'
 FIRST_CONTACT = 1.0575
 
 
-def prepare():
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+def prepare(model=OperatingCurta):
+    sim = Sim(model(), dt=.1, meshes=True)
     command = sim.move('crank_rotation', to=90, duration=.5)
     sim.run(.5)
     assert command.status == 'completed'
@@ -40,8 +40,10 @@ def commons(sim):
 
 
 class RunningReverserWrongOrderTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_actual_retained_request_cannot_enter_an_engaged_tooth(self):
-        sim = prepare()
+        sim = prepare(self.model)
         before = dict(sim.state)
         command = sim.move('reverser_height', to=FIRST_CONTACT-.01)
         volumes = commons(sim)
@@ -58,7 +60,7 @@ class RunningReverserWrongOrderTest(unittest.TestCase):
             self.assertEqual(sim.state[name], before[name], name)
 
     def test_precontact_play_is_admitted_without_preparing_another_control(self):
-        sim = prepare()
+        sim = prepare(self.model)
         before = dict(sim.state)
         command = sim.move('reverser_height', to=FIRST_CONTACT+.01)
         self.assertEqual(command.status, 'completed')
@@ -69,7 +71,7 @@ class RunningReverserWrongOrderTest(unittest.TestCase):
             self.assertEqual(sim.state[name], before[name], name)
 
     def test_a_different_retained_phase_can_withdraw_from_the_same_crank_pose(self):
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(self.model(), dt=.1, meshes=True)
         self.assertEqual(sim.move('reverser_height', to=-4.9425).status, 'completed')
         command = sim.move('crank_rotation', to=90, duration=.5)
         sim.run(.5)
