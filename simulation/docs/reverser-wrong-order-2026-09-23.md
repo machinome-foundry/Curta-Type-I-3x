@@ -483,10 +483,43 @@ serial processes use CPU affinities 0…3 and partition the crank list
 selected cranks, including both axial heights where present. Their new
 outputs are `_build_checks/reverser-phase-midpoints-native-copied-96a9496-part0.jsonl`
 through `part3.jsonl`, each tied to the original world64 file hash. These
-processes use the final framework source hash above. Their completed 169°
-and 173° rows pass all ten boundaries each, but **the full survey is still
-running** at this checkpoint; no partial file is final acceptance or an
-adopted operating restraint. The production model remains unchanged.
+processes used the final framework source hash above. **All four terminated
+with exit 0**, recording 14/15/15/15 rows respectively: all 59 requested rows
+and 590 native brackets, including the complete 169° and 173° rows at both
+heights. Their SHA-256 values, in part order, are:
+
+- `8a78be8b370e58db21c47cfdf506709f906ac631577623adcea8ef52895ea13f`
+- `032eb88fef8dc94ec1374d92dfe26e6ea2bd3077e9e669196efc4380c23864a0`
+- `6d372c91a29b87e462655a7a13dab2ced7c3b9724fac40c39ad50f8a0764150d`
+- `73c21ebb4f9891fefe51b8a6886ed7ea7afc1480e03e1367944d5bc478447ba9`
+
+The source-pinned compiler joins these complete records with the earlier
+fresh-native survey and their two world64 input files. It terminates with
+exit 0 and produces `_build_checks/reverser-phase-one-degree-candidate-c7d85d6.json`,
+SHA-256 `38c93f31f7adc63c87995a2b44c1475f1464b324450162163a0b5d0ebfce10b9`.
+There are 421 rows: **120 measured knots** and 301 rows whose native clearance
+remains unmeasured. The five angular sectors stay independent. This completes
+the midpoint measurement, not between-knot clearance, the remaining axial/lift
+and station matrix, or an adopted operating restraint. The production model
+remains unchanged. The 23 focused project-tool tests also pass against the
+integrated framework source (0.002 s).
+
+A subsequent world64 measurement at the midpoints between these one-degree
+knots **failed with exit 1**, refusing a nonfinite or negative common volume.
+It used `simulation.tools.refine_reverser_intervals`, four workers and the
+compiled candidate above, targeting 118 rows. It preserves only three complete
+rows (164.5/165.5/166.5°, height −3) in
+`_build_checks/reverser-phase-half-degree-world64-c7d85d6.jsonl`, SHA-256
+`6726987cac8d6e4b8152c1d63f26a9557e2027e1757db1c9106ebf09ff714e50`.
+This is diagnostic evidence, not a completed survey, a safe resume prefix or
+native evidence. No negative value is clamped, absolutized or called clear.
+
+The reader now refuses nonfinite/negative volumes immediately with the exact
+crank, shaft, axial positions, kernel, part pair and value in the error. Its
+new regression first failed for all three injected negative/NaN/infinite
+cases. The fine mesh failure is being reproduced and assessed independently
+for its project, framework and viewer implications; the completed native
+input-preservation fix is not changed by this separate mesh finding.
 
 ## Higher-counter independent surveys
 

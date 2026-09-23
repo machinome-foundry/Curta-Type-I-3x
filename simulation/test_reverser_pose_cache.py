@@ -1,11 +1,15 @@
 """A survey may reuse rigid drums only while their complete pose is identical."""
 
 import unittest
+from unittest.mock import patch
 
 from simulation.tools.reverser_tooth_envelope import DRUMS, ToothEnvelopeReader
 
 
 class Shape:
+    def __xor__(self, other):
+        return Shape()
+
     def rotate(self, *args):
         return Shape()
 
@@ -50,6 +54,16 @@ class ReverserPoseCacheTest(unittest.TestCase):
             for path in DRUMS:
                 self.assertIsNot(current[path], last[path])
             last = current
+
+    def test_invalid_volume_refuses_with_the_exact_query_context(self):
+        reader = self.reader()
+        for volume in (-1e-30, float('nan'), float('inf')):
+            with self.subTest(volume=volume), patch(
+                    'simulation.tools.reverser_tooth_envelope.faceted_common_volume',
+                    return_value=volume):
+                with self.assertRaisesRegex(ValueError,
+                        r"crank=167\.5.*shaft=200.*height=-3.*lift=0.*kernel='world64'.*volume="):
+                    reader.volumes(167.5, 200, -3)
 
 
 if __name__ == '__main__':

@@ -125,6 +125,13 @@ class ToothEnvelopeReader:
                 values[drum] = common.Volume()
             else:
                 values[drum] = faceted_common_volume(bodies[self.gear] ^ bodies[drum])
+            value = values[drum]
+            if (not isinstance(value, (int, float)) or
+                    not 0 <= value < float('inf')):
+                raise ValueError(f'Invalid common volume: crank={crank!r}, '
+                                 f'shaft={shaft!r}, height={height!r}, lift={lift!r}, '
+                                 f'kernel={kernel!r}, pair=({self.gear!r}, {drum!r}), '
+                                 f'volume={value!r}')
         return values
 
 
