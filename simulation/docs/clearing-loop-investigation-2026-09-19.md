@@ -150,3 +150,28 @@ These are inspected frames, not a claim that the entire film lacks a useful
 moment. They justify no permanent hinge, additional material removal or
 deploy/stow path. The user's video and generated sheets remain unstaged,
 and the clearing-loop task remains open.
+
+## Primary-source follow-up, 2026-09-23
+
+The local manual's page 38 is inspected again: it specifies two glued rivets
+and testing clip/unclip fit before gluing, with possible part modification.
+It does not supply a rigid swivel path or a deformation law. The maintainer's
+[2016 assembly account](https://wudev.digitaltorque.com/articles/curta-9/)
+discusses assembling these parts and operating the clearing mechanism, but
+does not establish this print's clip-release trajectory.
+
+A [first-person historical owner account](https://www.vcalc.net/cu-news.htm)
+distinguishes the later plastic clearing lever's snap-on fixed post from the
+older metal lever's spring-loaded release. This concerns original machines,
+not a validated deformation model for the present 3x printed parts; it does
+not justify adding the metal release button here.
+
+The project's original README explicitly points to mcmaven's
+[Curta Calculator Mods](https://www.thingiverse.com/thing:3126676) for other
+adaptations. That primary listing returns no readable design body in this
+session. Mirrored descriptions are a research lead only, not authority to
+replace the current mounting or import an unverified alternative. The local
+tracked `Mods/` files contain no clearing-loop replacement. No new fitting,
+permanent hinge, clip deformation or deployment control is adopted from this
+search. A measured source-backed clip/assembly path, or an explicitly chosen
+alternative mounting with its own provenance and proof, remains necessary.

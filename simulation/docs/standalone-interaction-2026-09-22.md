@@ -2,6 +2,72 @@
 
 ## September 23: fitted-shoulder production continuation
 
+All **25 currently declared controls** now have passing independent physical
+gestures on the same unmodified fitted-shoulder export and viewer bundle.
+The [consolidated evidence index](evidence/standalone-current-controls-2026-09-23.json)
+matches the manifest's exact control-name set and all 24 driver names; each
+raw report passes the shared release/terminal/independence validator. All
+reports use the same manifest, index and bundle hashes. This is complete
+baseline pointer reachability for the currently implemented controls, **not**
+completion of task 6.5: the required clearing-loop deployment is still absent,
+and full strokes and all wrong-order/mid-cycle sequences remain separate gates.
+
+The final refresh adds independent crank lift (2.0000 mm), carriage lift
+(1.0000 mm), partial crank (1.0000 degree), and the actual part-button's full
+revolution (exactly 360.0000 degrees). Each completes after observed release,
+leaves other visible inputs unchanged, has no page errors and exits zero.
+All four complete-assembly screenshots are inspected. The full button reaches
+its terminal readouts at 177.443 s and finishes capture at 191.073 s, with the
+normal timestep and two simulated seconds; this is not real-time performance.
+The index records exact report/image hashes, physical points and per-stage
+timings for all 25 cases. No hidden run handle or host motion request is used.
+
+The subsequent marker continuation on project `9f0f9c1` uses the same pinned
+export below. All ten actual marker controls pass independent, serial
+standalone gestures. Each starts from an untouched page, requires the actual
+part hover, receives a 60-pixel leftward drag and observes release before
+terminal readout checks. All other 23 input readouts remain unchanged and
+there are no page errors. Every process exits zero; all ten screenshots are
+inspected and show the complete assembly. Some marker rows are below the
+viewport: the report captures their actual DOM readouts, not visible pixels
+of every numeric row. This is not full-bank or full-track-travel acceptance.
+
+| Marker | Final readout (degrees) | Terminal outcome |
+| --- | ---: | --- |
+| 1 | -0.0760 | blocked after -0.076 deg |
+| 2 | -0.2260 | blocked after -0.226 deg |
+| 3 | -0.1490 | blocked after -0.149 deg |
+| 4 | -0.1490 | blocked after -0.149 deg |
+| 5 | -1.0000 | completed |
+| 6 | 1.0000 | completed |
+| 7 | 0.1390 | blocked after 0.139 deg |
+| 8 | 0.3160 | blocked after 0.316 deg |
+| 9 | 0.3460 | blocked after 0.346 deg |
+| 10 | 0.2860 | blocked after 0.286 deg |
+
+[The evidence record](evidence/standalone-current-controls-2026-09-23.json) pins every
+report and inspected image, physical gesture point, exact asset hashes and
+timings (terminal checks 8.701–14.506 s, captures 23.496–27.346 s). All ten
+reports pass the shared validator and use byte-identical export assets. The
+initial marker-1 attempt hit marker 5 instead and was rejected before any
+gesture; its failed report is preserved and excluded from acceptance.
+
+The reversing knob also passes on the same export. An ordinary empty-canvas
+camera drag from (1299.3, 150) by (-300, 0) first exposes its actual part;
+the harness checks that this camera action changes no input. A real downward
+60-pixel knob drag at (867, 577) then changes `reverser_height` from 3.9075
+to 1.9075 mm and completes after observed release, with unchanged other
+23 readouts and no page errors. Terminal / capture times are 22.312 / 37.328 s;
+exit zero is observed and the full-assembly screenshot is inspected. Report
+`operating-shoulder-standalone-reverser-visible-9f0f9c1.json` SHA-256
+`45a40bbf93a943b028080e173887d32b6c0e783c76f53a84ec6b041f39361689`;
+PNG `a24729cd7fa4c34a08402a45db74edf86c2c336f3a169a425ea8649faa1b5b42`.
+This proves independent partial knob travel, not the complete throw or a
+mid-cycle locking contract. The first post-orbit guess (736, 500) did not
+hit the knob and was rejected before any gesture. That failed report remains
+`operating-shoulder-standalone-reverser-orbit-9f0f9c1.json`, SHA-256
+`e994a5bec6bd2cbbfcf5126f08ecb1162bae30e306d11a13fee68b0b84c43fa2`.
+
 The unmodified `_build_checks/operating-shoulder-82bf530-a92541d/` export
 contains the accepted counter-shoulder geometry at project `4256778`, framework
 `82bf530` and viewer `a92541d`. Its manifest SHA-256 is

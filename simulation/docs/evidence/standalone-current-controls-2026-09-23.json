@@ -1,0 +1,652 @@
+{
+  "date": "2026-09-23",
+  "project_head": "9f0f9c1",
+  "geometry_commit": "4256778",
+  "framework_commit": "82bf530",
+  "viewer_commit": "a92541d",
+  "program_identity": "b81b2ce7af6556c12a68829fa3444d1dc6efc7c110d2cd88aff57fff0b9700f4",
+  "assets": {
+    "manifest.json": "0b8f70d9c276f4517df28c629734f020ea266ac5d7051b7714acf78483474a79",
+    "index.html": "16238dda75b0b88224bd1bcaf0c9dfd77a6f43d75652b2972f4af5ed00111bb2",
+    "machinome-viewer.js": "feeaed32febb1ede3b267e9f47a6a0fd0a6b39bc149453af338011489b68ff86"
+  },
+  "coverage": "All 25 currently declared controls on unmodified standalone export; real part gestures, observed release, terminal UI and all 24 four-decimal input readouts. Not the absent loop deployment, full-bank, every full stroke, or all action orders.",
+  "cases": [
+    {
+      "control": "set digit 1",
+      "input": "digit_1",
+      "gesture": {
+        "point": [
+          842.025,
+          620
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 9.65763832203811,
+      "capture_seconds": 24.282736555032898,
+      "report": "_build_checks/operating-shoulder-standalone-digit1-4256778.json",
+      "report_sha256": "44a957212ccfdcc5bd1a42d9116766682860bf7497241644320fc54983bad1c8",
+      "image_sha256": "c57203427fd0efff0c53d41a8a3a26969ca6a719fbab9471d76aa7d239d0fa64",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 2",
+      "input": "digit_2",
+      "gesture": {
+        "point": [
+          800,
+          635
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 14.099823935015593,
+      "capture_seconds": 28.16929936700035,
+      "report": "_build_checks/operating-shoulder-standalone-digit2-4256778.json",
+      "report_sha256": "3023588565e2dd727e1806d74555508fc2665fd6effc8985cc2e47a8271d5573",
+      "image_sha256": "b07308ce947f938faef330d6b7483b0203169c55bd3e63f839355d80c2a454d3",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 3",
+      "input": "digit_3",
+      "gesture": {
+        "point": [
+          750,
+          635
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 15.680403185018804,
+      "capture_seconds": 27.869287791021634,
+      "report": "_build_checks/operating-shoulder-standalone-digit3-4256778.json",
+      "report_sha256": "9dad0359eea621fe821c0bce7b6f131c1774109f9d43b0996fae8dfce234d4df",
+      "image_sha256": "b57585a169e9ca078ca25f96f2c2ec56eaa990e8c382e6a960f62b091dfa479f",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 4",
+      "input": "digit_4",
+      "gesture": {
+        "point": [
+          698,
+          635
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 14.124005173973273,
+      "capture_seconds": 27.637675605947152,
+      "report": "_build_checks/operating-shoulder-standalone-digit4-4256778.json",
+      "report_sha256": "0c9f05300d12b44895ae1caadd2d2e0f8701233efcfdb8214b19c66a6bef352d",
+      "image_sha256": "a1666f59999e57734ce0ea10695747928c04c0e5444d519f456156bb5aeca7e2",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 5",
+      "input": "digit_5",
+      "gesture": {
+        "point": [
+          653,
+          635
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 15.70354756503366,
+      "capture_seconds": 29.845601000008173,
+      "report": "_build_checks/operating-shoulder-standalone-digit5-4256778.json",
+      "report_sha256": "40e4778d4a09112a4f0675d4dab5ad4eaed83192bf02911956dd50860c710ba8",
+      "image_sha256": "87fd7570d9cff841006cfda8df6f34c9d5622d7ee9a0b9d602d1bb8019d108f8",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 6",
+      "input": "digit_6",
+      "gesture": {
+        "point": [
+          622,
+          598
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 11.838275888003409,
+      "capture_seconds": 25.84483455301961,
+      "report": "_build_checks/operating-shoulder-standalone-digit6-visible-4256778.json",
+      "report_sha256": "38a0d0079dc40380d6919540a94e48ce3be378f51283dba49655fe530cf59b0c",
+      "image_sha256": "6be76621e0e938103f1c9ade2139943fd7de7a5152852b5b609c4946582fa58f",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 7",
+      "input": "digit_7",
+      "gesture": {
+        "point": [
+          601,
+          577
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 13.600479629007168,
+      "capture_seconds": 27.459622824040707,
+      "report": "_build_checks/operating-shoulder-standalone-digit7-4256778.json",
+      "report_sha256": "b2e45fa7e9241a5a44d2d5cb6c08504a18f3f19655e8cd10ae72d968b9ecd562",
+      "image_sha256": "739b34b7ae845f3b48809e95a84e76fae2b4aa8c7d58f1483a0ff888e5bc4b12",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "set digit 8",
+      "input": "digit_8",
+      "gesture": {
+        "point": [
+          599,
+          547
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 14.914143791014794,
+      "capture_seconds": 28.805027593974955,
+      "report": "_build_checks/operating-shoulder-standalone-digit8-4256778.json",
+      "report_sha256": "94d55a9565c19fb676ccfd02225e325989f5b96d88bb4c80af106fdae6aec62d",
+      "image_sha256": "dcdc52aae9c7328a703ba5365e993f7895042534564a436fbb5233ba9c1e9ed8",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 1",
+      "input": "marker_1_rotation",
+      "gesture": {
+        "point": [
+          775,
+          767
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "-0.0760",
+      "outcome": "blocked after -0.076 deg",
+      "terminal_seconds": 9.182021396001801,
+      "capture_seconds": 23.61861891299486,
+      "report": "_build_checks/operating-shoulder-standalone-marker1-visible-9f0f9c1.json",
+      "report_sha256": "ddb4111856e351dc236a11b3b667f5ae034da6ee8e3fe8b09472dc82010bd733",
+      "image_sha256": "65ff28dc723451118316d736e37be91ab2f8acd3a752a50d22a91265c1283c92",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 2",
+      "input": "marker_2_rotation",
+      "gesture": {
+        "point": [
+          759,
+          770
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "-0.2260",
+      "outcome": "blocked after -0.226 deg",
+      "terminal_seconds": 8.700778320024256,
+      "capture_seconds": 23.49579553602962,
+      "report": "_build_checks/operating-shoulder-standalone-marker2-9f0f9c1.json",
+      "report_sha256": "02c522eb6cd96f3a1c4d743f59ae3b115dec289ffcda69c5f984ef14542bf794",
+      "image_sha256": "2d43b30701a8c976827a47eb57e19303b634a40766631b80d885a439c4de865b",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 3",
+      "input": "marker_3_rotation",
+      "gesture": {
+        "point": [
+          744,
+          770
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "-0.1490",
+      "outcome": "blocked after -0.149 deg",
+      "terminal_seconds": 12.993420743034221,
+      "capture_seconds": 26.97083169198595,
+      "report": "_build_checks/operating-shoulder-standalone-marker3-9f0f9c1.json",
+      "report_sha256": "90459edd99c014da382c82b6f7f67456d78885cda86c68a824b6fa9780bd5759",
+      "image_sha256": "2c2832d2fdce871754a777aa459594c3a7fc983feb1a67d0e5569a23888190e5",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 4",
+      "input": "marker_4_rotation",
+      "gesture": {
+        "point": [
+          728,
+          770
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "-0.1490",
+      "outcome": "blocked after -0.149 deg",
+      "terminal_seconds": 10.689972356020007,
+      "capture_seconds": 24.65088560001459,
+      "report": "_build_checks/operating-shoulder-standalone-marker4-9f0f9c1.json",
+      "report_sha256": "a87c6fbb802b005061b4de730d1816b29e53bb4da264d3571f5acbe59a18c2fe",
+      "image_sha256": "56153d7bb96cca1ead9ce6319cba988e58b4e288fe4f1c0ecc21c05520a253b0",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 5",
+      "input": "marker_5_rotation",
+      "gesture": {
+        "point": [
+          711,
+          768
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "-1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 10.548440551036038,
+      "capture_seconds": 24.18474352301564,
+      "report": "_build_checks/operating-shoulder-standalone-marker5-9f0f9c1.json",
+      "report_sha256": "569c28e6b9eb0a265ed0efbf6ca01882a6abb2e8c527b83efd85851f422b2a2a",
+      "image_sha256": "76ed132a5844cf05922bb858d977fdee268563fa02eaae761a6f3caee3790ffd",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 6",
+      "input": "marker_6_rotation",
+      "gesture": {
+        "point": [
+          803,
+          402
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 9.87207419500919,
+      "capture_seconds": 24.340527557011228,
+      "report": "_build_checks/operating-shoulder-standalone-marker6-9f0f9c1.json",
+      "report_sha256": "2e6a5a9eb5679ce7c521aa7657f36e01a67fd70c1d9f2c6286471670fd198443",
+      "image_sha256": "3b801bfe8540765eaf8b0142806c6d87e1434482641f02fa734d0747bfd975c9",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 7",
+      "input": "marker_7_rotation",
+      "gesture": {
+        "point": [
+          785,
+          405
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "0.1390",
+      "outcome": "blocked after 0.139 deg",
+      "terminal_seconds": 10.710566152993124,
+      "capture_seconds": 26.26322247099597,
+      "report": "_build_checks/operating-shoulder-standalone-marker7-9f0f9c1.json",
+      "report_sha256": "515c9cbd5f9887efafdde0d8e172650208646f852a29bb15b2d9f4de28e56ac1",
+      "image_sha256": "84d56094078d9401db258ede054a79d29db83c05ffd3dca543656d8373c309b6",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 8",
+      "input": "marker_8_rotation",
+      "gesture": {
+        "point": [
+          768,
+          408
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "0.3160",
+      "outcome": "blocked after 0.316 deg",
+      "terminal_seconds": 14.506452957983129,
+      "capture_seconds": 27.346037494018674,
+      "report": "_build_checks/operating-shoulder-standalone-marker8-9f0f9c1.json",
+      "report_sha256": "fac001dbd0af1418b597560c3b3818e4e63cec1345790b59d4cf56bba3a15611",
+      "image_sha256": "48029d6920bfca89f8fde3769a340b3e7e31a8f80e6800d998f086c6fcf0ec32",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 9",
+      "input": "marker_9_rotation",
+      "gesture": {
+        "point": [
+          749,
+          409
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "0.3460",
+      "outcome": "blocked after 0.346 deg",
+      "terminal_seconds": 13.346183859976009,
+      "capture_seconds": 27.147549472982064,
+      "report": "_build_checks/operating-shoulder-standalone-marker9-9f0f9c1.json",
+      "report_sha256": "d8a4270a665dc1d1e6cd9f05ad8764527b22090d894edd888c513d5407927df8",
+      "image_sha256": "d056221aaf4f1c69f0c420219fccb501dc640bae029ec3e1d3fe39370553441e",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "move decimal marker 10",
+      "input": "marker_10_rotation",
+      "gesture": {
+        "point": [
+          730,
+          409
+        ],
+        "drag": [
+          -60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "0.2860",
+      "outcome": "blocked after 0.286 deg",
+      "terminal_seconds": 10.752956906042527,
+      "capture_seconds": 24.68474551505642,
+      "report": "_build_checks/operating-shoulder-standalone-marker10-9f0f9c1.json",
+      "report_sha256": "8bee38ea5d2906ef19a0c6afdeef1807e94b479612abe050569ec45c68060926",
+      "image_sha256": "9386ab9c9212960066d8932afe5183db282f34759a2857d219e3b4d9c461852b",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "shift carriage",
+      "input": "carriage_rotation",
+      "gesture": {
+        "point": [
+          757.484375,
+          432.4375
+        ],
+        "drag": [
+          -80,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "0.1800",
+      "outcome": "blocked after 0.18 deg",
+      "terminal_seconds": 16.18209958699299,
+      "capture_seconds": 29.584289648977574,
+      "report": "_build_checks/operating-shoulder-standalone-seated-shift-left-4256778.json",
+      "report_sha256": "8a3e15e38349b73d5c5f91e77364da84a87d87805eca36eeb491e831f2f092dd",
+      "image_sha256": "6ebf233e823cb9fe95f54ab71862f6b1dbdcafdc5c35b6eaa832a85b4fda5469",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "clear registers",
+      "input": "clearing_rotation",
+      "gesture": {
+        "point": [
+          830,
+          360
+        ],
+        "drag": [
+          400,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.4372",
+      "outcome": "blocked after 0.437226 deg",
+      "terminal_seconds": 13.472343580040615,
+      "capture_seconds": 26.947839735017624,
+      "report": "_build_checks/operating-shoulder-standalone-seated-clearing-stop-4256778.json",
+      "report_sha256": "d2ad0b622e75a619b5baf97cdba737f06dde4e1ee5913db8ea0f7bf309428a5f",
+      "image_sha256": "d29888ffc2a80ce3a2a7304341af897e9404786b691dc83c3b0de10e32b1d06e",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "reverse counter",
+      "input": "reverser_height",
+      "gesture": {
+        "point": [
+          867,
+          577
+        ],
+        "drag": [
+          0,
+          60
+        ]
+      },
+      "camera_drag": {
+        "point": [
+          1299.3,
+          150
+        ],
+        "by": [
+          -300,
+          0
+        ]
+      },
+      "before_readout": "3.9075",
+      "final_readout": "1.9075",
+      "outcome": "completed",
+      "terminal_seconds": 22.31209794798633,
+      "capture_seconds": 37.328480924014,
+      "report": "_build_checks/operating-shoulder-standalone-reverser-visible-9f0f9c1.json",
+      "report_sha256": "45a40bbf93a943b028080e173887d32b6c0e783c76f53a84ec6b041f39361689",
+      "image_sha256": "a24729cd7fa4c34a08402a45db74edf86c2c336f3a169a425ea8649faa1b5b42",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "lift crank",
+      "input": "crank_elevation",
+      "gesture": {
+        "point": [
+          763.875,
+          254.25
+        ],
+        "drag": [
+          0,
+          -60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "2.0000",
+      "outcome": "completed",
+      "terminal_seconds": 16.011109851009678,
+      "capture_seconds": 29.39158628502628,
+      "report": "_build_checks/operating-shoulder-standalone-lift-crank-9f0f9c1.json",
+      "report_sha256": "e3fef2f8d6564e6a4c150f49fa7aaee08ce2d62b90b524fa61ed69c65fde1aa0",
+      "image_sha256": "844116aa3514b9935f41da1b198a6916383047e5e7b2988529466d59a0008431",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "lift carriage",
+      "input": "carriage_elevation",
+      "gesture": {
+        "point": [
+          715.484375,
+          432.4375
+        ],
+        "drag": [
+          0,
+          -60
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 19.299318057019264,
+      "capture_seconds": 32.61095691204537,
+      "report": "_build_checks/operating-shoulder-standalone-lift-carriage-9f0f9c1.json",
+      "report_sha256": "c8bbca8b6ff19517a5113e5f8cf29b6142c58b58b610c3abd3cf61c1b8018287",
+      "image_sha256": "d93cfb8e9642fe64adc68207fc496030fdad3a8043b4ff9260dd1d37df9ca148",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "turn crank",
+      "input": "crank_rotation",
+      "gesture": {
+        "point": [
+          805.875,
+          254.25
+        ],
+        "drag": [
+          60,
+          0
+        ]
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "1.0000",
+      "outcome": "completed",
+      "terminal_seconds": 24.152877811982762,
+      "capture_seconds": 38.02296498999931,
+      "report": "_build_checks/operating-shoulder-standalone-partial-crank-9f0f9c1.json",
+      "report_sha256": "d80580a81803792de69adf23b14c304cdc34c8cb40b0cafb5bcba246bb396a2b",
+      "image_sha256": "fbbdb514ea8d45ac83deb4e1923cd3e40db4eab52d7c075b620b2c2a5c905c0f",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    },
+    {
+      "control": "one revolution",
+      "input": "crank_rotation",
+      "gesture": {
+        "point": [
+          842.025,
+          200
+        ],
+        "drag": null
+      },
+      "camera_drag": null,
+      "before_readout": "0.0000",
+      "final_readout": "360.0000",
+      "outcome": "completed",
+      "terminal_seconds": 177.4434602779802,
+      "capture_seconds": 191.07324956700904,
+      "report": "_build_checks/operating-shoulder-standalone-revolution-9f0f9c1.json",
+      "report_sha256": "87dc62417eeefd09cde59410cc70e462c6ba48b75b0d9ccb8f57576c17b6d33c",
+      "image_sha256": "83463859c636c14fb2d5ee9474f227c1ca000762e88187bcde2555867bd69af1",
+      "screenshot_inspected": true,
+      "process_exit_code": 0
+    }
+  ],
+  "prior_failed_marker_attempt": {
+    "report": "_build_checks/operating-shoulder-standalone-marker1-9f0f9c1.json",
+    "sha256": "43b173b8ab6d2b013b4982a298bb0c98c6484ff75a6de81c5fe90478d4824a1f",
+    "reason": "Point (711,768) hit marker 5, not requested marker 1; rejected before gesture"
+  }
+}

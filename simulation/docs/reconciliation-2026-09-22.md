@@ -1,5 +1,34 @@
 # Operating Curta reconciliation and completion
 
+## September 23: remaining viewer runtime cost
+
+A follow-up Sol investigation profiles the pinned shoulder export on viewer
+`a92541d`, with no WebGL and no source changes. The eight-stage oracle still
+matches all 214 coordinates and stop/replay outcomes. Five `dt=.1` normal
+crank ticks to 90 degrees take 5.009668 process-CPU seconds under V8 profiling;
+all 768 ordered Bound samples retain digest
+`6475ffee42fa40699960e20442859b09531be654bbead69adecc24dc52983943`.
+This is neither a default-timestep pointer measurement nor a paired speedup
+comparison with the earlier unprofiled timings.
+
+Only 42 of 768 Follow boundary preparations repeat identical measured tuples.
+Shape classification repeats more often, but its source-line-specific visitor
+family accounts for approximately 583/5,779 (10.1%) sampled stacks. An initial
+370-sample ceiling was rejected during independent review because optimized
+stacks omit some parent frames. The corrected union is independently recomputed
+from the raw profile. It is not a validated cache key or predicted speedup.
+No additional optimization cycle is justified by this measurement alone;
+the existing timestep, contacts, ordering and tolerances remain unchanged.
+
+Retained report:
+`_build_checks/operating-shoulder-viewer-runtime-profile-a92541d-2026-09-23.md`,
+SHA-256 `4fec9a4642141ff3df6adb0e5bce671a9faaad86727f99c56ba4349c29fc9fce`.
+It pins commands, source/assets, full-bank digests and temporary raw-profile
+hashes, explicitly labels terminal-reconstructed observations and preserves
+the attribution correction. It does not attribute browser/rendering latency
+or claim real-time operation. The current [standalone evidence](standalone-interaction-2026-09-22.md)
+is separately measured through actual part gestures.
+
 ## September 23: retained radial ball and latest integration
 
 The scoped [radial-ball adoption](radial-ball-operation-2026-09-23.md) is
