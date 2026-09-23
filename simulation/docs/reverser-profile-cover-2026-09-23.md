@@ -600,3 +600,47 @@ It is 7,488,148 bytes. The producer warns that the still-installed viewer
 main at that moment supports only versions 1–12; the artifact is retained
 for the separately verified version-13 viewer. No browser acceptance or
 production adoption is inferred from successful serialization.
+
+## Hosted replay and visible lever, before endpoint correction
+
+The independent viewer profile cycle is now on its local main at
+`b976a172a7964b269183eaee289c8cf26668cd58`, API 26, supporting documents
+1–13. With framework main `8d0fd156787f5136174fb752be78451ce172bce8`,
+`tools/reverser_operating_browser.py` exercises the complete exported trial
+at the viewer's default `dt=1/240`. It compares all 214 coordinates by
+IEEE-754 bits after each of nine explicit Python/browser requests.
+All nine banks and statuses agree exactly, including blocked retry,
+snapshot replay and reverse relief. No browser error is reported.
+
+The actual visible reversing-lever control also reaches a terminal
+wrong-order stop. A 100-pixel downward drag issues two admitted −1 mm
+requests followed by a blocked −.8480000000000061 mm request, landing at
+1.0594999999999941 mm. Pointer release is observed and the command queue
+is empty. Every other driver and every `.turn` coordinate retains its
+prepared bits. The inspected screenshot shows the complete hosted machine;
+this is interaction/placement evidence, not a view of its internal contact.
+
+The overall gate deliberately **fails**: the ninth request, withdrawing
+directly from −4.942499999999999 to the legal upper endpoint 3.9075 mm,
+incorrectly reports `blocked` and banks 3.9075000000000006. Both runtimes
+exhibit the same one-ulp overrun. A separate framework-only one-driver
+Prismatic fixture reproduces it with a literal range, without Curta or
+profile contact. Separate framework/viewer correction cycles are required;
+splitting the request or tolerating the wrong status is not acceptance.
+The diagnostic's ideal decimal shaft angle uses a 1e−9 absolute comparison
+(231.60000000000002 versus 231.6), but runtime-to-runtime comparisons of all
+state bits, material-contact tests and endpoint-status expectations are exact.
+
+Evidence retained, not overwritten:
+
+- `_build_checks/reverser-asymmetric-browser-da9808a-04.json`, SHA-256
+  `d0003c7930578f920e9106b86215cc4cc2a417aabb1bdb29736b0436dda2dd04`;
+- adjacent `.png`, SHA-256
+  `8e6e5a899c947f47c1f7558f978ceb409475c82e131175267075d35f5c82bc64`;
+- tested bundle SHA-256
+  `fedcfb260574337b00837652fd3c5d335442c7ff00eae2e0fcb1ac1e27877847`.
+
+That historical report retains `validation: pending` alongside its explicit
+assertion failure; it is not a pass. The tool now labels future exceptions
+`failed`. Earlier reports 01–03 also remain failed diagnostic evidence.
+Production geometry/wiring and completion checkboxes remain unchanged.
