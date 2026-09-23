@@ -419,6 +419,35 @@ midpoint, compiler and probe gate passes **23 tests**, including refusal to
 reuse a native drum even with an identical pose key. These tools still do not
 change the production law, controls, or umbrella completion state.
 
+### Protected-kernel trial is also rejected
+
+The isolated framework `preserve-native-boolean-inputs` candidate initially
+enabled OCCT's non-destructive mode. That passed the original crank-173°
+reused-drum sequence: 200 valid calls, unchanged checked input fingerprints,
+and the same ten contact brackets as the fresh-pose control. It was not yet
+integrated.
+
+A fresh four-worker run of all 59 midpoint rows against that candidate
+terminated with exit 1 at **crank 169°, shaft 150.7459411621095°, height −3,
+lift zero**. The ones/top-drum common was invalid. The two preceding complete
+rows (165° and 167°) remain in
+`_build_checks/reverser-phase-midpoints-native-protected-0cb681a.jsonl`, SHA-256
+`fe0f88ce5088a4fdecc5613a9e815eb92e5b7d8b67cc217930a286f1daf289a6`.
+The input is the 59-row world64 midpoint file above. The reader/refiner sources
+were unchanged from `0cb681a`; the candidate `machinome/exact.py` SHA-256 was
+`f0c08c5639fde15b24a37358d2b74792fd800611ed40299daef462d6067c7cd4`.
+The import path and protected-mode source were independently confirmed.
+
+Sol reproduced this new pose using independent fresh readers: both operands
+are valid, but the protected result is invalid while the original kernel
+mode returns a valid result. Both report two solids and the same positive
+4.241072983936974e−9 mm³ volume. Thus the non-destructive flag is **not an
+acceptable framework fix** by itself. Integration is held while the input-
+preservation implementation is revised. No invalid common is relabelled
+clear, and these two protected-mode rows are not a resume prefix for the
+replacement implementation. The complete native midpoint survey remains
+unfinished.
+
 ## Higher-counter independent surveys
 
 The five higher input prints each have a separate completed world64 survey:
@@ -445,6 +474,13 @@ wrong. The observed crank ranges are:
 These are independently measured files, not shifted copies. Their common
 row counts and 20° offsets do not establish identical tooth profiles or
 identical clear-window edges.
+
+In fact, after subtracting each station's 20° crank offset and adding the
+matching shaft offset, 52/12/19/39 of the 610 brackets at stations 3/4/5/6
+do not even overlap station 2's corresponding bracket. The largest endpoint
+differences are .000152588/.000061035/.000122070/.000091553 degrees,
+respectively. These small measured differences are retained, not rounded
+away or converted into a symmetry assumption.
 
 - `_build_checks/reverser-station2-world64-48d71c9.jsonl`, SHA-256
   `1b2ff9a95e73100680c074f469b410cc0bfa207ec8f2ffceecc78d4f6afba087`.
