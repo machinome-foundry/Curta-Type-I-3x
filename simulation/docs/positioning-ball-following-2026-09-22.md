@@ -114,3 +114,106 @@ Raw native face identities, bounds and axes are retained in
 The first extraction omitted assembly and failed; the `-built-` run correctly
 uses an assembled operating root. No source CAD or production motion changes
 were made for these measurements.
+
+## Measured radial limits: trial only
+
+Two independent instruments now measure the available interval along the
+stationary X-axis guide. They use a declared .05 mm normal seating gap:
+the distance gauge is R3.80, while the tested original ball remains R3.75.
+Twenty bisections locate a clear-side positional bracket; this is not a
+positive-volume tolerance and every final overlap check must equal zero.
+
+`tools/positioning_ball_envelope.py` measures 361 bell phases, 0–360 degrees
+inclusive at one-degree spacing, using native point-to-solid distance.
+Every final unchanged ball clears the bell and frame in native solids and
+the bell, frame and seated collar in world64 meshes. The required centre
+radius is 8.332135134696959 mm at rest and 11.841003148078919 mm on the
+outer cylindrical land. The complete run takes 90.022 s and leaves the
+production 213-coordinate bank unchanged. Its JSON-lines report is
+`_build_checks/positioning-ball-radial-envelope-a2d0783.jsonl`, SHA-256
+`d5cd67bd4163746466412458010656dc36dc07af4c2a16499e72b12cfc0ad5c9`.
+
+`tools/positioning_ball_collar_envelope.py` measures 25 collar lifts from
+0 to 6 mm at .25 mm spacing. The collar has no native source solid; its
+point-to-triangle distances and final collar/frame clearance are world64
+evidence only. Its permitted outer centre radius decreases from
+11.949090957641602 mm at rest to 8.402658462524414 mm at full lift.
+All 25 final ball placements clear both selected neighbours. The run takes
+18.708 s and preserves the production bank. Report
+`_build_checks/positioning-ball-collar-envelope-a2d0783.jsonl`, SHA-256
+`efe5b7b096b1504c21bc1d06043a6093480a31a60afe718556c71ee41d61f3fc`.
+
+The measured rest ball has slack between these surfaces. A trial therefore
+tests unilateral following: the advancing bell pushes it out, the advancing
+collar pushes it in, and neither retreating surface pulls the free ball.
+The two intervals nearly close with the carriage raised, giving an empirical
+candidate for a crank/carriage wrong-order restraint. This is kinematic
+contact, not a claim about forces, friction, preload or rolling.
+
+`positioning_ball_profiles.py` retains the measured asymmetric bell profile
+and collar profile; `RadialBallTrial` is not selected by the manifest.
+Dense between-knot clearance, actual retained-motion tests, incompatible
+motion and relief, all-rigid replay, browser parity and inspected poses
+remain adoption gates. Initial trial wiring errors (an out-of-scope read,
+then reads of plain calculation ports) are preserved as failed harness
+logs; they are not framework limitations or successful motion evidence.
+
+The independent between-knot instrument now passes 1,022 placements in
+176.750 s: bell ramps at .1-degree spacing, the cylindrical land at one
+degree, and collar lifts at .05 mm. Every selected native/world64 common
+is exactly zero and the operating bank remains unchanged. Report
+`_build_checks/positioning-ball-between-knots-a2d0783.jsonl` SHA-256:
+`a687ef6d59329584fc371ecad50380f2e1bf8c8a588b395df81b48663b90aa20`.
+These are copied placements, not a passed motion law or all-neighbour proof.
+
+The correctly scoped self-read trial fails both motion tests in 85.506 s.
+It pushes the ball out to 2.213142830078919 mm displacement but pulls it
+back to -1.2957251833030412 mm on bell retreat. With the carriage raised,
+the next crank request blocks at zero rather than traversing the measured
+remaining clearance. The log
+`_build_checks/radial-positioning-ball-root-constraints-a2d0783.log` has SHA-256
+`f224537f9d0d6c9ca8cb19cf6c3f3a687211697956aee34bf0f1ee819b2312b5`.
+This demonstrates that the authored switching law does not implement the
+intended unilateral follower. Framework and viewer review distinguishes the
+existing endpoint-difference law semantics from the needed retained contact
+behavior; no existing contract is silently reinterpreted.
+
+## Retained following implemented; ring contact remains an adoption blocker
+
+Framework main `f4c48f6` now supplies the separately specified `Follow` law.
+The unadopted radial trial uses the actual bell and collar joints as the two
+ordered envelope inputs and the ball's retained slide coordinate. Both desired
+root motion tests pass in 167.896 s: the retreating bell leaves the free ball
+at its previous outward displacement, and a raised carriage admits the
+remaining clearance before blocking the crank. Relief then permits motion.
+The corresponding log SHA-256 is
+`35e9b3d75f731ca19c26239923f0c4622fb3f0571771c7014ec0e546c60895d4`.
+This corrects the trial's motion semantics, not its complete geometry.
+
+A complete rigid-pair addition inventory (44 samples, 419.718 s) removes
+the bell/ball pair but adds a thrust-ring/ball pair. No other pair changes.
+Its maximum world64 volume is 1.5840910147693048 mm³. The independent native
+quarter-turn witness is 1.8489085924262987 mm³. The desired ring-clearance
+regression remains red in both kernels (40.215 s). Production `OperatingCurta`
+still has the original static ball and its 213-coordinate bank.
+
+The unchanged seated ring has inner/outer radii 12.3/16.35 mm, bottom/top
+planes at world Z33.05/34.55, and thickness 1.5 mm. Each annular plane has
+area 364.52684957765837 mm². At the outward witness the native common extends
+approximately X12.108..14.023, Y±2.165 and Z33.05..33.722. The inspected
+section shows the collision at the bottom inner lip, distinct from the
+outer collar ledge and top spring seat. A local underside passage may be
+possible, but its exact protected-seat and complete-travel proofs are not
+yet supplied. No ring fit, smaller ball, altered seat height or hidden
+neighbour is adopted by this finding.
+
+Artifacts under `_build_checks/` (SHA-256):
+
+- `follow-ball-trial-addition-contacts-f4c48f6.jsonl`:
+  `2861e3a1d3691eb6db80b9aeb23f887b02d39c4744fa8cd7569df3be53416200`.
+- Native ring measurement report:
+  `05e69db1a3568c00ea677e17b371fa5877a34b3ff8cf5b4e7829184d0f6c136c`.
+- Inspected `follow-ball-thrust-ring-section-4cd6ec4.png`:
+  `97f1aa80f6bad1ff6f6980c0df71884cb7f5e820955147224b58260cc9485647`.
+- Desired ring-clearance red log:
+  `f1428ff41dcef1630b2241083a043fc03dcca1dd856cc2284e754f7034dd5a89`.
