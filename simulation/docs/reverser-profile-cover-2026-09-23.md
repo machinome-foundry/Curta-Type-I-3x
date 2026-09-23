@@ -684,3 +684,50 @@ cycle advanced that checkout to `1a34b3c`. It retained those imported modules;
 the run is not relabelled as a post-integration test of the scalar change or
 of the still-unfinished endpoint correction. These observations are the
 terminal test summary, not a separately captured raw log file.
+
+## Endpoint candidate: first complete hosted pass
+
+At project `ffafa3f`, fresh unchanged **production** tests still fail red:
+wrong-order reversal has native/world64 commons .02353507611251452 /
+.023458419217706056 mm³ and reports `completed` instead of `blocked`;
+the reversed-counter passage retains .0019561049905521813 /
+.0007915004132666966 mm³. Two tests produce five failing assertions in
+47.027 s, exit 1. Log `_build_checks/reverser-production-red-ffafa3f-a9f10b8.log`,
+SHA-256 `d91716a5e0be8930cccad45d13cd978eaceedc1e94d3ea722879dc9d6d9dd073`.
+They run against the isolated combined framework head `a9f10b8`, now also
+integrated on clean local main. Both earlier CI commits `a87abc5` and
+`e05d9c5` remain its ancestors. No push or other worktree cleanup follows.
+
+The separate endpoint candidates now pass the hosted trial gate, including
+all nine requests, exact equality of every Python/browser bank coordinate,
+strict stopped/replay and prepared/relieved Python snapshots, and an actual
+100-pixel downward drag of the visible lever. The pointer admits −1, −1 and
+then −.8480000000000061 mm, reports completed/completed/blocked, stops at
+1.0594999999999941 mm, observes release and leaves no queued command. Other
+drivers and all `.turn` values retain their prepared bits. Reverse-first
+now lands at exact −4.9425; the ninth withdrawal completes at exact 3.9075.
+There are no page errors, the report says `passed`, and process exit 0 is
+observed. The screenshot is inspected: complete front/side assembly and
+hosted control panel, not an internal-contact certificate.
+
+This is explicitly an **intermediate candidate**, not final package acceptance:
+framework planning head `4fcb770`, with `run.py` SHA-256
+`be7b82702520d6fdfaf4b61b56d5ea133abfc0abd6ab9a5f99c6cdacc6f45801`
+and `trajectory.py`
+`32004c0f9a76a10d43481473ffbe44a1378eb6444cc29f57ebc975904fcf00ce`;
+viewer planning head `b6fafbf`, bundle
+`f0862fd5ab438764b06fdc47426a44cc7828fd130dbf2e70d6577fa654b83d67`.
+Later snapshot/periodic-law edge-case corrections require fresh final evidence.
+The frozen asymmetric export above is unchanged.
+
+- `_build_checks/reverser-asymmetric-browser-ffafa3f-05.json`, SHA-256
+  `a01dd2374990b641b24fafb239269f1c410ef4397b621190b8d88d61e1d47afa`;
+- adjacent `.png`, SHA-256
+  `71aed3d5e7182aa9d824ec5f74483a82d2765f4d47e3b30bf342db730a18d97b`.
+
+The five compiled-trial geometry/motion tests also pass against that frozen
+Python candidate in 192.218 s, exit 0. Log
+`_build_checks/reverser-compiled-endpoint-ffafa3f-05.log`, SHA-256
+`c0d6fa80e35bd667105bef958e255eae950e34b4595ce274582469c8dd9eaf0c`.
+Production remains unchanged pending final paired endpoint integration and
+adoption; no whole-machine task checkbox changes.
