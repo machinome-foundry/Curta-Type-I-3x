@@ -24,8 +24,8 @@ tangencies, model friction/forces, change detents, or certify fabrication.
    pre-fit reference and an all-five-station candidate fixture. Do not alter
    production while current retained/browser checks are running.
 2. Bound the maximum allowed removal in the counter's normalized rest frame
-   to X=60.25..61.80, Y=-7.95..-6.35, Z=-12.95..-12.55 mm. The trial cut uses
-   X>=60.30 within this box, leaving the running stem at X<=60.225 untouched.
+   to X=60.25..61.80, Y=-7.95..-6.35, Z=-12.95..-12.55 mm. The refined trial cut uses
+   X>=60.275 within this box, leaving the running stem at X<=60.225 untouched.
    It raises only the underside by .35 mm (.30 interference plus .05 gap).
    Before cutting, establish that the maximum region preserves one connected
    solid and the guide faces, detent curves, reset sole, fork and pin tip.
@@ -65,5 +65,19 @@ negative fixtures. Revert the substitution if any required interface fails.
 
 ## Open Questions
 
-The maximum region has not yet passed protected-interface checks. That is an
-implementation gate, not a claim that the proposed material removal is proven.
+The maximum region passes all four protected-interface checks before the cutter
+is implemented. The first X>=60.30 candidate passes native endpoint and
+continuous-enclosure checks, but its published mesh retains a positive sliver
+where its lower cut edge meets the unchanged X=60.30 verification window.
+The direct float64 tessellation comparison reduces but does not eliminate every
+remnant, so a framework precision change is not a proven solution.
+
+Refine only the cut's lower X bound to 60.275: this leaves .05 mm from the
+protected running stem and .10 mm radial clearance from the independently
+measured ledge at X=60.375. It removes .025 mm more of the nonworking shoulder
+strip, entirely within the original preservation-tested allowance. Keep the
+verification window and strict-zero tests unchanged. This is a material fit,
+not a tolerance or a waiver of the separate full-guide residual. The original
+failed candidate and source red remain recorded. Routine trial refinement is
+covered by the pilot's explicit autonomous authority; no interface or scope
+change is proposed. Rejection still follows if the refined candidate fails.
