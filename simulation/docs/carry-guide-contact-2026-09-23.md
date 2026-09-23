@@ -93,3 +93,56 @@ Before proposing a fit, independently bound the changed material and prove
 which surfaces retain guidance, mounting and the full source stroke. Preserve
 the existing spring fold/detents, reset shoe, pin head, moving laws and already
 proved frame passages. No fit choice is made by this diagnostic.
+
+## Recheck after the production reverser adoption
+
+On project `8668330` and framework `1b136de`, the existing contact probe was
+run with its fixture class explicitly replaced in memory by
+`CounterShoulderTrial`. This carries the adopted counter-shoulder correction;
+the probe's source, original guide, remaining slider profile and operating
+laws were not edited. The same first-result/first-counter poses at drops
+0, 2.1 and 4.2 mm completed in 10.701 seconds with no native refusal.
+All six native commons were zero. All six world64 commons remained positive,
+between 5.5360801974139605e-6 and 7.756784954242796e-6 mm³. None is waived.
+
+The transverse Z=-20 mm image was inspected and is byte-identical to the
+earlier transverse section: the shoulder correction lies outside that section.
+The nominal back guide plane is Y=-7.89 mm on both parts; the left guide plane
+is X=54.225 mm on both. Native floating coordinates differ in their last bits.
+This identifies a zero-clearance representation question, not a proven large
+misassembly or permission to remove a retaining surface. A separate read-only
+framework investigation is checking native-to-mesh precision before selecting
+any part fitting. No new fit, tolerance waiver or clearance claim is adopted.
+
+Evidence in the adoption worktree's `_build_checks/`:
+
+- `current-carry-guide-profile-8668330-01.log`:
+  `da4b38069f171556b918ca24d003272841e1abe4d50dd38abad839bb68cba495`.
+- `current-carry-guide-profile-8668330-01.png`:
+  `5189f4cdeccac8af83e7f395f56cb9a8fc4edaaedd8397328229607dc9ab4bc4`.
+
+The Sol framework investigation found a concrete encoding contribution. The
+guide's two native local-Z contact faces are at 3.9 mm, with areas 29.52 and
+31.365 mm². Their 56 corresponding binary-STL vertices are at
+3.9000000953674316 mm. That 9.53674317e-8 mm outward shift over the combined
+area predicts about 5.81e-6 mm³, the observed overlap's scale. The opposing
+result-slider plane is local Z=0 and is not shifted by this encoding. The
+counter guide has the same rounding; its slider's +/- .735 mm planes also
+round to +/- .7350000143 mm. These measurements explain a representation
+contribution, not every last bit of the placed Boolean result.
+
+The inspected installed path is native BREP to OCCT STL export, followed by a
+Trimesh binary-STL rewrite, then cached STL decoding and float64 world placement.
+Both binary STL stages store float32 coordinates; returning a float64 array
+later cannot recover them. Direct native tessellation retains the 3.9 mm plane.
+The public linear/angular deflection settings affect tessellation, not that
+encoding. An ASCII export diagnostic changed rounding/bytes but did not prove
+six-pose published-mesh clearance; it is not an accepted remedy.
+
+No proven bounded framework fix was proposed, and no speculative cycle or
+volume exemption was opened. The published mesh commons remain positive. A
+future project-owned explicit clearance fit must preserve the guiding and
+spring interfaces and pass both native and actual exported-mesh contracts;
+it cannot be replaced by a claim that finer tessellation or world64 already
+resolved the contact. This representation finding does not block the narrower
+retained-control migration now accepted in tasks 6.2/6.3.

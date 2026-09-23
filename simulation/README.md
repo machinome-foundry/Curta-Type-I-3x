@@ -1,4 +1,4 @@
-# Curta simulation — implementation resumed
+# Curta simulation — operating model, acceptance in progress
 
 The latest [operating reverser adoption](docs/reverser-operating-adoption-2026-09-23.md)
 adds the measured inner-flank fit and phase-dependent lever restraint to the
@@ -8,6 +8,45 @@ standalone tests show the actual lever stopping on a wrong-order request;
 hosted Python/browser banks agree bit-for-bit. This is a scoped operating fix,
 not whole-machine completion: clearing-loop clipping and the remaining geometry
 findings are still open.
+
+## Operate the current model
+
+The project selects `operating_curta` by default. With the workspace venv
+active, export it from this project's root and serve the export directory:
+
+```sh
+machinome export operating_curta -o _build_operating
+python -m http.server 8766 --bind 127.0.0.1 --directory _build_operating
+```
+
+Open `http://127.0.0.1:8766/`. Use the controls on the actual visible parts:
+eight selector knobs, the crank's turn/lift controls, reversing lever,
+carriage lift/shift, clearing ring and ten independent decimal markers.
+The crank also has a one-revolution button. Registers retain mechanical state;
+the page has no starting-register setters or automatic preparation sequence.
+Changing a selector does not itself turn the crank.
+
+Prepare each action explicitly: park the crank before changing modes; use
+crank lift 0 mm for addition or 9 mm for subtraction; lift the carriage before
+shifting and seat it at a detent before cranking. The reversing lever's working
+heights are +3.9075 mm (normal) and −4.9425 mm (reversed). Partial settings and
+wrong-order requests are not automatically corrected: a restraint can stop
+motion, and the user must relieve it. Clearing-ring motion exists, but the
+printed loop's deploy/stow clipping path is **not implemented**.
+
+The locally integrated framework/viewer corrections are required. The installed
+viewer bundle is verified against the production export; reload/re-export older
+pages to pick it up. Execution is still slower than real time. The
+[latest acceptance record](docs/reverser-operating-adoption-2026-09-23.md)
+distinguishes tested arithmetic, replay and actual-pointer behavior from the
+unfinished full interaction matrix and whole-machine geometry. OpenSpec progress
+is 14/23 tasks; the umbrella change remains active.
+
+## Dated implementation history
+
+The checkpoints below retain their original test scope and timing. References
+to work then pending are historical unless the latest acceptance record above
+also lists it as open. They are not a substitute for final whole-machine proof.
 
 The earlier [frame and selector investigation](docs/open-run-handoff-2026-09-13.md)
 and [clocked research](docs/clocked-spike-2026-09-16.md) are now retained on
@@ -47,7 +86,7 @@ pass per kernel, including two crank modes and retained pin capture; the paired
 world64 rest inventory drops from 259 to 258 positive pairs, adding none.
 Latest: [the carry-timing fix is integrated locally](docs/source-timing-integration-2026-09-22.md)
 in framework and viewer; all four unchanged carry-graph regressions pass.
-The operating model remains unfinished, with 12/23 OpenSpec tasks complete.
+The operating model remains unfinished, with 14/23 OpenSpec tasks complete.
 The [positioning-ball investigation](docs/positioning-ball-following-2026-09-22.md)
 finds a missing moving interface but rejects a simple orbit: it clears the bell
 and penetrates the stationary frame. That candidate is not adopted.
@@ -155,7 +194,8 @@ The unchanged detent-bearing shaft body is mounted 1.9 mm higher with a bounded
 shortened fastening profile; upstream CAD is untouched. Scoped bank, follower,
 housing, retained-history and all 24 shifted-operation cases pass. Actual
 installed motion passes both kernels and hosted down/up gestures pass.
-Complete standalone/pointer and mid-cycle-restraint acceptance remain open. The
+The later production reverser adoption closes the named mid-cycle restraint
+and hosted/standalone lever cases; full interaction acceptance remains open. The
 [author-review register](docs/author-review.md) consolidates existing simulation
 fits, assembly corrections, rejected hypotheses and unresolved findings.
 
@@ -210,8 +250,9 @@ records the initial running implementation and its then-open prerequisites. The
 independent marker inputs and measured neighbour stops. Its ratchet failures
 have since been corrected and verified across all 117 teeth for two revolutions;
 the marker-track tessellation discrepancy is now corrected by finer housing
-meshing, without changing its native solid or marker seating. Counter-reversal acceptance, interlocks,
-clearing-loop deployment and final whole-machine acceptance are still incomplete. The
+meshing, without changing its native solid or marker seating. The latest
+production gates now cover the named counter-reversal and interlock cases;
+clearing-loop deployment and final whole-machine acceptance remain incomplete. The
 [earlier prerequisite checkpoint](docs/direct-operation-running-checkpoint-2026-09-15.md)
 preserves the original carry-association refusal.
 
@@ -269,7 +310,7 @@ latest native selector suite is **4 passing / 19 expected red**; the new
 are not wired into `Curta`. See the
 [implementation evidence](docs/selector-fit-implementation-2026-09-13.md).
 
-## Run
+## Build and verify
 
 From this project's root, with the workspace venv active:
 
@@ -321,7 +362,8 @@ machinome export fast_curta -o _build_export
 python -m http.server 8766 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8766/simulation/viewer/`. Set the eight input sliders or
+Open `http://127.0.0.1:8766/simulation/viewer/`. These historical instructions
+apply only to that page, not the operating page above. Set the eight input sliders or
 type an exact input, then turn the crank. Completed turns become the next starting
 registers; repeated turns and decimal shifting support multiplication. “See
 inside” hides the enclosure, frame and carriage covers/supports. The assembly

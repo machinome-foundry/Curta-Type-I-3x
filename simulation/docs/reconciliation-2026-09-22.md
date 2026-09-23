@@ -1,5 +1,25 @@
 # Operating Curta reconciliation and completion
 
+## Latest checkpoint: production restraint and optimized viewer
+
+The [production reverser adoption](reverser-operating-adoption-2026-09-23.md)
+at project `8668330` resolves the mid-cycle failure described in the dated
+section below. The retained-operation migration tasks 6.2/6.3 now pass their
+named production gates; overall progress is 14/23 tasks, not completion.
+Framework law-refusal runtime `1b136de` and viewer `2274dd2` are integrated
+locally, preserving concurrent main histories. The viewer's rebuilt installed
+bundle exactly matches the final hosted/standalone-tested asset. The adoption
+record pins the package gates, full-bank parity, actual blocked part gestures
+and performance limits.
+
+A fresh ancestry check finds no unmerged project or viewer branch. The two
+older Curta framework tips remain patch-equivalent/superseded as audited below;
+the four unrelated framework branches remain outside scope. No user files,
+other agents' worktrees or branches were removed. Nothing was pushed or
+published. The unresolved printed-loop clipping path needs a mounting decision;
+the source geometry is preserved while that decision is outstanding. Remaining
+whole-machine contacts and final interaction coverage stay explicit.
+
 ## September 23: confirmed mid-cycle reverser gap
 
 The current all-25 standalone control gate does not imply mechanical

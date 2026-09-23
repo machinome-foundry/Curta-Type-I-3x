@@ -1,11 +1,13 @@
 # Operating reverser adoption
 
-Status: scoped production acceptance passed in an isolated project worktree;
-ready for local integration. Overall operating-machine completion remains open.
+Status: scoped production acceptance passed; implementation `8668330` is
+integrated into local project main. Overall operating-machine completion remains
+open. The user's video and inspection image are untouched; nothing was pushed.
 
 This continues `simulate-the-curta` tasks 6.2–6.5 under the pilot's instruction
-to finish the operating model. It does not close those tasks, the clearing-loop
-requirement or whole-machine geometry acceptance.
+to finish the operating model. The follow-up retained-operation audit closes
+tasks 6.2 and 6.3 for their named contracts; it does not close the clearing-loop
+requirement, tasks 6.4–6.6 or whole-machine geometry acceptance.
 
 ## Evidence and dependency gates
 
@@ -223,6 +225,86 @@ The production geometry/contact, arithmetic, four-mode stroke, interlock,
 marker, exported-bank and actual hosted/standalone reverser gates above are
 accepted for this focused adoption. They do not close the printed clearing-loop
 path, remaining rest contacts, every-node geometric regression or the entire
-OpenSpec change. The separately owned viewer performance candidate still owes
-its final integrated package/browser validation; its timings are not claimed
-by these endpoint-bundle runs.
+OpenSpec change. The separately owned viewer performance validation is recorded
+below; its timings are not claimed by these earlier endpoint-bundle runs.
+
+## Retained-operation task audit
+
+On production `8668330` with framework `1b136de`, the complete-machine ratchet
+partial-turn/reverse/retry/snapshot-replay contract passes. Removing only the
+pawl restraint in the independent full-root negative fixture fails that same
+stop assertion as expected. Both existing crank-lift limits also pass (four
+tests, 49.929 s, exit 0). This fresh gate supplements the historical all-tooth
+geometry/capture evidence; it is not a new all-tooth sweep.
+Log `_build_checks/reverser-production-ratchet-lift-01.log` SHA-256:
+`6393e2a0bfe49be8b3fae6ad821b69c7ee5a068ec06d2a894e2dc7551cc9747c`.
+
+Together with the six production arithmetic tests, nine carriage/clearing
+interlock tests, five reverser contact/path checks and four prepared crank
+modes above, this completes the named tests and retained-input migration in
+tasks 6.2 and 6.3. Earlier genuine red/mutation evidence remains in the
+[operating completion](operating-curta-completion-2026-09-19.md),
+[carriage interlock](carriage-interlocks-2026-09-19.md) and
+[reverser regression](reverser-wrong-order-2026-09-23.md) records.
+The production model uses run-owned state and physical requests, not the
+separate clocked calculator, direct register setters or automatic preparation.
+Overall progress is now 14/23 tasks; the source clearing-loop clipping path,
+full final interaction matrix and remaining whole-machine findings are not
+waived or archived by that narrower closure.
+
+## Final optimized-viewer consumer check
+
+The independently owned `reuse-constant-block-motion` viewer change retains
+one successful scalar description per eligible constant cyclic block in a Run.
+It preserves complete source paths, exact finite keys, event history, restore
+boundaries and failure behavior; moving, stateful and terminal-landing paths
+stay on the original evaluator. It does not change project laws or timestep.
+
+The paired no-WebGL production replay preserves all 214 bank coordinates plus
+ordered crossing/stop records, status, admission, tick and clock at rest,
+preparation, three gestures, restore/replay and a nonconstant-crank control.
+On CPU 12, the three lever stages measured 3.626/3.371/3.202 CPU seconds on the
+base versus 2.111/2.027/1.662 on the candidate; replay measured 3.173 versus
+1.812. Nonconstant preparation and normal crank did not improve reliably.
+These are measured runtime costs, not browser frame rates or a real-time claim.
+
+The candidate hosted gate on production `8668330` passed all nine requests with
+exact Python/browser banks and the real blocked pointer. Root independently
+read its report and inspected its screenshot. The oracle used framework
+runtime `1b136de` (then-primary documentation head `a3529d7`); the accepted
+viewer bundle SHA-256 is
+`0e73249a4047844a6d3b95df8e3b0898014fb3dc8097fab0db5e63ad8c86c77d`.
+The viewer cycle preserves its full gate and reproduction records.
+
+- Hosted JSON SHA-256: `fab9f42eecbb8dd34a07f2eaa509d0986cc0a32f90f24700dfc4a62871d0274e`.
+- Hosted PNG SHA-256: `ceb5a82370976b635c33249f457bd946dc60183f5418ff1d09e40e1dfe040978`.
+
+Root then exported the actual production model again using stable framework
+`1b136de` and that frozen viewer bundle. The new
+`_build_checks/reverser-production-final-v13` retains exactly the prior
+manifest/identity and unmodified index hashes above; only the embedded bundle
+changes. Export completed with exit 0; log SHA-256
+`1210883d4b511672fc15f7dd0e47947307a6ddc18dab516b0360ee168a57bf67`.
+
+Fresh standalone report `reverser-production-final-standalone-03.json` also
+completed with exit 0 and `validation: passed`. Through only the ordinary
+visible UI and actual part pointer, preparation reaches crank 90 degrees and
+the lever drag stops at visible 1.0595 mm with `blocked after -0.848 mm`.
+Every other input readout is unchanged, pointer-up is observed, and there are
+no page errors. Root inspected the fresh assembled-model screenshot. This
+latest-bundle check is distinct from the older endpoint-bundle acceptance.
+
+- JSON SHA-256: `18702c7f9ade10033f8b8b752c3065f06e228576e858cd047f2d00d7dfa62e17`.
+- PNG SHA-256: `953922628d04e468eee14d435a069a5976d47aee9eab98745310656636ce2f85`.
+- Log SHA-256: `6f002f0707ccb16929eddca2536205c328fc7780c15288ad6e57d30d2f76217e`.
+
+The viewer cycle is archived and integrated locally at
+`2274dd2afa4b6d75793d304da922b5944a8fcbe5`, preserving main's intervening
+endpoint, law and documentation commits. Its final package gates pass 1,575
+widget tests (two skipped), 198 Python tests with 22 subtests, typecheck, build
+and all 19 strict OpenSpec validations. Root fast-forwarded clean viewer main
+and ran its normal bundle build there. The installed asset's SHA-256 is exactly
+the accepted `0e73249a…` hash above, and `machinome viewer` resolves that asset
+with API 26/document versions 1–13. The primary source checkout remains clean.
+This refresh changes what new launches/exports load; it does not reload an
+already-open browser. Nothing was pushed or published.

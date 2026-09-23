@@ -6,8 +6,11 @@ recorded below. Five production contact/path checks, six arithmetic tests,
 four complete crank modes and fourteen interlock/marker tests pass. Fresh
 hosted and unmodified standalone actual-part gestures stop as expected; the
 hosted banks match Python exactly across all 214 coordinates in nine cases.
-No checkbox changes: clearing-loop clipping, remaining whole-machine contacts
-and full final-regression obligations are separate and remain open.
+The subsequent actual-root ratchet retry/replay and negative control plus crank
+lift-limit gate passes (four tests). Tasks 6.2 and 6.3 are complete for their
+named retained-operation contracts. Clearing-loop clipping, remaining
+whole-machine contacts and full final-regression obligations are separate and
+remain open; tasks 6.4–6.6 and the umbrella change are not complete.
 
 September 23: the [mid-cycle reverser regression](../../../simulation/docs/reverser-wrong-order-2026-09-23.md)
 confirms a missing project restraint on the actual retained root. At crank
@@ -534,8 +537,8 @@ their tasks open. These results are checkpoints, not final delivery evidence.
 ## 6. Direct mechanical operation
 
 - [x] 6.1 Verify the ratified framework/viewer prerequisites are available as a tested content pair before relying on Slide or selected-joint controls. Framework b9b64dd and viewer 2912006 (API 21, bundle SHA-256 a5a5542762c3326aa53fa68875f7d3da698ae0253681366ba325528446afa614) load the actual version-7 operating build with all 24 controls. Real pointer drags use the distinct selected crank-lift target and the first selector; retained readback proves lift without crank turn and independent selector/shaft motion. Public run reset is test setup between cases. Full standalone/hosted interaction and wrong-order coverage remain task 6.5.
-- [ ] 6.2 Write red run tests for independent selector changes, retained arithmetic across operand/mode changes, partial crank travel, direction reversal attempts, carriage interlocks and repeatable snapshot/replay.
-- [ ] 6.3 Migrate the mechanism to Time.running with run-owned state and independent physical inputs; make those tests green without a page-local calculator, direct register setters or automatic operation preparation.
+- [x] 6.2 Write red run tests for independent selector changes, retained arithmetic across operand/mode changes, partial crank travel, direction reversal attempts, carriage interlocks and repeatable snapshot/replay. The historical red/mutation records and current production regressions are consolidated in simulation/docs/reverser-operating-adoption-2026-09-23.md; the actual-root unrestrained-ratchet negative control still fails the same stop contract.
+- [x] 6.3 Migrate the mechanism to Time.running with run-owned state and independent physical inputs; make those tests green without a page-local calculator, direct register setters or automatic operation preparation. Production 8668330 passes six arithmetic/partial-motion/replay checks, nine carriage/clearing interlock checks, the actual-root ratchet retry/replay contract and its negative control, and two crank-lift limits. Five reverser contact/path checks and all four prepared crank modes also pass. This closes the named migration contracts, not loop deployment, every control-action permutation or whole-machine geometry acceptance.
 - [ ] 6.4 Add and prove the reversing lever, selective bidirectional clearing, clearing-loop deployment and each decimal marker's independent movement and mechanical limits; preserve source provenance and existing geometric evidence.
 - [ ] 6.5 Bind every input to its actual visible part; test real pointer interactions in standalone and ordinary hosted viewers, including wrong-order attempts and partial motion, and inspect rest/moving/interlock snapshots.
 - [ ] 6.6 Replace obsolete calculator-page instructions and demos, update the simulation README and acceptance evidence, and report remaining whole-machine geometric gaps separately from the control migration.
