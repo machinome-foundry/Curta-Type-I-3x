@@ -11,6 +11,7 @@ from simulation.standard.layers import AntiReversal as SourceAntiReversal
 from simulation.standard.layers import LowerBearingPlate
 from simulation.fit import FittedPawl, FittedBearingPlate, PAWL_PIVOT, PAWL_SPRING_ANCHOR
 from simulation.pawl_spring import MountedPawlSpring
+from simulation.reverse_nose_parts import SeatedReverseNosePlate
 
 PIVOT = PAWL_PIVOT
 TOOTH_PITCH = 357 / 116
@@ -46,6 +47,7 @@ class AntiReversal(SourceAntiReversal):
 
 class PawlBearingPlate(LowerBearingPlate):
     bearing_plate = FittedBearingPlate()
+    reverse_nose_plate = SeatedReverseNosePlate()
 
 
 class PawlBench(AssemblyNode):

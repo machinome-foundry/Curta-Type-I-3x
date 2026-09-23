@@ -206,6 +206,18 @@ are byte-identical to the independent trial. Six production parts/fixture/law
 tests pass. Further final acceptance gates are recorded separately; there is
 no upstream asset change, whole-machine clearance claim or manufacturing advice.
 
+## Reverse-nose plate lower drum seat — F26
+
+The [bounded seat fit](reverse-nose-seat-2026-09-23.md) relieves only .05 mm
+from the lower face inside the drum's R9 swept land plus .05 mm radial gap.
+The original upper axial stop, outline, screw mounting and all placements
+remain unchanged. Native and world64 clearance/capture and material-preservation
+checks pass, with exact unchanged bank and all other rigid meshes at rest
+and after a half-turn. Paired 44-sample addition replays remove only this
+moving contact, adding no pair or changing any other spatial overlap.
+Five production checks pass. This is a simulation fit, not manufacturing
+advice or a whole-machine clearance claim; upstream assets stay unchanged.
+
 ## Counter lockout trial — historical T08 checkpoint
 
 The [counter investigation](counter-lockout-investigation-2026-09-21.md)

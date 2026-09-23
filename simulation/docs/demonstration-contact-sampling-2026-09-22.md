@@ -45,4 +45,12 @@ larger ball/frame collision. Its isolated bell-clearance checks were not enough.
 Production remains unchanged while radial following is measured. The small
 reverse-nose/drum common is independently native-clear at eight phases but
 positive in world64 STL geometry, with a 0.000001525879 mm face crossing at
-world Z -119.85; that representation finding remains unwaived.
+world Z -119.85; that representation finding is not waived.
+
+The later [reverse-nose seat fit](reverse-nose-seat-2026-09-23.md) resolves
+that pair with a bounded .05 mm lower-face gap. Paired 44-sample additions
+on the same framework remove only its 38 moving contacts; no other spatial
+pair or volume changes. Both runs also reproduce a separate tiny crank/handle
+contact at two poses, so it is not caused by the fit. That contact and the
+missing ball-following motion remain open; this is not a passed demonstration
+clearance gate.

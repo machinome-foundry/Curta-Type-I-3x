@@ -1,5 +1,10 @@
 ## Current checkpoint — resumed 2026-09-22
 
+September 23: the [reverse-nose drum-seat fit](../../../simulation/docs/reverse-nose-seat-2026-09-23.md)
+passes five production checks and paired 44-sample addition surveys: only its
+moving overlap is removed. The ball-following investigation and remaining
+whole-machine/control obligations remain open; no checkbox changes.
+
 Latest production continuation: the [higher-counter bank](../../../simulation/docs/counter-bank-adoption-2026-09-22.md)
 is adopted at all five remaining stations. Five actual withdrawal tests, six
 parts/fixture/law tests and the nine-test arithmetic/previous-lockout batch pass.
