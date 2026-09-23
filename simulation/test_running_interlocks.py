@@ -11,8 +11,10 @@ SHIFT = 'carriage.registers.turn'
 
 
 class RunningCarriageIndexTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_every_working_slot_stops_in_both_directions_and_retains_the_stop(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         for slot in range(0, 101, 20):
             for direction in (-1, 1):
                 if not 0 <= slot + direction * 10 <= 100:
@@ -31,7 +33,7 @@ class RunningCarriageIndexTest(unittest.TestCase):
                 self.assertEqual(sim.state[SHIFT], stopped)
 
     def test_clearing_and_indexing_stops_both_need_their_own_release(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('carriage_elevation', to=6)
         sim.move('carriage_rotation', to=.5)
         sim.move('clearing_rotation', to=90)
@@ -47,7 +49,7 @@ class RunningCarriageIndexTest(unittest.TestCase):
         self.assertEqual(sim.state[LIFT], 0)
 
     def test_seated_shift_stops_at_the_indexing_key_without_lifting(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         command = sim.move('carriage_rotation', to=10, duration=.2)
         sim.run(.2)
         self.assertEqual(command.status, 'blocked')
@@ -61,7 +63,7 @@ class RunningCarriageIndexTest(unittest.TestCase):
             self.assertAlmostEqual(sim.state[SHIFT], stopped)
 
     def test_between_position_seating_stops_without_completing_the_shift(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('carriage_elevation', to=6)
         sim.move('carriage_rotation', to=10)
         command = sim.move('carriage_elevation', to=0, duration=.2)
@@ -77,7 +79,7 @@ class RunningCarriageIndexTest(unittest.TestCase):
         self.assertAlmostEqual(sim.state[SHIFT], 20)
 
     def test_partial_lift_does_not_clear_the_keys_and_full_lift_does(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('carriage_elevation', to=3)
         sim.move('carriage_rotation', to=10, duration=.2)
         sim.run(.2)
@@ -102,8 +104,10 @@ class RunningCarriageIndexTest(unittest.TestCase):
 
 
 class RunningClearingInterlockTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_each_ring_rest_blocks_both_directions_without_auto_lift(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         for rest in (0, 230, 360):
             for direction in (-1, 1):
                 sim.move('carriage_elevation', to=6)
@@ -120,7 +124,7 @@ class RunningClearingInterlockTest(unittest.TestCase):
                 self.assertLessEqual(sim.state[PIN], 3.090001)
 
     def test_partial_clearing_blocks_seating_without_finishing_the_sweep(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('carriage_elevation', to=6)
         sim.move('clearing_rotation', to=90)
         command = sim.move('carriage_elevation', to=0, duration=.2)
@@ -141,7 +145,7 @@ class RunningClearingInterlockTest(unittest.TestCase):
         self.assertAlmostEqual(sim.state[LIFT], 0)
 
     def test_seated_ring_request_uses_real_play_without_lifting_the_carriage(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         command = sim.move('clearing_rotation', to=90, duration=.2)
         sim.run(.2)
         self.assertEqual(command.status, 'blocked')
@@ -158,7 +162,7 @@ class RunningClearingInterlockTest(unittest.TestCase):
         self.assertEqual(register_reading(sim, True), 0)
 
     def test_partial_lift_opens_only_its_actual_clearance_and_replays(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('carriage_elevation', to=2)
         sim.move('clearing_rotation', to=90, duration=.2)
         sim.run(.2)

@@ -1,6 +1,6 @@
 """Independent noncrank pointer gates on an ordinary public hosted viewer.
 
-This is not standalone-page coverage, loop coverage, or a geometry certificate.
+This is not standalone-page coverage or a geometry certificate.
 No motion is requested through the host API: reset is separate case setup.
 The normal viewer timestep is preserved. Reports include terminal outcomes and
 the pending-command bank rather than accepting a mid-gesture readback.
@@ -22,7 +22,8 @@ INPUTS = {**{f'digit_{n}': f'set digit {n}' for n in range(1, 9)},
           **{f'marker_{n}_rotation': f'move decimal marker {n}' for n in range(1, 11)},
           'crank_elevation': 'lift crank', 'reverser_height': 'reverse counter',
           'carriage_elevation': 'lift carriage', 'carriage_rotation': 'shift carriage',
-          'clearing_rotation': 'clear registers'}
+          'clearing_rotation': 'clear registers',
+          'loop_deployment': 'deploy loop (simulation-only mounting)'}
 
 
 def validate_attempt(case):

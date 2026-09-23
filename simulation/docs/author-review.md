@@ -409,3 +409,20 @@ The [insertion-only trial](reverser-insertion-trial-2026-09-20.md) rejected
 simply pushing the unchanged shaft farther through its original shoulder.
 The earlier 9 mm/.37 mm isolated-pinion trial is **not an adopted full-bank
 fix**. These rejected hypotheses are retained to prevent circular debugging.
+
+## Explicit simulation-only clearing-loop replacement
+
+On September 23 the pilot authorized a new mounting instead of inferring the
+source elastic clip motion. The [replacement record](clearing-loop-replacement-2026-09-23.md)
+maps the same three source occurrences to a captive loop, headed stop pivot
+and flush plug. The first clip neighbourhood gains a closed bearing and
+bounded stop recess; the finger loop and source assets stay unchanged. The
+lower stems are offset to the existing cover-hole datums, and a .01 mm
+mounting seat clears the published shoulder/cover interface. The independent
+control is explicitly labeled simulation-only.
+
+This is a newly designed simulation exception, not another recovered source
+fit or a recommended printable modification. Native, faceted and full-world
+Mesh64 checks, retention, physical stop negatives and retained operation are
+recorded separately. The operating adoption and paired viewer interaction
+remain pending in that record; the original clip question above stays open.

@@ -27,8 +27,10 @@ class OperatingCurtaIntegrityTest(TestCase):
 
 
 class RunningCurtaTest(unittest.TestCase):
+    model = OperatingCurta
+
     def test_every_selector_moves_independently_without_driving_a_register(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         settings = [0] * 8
         for index in (8, 1, 5, 2, 7, 3, 6, 4):
             settings[index - 1] = index
@@ -41,7 +43,7 @@ class RunningCurtaTest(unittest.TestCase):
             self.assertEqual(register_reading(sim, True), 0)
 
     def test_subtraction_borrows_through_both_registers_and_addition_undoes_it(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('digit_1', to=1)
         sim.move('crank_elevation', to=9)
         sim.move('crank_rotation', by=360, duration=2)
@@ -55,7 +57,7 @@ class RunningCurtaTest(unittest.TestCase):
         self.assertEqual(register_reading(sim, True), 0)
 
     def test_shift_reassociates_actual_dials_without_changing_retained_values(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(self.model(), dt=.1)
         sim.move('digit_1', to=9)
         sim.move('crank_rotation', by=360, duration=2)
         sim.run(2)
@@ -71,7 +73,7 @@ class RunningCurtaTest(unittest.TestCase):
         self.assertEqual(register_reading(sim, True), 101)
 
     def test_independent_inputs_and_two_successive_additions(self):
-        machine = OperatingCurta()
+        machine = self.model()
         sim = Sim(machine, dt=.1)
         self.assertTrue(sim.running)
         self.assertEqual(register_reading(sim), 0)
@@ -109,7 +111,7 @@ class RunningCurtaTest(unittest.TestCase):
         self.assertEqual(sim.snapshot(), expected)
 
     def test_manual_calibration_carries(self):
-        machine = OperatingCurta()
+        machine = self.model()
         sim = Sim(machine, dt=.1)
         for turns, (units, tens, expected) in enumerate(
                 ((0, 0, 0), (1, 0, 1), (9, 0, 10), (0, 9, 100)), 1):
@@ -122,7 +124,7 @@ class RunningCurtaTest(unittest.TestCase):
             self.assertEqual(register_reading(sim, True), turns)
 
     def test_partial_crank_release_and_snapshot_replay(self):
-        machine = OperatingCurta()
+        machine = self.model()
         sim = Sim(machine, dt=.1)
         sim.move('digit_1', to=9)
         sim.move('crank_rotation', by=90, duration=.5)

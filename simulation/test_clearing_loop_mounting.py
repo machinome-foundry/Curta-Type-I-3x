@@ -6,6 +6,7 @@ from machinome.test import TestCase
 from simulation.clearing_loop_mounting import ReplacementLoopBench
 from simulation.standard.parts import ClearingRing, ClearingRingRivet
 from simulation.tools.interference import rigid_leaves, world_solids
+from simulation.tools.clearing_loop_sweep import mesh_solid
 
 
 class ReplacementLoopMountTest(TestCase):
@@ -28,15 +29,27 @@ class ReplacementLoopMountTest(TestCase):
         self.assertAlmostEqual(original.intersect(finger).Volume(),
                                fitted.intersect(finger).Volume(), delta=1e-8)
 
-    def test_both_original_cover_studs_are_preserved(self):
+    def test_source_stem_material_is_preserved_at_the_new_hole_datums(self):
         original = ClearingRingRivet().shape()
         lower = cq.Solid.makeBox(20, 20, 6.4, cq.Vector(-10, -10, -.1))
-        expected = original.intersect(lower)
+        expected = original.intersect(lower).translate((-.132055617, -.364362148, 0))
         for part in (self.node.loop.clearing_ring_rivet_1,
                      self.node.loop.clearing_ring_rivet_2):
             actual = part.shape().intersect(lower)
             self.assertAlmostEqual(actual.cut(expected).Volume(), 0, delta=1e-8)
             self.assertAlmostEqual(expected.cut(actual).Volume(), 0, delta=1e-8)
+
+    def test_both_replacement_mounts_clear_the_unchanged_cover(self):
+        for part in (self.node.loop.clearing_ring_rivet_1,
+                     self.node.loop.clearing_ring_rivet_2):
+            self.assertNotIntersecting(part, self.node.loop.clearing_cover)
+
+    def test_mount_cover_clearance_preserves_published_world_precision(self):
+        cover = mesh_solid(self.node.loop.clearing_cover.mesh)
+        for part in (self.node.loop.clearing_ring_rivet_1,
+                     self.node.loop.clearing_ring_rivet_2):
+            common = mesh_solid(part.mesh) ^ cover
+            self.assertEqual(common.volume(), 0, (part.name, common.bounding_box()))
 
     def test_every_degree_of_working_travel_clears_installed_neighbours(self):
         neighbours = (self.node.loop.clearing_ring_rivet_1,
@@ -103,7 +116,7 @@ class ReplacementLoopMountTest(TestCase):
         pin_x = 39.372124643 - 6*cos(theta)
         pin_y = 10.943003894 - 6*sin(theta)
         remove_pin = cq.Solid.makeCylinder(.61, 1.6,
-                                           cq.Vector(pin_x, pin_y, 61.6))
+                                           cq.Vector(pin_x, pin_y, 61.61))
         for angle in (-90.6, .6):
             self.node.set_state(deployment=angle, release_height=0)
             native = world_solids(self.node, selected={pivot_path, loop_path})

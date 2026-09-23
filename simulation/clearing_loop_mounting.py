@@ -13,6 +13,9 @@ from simulation.standard.parts import ClearingRing, ClearingRingRivet
 from simulation.clearing_loop import LoopMountAssembly, LoopMountBench
 
 
+MOUNT_SHOULDER_GAP = .01
+
+
 def _polar(radius, angle):
     theta = radians(angle)
     return radius * cos(theta), radius * sin(theta)
@@ -63,7 +66,20 @@ class CaptiveSimulationLoop(CaptiveLoopShape):
     rise = Prismatic(axis=(0, 0, -1))
 
 
-class SimulationPivot(ClearingRingRivet):
+class SeatedSimulationRivet(ClearingRingRivet):
+    # Cover-hole centres measured independently in the installed world frame.
+    # Rotate their common world offset (-.38651158, .02841236) into the
+    # source rivet's local frame. Only the lower stud moves, not its bearing.
+    stem_x = Length(-.132055617)
+    stem_y = Length(-.364362148)
+
+    def adjust(self, shape):
+        lower_box = cq.Solid.makeBox(20, 20, 6.7, cq.Vector(-10, -10, -.1))
+        stem = shape.intersect(lower_box).translate((self.stem_x, self.stem_y, 0))
+        return shape.cut(lower_box).fuse(stem).clean()
+
+
+class SimulationPivot(SeatedSimulationRivet):
     cap_radius = Length(8)
     stop_radius = Length(6)
     pin_radius = Length(.6)
@@ -71,6 +87,7 @@ class SimulationPivot(ClearingRingRivet):
     angular_deflection = .1
 
     def adjust(self, shape):
+        shape = super().adjust(shape)
         # At the unchanged source placements, peg-local -X is loop-local +X.
         cap = cq.Solid.makeCylinder(self.cap_radius, 1,
                                     cq.Vector(0, 0, 12.6))
@@ -79,10 +96,11 @@ class SimulationPivot(ClearingRingRivet):
         return shape.fuse(cap).fuse(pin).clean()
 
 
-class SimulationFlushPlug(ClearingRingRivet):
+class SimulationFlushPlug(SeatedSimulationRivet):
     height = Length(6.5)
 
     def adjust(self, shape):
+        shape = super().adjust(shape)
         # Preserve the seated/glued source stud; replace its projecting head
         # and bearing with a flush top below the unchanged cover face.
         return shape.cut(cq.Solid.makeBox(20, 20, 20,
@@ -98,6 +116,8 @@ class ReplacementLoopMount(LoopMountAssembly):
     def render(self):
         super().render()
         self.clearing_ring.translate((0, 0, self.seat_gap))
+        self.clearing_ring_rivet_1.translate((0, 0, MOUNT_SHOULDER_GAP))
+        self.clearing_ring_rivet_2.translate((0, 0, MOUNT_SHOULDER_GAP))
 
 
 class ReplacementLoopBench(LoopMountBench):

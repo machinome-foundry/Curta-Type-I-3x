@@ -15,7 +15,8 @@ class PointerInputCoverageTest(unittest.TestCase):
             'crank_elevation': 'lift crank', 'reverser_height': 'reverse counter',
             'carriage_elevation': 'lift carriage', 'carriage_rotation': 'shift carriage',
             'clearing_rotation': 'clear registers'})
-        self.assertEqual(len(INPUTS), 23)
+        self.assertEqual(INPUTS['loop_deployment'], 'deploy loop (simulation-only mounting)')
+        self.assertEqual(len(INPUTS), 24)
 
 
 class PointerReportTest(unittest.TestCase):
