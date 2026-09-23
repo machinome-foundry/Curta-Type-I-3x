@@ -442,11 +442,51 @@ Sol reproduced this new pose using independent fresh readers: both operands
 are valid, but the protected result is invalid while the original kernel
 mode returns a valid result. Both report two solids and the same positive
 4.241072983936974e−9 mm³ volume. Thus the non-destructive flag is **not an
-acceptable framework fix** by itself. Integration is held while the input-
-preservation implementation is revised. No invalid common is relabelled
+acceptable framework fix** by itself. Integration was held while the input-
+preservation implementation was revised. No invalid common is relabelled
 clear, and these two protected-mode rows are not a resume prefix for the
 replacement implementation. The complete native midpoint survey remains
 unfinished.
+
+### Copied-default framework fix integrated
+
+The replacement framework cycle deep-copies both operands privately before
+Common, Fuse and the empty-common Section, retaining OCCT's original default
+mode. It introduces no healing, retry, mesh fallback or overlap tolerance.
+Framework main was fast-forwarded from `82bf530` through planning commit
+`722efb0` to **`26cbd63599d71aef3beb8e2d7c94d1837e9647b8`**. The tested and
+integrated `machinome/exact.py` SHA-256 is
+`ffc57c6146adafe4f880e5227bc859df05a034ca214dc5b21f56474b6cbfc1dd`.
+The cycle is archived under framework
+`openspec/changes/archive/2026-09-23-preserve-native-boolean-inputs/`, including
+reproduction commands, the rejected protected-mode experiment and ADR-143.
+Both earlier CI commits `a87abc5` and `e05d9c5` remain ancestors of main.
+The framework worktree remains available for the running project survey;
+the user's primary-checkout `docs/examples/v8-engine/` was untouched.
+
+The final framework passed **3,622 tests and 2,139 subtests** (four skips),
+83 focused exact tests and 15 subtests, and independent review. The original
+two actual-root Curta caller tests passed in **109.065 s**. The additional
+fifteen-pose higher-station caller test passed in **477.815 s**, separately
+from its earlier baseline pass. The original 200-call reused-drum sequence
+has no observed input fingerprint mutations and its complete ten boundary
+records are bit-identical to fresh default-mode controls. The separate
+169° near-contact common is valid and retains its positive volume. The
+fingerprints check topology counts, coordinates and subshape tolerances,
+not every possible B-rep record. Existing in-memory damage is not repaired;
+native analyses must start with fresh inputs.
+
+The 59-row midpoint survey was restarted from the unchanged fresh-native
+reader at project `96a9496`, without either failed prefix. Four independent
+serial processes use CPU affinities 0…3 and partition the crank list
+75, 77, …, 177° by index modulo four. Each retains every source row at its
+selected cranks, including both axial heights where present. Their new
+outputs are `_build_checks/reverser-phase-midpoints-native-copied-96a9496-part0.jsonl`
+through `part3.jsonl`, each tied to the original world64 file hash. These
+processes use the final framework source hash above. Their completed 169°
+and 173° rows pass all ten boundaries each, but **the full survey is still
+running** at this checkpoint; no partial file is final acceptance or an
+adopted operating restraint. The production model remains unchanged.
 
 ## Higher-counter independent surveys
 
