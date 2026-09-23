@@ -68,6 +68,16 @@ these probes assert independent admitted movement, not a fixed mouse-to-millimet
 delta. No viewer repair was needed for these serial captures. This supports
 contention as the earlier capture explanation without proving it uniquely.
 
+The serial full-revolution retry also passes on that same pinned export:
+actual button press/release, completed exactly 360.0000 degrees, unchanged
+other 23 visible readouts and no page errors. Terminal readouts are verified
+at 201.573 s and screenshot capture finishes at 251.570 s; exit zero is
+observed. The inspected image shows the complete machine and matching
+360.0000/completed UI. This is not a real-time result. Report
+`operating-prefix-standalone-revolution-serial-e8d3612.json`, SHA-256
+`7dc22a32af313c30d971418d5b016a593abd3beb19b318e3ab0b1c2585f974cc`;
+PNG SHA-256 `e9c787f4bc2f5f9d917e66ea2b6b7d8a4963a4a5fd3203bfa03b031d8c11b2a8`.
+
 `tools/operating_standalone_probe.py` serves the unmodified exported index,
 manifest, bundle and contained model assets. It never remounts the viewer,
 obtains a hidden run handle, modifies the page implementation, or submits

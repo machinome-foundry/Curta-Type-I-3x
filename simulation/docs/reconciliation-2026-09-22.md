@@ -21,6 +21,15 @@ passes, four skips and 2,131 subtests; the final focused gate was 28 passes.
 The framework archive records the exact serialization and hashes. This is
 another measured optimization, not a real-time claim or a graph change.
 
+An independent final production raised-carriage check on `82bf530` passes in
+48.95 s. A separate actual stop/replay run repeats crank
+0.36119713971311285 degrees, ball -1.2252018554755857 mm, exact stopped bank
+and snapshot equality. The retained report
+`_build_checks/curta-raised-replay-fw82bf530-2026-09-23.txt`, SHA-256
+`3142d925ba42c90f2edecd6f423e4560420154fd01d76a3bef04a74b52145d57`,
+is explicitly a reconstructed terminal transcript saved after the completed
+calls, not a raw redirected log. It records source pins and preservation checks.
+
 The preceding framework main was `23857e9`: the successful-prefix reuse implementation
 `b99c3f1` (plan `e64eb16`) was reconciled in its isolated worktree with the
 native boundary-witness correction `5e1404e`. The nonconflicting merge
@@ -58,6 +67,22 @@ diff contains only those records; no runtime code or bundle changed. Every
 viewer and project branch is now an ancestor of its own main. The separately
 audited patch-equivalent/superseded framework tips described below remain
 preserved; unrelated framework branches are outside this reconciliation.
+
+Viewer main subsequently advanced to `a92541d` (plan `fe896e1`) through the
+isolated `cache-kink-level-probes` cycle. Only certified deterministic numeric
+expression searches reuse successful finite kink levels, with bounded per-search
+lifetime; arbitrary callbacks remain eager. The final paired five-tick Curta
+run measured 4.271973→3.570818 CPU seconds, preserving all 768 ordered Bound
+levels and every full 214-coordinate bank bit. Final gates pass: 1,502 widget
+tests, 196 Python tests with 22 subtests, type checking, 16 strict specs, the
+eight-stage hosted Chromium oracle and 177 post-integration focused tests.
+Earlier load-sensitive failed runs remain in the viewer archive. Final isolated
+bundle SHA-256 is `feeaed32febb1ede3b267e9f47a6a0fd0a6b39bc149453af338011489b68ff86`.
+The copied project export still pins `0d602f...` for its serial standalone
+reproduction; those results are not relabelled as tests of the newer bundle.
+The primary viewer's generated bundle was subsequently rebuilt from clean
+`a92541d`, matches the isolated `feeaed32...ff86` bytes exactly, and is the asset
+reported by its `describe` entrypoint. No running server was restarted.
 
 All framework edits used isolated worktrees. The framework primary's
 untracked `docs/examples/v8-engine/`, the project video and inspection image,
