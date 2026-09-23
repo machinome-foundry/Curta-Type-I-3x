@@ -277,3 +277,43 @@ Artifacts under `_build_checks/`, SHA-256:
   `3373d0363e8618ceae082bf11c7dc1e982abf13ce84dafef0f394823472c153b`.
 - Rejected cylinder shortcut:
   `8a8edbc3fdd3093438560c3518b956f7696e8d3ed24b5770ee04701971dea85a`.
+
+## Continuous native/frame and published-mesh interface enclosures
+
+The independent `tools/positioning_ball_mesh_enclosures.py` starts from an
+outward icosahedral sphere enclosure. Its minimum supporting-plane distance
+is 3.751000995471632 mm and outer vertex radius is 3.7680641752331088 mm;
+it therefore contains the unchanged R3.75 native sphere and the measured
+source mesh. Convex hulls cover every translation between endpoint positions.
+Outward face-plane expansion bounds angular arc curvature; the supporting
+plane distances, not an assumed visual radius, determine the expansion.
+Only a valid world64 Boolean with exactly zero common certifies an interval.
+
+The frame proof covers the whole R8.332..11.950 centre interval. The ring
+proof covers that entire interval ×0..6 mm relative lift. The latter uses
+the convex hull of all four translation corners and retains the complete
+fitted ring, not a section. A separate R3.751 native capsule proves the fixed
+frame interface against its complete native solid.
+
+For the collar, each .25 mm profile interval has affine radial/lift bounds.
+Endpoint hulls cover these translations, and an outward sagitta bound covers
+every collar angle between successive 5-degree samples. All 480 cells cover
+the full lift range and carriage shift 0..100 degrees, including between
+samples. The collar itself is unchanged source-derived STL, so this is a
+sphere-versus-published-collar proof, not an invented native collar.
+
+For the bell, an independent bound on the second derivative of each rotated
+affine radial trajectory encloses its distance from the endpoint chord.
+The envelope includes all retained slack through R11.950, and subdivision
+certifies all 0..360 degrees against the full published bell mesh. This takes
+187 checks and 124 accepted intervals. Together the collar/bell run passes
+667 checks and 604 intervals in 16.887 s, leaving the production bank unchanged.
+The earlier native bell certificate remains independently required.
+
+The first frame/ring/collar-only run passes in 14.797 s, SHA-256
+`1e87e28e15dd911e9b86288636abc4f54d1a01dfca2ecc6f253c295abf3dae0f`
+(`positioning-ball-mesh-enclosures-b65fccb.jsonl`). The complete run is
+`positioning-ball-complete-mesh-enclosures-b65fccb.jsonl`, SHA-256
+`ca2de52a110506ebfd66e004cef323976badaf01bd5b8eaa98056c4c78fa170f`.
+These proofs do not replace the all-rigid/flexible-neighbour demonstration
+audit or retained-operation and current-viewer adoption gates.
