@@ -391,3 +391,53 @@ The user's untracked assembly video and inspection PNG remain untouched.
 
 Remaining gate: the complete production pointer matrices. Whole-machine
 geometry findings stay separate from this bounded mounting change.
+
+## Refreshed whole-machine rest findings
+
+On adopted runtime `e39d05a` and framework main `e4ff031`, both fresh
+inventories traverse all 389 rigid occurrences. The explicitly world64
+faceted inventory records 233 positive spatial pairs; the native inventory
+with source-STL fallback records 136. Neither has a refused intersection,
+and neither positive-pair list contains any of the three adapted mounting
+occurrences. This is a rest diagnostic, not acceptance of the remaining
+contacts, flexible interfaces or moving trajectories. No positive common
+is waived or hidden behind a tolerance.
+
+The largest remaining findings concern source fastener/bearing-plate seats
+and the zero-positioning securing spring. The whole-machine task remains
+open; these counts are not a count of independent design defects. They are
+not directly comparable to the older float32 faceted inventory.
+
+- `_build_checks/operating-loop-production-rest-world64-01.json`:
+  `715a4fdbafaeb4b73837b617fb2b75ad02ecd805c31e29e1dcf5d2655c9a4240`.
+- `_build_checks/operating-loop-production-rest-native-01.json`:
+  `84c5218306862f353f27225c3267a55d75c218e9d5033caf4cef81d5a2ba0926`.
+
+## Final default-root arithmetic and pointer continuation
+
+All six unchanged arithmetic tests now pass on the actual adopted default,
+not only the independent trial: 6/6 in 1,254.707 s. They cover independent
+selectors, successive addition/selective clearing, calibration carries,
+partial crank/replay, shifted arithmetic and subtraction/overflow through
+both banks. The process was pinned to CPU 13 during concurrent software-WebGL
+verification; this is not an isolated performance benchmark. Log SHA-256:
+`54da34ee79bdba6781fa943b5a29f4ffaf402c2f4a20f7b94c9c3b72c19ff4ed`.
+
+The broad standalone hover grid verifies 22 independent controls before it is
+intentionally interrupted after two viewing passes to replace unsuccessful
+coarse searches with inspected visible points. The preserved report remains
+`validation: pending`, not a passing full matrix. Its checkpoint has 22
+individually validated cases, no page errors and 26 required controls;
+the four missing targets are marker 5, the reversing knob and selectors 2/3.
+The process exits 143 after its browser is closed and the interrupted harness
+is terminated; that is neither a successful test exit nor a product refusal.
+Report SHA-256:
+`90f088f9ef2c602da769171fa7f6b082d8d090ca784ba3ec0c88ba51dbc9c624`.
+
+The coverage index tool requires explicit acknowledgement of an interrupted
+matrix, revalidates each accepted case, checks the exact export hashes and
+program identity, requires fresh default input readouts, and rejects missing
+or duplicate controls. It never changes a source report's status. Its missing-
+module baseline is red; 12 coverage/matrix/report tests pass after
+implementation. Targeted browser completion and the final index remain
+pending here; these unit tests do not supply missing pointer evidence.
