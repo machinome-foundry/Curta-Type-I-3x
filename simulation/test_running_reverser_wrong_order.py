@@ -68,6 +68,25 @@ class RunningReverserWrongOrderTest(unittest.TestCase):
                      'carriage_elevation', 'clearing_rotation'):
             self.assertEqual(sim.state[name], before[name], name)
 
+    def test_a_different_retained_phase_can_withdraw_from_the_same_crank_pose(self):
+        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        self.assertEqual(sim.move('reverser_height', to=-4.9425).status, 'completed')
+        command = sim.move('crank_rotation', to=90, duration=.5)
+        sim.run(.5)
+        self.assertEqual(command.status, 'completed')
+        self.assertAlmostEqual(sim.state['transmission.turns.ones.turn'], 231.6)
+        # Same crank angle as the red test, but a different physical history.
+        # The ones pair must retain its available withdrawal path; a blanket
+        # home-only lock or universal 1.0575 mm floor cannot represent both.
+        for height in (-3, 0, 1.0675, 3.9075):
+            with self.subTest(height=height):
+                command = sim.move('reverser_height', to=height)
+                self.assertEqual(command.status, 'completed')
+                self.assertAlmostEqual(sim.state['reverser_height'], height)
+                self.assertEqual(commons(sim), (0, 0))
+                self.assertEqual(sim.state['crank_rotation'], 90)
+                self.assertAlmostEqual(sim.state['transmission.turns.ones.turn'], 231.6)
+
 
 if __name__ == '__main__':
     unittest.main()

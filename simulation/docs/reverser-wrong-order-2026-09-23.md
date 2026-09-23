@@ -99,6 +99,95 @@ calls, not claimed to be a raw saved transcript. The two-pose JSON is emitted
 directly by the checked-in tool. Exploratory volumes are not silently promoted
 to a regression matrix.
 
+## Phase-envelope continuation
+
+On project `8ca74d5`, `tools/reverser_tooth_envelope.py` adds an independent
+pose instrument from the **complete installed prints** in an untouched
+production root. It rotates each input about its declared shaft axis, rotates
+both complete drums about their installed main axis, and applies the lever
+and drum axial displacements. It does not mutate the run, change print material
+or normalize the source to an assumed ideal gear. Each report names its station,
+crank, shaft, lever height, drum lift and kernel. All five shaft sectors are
+measured over a full 360°; no sector is silently repeated.
+
+Two fixture tests pass in **91.604 s**. They compare the instrument with real
+requests at the near-contact heights, at crank 171.25° with a nonzero retained
+shaft phase, and at crank 90° after raising the drum 9 mm. Native and mesh
+world bounds match within coordinate-rounding precision (1e−10 mm); contact
+classification must match exactly, and every zero common must remain exactly
+zero. Comparing the final digits of two positive volumes is not an overlap
+tolerance. The initial tool attempt mistakenly read the axis off the bound
+value instead of the class joint declaration and stopped before measurement;
+that local diagnostic error is corrected, not a framework limitation.
+
+An additional real-history test passes in **25.530 s**: lower the reverser at
+home, then turn to 90°. The ones shaft is now 231.6°, instead of the red
+fixture's 134°. Requests to −3, 0, 1.0675 and 3.9075 mm all complete with zero
+native/world64 common in the ones pair and without changing crank or shaft
+phase. This is a sampled withdrawal counterexample to a home-only lock, not a
+whole-bank continuous-clearance certificate. The original penetrating-history
+test remains red; this passing test does not replace it.
+
+The first world64 survey samples nine crank angles (0, 75, 90, 100, 120, 150,
+170, 180, 270°), two lever heights (0 and −3 mm), and 181 shaft angles from
+134° through 494° at 2° spacing. All **3,258 rows** complete; 790 have a positive
+common and none has a negative volume. At crank 90° / lever 0, the first shaft
+sector's free samples are 154…174°; at lever −3 the whole sampled sector is
+clear. At crank 170°, both heights have free samples 160…178°. These are
+observations, not interpolated bounds or evidence of all intervening points.
+
+The boundary instrument retains every observed transition and both its free
+and positive endpoints. It performs 16 bisections within each observed bracket;
+it explicitly does **not** claim to exclude unsampled islands. Three unit tests
+pass, including two disconnected contact islands, preservation of a positive
+1e−30 mm³ common, and refusal of unordered, negative or nonfinite measurements.
+The nine-angle survey yields 18 records and 70 boundary brackets; each active
+row has ten boundaries across the five shaft sectors.
+
+Native checks at crank 90°, lever 0 confirm the first sector's angular gap:
+shaft 152° overlaps by 0.008850995541473169 mm³, 153°, 154° and 174° are clear,
+175° overlaps by 0.004657491704910437 mm³ and 176° by 0.018376175081854292 mm³.
+Refinement gives these **clear-side endpoints**, with positive commons retained
+on the other side of each bracket:
+
+| Kernel | Lower clear shaft angle | Upper clear shaft angle |
+| --- | ---: | ---: |
+| Native | 152.23562622070312° | 174.0721435546875° |
+| Published world64 mesh | 152.22329711914062° | 174.07217407226562° |
+
+Thus mesh-only admission would be too permissive at the lower boundary.
+The limiting native positive samples are 3.7497067733704725e−9 and
+8.213639765078992e−13 mm³; neither is waived. Combining measured bounds must
+use the stricter free side of both kernels, then validate interpolation and
+the full retained path. No runtime table is adopted from this coarse survey.
+
+Raw generated JSONL under `_build_checks/` (all producer processes exit 0):
+
+- `reverser-angular-survey-8ca74d5.jsonl` — SHA-256
+  `355c2885cca1151c1bef1d1018979a1e08b3fcf7eb6f1e73da23ceb7e8726c8c`.
+- `reverser-angular-boundaries-8ca74d5.jsonl` — SHA-256
+  `d011c41ca6f75738e7e2f12c5c15409533914d33a05d8c52142e23c501d4799e`.
+- `reverser-angular-native-brackets-8ca74d5.jsonl` — SHA-256
+  `933cedc3f462c7d16588018bbea8b864615fed26e0626e3d70e9122edc185816`.
+- `reverser-angular-native-boundaries-8ca74d5.jsonl` — SHA-256
+  `9787162f1ba0e0413939ca49860cb60f50f8db8ae74d3bf3ad236350c260fe37`.
+
+For example, reproduce native refinement with the workspace Python, from this
+project, setting `PYTHONPATH=.` and one BLAS/OpenMP thread as above:
+
+```sh
+python -m simulation.tools.reverser_tooth_envelope --crank 90 --height 0 \
+  --shaft 152 --shaft 153 --shaft 174 --shaft 175 --boundaries --kernel native \
+  --output _build_checks/reverser-angular-native-boundaries-rerun.jsonl
+```
+
+For the faceted survey, supply the nine `--crank` values above,
+`--shaft-step 2 --height 0 --height -3`, and a new output path. Adding
+`--boundaries` retains/refines the observed transitions. Every existing evidence
+file is preserved. The instrument supports stations 1…6, but the current
+fixture and phase evidence are explicitly **station 1**, not proof of the
+five different higher-counter prints.
+
 ## Remaining implementation
 
 Measure the axial admission envelope against **actual retained shaft phase**,
