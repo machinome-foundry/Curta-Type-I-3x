@@ -377,5 +377,17 @@ the preceding full widget suite (1,583 passed, two skipped), Python suite
 (198 passed and 22 subtests), strict manual build and browser link checks.
 No package was pushed or published by this work.
 
+The adopted project commit `e39d05a` is fast-forwarded into project main.
+The normal named-model export to primary `_build_operating/` succeeds using
+the merged package mains. Its program identity remains `9d5a13cc…` above;
+its manifest differs from the production test export only in `mtime`
+metadata. Every model asset from the test export matches byte-for-byte, and
+the standalone HTML/bundle hashes are unchanged. The refreshed directory
+also retains two older, unreferenced source loop/rivet assets from its prior
+export; they are not entries in the new manifest or extra visible parts.
+Fresh primary manifest SHA-256:
+`e99e3de79160176a71495bc752d85e79c13b949544f8f5b0435a850be92fe1a4`.
+The user's untracked assembly video and inspection PNG remain untouched.
+
 Remaining gate: the complete production pointer matrices. Whole-machine
 geometry findings stay separate from this bounded mounting change.

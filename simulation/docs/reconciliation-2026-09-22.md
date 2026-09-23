@@ -1,5 +1,32 @@
 # Operating Curta reconciliation and completion
 
+## September 23: simulation-only clearing-loop mounting integrated
+
+The pilot authorized a replacement mounting explicitly for simulation. Project
+main `e39d05a` adopts the [verified captive mounting](clearing-loop-replacement-2026-09-23.md),
+with independent deployment and unchanged upstream assets. Framework main
+`e4ff031` carries inherited controls through compatible child replacement;
+viewer main `bcbf55a` provides the two selected-joint handles on the same loop
+and preserves them while the pointer crosses their overlays. Both package
+cycles are archived in their owning repositories. Viewer API 27's rebuilt
+main bundle matches the browser-tested candidate exactly.
+
+The adopted root has 216 coordinates and 26 controls. Native and faceted
+mounting checks, installed travel/capture/stops, seven-state preservation,
+default operation, historical fixture witnesses and the 20-test production
+interlock/marker/ratchet batch pass. Actual loop gestures pass in the hosted
+and unmodified standalone pages; the full production matrices are still
+running. The linked record distinguishes trial arithmetic from default-root
+checks and pins the evidence. This does not close the whole-machine geometry
+inventory or claim recovery of the original elastic clipping motion.
+
+The refreshed ancestry check finds every project and viewer branch on its
+own main. The same two older Curta framework tips remain accounted for by
+the patch-equivalent/superseded audit below; four unrelated framework branches
+are untouched. The project primary retains exactly the user's untracked
+assembly video and inspection image. No push, publication, branch deletion
+or worktree removal was performed.
+
 ## Latest checkpoint: production restraint and optimized viewer
 
 The [production reverser adoption](reverser-operating-adoption-2026-09-23.md)
