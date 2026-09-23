@@ -1,5 +1,128 @@
 # Actual standalone-page interaction evidence
 
+## September 23: fitted-shoulder production continuation
+
+The unmodified `_build_checks/operating-shoulder-82bf530-a92541d/` export
+contains the accepted counter-shoulder geometry at project `4256778`, framework
+`82bf530` and viewer `a92541d`. Its manifest SHA-256 is
+`0b8f70d9c276f4517df28c629734f020ea266ac5d7051b7714acf78483474a79`,
+bundle `feeaed32febb1ede3b267e9f47a6a0fd0a6b39bc149453af338011489b68ff86`
+and index `16238dda75b0b88224bd1bcaf0c9dfd77a6f43d75652b2972f4af5ed00111bb2`.
+The 214-coordinate program identity remains
+`b81b2ce7af6556c12a68829fa3444d1dc6efc7c110d2cd88aff57fff0b9700f4`.
+These fresh standalone cases use the normal timestep and serial browsers.
+
+An actual seated-carriage shift gesture passes: hover at (800, 480), selection
+of the real `shift carriage` handle at (757.484375, 432.4375), then an
+80-pixel leftward drag and observed release. The carriage reaches 0.1800 degrees
+and the visible outcome is `blocked after 0.18 deg`. Its elevation remains
+0.0000 and every other visible input is unchanged. No page error occurs;
+the process exits zero. Terminal readouts are verified at 16.182 s and capture
+finishes at 29.584 s. The inspected screenshot shows the complete assembly,
+selected physical handles and matching blocked outcome. Report
+`operating-shoulder-standalone-seated-shift-left-4256778.json` SHA-256
+`8a3e15e38349b73d5c5f91e77364da84a87d87805eca36eeb491e831f2f092dd`;
+PNG `6ebf233e823cb9fe95f54ab71862f6b1dbdcafdc5c35b6eaa832a85b4fda5469`.
+
+The preceding rightward drag reached `blocked after 0 deg` with unchanged
+inputs. It correctly fails the harness's admitted-movement gate and is not
+counted as passing movement coverage. Its failed report and inspected image
+are preserved: `operating-shoulder-standalone-seated-shift-4256778.json`,
+SHA-256 `1679017427bddbd618983eb7e53ba3d3e71275302b6578d36fb9edbd980a55b5`.
+Neither gesture lifts the carriage or uses a host motion request. This remains
+four-decimal visible-state evidence, not full-bank or hidden-command inspection.
+
+Independent selector cases 2–5 also pass on this export. Each starts from the
+untouched page, finds its actual knob by nearest-hit hover, receives a 60-pixel
+downward drag, observes release and reaches 2.0000 with `completed`. All other
+23 visible inputs are unchanged and no page error occurs. Each process exits
+zero and each screenshot is inspected: complete assembly, matching selector
+and readout, and a completed outcome. Timings below are seconds from launch.
+
+| Selector | Actual hover/drag start | Terminal readouts | Screenshot complete |
+| --- | --- | ---: | ---: |
+| 2 | (800, 635) | 14.100 | 28.169 |
+| 3 | (750, 635) | 15.680 | 27.869 |
+| 4 | (698, 635) | 14.124 | 27.638 |
+| 5 | (653, 635) | 15.704 | 29.846 |
+
+Reports are `_build_checks/operating-shoulder-standalone-digitN-4256778.json`
+and their sibling `.png` images. SHA-256, report then image:
+
+- 2: `3023588565e2dd727e1806d74555508fc2665fd6effc8985cc2e47a8271d5573`;
+  `b07308ce947f938faef330d6b7483b0203169c55bd3e63f839355d80c2a454d3`.
+- 3: `9dad0359eea621fe821c0bce7b6f131c1774109f9d43b0996fae8dfce234d4df`;
+  `b57585a169e9ca078ca25f96f2c2ec56eaa990e8c382e6a960f62b091dfa479f`.
+- 4: `0c9f05300d12b44895ae1caadd2d2e0f8701233efcfdb8214b19c66a6bef352d`;
+  `a1666f59999e57734ce0ea10695747928c04c0e5444d519f456156bb5aeca7e2`.
+- 5: `40e4778d4a09112a4f0675d4dab5ad4eaed83192bf02911956dd50860c710ba8`;
+  `87fd7570d9cff841006cfda8df6f34c9d5622d7ee9a0b9d602d1bb8019d108f8`.
+
+Selector 6 passes from its actual visible knob at (622, 598), with the same
+60-pixel downward drag: 1.0000, completed, all other readouts unchanged, no
+page errors, inspected screenshot and exit zero. Terminal verification is at
+11.838 s and capture at 25.845 s. The report
+`operating-shoulder-standalone-digit6-visible-4256778.json` hashes to
+`38a0d0079dc40380d6919540a94e48ce3be378f51283dba49655fe530cf59b0c`,
+its PNG to `6be76621e0e938103f1c9ade2139943fd7de7a5152852b5b609c4946582fa58f`.
+The earlier point (620, 620) hit no control; that failed attempt performs no
+gesture and remains `operating-shoulder-standalone-digit6-4256778.json`,
+SHA-256 `90d42fdbe517685c500d70c7ef226d918e6796c900bc6f38b3cc4b1dd9570166`.
+
+Selectors 7 and 8 pass at their visible edge knobs, respectively (601, 577)
+and (599, 547). Each 60-pixel downward drag reaches 2.0000, completed, with
+observed release, unchanged other visible inputs, no page errors and process
+exit zero. Both complete-assembly screenshots are inspected. Their terminal /
+capture times are 13.600 / 27.460 s and 14.914 / 28.805 s. Reports follow the
+`digitN-4256778` pattern above; SHA-256, report then image:
+
+- 7: `b2e45fa7e9241a5a44d2d5cb6c08504a18f3f19655e8cd10ae72d968b9ecd562`;
+  `739b34b7ae845f3b48809e95a84e76fae2b4aa8c7d58f1483a0ff888e5bc4b12`.
+- 8: `94d55a9565c19fb676ccfd02225e325989f5b96d88bb4c80af106fdae6aec62d`;
+  `dcdc52aae9c7328a703ba5365e993f7895042534564a436fbb5233ba9c1e9ed8`.
+
+The first selector is refreshed on this same export, completing standalone
+independent-motion coverage for all eight selectors on the pinned current
+geometry and bundle. A real drag at (842.025, 620) reaches 1.0000, completed,
+with the same release/independence/error checks, inspected screenshot and
+process exit zero. Terminal / capture times are 9.658 / 24.283 s. Report
+`operating-shoulder-standalone-digit1-4256778.json` SHA-256
+`44a957212ccfdcc5bd1a42d9116766682860bf7497241644320fc54983bad1c8`;
+PNG `c57203427fd0efff0c53d41a8a3a26969ca6a719fbab9471d76aa7d239d0fa64`.
+This does not prove every selector's full stroke or mid-cycle mechanical
+restraint, nor does it complete the remaining standalone control matrix.
+
+The physical clearing ring at (830, 360) also accepts an 80-pixel rightward
+drag while seated: 1.0000 degree, completed, unchanged other inputs, observed
+release and no page error. The complete-assembly screenshot is inspected and
+the process exits zero (terminal 10.516 s; capture 23.753 s). This request
+stays inside the measured seated play and **does not reach the restraint**.
+Report `operating-shoulder-standalone-seated-clearing-4256778.json` SHA-256
+`1cc38e2d5ffa4a49ab66acf65ed7625a04c979ea75f952950fc629e840796e01`;
+PNG `9a4eeb7cb65c1a22b1fce0f31fe6b536744e03d5a4d3df2ab55e796f5f14e973`.
+The ten passing current-export reports above are revalidated together and
+their manifest/index/bundle hash triples are identical. This includes eight
+distinct selectors and two seated controls, not ten independent mechanisms
+cleared of all contact or action-order obligations.
+
+The independent 400-pixel rightward drag from the same physical clearing
+ring reaches the seated restraint: final visible angle 1.4372 degrees,
+`blocked after 0.437226 deg`, carriage elevation 0.0000 and all other visible
+inputs unchanged. The outcome describes the final pointer command's admitted
+travel, not the total angle reached by the gesture's sequence of commands.
+Observed release, no page errors, inspected complete-assembly screenshot and
+exit zero pass; terminal / capture times are 13.472 / 26.948 s. Report
+`operating-shoulder-standalone-seated-clearing-stop-4256778.json` SHA-256
+`d2ad0b622e75a619b5baf97cdba737f06dde4e1ee5913db8ea0f7bf309428a5f`;
+PNG `d29888ffc2a80ce3a2a7304341af897e9404786b691dc83c3b0de10e32b1d06e`.
+The complete-bank hosted stop at 1.437226368040361 degrees remains separate
+evidence; this standalone page only exposes four-decimal input readouts.
+
+The existing standalone/hosted report validators also pass all 14 tests in
+1.033 s on this project head. This includes rejection of unretired commands,
+missing release, unrelated movement and no-op attempts; it is harness
+validation, not additional physical-control coverage.
+
 ## September 23: current retained-ball export
 
 The fresh `_build_checks/operating-prefix-23857e9-572648f/` export pairs
