@@ -197,3 +197,54 @@ all relevant axial slabs and six stations, independent placement fixtures,
 available-play and both-direction retained requests, first-band stopping,
 relief/retry/replay, browser parity, and crank/lift-changing acceptance. This
 work does not waive the clearing-loop or whole-assembly findings.
+
+## Complete installed-print radial exclusion
+
+`simulation.tools.reverser_installed_radial_cover` now checks all six complete
+installed input prints from one untouched `OperatingCurta` root. Each native
+print has a valid, exactly zero difference outside a cylinder of radius
+6.3 mm about its own declared shaft axis. Every vertex of its actual published
+mesh is inside that cylinder, hence so is every triangle and its enclosed
+solid. A radius-6.0 cylinder is the negative control: native material remains
+outside, and mesh vertices escape it, for every station.
+
+| Station | Maximum published-mesh radius mm | Native outside R6.0 mm³ |
+| --- | ---: | ---: |
+| 1 | 6.2262112660703455 | 4.789428883938631 |
+| 2 | 6.16427893429756 | 1.0230559092372757 |
+| 3 | 6.164279843699757 | 1.0230559092372653 |
+| 4 | 6.164278062867083 | 1.023055909237322 |
+| 5 | 6.16427927396561 | 1.023055909237312 |
+| 6 | 6.164279097765485 | 1.023055909237302 |
+
+The actual shaft-axis radii, minus 6.3 mm and a central drum radius of 34.1 mm,
+leave strictly positive radial gaps of 0.09999999955998096 mm or more. This
+excludes the central drum cylinder under arbitrary own-axis input rotations,
+drum rotations and axial translations. It is a geometric separation, not a
+volume tolerance, and does not cover a changed shaft axis or fitted geometry.
+
+Subtracting that central cylinder from copies of the full native drums leaves
+9 upper solids and 46 lower solids. Their remaining faces are planes and
+cylinders; the frame's conical, spline and toroidal features lie in the excluded
+core. The upper outer material runs from Z −54.2 to −43.7: one continuous
+tooth and eight additional teeth at −49.7..−48.2. Those eight source volumes
+differ; no symmetry is inferred. Lower outer material reaches Z −66.3.
+
+The lower drum cannot yet be discarded: the complete ones input starts at
+approximately Z −51.95 at reverser height 3.9075. At height −6.9425 and drum
+lift 9, its range reaches approximately Z −71.8 in the drum's frame. Lower
+drum rows therefore belong in the axial-coverage investigation. The earlier
+lift-zero samples do not establish clearance there.
+
+The reproducible eight-row command terminated with exit 0 on project
+`c526ab0` plus this instrument, against the same pinned validation bench:
+
+```sh
+PYTHONPATH=/home/asa/devel/machinome-studio/machinome/WTs/curta-reverser-profile-validation:. /home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.reverser_installed_radial_cover --output _build_checks/reverser-installed-radial-new-run.jsonl
+```
+
+Recorded evidence: `_build_checks/reverser-installed-radial-c526ab0.jsonl`,
+SHA-256 `079ea1bd2cdc26c3fb5475e78f316abf59afe86da26a056fbf7cd64480351b1f`.
+This establishes the radial exclusion only. Native outer-profile covers,
+actual fused-mesh axial slabs, retained admission and browser parity remain
+separate obligations; no production constraint is adopted by this result.
