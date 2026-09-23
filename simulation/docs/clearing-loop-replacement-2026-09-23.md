@@ -251,6 +251,19 @@ same 389 rigid occurrences remain, with 25→26 controls. That gate and both
 operation tests pass 3/3 in 154.076 s, log SHA-256:
 `8e8e0430b11a61d0cec1d68a6d0bacdfc510a3531d3121b13736311f3feea3e3`.
 
+The same nine carriage-indexing and clearing-interlock contracts now run
+against the trial through an explicit model parameter; their requests and
+assertions are unchanged. All nine pass in 290.804 s, including each working
+slot, partial lift, independent releases, seated clearing stops and replay.
+Log SHA-256:
+`750a477fdb0c27185ad2f3c9f0312c057e1e367c6dbe5450cedf5a1d2107c934`.
+
+The six unchanged arithmetic contracts also pass on the trial in 997.280 s:
+independent selectors, successive additions and selective clearing, the manual
+calibration carry sequence, partial crank/replay, shifted arithmetic and
+subtraction through both registers followed by full-bank overflow. Log
+SHA-256: `27c44b0c32d8b0446759c4252ff8efa0746f7b399fd8f2fe50fd1ab3cd5fe192`.
+
 The normal standalone export succeeds with document version 13 and program
 identity `2b6b59dbb135bd0c0ced9ba87fcc8df9dc36588138d1b0294ce7b8543588df1b`.
 The installed API-26 viewer refuses it at load: deployment and clearing are
@@ -270,6 +283,5 @@ feature. Image SHA-256:
 `0c7e6af08d2d0d1e30437173b8d185b20b4e87fe33c8f258ef4da4714712b706`.
 
 Next: exercise actual hosted and standalone gestures with the compatible
-viewer, finish the unchanged arithmetic and clearing contracts on the trial,
-then adopt and verify the production root. No task closes from the isolated
-mounting alone.
+viewer, then adopt and verify the production root. No task closes from the
+isolated mounting alone.
