@@ -5,6 +5,13 @@ placement has been converted. The generated source tree, printable geometry,
 fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
 acceptance remains open under the existing project record.
 
+The [zero-mechanism increment](zero-mates-2026-09-27.md) attaches its cam,
+drive pin and follower through their existing joints. It required the
+pilot-ratified explicit-direction precision rule, integrated as framework
+`fabfc3d` with Studio companion `655a3cc`. Strict independent pose/state/replay
+checks and six geometric contracts on both kernels pass without changing
+any tolerance, shape, control or coordinate path.
+
 The [eight-selector increment](selector-mates-2026-09-27.md) additionally
 attaches both shafts and the sliding knob of every input channel through their
 original joints. It exposed and verified the internal mate rotation correction

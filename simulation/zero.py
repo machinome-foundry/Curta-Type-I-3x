@@ -1,6 +1,6 @@
 """The retained zero cam, its following lever, and the sliding drive pin."""
 
-from machinome.node import AssemblyNode
+from machinome.node import AssemblyNode, Frame
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
 from machinome.simulation import Driver
@@ -38,6 +38,12 @@ class ZeroCam(ZeroPositioningDisc):
     """Resolve the .05 mm roller seat; the source B-rep is unchanged."""
     linear_deflection = .01
     angular_deflection = .1
+    mounting = Frame()
+
+
+class ZeroPin(ZeroPositioningDiscPin):
+    """The unchanged source pin, attached at its native placement datum."""
+    mounting = Frame()
 
 
 class ZeroRoller(ZeroPositioningDiscRoller):
@@ -46,6 +52,7 @@ class ZeroRoller(ZeroPositioningDiscRoller):
 
 
 class ZeroFollower(AssemblyNode):
+    pivot = Frame(at=(*ZERO_PIVOT, 0))
     zero_positioning_disc_roller = ZeroRoller()
     zero_positioning_lever = ZeroPositioningLever()
     disc_roller_bolt_sleeve = DiscRollerBoltSleeve()
@@ -64,7 +71,7 @@ class ZeroPositioning(AssemblyNode):
     turn = Port(unit='deg')
     subtract = Port()
     zero_positioning_disc = ZeroCam(turn=Revolute(axis=(0, 0, 1)))
-    zero_positioning_disc_pin = ZeroPositioningDiscPin(
+    zero_positioning_disc_pin = ZeroPin(
         turn=Revolute(axis=(0, 0, 1)), lift=Prismatic(axis=(0, 0, 1)))
     follower = ZeroFollower(turn=Revolute(axis=(0, 0, 1), at=(*ZERO_PIVOT, 0)))
     documented_spring = MountedZeroSpring()
@@ -73,6 +80,19 @@ class ZeroPositioning(AssemblyNode):
     m5x30_hex_bolt = M5x30HexBolt()
     zero_positioning_disc_securing_spring = ZeroPositioningDiscSecuringSpring()
 
+    # Triads of the original normalized source axis-angle placements. These
+    # keep the measured clocking/roll, not an idealized principal orientation.
+    cam_seat = Frame(at=(0, 0, -138.45),
+        x=(.001816586270028564, -.9999983500058006, -8.651691567642519e-17),
+        z=(8.651691567642519e-17, 8.667422412953526e-17, -1))
+    pin_seat = Frame(at=(-14.99997525, -.027248799, -165.75),
+        x=(-3.2740476996195866e-13, 3.6046641539722035e-10, 1),
+        z=(.9999983500045653, .0018165869499783267, -3.2740476996195866e-13))
+    follower_pivot = Frame(at=(*ZERO_PIVOT, 0))
+    cam_mount = zero_positioning_disc.mounting.on(cam_seat, zero_positioning_disc.turn)
+    pin_mount = zero_positioning_disc_pin.mounting.on(pin_seat, zero_positioning_disc_pin.turn)
+    follower_mount = follower.pivot.on(follower_pivot, follower.turn)
+
     turn.drives(zero_positioning_disc.turn)
     turn.drives(zero_positioning_disc_pin.turn)
     subtract.drives(zero_positioning_disc_pin.lift, ratio=9)
@@ -80,10 +100,6 @@ class ZeroPositioning(AssemblyNode):
     follower.turn.drives(documented_spring.deflection)
 
     def render(self):
-        self.zero_positioning_disc.rotate(-180, (.70774875, -.706464229, 0))
-        self.zero_positioning_disc.translate((0, 0, -138.45))
-        self.zero_positioning_disc_pin.rotate(-179.92640235, (.707106635, .000642261, .707106635))
-        self.zero_positioning_disc_pin.translate((-14.99997525, -.027248799, -165.75))
         self.m5_nut_1.rotate(180, (1, 0, 0)).translate((40.5, 33.6, -128.25))
         self.zero_positioning_m5_bolt_sleeve.rotate(-90, (0, 0, 1))
         self.zero_positioning_m5_bolt_sleeve.translate((40.5, 33.6, -161.85))

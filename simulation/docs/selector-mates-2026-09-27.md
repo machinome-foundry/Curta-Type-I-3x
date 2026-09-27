@@ -84,3 +84,12 @@ same 216 coordinate IDs and 26 control names, and 301 program sources. All
 417 file references exist (389 solid mesh occurrences plus 28 markings).
 The historical retained-bank hash also passes unchanged. This is not a claim
 of byte-identical export JSON or whole-machine geometry acceptance.
+
+The separately started operating regression finished successfully: 26 tests
+in 1326.451 seconds across `RunningCurtaTest`, running limits, ratchet,
+carriage/clearing interlocks and the operating-loop module. It imported
+framework `6ca6061` before the rotation fix was integrated and before any
+zero-mechanism edits. It therefore proves operating-state preservation for
+the selector adoption, not final numerical acceptance on `82a9774` or
+acceptance of the later zero-mechanism increment. The eight-test fresh pose
+run and final full build above provide the post-integration evidence.
