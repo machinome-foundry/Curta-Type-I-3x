@@ -1,6 +1,6 @@
 """Source marker, ball and spring travel together around their circular track."""
 
-from machinome.node import AssemblyNode
+from machinome.node import AssemblyNode, Frame
 from machinome.motion.joints import Bound, Revolute
 from machinome.simulation import Driver
 from machinome.parameters import Length
@@ -43,6 +43,53 @@ def marker(part, previous=None, gap=0, first=None, closing_gap=0, center=LOWER_C
     return part(turn=Revolute(axis=(0, 0, 1), at=center, range=(lower, upper)))
 
 
+class MountedMarker1(source.DecimalMarker1):
+    track = Frame(at=LOWER_CENTER)
+
+
+class MountedMarker2(source.DecimalMarker2):
+    track = Frame(at=LOWER_CENTER)
+
+
+class MountedMarker3(source.DecimalMarker3):
+    track = Frame(at=LOWER_CENTER)
+
+
+class MountedMarker4(source.DecimalMarker4):
+    track = Frame(at=LOWER_CENTER)
+
+
+class MountedMarker5(source.DecimalMarker5):
+    track = Frame(at=LOWER_CENTER)
+
+
+class MountedMarker6(source.DecimalMarker6):
+    track = Frame(at=UPPER_SOURCE_CENTER)
+
+
+class MountedMarker7(source.DecimalMarker7):
+    track = Frame(at=UPPER_SOURCE_CENTER)
+
+
+class MountedMarker8(source.DecimalMarker8):
+    track = Frame(at=UPPER_SOURCE_CENTER)
+
+
+class MountedMarker9(source.DecimalMarker9):
+    track = Frame(at=UPPER_SOURCE_CENTER)
+
+
+class MountedMarker10(source.DecimalMarker10):
+    track = Frame(at=UPPER_SOURCE_CENTER)
+
+
+def track_seat(index, center):
+    """The measured radial seating, evaluated with the bank's parameter."""
+    direction = radial_direction(index)
+    return Frame(at=lambda bank: tuple(origin + bank.radial_seat * radial
+                                       for origin, radial in zip(center, direction)))
+
+
 class LowerTrackPlacement(AssemblyNode):
     radial_seat = Length(.06, min=0)
 
@@ -52,13 +99,24 @@ class LowerTrackPlacement(AssemblyNode):
                 tuple(self.radial_seat * value for value in radial_direction(index)))
 
 
-class LowerMovableMarkers(LowerTrackPlacement):
-    decimal_marker_1 = marker(source.DecimalMarker1)
-    decimal_marker_2 = marker(source.DecimalMarker2, decimal_marker_1.turn, LOWER_GAPS[0])
-    decimal_marker_3 = marker(source.DecimalMarker3, decimal_marker_2.turn, LOWER_GAPS[1])
-    decimal_marker_4 = marker(source.DecimalMarker4, decimal_marker_3.turn, LOWER_GAPS[2])
-    decimal_marker_5 = marker(source.DecimalMarker5, decimal_marker_4.turn, LOWER_GAPS[3],
+class LowerMovableMarkers(AssemblyNode):
+    radial_seat = Length(.06, min=0)
+    marker_1_seat = track_seat(1, LOWER_CENTER)
+    marker_2_seat = track_seat(2, LOWER_CENTER)
+    marker_3_seat = track_seat(3, LOWER_CENTER)
+    marker_4_seat = track_seat(4, LOWER_CENTER)
+    marker_5_seat = track_seat(5, LOWER_CENTER)
+    decimal_marker_1 = marker(MountedMarker1)
+    decimal_marker_2 = marker(MountedMarker2, decimal_marker_1.turn, LOWER_GAPS[0])
+    decimal_marker_3 = marker(MountedMarker3, decimal_marker_2.turn, LOWER_GAPS[1])
+    decimal_marker_4 = marker(MountedMarker4, decimal_marker_3.turn, LOWER_GAPS[2])
+    decimal_marker_5 = marker(MountedMarker5, decimal_marker_4.turn, LOWER_GAPS[3],
                               decimal_marker_1.turn, LOWER_GAPS[4])
+    marker_1_mount = decimal_marker_1.track.on(marker_1_seat, decimal_marker_1.turn)
+    marker_2_mount = decimal_marker_2.track.on(marker_2_seat, decimal_marker_2.turn)
+    marker_3_mount = decimal_marker_3.track.on(marker_3_seat, decimal_marker_3.turn)
+    marker_4_mount = decimal_marker_4.track.on(marker_4_seat, decimal_marker_4.turn)
+    marker_5_mount = decimal_marker_5.track.on(marker_5_seat, decimal_marker_5.turn)
 
 
 class UpperTrackPlacement(AssemblyNode):
@@ -74,13 +132,26 @@ class UpperTrackPlacement(AssemblyNode):
                       in zip(radial_direction(index), UPPER_SOURCE_CENTER)))
 
 
-class UpperMovableMarkers(UpperTrackPlacement):
-    decimal_marker_6 = marker(source.DecimalMarker6, center=(0, 0, 0))
-    decimal_marker_7 = marker(source.DecimalMarker7, decimal_marker_6.turn, UPPER_GAPS[0], center=(0, 0, 0))
-    decimal_marker_8 = marker(source.DecimalMarker8, decimal_marker_7.turn, UPPER_GAPS[1], center=(0, 0, 0))
-    decimal_marker_9 = marker(source.DecimalMarker9, decimal_marker_8.turn, UPPER_GAPS[2], center=(0, 0, 0))
-    decimal_marker_10 = marker(source.DecimalMarker10, decimal_marker_9.turn, UPPER_GAPS[3],
+class UpperMovableMarkers(AssemblyNode):
+    radial_seat = Length(.06, min=0)
+    # The working upper track is recentered on the shaft; the source children
+    # keep their original track datum and internal placements.
+    marker_6_seat = track_seat(6, (0, 0, 0))
+    marker_7_seat = track_seat(7, (0, 0, 0))
+    marker_8_seat = track_seat(8, (0, 0, 0))
+    marker_9_seat = track_seat(9, (0, 0, 0))
+    marker_10_seat = track_seat(10, (0, 0, 0))
+    decimal_marker_6 = marker(MountedMarker6, center=(0, 0, 0))
+    decimal_marker_7 = marker(MountedMarker7, decimal_marker_6.turn, UPPER_GAPS[0], center=(0, 0, 0))
+    decimal_marker_8 = marker(MountedMarker8, decimal_marker_7.turn, UPPER_GAPS[1], center=(0, 0, 0))
+    decimal_marker_9 = marker(MountedMarker9, decimal_marker_8.turn, UPPER_GAPS[2], center=(0, 0, 0))
+    decimal_marker_10 = marker(MountedMarker10, decimal_marker_9.turn, UPPER_GAPS[3],
                                decimal_marker_6.turn, UPPER_GAPS[4], center=(0, 0, 0))
+    marker_6_mount = decimal_marker_6.track.on(marker_6_seat, decimal_marker_6.turn)
+    marker_7_mount = decimal_marker_7.track.on(marker_7_seat, decimal_marker_7.turn)
+    marker_8_mount = decimal_marker_8.track.on(marker_8_seat, decimal_marker_8.turn)
+    marker_9_mount = decimal_marker_9.track.on(marker_9_seat, decimal_marker_9.turn)
+    marker_10_mount = decimal_marker_10.track.on(marker_10_seat, decimal_marker_10.turn)
 
 
 class LowerGeometryMarkers(LowerTrackPlacement):

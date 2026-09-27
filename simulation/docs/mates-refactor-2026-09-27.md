@@ -5,6 +5,13 @@ placement has been converted. The generated source tree, printable geometry,
 fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
 acceptance remains open under the existing project record.
 
+The [decimal-marker increment](marker-mates-2026-09-27.md) attaches all ten
+marker/ball/spring assemblies using parameterized track frames and the
+existing neighbour-bound joints. The original radial seats, controls and
+coordinate paths remain. Independent thirty-leaf pose/replay comparisons,
+actual-root marker stops, installed motion on both kernels and the full
+export pass without a framework change.
+
 The [central-assembly increment](core-mates-2026-09-27.md) attaches the
 stepped drum, tens bell, operating carriage and complete clearing-ring
 assembly through their existing joints. Their native central-shaft frames
