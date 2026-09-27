@@ -14,6 +14,10 @@ The [transmission-channel checkpoint](docs/transmission-mates-2026-09-27.md)
 also attaches eleven result and six counter channels through their original
 turns. Its independent pose/replay checks, six full-root arithmetic cases,
 export and native views pass; the longer contact suite is still in progress.
+The [34 sliding groups](docs/transmission-slider-mates-2026-09-27.md) inside
+those channels now also use their original travel joints in frame mates.
+Their export preserves the complete program, controls and every asset byte;
+pose, replay and mutation checks pass. Integration awaits the contact gate.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.
 

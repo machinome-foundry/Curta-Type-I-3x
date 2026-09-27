@@ -10,7 +10,7 @@ import cadquery as cq
 from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
-from simulation.counter_lockout_parts import ContactCounterOnes
+from simulation.counter_lockout_parts import ContactCounterOnesUpper
 from simulation.fit import FittedCounterPinion
 from simulation.reverser_inputs import OnesInput
 from simulation.running_parts import RetainedTransmission, TurnsShafts
@@ -39,7 +39,11 @@ class ProtectedOnesInput(OnesInput):
 
 class ReverserContactOnes(channel_frames.TurnsOnes):
     # Retain ContactCounterOnes' independently verified upper lockout fit.
+    guide_seat = Frame(at=channel_frames.TurnsOnes.spindle.at, z=(0, 0, -1))
     p_10218_1 = ProtectedOnesInput(travel=Prismatic(axis=(0, 0, -1)))
+    p_10222_1 = ContactCounterOnesUpper(travel=Prismatic(axis=(0, 0, -1)))
+    input_mount = p_10218_1.guide.on(guide_seat, p_10218_1.travel)
+    carry_mount = p_10222_1.guide.on(guide_seat, p_10222_1.travel)
 
 
 class ReverserContactTurns(TurnsShafts):

@@ -6,6 +6,7 @@ surfaces; tessellation changes no native material. This is a simulation fit,
 not a manufacturing recommendation or adoption for the remaining bank.
 """
 
+from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 from simulation.fit import FittedCarryLockout
@@ -18,6 +19,7 @@ class ContactTensLockout(FittedCarryLockout):
 
 
 class ContactTensUpper(Part10220_410003_1_419227):
+    guide = Frame(at=ResultTens.turn.at, z=(0, 0, -1))
     linear_deflection = .01
     angular_deflection = .1
     pentagonal_lockout = ContactTensLockout()

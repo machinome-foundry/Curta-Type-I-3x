@@ -5,6 +5,7 @@ and refined complete-print mesh match its measured candidate; the remaining
 counter stations require their own admission and operating checks.
 """
 
+from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 
@@ -18,6 +19,7 @@ class ContactCounterLockout(FittedCarryLockout):
 
 
 class ContactCounterOnesUpper(Part10222_1):
+    guide = Frame(at=ReversingOnes.turn.at, z=(0, 0, -1))
     linear_deflection = .01
     angular_deflection = .1
     pentagonal_lockout = ContactCounterLockout()

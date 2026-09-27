@@ -1,5 +1,6 @@
 """Trial counter tooth fit at both measured reversing-lever positions."""
 
+from machinome.node import Frame
 from machinome.parameters import Length
 from machinome.motion.joints import Prismatic
 from simulation.fit import FittedCounterPinion
@@ -14,28 +15,34 @@ class ReversingCounterPinion(FittedCounterPinion):
 
 
 class OnesInput(printed.Part10218_1):
+    guide = Frame(at=channels.TurnsOnes.turn.at, z=(0, 0, -1))
     # Its three teeth need the existing .36 mm fit. Applying the higher-bank
     # .42 mm relief here loses the fork's axial capture at crank 75 degrees.
     pass
 
 
 class TensInput(printed.Part10230_410008_1_419080):
+    guide = Frame(at=channels.TurnsTens.turn.at, z=(0, 0, -1))
     transmission_gear_0_5 = ReversingCounterPinion()
 
 
 class HundredsInput(printed.Part10230_410008_1_419068):
+    guide = Frame(at=channels.TurnsHundreds.turn.at, z=(0, 0, -1))
     transmission_gear_0_5 = ReversingCounterPinion()
 
 
 class FourthInput(printed.Part10230_410008_1_419182):
+    guide = Frame(at=channels.TurnsDigit4.turn.at, z=(0, 0, -1))
     transmission_gear_0_5 = ReversingCounterPinion()
 
 
 class FifthInput(printed.Part10230_410008_1_419105):
+    guide = Frame(at=channels.TurnsDigit5.turn.at, z=(0, 0, -1))
     transmission_gear_0_5 = ReversingCounterPinion()
 
 
 class SixthInput(printed.Part10230_410008_1_419237):
+    guide = Frame(at=channels.TurnsDigit6.turn.at, z=(0, 0, -1))
     transmission_gear_0_5 = ReversingCounterPinion()
 
 

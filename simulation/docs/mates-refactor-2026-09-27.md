@@ -10,7 +10,15 @@ attaches all seventeen shaft channels through their existing turns, preserving
 the historical fit-trial banks independently. Pose/state/replay witnesses,
 seat-mutation probes, full-root arithmetic, export and native views pass.
 The longer actual-root contact suite remains in progress; this checkpoint
-does not yet close that increment. The internal sliding groups are next.
+does not yet close that increment.
+
+The [sliding-group increment](transmission-slider-mates-2026-09-27.md)
+attaches the 34 internal transmission prints through their existing travel
+joints. Its complete exported program and controls match the checkpoint;
+all 417 asset occurrences are byte-identical and the normalized exported root
+is equal. Independent poses, deliberate guide-seat mutations and two fresh
+actual-root regressions pass. Integration waits for the checkpoint's contact
+suite; no framework change is needed.
 
 The [decimal-marker increment](marker-mates-2026-09-27.md) attaches all ten
 marker/ball/spring assemblies using parameterized track frames and the

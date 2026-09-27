@@ -5,6 +5,7 @@ The declared station distinguishes the imported fusion's artifact identity;
 only its existing pentagonal locking outline receives the .16 mm fit.
 """
 
+from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Count
 from simulation.higher_lockout_parts import ContactTensLockout
@@ -24,21 +25,30 @@ RESULT_CONTACT_STATIONS = (
 )
 
 
-def contact_result_channel(station):
-    """Select a verified source-specific upper print for station 3..11."""
+def contact_result_upper(station):
+    """Construct the fitted print independently of a channel attachment."""
     if station not in range(3, 12):
         raise ValueError('Choose a remaining result station 3..11')
     channel, upper_name = RESULT_CONTACT_STATIONS[station-3]
     upper = getattr(printed, 'Part'+upper_name[2:])
 
     class ContactUpper(upper):
+        guide = Frame(at=channel.turn.at, z=(0, 0, -1))
         source_station = Count(station, min=station, max=station)
         linear_deflection = .01
         angular_deflection = .1
         pentagonal_lockout = ContactTensLockout()
 
+    return ContactUpper
+
+
+def contact_result_channel(station):
+    """Select a verified source-specific upper print for station 3..11."""
+    upper = contact_result_upper(station)
+    channel, upper_name = RESULT_CONTACT_STATIONS[station-3]
+
     class ContactChannel(channel):
         source_station = Count(station, min=station, max=station)
-        locals()[upper_name] = ContactUpper(travel=Prismatic(axis=(0, 0, -1)))
+        locals()[upper_name] = upper(travel=Prismatic(axis=(0, 0, -1)))
 
     return ContactChannel

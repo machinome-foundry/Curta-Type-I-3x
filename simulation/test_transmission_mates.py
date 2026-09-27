@@ -2,8 +2,8 @@
 
 import unittest
 
-from machinome.node import AssemblyNode, Frame
-from machinome.motion.joints import Prismatic
+from machinome.node import AssemblyNode, Frame, declared_children
+from machinome.motion.joints import Prismatic, declared_joints
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time
 from machinome.simulation import Driver, Sim
@@ -136,6 +136,23 @@ class TransmissionMateProbeTest(unittest.TestCase):
             self.assertEqual(before.keys(), after.keys())
             tips = [path for path in before if path.endswith('.transmission_gear_tip')]
             self.assertEqual(len(tips), 17)
+            sliding_paths = []
+            legacy = sims[0].node.transmission
+            for bank_name, count in (('result', 11), ('turns', 6)):
+                bank = getattr(legacy, bank_name)
+                for name in CHANNEL_NAMES[:count]:
+                    channel = getattr(bank, name)
+                    for child_name in declared_children(type(channel)):
+                        child = getattr(channel, child_name)
+                        if 'travel' in declared_joints(type(child)):
+                            path = f'.transmission.{bank_name}.{name}.{child_name}'
+                            sliding_paths.append(path)
+                            self.assertIn(path, before)
+                            self.assertTrue(any(leaf.startswith(path + '.') and
+                                ('.transmission_gear_' in leaf or
+                                 leaf.endswith('.pentagonal_lockout'))
+                                for leaf in before), path)
+            self.assertEqual(len(sliding_paths), 34)
             for path in before:
                 for first, second in zip(before[path], after[path]):
                     for a, b in zip(first, second):

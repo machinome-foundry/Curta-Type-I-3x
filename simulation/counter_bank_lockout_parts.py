@@ -5,6 +5,7 @@ Only the existing pentagonal outline receives the independently checked
 .16 mm flank fit; station identity distinguishes imported fusion artifacts.
 """
 
+from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Count, Length
 from simulation.fit import FittedCarryLockout
@@ -26,20 +27,29 @@ class ContactCounterBankLockout(FittedCarryLockout):
     flank_relief = Length(.16, min=0)
 
 
-def contact_counter_channel(station):
+def contact_counter_upper(station):
+    """Construct the fitted print independently of a channel attachment."""
     if station not in range(2, 7):
         raise ValueError('Choose a higher counter station 2..6')
     channel, upper_name = COUNTER_CONTACT_STATIONS[station-2]
     upper = getattr(printed, 'Part'+upper_name[2:])
 
     class ContactUpper(upper):
+        guide = Frame(at=channel.turn.at, z=(0, 0, -1))
         source_station = Count(station, min=station, max=station)
         linear_deflection = .01
         angular_deflection = .1
         pentagonal_lockout = ContactCounterBankLockout()
 
+    return ContactUpper
+
+
+def contact_counter_channel(station):
+    upper = contact_counter_upper(station)
+    channel, upper_name = COUNTER_CONTACT_STATIONS[station-2]
+
     class ContactChannel(channel):
         source_station = Count(station, min=station, max=station)
-        locals()[upper_name] = ContactUpper(travel=Prismatic(axis=(0, 0, -1)))
+        locals()[upper_name] = upper(travel=Prismatic(axis=(0, 0, -1)))
 
     return ContactChannel
