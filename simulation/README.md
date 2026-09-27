@@ -13,14 +13,17 @@ the full operating model builds on the integrated framework without an override.
 The [transmission-channel checkpoint](docs/transmission-mates-2026-09-27.md)
 also attaches eleven result and six counter channels through their original
 turns. Its independent pose/replay checks, six full-root arithmetic cases,
-export and native views pass; the longer contact suite is still in progress.
+export, native views and all eight actual-root contact tests pass.
 The [34 sliding groups](docs/transmission-slider-mates-2026-09-27.md) inside
 those channels now also use their original travel joints in frame mates.
 Their export preserves the complete program, controls and every asset byte;
-pose, replay and mutation checks pass. Integration awaits the contact gate.
+pose, replay and mutation checks pass. The checkpoint contact gate is complete.
 All fifteen [carry stations](docs/carry-mates-2026-09-27.md) now also attach
 their sliders, bearings and springs with frame mates. Their original wire
 deformation and capture contracts pass on both kernels without changing fits.
+The seventeen [detent balls and their complete spider](docs/detent-mates-2026-09-27.md)
+also use frame attachments, retaining independent ball travel and fingertip
+deformation. Pose, shape, replay, mutation and both-kernel capture checks pass.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.
 

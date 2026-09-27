@@ -23,7 +23,7 @@ from simulation.standard.parts import M4x10_419159
 from simulation.carry_bank_fits import CarryBankPassageFrame
 from simulation.retaining_spring import RetainingSpring, SEAT_GAP as SPRING_SEAT_GAP
 from simulation.bell_spring_motion import positioning as spring_positioning
-from simulation.register_detents import RegisterDetents
+from simulation.register_detent_frames import FramedRegisterDetents
 from simulation.dial_detent_motion import following
 from simulation.clearing_stop_motion import following as clearing_stop_following
 import simulation.standard.layers as layers
@@ -142,7 +142,7 @@ class RegisterCarriage(SourceRegisters):
     carrier = CarriageStructure()
     result_register = ResultRegister()
     turns_register = TurnsRegister()
-    dial_detents = RegisterDetents()
+    dial_detents = FramedRegisterDetents()
     clearing_ring = ClearingAssembly(turn=Revolute(axis=(0, 0, 1)))
     clearing_follower = clearing_ring.turn.drives(carrier.upper_carriage_body_1.press, law=clearing_stop_following)
 

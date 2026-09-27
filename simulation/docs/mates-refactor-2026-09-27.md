@@ -9,16 +9,16 @@ The [transmission-channel checkpoint](transmission-mates-2026-09-27.md)
 attaches all seventeen shaft channels through their existing turns, preserving
 the historical fit-trial banks independently. Pose/state/replay witnesses,
 seat-mutation probes, full-root arithmetic, export and native views pass.
-The longer actual-root contact suite remains in progress; this checkpoint
-does not yet close that increment.
+All eight actual-root contact tests now pass on frozen checkpoint `7ee005f`,
+closing that increment's contact gate.
 
 The [sliding-group increment](transmission-slider-mates-2026-09-27.md)
 attaches the 34 internal transmission prints through their existing travel
 joints. Its complete exported program and controls match the checkpoint;
 all 417 asset occurrences are byte-identical and the normalized exported root
 is equal. Independent poses, deliberate guide-seat mutations and two fresh
-actual-root regressions pass. Integration waits for the checkpoint's contact
-suite; no framework change is needed.
+actual-root regressions pass. The checkpoint contact gate is complete;
+no framework change is needed.
 
 The [carry-station increment](carry-mates-2026-09-27.md) replaces the source
 placements of all fifteen sliders, bearings and spring assemblies with
@@ -26,7 +26,15 @@ explicit frame mates. Slider travel remains the existing joint; rigid spring
 mounts retain their intrinsic deformation coordinates. Independent pose,
 state, shape and replay witnesses, mutation probes, unchanged fifteen-station
 capture contracts on both kernels, native views and the full export pass.
-The same outer-channel contact gate still holds integration.
+The outer-channel contact gate is now complete.
+
+The [detent increment](detent-mates-2026-09-27.md) attaches all seventeen
+balls through their existing lift joints and the complete spider rigidly.
+Its seventeen fingertip coordinates remain intrinsic deformation, not new
+mounting freedoms. Independent poses, shape values, replay, seat mutations,
+both-kernel capture, native pixels and the complete export pass. Only the
+seventeen inherited ball-to-finger relation provenance labels change in the
+exported motion program; executable content and controls remain identical.
 
 The [decimal-marker increment](marker-mates-2026-09-27.md) attaches all ten
 marker/ball/spring assemblies using parameterized track frames and the

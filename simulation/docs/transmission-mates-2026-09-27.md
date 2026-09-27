@@ -76,8 +76,11 @@ pose bench is visual attachment evidence, not a clearance claim for those
 arbitrary simultaneous settings. Its separate artifact directory was seeded
 from the completed export so it did not write into the contact tests' cache.
 
-Actual-root contact tests are in progress. The eighth-result, hundreds-result
-and counter-ones cases have passed completely; counter tens and the four
-higher counter stations remain in progress. This is a checkpoint, not yet a
-completed transmission increment. The candidate source stays frozen in the
-primary checkout while subsequent work uses a separate project worktree.
+The complete actual-root contact suite passes all eight tests in 3878.007
+seconds on frozen checkpoint `7ee005f`: eighth and hundreds result stations,
+counter ones and tens, and counter hundreds through sixth. Each checks short
+and long requests, native/faceted contact at the stop, positive overtravel,
+repeated blocking, relief and replay. No tolerance was relaxed. This closes
+the outer-channel increment's contact gate. Production source stayed frozen
+in the primary checkout while subsequent work used a separate project
+worktree; this result is not relabelled as a rerun of those later increments.

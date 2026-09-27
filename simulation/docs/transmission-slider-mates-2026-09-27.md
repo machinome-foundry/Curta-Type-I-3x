@@ -81,5 +81,6 @@ build, snapshot and two running cases used 4 GiB address-space caps. Build
 artifacts stayed in the isolated worktree; the primary contact run continued
 against its frozen source and separate cache.
 
-Integration still waits for the outer-channel contact suite. Whole-machine
+The frozen outer-channel checkpoint subsequently passed its eight-test contact
+suite in 3878.007 seconds, releasing that integration gate. Whole-machine
 geometry acceptance remains open; no OpenSpec archive is claimed here.

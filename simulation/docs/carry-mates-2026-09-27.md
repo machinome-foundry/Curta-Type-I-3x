@@ -62,6 +62,7 @@ Capture fixtures are `cf1aa740e909e8ffb6006cfc47cd8765ec16a398` and
 The driven native view `_build/carry-mates-set.png` was inspected at
 `stroke=2.562` with complete automatic framing. All fifteen sliders remain
 in their bearing seats with their spring wires attached. The matching legacy
-view `_build/carry-legacy-set.png` has identical decoded pixels. Exact capture
-is complete; integration still waits for the outer-channel contact gate.
+view `_build/carry-legacy-set.png` has identical decoded RGB pixels. Exact
+capture is complete; the frozen outer-channel checkpoint subsequently passed
+its eight-test contact suite, releasing that integration gate.
 No whole-machine geometry acceptance is claimed.

@@ -6,30 +6,13 @@ deformation coordinate, not a second attachment freedom. Its nominal source
 datum is placed without changing the wire law that holds the closed U.
 """
 
-from math import cos, sin, radians, sqrt
 from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from simulation.standard import carry
 from simulation.carry_heads import ResultsSlider, TurnsSlider
 from simulation.carry_seat import ResultsSpringSeat, TurnsSpringSeat
 from simulation.carry_spring import MountedCarrySpring
-
-
-def source_frame(*, at, angle, axis):
-    """Express one recorded source rotation/translation as a full frame."""
-    length = sqrt(sum(value * value for value in axis))
-    unit = tuple(value / length for value in axis)
-    cosine, sine = cos(radians(angle)), sin(radians(angle))
-
-    def rotate(vector):
-        x, y, z = unit
-        a, b, c = vector
-        cross = (y * c - z * b, z * a - x * c, x * b - y * a)
-        dot = sum(u * v for u, v in zip(unit, vector))
-        return tuple(v * cosine + w * sine + u * dot * (1 - cosine)
-                     for v, w, u in zip(vector, cross, unit))
-
-    return Frame(at=at, x=rotate((1, 0, 0)), z=rotate((0, 0, 1)))
+from simulation.source_frames import source_frame
 
 
 class MountedResultsSlider(ResultsSlider):
@@ -380,4 +363,3 @@ class TurnsLever5(carry.TurnsLever5):
     def render(self):
         # Every direct child is placed by its mate, not the source render.
         pass
-
