@@ -1,7 +1,8 @@
 # Final operating-attachment adoption
 
-This completes the source-declaration work after detent commit `cdac345`.
-Final full-root validation and integration are still pending at this checkpoint.
+This completes the operating-attachment refactor after detent commit `cdac345`.
+Production commit `4d4456230a6fc854493eac8bbeb2b459a9a83721` records the final
+source. All final validation gates pass; the result is ready for local integration.
 No further framework change or operator-interface change is introduced.
 
 ## Scope
@@ -64,6 +65,8 @@ and snapshot replay is exact. The existing crank witness retains its stricter
 nine-decimal comparison and the historical 216-coordinate hash.
 
 All 36 focused adoption/coverage/running-marker tests pass in 46.786 seconds.
+They pass again on the committed source in 43.268 seconds. The only intervening
+source edits remove two trailing blank lines; no executable statement changes.
 After unmodified witnesses pass, twelve independent +.2 mm frame perturbations
 each fail the corresponding witness: pawl, pawl spring, reverser ball/spring/
 knob, positioning ring/spring/ball, clearing pin/spring, loop, and bell spring.
@@ -106,6 +109,12 @@ deploy=90, subtract=1 also matches its independent legacy view exactly:
 `_build/remaining-mates-set.png` and `remaining-legacy-set.png`. The bell,
 carrier and deployed loop remain aligned. These independent-input poses are
 visual attachment comparisons, not arbitrary-setting clearance claims.
+The remaining-attachment rest view `_build/remaining-mates-rest.png` is also
+inspected, showing the stowed loop on the complete upper stack. Final fitted
+carry views at stroke=2.562 mm and camera distance 600 show all fifteen complete
+stations: `_build/shoulder-mates-complete.png` and `shoulder-legacy-complete.png`.
+Their decoded RGB bytes match exactly; the auto-framed close views are retained
+but the complete framed pair is the relied-on comparison.
 
 Fresh `machinome build operating_curta` exits zero. Compared with frozen outer
 checkpoint `7ee005f`, all 417 model/marking occurrences have identical STL bytes.
@@ -117,10 +126,34 @@ controls (26), instructions, drivers, bindings, animation and version 13 remain
 equal. This is not a claim of byte-identical JSON: provenance and operation
 spelling change. Export SHA-256 is
 `36e6675972fe7c9e3f5618e4ebde9996d531dbe4543e6816186c808a1c6a0718`.
+The full exported root also compares equal after excluding only placement
+`operations` and `mtime`, and replacing model filenames with their SHA-256
+content identities. Thus flexible-shape data, hierarchy, names and appearance
+remain unchanged too; placement is checked by the independent basis witnesses.
+The build rerun on committed `4d44562` exits zero with the same export hash.
 
 The primary checkpoint's eight contact tests passed in 3878.007 seconds before
-these final changes. That result remains scoped to `7ee005f`; fresh final-root
-arithmetic, restraints and reverser-contact regressions are still running.
+these final changes. That result remains scoped to `7ee005f`.
+
+The fresh final full-root batch passes all **37 tests in 1992.475 seconds**,
+exit zero. It includes six arithmetic cases; crank/reverser travel limits;
+every ratchet tooth, repeated reverse requests, production replay and the
+unrestrained negative control; all carriage/clearing interlocks; loop stop,
+retry, relief and replay; all five marker checks; all four prepared crank
+modes; four retained-phase/wrong-order contact tests; and reversed-counter
+passage checked against both geometry representations. Command:
+
+```sh
+python -m unittest -v simulation.test_running.RunningCurtaTest \
+  simulation.test_running_limits simulation.test_running_ratchet \
+  simulation.test_running_interlocks simulation.test_operating_loop \
+  simulation.test_running_markers simulation.test_running_reverser_wrong_order \
+  simulation.test_running_reverser_contact_path
+```
+
+The raw log is `_build/final-mates-running-complete.log`. No request, timestep,
+comparison tolerance or geometry assertion was weakened. The earlier interrupted
+run is retained separately and is not counted as passing evidence.
 
 ## Completion boundaries
 
@@ -130,3 +163,5 @@ caps and the full-root operating batch an 8 GiB cap. No source CAD, printable
 geometry, physical clearance, tolerance, viewer schema or control was changed.
 This refactor does not close whole-machine geometry acceptance: the existing
 `simulate-the-curta` umbrella remains 17/23 and is not archived.
+`openspec validate simulate-the-curta --strict` passes. Its planning artifacts
+are complete, but the six unchecked whole-machine tasks remain unchecked.

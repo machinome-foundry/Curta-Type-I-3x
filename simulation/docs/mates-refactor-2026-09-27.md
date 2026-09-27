@@ -1,9 +1,18 @@
 # Curta frames and mates migration
 
-This records incremental adoption, not a claim that every Curta joint or source
-placement has been converted. The generated source tree, printable geometry,
-fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
-acceptance remains open under the existing project record.
+Operating mechanical-attachment adoption is complete, with 185 mates. The
+[final validation record](final-mates-2026-09-27.md) covers the remaining pawl,
+reverser, positioning, clearing and spring attachments, and the final-tree
+audit's correction of five shoulder-fitted counter stations. All 36 focused
+and 37 final full-root tests pass, alongside scoped exact/faceted checks and
+independent native views. The 216 retained coordinates and 26 controls remain.
+
+This is not a conversion of every source placement: fixed source hardware and
+nineteen intrinsic flexible-patch joints deliberately retain their original
+declarations. The generated source tree, printable geometry, fitted clearances
+and arithmetic laws are unchanged. Whole-machine geometry acceptance remains
+open under the existing project record. The sections below retain the history
+and original scope of each increment.
 
 The [transmission-channel checkpoint](transmission-mates-2026-09-27.md)
 attaches all seventeen shaft channels through their existing turns, preserving

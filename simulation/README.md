@@ -1,30 +1,20 @@
 # Curta simulation — operating controls complete, geometry acceptance open
 
-The [mates/frames refactor](docs/mates-refactor-2026-09-27.md) has adopted the
-operating crank, all seventeen register dials, all eight input selectors
-(both shafts and each sliding knob), the zero cam, drive pin and follower,
-the central drum, tens bell, operating carriage and clearing-ring assembly,
-and all ten decimal markers with their original neighbour stops.
-Its 216 retained coordinates and 26
-operator controls are preserved. The earlier 32-test operating batch,
-independent crank/dial/selector/zero/core/marker pose witnesses, and scoped
-exact/faceted checks pass;
-the full operating model builds on the integrated framework without an override.
-The [transmission-channel checkpoint](docs/transmission-mates-2026-09-27.md)
-also attaches eleven result and six counter channels through their original
-turns. Its independent pose/replay checks, six full-root arithmetic cases,
-export, native views and all eight actual-root contact tests pass.
-The [34 sliding groups](docs/transmission-slider-mates-2026-09-27.md) inside
-those channels now also use their original travel joints in frame mates.
-Their export preserves the complete program, controls and every asset byte;
-pose, replay and mutation checks pass. The checkpoint contact gate is complete.
-All fifteen [carry stations](docs/carry-mates-2026-09-27.md) now also attach
-their sliders, bearings and springs with frame mates. Their original wire
-deformation and capture contracts pass on both kernels without changing fits.
-The seventeen [detent balls and their complete spider](docs/detent-mates-2026-09-27.md)
-also use frame attachments, retaining independent ball travel and fingertip
-deformation. Pose, shape, replay, mutation and both-kernel capture checks pass.
-The remaining assemblies are not yet migrated. Whole-machine geometry
+The operating [mates/frames refactor](docs/mates-refactor-2026-09-27.md) is
+complete: 185 mates attach the mechanical moving parts and their named seats,
+including the final shoulder-fitted counter carries. Its 216 retained
+coordinates, 26 operator controls, fitted shapes and arithmetic laws are
+preserved. Nineteen spider-tip/spring-hook joints remain intrinsic deformation
+within parts, not separate mounting freedoms; unchanged fixed source hardware
+keeps its original placements.
+
+The [final validation record](docs/final-mates-2026-09-27.md) documents 36
+focused tests, 37 fresh full-root operating tests, independent legacy pose/
+shape/replay comparisons, deliberate seat mutations, native before/after
+pixels and scoped exact/faceted geometry checks. The full model builds on
+integrated framework `fabfc3d` without an override. All 417 mesh/marking
+occurrences retain identical STL bytes; only relation provenance labels and
+placement-operation spelling change in the export. Whole-machine geometry
 acceptance remains open as described below.
 
 The latest [clearing-loop replacement](docs/clearing-loop-replacement-2026-09-23.md)
