@@ -12,6 +12,8 @@ from simulation.running_parts import (
     RESULT_RESTS, TURNS_RESTS,
 )
 from simulation.test_mate_refactor import placed_basis
+from simulation import counter_guide_trial
+from simulation.counter_shoulder_running_parts import ShoulderRetainedTurnsCarries
 
 
 class LegacyResultCarries(carry.ResultsCarry):
@@ -47,9 +49,27 @@ class MatedCarryBench(LegacyCarryBench):
     turns = RetainedTurnsCarries()
 
 
+class LegacyShoulderCarries(carry.TurnsCarry):
+    for _index, _rest in enumerate(TURNS_RESTS, 1):
+        locals()[f'turns_tens_lever_assembly_{_index}'] = retained_lever(
+            getattr(counter_guide_trial, f'TurnsLever{_index}'), _rest, True)()
+    del _index, _rest
+
+
+class LegacyShoulderBench(LegacyCarryBench):
+    turns = LegacyShoulderCarries()
+
+
+class MatedShoulderBench(MatedCarryBench):
+    turns = ShoulderRetainedTurnsCarries()
+
+
 class CarryMateTest(unittest.TestCase):
+    legacy = LegacyCarryBench
+    mated = MatedCarryBench
+
     def test_each_station_attaches_its_slider_bearing_and_spring(self):
-        root = MatedCarryBench()
+        root = self.mated()
         for bank_name, prefix, count, slider in (
                 ('result', 'results', 10, 'tens_slider_for_results'),
                 ('turns', 'turns', 5, 'tens_slider_for_turns_counter')):
@@ -64,7 +84,7 @@ class CarryMateTest(unittest.TestCase):
                     self.assertIsNone(mates['spring_mount'].freedom)
 
     def test_source_stations_preserve_poses_state_spring_shape_and_replay(self):
-        sims = tuple(Sim(cls(), dt=.1) for cls in (LegacyCarryBench, MatedCarryBench))
+        sims = tuple(Sim(cls(), dt=.1) for cls in (self.legacy, self.mated))
         for stroke in (0, .84, 2.1, 2.94, 4.2, 1.05, 0):
             for sim in sims:
                 saved = sim.snapshot()
@@ -95,3 +115,8 @@ class CarryMateTest(unittest.TestCase):
                                       'right_bridge', 'right_mid', 'right_tip'):
                         self.assertEqual(getattr(wires[0], parameter).value,
                                          getattr(wires[1], parameter).value)
+
+
+class ShoulderCarryMateTest(CarryMateTest):
+    legacy = LegacyShoulderBench
+    mated = MatedShoulderBench

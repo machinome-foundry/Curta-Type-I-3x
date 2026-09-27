@@ -1,5 +1,11 @@
 # Carry-station frame adoption
 
+Scope correction from the [final operating-tree audit](final-mates-2026-09-27.md):
+this increment covers the fifteen stations in the retained base banks. The
+actual operating root substitutes five later shoulder-fitted counter stations;
+those require and receive separate frame adoption in the final increment.
+The evidence below retains its original bank selection.
+
 This increment follows sliding-group commit `4e56737` in the isolated project
 worktree. All fifteen carry stations get three explicit mates: the slider
 references its original parent-space `travel` joint, while the fixed bearing

@@ -14,6 +14,13 @@ and outcomes. Direct-operation tasks 6.1–6.6 are complete (17/23 overall).
 Whole-machine tasks 1.3 and 5.1–5.5 remain open; the umbrella is not archived.
 The evidence below this current checkpoint retains its historical scope.
 
+September 27: the [frames/mates refactor](../../../simulation/docs/mates-refactor-2026-09-27.md)
+preserves the operating surface and existing geometry requirements. Its
+[final attachment record](../../../simulation/docs/final-mates-2026-09-27.md)
+tracks the whole-root coverage audit, independent legacy witnesses, mutation
+checks, final exact/operating gates and integration. This refactoring does not
+complete or waive any of the remaining whole-machine tasks below.
+
 Latest September 23: the [production reverser adoption](../../../simulation/docs/reverser-operating-adoption-2026-09-23.md)
 resolves the scoped crank-90 wrong-order and reversed crank-82.432377 failures
 recorded below. Five production contact/path checks, six arithmetic tests,

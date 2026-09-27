@@ -15,6 +15,7 @@ from machinome.simulation import Driver, Instruction, Button, Turn, Slide, Follo
 from simulation.assemblies import LayeredSource
 from simulation.mechanism import Frame
 from simulation.positioning import SeatedCarriagePositioning, RadialCarriagePositioning
+from simulation.positioning_frames import FramedCarriagePositioning
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.running_parts import (IndependentInputs, RetainedCarriage, RunningMainDrive, RunningEnclosure,
     RetainedCarries, RetainedTransmission, RESULT_DIALS, TURNS_DIALS,
@@ -236,7 +237,7 @@ class StaticBallOperatingCurta(LayeredSource):
 
 
 class RadialRunningCarriage(RunningCarriage):
-    positioning = RadialCarriagePositioning()
+    positioning = FramedCarriagePositioning()
 
 
 class RadialBallOperatingCurta(StaticBallOperatingCurta):

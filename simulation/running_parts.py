@@ -10,6 +10,9 @@ from machinome.motion.ports import Port
 from simulation import assemblies
 from simulation import channel_frames
 from simulation import carry_frames
+from simulation.drive_frames import FramedRetainedAntiReversal, FramedRunningReverser
+from simulation.bell_frames import FramedTensBellAssembly
+from simulation.carrier_frames import FrameAttachedAxleCarrier
 from simulation.mechanism import SteppedDrum, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.zero import ZeroPositioning
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
@@ -85,8 +88,18 @@ class RetainedAxleCarrier(FittedAxleCarrier):
         self.counter_body_stop_pin.translate((0, 0, STOP_PIN_SEATING_RISE))
 
 
+class FramedRetainedAxleCarrier(FrameAttachedAxleCarrier):
+    counter_body = ClearingSeatCounterBody()
+    counter_body_stop_pin = CounterBodyStopPin()
+    pin_drive = FrameAttachedAxleCarrier.clearing_pin.slide.drives(FittedAxleCarrier.press)
+
+    def render(self):
+        super().render()
+        self.counter_body_stop_pin.translate((0, 0, STOP_PIN_SEATING_RISE))
+
+
 class RetainedCarriageStructure(CarriageStructure):
-    upper_carriage_body_1 = RetainedAxleCarrier()
+    upper_carriage_body_1 = FramedRetainedAxleCarrier()
     crank_collar = SeatedCollar()
     crank_collar_washer = SeatedCollarWasher()
 
@@ -144,7 +157,7 @@ class RunningReverser(FollowingReverser):
 
 
 class RunningReversingAssembly(AssemblyNode):
-    reversing_lever_1 = RunningReverser()
+    reversing_lever_1 = FramedRunningReverser()
 
 
 class AttachedCrank(SeatedCrankAssembly):
@@ -158,7 +171,7 @@ class RunningMainDrive(assemblies.MainDrive):
     crank_seat = AttachmentFrame()
     drum_seat = AttachmentFrame()
     subtract = Port()
-    anti_reversal = RetainedAntiReversal()
+    anti_reversal = FramedRetainedAntiReversal()
     reversing_lever = RunningReversingAssembly()
     crank = AttachedCrank()
     turn = crank.spindle.on(crank_seat, Revolute(range=(None,
@@ -216,7 +229,7 @@ class RetainedTurnsCarries(carry.TurnsCarry):
     turns_tens_lever_assembly_5 = retained_lever(carry_frames.TurnsLever5, -1.8, True)()
 
 
-class ContactBellAssembly(TensBellAssembly):
+class ContactBellAssembly(FramedTensBellAssembly):
     # The bell and its spring remain in their source assembly coordinates.
     spindle = AttachmentFrame()
     tens_bell_1 = ContactBell()
