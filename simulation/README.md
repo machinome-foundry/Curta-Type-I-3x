@@ -1,9 +1,10 @@
 # Curta simulation — operating controls complete, geometry acceptance open
 
 The [mates/frames refactor](docs/mates-refactor-2026-09-27.md) has adopted the
-operating crank and all seventeen register dials. Its 216 retained coordinates
-and 26 operator controls are preserved. The 32-test operating batch,
-independent crank/dial pose witnesses, and exact/faceted register checks pass;
+operating crank, all seventeen register dials, and all eight input selectors
+(both shafts and each sliding knob). Its 216 retained coordinates and 26
+operator controls are preserved. The earlier 32-test operating batch,
+independent crank/dial/selector pose witnesses, and scoped exact/faceted checks pass;
 the full operating model builds on the integrated framework without an override.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.

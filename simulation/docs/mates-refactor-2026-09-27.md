@@ -5,6 +5,13 @@ placement has been converted. The generated source tree, printable geometry,
 fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
 acceptance remains open under the existing project record.
 
+The [eight-selector increment](selector-mates-2026-09-27.md) additionally
+attaches both shafts and the sliding knob of every input channel through their
+original joints. It exposed and verified the internal mate rotation correction
+integrated as framework `82a9774`; no new interface or caller tolerance was
+needed. Its 56-leaf independent pose/replay witness, scoped geometric checks,
+native views and full-root build preserve the existing operator surface.
+
 ## Attachment and contracts
 
 `AttachedCrank.spindle` and `RunningMainDrive.crank_seat` name the existing

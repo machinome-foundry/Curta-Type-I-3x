@@ -2,16 +2,45 @@
 
 Source-specific axes and child types are deliberately explicit.
 """
+from math import cos, sin, radians
+from machinome.node import Frame
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
 from machinome.math import floor
 from machinome.simulation import Driver
 from simulation.standard.assembly import *
 from simulation.standard.layers import InputSelectors
+from simulation.selector_frames import (
+    SelectorShaftBottom,
+    SelectorShaftTop1_419054,
+    SelectorKnob1_419057,
+    SelectorShaftTop1_419153,
+    SelectorKnob1_419152,
+    SelectorShaftTop1_419224,
+    SelectorKnob1_419225,
+    SelectorShaftTop1_419083,
+    SelectorKnob1_419084,
+    SelectorShaftTop1_419178,
+    SelectorKnob1_419177,
+    SelectorShaftTop1_419142,
+    SelectorKnob1_419141,
+    SelectorShaftTop1_419103,
+    SelectorKnob1_419102,
+    SelectorShaftTop1_419156,
+    SelectorKnob1_419155,
+)
+
+
+def shaft_clocking(degrees):
+    """The STEP bottom-shaft placement's local +X direction."""
+    angle = radians(degrees)
+    return cos(angle), sin(angle), 0
+
 
 def digit_at(place):
     return lambda source, target: lambda value: (
         floor(value / 10 ** place) - 10 * floor(value / 10 ** (place + 1)))
+
 
 class Selector1(DigitSelectorAxle1):
     setting = Port()
@@ -21,6 +50,20 @@ class Selector1(DigitSelectorAxle1):
     setting.drives(selector_knob_1_419057.travel, ratio=6)
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419054.turn)
+
+    lower_seat = Frame(at=(58.5, 0.0, -127.775),
+                       x=shaft_clocking(4.4))
+    upper_seat = Frame(at=(58.5, 0.0, -127.8))
+    knob_guide = Frame(at=(58.5, 0.0, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419054.axle.on(
+        upper_seat, selector_shaft_top_1_419054.turn)
+    knob_mount = selector_knob_1_419057.guide.on(
+        knob_guide, selector_knob_1_419057.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
 
 
 class Selector2(DigitSelectorAxle2):
@@ -32,6 +75,20 @@ class Selector2(DigitSelectorAxle2):
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419153.turn)
 
+    lower_seat = Frame(at=(54.972018316, -20.008178385, -127.775),
+                       x=shaft_clocking(-15.6))
+    upper_seat = Frame(at=(54.972018316, -20.008178385, -127.8))
+    knob_guide = Frame(at=(54.972018316, -20.008178385, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419153.axle.on(
+        upper_seat, selector_shaft_top_1_419153.turn)
+    knob_mount = selector_knob_1_419152.guide.on(
+        knob_guide, selector_knob_1_419152.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
+
 
 class Selector3(DigitSelectorAxle3):
     setting = Port()
@@ -41,6 +98,20 @@ class Selector3(DigitSelectorAxle3):
     setting.drives(selector_knob_1_419225.travel, ratio=6)
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419224.turn)
+
+    lower_seat = Frame(at=(44.813599922, -37.603075167, -127.775),
+                       x=shaft_clocking(-35.6))
+    upper_seat = Frame(at=(44.813599922, -37.603075167, -127.8))
+    knob_guide = Frame(at=(44.813599922, -37.603075167, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419224.axle.on(
+        upper_seat, selector_shaft_top_1_419224.turn)
+    knob_mount = selector_knob_1_419225.guide.on(
+        knob_guide, selector_knob_1_419225.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
 
 
 class Selector4(DigitSelectorAxle4):
@@ -52,6 +123,20 @@ class Selector4(DigitSelectorAxle4):
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419083.turn)
 
+    lower_seat = Frame(at=(29.25, -50.662486121, -127.775),
+                       x=shaft_clocking(-55.6))
+    upper_seat = Frame(at=(29.25, -50.662486121, -127.8))
+    knob_guide = Frame(at=(29.25, -50.662486121, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419083.axle.on(
+        upper_seat, selector_shaft_top_1_419083.turn)
+    knob_mount = selector_knob_1_419084.guide.on(
+        knob_guide, selector_knob_1_419084.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
+
 
 class Selector5(DigitSelectorAxle5):
     setting = Port()
@@ -61,6 +146,20 @@ class Selector5(DigitSelectorAxle5):
     setting.drives(selector_knob_1_419177.travel, ratio=6)
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419178.turn)
+
+    lower_seat = Frame(at=(10.158418394, -57.611253551, -127.775),
+                       x=shaft_clocking(-75.6))
+    upper_seat = Frame(at=(10.158418394, -57.611253551, -127.8))
+    knob_guide = Frame(at=(10.158418394, -57.611253551, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419178.axle.on(
+        upper_seat, selector_shaft_top_1_419178.turn)
+    knob_mount = selector_knob_1_419177.guide.on(
+        knob_guide, selector_knob_1_419177.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
 
 
 class Selector6(DigitSelectorAxle6):
@@ -72,6 +171,20 @@ class Selector6(DigitSelectorAxle6):
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419142.turn)
 
+    lower_seat = Frame(at=(-10.158418394, -57.611253551, -127.775),
+                       x=shaft_clocking(-95.6))
+    upper_seat = Frame(at=(-10.158418394, -57.611253551, -127.8))
+    knob_guide = Frame(at=(-10.158418394, -57.611253551, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419142.axle.on(
+        upper_seat, selector_shaft_top_1_419142.turn)
+    knob_mount = selector_knob_1_419141.guide.on(
+        knob_guide, selector_knob_1_419141.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
+
 
 class Selector7(DigitSelectorAxle7):
     setting = Port()
@@ -82,6 +195,20 @@ class Selector7(DigitSelectorAxle7):
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419103.turn)
 
+    lower_seat = Frame(at=(-29.25, -50.662486121, -127.775),
+                       x=shaft_clocking(-115.6))
+    upper_seat = Frame(at=(-29.25, -50.662486121, -127.8))
+    knob_guide = Frame(at=(-29.25, -50.662486121, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419103.axle.on(
+        upper_seat, selector_shaft_top_1_419103.turn)
+    knob_mount = selector_knob_1_419102.guide.on(
+        knob_guide, selector_knob_1_419102.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
+
 
 class Selector8(DigitSelectorAxle8):
     setting = Port()
@@ -91,6 +218,20 @@ class Selector8(DigitSelectorAxle8):
     setting.drives(selector_knob_1_419155.travel, ratio=6)
     setting.drives(selector_shaft_bottom.turn, ratio=36)
     selector_shaft_bottom.turn.drives(selector_shaft_top_1_419156.turn)
+
+    lower_seat = Frame(at=(-44.813599922, -37.603075167, -127.775),
+                       x=shaft_clocking(-135.6))
+    upper_seat = Frame(at=(-44.813599922, -37.603075167, -127.8))
+    knob_guide = Frame(at=(-44.813599922, -37.603075167, -69.725), z=(0, 0, -1))
+    lower_mount = selector_shaft_bottom.axle.on(lower_seat, selector_shaft_bottom.turn)
+    upper_mount = selector_shaft_top_1_419156.axle.on(
+        upper_seat, selector_shaft_top_1_419156.turn)
+    knob_mount = selector_knob_1_419155.guide.on(
+        knob_guide, selector_knob_1_419155.travel)
+
+    def render(self):
+        # The lower mate now owns the placement formerly in the source parent.
+        pass
 
 
 class IndependentSelectors(InputSelectors):
