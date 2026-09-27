@@ -13,8 +13,9 @@ focused tests, 37 fresh full-root operating tests, independent legacy pose/
 shape/replay comparisons, deliberate seat mutations, native before/after
 pixels and scoped exact/faceted geometry checks. The full model builds on
 integrated framework `fabfc3d` without an override. All 417 mesh/marking
-occurrences retain identical STL bytes; only relation provenance labels and
-placement-operation spelling change in the export. Whole-machine geometry
+occurrences retain identical STL bytes. The motion program changes only its
+relation provenance labels; placement spelling and cache metadata also differ.
+Whole-machine geometry
 acceptance remains open as described below.
 
 The latest [clearing-loop replacement](docs/clearing-loop-replacement-2026-09-23.md)

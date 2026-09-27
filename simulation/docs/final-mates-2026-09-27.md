@@ -2,7 +2,7 @@
 
 This completes the operating-attachment refactor after detent commit `cdac345`.
 Production commit `4d4456230a6fc854493eac8bbeb2b459a9a83721` records the final
-source. All final validation gates pass; the result is ready for local integration.
+source. All final validation gates pass and the result is integrated locally.
 No further framework change or operator-interface change is introduced.
 
 ## Scope
@@ -165,3 +165,28 @@ This refactor does not close whole-machine geometry acceptance: the existing
 `simulate-the-curta` umbrella remains 17/23 and is not archived.
 `openspec validate simulate-the-curta --strict` passes. Its planning artifacts
 are complete, but the six unchecked whole-machine tasks remain unchecked.
+
+## Integration and retained evidence
+
+Production `4d44562` and validation record `59a2697` were fast-forwarded into
+the project's recorded `main`. The main checkout then passed all five
+coverage/crank/retained-bank smoke tests in 11.431 seconds and a fresh
+`machinome build operating_curta`, both with exit zero and no framework override.
+The complete main/worktree exports compare equal after removing only `mtime`;
+all 417 model/marking occurrences have identical asset bytes. The main export's
+SHA-256 is `05eb138e2f4b64f029571438005f93c2a43a9a7ca0f791e3b8f3957108c77474`.
+
+The isolated project worktree was removed cleanly after integration, without
+force. All 8,203 evidence/cache/source files were copied and byte-verified in
+the primary project's ignored `_build_mates_final_20260927/` directory. Paths
+above beginning `_build/` now live inside that retained directory; the original
+red records are retained there too. The source and record commits and their
+branch remain recoverable. The main build/smoke logs are `main-build.log` and
+`main-smoke.log` at that directory's top level. Existing untracked user files
+and unrelated worktrees remain untouched. Nothing was pushed or published.
+
+Framework main remains `fabfc3da547f133caf4d991f94582eebcd90f37d` and Studio
+main `655a3ccc6f9a88a0dda8f579fa0180f77eb826e5`, both clean. The ratified
+framework cycles retain their separately proposed/applied, adversarially
+reviewed, synced and archived records. No additional framework cycle was
+needed for these final project attachments.
