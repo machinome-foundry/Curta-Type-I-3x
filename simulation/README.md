@@ -9,7 +9,7 @@ within parts, not separate mounting freedoms; unchanged fixed source hardware
 keeps its original placements.
 
 The [final validation record](docs/final-mates-2026-09-27.md) documents 36
-focused tests, 37 fresh full-root operating tests, independent legacy pose/
+focused tests, a fresh 37-test operating-regression batch, independent legacy pose/
 shape/replay comparisons, deliberate seat mutations, native before/after
 pixels and scoped exact/faceted geometry checks. The full model builds on
 integrated framework `fabfc3d` without an override. All 417 mesh/marking

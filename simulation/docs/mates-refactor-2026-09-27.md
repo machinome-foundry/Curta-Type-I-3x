@@ -4,7 +4,7 @@ Operating mechanical-attachment adoption is complete, with 185 mates. The
 [final validation record](final-mates-2026-09-27.md) covers the remaining pawl,
 reverser, positioning, clearing and spring attachments, and the final-tree
 audit's correction of five shoulder-fitted counter stations. All 36 focused
-and 37 final full-root tests pass, alongside scoped exact/faceted checks and
+and 37 final operating-regression tests pass, alongside scoped exact/faceted checks and
 independent native views. The 216 retained coordinates and 26 controls remain.
 
 This is not a conversion of every source placement: fixed source hardware and

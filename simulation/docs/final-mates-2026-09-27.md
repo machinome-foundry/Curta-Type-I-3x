@@ -135,8 +135,9 @@ The build rerun on committed `4d44562` exits zero with the same export hash.
 The primary checkpoint's eight contact tests passed in 3878.007 seconds before
 these final changes. That result remains scoped to `7ee005f`.
 
-The fresh final full-root batch passes all **37 tests in 1992.475 seconds**,
-exit zero. It includes six arithmetic cases; crank/reverser travel limits;
+The fresh final operating-regression batch passes all **37 tests in 1992.475 seconds**,
+exit zero. It combines actual-root and established isolated contracts: six
+actual-root arithmetic cases; crank/reverser travel limits;
 every ratchet tooth, repeated reverse requests, production replay and the
 unrestrained negative control; all carriage/clearing interlocks; loop stop,
 retry, relief and replay; all five marker checks; all four prepared crank
