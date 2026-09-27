@@ -1,13 +1,13 @@
 """Dial joints and source-specific clocking; one port per register value."""
 
-from machinome.node import AssemblyNode
+from machinome.node import AssemblyNode, Frame
 from machinome.motion.joints import Revolute
 from machinome.motion.ports import Port
 from machinome.simulation import Driver
 from simulation.cycle import dial_positions
 from simulation.fit import CARRIAGE_CENTER, CARRIAGE_CLOCKING, INPUT_CLOCKING, BEVEL_DIAL_CLOCKING
 from simulation.standard.assembly import *
-from simulation.dial_fits import (FittedDialType2, Part10203_1, Part10203_2,
+from simulation.dial_frames import (FittedDialType2, Part10203_1, Part10203_2,
     Part10203_3, Part10203_4, Part10204_1, Part10204_2, Part10204_3, Part10204_4,
     Part10204_5, Part10204_6, Part10204_7, Part10205_1, Part10205_2, Part10205_3, Part10205_4)
 import simulation.standard.layers as source
@@ -53,8 +53,50 @@ class ResultDials(source.ResultRegister):
     results_dial_type_2_1 = FittedDialType2(turn=Revolute(
         axis=(0.9429319507, -0.3329854896, 1e-10), at=(-66.857451389, 23.761646754, 33.9)))
 
+    # These fifteen pin-and-dial assemblies carry native source coordinates
+    # inside their children. Matching full frames preserves those placements.
+    p_10203_1_seat = Frame(at=(72.008486542, 0.647810225, 33.9),
+                         z=(-0.9999539409, -0.0095977127, 2e-10), x=(0, 0, 1))
+    p_10203_2_seat = Frame(at=(67.932893459, -23.838001321, 33.9),
+                         z=(-0.9429319505, 0.3329854904, 1e-10), x=(0, 0, 1))
+    p_10205_1_seat = Frame(at=(55.72844801, -45.453202839, 33.9),
+                         z=(-0.7721784508, 0.6354057288, 0), x=(0, 0, 1))
+    p_10205_2_seat = Frame(at=(36.867186359, -61.590682021, 33.9),
+                         z=(-0.5082888339, 0.8611866588, 0), x=(0, 0, 1))
+    p_10204_1_seat = Frame(at=(13.624055025, -70.304020713, 33.9),
+                         z=(-0.183092082, 0.9830957682, 0), x=(0, 0, 1))
+    p_10204_2_seat = Frame(at=(-11.197481322, -70.542261674, 33.9),
+                         z=(0.164188277, 0.9864290191, 0), x=(0, 0, 1))
+    p_10204_3_seat = Frame(at=(-34.603579072, -62.276669529, 33.9),
+                         z=(0.491665107, 0.870784372, 0), x=(0, 0, 1))
+    p_10204_4_seat = Frame(at=(-53.771117399, -46.504196676, 33.9),
+                         z=(0.759839869, 0.650110278, 0), x=(0, 0, 1))
+    p_10204_5_seat = Frame(at=(-66.388208297, -25.127236119, 33.9),
+                         z=(0.9363667283, 0.3510232901, 0), x=(0, 0, 1))
+    p_10204_6_seat = Frame(at=(-70.933044396, -0.724164791, 33.9),
+                         z=(0.9999539409, 0.009597713, 0), x=(0, 0, 1))
+    # Full triad from the source's 109.481790438-degree rotation about
+    # (.706968432, .500097809, .500097809), retaining its roll as well as axis.
+    results_dial_type_2_1_seat = Frame(
+        at=(-66.857451389, 23.761646754, 33.9),
+        x=(0.33298548958242147, 0.9429319507406433, -1.0063722077902071e-10),
+        z=(0.9429319507406433, -0.33298548958242147, 1.4226686495533158e-10))
+
+    p_10203_1_mount = p_10203_1.axle.on(p_10203_1_seat, p_10203_1.turn)
+    p_10203_2_mount = p_10203_2.axle.on(p_10203_2_seat, p_10203_2.turn)
+    p_10205_1_mount = p_10205_1.axle.on(p_10205_1_seat, p_10205_1.turn)
+    p_10205_2_mount = p_10205_2.axle.on(p_10205_2_seat, p_10205_2.turn)
+    p_10204_1_mount = p_10204_1.axle.on(p_10204_1_seat, p_10204_1.turn)
+    p_10204_2_mount = p_10204_2.axle.on(p_10204_2_seat, p_10204_2.turn)
+    p_10204_3_mount = p_10204_3.axle.on(p_10204_3_seat, p_10204_3.turn)
+    p_10204_4_mount = p_10204_4.axle.on(p_10204_4_seat, p_10204_4.turn)
+    p_10204_5_mount = p_10204_5.axle.on(p_10204_5_seat, p_10204_5.turn)
+    p_10204_6_mount = p_10204_6.axle.on(p_10204_6_seat, p_10204_6.turn)
+    results_dial_type_2_1_mount = results_dial_type_2_1.axle.on(
+        results_dial_type_2_1_seat, results_dial_type_2_1.turn)
+
     def render(self):
-        super().render()
+        # The bare type-2 dial's source placement is now its mate's rest pose.
         self.translate(tuple(-value for value in CARRIAGE_CENTER))
         self.rotate(-CARRIAGE_CLOCKING, (0, 0, 1))
 
@@ -96,8 +138,33 @@ class TurnsDials(source.TurnsRegister):
     results_dial_type_2_2 = FittedDialType2(turn=Revolute(
         axis=(-0.8611866588, -0.508288834, -0.0), at=(62.090225773, 36.291288041, 33.9)))
 
+    p_10203_3_seat = Frame(at=(-45.928298358, 54.270661151, 33.9),
+                         z=(0.650110279, -0.7598398681, 3e-10), x=(0, 0, 1))
+    p_10203_4_seat = Frame(at=(-24.5513378, 66.887752049, 33.9),
+                         z=(0.3510232907, -0.936366728, 0), x=(0, 0, 1))
+    p_10205_3_seat = Frame(at=(-0.148266473, 71.432588148, 33.9),
+                         z=(0.009597713, -0.9999539409, 0), x=(0, 0, 1))
+    p_10205_4_seat = Frame(at=(24.337545072, 67.35699514, 33.9),
+                         z=(-0.3329854899, -0.9429319506, 0), x=(0, 0, 1))
+    p_10204_7_seat = Frame(at=(45.952746591, 55.152549691, 33.9),
+                         z=(-0.6354057288, -0.7721784508, 0), x=(0, 0, 1))
+    # Source rotation: 104.232401654 degrees about
+    # (.778024743, -.444228263, -.444228263).
+    results_dial_type_2_2_seat = Frame(
+        at=(62.090225773, 36.291288041, 33.9),
+        x=(0.5082888340098916, -0.8611866587568948, -2.5516422308413667e-11),
+        z=(-0.8611866587568948, -0.5082888340098918, -4.468977965466081e-11))
+
+    p_10203_3_mount = p_10203_3.axle.on(p_10203_3_seat, p_10203_3.turn)
+    p_10203_4_mount = p_10203_4.axle.on(p_10203_4_seat, p_10203_4.turn)
+    p_10205_3_mount = p_10205_3.axle.on(p_10205_3_seat, p_10205_3.turn)
+    p_10205_4_mount = p_10205_4.axle.on(p_10205_4_seat, p_10205_4.turn)
+    p_10204_7_mount = p_10204_7.axle.on(p_10204_7_seat, p_10204_7.turn)
+    results_dial_type_2_2_mount = results_dial_type_2_2.axle.on(
+        results_dial_type_2_2_seat, results_dial_type_2_2.turn)
+
     def render(self):
-        super().render()
+        # The bare type-2 dial's source placement is now its mate's rest pose.
         self.translate(tuple(-value for value in CARRIAGE_CENTER))
         self.rotate(-CARRIAGE_CLOCKING, (0, 0, 1))
 

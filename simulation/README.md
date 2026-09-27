@@ -1,9 +1,10 @@
 # Curta simulation — operating controls complete, geometry acceptance open
 
 The [mates/frames refactor](docs/mates-refactor-2026-09-27.md) has adopted the
-operating crank's attachment and mechanical contracts first. Its 216 retained
-coordinates and 26 operator controls are preserved; 30 operating regressions,
-the independent pose witness and seven crank geometry checks per kernel pass.
+operating crank and all seventeen register dials. Its 216 retained coordinates
+and 26 operator controls are preserved. The 32-test operating batch,
+independent crank/dial pose witnesses, and exact/faceted register checks pass;
+the full operating model builds on the integrated framework without an override.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.
 
@@ -435,7 +436,8 @@ reproducible pose, not a claim that a physical crank can run backward.
   carriage covers, input banks, drive and carry subassemblies.
 - `mechanism.py`, `drive.py`, `selectors.py`: named joints and drive relations.
 - `arithmetic.py`: reproducible arithmetic; six calibration/operation tests pass.
-- `registers.py`: seventeen radial dial joints and measured source clocking.
+- `registers.py` and `dial_frames.py`: seventeen frame-attached radial dials,
+  retaining their original joint names and measured source clocking.
 - `markings.py`, `artwork/`: surface decals, calibrated roll clocking and
   paint-only derivatives of the original drawings; no additional solids.
 - `transmission.py`: result/turns banks with sliding inputs and keyed rotation.
