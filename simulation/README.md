@@ -18,6 +18,9 @@ The [34 sliding groups](docs/transmission-slider-mates-2026-09-27.md) inside
 those channels now also use their original travel joints in frame mates.
 Their export preserves the complete program, controls and every asset byte;
 pose, replay and mutation checks pass. Integration awaits the contact gate.
+All fifteen [carry stations](docs/carry-mates-2026-09-27.md) now also attach
+their sliders, bearings and springs with frame mates. Their original wire
+deformation and capture contracts pass on both kernels without changing fits.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.
 

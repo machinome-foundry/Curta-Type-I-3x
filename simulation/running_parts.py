@@ -9,6 +9,7 @@ from machinome.motion.joints import Bound, Revolute, Prismatic
 from machinome.motion.ports import Port
 from simulation import assemblies
 from simulation import channel_frames
+from simulation import carry_frames
 from simulation.mechanism import SteppedDrum, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.zero import ZeroPositioning
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
@@ -195,24 +196,24 @@ def retained_lever(base, rest, counter=False):
 
 
 class RetainedResultCarries(carry.ResultsCarry):
-    results_tens_lever_assembly_1 = retained_lever(carry.ResultsLever1, -4.2)()
-    results_tens_lever_assembly_2 = retained_lever(carry.ResultsLever2, 0)()
-    results_tens_lever_assembly_3 = retained_lever(carry.ResultsLever3, 0)()
-    results_tens_lever_assembly_4 = retained_lever(carry.ResultsLever4, 0)()
-    results_tens_lever_assembly_5 = retained_lever(carry.ResultsLever5, 0)()
-    results_tens_lever_assembly_6 = retained_lever(carry.ResultsLever6, -4.2)()
-    results_tens_lever_assembly_7 = retained_lever(carry.ResultsLever7, 0)()
-    results_tens_lever_assembly_8 = retained_lever(carry.ResultsLever8, -4.2)()
-    results_tens_lever_assembly_9 = retained_lever(carry.ResultsLever9, -4.2)()
-    results_tens_lever_assembly_10 = retained_lever(carry.ResultsLever10, -4.2)()
+    results_tens_lever_assembly_1 = retained_lever(carry_frames.ResultsLever1, -4.2)()
+    results_tens_lever_assembly_2 = retained_lever(carry_frames.ResultsLever2, 0)()
+    results_tens_lever_assembly_3 = retained_lever(carry_frames.ResultsLever3, 0)()
+    results_tens_lever_assembly_4 = retained_lever(carry_frames.ResultsLever4, 0)()
+    results_tens_lever_assembly_5 = retained_lever(carry_frames.ResultsLever5, 0)()
+    results_tens_lever_assembly_6 = retained_lever(carry_frames.ResultsLever6, -4.2)()
+    results_tens_lever_assembly_7 = retained_lever(carry_frames.ResultsLever7, 0)()
+    results_tens_lever_assembly_8 = retained_lever(carry_frames.ResultsLever8, -4.2)()
+    results_tens_lever_assembly_9 = retained_lever(carry_frames.ResultsLever9, -4.2)()
+    results_tens_lever_assembly_10 = retained_lever(carry_frames.ResultsLever10, -4.2)()
 
 
 class RetainedTurnsCarries(carry.TurnsCarry):
-    turns_tens_lever_assembly_1 = retained_lever(carry.TurnsLever1, -1.8, True)()
-    turns_tens_lever_assembly_2 = retained_lever(carry.TurnsLever2, -1.8, True)()
-    turns_tens_lever_assembly_3 = retained_lever(carry.TurnsLever3, -1.8, True)()
-    turns_tens_lever_assembly_4 = retained_lever(carry.TurnsLever4, -1.8, True)()
-    turns_tens_lever_assembly_5 = retained_lever(carry.TurnsLever5, -1.8, True)()
+    turns_tens_lever_assembly_1 = retained_lever(carry_frames.TurnsLever1, -1.8, True)()
+    turns_tens_lever_assembly_2 = retained_lever(carry_frames.TurnsLever2, -1.8, True)()
+    turns_tens_lever_assembly_3 = retained_lever(carry_frames.TurnsLever3, -1.8, True)()
+    turns_tens_lever_assembly_4 = retained_lever(carry_frames.TurnsLever4, -1.8, True)()
+    turns_tens_lever_assembly_5 = retained_lever(carry_frames.TurnsLever5, -1.8, True)()
 
 
 class ContactBellAssembly(TensBellAssembly):
