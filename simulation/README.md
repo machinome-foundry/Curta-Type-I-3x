@@ -10,6 +10,10 @@ operator controls are preserved. The earlier 32-test operating batch,
 independent crank/dial/selector/zero/core/marker pose witnesses, and scoped
 exact/faceted checks pass;
 the full operating model builds on the integrated framework without an override.
+The [transmission-channel checkpoint](docs/transmission-mates-2026-09-27.md)
+also attaches eleven result and six counter channels through their original
+turns. Its independent pose/replay checks, six full-root arithmetic cases,
+export and native views pass; the longer contact suite is still in progress.
 The remaining assemblies are not yet migrated. Whole-machine geometry
 acceptance remains open as described below.
 

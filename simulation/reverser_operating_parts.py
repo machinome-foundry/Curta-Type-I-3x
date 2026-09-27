@@ -7,12 +7,14 @@ is unchanged. These are simulation fits, not upstream CAD modifications.
 
 import cadquery as cq
 
+from machinome.node import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 from simulation.counter_lockout_parts import ContactCounterOnes
 from simulation.fit import FittedCounterPinion
 from simulation.reverser_inputs import OnesInput
 from simulation.running_parts import RetainedTransmission, TurnsShafts
+from simulation import channel_frames
 
 
 class ProtectedOnesPinion(FittedCounterPinion):
@@ -35,13 +37,30 @@ class ProtectedOnesInput(OnesInput):
     transmission_gear_0_5_3 = ProtectedOnesPinion()
 
 
-class ReverserContactOnes(ContactCounterOnes):
+class ReverserContactOnes(channel_frames.TurnsOnes):
     # Retain ContactCounterOnes' independently verified upper lockout fit.
     p_10218_1 = ProtectedOnesInput(travel=Prismatic(axis=(0, 0, -1)))
 
 
 class ReverserContactTurns(TurnsShafts):
+    ones_seat = Frame(at=ReverserContactOnes.spindle.at)
+    tens_seat = Frame(at=channel_frames.TurnsTens.spindle.at)
+    hundreds_seat = Frame(at=channel_frames.TurnsHundreds.spindle.at)
+    digit_4_seat = Frame(at=channel_frames.TurnsDigit4.spindle.at)
+    digit_5_seat = Frame(at=channel_frames.TurnsDigit5.spindle.at)
+    digit_6_seat = Frame(at=channel_frames.TurnsDigit6.spindle.at)
     ones = ReverserContactOnes()
+    tens = channel_frames.TurnsTens()
+    hundreds = channel_frames.TurnsHundreds()
+    digit_4 = channel_frames.TurnsDigit4()
+    digit_5 = channel_frames.TurnsDigit5()
+    digit_6 = channel_frames.TurnsDigit6()
+    ones_mount = ones.spindle.on(ones_seat, ones.turn)
+    tens_mount = tens.spindle.on(tens_seat, tens.turn)
+    hundreds_mount = hundreds.spindle.on(hundreds_seat, hundreds.turn)
+    digit_4_mount = digit_4.spindle.on(digit_4_seat, digit_4.turn)
+    digit_5_mount = digit_5.spindle.on(digit_5_seat, digit_5.turn)
+    digit_6_mount = digit_6.spindle.on(digit_6_seat, digit_6.turn)
 
 
 class ReverserContactTransmission(RetainedTransmission):

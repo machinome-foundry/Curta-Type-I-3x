@@ -5,6 +5,13 @@ placement has been converted. The generated source tree, printable geometry,
 fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
 acceptance remains open under the existing project record.
 
+The [transmission-channel checkpoint](transmission-mates-2026-09-27.md)
+attaches all seventeen shaft channels through their existing turns, preserving
+the historical fit-trial banks independently. Pose/state/replay witnesses,
+seat-mutation probes, full-root arithmetic, export and native views pass.
+The longer actual-root contact suite remains in progress; this checkpoint
+does not yet close that increment. The internal sliding groups are next.
+
 The [decimal-marker increment](marker-mates-2026-09-27.md) attaches all ten
 marker/ball/spring assemblies using parameterized track frames and the
 existing neighbour-bound joints. The original radial seats, controls and

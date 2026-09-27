@@ -8,6 +8,7 @@ from machinome.node import AssemblyNode, Frame as AttachmentFrame
 from machinome.motion.joints import Bound, Revolute, Prismatic
 from machinome.motion.ports import Port
 from simulation import assemblies
+from simulation import channel_frames
 from simulation.mechanism import SteppedDrum, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
 from simulation.zero import ZeroPositioning
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
@@ -243,6 +244,44 @@ class ResultShafts(AssemblyNode):
                 shaft.turn = INPUT_CLOCKING - 20 * index
 
 
+class MatedResultShafts(ResultShafts):
+    # Historical fit trials still replace channels in ResultShafts. Attach
+    # only this production specialization, leaving their independent base.
+    ones_seat = AttachmentFrame(at=channel_frames.ResultOnes.spindle.at)
+    tens_seat = AttachmentFrame(at=channel_frames.ResultTens.spindle.at)
+    hundreds_seat = AttachmentFrame(at=channel_frames.ResultHundreds.spindle.at)
+    digit_4_seat = AttachmentFrame(at=channel_frames.ResultDigit4.spindle.at)
+    digit_5_seat = AttachmentFrame(at=channel_frames.ResultDigit5.spindle.at)
+    digit_6_seat = AttachmentFrame(at=channel_frames.ResultDigit6.spindle.at)
+    digit_7_seat = AttachmentFrame(at=channel_frames.ResultDigit7.spindle.at)
+    digit_8_seat = AttachmentFrame(at=channel_frames.ResultDigit8.spindle.at)
+    digit_9_seat = AttachmentFrame(at=channel_frames.ResultDigit9.spindle.at)
+    digit_10_seat = AttachmentFrame(at=channel_frames.ResultDigit10.spindle.at)
+    digit_11_seat = AttachmentFrame(at=channel_frames.ResultDigit11.spindle.at)
+    ones = channel_frames.ResultOnes()
+    tens = channel_frames.ResultTens()
+    hundreds = channel_frames.ResultHundreds()
+    digit_4 = channel_frames.ResultDigit4()
+    digit_5 = channel_frames.ResultDigit5()
+    digit_6 = channel_frames.ResultDigit6()
+    digit_7 = channel_frames.ResultDigit7()
+    digit_8 = channel_frames.ResultDigit8()
+    digit_9 = channel_frames.ResultDigit9()
+    digit_10 = channel_frames.ResultDigit10()
+    digit_11 = channel_frames.ResultDigit11()
+    ones_mount = ones.spindle.on(ones_seat, ones.turn)
+    tens_mount = tens.spindle.on(tens_seat, tens.turn)
+    hundreds_mount = hundreds.spindle.on(hundreds_seat, hundreds.turn)
+    digit_4_mount = digit_4.spindle.on(digit_4_seat, digit_4.turn)
+    digit_5_mount = digit_5.spindle.on(digit_5_seat, digit_5.turn)
+    digit_6_mount = digit_6.spindle.on(digit_6_seat, digit_6.turn)
+    digit_7_mount = digit_7.spindle.on(digit_7_seat, digit_7.turn)
+    digit_8_mount = digit_8.spindle.on(digit_8_seat, digit_8.turn)
+    digit_9_mount = digit_9.spindle.on(digit_9_seat, digit_9.turn)
+    digit_10_mount = digit_10.spindle.on(digit_10_seat, digit_10.turn)
+    digit_11_mount = digit_11.spindle.on(digit_11_seat, digit_11.turn)
+
+
 class TurnsShafts(AssemblyNode):
     ones = ContactCounterOnes()
     for _station in range(2, 7):
@@ -258,5 +297,5 @@ class TurnsShafts(AssemblyNode):
 
 
 class RetainedTransmission(AssemblyNode):
-    result = ResultShafts()
+    result = MatedResultShafts()
     turns = TurnsShafts()
