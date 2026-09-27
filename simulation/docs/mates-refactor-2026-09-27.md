@@ -5,6 +5,13 @@ placement has been converted. The generated source tree, printable geometry,
 fitted clearances and arithmetic laws are unchanged. Whole-machine geometry
 acceptance remains open under the existing project record.
 
+The [central-assembly increment](core-mates-2026-09-27.md) attaches the
+stepped drum, tens bell, operating carriage and complete clearing-ring
+assembly through their existing joints. Their native central-shaft frames
+preserve rest placements, independent lifts and all existing laws. This uses
+the existing API without another framework change; independent pose/replay
+witnesses, installed motion on both kernels and the full-root export pass.
+
 The [zero-mechanism increment](zero-mates-2026-09-27.md) attaches its cam,
 drive pin and follower through their existing joints. It required the
 pilot-ratified explicit-direction precision rule, integrated as framework

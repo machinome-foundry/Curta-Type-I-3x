@@ -1,5 +1,6 @@
 """Motion belongs to the mechanism that the navigation tree exposes."""
 
+from machinome.node import Frame as AttachmentFrame
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
 from machinome.math import clamp01, abs
@@ -47,6 +48,8 @@ class Frame(SourceFrame):
 
 
 class SteppedDrum(layers.DrumAssembly):
+    # Native assembly coordinates already use the central shaft's Z datum.
+    spindle = AttachmentFrame()
     main_axle_step_drum_1 = PrintedDrum()
 
 

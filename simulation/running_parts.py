@@ -154,6 +154,7 @@ class AttachedCrank(SeatedCrankAssembly):
 
 class RunningMainDrive(assemblies.MainDrive):
     crank_seat = AttachmentFrame()
+    drum_seat = AttachmentFrame()
     subtract = Port()
     anti_reversal = RetainedAntiReversal()
     reversing_lever = RunningReversingAssembly()
@@ -162,6 +163,7 @@ class RunningMainDrive(assemblies.MainDrive):
         Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))))
     stepped_drum = SteppedDrum(turn=Revolute(axis=(0, 0, 1)),
                                lift=Prismatic(axis=(0, 0, 1)))
+    drum_mount = stepped_drum.spindle.on(drum_seat, stepped_drum.turn)
     zero_positioning = ZeroPositioning()
 
     # The mate owns the attachment and is the crank's sole binding surface.
@@ -213,11 +215,15 @@ class RetainedTurnsCarries(carry.TurnsCarry):
 
 
 class ContactBellAssembly(TensBellAssembly):
+    # The bell and its spring remain in their source assembly coordinates.
+    spindle = AttachmentFrame()
     tens_bell_1 = ContactBell()
 
 
 class RetainedCarries(assemblies.CarryMechanism):
+    bell_seat = AttachmentFrame()
     tens_bell = ContactBellAssembly(turn=Revolute(axis=(0, 0, 1)))
+    bell_mount = tens_bell.spindle.on(bell_seat, tens_bell.turn)
     result_carries = RetainedResultCarries()
     turns_carries = RetainedTurnsCarries()
 
