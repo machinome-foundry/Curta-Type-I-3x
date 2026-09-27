@@ -3,18 +3,37 @@
 import unittest
 from machinome.simulation import Sim
 from machinome.motion.joints import Revolute, Prismatic
+from machinome.motion.ports import Port
+from machinome.node import Frame
+from simulation import assemblies
+from simulation.mechanism import SteppedDrum
+from simulation.zero import ZeroPositioning
 from simulation.pawl import RELEASE, RAMP, TOOTH_PITCH, CLOSING_RELEASE
-from simulation.running_pawl import RETURN_SPAN, RetainedPawlBench
+from simulation.running_pawl import RETURN_SPAN, RetainedPawlBench, RetainedAntiReversal
 from simulation.test_running_laws import RunningPawlBench
 from simulation.test_running_limits import CrankLiftBench
 from simulation.running import OperatingCurta
-from simulation.running_parts import RunningMainDrive, SeatedCrankAssembly
+from simulation.running_parts import AttachedCrank, RunningReversingAssembly
 
 
-class UnrestrainedMainDrive(RunningMainDrive):
+class UnrestrainedMainDrive(assemblies.MainDrive):
     """Negative control: retain the crank but omit only its pawl restraint."""
-    crank = SeatedCrankAssembly(turn=Revolute(axis=(0, 0, 1)),
-                               lift=Prismatic(axis=(0, 0, 1), range=(0, 9)))
+    # A mate is restated with its child, not replaced on an inherited child.
+    crank_seat = Frame()
+    subtract = Port()
+    anti_reversal = RetainedAntiReversal()
+    reversing_lever = RunningReversingAssembly()
+    crank = AttachedCrank()
+    turn = crank.spindle.on(crank_seat, Revolute())
+    stepped_drum = SteppedDrum(turn=Revolute(axis=(0, 0, 1)),
+                               lift=Prismatic(axis=(0, 0, 1)))
+    zero_positioning = ZeroPositioning()
+    turn.drives(stepped_drum.turn)
+    subtract.drives(crank.lift, ratio=9)
+    crank.lift.drives(stepped_drum.lift)
+    turn.drives(zero_positioning.turn)
+    subtract.drives(zero_positioning.subtract)
+    turn.drives(anti_reversal.turn)
 
 
 class UnrestrainedOperatingCurta(OperatingCurta):

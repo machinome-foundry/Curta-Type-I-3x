@@ -97,16 +97,16 @@ class StaticBallOperatingCurta(LayeredSource):
     # selector withdrawal. Intersect the crank's existing pawl restraint;
     # preserve its assembly path and read actual retained part coordinates.
     # Higher banks additionally read each upper's actual axial carry position.
-    main_drive.crank.turn.constrain(range=(Bound(
+    main_drive.turn.constrain(range=(Bound(
         closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.result.ones.turn)), None))
-    main_drive.crank.turn.constrain(range=(Bound(
+    main_drive.turn.constrain(range=(Bound(
         higher_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.result.tens.turn,
                transmission.result.tens.p_10220_410003_1_419227.travel)), None))
     # Counter ones uses its separately measured fixed-height contact profile.
     # The higher counters have a separate source-specific bank restraint below.
-    main_drive.crank.turn.constrain(range=(Bound(
+    main_drive.turn.constrain(range=(Bound(
         counter_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, transmission.turns.ones.turn)), None))
     # Each remaining result upper keeps its own measured frame and carry datum.
@@ -114,7 +114,7 @@ class StaticBallOperatingCurta(LayeredSource):
     for _station, (_, _upper_name) in enumerate(RESULT_CONTACT_STATIONS, 3):
         _shaft = getattr(transmission.result, CHANNEL_NAMES[_station-1])
         _result_readings.extend((_shaft.turn, getattr(_shaft, _upper_name).travel))
-    main_drive.crank.turn.constrain(range=(Bound(
+    main_drive.turn.constrain(range=(Bound(
         result_bank_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, *_result_readings)), None))
     del _station, _upper_name, _shaft, _result_readings
@@ -125,7 +125,7 @@ class StaticBallOperatingCurta(LayeredSource):
     for _station, (_, _upper_name) in enumerate(COUNTER_CONTACT_STATIONS, 2):
         _shaft = getattr(transmission.turns, CHANNEL_NAMES[_station-1])
         _counter_readings.extend((_shaft.turn, getattr(_shaft, _upper_name).travel))
-    main_drive.crank.turn.constrain(range=(Bound(
+    main_drive.turn.constrain(range=(Bound(
         counter_bank_closing_limit,
         reads=(carry_mechanism.tens_bell.turn, *_counter_readings)), None))
     del _station, _upper_name, _shaft, _counter_readings
@@ -133,9 +133,9 @@ class StaticBallOperatingCurta(LayeredSource):
     instructions = {'Turn crank': Instruction(by={'crank_rotation': 360}, duration=2)}
     controls = {
         'turn crank': Turn(main_drive.crank.crank_handle_1, crank_rotation,
-                           coordinate=main_drive.crank.turn),
+                           coordinate=main_drive.turn),
         'one revolution': Button(main_drive.crank.crank_handle_1, 'Turn crank',
-                                 coordinate=main_drive.crank.turn),
+                                 coordinate=main_drive.turn),
         'lift crank': Slide(main_drive.crank.crank_handle_1, crank_elevation,
                             coordinate=main_drive.crank.lift),
         'reverse counter': Slide(
@@ -214,7 +214,7 @@ class StaticBallOperatingCurta(LayeredSource):
                                               offset=-_rests[_index - 1] / 4.2)
             else:
                 crank_elevation.drives(_shaft.carry, ratio=0)
-            sources(main_drive.crank.turn, main_drive.crank.lift,
+            sources(main_drive.turn, main_drive.crank.lift,
                     _setting, _lever_ends[_index - 1] if _index else carriage.registers.lift).drives(
                 _shaft.turn, law=shaft_motion(_index, _counter,
                                              _rests[_index - 1] if _index else 0))
@@ -226,7 +226,7 @@ class StaticBallOperatingCurta(LayeredSource):
                 _wheel, law=dial_motion(_index, _counter))
             del _wheel
         for _index, (_lever, _rest) in enumerate(zip(_lever_ends, _rests), 1):
-            sources(main_drive.crank.turn, carriage.registers.turn,
+            sources(main_drive.turn, carriage.registers.turn,
                     carriage.registers.lift, _lever, *_wheel_ends).drives(
                 _lever, law=lever_motion(_index, _rest, _counter))
             del _lever
@@ -258,7 +258,7 @@ class RadialBallOperatingCurta(StaticBallOperatingCurta):
 class ReverserOperatingCurta(RadialBallOperatingCurta):
     """Pre-loop reference with measured six-input reversing-lever restraints."""
     transmission = ReverserContactTransmission()
-    _reads = (RadialBallOperatingCurta.main_drive.crank.turn,
+    _reads = (RadialBallOperatingCurta.main_drive.turn,
               transmission.turns.ones.turn,
               transmission.turns.tens.turn,
               transmission.turns.hundreds.turn,

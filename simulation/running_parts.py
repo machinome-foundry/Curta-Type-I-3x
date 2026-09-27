@@ -4,10 +4,12 @@ The pose benches remain available. These specializations replace only the
 pose-driven bindings; they neither duplicate physical parts nor add memory.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node import AssemblyNode, Frame as AttachmentFrame
 from machinome.motion.joints import Bound, Revolute, Prismatic
+from machinome.motion.ports import Port
 from simulation import assemblies
-from simulation.mechanism import MainDrive, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
+from simulation.mechanism import SteppedDrum, RegisterCarriage, TensBellAssembly, CarriageStructure, ClearingAssembly
+from simulation.zero import ZeroPositioning
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
 from simulation.higher_lockout_parts import ContactTens, ContactBell
 from simulation.cover_fits import FittedAxleCarrier
@@ -143,14 +145,34 @@ class RunningReversingAssembly(AssemblyNode):
     reversing_lever_1 = RunningReverser()
 
 
-class RunningMainDrive(MainDrive):
-    # Driver ranges only describe the control panel; the moving crank's
-    # joint admits the measured addition-to-subtraction stroke in Python too.
+class AttachedCrank(SeatedCrankAssembly):
+    # Preserve the source assembly's declared central Z motion datum. The
+    # measured handle seating correction remains inside SeatedCrankHandle.
+    spindle = AttachmentFrame()
+    lift = Prismatic(axis=(0, 0, 1), range=(0, 9))
+
+
+class RunningMainDrive(assemblies.MainDrive):
+    crank_seat = AttachmentFrame()
+    subtract = Port()
     anti_reversal = RetainedAntiReversal()
     reversing_lever = RunningReversingAssembly()
-    crank = SeatedCrankAssembly(turn=Revolute(axis=(0, 0, 1), range=(None,
-                          Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))),
-                          lift=Prismatic(axis=(0, 0, 1), range=(0, 9)))
+    crank = AttachedCrank()
+    turn = crank.spindle.on(crank_seat, Revolute(range=(None,
+        Bound(reverse_stop, reads=(anti_reversal.reverse_rotation_prevention_pawl.turn,)))))
+    stepped_drum = SteppedDrum(turn=Revolute(axis=(0, 0, 1)),
+                               lift=Prismatic(axis=(0, 0, 1)))
+    zero_positioning = ZeroPositioning()
+
+    # The mate owns the attachment and is the crank's sole binding surface.
+    # Lift remains the crank's independent coaxial freedom; it commutes with
+    # this turn, so the existing motion and bank paths stay unchanged.
+    turn.drives(stepped_drum.turn)
+    subtract.drives(crank.lift, ratio=9)
+    crank.lift.drives(stepped_drum.lift)
+    turn.drives(zero_positioning.turn)
+    subtract.drives(zero_positioning.subtract)
+    turn.drives(anti_reversal.turn)
 
 
 def retained_lever(base, rest, counter=False):

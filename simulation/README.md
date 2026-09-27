@@ -1,5 +1,12 @@
 # Curta simulation — operating controls complete, geometry acceptance open
 
+The [mates/frames refactor](docs/mates-refactor-2026-09-27.md) has adopted the
+operating crank's attachment and mechanical contracts first. Its 216 retained
+coordinates and 26 operator controls are preserved; 30 operating regressions,
+the independent pose witness and seven crank geometry checks per kernel pass.
+The remaining assemblies are not yet migrated. Whole-machine geometry
+acceptance remains open as described below.
+
 The latest [clearing-loop replacement](docs/clearing-loop-replacement-2026-09-23.md)
 adds independent deploy/stow motion through an explicitly simulation-only
 captive mounting. The default root has 216 coordinates and 26 controls.
