@@ -18,7 +18,7 @@ import numpy as np
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE
 from simulation.tools.positioning_ball_contact import BALL, BELL
 from simulation.tools.interference import world_solids, rigid_leaves
@@ -31,7 +31,7 @@ def main():
     args = parser.parse_args()
     assert 0 <= args.start < args.end <= 360
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     native = world_solids(sim.node, selected={BALL, BELL})
     ball, bell = native[BALL], native[BELL]

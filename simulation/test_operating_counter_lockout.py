@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.counter_wrong_order import prepare_partial_turn, SHAFT, UPPER, BELL
 from simulation.tools.interference import world_solids, rigid_leaves
 from simulation.tools.ancestor_lockout_contact import mesh_solid
@@ -14,7 +14,7 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 
 class OperatingCounterLockoutTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     @classmethod
     def setUpClass(cls):

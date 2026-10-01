@@ -2,15 +2,15 @@
 
 import json
 import numpy as np
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.fit import FittedBevelTip
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 from simulation.tools.interference import world_solids, rigid_leaves
 
 
 def probe():
-    model = Curta()
-    model.set_state(**Curta.instructions['Rest'].targets)
+    model = PosedCurta()
+    model.set_state(**PosedCurta.instructions['Rest'].targets)
     model.assemble()
     model.build_stls()
     world, origins = world_solids(model), {}

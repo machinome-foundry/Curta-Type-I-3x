@@ -1,7 +1,7 @@
 """The installed fifteen carry stations, with both dial banks and carriage."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
-class CarryBank(Curta):
+class CarryBank(PosedCurta):
     pass

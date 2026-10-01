@@ -39,10 +39,10 @@ def cylinders(shape):
 def main():
     logging.disable(logging.INFO)
     from machinome.simulation import Sim
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
     from simulation.tools.interference import world_solids
 
-    root = OperatingCurta()
+    root = MechanisticCurta()
     Sim(root, dt=.1, meshes=False)
     root.assemble()
     shapes = world_solids(root, selected=set(PATHS))

@@ -11,7 +11,7 @@ from simulation.fit import FittedCarryLockout
 from simulation.standard import printed
 from simulation.reverser_inputs import (
     ReversingTens, ReversingHundreds, ReversingFourth, ReversingFifth, ReversingSixth)
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import TurnsShafts, RetainedTransmission, CHANNEL_NAMES
 
 
@@ -57,5 +57,5 @@ class TrialCounterTransmission(RetainedTransmission):
     turns = TrialCounterShafts()
 
 
-class CounterBankOperatingTrial(OperatingCurta):
+class CounterBankOperatingTrial(MechanisticCurta):
     transmission = TrialCounterTransmission()

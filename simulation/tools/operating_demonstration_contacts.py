@@ -14,7 +14,7 @@ import time
 
 from machinome.simulation import Sim
 from simulation.operating_demonstrations import DEMONSTRATIONS, replay
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import inventory
 
 
@@ -38,7 +38,7 @@ def main():
     assert 0 < args.interval <= .2
     logging.disable(logging.INFO)
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     initial = sim.snapshot()
     rest = inventory(sim.node, exact=args.exact, world_precision=64)
     print(json.dumps(dict(kind='rest', inventory=rest, interval=args.interval,

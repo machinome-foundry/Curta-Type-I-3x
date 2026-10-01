@@ -6,7 +6,7 @@ from pathlib import Path
 
 import numpy as np
 from machinome.test import TestCase
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.selector_fit import SelectorFitBench
 from simulation.tools.interference import world_solids
 from simulation.tools.open_run_selector import (SELECTOR, INPUT_GROUP, MOVERS,
@@ -135,7 +135,7 @@ class SelectedInputFitTest(TestCase):
         mapping[INPUT_GROUP] = 'Curta.channel.p_10219_410002_1'
         mapping['Curta.enclosure.lower_housing_1.bottom_housing'] = 'Curta.housing.bottom_housing'
         for postcarry in (0, 1):
-            root = Curta()
+            root = PosedCurta()
             root.set_state(initial_result=99, initial_turns=0, operand=1,
                            crank_turns=postcarry, subtract=0, carriage_position=0,
                            carriage_lift=0, clear=0)

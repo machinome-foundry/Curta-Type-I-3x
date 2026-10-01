@@ -1,13 +1,13 @@
 """Read the spider ring's installed collar seat before prescribing preload."""
 
 import json
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.carry_phase import solid
 from simulation.standard.parts import SpiderSpring
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(**root.instructions['Rest'].targets)
     root.assemble()
     root.build_stls()

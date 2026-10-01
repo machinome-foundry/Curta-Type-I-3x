@@ -9,7 +9,7 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.crank_drum_contact import bounds
 from simulation.cover_fits import mesh_solid
@@ -36,7 +36,7 @@ def main():
         from simulation.positioning_ball_trial import OrbitingBallTrial
         model = OrbitingBallTrial
     else:
-        model = OperatingCurta
+        model = MechanisticCurta
     sim = Sim(model(), dt=.1, meshes=True)
     if args.actual_quarter_turn:
         command = sim.move('crank_rotation', by=90, duration=.5)

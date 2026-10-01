@@ -1,7 +1,7 @@
 """Contract wrapper for the actual operating crank/drum/pin connection."""
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class CrankCouplingSeatBench(OperatingCurta):
+class CrankCouplingSeatBench(MechanisticCurta):
     pass

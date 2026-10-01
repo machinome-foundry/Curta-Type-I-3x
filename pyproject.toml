@@ -1,10 +1,10 @@
 [tool.machinome]
-model = "operating_curta"
+model = "mechanistic_curta"
 
 [tool.machinome.models]
-fast_curta = "simulation.curta:Curta"
-operating_curta = "simulation.running:OperatingCurta"
-clocked_curta = "simulation.clocked:ClockedCurta"
+posed_curta = "simulation.posed:PosedCurta"
+mechanistic_curta = "simulation.mechanistic:MechanisticCurta"
+event_driven_curta = "simulation.event_driven:EventDrivenCurta"
 reverser_inspection = "simulation.reverser_inspection:ReverserInspection"
 
 [tool.machinome.movies]

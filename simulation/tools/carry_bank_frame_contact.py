@@ -9,7 +9,7 @@ import logging
 import time
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.moving_seats import world_frames
 from simulation.tools.open_run_transitions import bounds
@@ -21,7 +21,7 @@ FRAME = 'Curta.frame.upper_frame.main_body'
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     sliders = sorted(path for path in leaves if path.startswith('Curta.carry_mechanism.')

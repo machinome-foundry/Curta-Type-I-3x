@@ -1,7 +1,7 @@
 """The operating assembly, isolated only for its world-motion contracts."""
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class RunningMotionBench(OperatingCurta):
+class RunningMotionBench(MechanisticCurta):
     pass

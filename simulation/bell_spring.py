@@ -1,6 +1,6 @@
 """Inspection bench for the tens bell's forked retaining leaf spring."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from machinome.node import AssemblyNode
 from machinome.simulation import Driver
 from machinome.motion.joints import Prismatic
@@ -10,7 +10,7 @@ from simulation.standard.printed import TensBell1
 from simulation.bell_spring_motion import positioning
 
 
-class BellSpringBench(Curta):
+class BellSpringBench(PosedCurta):
     pass
 
 

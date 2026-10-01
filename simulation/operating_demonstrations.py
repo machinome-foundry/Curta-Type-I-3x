@@ -8,7 +8,7 @@ This module does not certify all contacts or replace the legacy posed demos.
 
 from dataclasses import dataclass
 
-from simulation.running import register_reading
+from simulation.mechanistic import register_reading
 
 
 @dataclass(frozen=True)

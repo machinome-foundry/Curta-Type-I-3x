@@ -10,7 +10,7 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import world_solids
 
 
@@ -18,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     registers = sim.node.carriage.registers
     paths = {'Curta.carriage.registers.clearing_ring.clearing_cover',
@@ -53,7 +53,7 @@ def main():
     plt.close(figure)
     if dict(sim.state) != bank:
         raise ValueError('Section inspection changed the retained bank')
-    print(json.dumps({'model': 'simulation.running:OperatingCurta',
+    print(json.dumps({'model': 'simulation.mechanistic:MechanisticCurta',
                       'native_common_mm3': common.Volume(),
                       'coordinates': len(bank), 'bank_unchanged': True,
                       'section': str(args.output)}), flush=True)

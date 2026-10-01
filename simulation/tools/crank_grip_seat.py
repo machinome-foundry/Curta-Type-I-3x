@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.standard.parts import CrankHandle, CrankHandlePinScrew
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.crank_handle_contact import CRANK, HANDLE
@@ -16,7 +16,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', type=Path, required=True)
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     fitted = sim.node.main_drive.crank.crank_handle_1.crank_handle.shape()
     source = CrankHandle().shape()
     # Source assembly placements, expressed in the grip's source frame.

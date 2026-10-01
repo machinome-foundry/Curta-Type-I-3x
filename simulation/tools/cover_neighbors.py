@@ -8,7 +8,7 @@ The probe reports positive contacts; none is accepted by a volume threshold.
 import json
 import numpy as np
 import trimesh
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.carry_phase import solid
 from simulation.tools.moving_seats import world_frames
 from simulation.tools.interference import rigid_leaves
@@ -25,7 +25,7 @@ def extent(body):
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(**root.instructions['Rest'].targets)
     root.assemble()
     root.build_stls()

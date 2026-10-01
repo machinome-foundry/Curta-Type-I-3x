@@ -50,9 +50,9 @@ def mesh_solid(mesh, *, world_precision=32):
 
 
 def measure():
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     prepare(sim)
     bell, lockout = contact_shapes(sim.node)
     print(json.dumps({'prepared': {k: sim.state[k] for k in

@@ -4,7 +4,7 @@ import unittest
 import math
 
 from machinome.simulation import Sim
-from simulation.running import register_reading
+from simulation.mechanistic import register_reading
 from simulation.positioning_ball_trial import RadialBallTrial
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 

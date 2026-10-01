@@ -25,8 +25,8 @@ class RunningMarkerTest(unittest.TestCase):
         self.assertAlmostEqual(sim.state['lower.decimal_marker_2.turn'], 360 + LOWER_GAPS[0])
 
     def test_real_machine_markers_do_not_change_the_registers(self):
-        from simulation.running import OperatingCurta, register_reading
-        sim = Sim(OperatingCurta(), dt=.1)
+        from simulation.mechanistic import MechanisticCurta, register_reading
+        sim = Sim(MechanisticCurta(), dt=.1)
         sim.move('marker_1_rotation', by=20, duration=.1)
         sim.move('marker_6_rotation', by=20, duration=.1)
         sim.run(.1)

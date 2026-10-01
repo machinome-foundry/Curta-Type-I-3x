@@ -53,7 +53,7 @@ class RunningMotionTest(TestCase):
             sim.reset()
 
     def test_all_markers_move_independently_and_upper_bank_follows_its_track(self):
-        from simulation.running import register_reading
+        from simulation.mechanistic import register_reading
 
         sim = Sim(self.node, dt=.1, meshes=True)
         markers = [getattr(self.node.enclosure.decimal_markers if index < 6 else

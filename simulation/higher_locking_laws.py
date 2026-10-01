@@ -1,7 +1,7 @@
 """Measured tens contact restraint and an unadopted remaining-bank candidate.
 
 Each angular region is intersected with its measured axial overlap. The
-tens law is installed in OperatingCurta. Sharing it with the remaining bank
+tens law is installed in MechanisticCurta. Sharing it with the remaining bank
 requires each station's independent complete-print and operating acceptance.
 """
 

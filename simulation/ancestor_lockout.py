@@ -16,7 +16,7 @@ regression; the stricter parent stops the prepared case at 125.22323837.
 """
 
 from machinome.motion.joints import Bound
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 LAST_FREE = 125.32
 PHASE = 189.6
@@ -29,6 +29,6 @@ def closing_window(own, shaft):
     return -LAST_FREE * active + (own-360) * (1-active)
 
 
-class AncestorLockoutCurta(OperatingCurta):
-    OperatingCurta.main_drive.crank.turn.constrain(range=(Bound(
-        closing_window, reads=(OperatingCurta.transmission.result.ones.turn,)), None))
+class AncestorLockoutCurta(MechanisticCurta):
+    MechanisticCurta.main_drive.crank.turn.constrain(range=(Bound(
+        closing_window, reads=(MechanisticCurta.transmission.result.ones.turn,)), None))

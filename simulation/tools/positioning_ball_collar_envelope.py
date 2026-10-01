@@ -14,7 +14,7 @@ import numpy as np
 import trimesh
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.positioning_ball_contact import BALL, COLLAR, FRAME
 from simulation.cover_fits import mesh_solid
@@ -23,7 +23,7 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     ball, frame = (mesh_solid(leaves[name].mesh) for name in (BALL, FRAME))

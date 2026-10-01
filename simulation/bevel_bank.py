@@ -1,7 +1,7 @@
 """The installed seventeen-channel bevel interface, including carriage shift."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
-class BevelBank(Curta):
+class BevelBank(PosedCurta):
     pass

@@ -1,12 +1,12 @@
 """Installed X/Z section through the first digit ball and spider collar."""
 
 import matplotlib.pyplot as plt
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.standard.parts import SpiderSpring
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(**root.instructions['Rest'].targets)
     root.assemble()
     root.build_stls()

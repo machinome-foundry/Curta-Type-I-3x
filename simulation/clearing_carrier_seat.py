@@ -1,7 +1,7 @@
 """Scoped acceptance wrapper for the default clearing-cover/counter-body seat."""
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class ClearingCarrierSeatBench(OperatingCurta):
+class ClearingCarrierSeatBench(MechanisticCurta):
     pass

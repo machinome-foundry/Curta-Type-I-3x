@@ -2,12 +2,12 @@
 
 import json
 import cadquery as cq
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.interference import world_solids
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(**root.instructions['Rest'].targets)
     root.assemble()
     prefix = 'Curta.carriage.registers.'

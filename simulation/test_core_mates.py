@@ -12,7 +12,7 @@ from simulation.running_parts import (
     ContactBellAssembly, RetainedCarries, RetainedResultCarries,
     RetainedTurnsCarries, RetainedCarriage, RunningMainDrive,
 )
-from simulation.running import RadialRunningCarriage, LoopRunningCarriage
+from simulation.mechanistic import RadialRunningCarriage, LoopRunningCarriage
 from simulation.clearing_loop_operating_parts import OperatingLoopMount, LoopRetainedCarriage
 from simulation.test_mate_refactor import placed_basis
 

@@ -9,13 +9,13 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 from simulation.carry import CarryBench
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.interference import world_solids
 from simulation.tools.open_run_transitions import SecondCarryBench, bounds
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=99, initial_turns=0, operand=1,
                    crank_turns=0, subtract=0, carriage_position=0,
                    carriage_lift=0, clear=0)

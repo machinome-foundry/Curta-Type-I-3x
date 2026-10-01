@@ -38,13 +38,36 @@ hosted Python/browser banks agree bit-for-bit. This is a scoped operating fix,
 not whole-machine completion: the remaining geometry findings are still open.
 All 26 controls now have actual standalone and hosted pointer evidence.
 
+## Three models
+
+The model names follow the Pascaline's terminology:
+
+| Model | Python reference | What it does |
+| --- | --- | --- |
+| `posed_curta` | `simulation.posed:PosedCurta` | Prescribed calculator poses, formerly `fast_curta`. |
+| `mechanistic_curta` | `simulation.mechanistic:MechanisticCurta` | Retains moving coordinates and integrates local mechanical laws; the default, formerly `operating_curta`. |
+| `event_driven_curta` | `simulation.event_driven:EventDrivenCurta` | Commits register values at events and computes the pose between them, formerly `clocked_curta`. |
+
+This is a naming change; each model keeps its existing behavior and validation
+limits. Use the new names in build/export commands. The old Python references
+`simulation.curta:Curta`, `simulation.running:OperatingCurta`, and
+`simulation.clocked:ClockedCurta` remain compatibility aliases. Dated records
+and recorded oracle data retain their original names; `running` and `clocked`
+also remain framework execution terms in shared implementation helpers.
+
+```sh
+machinome build posed_curta
+machinome build event_driven_curta
+machinome build mechanistic_curta
+```
+
 ## Operate the current model
 
-The project selects `operating_curta` by default. With the workspace venv
+The project selects `mechanistic_curta` by default. With the workspace venv
 active, export it from this project's root and serve the export directory:
 
 ```sh
-machinome export operating_curta -o _build_operating
+machinome export mechanistic_curta -o _build_operating
 python -m http.server 8766 --bind 127.0.0.1 --directory _build_operating
 ```
 
@@ -180,12 +203,12 @@ separate [counter-lockout investigation](docs/counter-lockout-investigation-2026
 performed after that handoff. Production adoption and full operating acceptance
 remain in progress.
 
-There are now three sibling models: `fast_curta` (prescribed poses),
-`operating_curta` (`Time.running()`), and `clocked_curta` (event-committed
+There are now three sibling models: `posed_curta` (prescribed poses),
+`mechanistic_curta` (`Time.running()`), and `event_driven_curta` (event-committed
 registers using the framework's clocked-machine support). The
 [clocked model's record](docs/clocked-curta-2026-09-17.md) gives its Python
 operation surface, running-oracle comparisons, timings and viewer limitations.
-The manifest selects `operating_curta`. Its current verification and remaining
+The manifest selects `mechanistic_curta`. Its current verification and remaining
 work are in the [operating completion record](docs/operating-curta-completion-2026-09-19.md).
 The nested retained-joint pose defect is corrected in framework `b9b64dd`,
 integrated with the pilot's approval. The unchanged operating-model subtraction,
@@ -374,8 +397,8 @@ machinome build
 machinome snapshot -o snapshot-rest.png --autocenter --viewall
 python -m unittest simulation.test_source
 machinome test --faceted simulation/standard/assembly.py
-machinome test --exact simulation/running.py
-python -m unittest simulation.test_running.RunningCurtaTest
+machinome test --exact simulation/mechanistic.py
+python -m unittest simulation.test_mechanistic.MechanisticCurtaTest
 python -m simulation.tools.probe
 ```
 
@@ -401,15 +424,15 @@ machinome build
 The last command restores the complete model as the published viewer document.
 No floor or development server is launched by these commands.
 
-### Legacy prescribed-pose calculator page
+### Posed calculator page
 
-This page belongs only to `fast_curta`, not to the operating model. Its page-local
+This page belongs only to `posed_curta`, not to the operating model. Its page-local
 registers, automatic preparation and direct register setters are historical
 teaching aids, not direct mechanical operation. To inspect that older study,
 explicitly export the pose model and serve the project root locally:
 
 ```sh
-machinome export fast_curta -o _build_export
+machinome export posed_curta -o _build_export
 python -m http.server 8766 --bind 127.0.0.1
 ```
 
@@ -438,9 +461,9 @@ reproducible pose, not a claim that a physical crank can run backward.
 
 ## Source mapping
 
-- `curta.py`: `fast_curta`, calculator controls and prescribed register-state relation.
-- `running.py`: `operating_curta`, with history integrated through the mechanical laws.
-- `clocked.py`, `clocked_parts.py`, `clocked_laws.py`: `clocked_curta`, with
+- `posed.py`: `posed_curta`, calculator controls and prescribed register-state relation.
+- `mechanistic.py`: `mechanistic_curta`, with history integrated through the mechanical laws.
+- `event_driven.py`, `clocked_parts.py`, `clocked_laws.py`: `event_driven_curta`, with
   framework-owned register commits, request interlocks and closed-form poses.
 - `assemblies.py`: seven educational layers, with separate result/turns registers,
   carriage covers, input banks, drive and carry subassemblies.
@@ -458,7 +481,7 @@ reproducible pose, not a claim that a physical crank can run backward.
   carriage detents and lifted intermediate positions; both kernels pass.
 - `operating_demonstrations.py`: six separate physical-action replays for the
   retained operating model, with documented snapshot setup and no register setters.
-- `demo.py`: historical prescribed-pose demonstrations for `fast_curta` and
+- `demo.py`: historical prescribed-pose demonstrations for `posed_curta` and
   its legacy calculator page, not the operating demonstration implementation.
 - `engagement.py`: complete printed-drum contact sweeps, passing both kernels.
 - `carry.py`, `standard/carry.py`: fifteen sliding carry levers and stationary bearings.
@@ -562,7 +585,7 @@ is `05165d3`; it remains active and unarchived. The default operating model
 uses independent physical inputs and run-owned retained joint state. Its
 register readouts decode that state; there are no starting-register setters
 or hidden page-local calculator driving the mechanism. Explicit snapshots
-provide reproducible setup and replay. The prescribed-pose `fast_curta` sibling
+provide reproducible setup and replay. The prescribed-pose `posed_curta` sibling
 and its legacy calculator page remain separate historical studies, not the
 default operation surface or evidence of whole-machine acceptance.
 

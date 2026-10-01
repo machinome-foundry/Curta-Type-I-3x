@@ -1,6 +1,6 @@
 """One corpus, two models: the clocked harness against the operating Curta.
 
-The oracle side is recorded once, because `simulation/running.py` costs about
+The oracle side is recorded once, because `simulation/mechanistic.py` costs about
 0.8 s per 0.1 s tick; `clocked_spike_oracle.json` beside this file holds the
 readouts and the actual dial angles of every scenario in
 `simulation.tools.clocked_spike.SCENARIOS`. Re-record it with
@@ -19,7 +19,7 @@ import json
 import unittest
 
 from simulation.tools.clocked_spike import (
-    ALL_LOCKS, CURTA_LOCKS, FIXTURE, Interlocks, SCENARIOS, ClockedCurta,
+    ALL_LOCKS, CURTA_LOCKS, FIXTURE, Interlocks, SCENARIOS, EventDrivenCurta,
     compare, rack, rack_reach, rack_sweep, replay_clocked)
 
 # The running model's prescribed zero-capture band is half a wheel degree.
@@ -146,7 +146,7 @@ class CommitSemanticsTest(unittest.TestCase):
 
     def test_an_open_ratchet_commits_a_reverse_revolution_as_an_addition(self):
         """Red first: `at = floor(crank / 360)` fires on a falling step too."""
-        harness = ClockedCurta()
+        harness = EventDrivenCurta()
         harness.request(digit_1=9)
         harness.request(crank_rotation=360)
         self.assertEqual(harness.reading(), 9)
@@ -154,7 +154,7 @@ class CommitSemanticsTest(unittest.TestCase):
         self.assertEqual(harness.reading(), 18)     # not 9, and not 0
 
     def test_the_ratchet_leaves_the_register_where_the_stroke_left_it(self):
-        harness = ClockedCurta(interlocks=Interlocks(crank_ratchet=True))
+        harness = EventDrivenCurta(interlocks=Interlocks(crank_ratchet=True))
         harness.request(digit_1=9)
         harness.request(crank_rotation=360)
         harness.request(crank_rotation=0)
@@ -162,7 +162,7 @@ class CommitSemanticsTest(unittest.TestCase):
         self.assertEqual(harness.refusals[0][0], 'crank_ratchet')
 
     def test_several_crossings_in_one_request_commit_in_order(self):
-        harness = ClockedCurta()
+        harness = EventDrivenCurta()
         harness.request(digit_1=7)
         harness.request(crank_rotation=3 * 360)
         self.assertEqual((harness.reading(), harness.reading(True)), (21, 3))
@@ -170,7 +170,7 @@ class CommitSemanticsTest(unittest.TestCase):
                          ['stroke'] * 3)
 
     def test_an_input_changed_along_the_path_is_read_at_the_crossing(self):
-        harness = ClockedCurta()
+        harness = EventDrivenCurta()
         harness.request(digit_1=1)
         harness.request(crank_rotation=2 * 360, digit_1=5)
         self.assertEqual([event['operand'] for event in harness.events], [3, 5])
@@ -180,7 +180,7 @@ class ClearingTest(unittest.TestCase):
     """Question 3: do per-digit comparison events cover partial clearing?"""
 
     def prepared(self, result=1234567, **locks):
-        harness = ClockedCurta(interlocks=Interlocks(**locks))
+        harness = EventDrivenCurta(interlocks=Interlocks(**locks))
         harness.result = result
         harness.set_registers()
         harness.request(carriage_elevation=6)

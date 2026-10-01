@@ -10,7 +10,7 @@ import numpy as np
 from machinome.simulation import Sim
 from machinome.test import TestCase
 from simulation.operating_positioning import OperatingPositioningBench
-from simulation.running import register_reading
+from simulation.mechanistic import register_reading
 
 
 class OperatingPositioningTest(TestCase):

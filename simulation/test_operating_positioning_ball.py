@@ -6,7 +6,7 @@ import unittest
 import numpy as np
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 from simulation.positioning_ball_trial import OrbitingBallTrial
 from simulation.tools.interference import world_solids
 from simulation.tools.positioning_ball_contact import BALL, BELL, DRUM
@@ -64,7 +64,7 @@ class OperatingPositioningBallTest(unittest.TestCase):
         np.testing.assert_array_equal(ball.mesh.vertices, vertices)
 
     def test_default_model_has_not_adopted_the_rejected_orbit(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(MechanisticCurta(), dt=.1)
         self.assertEqual(len(sim.state), 216)
         self.assertEqual(sim.state['carriage.positioning.p_6mm_ball_419094.slide'], 0)
         self.assertNotIn('carriage.positioning.p_6mm_ball_419094.turn', sim.state)

@@ -11,7 +11,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.carry_frame_sections import plot_section
 from simulation.tools.interference import world_solids
 from simulation.tools.open_run_selector import SELECTOR, INPUT_GROUP, MOVERS, move_shape, retained_state
@@ -19,7 +19,7 @@ from simulation.tools.open_run_transitions import bounds
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=99, initial_turns=0, operand=1, crank_turns=0,
                    subtract=0, carriage_position=0, carriage_lift=0, clear=0)
     root.assemble()

@@ -3,7 +3,7 @@
 import json
 import argparse
 from pathlib import Path
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.carry_phase import solid
 from simulation.tools.interference import world_solids
 from simulation.tools.compile_detents import compact
@@ -15,7 +15,7 @@ def readings(path):
 
 
 def probe(exact=False, knots=None, resume=None):
-    root = Curta()
+    root = PosedCurta()
     root.set_state(**root.instructions['Rest'].targets)
     root.assemble()
     carriage = root.carriage.registers

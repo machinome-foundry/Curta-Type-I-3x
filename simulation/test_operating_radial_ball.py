@@ -7,7 +7,7 @@ import cadquery as cq
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta, StaticBallOperatingCurta, ReverserOperatingCurta
+from simulation.mechanistic import MechanisticCurta, StaticBallOperatingCurta, ReverserOperatingCurta
 from simulation.positioning_ball_trial import RadialBallTrial, ReversedRadialBallTrial, PullingBallTrial
 from simulation.test_radial_positioning_ball import RadialPositioningBallTest as _RetainedContract
 from simulation.tools.positioning_ball_contact import BALL, BELL, FRAME, COLLAR
@@ -20,7 +20,7 @@ from simulation.counter_shoulder_operating_trial import ShoulderFittedStaticBall
 
 
 class OperatingRadialBallGeometryTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_default_retains_the_radial_coordinate_and_no_ball_control(self):
         sim = Sim(self.model(), dt=.1)
@@ -91,7 +91,7 @@ class OperatingRadialBallGeometryTest(unittest.TestCase):
 
 
 class OperatingRadialBallHistoryTest(_RetainedContract):
-    model = OperatingCurta
+    model = MechanisticCurta
 
 
 class OperatingRadialBallPreservationTest(unittest.TestCase):

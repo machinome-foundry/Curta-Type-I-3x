@@ -2,12 +2,12 @@
 
 import json
 from math import cos, sin, radians
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.interference import world_solids
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=22222222222, initial_turns=222222, operand=0,
                    crank_turns=0, subtract=0, carriage_position=2, carriage_lift=0, clear=0)
     root.assemble()

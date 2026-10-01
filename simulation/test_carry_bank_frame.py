@@ -5,7 +5,7 @@ import unittest
 
 import numpy as np
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.carry_bank_frame import CarryBankFrameBench, stations
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.cover_fits import mesh_solid
@@ -32,7 +32,7 @@ class CarryBankFrameTest(unittest.TestCase):
 
     def test_fixture_matches_the_operating_root_at_rest(self):
         self.bench.set_state(drop_mm=0)
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         installed = world_solids(sim.node, include_flexible=True)
         bench = self.native()
         mapping = {'Curta.frame.main_body': 'Curta.frame.upper_frame.main_body'}

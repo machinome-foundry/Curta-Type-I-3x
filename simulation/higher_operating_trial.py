@@ -4,8 +4,8 @@ Do not add the bound again here: the actual manifest root owns it. Original
 source-fit pose comparators remain in higher_lockout.py.
 """
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class HigherOperatingTrial(OperatingCurta):
+class HigherOperatingTrial(MechanisticCurta):
     pass

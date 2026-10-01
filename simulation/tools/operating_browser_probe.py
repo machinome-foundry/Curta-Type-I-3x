@@ -19,7 +19,7 @@ from playwright.sync_api import sync_playwright
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--build', type=Path, default=Path('_build/operating_curta'))
+    parser.add_argument('--build', type=Path, default=Path('_build/mechanistic_curta'))
     parser.add_argument('--screenshot', type=Path,
                         default=Path('_build_running/operating-browser-prerequisite.png'))
     parser.add_argument('--interlocks', action='store_true')

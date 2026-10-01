@@ -6,12 +6,12 @@ admitted partial input from acting through fictional fractional teeth.
 
 import unittest
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 
 
 class RunningPartialInputTest(unittest.TestCase):
     def test_partial_selector_uses_actual_teeth_and_keeps_its_history(self):
-        sim = Sim(OperatingCurta(), dt=.2)
+        sim = Sim(MechanisticCurta(), dt=.2)
         sim.move('digit_1', to=.25)
         self.assertEqual(register_reading(sim), 0)
         sim.move('crank_rotation', by=360, duration=2)

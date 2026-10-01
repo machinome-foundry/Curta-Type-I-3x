@@ -6,7 +6,7 @@ from pathlib import Path
 import unittest
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import CHANNEL_NAMES
 from simulation.tools.result_bank_lockout_probe import STATIONS
 from simulation.tools.interference import world_solids, rigid_leaves
@@ -18,7 +18,7 @@ BELL = 'Curta.carry_mechanism.tens_bell.tens_bell_1'
 
 
 class OperatingResultBankLockoutTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     @classmethod
     def setUpClass(cls):

@@ -47,7 +47,7 @@ def minimal_probe():
 
 def probe():
     # The framework-only reduction does not import the complete Curta graph.
-    from simulation.running import RunningCarriage
+    from simulation.mechanistic import RunningCarriage
 
     class CarriagePoseProbe(AssemblyNode):
         time = Time.running()

@@ -1,7 +1,7 @@
 """Neutral action corpus from clocked-spike commit bcf2017 (2026-09-16)."""
 
 SCENARIOS = {
-    # test_running.py::test_manual_calibration_carries, and the page-53
+    # test_mechanistic.py::test_manual_calibration_carries, and the page-53
     # sequence simulation/tools/running_probe.py replays.
     'calibration_page_53': [
         ('digits', {1: 0, 2: 0}), ('crank', 360, 2), ('read', 'after 0'),
@@ -9,20 +9,20 @@ SCENARIOS = {
         ('digits', {1: 9, 2: 0}), ('crank', 360, 2), ('read', 'after 9'),
         ('digits', {1: 0, 2: 9}), ('crank', 360, 2), ('read', 'after 90'),
     ],
-    # test_running.py::test_subtraction_borrows_through_both_registers...
+    # test_mechanistic.py::test_subtraction_borrows_through_both_registers...
     'subtraction_borrow_and_undo': [
         ('digits', {1: 1}), ('crank_lift', 9, 0), ('crank', 360, 2),
         ('read', 'borrowed'),
         ('crank_lift', 0, 0), ('crank', 360, 2), ('read', 'undone'),
     ],
-    # test_running.py::test_shift_reassociates_actual_dials...
+    # test_mechanistic.py::test_shift_reassociates_actual_dials...
     'shift_reassociates': [
         ('digits', {1: 9}), ('crank', 360, 2), ('read', 'nine'),
         ('carriage_lift', 6, .2), ('carriage_turn', 40, .2), ('read', 'shifted'),
         ('carriage_lift', 0, .2), ('digits', {1: 3}), ('crank', 360, 2),
         ('read', 'three hundred'),
     ],
-    # test_running.py::test_independent_inputs_and_two_successive_additions
+    # test_mechanistic.py::test_independent_inputs_and_two_successive_additions
     'two_additions_and_selective_clearing': [
         ('digits', {1: 3}), ('crank', 360, 2), ('read', 'three'),
         ('digits', {1: 2}), ('read', 'selector only'),
@@ -32,7 +32,7 @@ SCENARIOS = {
         ('ring', 180, .2), ('read', 'counter cleared'),
         ('ring', -360, .2), ('read', 'reverse sweep'),
     ],
-    # test_running.py::test_partial_crank_release_and_snapshot_replay
+    # test_mechanistic.py::test_partial_crank_release_and_snapshot_replay
     'partial_crank_release_and_resume': [
         ('digits', {1: 9}), ('crank', 90, .5), ('read', 'quarter turn'),
         ('crank', 270, 1.5), ('read', 'completed'),

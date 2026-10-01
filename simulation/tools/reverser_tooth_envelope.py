@@ -14,7 +14,7 @@ from pathlib import Path
 from machinome.exact import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.test_reverser_assembly import INPUTS
 from simulation.tools.higher_locking_envelope import faceted_common_volume
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -69,7 +69,7 @@ class ToothEnvelopeReader:
         name, member = INPUTS[station-1]
         self.gear = f'Curta.transmission.turns.{name}.{member}'
         self.paths = (self.gear, *DRUMS)
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         self.initial = sim.snapshot()
         self.bank = dict(sim.state)
         shaft = getattr(sim.node.transmission.turns, name)

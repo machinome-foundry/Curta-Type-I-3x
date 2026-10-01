@@ -39,8 +39,8 @@ def certify(station, max_depth=36, part='slider', *, source_shapes=None,
             raise ValueError('Explicit source geometry requires slider, alignment and output')
         slider, frame = source_shapes
     if part == 'sleeve':
-        from simulation.curta import Curta
-        root = Curta()
+        from simulation.posed import PosedCurta
+        root = PosedCurta()
         root.set_state(initial_result=99, initial_turns=0, operand=1, crank_turns=0,
                        subtract=0, carriage_position=0, carriage_lift=0, clear=0)
         root.assemble()

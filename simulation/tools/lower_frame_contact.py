@@ -7,7 +7,7 @@ from math import cos, sin, radians, isfinite
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import RunningEnclosure
 from simulation.standard.assembly import LowerHousing1
 from simulation.standard.parts import BottomHousing
@@ -35,7 +35,7 @@ class FineEnclosure(RunningEnclosure):
     lower_housing_1 = FineLowerHousing()
 
 
-class FineHousingTrial(OperatingCurta):
+class FineHousingTrial(MechanisticCurta):
     enclosure = FineEnclosure()
 
 
@@ -54,7 +54,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--fine', action='store_true', help='Source shell with finer mesh, without seat fits')
     args = parser.parse_args()
-    model = FineHousingTrial if args.fine else OperatingCurta
+    model = FineHousingTrial if args.fine else MechanisticCurta
     sim = Sim(model(), dt=.1, meshes=True)
     bank = dict(sim.state)
     paths = (SHELL, FRAME, BEARING)

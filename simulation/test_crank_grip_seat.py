@@ -5,7 +5,7 @@ import unittest
 
 import cadquery as cq
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.operating_demonstrations import replay
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.crank_handle_contact import CRANK, HANDLE
@@ -18,7 +18,7 @@ from simulation.contracts import assert_connected_material
 class CrankGripSeatTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        cls.sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
 
     def test_actual_addition_keeps_grip_clear_of_crank(self):
         sim = self.sim

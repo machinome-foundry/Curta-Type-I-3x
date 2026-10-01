@@ -25,7 +25,7 @@ from simulation.reverser_operating_parts import (
     ReverserContactTurns as TrialTurns,
     ReverserContactTransmission as TrialTransmission,
 )
-from simulation.running import RadialBallOperatingCurta
+from simulation.mechanistic import RadialBallOperatingCurta
 
 
 class TrialOnes(ReversingOnes):

@@ -1,7 +1,7 @@
 """The full operating root for carriage positioning interface contracts."""
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class OperatingPositioningBench(OperatingCurta):
+class OperatingPositioningBench(MechanisticCurta):
     pass

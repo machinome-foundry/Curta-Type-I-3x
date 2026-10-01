@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--measured', action='store_true',
                         help='Check ResultLocking against the seven Python/geometry-certified poses.')
     parser.add_argument('--operating', action='store_true',
-                        help='Run that measured matrix on the complete OperatingCurta export.')
+                        help='Run that measured matrix on the complete MechanisticCurta export.')
     args = parser.parse_args()
     if args.operating:
         args.measured = True

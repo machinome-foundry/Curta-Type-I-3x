@@ -9,7 +9,7 @@ import numpy as np
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.operating_demonstrations import DEMONSTRATIONS, replay
 from simulation.positioning_ball_trial import RadialBallTrial
 from simulation.test_carry_bank_trial import flexible_meshes
@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--model', choices=('trial', 'production'), default='trial')
     args = parser.parse_args()
     started = time.monotonic()
-    sim = Sim((OperatingCurta if args.model == 'production' else RadialBallTrial)(), dt=.1, meshes=True)
+    sim = Sim((MechanisticCurta if args.model == 'production' else RadialBallTrial)(), dt=.1, meshes=True)
     initial = sim.snapshot()
     current, count, findings = None, 0, []
 

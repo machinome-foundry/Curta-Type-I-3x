@@ -3,7 +3,7 @@
 import unittest
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.operating_demonstrations import DEMONSTRATIONS, replay
 
 
@@ -22,7 +22,7 @@ class OperatingDemonstrationDefinitionTest(unittest.TestCase):
 
 
 class OperatingDemonstrationReplayTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_all_demonstrations_replay_exactly_from_the_initial_snapshot(self):
         for name in DEMONSTRATIONS:

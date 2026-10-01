@@ -4,12 +4,12 @@ import unittest
 
 from machinome.simulation import Sim
 from machinome.test import TestCase
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 from simulation.contracts import assert_connected_material
 
 
-class OperatingCurtaIntegrityTest(TestCase):
-    node = OperatingCurta
+class MechanisticCurtaIntegrityTest(TestCase):
+    node = MechanisticCurta
 
     def test_solid_integrity(self):
         def check(node):
@@ -26,8 +26,8 @@ class OperatingCurtaIntegrityTest(TestCase):
         self.assertNoSolidInterference(self.node)
 
 
-class RunningCurtaTest(unittest.TestCase):
-    model = OperatingCurta
+class MechanisticCurtaTest(unittest.TestCase):
+    model = MechanisticCurta
 
     def test_every_selector_moves_independently_without_driving_a_register(self):
         sim = Sim(self.model(), dt=.1)

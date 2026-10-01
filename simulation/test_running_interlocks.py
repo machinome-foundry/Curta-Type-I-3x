@@ -2,7 +2,7 @@
 
 import unittest
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 
 LIFT = 'carriage.registers.lift'
 RING = 'carriage.registers.clearing_ring.turn'
@@ -11,7 +11,7 @@ SHIFT = 'carriage.registers.turn'
 
 
 class RunningCarriageIndexTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_every_working_slot_stops_in_both_directions_and_retains_the_stop(self):
         sim = Sim(self.model(), dt=.1)
@@ -104,7 +104,7 @@ class RunningCarriageIndexTest(unittest.TestCase):
 
 
 class RunningClearingInterlockTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_each_ring_rest_blocks_both_directions_without_auto_lift(self):
         sim = Sim(self.model(), dt=.1)

@@ -1,7 +1,7 @@
 """Installed operating root for focused reverser motion/contact contracts."""
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class RunningReverserMotion(OperatingCurta):
+class RunningReverserMotion(MechanisticCurta):
     pass

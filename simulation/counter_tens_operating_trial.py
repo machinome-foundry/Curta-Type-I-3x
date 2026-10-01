@@ -10,7 +10,7 @@ from machinome.motion.joints import Bound, Prismatic
 from simulation.standard.printed import Part10220_410003_1_419081
 from simulation.reverser_inputs import ReversingTens
 from simulation.running_parts import TurnsShafts, RetainedTransmission
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.higher_counter_locking_laws import higher_counter_closing_limit
 from simulation.tools.counter_lockout_probe import TrialCounterLockout
 
@@ -34,10 +34,10 @@ class TrialTensTransmission(RetainedTransmission):
     turns = TrialTensShafts()
 
 
-class CounterTensOperatingTrial(OperatingCurta):
+class CounterTensOperatingTrial(MechanisticCurta):
     transmission = TrialTensTransmission()
-    OperatingCurta.main_drive.crank.turn.constrain(range=(Bound(
+    MechanisticCurta.main_drive.crank.turn.constrain(range=(Bound(
         higher_counter_closing_limit,
-        reads=(OperatingCurta.carry_mechanism.tens_bell.turn,
+        reads=(MechanisticCurta.carry_mechanism.tens_bell.turn,
                transmission.turns.tens.turn,
                transmission.turns.tens.p_10220_410003_1_419081.travel)), None))

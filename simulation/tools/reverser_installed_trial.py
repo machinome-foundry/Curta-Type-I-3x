@@ -91,9 +91,9 @@ def make_limits(evidence, *, evidence_sha256=EVIDENCE_SHA256):
 
 def make_trial(evidence, *, evidence_sha256=EVIDENCE_SHA256, model=None):
     from machinome.motion.joints import Bound
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
-    model = OperatingCurta if model is None else model
+    model = MechanisticCurta if model is None else model
     lower, upper = make_limits(evidence, evidence_sha256=evidence_sha256)
     reads = (model.main_drive.crank.turn,
              model.transmission.turns.ones.turn,

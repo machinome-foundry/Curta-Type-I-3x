@@ -67,11 +67,11 @@ def withdrawal_trace(sim, *, contacts=pair_contacts, requests=REQUESTS):
 
 def main(*, partial_input=False):
     from machinome.simulation import Sim
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
     requests = PARTIAL_INPUT_REQUESTS if partial_input else REQUESTS
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True, record=64)
-    print(json.dumps({'model': 'simulation.running:OperatingCurta',
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True, record=64)
+    print(json.dumps({'model': 'simulation.mechanistic:MechanisticCurta',
                       'coordinates': len(sim.state), 'acceptance': 'diagnostic-only',
                       'sequence': 'partial-input' if partial_input else 'original'}), flush=True)
     rows = []

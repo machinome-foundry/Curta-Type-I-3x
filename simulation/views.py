@@ -11,7 +11,7 @@ from simulation.carry_contact import CarryContactBench
 from simulation.bell_spring import BellLeafContactBench
 from simulation.mechanism import RegisterCarriage, Carriage
 from simulation.clearing_stop_spring import ClearingPinCarrier
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
 class UncoveredRegisters(RegisterCarriage):
@@ -26,7 +26,7 @@ class UncoveredCarriage(Carriage):
                                    lift=Prismatic(axis=(0, 0, 1)))
 
 
-class InsideCurta(Curta):
+class InsideCurta(PosedCurta):
     """The running mechanism with the same layers hidden as 'See inside'."""
     carriage = UncoveredCarriage()
 
@@ -35,7 +35,7 @@ class InsideCurta(Curta):
         self.frame.omit()
 
 
-class CarryFrameInspection(Curta):
+class CarryFrameInspection(PosedCurta):
     """099 + 1, shell hidden for inspection only; frame and mounts stay present.
 
     Collision and path evidence always use the complete Curta, never this view.

@@ -29,16 +29,16 @@ forces.
 |---|---|
 | One full scenario, 23 + 145 | the take `Addition` (takes.py), chapters `first` and `second`; the problem posed in `question`, answered in `closing` |
 | A detailed explanation of how it works, components highlighted on narration | `set-23`, `add-23`, `set-145`, `add-145`: each slide highlighted as it is named, the stepped drum, the gears, the shafts and dials, the carry levers |
-| How machinome works: code shown, words lit in sync with the narration | chapter `machinome`: three excerpts of `simulation/clocked.py` typed beside the model, eleven tokens lit as they are spoken |
+| How machinome works: code shown, words lit in sync with the narration | chapter `machinome`: three excerpts of `simulation/event_driven.py` typed beside the model, eleven tokens lit as they are spoken |
 | The transition: the Curta full screen, its container shrinking to the right half, the code fading into a second container, narration over code while the Curta animates | `whole` → `inputs` by `Reframe(0.8)`; `inputs`, `turn`, `commit` replay the second stroke beside the code |
 | Camera continuity through that transition | one view element, `machinome.curta`, on camera `face` in both shots; its take time continues across the join (hold at `set_145`, then running from `set_145`); the set's stage box and the split's right box share top and height, so the Curta keeps its size while its box narrows |
 
 ## The take
 
-`takes.py`, `class Addition(Take)` on `ClockedCurta`, export
-`../../export/clocked_curta`. `digit_1` is the units slide: the `advance`
+`takes.py`, `class Addition(Take)` on `EventDrivenCurta`, export
+`../../export/event_driven_curta`. `digit_1` is the units slide: the `advance`
 law reads the eight settings units first, and `register_reading` reads
-`result_0` as the units (`simulation/clocked.py`, `clocked_laws.py`).
+`result_0` as the units (`simulation/event_driven.py`, `clocked_laws.py`).
 
 | step | request | take seconds | mark after it |
 |---|---|---|---|
@@ -106,7 +106,7 @@ the carriage rim above them, the crank on top.
 
 ## The code, and the words lit
 
-All from `simulation/clocked.py`, typed in as the shot opens:
+All from `simulation/event_driven.py`, typed in as the shot opens:
 
 - `drivers`, lines 52–60 (the eight `digit_N` slides and `crank_rotation`):
   at "Each slide is a Driver, an input you can move: digit one is the units,

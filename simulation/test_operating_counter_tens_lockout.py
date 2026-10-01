@@ -10,7 +10,7 @@ import os
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.higher_counter_wrong_order import (
     PARTIAL_INPUT_REQUESTS, BELL)
 from simulation.tools.interference import world_solids, rigid_leaves
@@ -19,7 +19,7 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 
 class OperatingCounterTensLockoutTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
     station = 2
 
     @classmethod

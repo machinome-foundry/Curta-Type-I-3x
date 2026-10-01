@@ -12,7 +12,7 @@ from simulation.tools.interference import rigid_leaves
 
 class AncestorLockoutTest(unittest.TestCase):
     def test_wrong_order_request_stops_the_actual_crank(self):
-        # OperatingCurta now contributes the independently measured five-flat
+        # MechanisticCurta now contributes the independently measured five-flat
         # restraint. Its .1-degree stand-off is stricter than the historical
         # local diagnostic, so both must intersect rather than replace it.
         expected_stop = 125.22323837227304

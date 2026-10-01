@@ -11,7 +11,7 @@ import logging
 
 import manifold3d as manifold
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import CHANNEL_NAMES
 from simulation.tools.ancestor_lockout_contact import mesh_solid
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -33,7 +33,7 @@ def main():
     channel = CHANNEL_NAMES[args.channel-1]
     # Twenty-degree station spacing is declared by the source drive law.
     withdrawal = 120 + 20*(args.channel-1)
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     if args.carry:
         for input_name, value in (('digit_1', 9), ('crank_rotation', 360), ('digit_1', 1)):
             request = sim.move(input_name, to=value)

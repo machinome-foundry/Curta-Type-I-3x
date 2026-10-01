@@ -2,7 +2,7 @@
 
 import unittest
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 
 LOWER = -4.9425
 UPPER = 3.9075
@@ -10,7 +10,7 @@ UPPER = 3.9075
 
 class RunningReverserTest(unittest.TestCase):
     def test_unseated_lever_produces_its_actual_unwanted_counter_entry(self):
-        sim = Sim(OperatingCurta(), dt=.2)
+        sim = Sim(MechanisticCurta(), dt=.2)
         sim.move('reverser_height', to=-3)
         sim.move('crank_rotation', by=360, duration=2)
         sim.run(2)
@@ -22,7 +22,7 @@ class RunningReverserTest(unittest.TestCase):
         self.assertEqual(sim.state['crank_elevation'], 0)
 
     def test_detent_is_not_an_invented_hard_stop(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(MechanisticCurta(), dt=.1)
         key = 'main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift'
         sim.move('reverser_height', to=LOWER)
         command = sim.move('reverser_height', to=-5.5)
@@ -37,7 +37,7 @@ class RunningReverserTest(unittest.TestCase):
         self.assertAlmostEqual(sim.state[key], UPPER)
 
     def test_counter_direction_changes_without_recomputing_result_or_history(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(MechanisticCurta(), dt=.1)
         sim.move('digit_1', to=3)
         sim.move('crank_rotation', by=360, duration=2)
         sim.run(2)
@@ -59,7 +59,7 @@ class RunningReverserTest(unittest.TestCase):
     def test_both_counter_directions_at_every_carriage_shift_and_crank_mode(self):
         # A second tick size also checks that tooth/carry event subdivision,
         # not coincidental alignment with the .1 s history test, controls totals.
-        sim = Sim(OperatingCurta(), dt=.2)
+        sim = Sim(MechanisticCurta(), dt=.2)
         empty = sim.snapshot()
         for shift in range(6):
             for subtract in (False, True):
@@ -85,7 +85,7 @@ class RunningReverserTest(unittest.TestCase):
                               flush=True)
 
     def test_partial_lever_request_keeps_other_controls_and_replays(self):
-        sim = Sim(OperatingCurta(), dt=.1)
+        sim = Sim(MechanisticCurta(), dt=.1)
         sim.move('digit_1', to=7)
         sim.move('reverser_height', to=0, duration=.4)
         sim.run(.4)

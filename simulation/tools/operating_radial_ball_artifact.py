@@ -6,11 +6,11 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
 def oracle():
-    sim = Sim(OperatingCurta(), dt=.1)
+    sim = Sim(MechanisticCurta(), dt=.1)
     report = {}
 
     def record(name, status):
@@ -51,7 +51,7 @@ def main():
         from machinome.core.export import export_node
         from machinome.simulation.enumeration import bind_declared_defaults
         assert not args.export.exists(), 'preserve earlier artifacts'
-        node = OperatingCurta()
+        node = MechanisticCurta()
         bind_declared_defaults(node)
         manifest = export_node(node, args.export)
         print(json.dumps(dict(path=str(args.export), version=manifest['version'],

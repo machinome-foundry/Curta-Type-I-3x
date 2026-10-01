@@ -5,7 +5,7 @@ import logging
 import time
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.carry_bank_regions import maximally_relieved
 from simulation.standard.parts import MainBody
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -14,7 +14,7 @@ from simulation.tools.open_run_transitions import bounds
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     protected = set()
     for path, node in rigid_leaves(sim.node):

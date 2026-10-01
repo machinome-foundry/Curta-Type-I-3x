@@ -9,7 +9,7 @@ import json
 import logging
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import world_solids, rigid_leaves
 from simulation.tools.ancestor_lockout_contact import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume
@@ -57,7 +57,7 @@ def prepare_partial_turn(sim, *, report=False):
 
 
 def measure():
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     print('constructed', flush=True)
     prepare_partial_turn(sim, report=True)
     print(json.dumps(contact_evidence(sim, 'before lever withdrawal')), flush=True)

@@ -2,7 +2,7 @@
 
 from machinome.test import TestCase
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.contracts import assert_connected_material
 
 
@@ -14,8 +14,8 @@ def leaves(node):
             yield from leaves(child)
 
 
-class CurtaTest(TestCase):
-    node = Curta
+class PosedCurtaTest(TestCase):
+    node = PosedCurta
 
     def test_marked_digits_follow_every_reading_position(self):
         from simulation.tools.check_marking_poses import check_poses

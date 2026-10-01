@@ -15,7 +15,7 @@ from machinome.motion.joints import Bound
 from simulation.reverser_modes import PINION_STARTS, THICKNESS
 # Keep this intentionally local diagnostic independent of the adopted full
 # angular restraint and its additional ones-pinion fit.
-from simulation.running import RadialBallOperatingCurta as OperatingCurta
+from simulation.mechanistic import RadialBallOperatingCurta as MechanisticCurta
 
 
 # Explicit free-side admission stand-off, not an accepted overlap volume.
@@ -61,13 +61,13 @@ def local_upper_limit(own, crank, shaft, lift):
     return limit
 
 
-class LocalReverserContactTrial(OperatingCurta):
-    OperatingCurta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift.constrain(
+class LocalReverserContactTrial(MechanisticCurta):
+    MechanisticCurta.main_drive.reversing_lever.reversing_lever_1.reversing_lever_knob_1.lift.constrain(
         range=(Bound(local_lower_limit, reads=(
-            OperatingCurta.main_drive.crank.turn,
-            OperatingCurta.transmission.turns.ones.turn,
-            OperatingCurta.main_drive.crank.lift)),
+            MechanisticCurta.main_drive.crank.turn,
+            MechanisticCurta.transmission.turns.ones.turn,
+            MechanisticCurta.main_drive.crank.lift)),
                Bound(local_upper_limit, reads=(
-            OperatingCurta.main_drive.crank.turn,
-            OperatingCurta.transmission.turns.ones.turn,
-            OperatingCurta.main_drive.crank.lift))))
+            MechanisticCurta.main_drive.crank.turn,
+            MechanisticCurta.transmission.turns.ones.turn,
+            MechanisticCurta.main_drive.crank.lift))))

@@ -1,18 +1,18 @@
-"""Clocked Curta operations: independent expectations over the public Sim."""
+"""Event-driven Curta operations: independent expectations over the public Sim."""
 
 import unittest
 import json
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.clocked import ClockedCurta, register_reading
+from simulation.event_driven import EventDrivenCurta, register_reading
 from simulation.clocked_cases import SCENARIOS
 from simulation.running_parts import RESULT_DIALS, TURNS_DIALS
 
 
-class ClockedOperationsTest(unittest.TestCase):
+class EventDrivenOperationsTest(unittest.TestCase):
     def test_ratchet_stop_survives_repeated_reverse_requests(self):
-        sim = Sim(ClockedCurta())
+        sim = Sim(EventDrivenCurta())
         for revolution in (0, 1):
             for tooth in (11, 15, 22, 30, 44, 60, 85, 88, 101, 116):
                 with self.subTest(revolution=revolution, tooth=tooth):
@@ -29,11 +29,11 @@ class ClockedOperationsTest(unittest.TestCase):
     def test_full_register_carry_and_all_clearing_stations(self):
         initial = {f'{bank}_{place}.value': 9
                    for bank, count in [('result', 11), ('turns', 6)] for place in range(count)}
-        sim = Sim(ClockedCurta(), state={**initial, 'digit_1': 1})
+        sim = Sim(EventDrivenCurta(), state={**initial, 'digit_1': 1})
         sim.move('crank_rotation', by=360)
         self.assertEqual((register_reading(sim), register_reading(sim, True)), (0, 0))
         for direction in (1, -1):
-            sim = Sim(ClockedCurta(), state=initial)
+            sim = Sim(EventDrivenCurta(), state=initial)
             sim.move('carriage_elevation', to=6)
             sim.move('clearing_rotation', to=230 if direction == 1 else -130)
             self.assertEqual(register_reading(sim), 0 if direction == 1 else 99999999999)
@@ -51,7 +51,7 @@ class ClockedOperationsTest(unittest.TestCase):
                 self.test_repeated_strokes_and_partial_pose()
 
     def test_clearing_pose_and_measured_checks(self):
-        model = ClockedCurta()
+        model = EventDrivenCurta()
         sim = Sim(model)
         sim.move('digit_1', to=5)
         sim.move('crank_rotation', by=360)
@@ -69,7 +69,7 @@ class ClockedOperationsTest(unittest.TestCase):
         self.assertEqual(sim.move('carriage_elevation', to=0).admitted, -6)
 
     def test_clearing_starts_at_a_check_and_high_dials_finish_after_180(self):
-        sim = Sim(ClockedCurta(), state={'result_10.value': 1})
+        sim = Sim(EventDrivenCurta(), state={'result_10.value': 1})
         sim.move('clearing_rotation', to=20)
         # The integer-register closed form admits entry to clearing at a check.
         # Lifting into a rack already mid-passage is outside this model's domain.
@@ -84,7 +84,7 @@ class ClockedOperationsTest(unittest.TestCase):
         self.assertEqual(sim.move('carriage_elevation', to=0).admitted, -6)
 
     def test_split_requests_and_session_state(self):
-        model = ClockedCurta()
+        model = EventDrivenCurta()
         sim = Sim(model, state={'result_0.value': 8, 'digit_1': 1})
         saved = sim.snapshot()
         sim.move('crank_rotation', by=3600)
@@ -106,7 +106,7 @@ class ClockedOperationsTest(unittest.TestCase):
         excluded = {'mid_stroke_carriage_shift', 'mid_stroke_reversing_lever',
                     'mid_stroke_carriage_lift_and_sweep', 'crank_reversal',
                     'sweep_stopped_between_teeth'}
-        model = ClockedCurta()
+        model = EventDrivenCurta()
         sim = Sim(model)
         names = {'crank': 'crank_rotation', 'crank_lift': 'crank_elevation',
                  'carriage_lift': 'carriage_elevation', 'carriage_turn': 'carriage_rotation',
@@ -138,7 +138,7 @@ class ClockedOperationsTest(unittest.TestCase):
                                 self.assertLessEqual(abs(error), .5 / 36 + 1e-6)
 
     def test_repeated_strokes_and_partial_pose(self):
-        model = ClockedCurta()
+        model = EventDrivenCurta()
         sim = Sim(model)
         sim.move('digit_1', to=9)
         sim.move('crank_rotation', by=90)
@@ -154,7 +154,7 @@ class ClockedOperationsTest(unittest.TestCase):
         self.assertEqual(register_reading(sim, True), 3)
 
     def test_borrow_undo_shift_and_restore(self):
-        sim = Sim(ClockedCurta())
+        sim = Sim(EventDrivenCurta())
         sim.move('digit_1', to=1)
         sim.move('crank_elevation', to=9)
         sim.move('crank_rotation', by=360)
@@ -177,7 +177,7 @@ class ClockedOperationsTest(unittest.TestCase):
     def test_separate_register_clearing_in_both_directions(self):
         for direction in (1, -1):
             with self.subTest(direction=direction):
-                sim = Sim(ClockedCurta())
+                sim = Sim(EventDrivenCurta())
                 sim.move('digit_1', to=5)
                 sim.move('crank_rotation', by=360)
                 sim.move('clearing_rotation', by=360)
@@ -191,7 +191,7 @@ class ClockedOperationsTest(unittest.TestCase):
                 self.assertEqual(register_reading(sim, True), 0)
 
     def test_interlocks_and_strokes(self):
-        sim = Sim(ClockedCurta())
+        sim = Sim(EventDrivenCurta())
         self.assertEqual(sim.move('digit_1', to=20).admitted, 9)
         self.assertEqual(sim.move('digit_1', to=-20).admitted, -9)
         self.assertEqual(sim.move('carriage_rotation', to=20).admitted, 0)
@@ -213,8 +213,8 @@ class ClockedOperationsTest(unittest.TestCase):
 from machinome.test import TestCase
 
 
-class ClockedGeometryTest(TestCase):
-    node = ClockedCurta
+class EventDrivenGeometryTest(TestCase):
+    node = EventDrivenCurta
 
     def test_solid_integrity(self):
         self.assertNoDisconnectedSolids(self.node)
@@ -223,7 +223,7 @@ class ClockedGeometryTest(TestCase):
         Sim(self.node)
         self.assertNoSolidInterference(self.node)
 
-    def test_partial_crank_pose_matches_the_fast_geometry(self):
+    def test_partial_crank_pose_matches_the_posed_geometry(self):
         import numpy as np
         sim = Sim(self.node)
         crank = self.node.main_drive.crank.crank_handle_1.main_crank

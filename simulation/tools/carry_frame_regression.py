@@ -53,9 +53,9 @@ def run(kernels, selected):
     known = {
         ('faceted', 'bearing'): ('ShaftBearingTest.test_tip_clears_frame_through_a_turn',
                                 ('intersection volume 3.240210',)),
-        ('faceted', 'curta'): ('CurtaTest.test_assembly_integrity',
+        ('faceted', 'curta'): ('PosedCurtaTest.test_assembly_integrity',
                               ('digits_cover', 'upper_housing', '224.32750533797636')),
-        ('exact', 'curta'): ('CurtaTest.test_assembly_integrity',
+        ('exact', 'curta'): ('PosedCurtaTest.test_assembly_integrity',
                             ('digits_cover', 'upper_housing', '224.32750533797636')),
     }
     for kernel in kernels:
@@ -64,7 +64,7 @@ def run(kernels, selected):
             log = output_dir/f'carry-frame-regression-{kernel}-{module.replace("/", "-")}.log'
             command = ['/usr/bin/time', '-f', 'RESOURCE wall=%e rss_kib=%M exit=%x',
                        'timeout', '--kill-after=10', '2400', solid, 'test',
-                       '--'+kernel, 'simulation/'+module+'.py']
+                       '--'+kernel, 'simulation/'+('posed' if module == 'curta' else module)+'.py']
             print(json.dumps(dict(phase='start', kernel=kernel, module=module)), flush=True)
             begun = time.monotonic()
             with log.open('w') as stream:

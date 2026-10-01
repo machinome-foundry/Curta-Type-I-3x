@@ -1,15 +1,15 @@
 """Full-root trial and explicit pre-fit reference for shoulder adoption."""
 
-from simulation.running import OperatingCurta, StaticBallOperatingCurta
+from simulation.mechanistic import MechanisticCurta, StaticBallOperatingCurta
 from simulation.running_parts import RetainedCarries
 from simulation.counter_shoulder_running_parts import ShoulderRetainedCarries
 
 
-class OriginalShoulderOperatingCurta(OperatingCurta):
+class OriginalShoulderOperatingCurta(MechanisticCurta):
     carry_mechanism = RetainedCarries()
 
 
-class CounterShoulderOperatingTrial(OperatingCurta):
+class CounterShoulderOperatingTrial(MechanisticCurta):
     carry_mechanism = ShoulderRetainedCarries()
 
 

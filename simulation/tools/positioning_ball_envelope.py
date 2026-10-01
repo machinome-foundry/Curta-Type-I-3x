@@ -16,7 +16,7 @@ import time
 import cadquery as cq
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.positioning_ball_contact import BALL, BELL, FRAME, COLLAR
 from simulation.cover_fits import mesh_solid
@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--step', type=int, choices=(1, 2, 5, 10), default=1)
     args = parser.parse_args()
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     native = world_solids(sim.node, selected={BALL, BELL, FRAME})
     leaves = dict(rigid_leaves(sim.node))
@@ -36,7 +36,7 @@ def main():
     centre = native[BALL].Center().toTuple()
     assert abs(centre[0]-9.627860318) < 1e-8 and abs(centre[2]-30) < 1e-8
     gauge_radius, outer_land_radius = 3.8, 8.041
-    print(json.dumps(dict(kind='measurement', model='OperatingCurta',
+    print(json.dumps(dict(kind='measurement', model='MechanisticCurta',
                           ball_radius=3.75, normal_seat_allowance=.05,
                           native_gauge_radius=gauge_radius, iterations=20,
                           step_degrees=args.step, source_centre=centre,

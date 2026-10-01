@@ -113,8 +113,8 @@ def check_reversing_label(test, root):
 
 
 if __name__ == '__main__':
-    from simulation.curta import Curta
-    model = Curta()
+    from simulation.posed import PosedCurta
+    model = PosedCurta()
     model.set_state(operand=0, initial_result=0, initial_turns=0, crank_turns=0,
                     subtract=0, carriage_position=0, carriage_lift=0, clear=0)
     model.assemble()

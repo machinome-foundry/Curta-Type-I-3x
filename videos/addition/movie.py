@@ -9,29 +9,29 @@ from machinome_movie import (Movie, Chapter, Shot, Narration, Cue, View, Source,
     Set, Slot, Element, Action, Dissolve, Reframe, FadeIn, FadeOut, Format, Narrator, Style,
     Credits, Release, Evidence)
 
-from simulation.clocked import ClockedCurta
+from simulation.event_driven import EventDrivenCurta
 from videos.addition import takes
 
 Take = takes.Addition
 
 # The parts the narration names, by the model's own declarations.
-SLIDES = ClockedCurta.input_selectors.selectors
+SLIDES = EventDrivenCurta.input_selectors.selectors
 UNITS_KNOB = SLIDES.digit_selector_axle_1.selector_knob_1_419057
 TENS_KNOB = SLIDES.digit_selector_axle_2.selector_knob_1_419152
 HUNDREDS_KNOB = SLIDES.digit_selector_axle_3.selector_knob_1_419225
-DRUM = ClockedCurta.main_drive.stepped_drum
+DRUM = EventDrivenCurta.main_drive.stepped_drum
 # The input pinions: each slides along its transmission shaft beside the drum,
 # placed by its setting slide (simulation/channel_slider_frames.py).
-UNITS_GEAR = ClockedCurta.transmission.result.ones.p_10219_410002_1
-TENS_GEAR = ClockedCurta.transmission.result.tens.p_10230_410008_1_419229
-UNITS_SHAFT = ClockedCurta.transmission.result.ones
-TENS_SHAFT = ClockedCurta.transmission.result.tens
-HUNDREDS_SHAFT = ClockedCurta.transmission.result.hundreds
-UNITS_DIAL = ClockedCurta.carriage.registers.result_register.p_10203_1
-TENS_DIAL = ClockedCurta.carriage.registers.result_register.p_10203_2
-HUNDREDS_DIAL = ClockedCurta.carriage.registers.result_register.p_10205_1
-TENS_CARRY = ClockedCurta.carry_mechanism.result_carries.results_tens_lever_assembly_1
-HUNDREDS_CARRY = ClockedCurta.carry_mechanism.result_carries.results_tens_lever_assembly_2
+UNITS_GEAR = EventDrivenCurta.transmission.result.ones.p_10219_410002_1
+TENS_GEAR = EventDrivenCurta.transmission.result.tens.p_10230_410008_1_419229
+UNITS_SHAFT = EventDrivenCurta.transmission.result.ones
+TENS_SHAFT = EventDrivenCurta.transmission.result.tens
+HUNDREDS_SHAFT = EventDrivenCurta.transmission.result.hundreds
+UNITS_DIAL = EventDrivenCurta.carriage.registers.result_register.p_10203_1
+TENS_DIAL = EventDrivenCurta.carriage.registers.result_register.p_10203_2
+HUNDREDS_DIAL = EventDrivenCurta.carriage.registers.result_register.p_10205_1
+TENS_CARRY = EventDrivenCurta.carry_mechanism.result_carries.results_tens_lever_assembly_1
+HUNDREDS_CARRY = EventDrivenCurta.carry_mechanism.result_carries.results_tens_lever_assembly_2
 
 
 # The film's template, drawn by stage.tsx beside this file.
@@ -225,7 +225,7 @@ class Addition(Movie):
     narrator = jessica
     style = Style(background="#f4efe4", foreground="#161513", accent="#a87b2c",
                   font="DejaVu Sans, sans-serif", safe_inset=0.08)
-    evidence = Evidence(model="../../simulation/clocked.py", laws="../../simulation/clocked_laws.py",
+    evidence = Evidence(model="../../simulation/event_driven.py", laws="../../simulation/clocked_laws.py",
                         record="../../simulation/docs/clocked-curta-2026-09-17.md")
     credits = Credits(project="Curta Type I 3x",
                       creator="Marcus Wu, after Curt Herzstark's Curta; simulation by Luis Fagundes",

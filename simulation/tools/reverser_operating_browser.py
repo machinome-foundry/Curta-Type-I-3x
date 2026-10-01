@@ -82,7 +82,7 @@ def main():
     if args.trial:
         from simulation.reverser_compiled_trial import CompiledReverserTrial as model
     else:
-        from simulation.running import OperatingCurta as model
+        from simulation.mechanistic import MechanisticCurta as model
     viewer = json.loads(subprocess.check_output(
         [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()

@@ -9,7 +9,7 @@ import cadquery as cq
 import matplotlib.pyplot as plt
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.tools.positioning_ball_contact import BALL, BELL, COLLAR, FRAME
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -24,7 +24,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', type=Path, required=True)
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     native = world_solids(sim.node, selected={BALL, BELL, RING, FRAME})
     leaves = dict(rigid_leaves(sim.node))

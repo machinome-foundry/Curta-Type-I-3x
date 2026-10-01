@@ -10,7 +10,7 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.ancestor_lockout_contact import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume
 
@@ -35,7 +35,7 @@ def main():
         collar_mesh, nut_mesh = bench.collar.mesh, bench.nut.mesh
         pins = [bench.pin_left.mesh, bench.pin_right.mesh]
     else:
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         bank = dict(sim.state)
         carrier = sim.node.carriage.registers.carrier
         collar_mesh, nut_mesh = carrier.crank_collar.mesh, carrier.crank_collar_nut.mesh

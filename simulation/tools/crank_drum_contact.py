@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.cover_fits import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume
@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--perturbations', action='store_true',
                         help='Also measure the ten native vertical offsets at each pin seat')
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     native = world_solids(sim.node, selected={CRANK, DRUM, PIN})
     leaves = dict(rigid_leaves(sim.node))

@@ -5,7 +5,7 @@ import unittest
 from machinome.simulation import Sim
 from simulation import test_operating_counter_lockout as operating_tests
 from simulation.counter_operating_trial import CounterOperatingTrial
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.counter_lockout_probe import station_bench
 from simulation.tools.counter_wrong_order import SHAFT, UPPER, BELL
 from simulation.tools.interference import world_solids
@@ -18,7 +18,7 @@ class CounterOperatingTrialTest(operating_tests.OperatingCounterLockoutTest):
 class CounterOperatingFixtureTest(unittest.TestCase):
     def test_installed_trial_matches_measured_parts_and_preserves_initial_bank(self):
         sim = Sim(CounterOperatingTrial(), dt=.1, meshes=True)
-        baseline = Sim(OperatingCurta(), dt=.1)
+        baseline = Sim(MechanisticCurta(), dt=.1)
         self.assertEqual(dict(sim.state), dict(baseline.state))
         actual = world_solids(sim.node, selected={UPPER, BELL})
         node = station_bench(1, trial=True)()

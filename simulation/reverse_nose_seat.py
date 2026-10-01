@@ -3,7 +3,7 @@
 from simulation.standard.parts import ReverseNosePlate
 from simulation.pawl import PawlBearingPlate
 from simulation.mechanism import Frame
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
 class UnseatedReverseNoseBearing(PawlBearingPlate):
@@ -14,9 +14,9 @@ class UnseatedReverseNoseFrame(Frame):
     lower_bearing_plate = UnseatedReverseNoseBearing()
 
 
-class ReverseNoseSeatTrial(OperatingCurta):
+class ReverseNoseSeatTrial(MechanisticCurta):
     """Historical trial name retained for reproducing the acceptance instrument."""
 
 
-class UnseatedReverseNoseReference(OperatingCurta):
+class UnseatedReverseNoseReference(MechanisticCurta):
     frame = UnseatedReverseNoseFrame()

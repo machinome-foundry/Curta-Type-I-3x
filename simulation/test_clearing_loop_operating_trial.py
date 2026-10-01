@@ -5,11 +5,11 @@ import numpy as np
 from machinome.simulation import Sim
 from simulation.test_operating_loop import OperatingLoopTest as _Contract
 from simulation.clearing_loop_operating_trial import LoopOperatingTrial
-from simulation.running import OperatingCurta, ReverserOperatingCurta
+from simulation.mechanistic import MechanisticCurta, ReverserOperatingCurta
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.operating_loop_contacts import PARTS
 from simulation.test_carry_bank_trial import flexible_meshes
-from simulation.test_running import RunningCurtaTest as _ArithmeticContract
+from simulation.test_mechanistic import MechanisticCurtaTest as _ArithmeticContract
 from simulation.test_running_interlocks import (
     RunningCarriageIndexTest as _IndexContract,
     RunningClearingInterlockTest as _ClearingContract,
@@ -33,7 +33,7 @@ class LoopClearingTest(_ClearingContract):
 
 
 class LoopPreservationTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_only_the_three_named_occurrences_and_two_new_coordinates_change(self):
         before = Sim(ReverserOperatingCurta(), dt=.1, meshes=True)

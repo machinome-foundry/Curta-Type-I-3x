@@ -6,7 +6,7 @@ import logging
 import os
 from pathlib import Path
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
 def inspect():
@@ -33,7 +33,7 @@ def inspect():
     visit(document['root'])
     assert (len(rigid), len(flexible)) == (390, 38)
     assert (len(document['drivers']), len(document['instructions'])) == (8, 7)
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=0, initial_turns=0, operand=0, crank_turns=0,
                    subtract=0, carriage_position=0, carriage_lift=0, clear=0)
     root.assemble()

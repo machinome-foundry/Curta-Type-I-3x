@@ -17,12 +17,12 @@ def probe():
     import cadquery as cq
     from machinome.simulation import Sim
     from simulation.cover_fits import mesh_solid
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
     from simulation.test_reverser_assembly import INPUTS
     from simulation.tools.interference import rigid_leaves, world_solids
     from simulation.tools.reverser_tooth_envelope import DRUMS
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     paths = [f'Curta.transmission.turns.{name}.{member}' for name, member in INPUTS]
     native = world_solids(sim.node, selected=set(paths) | set(DRUMS))
     leaves = dict(rigid_leaves(sim.node))

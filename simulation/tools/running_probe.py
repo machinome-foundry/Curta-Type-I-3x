@@ -5,13 +5,13 @@ import argparse
 from time import monotonic
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta, register_reading
+from simulation.mechanistic import MechanisticCurta, register_reading
 
 
 def probe(ticks=None):
     faulthandler.dump_traceback_later(60, repeat=True)
     started = monotonic()
-    sim = Sim(OperatingCurta(), dt=.1)
+    sim = Sim(MechanisticCurta(), dt=.1)
     print('constructed', monotonic() - started, flush=True)
     for units, tens, expected in ((0, 0, 0), (1, 0, 1), (9, 0, 10), (0, 9, 100)):
         sim.move('digit_1', to=units)

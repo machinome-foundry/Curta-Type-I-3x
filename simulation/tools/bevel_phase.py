@@ -4,13 +4,13 @@ from math import radians
 import json
 import numpy as np
 import trimesh
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.tools.carry_phase import solid
 
 
 def probe():
-    model = Curta()
-    model.set_state(**Curta.instructions['Rest'].targets)
+    model = PosedCurta()
+    model.set_state(**PosedCurta.instructions['Rest'].targets)
     model.assemble()
     model.build_stls()
     tip = model.transmission.result.ones.p_10208_1.transmission_gear_tip.mesh

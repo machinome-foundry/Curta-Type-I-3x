@@ -4,7 +4,7 @@ Project-level evidence for `solid-node/workflow/docs/clocked-machine.md`,
 section "Before the proposal: a project-level spike". Nothing here is a
 framework API, and no framework code is changed: the harness emulates the
 note's candidate clocked semantics OUTSIDE solid-node, around the fast
-model `simulation/curta.py:Curta` and its public drivers and ports.
+model `simulation/posed.py:PosedCurta` and its public drivers and ports.
 
 Vocabulary, from the note:
 
@@ -155,7 +155,7 @@ INPUTS = tuple(f'digit_{index}' for index in range(1, 9)) + (
     'carriage_elevation', 'clearing_rotation')
 
 
-class ClockedCurta:
+class EventDrivenCurta:
     """The note's clocked semantics over the fast Curta's public surface.
 
     `result` and `turns` are the state variables; `dial` keeps each place's
@@ -519,7 +519,7 @@ class ClockedCurta:
 #   ('read', label)             record both readouts
 
 SCENARIOS = {
-    # test_running.py::test_manual_calibration_carries, and the page-53
+    # test_mechanistic.py::test_manual_calibration_carries, and the page-53
     # sequence simulation/tools/running_probe.py replays.
     'calibration_page_53': [
         ('digits', {1: 0, 2: 0}), ('crank', 360, 2), ('read', 'after 0'),
@@ -527,20 +527,20 @@ SCENARIOS = {
         ('digits', {1: 9, 2: 0}), ('crank', 360, 2), ('read', 'after 9'),
         ('digits', {1: 0, 2: 9}), ('crank', 360, 2), ('read', 'after 90'),
     ],
-    # test_running.py::test_subtraction_borrows_through_both_registers...
+    # test_mechanistic.py::test_subtraction_borrows_through_both_registers...
     'subtraction_borrow_and_undo': [
         ('digits', {1: 1}), ('crank_lift', 9, 0), ('crank', 360, 2),
         ('read', 'borrowed'),
         ('crank_lift', 0, 0), ('crank', 360, 2), ('read', 'undone'),
     ],
-    # test_running.py::test_shift_reassociates_actual_dials...
+    # test_mechanistic.py::test_shift_reassociates_actual_dials...
     'shift_reassociates': [
         ('digits', {1: 9}), ('crank', 360, 2), ('read', 'nine'),
         ('carriage_lift', 6, .2), ('carriage_turn', 40, .2), ('read', 'shifted'),
         ('carriage_lift', 0, .2), ('digits', {1: 3}), ('crank', 360, 2),
         ('read', 'three hundred'),
     ],
-    # test_running.py::test_independent_inputs_and_two_successive_additions
+    # test_mechanistic.py::test_independent_inputs_and_two_successive_additions
     'two_additions_and_selective_clearing': [
         ('digits', {1: 3}), ('crank', 360, 2), ('read', 'three'),
         ('digits', {1: 2}), ('read', 'selector only'),
@@ -550,7 +550,7 @@ SCENARIOS = {
         ('ring', 180, .2), ('read', 'counter cleared'),
         ('ring', -360, .2), ('read', 'reverse sweep'),
     ],
-    # test_running.py::test_partial_crank_release_and_snapshot_replay
+    # test_mechanistic.py::test_partial_crank_release_and_snapshot_replay
     'partial_crank_release_and_resume': [
         ('digits', {1: 9}), ('crank', 90, .5), ('read', 'quarter turn'),
         ('crank', 270, 1.5), ('read', 'completed'),
@@ -664,7 +664,7 @@ def running_dials(sim, counter=False):
 
 
 def replay_running(actions, sim):
-    from simulation.running import register_reading
+    from simulation.mechanistic import register_reading
     readings = []
     for action in actions:
         head = action[0]
@@ -703,10 +703,10 @@ def replay_running(actions, sim):
 def record_oracle(names=None, path=FIXTURE):
     """Run the operating Curta ONCE over the corpus and keep its readouts."""
     from machinome.simulation import Sim
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
     started = monotonic()
-    sim = Sim(OperatingCurta(), dt=.1)
+    sim = Sim(MechanisticCurta(), dt=.1)
     built = monotonic() - started
     record = dict(framework=framework_commit(), dt=.1, construct_seconds=built,
                   scenarios={})
@@ -747,7 +747,7 @@ def compare(names=None, interlocks=None, fast=None, commit_through_fast=False,
             continue
         if name not in oracle['scenarios']:
             continue
-        harness = ClockedCurta(interlocks=interlocks, fast=fast,
+        harness = EventDrivenCurta(interlocks=interlocks, fast=fast,
                                commit_through_fast=commit_through_fast)
         began = monotonic()
         clocked = replay_clocked(actions, harness)
@@ -817,9 +817,9 @@ def main():
         locks = Interlocks(**{name: True for name in arguments.locks.split(',')})
     fast = None
     if arguments.through_fast or arguments.command == 'time':
-        from simulation.curta import Curta
+        from simulation.posed import PosedCurta
         started = monotonic()
-        fast = Curta()
+        fast = PosedCurta()
         print(f'fast model constructed in {monotonic() - started:.2f} s', flush=True)
     if arguments.command == 'time':
         timings(fast)
@@ -829,7 +829,7 @@ def main():
 
 
 def timings(fast):
-    harness = ClockedCurta(fast=fast, commit_through_fast=True)
+    harness = EventDrivenCurta(fast=fast, commit_through_fast=True)
     started = monotonic()
     harness.pose()
     cold = monotonic() - started
@@ -844,7 +844,7 @@ def timings(fast):
     for index in range(20):
         harness.request(crank_rotation=360 * (index + 1))
     through_fast = (monotonic() - started) / 20
-    plain = ClockedCurta()
+    plain = EventDrivenCurta()
     plain.request(**{'digit_1': 3})
     started = monotonic()
     for index in range(20):

@@ -8,7 +8,7 @@ from machinome.motion.joints import Bound, Prismatic, Revolute
 from machinome.simulation import Follow
 from simulation.positioning import SeatedCarriagePositioning
 from simulation.standard.parts import Part6mmBall419094
-from simulation.running import StaticBallOperatingCurta, RunningCarriage
+from simulation.mechanistic import StaticBallOperatingCurta, RunningCarriage
 
 
 class OrbitPositioningTrial(SeatedCarriagePositioning):

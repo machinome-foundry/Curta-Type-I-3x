@@ -1,7 +1,7 @@
 """The complete machine used to verify the educational display palette."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
-class DisplayBench(Curta):
+class DisplayBench(PosedCurta):
     pass

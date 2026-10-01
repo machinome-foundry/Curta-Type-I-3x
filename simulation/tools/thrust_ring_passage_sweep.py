@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.thrust_ring_parts import BallPassageThrustRing
 from simulation.standard.parts import ThrustRing
 from simulation.thrust_ring_trial import FittedThrustBench
@@ -26,7 +26,7 @@ def main():
     parser.add_argument('--image', required=True)
     args = parser.parse_args()
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     source = world_solids(sim.node, selected={BALL, RING})
     leaves = dict(rigid_leaves(sim.node))

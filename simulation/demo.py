@@ -1,7 +1,7 @@
 """An independently testable copy of the calculator's public demonstrations."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
-class Demo(Curta):
+class Demo(PosedCurta):
     pass

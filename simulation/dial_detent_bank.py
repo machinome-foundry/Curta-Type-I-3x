@@ -1,7 +1,7 @@
 """The complete result/counter detent bank in the operating calculator."""
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
-class DialDetentBank(Curta):
+class DialDetentBank(PosedCurta):
     pass

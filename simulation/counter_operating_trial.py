@@ -9,7 +9,7 @@ from machinome.motion.joints import Prismatic
 from simulation.standard.printed import Part10222_1
 from simulation.reverser_inputs import ReversingOnes
 from simulation.running_parts import TurnsShafts, RetainedTransmission
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.counter_lockout_probe import TrialCounterLockout
 
 
@@ -31,5 +31,5 @@ class TrialCounterTransmission(RetainedTransmission):
     turns = TrialTurnsShafts()
 
 
-class CounterOperatingTrial(OperatingCurta):
+class CounterOperatingTrial(MechanisticCurta):
     transmission = TrialCounterTransmission()

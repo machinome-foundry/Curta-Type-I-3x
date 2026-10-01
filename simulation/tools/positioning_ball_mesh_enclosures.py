@@ -16,7 +16,7 @@ import cadquery as cq
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE, COLLAR_ENVELOPE, collar_limit
 from simulation.tools.positioning_ball_contact import BALL, BELL, COLLAR, FRAME
 from simulation.tools.positioning_ball_ring import RING
@@ -46,7 +46,7 @@ def enclose(meshes, padding):
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     native = world_solids(sim.node, selected={BALL})[BALL]

@@ -125,7 +125,7 @@ def sweep(fixture, samples):
     import manifold3d as manifold
     import machinome
     from itertools import combinations
-    from simulation.curta import Curta
+    from simulation.posed import PosedCurta
     from simulation.tools.carry_frame_regression import fingerprint
     from simulation.tools.carry_phase import solid as manifold_solid
     from simulation.tools.interference import world_solids
@@ -138,7 +138,7 @@ def sweep(fixture, samples):
                ('OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS'))
     assert samples >= 2
     sources = fingerprint()
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=99, initial_turns=0, operand=1,
                    crank_turns=0 if fixture == 'initial' else 1, subtract=0,
                    carriage_position=0, carriage_lift=0, clear=0)

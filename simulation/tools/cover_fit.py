@@ -3,7 +3,7 @@
 import json
 from math import radians
 import trimesh
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.carry_phase import solid
@@ -13,7 +13,7 @@ COVER_CENTRE = (.386511579, -.028412332, 0)
 
 
 def probe():
-    root = Curta()
+    root = PosedCurta()
     rest = root.instructions['Rest'].targets
     root.set_state(**rest)
     root.assemble()

@@ -16,10 +16,10 @@ def main():
     start = perf_counter()
     import machinome
     from machinome.simulation import Sim
-    from simulation.clocked import ClockedCurta, register_reading
+    from simulation.event_driven import EventDrivenCurta, register_reading
     report = {'framework_module': machinome.__file__, 'import_seconds': perf_counter() - start}
     start = perf_counter()
-    sim = Sim(ClockedCurta())
+    sim = Sim(EventDrivenCurta())
     report['construct_seconds'] = perf_counter() - start
     sim.move('digit_1', to=9)
     costs = []
@@ -39,9 +39,9 @@ def main():
     report['clocked_stroke_with_20_poses_seconds'] = perf_counter() - start
     assert (register_reading(sim), register_reading(sim, True)) == (9, 1)
     if args.running:
-        from simulation.running import OperatingCurta, register_reading as running_reading
+        from simulation.mechanistic import MechanisticCurta, register_reading as running_reading
         start = perf_counter()
-        running = Sim(OperatingCurta(), dt=.1)
+        running = Sim(MechanisticCurta(), dt=.1)
         report['running_construct_seconds'] = perf_counter() - start
         running.move('digit_1', to=9)
         start = perf_counter()

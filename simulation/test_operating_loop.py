@@ -2,7 +2,7 @@
 
 import unittest
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
 LOOP_INPUT = 'loop_deployment'
@@ -11,7 +11,7 @@ LOOP_CONTROL = 'deploy loop (simulation-only mounting)'
 
 
 class OperatingLoopTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_replacement_is_labeled_on_its_own_visible_control(self):
         self.assertIn(LOOP_CONTROL, self.model.controls)

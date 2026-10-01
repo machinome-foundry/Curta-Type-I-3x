@@ -10,7 +10,7 @@ import json
 import logging
 from pathlib import Path
 
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.standard.parts import MainBody
 from simulation.test_frame_fits import forbidden_removal
 from simulation.tools.interference import world_solids
@@ -18,7 +18,7 @@ from simulation.tools.open_run_transitions import bounds, physical_nodes
 
 
 def report():
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=99, initial_turns=0, operand=1, crank_turns=0,
                    subtract=0, carriage_position=0, carriage_lift=0, clear=0)
     root.assemble()

@@ -15,7 +15,7 @@ from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time
 from machinome.simulation import Driver, Sim
 from simulation.mechanism import MainDrive
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import RunningMainDrive, RunningReversingAssembly
 from simulation.crank_coupling_parts import SeatedCrankAssembly
 from simulation.running_pawl import RetainedAntiReversal, reverse_stop
@@ -95,12 +95,12 @@ class MateRefactorTest(unittest.TestCase):
 
     def test_crank_controls_select_the_assembly_mate(self):
         for name in ('turn crank', 'one revolution'):
-            self.assertEqual(OperatingCurta.controls[name].selected, 'main_drive.turn')
+            self.assertEqual(MechanisticCurta.controls[name].selected, 'main_drive.turn')
 
     def test_initial_bank_keeps_the_pre_refactor_witness(self):
         # Reuse the independently pinned crank-seat witness unchanged; do
         # not bless a new hash just because the declaration spelling changed.
-        bank = dict(Sim(OperatingCurta(), dt=.1).state)
+        bank = dict(Sim(MechanisticCurta(), dt=.1).state)
         self.assertEqual(len(bank), 216)
         for key in ('loop_deployment',
                     'carriage.registers.clearing_ring.clearing_ring.swivel',

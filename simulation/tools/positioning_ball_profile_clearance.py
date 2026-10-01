@@ -6,7 +6,7 @@ import time
 
 from machinome.simulation import Sim
 from machinome.exact import intersect_shapes
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.positioning_ball_contact import BALL, BELL, FRAME, COLLAR
@@ -16,7 +16,7 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = dict(sim.state)
     native = world_solids(sim.node, selected={BALL, BELL, FRAME})
     leaves = dict(rigid_leaves(sim.node))

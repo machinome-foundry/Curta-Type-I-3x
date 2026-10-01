@@ -4,7 +4,7 @@ import unittest
 from machinome.node import declared_children
 from machinome.motion.joints import declared_joints
 from machinome.motion.mates import declared_mates
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
 class OperatingMateCoverageTest(unittest.TestCase):
@@ -22,7 +22,7 @@ class OperatingMateCoverageTest(unittest.TestCase):
                     unattached[child_path] = joints
                 visit(child, child_path)
 
-        visit(OperatingCurta(), '')
+        visit(MechanisticCurta(), '')
         expected = {
             f'carry_mechanism.tens_bell.tens_bell_spring.{side}_hook': ('travel',)
             for side in ('left', 'right')}

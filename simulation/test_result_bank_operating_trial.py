@@ -5,7 +5,7 @@ import json
 import unittest
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import CHANNEL_NAMES, RESULT_RESTS
 from simulation.result_bank_operating_trial import ResultBankOperatingTrial
 from simulation.tools.interference import world_solids
@@ -59,7 +59,7 @@ class ResultBankOperatingFixtureTest(unittest.TestCase):
 
 
 class OperatingResultBankFixtureTest(ResultBankOperatingFixtureTest):
-    model = OperatingCurta
+    model = MechanisticCurta
 
 
 if __name__ == '__main__':

@@ -5,8 +5,8 @@ this inspection name lets its complete-neighbour and moving-seat contracts
 challenge production instead of silently continuing to test an unadopted fit.
 """
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
-class OperatingCollarBench(OperatingCurta):
+class OperatingCollarBench(MechanisticCurta):
     pass

@@ -5,7 +5,7 @@ import logging
 import time
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.operating_demonstrations import replay
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.cover_fits import mesh_solid
@@ -17,7 +17,7 @@ HANDLE = 'Curta.main_drive.crank.crank_handle_1.crank_handle'
 
 def main():
     started = time.monotonic()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     initial = sim.snapshot()
     seen = []
 

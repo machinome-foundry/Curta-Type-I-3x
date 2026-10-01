@@ -10,7 +10,7 @@ from simulation.thrust_ring_regions import permitted_local
 from simulation.test_carry_bank_trial import flexible_meshes
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.positioning_ball_ring import RING
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 
 
 class ThrustRingRootTest(unittest.TestCase):
@@ -51,7 +51,7 @@ class ThrustRingRootTest(unittest.TestCase):
 
 
 class ThrustRingProductionRootTest(ThrustRingRootTest):
-    model = OperatingCurta
+    model = MechanisticCurta
     before_model = OriginalRingRadialOperatingReference
     coordinates = 216
 

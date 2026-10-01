@@ -4,7 +4,7 @@ import unittest
 import manifold3d as manifold
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.ancestor_lockout_contact import (
     prepare, SHAFT, BELL, LOCKOUT, contact_shapes, mesh_solid)
 from simulation.tools.interference import rigid_leaves
@@ -12,7 +12,7 @@ from simulation.tools.interference import rigid_leaves
 
 class RunningLockoutTest(unittest.TestCase):
     def test_short_and_long_requests_stop_the_operating_crank(self):
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True, record=8)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True, record=8)
         prepare(sim)
         saved = sim.snapshot()
         for target in (150, 840):

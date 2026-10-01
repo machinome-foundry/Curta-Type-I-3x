@@ -7,7 +7,7 @@ from simulation import test_operating_counter_tens_lockout as counter_tests
 from simulation import test_operating_counter_lockout as counter_ones_tests
 from simulation import test_operating_result_bank_lockout as result_tests
 from simulation.counter_bank_operating_trial import CounterBankOperatingTrial, COUNTER_TRIAL_STATIONS
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import CHANNEL_NAMES
 from simulation.tools.counter_lockout_probe import station_bench
 from simulation.tools.interference import world_solids
@@ -48,7 +48,7 @@ class CounterBankPreservesResultsTest(result_tests.OperatingResultBankLockoutTes
 class CounterBankFixtureTest(unittest.TestCase):
     def test_every_complete_upper_matches_its_independently_measured_source_bench(self):
         sim = Sim(CounterBankOperatingTrial(), dt=.1, meshes=True)
-        baseline = Sim(OperatingCurta(), dt=.1)
+        baseline = Sim(MechanisticCurta(), dt=.1)
         self.assertEqual(dict(sim.state), dict(baseline.state))
         bell = 'Curta.carry_mechanism.tens_bell.tens_bell_1'
         paths = [f'Curta.transmission.turns.{CHANNEL_NAMES[n-1]}.{upper}'

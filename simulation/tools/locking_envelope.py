@@ -66,9 +66,9 @@ def main():
     args = parser.parse_args()
     assert 0 < args.phase_step <= 72
     if args.operating_index:
-        from simulation.running import OperatingCurta
+        from simulation.mechanistic import MechanisticCurta
         from simulation.tools.ancestor_lockout_contact import BELL as FULL_BELL, LOCKOUT as FULL_LOCKOUT
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         sim.move('digit_1', to=3)
         sim.move('crank_rotation', to=90)
         request = sim.move('crank_rotation', to=180)

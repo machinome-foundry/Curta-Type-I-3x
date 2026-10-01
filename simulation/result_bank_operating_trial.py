@@ -2,10 +2,10 @@
 
 Every upper print keeps its source-specific frame. The production operating
 root supplies the combined crank bound; this wrapper does not repeat it.
-All counter channels remain exactly as in OperatingCurta.
+All counter channels remain exactly as in MechanisticCurta.
 """
 
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import ResultShafts, RetainedTransmission, CHANNEL_NAMES
 from simulation.tools.result_bank_lockout_probe import station_channel
 
@@ -20,5 +20,5 @@ class TrialResultTransmission(RetainedTransmission):
     result = TrialResultShafts()
 
 
-class ResultBankOperatingTrial(OperatingCurta):
+class ResultBankOperatingTrial(MechanisticCurta):
     transmission = TrialResultTransmission()

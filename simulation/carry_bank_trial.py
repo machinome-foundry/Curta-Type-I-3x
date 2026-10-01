@@ -2,7 +2,7 @@
 
 from simulation.carry_bank_frame import FittedUpperFrame, FirstPairUpperFrame
 from simulation.mechanism import Frame
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.views import CarryFrameInspection
 
 
@@ -14,12 +14,12 @@ class FirstPairCarryFrame(Frame):
     upper_frame = FirstPairUpperFrame()
 
 
-class FirstPairOperatingReference(OperatingCurta):
+class FirstPairOperatingReference(MechanisticCurta):
     """The prior frame geometry with otherwise current operating mechanisms."""
     frame = FirstPairCarryFrame()
 
 
-class CarryBankOperatingTrial(OperatingCurta):
+class CarryBankOperatingTrial(MechanisticCurta):
     frame = FittedCarryFrame()
 
 

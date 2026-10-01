@@ -54,7 +54,7 @@ def section(meshes, output, shoulder_trial=False):
         axis.grid()
     axes[0].legend()
     title = ('Unadopted shoulder-facing measuring copy' if shoulder_trial
-             else 'Unchanged OperatingCurta initial state')
+             else 'Unchanged MechanisticCurta initial state')
     figure.suptitle(title + '; Y = 0 section')
     figure.tight_layout()
     figure.savefig(output, dpi=160)
@@ -100,9 +100,9 @@ def source_sections(output):
 
 
 def probe(rises=RISES, section_path=None, shoulder_trial=False):
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     initial_bank = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     meshes = {path: node.mesh for path, node in leaves.items()}
@@ -139,7 +139,7 @@ def probe(rises=RISES, section_path=None, shoulder_trial=False):
         'scope': ('unadopted shoulder-facing copy against every other rigid occurrence'
                   if shoulder_trial else
                   'pose-only collar translation against every other rigid occurrence'),
-        'model': 'simulation.running:OperatingCurta',
+        'model': 'simulation.mechanistic:MechanisticCurta',
         'coordinates': len(initial_bank), 'rigid_occurrences': len(leaves),
         'kernel': 'source-STL/published-mesh Manifold', 'not_adopted': True,
         'collar_source_sha256': hashlib.sha256(source.read_bytes()).hexdigest(),

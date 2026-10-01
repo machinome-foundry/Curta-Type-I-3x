@@ -6,7 +6,7 @@ import numpy as np
 from machinome.exact import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.test_running_reverser_wrong_order import DRUM, commons, prepare
 from simulation.tools.higher_locking_envelope import faceted_common_volume
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -18,7 +18,7 @@ class ReverserToothEnvelopeTest(unittest.TestCase):
         # Higher inputs have a different print/relief and a single pinion.
         # Exercise both surveyed axial rows, plus a raised-drum placement;
         # do not infer their placement from the ones fixture or symmetry.
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         empty = sim.snapshot()
         for station in range(2, 7):
             reader = ToothEnvelopeReader(station)
@@ -97,7 +97,7 @@ class ReverserToothEnvelopeTest(unittest.TestCase):
 
     def test_nonzero_retained_shaft_phase_and_drum_lift_match_world_placement(self):
         reader = ToothEnvelopeReader()
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         empty = sim.snapshot()
         for lift, crank in ((0, 171.25), (9, 90)):
             with self.subTest(lift=lift, crank=crank):

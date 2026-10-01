@@ -17,7 +17,7 @@ from simulation.clocked_cases import SCENARIOS
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--build', type=Path, default=Path('_build/clocked_curta'))
+    parser.add_argument('--build', type=Path, default=Path('_build/event_driven_curta'))
     parser.add_argument('--screenshot', type=Path,
                         default=Path('snapshot-clocked-browser.png'))
     args = parser.parse_args()

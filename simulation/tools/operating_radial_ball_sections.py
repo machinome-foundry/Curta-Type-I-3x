@@ -8,7 +8,7 @@ import cadquery as cq
 import matplotlib.pyplot as plt
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.positioning_ball_contact import BALL, BELL, FRAME, COLLAR
 from simulation.tools.positioning_ball_ring import RING
 from simulation.tools.interference import world_solids, rigid_leaves
@@ -18,7 +18,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', required=True)
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     initial = sim.snapshot()
     fig, axes = plt.subplots(1, 5, figsize=(20, 7))
     stages = (

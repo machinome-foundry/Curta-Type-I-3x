@@ -19,7 +19,7 @@ def probe(source_profiles, *, axial_allowance_mm=None, drum_allowance_mm=.005, m
     import numpy as np
     from machinome.simulation import Sim
     from simulation.cover_fits import mesh_solid
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
     from simulation.test_reverser_assembly import INPUTS
     from simulation.tools.interference import rigid_leaves, world_solids
     from simulation.tools.reverser_profile_cover import (profile_cover, cover_mesh_arrays,
@@ -27,7 +27,7 @@ def probe(source_profiles, *, axial_allowance_mm=None, drum_allowance_mm=.005, m
                                                         convex_partition, axial_allowance)
     from simulation.tools.reverser_tooth_envelope import DRUMS
 
-    model = OperatingCurta if model is None else model
+    model = MechanisticCurta if model is None else model
     sim = Sim(model(), dt=.1, meshes=True)
     for key in ('FittedCounterPinion', 'ReversingCounterPinion'):
         report = source_profiles[key]

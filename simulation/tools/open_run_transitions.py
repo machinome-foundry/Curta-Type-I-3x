@@ -20,7 +20,7 @@ import manifold3d as manifold
 from machinome.simulation import Driver
 from simulation.carry import CarryBench
 from simulation.carry_profiles import PIN_DROP, RESET_LIFT
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.cycle import RESULT_INPUT_END, RESULT_CARRY_END, TOOTH_PITCH
 from simulation.standard.carry import ResultsLever2
 from simulation.tools.carry_phase import solid as manifold_solid
@@ -87,7 +87,7 @@ def sweep(event, samples, kernel, include_inventory):
     definition = event_definition(event)
     stage = definition['stage']
     moving_paths = paths_for(stage)
-    root = Curta()
+    root = PosedCurta()
     root.set_state(initial_result=99, initial_turns=0, operand=1,
                    crank_turns=definition['crank_deg']/360, subtract=0,
                    carriage_position=0, carriage_lift=0, clear=0)

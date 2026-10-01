@@ -10,7 +10,7 @@ import unittest
 from machinome.exact import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.higher_locking_envelope import faceted_common_volume
 from simulation.tools.interference import rigid_leaves, world_solids
 
@@ -21,7 +21,7 @@ DRUM = ('Curta.main_drive.stepped_drum.main_axle_step_drum_1.'
 FIRST_CONTACT = 1.0575
 
 
-def prepare(model=OperatingCurta):
+def prepare(model=MechanisticCurta):
     sim = Sim(model(), dt=.1, meshes=True)
     command = sim.move('crank_rotation', to=90, duration=.5)
     sim.run(.5)
@@ -40,7 +40,7 @@ def commons(sim):
 
 
 class RunningReverserStrokeTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_all_four_prepared_modes_complete_a_full_crank_stroke(self):
         for lever, lift in ((-4.9425, 0), (3.9075, 9), (3.9075, 0), (-4.9425, 9)):
@@ -55,7 +55,7 @@ class RunningReverserStrokeTest(unittest.TestCase):
 
 
 class RunningReverserWrongOrderTest(unittest.TestCase):
-    model = OperatingCurta
+    model = MechanisticCurta
 
     def test_long_request_cannot_cross_contact_into_a_later_clear_band(self):
         sim = prepare(self.model)

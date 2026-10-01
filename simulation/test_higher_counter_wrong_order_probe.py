@@ -39,7 +39,7 @@ class HigherCounterWrongOrderProbeTest(unittest.TestCase):
         model = object()
         with patch.dict(sys.modules, {
                 'machinome.simulation': SimpleNamespace(Sim=factory),
-                'simulation.running': SimpleNamespace(OperatingCurta=lambda: model)}):
+                'simulation.mechanistic': SimpleNamespace(MechanisticCurta=lambda: model)}):
             with self.assertRaisesRegex(RuntimeError, 'construction intercepted'):
                 main()
         factory.assert_called_once_with(model, dt=.1, meshes=True, record=64)

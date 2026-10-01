@@ -139,13 +139,13 @@ if __name__ == '__main__':
     logging.disable(logging.INFO)
     if args.operating:
         from machinome.simulation import Sim
-        from simulation.running import OperatingCurta
-        root = OperatingCurta()
+        from simulation.mechanistic import MechanisticCurta
+        root = MechanisticCurta()
         sim = Sim(root, dt=.1, meshes=True)
     else:
-        from simulation.curta import Curta
+        from simulation.posed import PosedCurta
 
-        root = Curta()
+        root = PosedCurta()
         root.set_state(time=0, **root.instructions['Rest'].targets)
         root.assemble()
         root.build_stls()

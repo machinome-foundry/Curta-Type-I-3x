@@ -4,7 +4,7 @@ import json
 import logging
 
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.positioning_ball_contact import BALL, FRAME, COLLAR
 from simulation.tools.interference import world_solids, rigid_leaves
 from simulation.cover_fits import mesh_solid
@@ -12,7 +12,7 @@ from simulation.tools.higher_locking_envelope import faceted_common_volume
 
 
 def main():
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     saved = sim.snapshot()
     shapes = world_solids(sim.node, selected={BALL, FRAME})
     meshes = {p: mesh_solid(n.mesh) for p, n in rigid_leaves(sim.node)

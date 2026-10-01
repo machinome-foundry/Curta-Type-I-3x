@@ -3,7 +3,7 @@
 import numpy as np
 from machinome.test import TestCase
 from simulation.carry_frame import CarryFrameBench
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 from simulation.detents import RESULTS
 from simulation.tools.interference import world_solids
 
@@ -53,7 +53,7 @@ class CarryFrameTest(TestCase):
                                            atol=1e-5, rtol=0)
 
     def test_bench_matches_the_installed_station_frames(self):
-        root = Curta()
+        root = PosedCurta()
         root.set_state(initial_result=99, initial_turns=0, operand=1, crank_turns=0,
                        subtract=0, carriage_position=0, carriage_lift=0, clear=0)
         root.assemble()

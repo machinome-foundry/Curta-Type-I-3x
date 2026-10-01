@@ -9,7 +9,7 @@ import cadquery as cq
 import numpy as np
 from machinome.simulation import Sim
 from simulation.reverse_nose_seat import UnseatedReverseNoseReference
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.standard.parts import ReverseNosePlate
 from simulation.contracts import assert_connected_material
 from simulation.tools.interference import world_solids, rigid_leaves
@@ -23,7 +23,7 @@ DRUM = 'Curta.main_drive.stepped_drum.main_axle_step_drum_1.main_axle_step_drum_
 class ReverseNoseSeatTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        cls.sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         cls.native = world_solids(cls.sim.node, selected={PLATE, DRUM})
         leaves = dict(rigid_leaves(cls.sim.node))
         cls.facets = {name: mesh_solid(leaves[name].mesh) for name in (PLATE, DRUM)}

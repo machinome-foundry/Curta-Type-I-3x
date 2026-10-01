@@ -10,7 +10,7 @@ from simulation.positioning import RadialCarriagePositioning
 from simulation.running_parts import RetainedAxleCarrier, RetainedCarriageStructure, RetainedCarries
 from simulation.mechanism import TensBellAssembly
 from simulation.higher_lockout_parts import ContactBell
-from simulation.running import RadialRunningCarriage
+from simulation.mechanistic import RadialRunningCarriage
 from simulation.clearing_loop_operating_parts import OperatingLoopMount, LoopRetainedCarriage
 from simulation.test_mate_refactor import placed_basis
 

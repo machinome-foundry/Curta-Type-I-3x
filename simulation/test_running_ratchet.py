@@ -12,7 +12,7 @@ from simulation.pawl import RELEASE, RAMP, TOOTH_PITCH, CLOSING_RELEASE
 from simulation.running_pawl import RETURN_SPAN, RetainedPawlBench, RetainedAntiReversal
 from simulation.test_running_laws import RunningPawlBench
 from simulation.test_running_limits import CrankLiftBench
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.running_parts import AttachedCrank, RunningReversingAssembly
 
 
@@ -36,14 +36,14 @@ class UnrestrainedMainDrive(assemblies.MainDrive):
     turn.drives(anti_reversal.turn)
 
 
-class UnrestrainedOperatingCurta(OperatingCurta):
+class UnrestrainedOperatingCurta(MechanisticCurta):
     main_drive = UnrestrainedMainDrive()
 
 
 class RunningRatchetTest(unittest.TestCase):
     def test_production_partial_turn_reverse_retry_and_replay(self):
         """The complete retained graph preserves the isolated ratchet stop."""
-        self._check_production_reverse(OperatingCurta())
+        self._check_production_reverse(MechanisticCurta())
 
     def test_unrestrained_full_root_fails_the_same_stop_contract(self):
         with self.assertRaisesRegex(AssertionError, "'completed' != 'blocked'"):

@@ -81,10 +81,10 @@ class CounterLockoutFixtureTest(unittest.TestCase):
                     self.assertEqual(expected.cut(after).Volume(), 0)
 
     def test_every_normal_seat_matches_the_actual_retained_root(self):
-        from simulation.running import OperatingCurta
+        from simulation.mechanistic import MechanisticCurta
         from simulation.running_parts import CHANNEL_NAMES
 
-        sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+        sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
         paths = {
             f'Curta.transmission.turns.{CHANNEL_NAMES[index]}.{upper}'
             for index, (_, upper) in enumerate(STATIONS)

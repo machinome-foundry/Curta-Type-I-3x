@@ -25,9 +25,9 @@ COLLAR = 'Curta.carriage.registers.carrier.crank_collar'
 
 
 def probe():
-    from simulation.running import OperatingCurta
+    from simulation.mechanistic import MechanisticCurta
 
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     leaves = dict(rigid_leaves(sim.node))
     operating = {path: node.mesh for path, node in leaves.items()}

@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 import trimesh
 from math import radians
-from simulation.curta import Curta
+from simulation.posed import PosedCurta
 
 
 def world_frames(root, *, include_assemblies=False):
@@ -42,7 +42,7 @@ def probe(path):
     log = Path(path).read_text()
     source = json.loads(log[log.index('\n{')+1:] if '\n{' in log else log)
     pairs = {tuple(pair.split(' / ')): volume for pair, volume in source['overlap_mm3'].items()}
-    root = Curta()
+    root = PosedCurta()
     rest = root.instructions['Rest'].targets
     root.set_state(**rest)
     root.assemble()

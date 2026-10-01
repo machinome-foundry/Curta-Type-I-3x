@@ -5,7 +5,7 @@ import json
 import logging
 from pathlib import Path
 from machinome.simulation import Sim
-from simulation.running import OperatingCurta
+from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.tools.crank_drum_contact import bounds
 from simulation.cover_fits import mesh_solid
@@ -22,7 +22,7 @@ def main():
     parser.add_argument('--axial-shift', type=float, action='append',
                         help='Read-only unchanged-clip shift against cam and bearing')
     args = parser.parse_args()
-    sim = Sim(OperatingCurta(), dt=.1, meshes=True)
+    sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
     bank = dict(sim.state)
     shapes = world_solids(sim.node, selected={CAM, CLIP, BEARING})
     leaves = dict(rigid_leaves(sim.node))
