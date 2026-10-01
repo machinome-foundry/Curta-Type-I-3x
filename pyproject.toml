@@ -7,5 +7,8 @@ operating_curta = "simulation.running:OperatingCurta"
 clocked_curta = "simulation.clocked:ClockedCurta"
 reverser_inspection = "simulation.reverser_inspection:ReverserInspection"
 
+[tool.machinome.movies]
+addition = "videos.addition.movie:Addition"
+
 [tool.machinome-studio]
 profile = "builder"

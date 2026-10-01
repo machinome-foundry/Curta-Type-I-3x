@@ -1,0 +1,31 @@
+/* The look of Addition: black and brass on warm paper. Colours come from the
+   movie's style through the stage's custom properties (--vm-background,
+   --vm-foreground, --vm-accent); sizes are in vw and percentages so a quick
+   render at another width draws the same layout. */
+
+/* The masthead, in Chrome. */
+.curta-series, .curta-brand { position: absolute; top: 3.6%; font-weight: 700; }
+.curta-series { left: 5%; font-size: 1.05vw; letter-spacing: .16em; color: var(--vm-accent); }
+.curta-brand { right: 5%; font-size: .85vw; letter-spacing: .14em;
+  color: color-mix(in srgb, var(--vm-foreground) 55%, var(--vm-background)); }
+
+/* The root set. The stage and the split's right container share their top
+   and height: the reframe narrows the box, the Curta keeps its size. */
+.curta-stage { left: 4%; top: 9%; width: 92%; height: 86%; }
+.curta-headline { left: 6%; top: 36%; width: 28%; z-index: 2;
+  --vm-title-align: left; --vm-title-size: 4.2vw; --vm-title-weight: 700;
+  --vm-title-line: 1.1; --vm-title-spacing: -.02em; --vm-subtitle-size: 1.35vw; }
+.curta-aside { left: 74%; top: 58%; width: 18%; height: 30%; z-index: 2; }
+
+/* The split: the source at the left, the machine at the right. */
+.curta-left { left: 5%; top: 17%; width: 46%; height: 70%;
+  --vm-source-size: .82vw; --vm-source-line: 1.75; }
+.curta-right { left: 53%; top: 9%; width: 43%; height: 86%; }
+
+/* The sum: right-aligned figures on a paper plate, the newest row in brass. */
+.sum { list-style: none; margin: 0; padding: .8vw 1.4vw; width: fit-content; margin-left: auto;
+  background: var(--vm-background); border-right: .25vw solid var(--vm-accent);
+  font-family: 'DejaVu Sans Mono', monospace; font-size: 2.6vw; line-height: 1.25;
+  text-align: right; color: var(--vm-foreground); }
+.sum-row { white-space: pre; }
+.sum-lit { color: var(--vm-accent); font-weight: 700; }
