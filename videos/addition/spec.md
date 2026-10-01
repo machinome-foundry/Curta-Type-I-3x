@@ -1,12 +1,11 @@
 # Addition — film specification
 
-Status: version 1, written 1 October 2026 for Videomaker's curta-video
-campaign, before the tool films clocked takes (`pose-a-take` is still being
-built). The screenplay has been evaluated: its take is recorded through the
-framework, every declaration is checked, and the template bundles and
-type-checks. No speech is bought and nothing is rendered; the narration is
-reviewed first. The shot list and what each shot proves are the contract;
-times are indicative until the narration is spoken.
+Status: version 2, 1 October 2026. Version 1 was written for Videomaker's
+curta-video campaign before the tool filmed clocked takes; its narration was
+reviewed and bought unchanged (five takes). Version 2 is the film as
+produced: checked, previewed, looked at and rendered. Where it departs from
+version 1 the section says so under "Departures from version 1" at the end;
+the times below are the spoken ones.
 
 ## The lesson
 
@@ -100,7 +99,7 @@ the carriage rim above them, the crank on top.
 | "the setting slides" | `input_selectors.selectors`, others dimmed | where a number is entered |
 | "The units slide", "and the tens slide" (23); "The units slide moves", "the tens slide to four", "and the hundreds slide" (145) | the knob of `digit_selector_axle_1`, `_2`, `_3` | the slide named is the one moving |
 | "a stepped drum" | `main_drive.stepped_drum`, others ghosted | the drum the crank turns |
-| "Its teeth" | the drum and the gear tips of the units and tens transmission shafts | the gears the slides' settings place along the drum |
+| "Its teeth" | the drum and the input pinions of the units and tens transmission shafts (`transmission.result.ones.p_10219_410002_1`, `.tens.p_10230_410008_1_419229`) | the small gears the slides place along the drum, which meet its teeth |
 | "Shafts carry" | `transmission.result.ones`, `.tens`, the units and tens result dials | the path from the drum to the dials, while the dials count |
 | "Each column adds" | the units, tens and hundreds transmission shafts and dials | the three columns of 145 |
 | "a carry lever" | `results_tens_lever_assembly_1` and `_2` | the carry levers into the tens and hundreds; the narration says this sum needs none (3 + 5, 2 + 4 and 0 + 1 stay below ten) |
@@ -131,9 +130,13 @@ style: background `#f4efe4`, foreground `#161513`, accent `#a87b2c`):
   at the top left in brass and the brand at the top right, muted, in
   `Chrome`; no rule, no bar, no progress. Slots: `stage` (the machine, 92 %
   × 86 % below the masthead), `headline` (a column at the left for a title),
-  `aside` (a plate at the lower right for the sum).
-- **`CurtaSplit`**, derived: the same masthead; `left` (the source, 46 % ×
-  70 %) and `right` (the machine, 43 % × 86 %, the stage's top and height).
+  `aside` (a plate at the lower right for the sum). The headline column is
+  33 % wide and its title 3.2 vw, so "23 + 145 = 168" stands on one line
+  clear of the machine.
+- **`CurtaSplit`**, derived: the same masthead; `left` (the source, 47 % ×
+  60 % from 28 % down, its type 0.9 vw, so the longest excerpt line, the
+  instruction's line 94, fits and the code sits level with the machine) and
+  `right` (the machine, 43 % × 86 %, the stage's top and height).
 - **`Sum`**, the project element: the rows "23", "+ 145", "= 168" of its
   `rows` prop; its action `light(row)` shows the rows through the one named
   and lights it in brass, so the sum forms as the digits land.
@@ -170,9 +173,10 @@ dials, which now read twenty-three."*
    4.4 s by "Shafts carry", then 4.4 to 5.2 s by "which now read", so the
    dials count under "those steps up to the result dials". Highlights: the
    drum, the drum and gears, the shafts and dials.
-5. `read-23` — dissolve; `dials`, 5.2 s to `added_23` (the crank finishing
-   its turn, the dials reading 23); the sum's first row "23" lights at
-   "twenty-three". Until the end plus 1.2 s.
+5. `read-23` — dissolve; `dials`, keyed 5.2 s to `added_23` by the end plus
+   0.6 s (the crank finishing its turn, the dials reading 23), then held at
+   `added_23`; the sum's first row "23" lights at "twenty-three". Until the
+   end plus 1.2 s.
 
 ### 3 — `second`
 
@@ -192,8 +196,9 @@ dials read one hundred sixty-eight."*
    the three dials count under "three and five make eight, two and four make
    six, and the hundreds dial takes the one". The columns highlighted, then
    the two carry levers.
-8. `read-168` — dissolve; `dials`, 16.25 s to `added_145`; "= 168" lights
-   at "one hundred sixty-eight". Until the end plus 1.5 s.
+8. `read-168` — dissolve; `dials`, keyed 16.25 s to `added_145` by the
+   narration's end, then held at `added_145`; "= 168" lights at "one hundred
+   sixty-eight". Until the end plus 1.5 s.
 
 ### 4 — `machinome`
 
@@ -229,6 +234,23 @@ description."*
 13. `result` — dissolve 0.8 s; `Curta`, the Curta from `face` at
     `added_145`; `headline` the title "23 + 145 = 168"; fades out over 1.2 s.
     Until the end plus 1.6 s.
+
+## Departures from version 1
+
+Made in production; the narration is version 1's, unchanged.
+
+- `read-168` and `read-23` end on a hold: their model keys reach the mark
+  (`added_145` by the narration's end; `added_23` by the end plus 0.6 s) and
+  hold it to the shot's end. A shot keeps moving through the dissolve after
+  it at the rate its model ends with; `read-168` ran past the take's end
+  (refused), and `read-23` ran into the next setting.
+- "Its teeth" highlights the input pinions, the gears a slide places beside
+  the drum, instead of version 1's transmission gear tips, which are the
+  bevel tips at the top of the shafts, by the dials: the preview showed the
+  light on the wrong end of the shaft.
+- The template's code panel is larger and lower and the headline wider with
+  a smaller title (see "The template"): the preview showed the code small
+  and high beside the machine, and the closing title broken over two lines.
 
 ## Out of scope, on purpose
 

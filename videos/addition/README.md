@@ -26,10 +26,16 @@ framework's simulation fails through a symlinked path):
 ```sh
 machinome export clocked_curta -o export/clocked_curta --no-widget
 git rev-parse HEAD > export/clocked_curta/source-revision.txt
+ln -s ../../STLs export/clocked_curta/STLs
 ```
 
 The framework writes no `source-revision.txt`; Videomaker pins the film to
-it, and evaluation records it as the model's source revision. Remake the
+it, and evaluation records it as the model's source revision. The link is a
+workaround: the export's manifest names each imported piece's source file
+(`pieces[].sources`, relative to this project), and Videomaker's `preview`
+and `render` serve every `.stl` path the manifest names relative to the
+export, so without it they stop on the first source file
+(`ENOENT … export/clocked_curta/STLs/…`). The viewer never reads them. Remake the
 export and rewrite the revision with every change of the model, then
 evaluate again: the take is recorded from the model, and the export must be
 the same machine (the evaluation and the viewer both check its identity).
@@ -57,9 +63,23 @@ writes `_build/movie-resolved.json` once the narration takes exist. All of
 `_build/` is a build product, ignored by Git; the Python files are the
 source. Render at the movie's own frame rate.
 
-## Status
+## What came out
 
-First launch, 1 October 2026: the screenplay written and evaluated (the
-take recorded: 18.75 s of take time, the result reading 23 and then 168,
-two turns on the counter); no speech bought, nothing rendered. The
-narration is reviewed before the speech is bought.
+Five chapters, thirteen shots, 126.23 s at 1920×1080 and 30 fps (3787
+frames); the narrator sets the pace and every cut follows her. The five
+narration takes (11.60, 29.60, 34.56, 33.68 and 10.16 s) were bought once,
+after the screenplay was reviewed, and reused unchanged. The take is 18.75 s
+of the clocked model's time: seven requests, eight marks, the dials reading
+23 and then 168, two turns on the counter; the renderer replayed every step
+on the viewer before the first frame and held every frame to the record.
+The second stroke plays again beside the Python that declares the machine,
+the Curta moving from the full frame into the right half by a reframe with
+its camera held. Nothing was released: the film is a rehearsal
+(`releaseReady` false, no published model or source address yet).
+
+`_build/rehearsal.mp4` with `rehearsal.srt` beside it, `storyboard.jpg`,
+`preview/report.json`, the review pack under `review-packs/` and
+`rehearsal-manifest.json` (which records the stage bundle's hash, the
+viewer's and the model's) are the evidence. `spec.md` says where the film
+departed from its first version; findings went to Videomaker's campaign
+record.

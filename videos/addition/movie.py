@@ -20,8 +20,10 @@ UNITS_KNOB = SLIDES.digit_selector_axle_1.selector_knob_1_419057
 TENS_KNOB = SLIDES.digit_selector_axle_2.selector_knob_1_419152
 HUNDREDS_KNOB = SLIDES.digit_selector_axle_3.selector_knob_1_419225
 DRUM = ClockedCurta.main_drive.stepped_drum
-UNITS_GEAR = ClockedCurta.transmission.result.ones.p_10208_1.transmission_gear_tip
-TENS_GEAR = ClockedCurta.transmission.result.tens.p_10207_1_419228.transmission_gear_tip
+# The input pinions: each slides along its transmission shaft beside the drum,
+# placed by its setting slide (simulation/channel_slider_frames.py).
+UNITS_GEAR = ClockedCurta.transmission.result.ones.p_10219_410002_1
+TENS_GEAR = ClockedCurta.transmission.result.tens.p_10230_410008_1_419229
 UNITS_SHAFT = ClockedCurta.transmission.result.ones
 TENS_SHAFT = ClockedCurta.transmission.result.tens
 HUNDREDS_SHAFT = ClockedCurta.transmission.result.hundreds
@@ -109,7 +111,9 @@ class First(Chapter):
                             inside.highlight(UNITS_SHAFT, TENS_SHAFT, UNITS_DIAL, TENS_DIAL, others="ghost"),
                             until=lines.spoken("which now read"))])
     read_23 = Shot(Curta, {Curta.stage: dials, Curta.aside: total}, until=lines.end(plus=1.2),
-                   transition=Dissolve(0.5), model=Take.run(5.2, "added_23"),
+                   transition=Dissolve(0.5),
+                   model=Take.keys({0: 5.2, lines.end(plus=0.6): "added_23",
+                                    lines.end(plus=1.2): "added_23"}),
                    cues=[Cue(lines.spoken("twenty-three"), total.light(row="first"),
                              until=lines.end(plus=1.2))])
 
@@ -152,7 +156,8 @@ class Second(Chapter):
                             inside.highlight(TENS_CARRY, HUNDREDS_CARRY, others="ghost"),
                             until=lines.spoken("The dials read"))])
     read_168 = Shot(Curta, {Curta.stage: dials, Curta.aside: total}, until=lines.end(plus=1.5),
-                   transition=Dissolve(0.5), model=Take.run(16.25, "added_145"),
+                   transition=Dissolve(0.5),
+                   model=Take.keys({0: 16.25, lines.end(): "added_145", lines.end(plus=1.5): "added_145"}),
                    cues=[Cue(0, total.light(row="second"), until=lines.spoken("one hundred sixty-eight")),
                          Cue(lines.spoken("one hundred sixty-eight"), total.light(row="result"),
                              until=lines.end(plus=1.5))])
