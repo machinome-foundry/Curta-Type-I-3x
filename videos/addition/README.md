@@ -25,20 +25,15 @@ framework's simulation fails through a symlinked path):
 
 ```sh
 machinome export event_driven_curta -o export/event_driven_curta --no-widget
-git rev-parse HEAD > export/event_driven_curta/source-revision.txt
-ln -s ../../STLs export/event_driven_curta/STLs
 ```
 
-The framework writes no `source-revision.txt`; Videomaker pins the film to
-it, and evaluation records it as the model's source revision. The link is a
-workaround: the export's manifest names each imported piece's source file
-(`pieces[].sources`, relative to this project), and Videomaker's `preview`
-and `render` serve every `.stl` path the manifest names relative to the
-export, so without it they stop on the first source file
-(`ENOENT … export/event_driven_curta/STLs/…`). The viewer never reads them. Remake the
-export and rewrite the revision with every change of the model, then
-evaluate again: the take is recorded from the model, and the export must be
-the same machine (the evaluation and the viewer both check its identity).
+The export's manifest records the revision it was made from (`source`:
+the commit and whether the tree was dirty); Videomaker pins the film to
+that revision and reads it there, and serves the viewer only the model
+files the manifest's tree names, so the export needs no other file. Remake
+the export with every change of the model, then evaluate again: the take
+is recorded from the model, and the export must be the same machine (the
+evaluation and the viewer both check its identity).
 
 ## Produce it
 
