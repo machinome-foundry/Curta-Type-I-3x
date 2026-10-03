@@ -11,4 +11,4 @@ reverser_inspection = "simulation.reverser_inspection:ReverserInspection"
 addition = "videos.addition.movie:Addition"
 
 [tool.machinome-studio]
-profile = "builder"
+profile = "openspec-builder"
