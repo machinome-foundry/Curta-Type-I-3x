@@ -167,3 +167,61 @@ This final record is an evidence-only addition after that tested tree.
 empty. Primary project HEAD and all four pre-existing untracked entries
 remained unchanged. Parent reviewed the complete project diff and authorized
 the focused project commit after this stable green run; no merge or push.
+
+### Final lint-cleaned framework generation
+
+After framework formatting and unused-code cleanup, the identical paired
+command passed again: **12 tests and 6 subtests in 100.79 seconds** on
+2026-10-04. Both resolved import paths remained the exact framework worktree
+paths recorded above. Framework HEAD before and after remained
+`41d24cef37817f2a8c0c79ea9014eb93b77a0261`; the implementation was still
+uncommitted. Package fingerprint, computed by the same command above,
+matched before and after:
+`4c60b1115f303d30a6a5cfcc00376cf9292a5be7a4a70932244c0609e76153d5`.
+
+The independently tested project implementation commit was
+`bab7c156b50bf672f54021479f3caf500ecf11ae`, tree
+`e17dfd7d58f50c72b9989e41808614f0d49d03de`. Its production file fingerprint
+matched before and after:
+`8bc0b76b1cfc3c386d4f4b1af407c985cf3ae4539d4261530deb4a151285cff4`.
+The project worktree was clean throughout the rerun, and no simulation,
+CAD, manual or model manifest changes were introduced. This additional
+validation record is evidence-only; the project implementation is unchanged.
+
+### Final arithmetic-corrected framework generation
+
+The framework subsequently corrected mass arithmetic representability
+without changing the profile API. The same paired command passed again:
+**12 tests and 6 subtests in 97.55 seconds** on 2026-10-04. Verified imports
+again resolved to the exact framework worktree paths above. Framework HEAD
+before and after remained `41d24cef37817f2a8c0c79ea9014eb93b77a0261`;
+the implementation was still uncommitted. Python package fingerprint matched
+the declared source freeze and was equal before and after:
+`cba98e7237076f001503e3e0f5aff55ff35cbaa18476de18feff85a534924ffa`.
+
+Project implementation remained `bab7c156b50bf672f54021479f3caf500ecf11ae`,
+tree `e17dfd7d58f50c72b9989e41808614f0d49d03de`. Only the prior validation
+record was uncommitted; there were no project implementation or model-source
+changes. The production-file fingerprint, including that earlier evidence
+addition, was equal before and after:
+`b77ef784057ad0dae410e10e1040f7d1764b37cfed59c786b96d242c5772d388`.
+The package and production fingerprint commands are the same as above.
+Earlier generation results remain historical evidence, not a claim that
+their distinct source fingerprints identify this final generation.
+
+### Completed paired commits
+
+The framework completion commit is
+`ea2d6fab434f85bb124397e36ef6e04e51a491a8` on `v0.8-production`, following
+planning commit `41d24cef37817f2a8c0c79ea9014eb93b77a0261` and completed
+source base `e570068287c56e84f6ccb4ed73f0bae7bed5a07c`. The framework
+worktree was clean after commit. Its package fingerprint was rechecked and
+remained `cba98e7237076f001503e3e0f5aff55ff35cbaa18476de18feff85a534924ffa`,
+identical to the final independent 12-test/6-subtest paired run above.
+
+The project implementation commit paired with that framework content is
+`bab7c156b50bf672f54021479f3caf500ecf11ae`. This follow-up changes only
+`production/evidence.md`, recording the final tested framework identity;
+no implementation rerun is needed for this evidence-only addition. Parent
+authorized this focused evidence commit. Neither repository was merged or
+pushed, and the primary project checkout and pre-existing files are preserved.
