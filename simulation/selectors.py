@@ -3,7 +3,7 @@
 Source-specific axes and child types are deliberately explicit.
 """
 from math import cos, sin, radians
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
 from machinome.math import floor

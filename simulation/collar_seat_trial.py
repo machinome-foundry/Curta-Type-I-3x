@@ -10,7 +10,7 @@ shoulder bench. Upstream print files stay untouched.
 
 import manifold3d as manifold
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Length
 from simulation.cover_fits import mesh_solid, fitted_mesh
 from simulation.print_parts import CrankCollar

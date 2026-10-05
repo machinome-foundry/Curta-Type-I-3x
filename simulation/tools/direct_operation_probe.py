@@ -11,7 +11,7 @@ import json
 from machinome.math import floor
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.motion.ports import Time
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Angle
 from machinome.simulation import Button, Driver, Instruction, Sim, Slide, Turn
 

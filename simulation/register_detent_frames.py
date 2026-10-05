@@ -1,6 +1,6 @@
 """Original register-ball guides and the complete spider mounted by frames."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation.register_detents import RegisterDetents
 from simulation.standard.parts import Part6mmBall419241

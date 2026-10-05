@@ -81,7 +81,7 @@ Validation on 2026-09-22 (logs and images in ignored `_build_checks/`):
   `5f3ec29aede4934106bb0cbbdaa7454dcec39d2ba04a233f431a4ce279fef610`.
 - `openspec validate simulate-the-curta --strict` and `git diff --check` pass.
 
-Commands use the workspace `.venv/bin/machinome test --faceted|--exact`
+Commands use the workspace `.venv/bin/machinome test --mesh|--brep`
 with each of `simulation/test_operating_positioning.py`,
 `simulation/test_positioning.py`, `simulation/test_thrust_seat_trial.py`
 and `simulation/test_running_motion.py`. The root probe is

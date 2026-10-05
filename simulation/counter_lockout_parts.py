@@ -5,7 +5,7 @@ and refined complete-print mesh match its measured candidate; the remaining
 counter stations require their own admission and operating checks.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 

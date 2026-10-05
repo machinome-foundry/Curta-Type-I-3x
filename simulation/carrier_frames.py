@@ -1,6 +1,6 @@
 """Attach the clearing pin and coil; leave the carrier's fixed hardware alone."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation.cover_fits import FittedAxleCarrier
 from simulation.clearing_seat_fit import FittedClearingPin

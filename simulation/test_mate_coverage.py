@@ -1,7 +1,7 @@
 """Audit the final operating tree, not only intermediate fitted assemblies."""
 
 import unittest
-from machinome.node import declared_children
+from machinome.node.declarative import declared_children
 from machinome.motion.joints import declared_joints
 from machinome.motion.mates import declared_mates
 from simulation.mechanistic import MechanisticCurta

@@ -1,6 +1,6 @@
 """Frame attachments for the final shoulder-fitted counter carry stations."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation import counter_guide_trial as trial
 from simulation.counter_guide_shoulder import ShoulderClearedTurnsSlider

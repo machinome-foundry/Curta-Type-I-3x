@@ -5,7 +5,7 @@ The operating machine continues to determine both angles through its actual
 crank and tooth passages. No geometry correction is introduced here.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute
 from machinome.simulation import Driver
 from simulation.standard.printed import Part10221_1, TensBell1

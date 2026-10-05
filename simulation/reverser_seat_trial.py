@@ -5,7 +5,7 @@ end at the source datum. No pocket, flat, frame bore or upstream file changes.
 """
 
 import cadquery as cq
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Length
 from machinome.simulation import Driver
 from machinome.motion.joints import Prismatic

@@ -9,7 +9,8 @@ from simulation.colors import STEEL
 from math import hypot
 import cadquery as cq
 from molejo import Shape, Polygon, Line, P
-from machinome.node import AssemblyNode, MolejoNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.molejo import MolejoNode
 from machinome.parameters import Angle
 from machinome.motion.ports import Port
 from machinome.motion.joints import Prismatic

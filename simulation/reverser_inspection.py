@@ -9,7 +9,7 @@ would look like successful engagement even with a gap. Inputs position
 parts, without collision response. Ball radial following is unmodeled.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.simulation import Driver, Instruction
 from simulation.standard.assembly import ReversingLever1

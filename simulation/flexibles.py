@@ -4,7 +4,8 @@ from simulation.colors import STEEL
 from math import atan2, cos, sin, tau
 
 from molejo import Circle, Shape, Spline, Helix, P
-from machinome.node import MolejoNode, AssemblyNode
+from machinome.node.molejo import MolejoNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.math import turn
 

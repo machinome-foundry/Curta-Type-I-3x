@@ -2,7 +2,7 @@
 
 import unittest
 
-from machinome.node import declared_children
+from machinome.node.declarative import declared_children
 from machinome.motion.joints import declared_joints
 from machinome.motion.mates import declared_mates
 from simulation.reverser_operating_parts import ReverserContactTransmission

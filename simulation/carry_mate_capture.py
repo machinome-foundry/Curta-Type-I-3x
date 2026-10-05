@@ -1,6 +1,6 @@
 """Existing full-bank capture contracts on the actual mated carry stations."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from simulation.running_parts import (
     RetainedResultCarries, RetainedTurnsCarries, RESULT_RESTS, TURNS_RESTS,

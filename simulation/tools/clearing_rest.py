@@ -2,7 +2,7 @@
 
 import argparse
 import json
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Bound, Prismatic, Revolute
 from machinome.motion.ports import Time
 from machinome.math import max, piecewise

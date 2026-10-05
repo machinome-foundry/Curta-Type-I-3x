@@ -1,6 +1,6 @@
 """Rigid mounting for the whole retaining spring; its hooks still deform."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from simulation.mechanism import TensBellAssembly
 from simulation.retaining_spring import RetainingSpring, MOUNT_Z
 

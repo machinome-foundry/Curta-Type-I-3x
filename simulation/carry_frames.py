@@ -6,7 +6,7 @@ deformation coordinate, not a second attachment freedom. Its nominal source
 datum is placed without changing the wire law that holds the closed U.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation.standard import carry
 from simulation.carry_heads import ResultsSlider, TurnsSlider

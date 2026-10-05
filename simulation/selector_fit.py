@@ -4,7 +4,7 @@ This begins with the unchanged operating source parts. Its fractional setting
 never re-evaluates the complete root's calculator operand or carry law.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from simulation.selectors import Selector1
 from simulation.standard.assembly import LowerHousing1

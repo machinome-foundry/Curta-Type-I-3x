@@ -107,7 +107,7 @@ Use the workspace Python environment and `SOLID_BUILD_DIR=_build_checks` as in
 the [collar investigation](collar-seating-investigation-2026-09-21.md#reproduction):
 
 ```sh
-/home/asa/devel/machinome-studio/.venv/bin/machinome test --faceted simulation/thrust_seat_trial.py:SeatedThrustBench
+/home/asa/devel/machinome-studio/.venv/bin/machinome test --mesh simulation/thrust_seat_trial.py:SeatedThrustBench
 /home/asa/devel/machinome-studio/.venv/bin/machinome test simulation/thrust_seat_trial.py:SeatedThrustBench
 /home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.thrust_seating --seated --section _build_checks/thrust-seated-trial-section-final.png
 /home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.thrust_root_probe

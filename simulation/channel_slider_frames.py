@@ -5,7 +5,7 @@ line at source Z=0; matched channel seats leave their native placement intact.
 The fitted uppers and reversing inputs declare their datums beside their fits.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from simulation.standard import channels, printed
 
 

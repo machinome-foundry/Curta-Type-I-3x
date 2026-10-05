@@ -1,6 +1,7 @@
 """The retained zero cam, its following lever, and the sliding drive pin."""
 
-from machinome.node import AssemblyNode, Frame
+from machinome.node.assembly import AssemblyNode
+from machinome.node.frames import Frame
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
 from machinome.simulation import Driver

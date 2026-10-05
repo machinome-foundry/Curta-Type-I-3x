@@ -72,9 +72,9 @@ Reproduce with the environment in the section below:
 ```sh
 python -m simulation.tools.collar_pin_seating --source
 python -m simulation.tools.collar_pin_seating --nut-phase
-machinome test --faceted simulation/collar_pin_seat.py:CollarPinSeat
-machinome test --exact simulation/collar_pin_seat.py:CollarPinSeat
-machinome test --faceted simulation/operating_collar.py:OperatingCollarBench
+machinome test --mesh simulation/collar_pin_seat.py:CollarPinSeat
+machinome test --brep simulation/collar_pin_seat.py:CollarPinSeat
+machinome test --mesh simulation/operating_collar.py:OperatingCollarBench
 python -m simulation.tools.collar_trial_contacts --section _build_checks/collar-clocked-trial-sections-2026-09-22.png
 ```
 
@@ -229,7 +229,7 @@ source bore and outer flange. The record and hashes are in
 Reproduce with the environment above:
 
 ```sh
-/home/asa/devel/machinome-studio/.venv/bin/machinome test --faceted simulation/collar_seat_trial.py:CollarShoulderBench
+/home/asa/devel/machinome-studio/.venv/bin/machinome test --mesh simulation/collar_seat_trial.py:CollarShoulderBench
 /home/asa/devel/machinome-studio/.venv/bin/machinome test simulation/collar_seat_trial.py:CollarShoulderBench
 /home/asa/devel/machinome-studio/.venv/bin/python -m simulation.tools.collar_seating \
   --shoulder-trial --rise 0 --section _build_checks/collar-shoulder-source-profile-section.png

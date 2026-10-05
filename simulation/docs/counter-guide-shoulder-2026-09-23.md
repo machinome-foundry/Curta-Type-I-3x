@@ -172,10 +172,10 @@ Using the configured workspace environment from this project:
 
 ```sh
 python -m unittest -v simulation.test_counter_guide_shoulder simulation.test_counter_shoulder_adoption
-machinome test --faceted simulation/counter_shoulder_contacts.py
-machinome test --exact simulation/counter_shoulder_contacts.py
-machinome test --faceted simulation/counter_guide_trial.py
-machinome test --exact simulation/counter_guide_trial.py
+machinome test --mesh simulation/counter_shoulder_contacts.py
+machinome test --brep simulation/counter_shoulder_contacts.py
+machinome test --mesh simulation/counter_guide_trial.py
+machinome test --brep simulation/counter_guide_trial.py
 python -m unittest -v simulation.test_counter_shoulder_operating_trial
 ```
 

@@ -5,7 +5,7 @@ feed the existing physical joints, so the request stops and the drawn motion
 share one value. It retains nothing; memory belongs to the root's States.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.motion.joints import Bound, Revolute, Prismatic
 from simulation.clocked_laws import at_rest, at_check, ratchet_floor

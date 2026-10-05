@@ -11,7 +11,7 @@ import argparse
 import json
 import logging
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.parameters import Count
 from machinome.simulation import Driver

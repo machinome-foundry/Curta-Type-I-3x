@@ -6,7 +6,7 @@ frames name their source shaft line. Shapes and internal placements stay
 in standard.assembly and standard.parts.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from simulation.standard import assembly as source
 
 

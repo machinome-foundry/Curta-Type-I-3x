@@ -6,7 +6,7 @@ assembly translation. Carry moves the actual upper stack through its declared
 proposed; it does not reuse the fixed-height ones contact table.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute
 from machinome.simulation import Driver
 from simulation.standard.channels import ResultTens

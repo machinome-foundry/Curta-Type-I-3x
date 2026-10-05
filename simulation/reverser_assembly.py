@@ -7,7 +7,7 @@ as an assumed displacement. Knob and gear height are independently adjustable
 only to diagnose the operating model's currently disconnected placements.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.simulation import Driver

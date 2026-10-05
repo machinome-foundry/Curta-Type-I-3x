@@ -3,7 +3,7 @@
 import numpy as np
 import trimesh
 
-from machinome.node.adapters.step import StepAssembly
+from machinome.node.step import StepAssembly
 from machinome.test import TestCase
 
 from simulation.source import STEP

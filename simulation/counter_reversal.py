@@ -6,7 +6,7 @@ That height is not a verified knob/yoke/ball/frame assembly position; see the
 complete reverser assembly diagnostic before interpreting a passing pinion test.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.parameters import Length
 from machinome.simulation import Driver

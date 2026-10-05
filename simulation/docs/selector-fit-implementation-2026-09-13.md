@@ -55,7 +55,7 @@ SOLID_BUILD_DIR=_build_open_run_evidence \
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 /usr/bin/time -f 'RESOURCE wall=%e rss_kib=%M exit=%x' \
 timeout --kill-after=10 600 /home/asa/devel/libresolid-studio/.venv/bin/solid \
-test --exact simulation/selector_fit.py:SelectorFitBench
+test --brep simulation/selector_fit.py:SelectorFitBench
 ```
 
 Retained log: `_build_evidence/selector-fit-red.log`, SHA-256

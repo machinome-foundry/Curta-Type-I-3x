@@ -5,7 +5,7 @@ The recentered carrier's unchanged pins stand at world (+/-21, 0), ending
 at Z49.5. No source material or insertion depth is changed by this bench.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Angle
 from simulation.print_parts import CrankCollar
 from simulation.standard.parts import CounterBodyPin, CrankCollarNut

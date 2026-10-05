@@ -9,7 +9,7 @@ from time import monotonic
 import cadquery as cq
 import matplotlib.pyplot as plt
 
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.carry_bank_frame import FittedCarryBankFrameBench
 from simulation.cover_fits import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume

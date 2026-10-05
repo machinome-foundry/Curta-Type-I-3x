@@ -396,8 +396,8 @@ does not distinguish its post-0.6 motion, expression-graph and markings changes.
 machinome build
 machinome snapshot -o snapshot-rest.png --autocenter --viewall
 python -m unittest simulation.test_source
-machinome test --faceted simulation/standard/assembly.py
-machinome test --exact simulation/mechanistic.py
+machinome test --mesh simulation/standard/assembly.py
+machinome test --brep simulation/mechanistic.py
 python -m unittest simulation.test_mechanistic.MechanisticCurtaTest
 python -m simulation.tools.probe
 ```

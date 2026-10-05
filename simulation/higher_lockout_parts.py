@@ -6,7 +6,7 @@ surfaces; tessellation changes no native material. This is a simulation fit,
 not a manufacturing recommendation or adoption for the remaining bank.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 from simulation.fit import FittedCarryLockout

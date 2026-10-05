@@ -103,8 +103,8 @@ unchanged. There is no new successful operating-reversal claim.
 Run from the project with the workspace environment and `PYTHONPATH="$PWD"`:
 
 ```sh
-machinome test --exact simulation/reverser_seat_trial.py:ReverserSeatTrial
-machinome test --faceted simulation/reverser_seat_trial.py:ReverserSeatTrial
+machinome test --brep simulation/reverser_seat_trial.py:ReverserSeatTrial
+machinome test --mesh simulation/reverser_seat_trial.py:ReverserSeatTrial
 machinome snapshot simulation/reverser_seat_trial.py:SeatProfileComparison -o _build_running/reverser-seat-profile.png --camera 35,-60,-7,6,0,-7 --imgsize 1200x900
 ```
 

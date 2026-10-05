@@ -1,7 +1,7 @@
 """Diagnostic of the radial deployed pose; not an adopted loop control."""
 
 import cadquery as cq
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Length
 from machinome.simulation import Driver
 from simulation.clearing_loop import LoopMountBench, LoopMountAssembly, ProbeLoop

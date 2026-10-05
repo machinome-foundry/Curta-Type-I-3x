@@ -1,6 +1,6 @@
 """Independent deployment of the explicitly simulation-only captive mounting."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Revolute
 from machinome.motion.ports import Port
 from simulation.running_parts import RunningClearingAssembly, RetainedCarriage

@@ -5,7 +5,7 @@ No framework internals or viewer APIs are used.
 """
 
 import json
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Bound
 from machinome.motion.ports import Port, Time
 from machinome.simulation import Driver, Sim

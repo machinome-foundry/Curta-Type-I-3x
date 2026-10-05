@@ -6,7 +6,7 @@ operating probe separately provides actual-latch acceptance. T07 geometry and
 the refined diagnostic bell remain isolated from the operating model.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Time
 from machinome.simulation import Driver

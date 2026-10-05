@@ -5,7 +5,7 @@ Only the existing pentagonal outline receives the independently checked
 .16 mm flank fit; station identity distinguishes imported fusion artifacts.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Count, Length
 from simulation.fit import FittedCarryLockout

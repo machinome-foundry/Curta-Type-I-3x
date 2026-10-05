@@ -8,7 +8,7 @@ import time
 import numpy as np
 
 from machinome.simulation import Sim
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
 from simulation.operating_demonstrations import DEMONSTRATIONS, replay
 from simulation.positioning_ball_trial import RadialBallTrial

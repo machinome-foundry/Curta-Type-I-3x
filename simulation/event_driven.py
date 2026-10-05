@@ -3,7 +3,7 @@
 from functools import reduce
 from operator import and_
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.simulation import Driver, State, Instruction
 from simulation.assemblies import LayeredSource

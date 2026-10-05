@@ -80,8 +80,8 @@ Reproduce the scoped checks from the project root:
 
 ```sh
 python -m unittest simulation.test_reverser_inspection_manifest
-machinome test --faceted simulation/reverser_inspection.py:ReverserInspection
-machinome test --exact simulation/reverser_inspection.py:ReverserInspection
+machinome test --mesh simulation/reverser_inspection.py:ReverserInspection
+machinome test --brep simulation/reverser_inspection.py:ReverserInspection
 machinome build reverser_inspection
 python -m simulation.tools.reverser_inspection_browser
 ```

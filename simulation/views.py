@@ -5,7 +5,7 @@ rebase flexible snapshot STL paths. See the project's framework findings.
 """
 
 from machinome.simulation import Driver
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from simulation.carry_contact import CarryContactBench
 from simulation.bell_spring import BellLeafContactBench

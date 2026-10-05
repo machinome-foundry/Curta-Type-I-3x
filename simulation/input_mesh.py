@@ -1,6 +1,6 @@
 """One selectable drum row and its transmission pinion, in the source frame."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute
 from machinome.simulation import Driver
 from machinome.math import clamp01

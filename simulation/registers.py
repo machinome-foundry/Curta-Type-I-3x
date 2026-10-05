@@ -1,6 +1,7 @@
 """Dial joints and source-specific clocking; one port per register value."""
 
-from machinome.node import AssemblyNode, Frame
+from machinome.node.assembly import AssemblyNode
+from machinome.node.frames import Frame
 from machinome.motion.joints import Revolute
 from machinome.motion.ports import Port
 from machinome.simulation import Driver

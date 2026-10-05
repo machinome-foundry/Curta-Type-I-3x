@@ -1,7 +1,7 @@
 """Project-local conversion of recorded CAD poses to explicit frame triads."""
 
 from math import cos, sin, radians, sqrt
-from machinome.node import Frame
+from machinome.node.frames import Frame
 
 
 def source_frame(*, at, angle, axis):

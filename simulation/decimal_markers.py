@@ -1,6 +1,7 @@
 """Source marker, ball and spring travel together around their circular track."""
 
-from machinome.node import AssemblyNode, Frame
+from machinome.node.assembly import AssemblyNode
+from machinome.node.frames import Frame
 from machinome.motion.joints import Bound, Revolute
 from machinome.simulation import Driver
 from machinome.parameters import Length

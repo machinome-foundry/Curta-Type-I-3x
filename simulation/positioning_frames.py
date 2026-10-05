@@ -1,7 +1,7 @@
 """The installed carriage ring, coil and radial ball attached at their seats."""
 
 from math import cos, sin, radians
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation.positioning import RadialCarriagePositioning, RING_BOTTOM, SPRING_BOTTOM
 from simulation.thrust_ring_parts import BallPassageThrustRing

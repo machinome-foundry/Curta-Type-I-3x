@@ -6,7 +6,7 @@ owns its old joints and placements independently of the new attachment frames.
 
 import unittest
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Port, Time

@@ -17,7 +17,7 @@ import cadquery as cq
 import numpy as np
 
 from machinome.simulation import Sim
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE
 from simulation.tools.positioning_ball_contact import BALL, BELL

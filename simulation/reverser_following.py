@@ -6,7 +6,8 @@ restoring direction, not a spring force, friction or automatic snap action.
 
 from math import cos, sin, radians
 from molejo import Circle, Shape, Helix, P
-from machinome.node import AssemblyNode, MolejoNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.molejo import MolejoNode
 from machinome.parameters import Length
 from machinome.motion.joints import Prismatic
 from machinome.motion.ports import Port

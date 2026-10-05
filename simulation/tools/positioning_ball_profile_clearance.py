@@ -5,7 +5,7 @@ import logging
 import time
 
 from machinome.simulation import Sim
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import bell_limit, collar_limit
 from simulation.tools.interference import rigid_leaves, world_solids

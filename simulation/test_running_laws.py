@@ -2,7 +2,7 @@
 
 import unittest
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Prismatic
 from machinome.motion.ports import Time
 from machinome.math import piecewise

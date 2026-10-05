@@ -7,7 +7,8 @@ set the installed length; this is a contact-driven shape, not a force model.
 
 from simulation.colors import STEEL
 from molejo import Circle, Shape, Helix, P
-from machinome.node import AssemblyNode, MolejoNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.molejo import MolejoNode
 from machinome.motion.ports import Port
 from machinome.motion.joints import Prismatic
 from simulation.standard.assembly import UpperCarriageBody1

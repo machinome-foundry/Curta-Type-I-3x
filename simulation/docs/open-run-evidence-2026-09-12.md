@@ -69,8 +69,8 @@ not that metadata alone, identifies the tested motion contract.
 
 | Check | Outcome | Scope |
 | --- | --- | --- |
-| `solid test --faceted simulation/carry.py` | 12/12 pass; 24.01 s test time, 28.31 s process wall time; 671420 KiB peak RSS | Existing result/counter lever stroke, spring clearance, retention and material checks at tessellation precision |
-| `solid test --exact simulation/carry.py` | 12/12 pass; 51.02 s test time, 54.88 s process wall time; 820564 KiB peak RSS | Same existing isolated contracts on exact geometry |
+| `solid test --mesh simulation/carry.py` | 12/12 pass; 24.01 s test time, 28.31 s process wall time; 671420 KiB peak RSS | Existing result/counter lever stroke, spring clearance, retention and material checks at tessellation precision |
+| `solid test --brep simulation/carry.py` | 12/12 pass; 51.02 s test time, 54.88 s process wall time; 820564 KiB peak RSS | Same existing isolated contracts on exact geometry |
 | Static `099`, input 1, crank 0, addition, carriage seated at zero | 12 candidate-pair native Boolean checks; no positive overlap or invalid result; 32.95 s diagnostic wall time | Two result sliders against the selected pins, bearings, bell rigid parts and first three transmission stacks |
 | Selected input-group travel at crank phases 0 and 357 degrees | 55 positions at each phase, 0–54 mm in 1 mm increments; no overlap or invalid result; 25.54 s | Fixed home tooth phase, independently translated fitted input group against all five rigid drum bodies; 55 native Booleans at phase 0, disjoint native bounding boxes at phase 357 |
 

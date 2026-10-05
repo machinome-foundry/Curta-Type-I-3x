@@ -1,6 +1,6 @@
 """Keyed transmission shafts: selector travel and the two-to-one dial drive."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.ports import Port
 from machinome.simulation import Driver
 from machinome.math import abs, clamp01, floor

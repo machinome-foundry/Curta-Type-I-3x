@@ -5,7 +5,7 @@ prints mate to that same shaft line through their original travel joints;
 fitted shapes, translations, relations and coordinate names stay unchanged.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from simulation import channel_slider_frames as sliders
 from simulation.standard import channels

@@ -8,7 +8,8 @@ recorded separately in the project-owned operating completion record.
 from functools import reduce
 from operator import and_
 
-from machinome.node import AssemblyNode, Frame as AttachmentFrame
+from machinome.node.assembly import AssemblyNode
+from machinome.node.frames import Frame as AttachmentFrame
 from machinome.motion.ports import Time, Port
 from machinome.motion.joints import Bound
 from machinome.simulation import Driver, Instruction, Button, Turn, Slide, Follow

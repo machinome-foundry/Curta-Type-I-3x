@@ -5,7 +5,8 @@ The source bench retains the original insertion for reproduction.
 Independent pose inputs allow measuring contact before declaring a restraint.
 """
 
-from machinome.node import AssemblyNode, StlNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.stl import StlNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.simulation import Driver
 from simulation.mechanism import CarriageStructure

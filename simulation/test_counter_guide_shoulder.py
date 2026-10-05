@@ -4,7 +4,7 @@ import json
 import unittest
 import manifold3d as manifold
 
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.carry_heads import TurnsSlider
 from simulation.carry_bank_frame import FittedCarryBankFrameBench, stations
 from simulation.carry_bank_regions import COUNTER_ANGLES

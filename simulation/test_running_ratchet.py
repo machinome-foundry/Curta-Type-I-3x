@@ -4,7 +4,7 @@ import unittest
 from machinome.simulation import Sim
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from simulation import assemblies
 from simulation.mechanism import SteppedDrum
 from simulation.zero import ZeroPositioning

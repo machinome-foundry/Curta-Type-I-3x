@@ -5,7 +5,7 @@ The declared station distinguishes the imported fusion's artifact identity;
 only its existing pentagonal locking outline receives the .16 mm fit.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Count
 from simulation.higher_lockout_parts import ContactTensLockout

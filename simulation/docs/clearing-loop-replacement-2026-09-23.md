@@ -187,7 +187,7 @@ published-world64 check, capture, both stops, and pin-removal negative.
 - World64-red log SHA-256: `48c2d0622e5818a8584987a2dd818dbcc0225e000ea50ae4825526a4b4c008b9`.
 - Seated-gap native log SHA-256: `ec3376a4bd13fa7521aea7f5b7613ef2bd821bf89bcf521c181be56189e60990`.
 - Seated-gap mislabeled faceted (actually exact) log SHA-256: `b74dd8736f45839f6709b44a4e0b15a7843b23041e8331b7180821e862ef7517`.
-- Explicit `--faceted` rerun: 10/10 pass, 27.02 s, zero volume epsilon;
+- Explicit `--mesh` rerun: 10/10 pass, 27.02 s, zero volume epsilon;
   log SHA-256 `c1c2ef8700f8117371210814bd4ab72f405a0c7252094eb6b43ee55330599468`.
 - Rejected full-root Mesh64 transport report SHA-256: `6d13ffde0e56aecac5b5d5743558108074a5396e5c5ebab1bb2878414e05ff22`.
 - Corrected full-root Mesh64 transport report SHA-256: `1205340014d4b539af651501c2a7599108451f949b6687251f6980b8157345d3`.

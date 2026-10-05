@@ -6,7 +6,7 @@ it must not import attachment datums from the migrated implementation.
 
 import unittest
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time
 from machinome.simulation import Sim

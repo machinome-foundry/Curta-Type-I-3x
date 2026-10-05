@@ -9,7 +9,7 @@ import json
 
 import numpy as np
 import trimesh
-from machinome.node.adapters.step import StepAssembly
+from machinome.node.step import StepAssembly
 
 from simulation.standard import parts
 from simulation.source import SOURCE, STEP, prepare

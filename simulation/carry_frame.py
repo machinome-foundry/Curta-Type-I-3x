@@ -4,7 +4,7 @@ This independently driven bench preserves the source placements. The complete
 Curta remains the neighbour-sweep fixture; this bench isolates the frame proof.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from simulation.mechanism import UpperFrame
 from simulation.standard.carry import ResultsLever1, ResultsLever2

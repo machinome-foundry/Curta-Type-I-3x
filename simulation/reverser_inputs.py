@@ -1,6 +1,6 @@
 """Trial counter tooth fit at both measured reversing-lever positions."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.parameters import Length
 from machinome.motion.joints import Prismatic
 from simulation.fit import FittedCounterPinion

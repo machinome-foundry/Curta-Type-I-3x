@@ -1,6 +1,6 @@
 """The spring-loaded pawl rides the disc's anti-reversal ratchet."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from machinome.motion.joints import Revolute
 from machinome.motion.ports import Port

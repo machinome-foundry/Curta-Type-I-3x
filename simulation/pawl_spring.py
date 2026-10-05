@@ -3,7 +3,8 @@
 from simulation.colors import STEEL
 from math import atan2, cos, sin, hypot, tau
 from molejo import Circle, Shape, Spline, P
-from machinome.node import AssemblyNode, MolejoNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.molejo import MolejoNode
 from machinome.motion.ports import Port
 from machinome.math import turn
 from simulation.fit import PAWL_PIVOT, PAWL_SPRING_ANCHOR, PAWL_SPRING_HOLE

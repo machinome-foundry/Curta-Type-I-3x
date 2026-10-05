@@ -5,7 +5,8 @@ import numpy as np
 import trimesh
 import manifold3d as manifold
 import cadquery as cq
-from machinome.node import AssemblyNode, StlNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.stl import StlNode
 from machinome.parameters import Length
 from simulation.print_parts import PRINTS
 from simulation.standard.parts import ClearingCover

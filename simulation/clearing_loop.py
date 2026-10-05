@@ -5,7 +5,7 @@ obstructions. A swivel about the source's first clip is a hypothesis, not
 an operating hinge or an assertion that this printed loop folds in place.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Prismatic, Revolute
 from machinome.motion.ports import Port
 from machinome.simulation import Driver

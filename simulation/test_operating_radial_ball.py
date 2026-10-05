@@ -6,7 +6,7 @@ import numpy as np
 import cadquery as cq
 
 from machinome.simulation import Sim
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta, StaticBallOperatingCurta, ReverserOperatingCurta
 from simulation.positioning_ball_trial import RadialBallTrial, ReversedRadialBallTrial, PullingBallTrial
 from simulation.test_radial_positioning_ball import RadialPositioningBallTest as _RetainedContract

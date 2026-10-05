@@ -1,6 +1,6 @@
 """Complete stepped drum and both first-channel transmission stacks."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.simulation import Driver
 from simulation.cycle import dial_positions

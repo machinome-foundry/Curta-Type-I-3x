@@ -1,6 +1,6 @@
 """The source's printed groups, separate from their individual CAD features."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from simulation.standard.assembly import MainAxleStepDrum1
 from simulation.standard.printed import MainAxleStepDrumTop1, MainAxleStepDrumBottom1, TensBell1
 

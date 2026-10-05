@@ -4,7 +4,7 @@ This is a measured list of remaining contacts, not an acceptance certificate.
 The implemented model is project commit `0586179`, at its initial retained
 state with no user commands. `tools/interference.py --operating --progress`
 now selects that state explicitly instead of the older pose-model Rest
-instruction. Adding `--exact` chooses native shapes where available; source
+instruction. Adding `--brep` chooses native shapes where available; source
 STL contacts still use the faceted path.
 
 | Inventory | Rigid occurrences | Positive pairs | Refused commons |

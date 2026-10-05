@@ -6,7 +6,7 @@ code. They must not inherit from the refactored dial banks under test.
 
 import unittest
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time

@@ -8,7 +8,7 @@ its missing geometry is supplied by the separate full-tree reproduction.
 from functools import reduce
 from operator import and_
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.parameters import Angle
 from machinome.motion.joints import Bound, Revolute, Prismatic
 from machinome.motion.ports import Time

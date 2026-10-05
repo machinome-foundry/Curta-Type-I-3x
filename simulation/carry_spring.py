@@ -3,7 +3,8 @@
 from simulation.colors import STEEL
 from math import pi, sin, cos, radians
 from molejo import Shape, Circle, Line, Arc, Spline, P
-from machinome.node import AssemblyNode, MolejoNode
+from machinome.node.assembly import AssemblyNode
+from machinome.node.molejo import MolejoNode
 from machinome.motion.joints import Prismatic
 from machinome.motion.ports import Port
 

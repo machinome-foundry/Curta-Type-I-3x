@@ -1,6 +1,6 @@
 """Independent full-bank stroke fixture; operating parts and source placements."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from simulation.mechanism import UpperFrame
 from simulation.standard.carry import ResultsCarry, TurnsCarry

@@ -9,7 +9,8 @@ import json
 import math
 import unittest
 
-from machinome.node import AssemblyNode, declared_children
+from machinome.node.assembly import AssemblyNode
+from machinome.node.declarative import declared_children
 from machinome.motion.joints import Bound, Revolute, Prismatic
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time

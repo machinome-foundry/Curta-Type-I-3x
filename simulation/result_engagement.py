@@ -3,7 +3,7 @@
 Pose diagnostic: geometry checks precede any new operating admission limits.
 """
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.simulation import Driver
 from simulation.prints import PrintedDrum

@@ -7,7 +7,7 @@ is unchanged. These are simulation fits, not upstream CAD modifications.
 
 import cadquery as cq
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic
 from machinome.parameters import Length
 from simulation.counter_lockout_parts import ContactCounterOnesUpper

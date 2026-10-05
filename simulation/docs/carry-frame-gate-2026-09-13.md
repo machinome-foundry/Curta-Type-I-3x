@@ -121,7 +121,7 @@ ulimit -v 8388608
 export PYTHONPATH="$PWD:/home/asa/devel/libresolid-studio/solid-node/WTs/open-run-simulation"
 export SOLID_BUILD_DIR=_build_open_run_evidence
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
-timeout 300 /home/asa/devel/libresolid-studio/.venv/bin/solid test --exact simulation/carry_frame.py
+timeout 300 /home/asa/devel/libresolid-studio/.venv/bin/solid test --brep simulation/carry_frame.py
 timeout 300 /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.tools.carry_frame_supports
 timeout 180 /home/asa/devel/libresolid-studio/.venv/bin/python -m simulation.tools.carry_frame_seat_gate
 ```

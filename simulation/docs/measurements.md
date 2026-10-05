@@ -12,8 +12,8 @@ From the project root, with the workspace environment active:
 python -m simulation.tools.probe
 python -m unittest simulation.test_source
 machinome build
-machinome test --faceted simulation/standard/assembly.py
-machinome test --exact simulation/curta.py
+machinome test --mesh simulation/standard/assembly.py
+machinome test --brep simulation/curta.py
 ```
 
 The last command currently fails; the findings below are unresolved.

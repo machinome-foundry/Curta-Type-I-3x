@@ -8,7 +8,7 @@ from math import cos, radians, sin
 from pathlib import Path
 from time import process_time
 
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.fit import FittedCounterPinion
 from simulation.standard.parts import (OneToothTurnsStepDrumSegment,
                                         NineToothTurnsStepDrumSegment)

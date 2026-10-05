@@ -1,6 +1,6 @@
 """Crank, stepped drum and one input channel, using the source's rest frames."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from machinome.motion.joints import Revolute, Prismatic
 from machinome.motion.ports import Port

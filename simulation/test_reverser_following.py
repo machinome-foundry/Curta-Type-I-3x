@@ -48,7 +48,7 @@ class ReverserFollowerTest(TestCase):
                                      along=(0, 0, 1), directions='forward')
 
     def test_ball_is_captured_on_actual_shaft_mesh(self):
-        # Explicit faceted audit even on --exact: the unchanged source's cone
+        # Explicit faceted audit even on --brep: the unchanged source's cone
         # native Boolean is unreliable, as the independent print probe records.
         lever = self.node.lever
         shaft = mesh_solid(lever.reversing_shaft.mesh)

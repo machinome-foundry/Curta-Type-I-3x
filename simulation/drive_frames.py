@@ -1,6 +1,6 @@
 """Pawl pivot and reverser guides, retaining their original joint coordinates."""
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from machinome.motion.joints import Prismatic, Revolute
 from simulation.fit import FittedPawl, PAWL_SPRING_ANCHOR
 from simulation.pawl import PIVOT

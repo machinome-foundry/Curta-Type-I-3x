@@ -6,7 +6,7 @@ datums. The two bare type-2 dials have an axle at their own origin. Nothing
 here changes a shape, fit, joint or source placement.
 """
 
-from machinome.node import Frame
+from machinome.node.frames import Frame
 from simulation import dial_fits as fitted
 
 

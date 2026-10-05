@@ -15,7 +15,7 @@ import trimesh
 import cadquery as cq
 
 from machinome.simulation import Sim
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
 from simulation.positioning_ball_profiles import BELL_ENVELOPE, COLLAR_ENVELOPE, collar_limit
 from simulation.tools.positioning_ball_contact import BALL, BELL, COLLAR, FRAME

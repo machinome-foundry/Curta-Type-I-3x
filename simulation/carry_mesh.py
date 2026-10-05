@@ -1,6 +1,6 @@
 """The complete rotating tens bell against the first carry in each register."""
 
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.motion.joints import Revolute
 from machinome.simulation import Driver
 from machinome.math import floor

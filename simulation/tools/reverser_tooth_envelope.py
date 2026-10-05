@@ -11,7 +11,7 @@ import json
 import logging
 from pathlib import Path
 
-from machinome.exact import intersect_shapes
+from machinome.engine.brep import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
 from simulation.mechanistic import MechanisticCurta

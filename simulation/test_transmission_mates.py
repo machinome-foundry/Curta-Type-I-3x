@@ -2,7 +2,9 @@
 
 import unittest
 
-from machinome.node import AssemblyNode, Frame, declared_children
+from machinome.node.assembly import AssemblyNode
+from machinome.node.frames import Frame
+from machinome.node.declarative import declared_children
 from machinome.motion.joints import Prismatic, declared_joints
 from machinome.motion.mates import declared_mates
 from machinome.motion.ports import Time

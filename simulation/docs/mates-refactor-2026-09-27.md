@@ -135,7 +135,7 @@ Starting project: `fb5505d`. Starting framework: `49a8fc5`.
   changes with the new declarations; this is not a byte-identical export claim.
   Crank lift/turn operation order changes, but their coaxial transforms agree
   in the independent subtree witness in both modes.
-- `machinome test simulation/crank_coupling_seat.py --faceted`: seven passed
+- `machinome test simulation/crank_coupling_seat.py --mesh`: seven passed
   in 114.87 seconds, with volume epsilon zero. The default exact runner:
   seven passed in 97.42 seconds. These cover the actual crank/drum/pin
   interface, coaxial bore datum, unchanged bounded relief, capture, retained

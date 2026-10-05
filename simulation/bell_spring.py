@@ -1,7 +1,7 @@
 """Inspection bench for the tens bell's forked retaining leaf spring."""
 
 from simulation.posed import PosedCurta
-from machinome.node import AssemblyNode
+from machinome.node.assembly import AssemblyNode
 from machinome.simulation import Driver
 from machinome.motion.joints import Prismatic
 from simulation.retaining_spring import RetainingSpring, MOUNT_Z
