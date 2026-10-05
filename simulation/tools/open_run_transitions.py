@@ -102,7 +102,7 @@ def sweep(event, samples, kernel, include_inventory):
     scene_bounds = {path: bounds(shape) for path, shape in native.items()}
     for path, node in nodes.items():
         if path not in native:
-            assert not node.exact, path
+            assert not node.brep, path
             node.assemble()
             node.build_stls()
             mesh_only[path] = node.mesh

@@ -144,7 +144,7 @@ class PosedCurtaTest(TestCase):
             if node.rigid or not node.children:
                 try:
                     assert_connected_material(node.mesh)
-                    if node.exact:
+                    if node.brep:
                         self.assertEqual(len(node.shape().Solids()), 1)
                 except AssertionError as error:
                     raise AssertionError(f'{node.name}: {error}') from error
@@ -155,7 +155,7 @@ class PosedCurtaTest(TestCase):
 
     def test_source_shapes_valid(self):
         invalid = sorted({part.name for part in leaves(self.node)
-                          if not (part.shape().isValid() if part.exact
+                          if not (part.shape().isValid() if part.brep
                                   else part.mesh.is_watertight and part.mesh.volume > 0)})
         self.assertEqual(invalid, [])
 

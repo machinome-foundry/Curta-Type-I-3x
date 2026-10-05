@@ -15,7 +15,7 @@ class MechanisticCurtaIntegrityTest(TestCase):
         def check(node):
             if node.rigid or not node.children:
                 assert_connected_material(node.mesh)
-                if node.exact:
+                if node.brep:
                     self.assertEqual(len(node.shape().Solids()), 1, node.name)
             else:
                 for child in node.children:

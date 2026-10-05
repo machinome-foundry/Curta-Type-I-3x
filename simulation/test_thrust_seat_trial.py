@@ -53,7 +53,7 @@ class ThrustSeatTest(TestCase):
             radius = np.linalg.norm(wire.mesh.vertices[:, :2], axis=1)
             self.assertGreaterEqual(radius.min(), 12.29)
             self.assertLessEqual(radius.max(), 14.11)
-            if wire.exact:
+            if wire.brep:
                 self.assertTrue(wire.shape().isValid())
                 self.assertEqual(len(wire.shape().Solids()), 1)
 

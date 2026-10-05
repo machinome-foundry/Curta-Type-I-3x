@@ -32,7 +32,7 @@ def world_solids(root, include_flexible=False, selected=None):
 
     def visit(node, path, ancestors):
         operations = [*node.operations, *ancestors]
-        if node.exact and (node.rigid or include_flexible and not node.children):
+        if node.brep and (node.rigid or include_flexible and not node.children):
             if selected is not None and path not in selected:
                 return
             shape = node.shape()

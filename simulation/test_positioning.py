@@ -29,6 +29,6 @@ class PositioningTest(TestCase):
             spring = self.node.carriage_spring.wire
             self.assertTrue(spring.mesh.is_watertight)
             self.assertGreater(spring.mesh.volume, 0)
-            if spring.exact:
+            if spring.brep:
                 self.assertTrue(spring.shape().isValid())
                 self.assertEqual(len(spring.shape().Solids()), 1)

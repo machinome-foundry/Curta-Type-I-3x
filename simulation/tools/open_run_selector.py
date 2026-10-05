@@ -161,7 +161,7 @@ def sweep(fixture, samples):
     mesh_only = {}
     for path, node in nodes.items():
         if path not in native:
-            assert not node.exact
+            assert not node.brep
             node.build_stls()
             mesh_only[path] = node.mesh
             scene_bounds[path] = mesh_only[path].bounds.copy()

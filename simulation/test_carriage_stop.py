@@ -32,7 +32,7 @@ class CarriageStopTest(TestCase):
         pin = carrier.counter_body_stop_pin
         self.assertTrue(pin.mesh.is_watertight)
         self.assertEqual(len(pin.mesh.split()), 1)
-        self.assertFalse(pin.exact)  # Source STL, not native STEP certification.
+        self.assertFalse(pin.brep)  # Source STL, not native STEP certification.
         self.assertAlmostEqual(pin.mesh.bounds[0, 2], 21.054410518, places=5)
         self.assertAlmostEqual(pin.mesh.bounds[1, 2] - pin.mesh.bounds[0, 2], 15, places=5)
         self.assertNotIntersecting(pin, carrier.counter_body)

@@ -142,7 +142,7 @@ class SelectedInputFitTest(TestCase):
             root.assemble()
             frozen = retained_state(root)
             self.assertEqual(frozen, baseline['runs'][postcarry]['frozen_state'])
-            inventory = [dict(path=path, representation='native' if node.exact else 'source-mesh')
+            inventory = [dict(path=path, representation='native' if node.brep else 'source-mesh')
                          for path, node in sorted(physical_nodes(root))]
             self.assertEqual(inventory, baseline['physical_inventory'])
             source = world_solids(root, selected=set(mapping))
