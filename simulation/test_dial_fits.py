@@ -19,7 +19,7 @@ class DialFitTest(TestCase):
         self.assertEqual(current.cut(original).Volume(), 0)
 
     def test_change_is_confined_to_clearing_flanks(self):
-        removed = self.original().shape().cut(self.node.shape())
+        removed = cq.Shape.cast(self.original().shape()).cut(cq.Shape.cast(self.node.shape()))
         start, height = self.node.cam_band
         permitted = cq.Solid.makeCylinder(8, height, cq.Vector(0, 0, start))
         self.assertEqual(removed.cut(permitted).Volume(), 0)

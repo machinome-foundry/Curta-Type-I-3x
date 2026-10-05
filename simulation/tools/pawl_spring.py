@@ -5,6 +5,7 @@ import numpy as np
 from machinome.node.step import StepAssembly
 from simulation.source import STEP
 from simulation.standard.parts import AntiReversalSpring, ReverseRotationPreventionPawl, BearingPlate
+import cadquery
 
 
 def probe():
@@ -12,7 +13,7 @@ def probe():
     for cls in (AntiReversalSpring, ReverseRotationPreventionPawl, BearingPlate):
         part = cls()
         occurrence = next(item for item in source.occurrences if item.product_name == part.part)
-        for face in part.shape().Faces():
+        for face in cadquery.Shape.cast(part.shape()).Faces():
             kind = 'PLANE' if cls is AntiReversalSpring else 'CYLINDER'
             if face.geomType() != kind:
                 continue

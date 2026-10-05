@@ -2,6 +2,7 @@
 
 from machinome.test import TestCase
 from simulation.flexibles import ZeroSpring
+import cadquery
 
 
 class ZeroSpringTest(TestCase):
@@ -12,7 +13,7 @@ class ZeroSpringTest(TestCase):
         self.assertLess(len(mesh.faces), 50000)
         # The 24-sided inscribed circular profile accounts for ~1.14% deficit;
         # this bound also limits centerline faceting without demanding a huge mesh.
-        self.assertGreater(mesh.volume / self.node.shape().Volume(), .98)
+        self.assertGreater(mesh.volume / cadquery.Shape.cast(self.node.shape()).Volume(), .98)
 
     def test_valid_single_wire(self):
         shape = self.node.shape()
@@ -22,7 +23,7 @@ class ZeroSpringTest(TestCase):
     def test_documented_wire(self):
         # End cap area measures the wire independently of any model parameter.
         from math import pi
-        caps = [face.Area() for face in self.node.shape().Faces()
+        caps = [face.Area() for face in cadquery.Shape.cast(self.node.shape()).Faces()
                 if face.geomType() == 'PLANE']
         self.assertEqual(len(caps), 2)
         for area in caps:

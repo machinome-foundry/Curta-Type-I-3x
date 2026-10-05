@@ -20,10 +20,10 @@ class CarryFitTest(TestCase):
 
     def test_built_shape_matches_the_current_adjustment(self):
         direct = self.node.adjust(self.original().shape())
-        self.assertAlmostEqual(self.node.shape().Volume(), direct.Volume(), places=7)
+        self.assertAlmostEqual(cq.Shape.cast(self.node.shape()).Volume(), direct.Volume(), places=7)
 
     def test_removal_is_confined_to_the_documented_contact_regions(self):
-        removed = in_first_result_station(self.original().shape().cut(self.node.shape()), self.counter)
+        removed = in_first_result_station(cq.Shape.cast(self.original().shape()).cut(cq.Shape.cast(self.node.shape())), self.counter)
         # Independent limits from the measured sleeve, flange, locking disc
         # and carry-ring base. These replace a provisional 25 mm³ mass budget:
         # where material is removed is the actual geometry contract.
@@ -36,7 +36,7 @@ class CarryFitTest(TestCase):
         self.assertEqual(removed.Volume(), 0)
 
     def test_guide_and_detents_are_unchanged(self):
-        removed = self.original().shape().cut(self.node.shape())
+        removed = cq.Shape.cast(self.original().shape()).cut(cq.Shape.cast(self.node.shape()))
         removed = in_first_result_station(removed, self.counter)
         # All fitted surfaces are inside the 45 mm radius. The guide, detents
         # and dial-pin head lie outside, around the measured 57.3 mm station.

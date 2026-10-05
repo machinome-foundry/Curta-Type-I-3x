@@ -11,12 +11,13 @@ from simulation.standard.parts import ReversingShaft, SelectorKnobSpring
 from simulation.cover_fits import mesh_solid
 from simulation.reverser_detent_motion import (ball_radius_at, spring_height,
     BALL_RADIUS, FREE_HEIGHT, COIL_TURNS, WIRE_RADIUS)
+import cadquery
 
 
 class ReverserDetentMotionTest(unittest.TestCase):
     def test_profile_constants_match_native_pockets_and_spring(self):
         cones = [BRepAdaptor_Surface(face.wrapped).Cone()
-                 for face in ReversingShaft().shape().Faces() if face.geomType() == 'CONE']
+                 for face in cadquery.Shape.cast(ReversingShaft().shape()).Faces() if face.geomType() == 'CONE']
         self.assertEqual(len(cones), 2)
         np.testing.assert_allclose(sorted(c.Location().Z() for c in cones), (78.6, 90.6), atol=1e-8)
         for cone in cones:

@@ -6,6 +6,7 @@ from machinome.simulation import Sim
 from machinome.test import TestCase
 from simulation.mechanistic import MechanisticCurta, register_reading
 from simulation.contracts import assert_connected_material
+import cadquery
 
 
 class MechanisticCurtaIntegrityTest(TestCase):
@@ -16,7 +17,7 @@ class MechanisticCurtaIntegrityTest(TestCase):
             if node.rigid or not node.children:
                 assert_connected_material(node.mesh)
                 if node.brep:
-                    self.assertEqual(len(node.shape().Solids()), 1, node.name)
+                    self.assertEqual(len(cadquery.Shape.cast(node.shape()).Solids()), 1, node.name)
             else:
                 for child in node.children:
                     check(child)

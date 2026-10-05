@@ -3,6 +3,7 @@
 import numpy as np
 from machinome.test import TestCase
 from simulation.thrust_seat_trial import ThrustSeatBench, SeatedThrustBench
+import cadquery
 
 
 class ThrustSeatTest(TestCase):
@@ -54,8 +55,8 @@ class ThrustSeatTest(TestCase):
             self.assertGreaterEqual(radius.min(), 12.29)
             self.assertLessEqual(radius.max(), 14.11)
             if wire.brep:
-                self.assertTrue(wire.shape().isValid())
-                self.assertEqual(len(wire.shape().Solids()), 1)
+                self.assertTrue(cadquery.Shape.cast(wire.shape()).isValid())
+                self.assertEqual(len(cadquery.Shape.cast(wire.shape()).Solids()), 1)
 
     def test_original_placement_still_reproduces_both_source_contacts(self):
         original = ThrustSeatBench()

@@ -78,7 +78,7 @@ class CrankGripSeatTest(unittest.TestCase):
     def test_source_retaining_screw_common_is_geometrically_unchanged(self):
         source = CrankHandle().shape()
         fitted = self.sim.node.main_drive.crank.crank_handle_1.crank_handle.shape()
-        pin = CrankHandlePinScrew().shape().rotate((0, 0, 0), (0, 1, 0), 90)
+        pin = cq.Shape.cast(CrankHandlePinScrew().shape()).rotate((0, 0, 0), (0, 1, 0), 90)
         pin = pin.translate((50.720609937 - 49.319648043, 0, 115.35 - 94.35))
         before, after = source.intersect(pin), fitted.intersect(pin)
         self.assertTrue(before.isValid())

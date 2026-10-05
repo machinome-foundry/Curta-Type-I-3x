@@ -33,7 +33,7 @@ def main():
     part = BallPassageThrustRing()
     part.assemble()
     part.build_stls()
-    fitted = part.shape().rotate((0, 0, 0), (0, 0, 1), 35.717779468).translate((0, 0, 33.05))
+    fitted = cq.Shape.cast(part.shape()).rotate((0, 0, 0), (0, 0, 1), 35.717779468).translate((0, 0, 33.05))
     mesh = mesh_solid(part.mesh).rotate((0, 0, 35.717779468)).translate((0, 0, 33.05))
     ball_mesh = mesh_solid(leaves[BALL].mesh)
     total = 0
@@ -79,10 +79,10 @@ def main():
     fig.tight_layout()
     fig.savefig(args.image, dpi=160)
     plt.close(fig)
-    removed = ThrustRing().shape().cut(part.shape())
+    removed = cq.Shape.cast(ThrustRing().shape()).cut(cq.Shape.cast(part.shape()))
     assert dict(sim.state) == saved
     print(json.dumps(dict(kind='finished', poses=total, seconds=time.monotonic()-started,
-        removed_mm3=removed.Volume(), retained_mm3=part.shape().Volume(),
+        removed_mm3=removed.Volume(), retained_mm3=cq.Shape.cast(part.shape()).Volume(),
         bank_unchanged=True, acceptance='Ring interface only; other ball contacts not certified')), flush=True)
 
 

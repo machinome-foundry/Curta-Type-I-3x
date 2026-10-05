@@ -8,11 +8,12 @@ import json
 import logging
 from simulation.standard.parts import ResultsLockingDisc
 from simulation.fit import FittedCarryLockout
+import cadquery
 
 
 def main():
     logging.disable(logging.INFO)
-    disc = ResultsLockingDisc().shape().translate((0, 0, -23.1))
+    disc = cadquery.Shape.cast(ResultsLockingDisc().shape()).translate((0, 0, -23.1))
     pentagon = FittedCarryLockout().shape()
     for edge in disc.Edges():
         box = edge.BoundingBox()

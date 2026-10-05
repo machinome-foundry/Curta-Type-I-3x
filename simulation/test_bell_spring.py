@@ -4,6 +4,7 @@ import numpy as np
 from machinome.test import TestCase
 from simulation.bell_spring import BellSpringBench, BellLeafFitBench, BellLeafContactBench
 from simulation.tools.interference import rigid_leaves, world_solids
+import cadquery
 
 
 def material_leaves(node):
@@ -74,7 +75,7 @@ class BellLeafShapeTest(TestCase):
         from simulation.retaining_spring import ROOT_X, ROOT_Z, ARM_LENGTH, JOIN, SINE, COSINE, MOUNT_Z
         self.node.set_state(spread=0, subtract=0)
         assembled = self.physical_spring()
-        source = TensBellSpring().shape().translate((0, 0, MOUNT_Z))
+        source = cadquery.Shape.cast(TensBellSpring().shape()).translate((0, 0, MOUNT_Z))
         self.assertEqual(assembled.cut(source).Volume(), 0)
         missing = source.cut(assembled)
         self.assertGreater(missing.Volume(), 0)

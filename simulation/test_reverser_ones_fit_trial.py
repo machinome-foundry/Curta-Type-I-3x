@@ -5,6 +5,7 @@ import unittest
 from simulation import test_running_reverser_contact_path as path_contracts
 from simulation import test_reverser_seat_trial as seat_contracts
 from simulation.reverser_ones_fit_trial import TrialOperatingCurta, TrialSeat, TrialOnesPinion
+import cadquery
 
 
 class OnesFitPathTrialTest(path_contracts.ReverserContactPathTest):
@@ -20,7 +21,7 @@ class OnesFlankFidelityTest(unittest.TestCase):
         from simulation.standard.parts import NineToothTurnsStepDrumSegment
 
         source = TrialOnesPinion().shape()
-        drum = NineToothTurnsStepDrumSegment().shape().rotate(
+        drum = cadquery.Shape.cast(NineToothTurnsStepDrumSegment().shape()).rotate(
             (0, 0, 0), (0, 0, 1), 2.604082802).translate(
                 (-.016356142, .223394941, 0))
         for step in range(25):

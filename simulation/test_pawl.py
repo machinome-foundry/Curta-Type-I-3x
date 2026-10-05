@@ -4,6 +4,7 @@ import numpy as np
 from machinome.test import TestCase
 from simulation.pawl import PawlBench
 from simulation.pawl import RELEASE, TOOTH_PITCH, CLOSING_RELEASE
+import cadquery
 
 
 class PawlTest(TestCase):
@@ -70,7 +71,7 @@ class PawlTest(TestCase):
         self.node.set_state(crank_turns=0)
         wire = self.node.pawl.documented_spring.wire
         self.assertLess(len(wire.mesh.faces), 50000)
-        caps = [face for face in wire.shape().Faces() if face.geomType() == 'PLANE']
+        caps = [face for face in cadquery.Shape.cast(wire.shape()).Faces() if face.geomType() == 'PLANE']
         self.assertEqual(len(caps), 2)
         for cap in caps:
             self.assertAlmostEqual(cap.Area(), pi*.3**2, places=5)

@@ -5,12 +5,13 @@ from math import hypot
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
 from simulation.dial_cam import rise, HALF_DWELL, MEASUREMENT_BRACKET
 from simulation.dial_detent_motion import BALL_RISE
+import cadquery
 
 
 def probe():
     for kind in (ResultsDialType1, ResultsDialType2):
         dimensions = set()
-        for edge in kind().shape().Edges():
+        for edge in cadquery.Shape.cast(kind().shape()).Edges():
             if edge.geomType() == 'CIRCLE':
                 x, y, z = edge.arcCenter().toTuple()
                 dimensions.add((round(edge.radius(), 6), round(hypot(x, y), 6), round(z, 6)))

@@ -6,6 +6,7 @@ from simulation.reverser_seat_trial import ReverserSeatTrial
 from simulation.standard.parts import ReversingActuator
 from simulation.reverser_fits import FORK_ORIGIN
 from simulation.tools.interference import world_solids
+import cadquery
 
 
 def bounds(shape):
@@ -30,7 +31,7 @@ def main():
     # Reproduce the original interference after adopting the candidate too.
     # This is the source actuator's recorded placement, plus the trial height;
     # its unmodified solid is independent of the bounded fit's two cutters.
-    original = ReversingActuator().shape().rotate((0, 0, 0), (0, 0, 1), -20)
+    original = cadquery.Shape.cast(ReversingActuator().shape()).rotate((0, 0, 0), (0, 0, 1), -20)
     original = original.translate((*FORK_ORIGIN, -44.0075-4.9425))
     for label, placed in (('source', original), ('fitted', fork)):
         common = placed.intersect(gear)

@@ -2,10 +2,11 @@
 
 from concurrent.futures import ThreadPoolExecutor
 from simulation.standard.parts import OneToothStepDrumSegment, TransmissionGear0_5
+import cadquery
 
 
 def probe():
-    tooth = OneToothStepDrumSegment().shape().rotate((0, 0, 0), (0, 0, 1), 170.104082802)
+    tooth = cadquery.Shape.cast(OneToothStepDrumSegment().shape()).rotate((0, 0, 0), (0, 0, 1), 170.104082802)
     tooth = tooth.translate((0, 0, -70.8))
     gear = TransmissionGear0_5().shape()
 

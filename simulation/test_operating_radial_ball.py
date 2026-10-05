@@ -117,8 +117,8 @@ class OperatingRadialBallPreservationTest(unittest.TestCase):
             for path in a:
                 # The ball's source material stays identical even as its placement changes.
                 if path == BALL:
-                    self.assertEqual(a[path].shape().cut(b[path].shape()).Volume(), 0)
-                    self.assertEqual(b[path].shape().cut(a[path].shape()).Volume(), 0)
+                    self.assertEqual(cq.Shape.cast(a[path].shape()).cut(cq.Shape.cast(b[path].shape())).Volume(), 0)
+                    self.assertEqual(cq.Shape.cast(b[path].shape()).cut(cq.Shape.cast(a[path].shape())).Volume(), 0)
                 else:
                     np.testing.assert_array_equal(a[path].mesh.vertices, b[path].mesh.vertices, err_msg=path)
                     np.testing.assert_array_equal(a[path].mesh.faces, b[path].mesh.faces, err_msg=path)

@@ -3,6 +3,7 @@
 import numpy as np
 from machinome.test import TestCase
 from simulation.positioning import PositioningBench
+import cadquery
 
 
 class PositioningTest(TestCase):
@@ -30,5 +31,5 @@ class PositioningTest(TestCase):
             self.assertTrue(spring.mesh.is_watertight)
             self.assertGreater(spring.mesh.volume, 0)
             if spring.brep:
-                self.assertTrue(spring.shape().isValid())
-                self.assertEqual(len(spring.shape().Solids()), 1)
+                self.assertTrue(cadquery.Shape.cast(spring.shape()).isValid())
+                self.assertEqual(len(cadquery.Shape.cast(spring.shape()).Solids()), 1)

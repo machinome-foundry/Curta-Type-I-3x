@@ -10,6 +10,7 @@ from simulation.mechanistic import MechanisticCurta
 from simulation.standard.parts import CrankHandle, CrankHandlePinScrew
 from simulation.tools.interference import rigid_leaves
 from simulation.tools.crank_handle_contact import CRANK, HANDLE
+import cadquery
 
 
 def main():
@@ -20,7 +21,7 @@ def main():
     fitted = sim.node.main_drive.crank.crank_handle_1.crank_handle.shape()
     source = CrankHandle().shape()
     # Source assembly placements, expressed in the grip's source frame.
-    pin = CrankHandlePinScrew().shape().rotate((0, 0, 0), (0, 1, 0), 90)
+    pin = cadquery.Shape.cast(CrankHandlePinScrew().shape()).rotate((0, 0, 0), (0, 1, 0), 90)
     pin = pin.translate((50.720609937 - 49.319648043, 0, 115.35 - 94.35))
     before, after = source.intersect(pin), fitted.intersect(pin)
     assert before.isValid() and after.isValid()

@@ -6,6 +6,7 @@ from machinome.test import TestCase
 from simulation.reverser_inspection import ReverserInspection
 from simulation.reverser_assembly import ReverserAssemblyBench
 from simulation.contracts import assert_connected_material
+import cadquery
 
 
 class ReverserInspectionTest(TestCase):
@@ -84,8 +85,8 @@ class ReverserInspectionTest(TestCase):
         for part in (self.node.drum, self.node.pinion, self.node.fork,
                      self.node.detent.reversing_shaft, self.node.detent.p_5mm_ball):
             assert_connected_material(part.mesh)
-            self.assertEqual(len(part.shape().Solids()), 1)
-            self.assertTrue(part.shape().isValid())
+            self.assertEqual(len(cadquery.Shape.cast(part.shape()).Solids()), 1)
+            self.assertTrue(cadquery.Shape.cast(part.shape()).isValid())
 
     def test_probe_misses_below_row_but_contacts_when_raised(self):
         self.node.set_state(pinion_probe=-12)

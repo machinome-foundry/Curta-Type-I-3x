@@ -4,6 +4,7 @@ from machinome.test import TestCase
 
 from simulation.posed import PosedCurta
 from simulation.contracts import assert_connected_material
+import cadquery
 
 
 def leaves(node):
@@ -145,7 +146,7 @@ class PosedCurtaTest(TestCase):
                 try:
                     assert_connected_material(node.mesh)
                     if node.brep:
-                        self.assertEqual(len(node.shape().Solids()), 1)
+                        self.assertEqual(len(cadquery.Shape.cast(node.shape()).Solids()), 1)
                 except AssertionError as error:
                     raise AssertionError(f'{node.name}: {error}') from error
             else:
@@ -155,7 +156,7 @@ class PosedCurtaTest(TestCase):
 
     def test_source_shapes_valid(self):
         invalid = sorted({part.name for part in leaves(self.node)
-                          if not (part.shape().isValid() if part.brep
+                          if not (cadquery.Shape.cast(part.shape()).isValid() if part.brep
                                   else part.mesh.is_watertight and part.mesh.volume > 0)})
         self.assertEqual(invalid, [])
 

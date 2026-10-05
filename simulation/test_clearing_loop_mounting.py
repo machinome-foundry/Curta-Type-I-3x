@@ -35,7 +35,7 @@ class ReplacementLoopMountTest(TestCase):
         expected = original.intersect(lower).translate((-.132055617, -.364362148, 0))
         for part in (self.node.loop.clearing_ring_rivet_1,
                      self.node.loop.clearing_ring_rivet_2):
-            actual = part.shape().intersect(lower)
+            actual = cq.Shape.cast(part.shape()).intersect(lower)
             self.assertAlmostEqual(actual.cut(expected).Volume(), 0, delta=1e-8)
             self.assertAlmostEqual(expected.cut(actual).Volume(), 0, delta=1e-8)
 

@@ -58,8 +58,8 @@ class HigherLockoutFitTest(TestCase):
     def test_complete_upper_stack_remains_connected(self):
         stack = self.node.tens.p_10220_410003_1_419227
         assert_connected_material(stack.mesh)
-        self.assertTrue(stack.shape().isValid())
-        self.assertEqual(len(stack.shape().Solids()), 1)
+        self.assertTrue(cq.Shape.cast(stack.shape()).isValid())
+        self.assertEqual(len(cq.Shape.cast(stack.shape()).Solids()), 1)
 
     def test_bell_refinement_changes_no_native_material(self):
         source = TensBell1()

@@ -38,8 +38,8 @@ class OnesLockoutBenchTest(TestCase):
     def test_both_printed_groups_remain_connected_and_native_valid(self):
         for part in (self.node.ones, self.node.bell):
             assert_connected_material(part.mesh)
-            self.assertTrue(part.shape().isValid())
-            self.assertEqual(len(part.shape().Solids()), 1)
+            self.assertTrue(cq.Shape.cast(part.shape()).isValid())
+            self.assertEqual(len(cq.Shape.cast(part.shape()).Solids()), 1)
 
     def test_closed_bell_still_locks_both_sides_beyond_the_play(self):
         for index in range(5):

@@ -19,7 +19,7 @@ def probe():
     part = ZeroPositioningDisc()
     occurrence = next(item for item in source.occurrences if item.product_name == part.part)
     assert np.allclose(occurrence.world_matrix, occurrence.matrix)
-    disc = part.shape().rotate((0, 0, 0), occurrence.axis, occurrence.angle_deg)
+    disc = cq.Shape.cast(part.shape()).rotate((0, 0, 0), occurrence.axis, occurrence.angle_deg)
     disc = disc.translate(occurrence.translation)
     gauge = cq.Solid.makeCylinder(10.35 + .05, 4.6, cq.Vector(40.5, 0, -153.1))
     pivot, axis = (40.5, 33.6, 0), (40.5, 33.6, 1)

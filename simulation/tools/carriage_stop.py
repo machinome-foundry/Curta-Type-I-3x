@@ -5,6 +5,7 @@ import logging
 import argparse
 from machinome.test import TestCase
 from simulation.carriage_stop import SourceCarriageStopBench, PrintedSourceCarriageStopBench
+import cadquery
 
 
 def probe(printed=False):
@@ -20,7 +21,7 @@ def probe(printed=False):
                       'carrier_world_bounds': body.mesh.bounds.tolist(),
                       'carrier_bore_circles': sorted({
                           (round(edge.radius(), 6), tuple(round(v, 6) for v in edge.arcCenter().toTuple()))
-                          for edge in body.shape().Edges()
+                          for edge in cadquery.Shape.cast(body.shape()).Edges()
                           if edge.geomType() == 'CIRCLE' and 2 < edge.radius() < 3}),
                       'frame_world_bounds': model.frame.mesh.bounds.tolist()}), flush=True)
     def clear(height):

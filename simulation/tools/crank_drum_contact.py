@@ -10,6 +10,7 @@ from simulation.mechanistic import MechanisticCurta
 from simulation.tools.interference import rigid_leaves, world_solids
 from simulation.cover_fits import mesh_solid
 from simulation.tools.higher_locking_envelope import faceted_common_volume
+import cadquery
 
 
 CRANK = 'Curta.main_drive.crank.crank_handle_1.main_crank'
@@ -54,7 +55,7 @@ def main():
         report['parts'][name]['coupling_circles'] = circles
     report['crank_local_circles'] = [
         {'radius': edge.radius(), 'center': edge.arcCenter().toTuple()}
-        for edge in leaves[CRANK].shape().Edges()
+        for edge in cadquery.Shape.cast(leaves[CRANK].shape()).Edges()
         if edge.geomType() == 'CIRCLE' and edge.radius() < 6
         and abs(edge.arcCenter().x) < 6 and abs(edge.arcCenter().y) < 6
     ]

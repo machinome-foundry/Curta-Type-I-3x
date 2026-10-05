@@ -142,7 +142,7 @@ class FrameFitTest(TestCase):
         wires = world_solids(model, include_flexible=True,
                             selected={'Curta.'+s+'.carry_lever_spring.wire' for s in ('first', 'second')})
         for station, angle in (('first', 0), ('second', 20)):
-            frame = self.node.shape().rotate((0, 0, 0), (0, 0, 1), angle)
+            frame = cq.Shape.cast(self.node.shape()).rotate((0, 0, 0), (0, 0, 1), angle)
             wire = wires['Curta.'+station+'.carry_lever_spring.wire'].rotate((0, 0, 0), (0, 0, 1), angle)
             for xmin, xmax in ((53.4, 54.3), (60.3, 61.2)):
                 walls = [face for face in frame.Faces() if face.geomType() == 'PLANE'

@@ -13,6 +13,7 @@ from machinome.node.step import StepAssembly
 
 from simulation.standard import parts
 from simulation.source import SOURCE, STEP, prepare
+import cadquery
 
 
 def measure(shape):
@@ -50,7 +51,7 @@ def cover_interface():
         # These two products are directly placed in a carriage at identity.
         # Refuse a changed hierarchy instead of silently dropping an ancestor.
         assert np.allclose(occurrence.world_matrix, occurrence.matrix)
-        solid = cls().shape().rotate((0, 0, 0), occurrence.axis,
+        solid = cadquery.Shape.cast(cls().shape()).rotate((0, 0, 0), occurrence.axis,
                                      occurrence.angle_deg)
         solids.append(solid.translate(occurrence.translation))
         path = (SOURCE.parents[1] / "STLs" /

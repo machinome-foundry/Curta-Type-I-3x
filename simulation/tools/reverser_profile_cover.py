@@ -14,6 +14,7 @@ import json
 import logging
 from math import cos, isfinite, radians, sin
 from pathlib import Path
+import cadquery
 
 
 def cross(a, b, c):
@@ -259,7 +260,7 @@ def profile_cover(part, allowance=.005, *, linear_deflection=.0001,
         axial_allowance_mm=allowance if axial_allowance_mm is None else axial_allowance_mm))
     if any(not isfinite(v) or v <= 0 for v in (linear_deflection, angular_deflection)):
         raise ValueError('Expected positive candidate tessellation settings')
-    shape = part.shape().copy()
+    shape = cadquery.Shape.cast(part.shape()).copy()
     if not shape.isValid():
         raise ValueError('Invalid source profile')
     faces = [f for f in shape.Faces() if f.geomType() == 'PLANE'

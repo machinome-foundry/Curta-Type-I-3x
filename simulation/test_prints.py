@@ -2,6 +2,7 @@
 
 from machinome.test import TestCase
 from simulation.prints import PrintedDrive
+import cadquery
 
 
 def rigid_parts(node):
@@ -24,4 +25,4 @@ class PrintedDriveTest(TestCase):
 
     def test_every_print_is_native_valid(self):
         for part in rigid_parts(self.node):
-            self.assertTrue(part.shape().isValid(), part.name)
+            self.assertTrue(cadquery.Shape.cast(part.shape()).isValid(), part.name)

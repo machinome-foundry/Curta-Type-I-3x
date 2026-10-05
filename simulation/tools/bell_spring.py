@@ -24,7 +24,7 @@ def probe():
         model.set_state(subtract=subtract)
         native = world_solids(model, selected=set(paths.values()))
         shapes = {name: native[path] for name, path in paths.items()}
-        shapes['spring'] = TensBellSpring().shape().translate((0, 0, -8.7))
+        shapes['spring'] = cq.Shape.cast(TensBellSpring().shape()).translate((0, 0, -8.7))
         for name, shape in shapes.items():
             if name.startswith('drum'):
                 contact = shapes['spring'].intersect(shape)
@@ -54,7 +54,7 @@ def probe():
         for height, ax in zip((-45, -50, -56, -60.6), row):
             plane = cq.Plane((0, 0, height), (1, 0, 0), (0, 0, 1))
             shapes = {name: native[path] for name, path in paths.items()}
-            shapes['spring'] = TensBellSpring().shape().translate((0, 0, -8.7))
+            shapes['spring'] = cq.Shape.cast(TensBellSpring().shape()).translate((0, 0, -8.7))
             for name, shape in shapes.items():
                 section = cq.Workplane(plane).add(shape).section().val()
                 first = True

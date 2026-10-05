@@ -5,6 +5,7 @@ import logging
 from simulation.carriage_stop import SourceCarriageStopBench
 from simulation.tools.interference import world_solids
 from simulation.standard.parts import CounterBody, CounterBodyStopPin
+import cadquery
 
 
 def probe():
@@ -46,7 +47,7 @@ def probe():
                           'cut_volume_loss_mm3': first.Volume() - first.cut(second).Volume()}),
               flush=True)
     local_body = CounterBody().shape()
-    local_pin = CounterBodyStopPin().shape().translate((23.640728 - .15, 16.553416, 8.945589482))
+    local_pin = cadquery.Shape.cast(CounterBodyStopPin().shape()).translate((23.640728 - .15, 16.553416, 8.945589482))
     print(json.dumps({'boolean': 'unrotated_source_pair',
                       'overlap_mm3': local_pin.intersect(local_body).Volume()}), flush=True)
 
