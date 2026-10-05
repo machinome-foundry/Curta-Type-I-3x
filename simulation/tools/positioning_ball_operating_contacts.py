@@ -7,6 +7,7 @@ import time
 
 import numpy as np
 
+import cadquery
 from machinome.simulation import Sim
 from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
@@ -49,7 +50,7 @@ def main():
             mesh_volume = faceted_common_volume(ball_mesh ^ mesh_solid(meshes[path]))
             native_volume = None
             if path in native:
-                common = intersect_shapes(native[BALL], native[path], BALL, path)
+                common = cadquery.Shape.cast(intersect_shapes(native[BALL], native[path], BALL, path))
                 assert common.isValid(), (current, sim.time, path)
                 native_volume = common.Volume()
             if mesh_volume > 0 or native_volume is not None and native_volume > 0:

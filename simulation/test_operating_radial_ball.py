@@ -44,7 +44,7 @@ class OperatingRadialBallGeometryTest(unittest.TestCase):
         self.assertAlmostEqual(centre.z, 30, places=9)
         self.assertAlmostEqual(native[BALL].Volume(), original.Volume(), places=9)
         for path in (BELL, FRAME, RING):
-            common = intersect_shapes(native[BALL], native[path], BALL, path)
+            common = cq.Shape.cast(intersect_shapes(native[BALL], native[path], BALL, path))
             self.assertTrue(common.isValid(), path)
             self.assertEqual(common.Volume(), 0, path)
         leaves = dict(rigid_leaves(sim.node))

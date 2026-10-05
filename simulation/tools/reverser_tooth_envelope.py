@@ -11,6 +11,7 @@ import json
 import logging
 from pathlib import Path
 
+import cadquery
 from machinome.engine.brep import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
@@ -117,7 +118,7 @@ class ToothEnvelopeReader:
         values = {}
         for drum in DRUMS:
             if kernel == 'native':
-                common = intersect_shapes(bodies[self.gear], bodies[drum], self.gear, drum)
+                common = cadquery.Shape.cast(intersect_shapes(bodies[self.gear], bodies[drum], self.gear, drum))
                 if not common.isValid():
                     raise ValueError(f'Invalid native common: crank={crank!r}, '
                                      f'shaft={shaft!r}, height={height!r}, lift={lift!r}, '

@@ -46,7 +46,7 @@ def probe():
         print(json.dumps({'boolean': label, 'overlap_mm3': first.intersect(second).Volume(),
                           'cut_volume_loss_mm3': first.Volume() - first.cut(second).Volume()}),
               flush=True)
-    local_body = CounterBody().shape()
+    local_body = cadquery.Shape.cast(CounterBody().shape())
     local_pin = cadquery.Shape.cast(CounterBodyStopPin().shape()).translate((23.640728 - .15, 16.553416, 8.945589482))
     print(json.dumps({'boolean': 'unrotated_source_pair',
                       'overlap_mm3': local_pin.intersect(local_body).Volume()}), flush=True)

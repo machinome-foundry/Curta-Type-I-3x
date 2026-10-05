@@ -16,8 +16,8 @@ class LoopSeatTrialTest(TestCase):
             self.assertNotIntersecting(self.node.loop.clearing_ring, peg)
 
     def test_only_second_cavity_material_is_removed(self):
-        original = ClearingRing().shape()
-        fitted = self.node.loop.clearing_ring.shape()
+        original = cq.Shape.cast(ClearingRing().shape())
+        fitted = cq.Shape.cast(self.node.loop.clearing_ring.shape())
         allowed = cq.Solid.makeCylinder(3.8, 5.46,
                                         cq.Vector(31.095555539, 25.948341482, 0))
         protected = cq.Solid.makeCylinder(10, 5.46, cq.Vector(40.5, 0, 0))

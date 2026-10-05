@@ -14,7 +14,7 @@ import cadquery
 def main():
     logging.disable(logging.INFO)
     disc = cadquery.Shape.cast(ResultsLockingDisc().shape()).translate((0, 0, -23.1))
-    pentagon = FittedCarryLockout().shape()
+    pentagon = cadquery.Shape.cast(FittedCarryLockout().shape())
     for edge in disc.Edges():
         box = edge.BoundingBox()
         if abs(box.zmax-box.zmin) < 1e-7 and abs(box.zmin+23.1) < 1e-7:

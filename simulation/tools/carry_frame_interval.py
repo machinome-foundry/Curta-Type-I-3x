@@ -234,7 +234,7 @@ def certify(station, max_depth=24, *, model=None, counter=False, frame=None, out
         max_error = max(max_error, float(error))
         if error > 1e-9:
             raise ValueError(f'Independent centerline does not match Molejo: {error}')
-    frame = model.frame.main_body.shape() if frame is None else frame
+    frame = cq.Shape.cast(model.frame.main_body.shape()) if frame is None else frame
     whole = [enclosure(a, b, 0, 1) for a, b in zip(curve(0), curve(1))]
     centerline_bounds = np.array([np.min([box[0] for box in whole], axis=0),
                                  np.max([box[1] for box in whole], axis=0)])

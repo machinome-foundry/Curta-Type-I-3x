@@ -7,6 +7,7 @@ all six counter inputs, crank lift and travel in both directions.
 
 import unittest
 
+import cadquery
 from machinome.engine.brep import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
@@ -32,7 +33,7 @@ def prepare(model=MechanisticCurta):
 
 def commons(sim):
     native = world_solids(sim.node, selected={GEAR, DRUM})
-    common = intersect_shapes(native[GEAR], native[DRUM], GEAR, DRUM)
+    common = cadquery.Shape.cast(intersect_shapes(native[GEAR], native[DRUM], GEAR, DRUM))
     assert common.isValid()
     leaves = dict(rigid_leaves(sim.node))
     faceted = mesh_solid(leaves[GEAR].mesh) ^ mesh_solid(leaves[DRUM].mesh)

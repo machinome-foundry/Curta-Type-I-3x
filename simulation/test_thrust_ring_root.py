@@ -3,6 +3,7 @@
 import unittest
 
 import numpy as np
+import cadquery
 from machinome.simulation import Sim
 from simulation.thrust_ring_trial import (FittedRingOperatingTrial, OriginalRingOperatingReference,
                                          OriginalRingRadialOperatingReference)
@@ -35,7 +36,7 @@ class ThrustRingRootTest(unittest.TestCase):
             self.assertEqual(set(a), set(b))
             for path in a:
                 if path == RING:
-                    old, new = a[path].shape(), b[path].shape()
+                    old, new = cadquery.Shape.cast(a[path].shape()), cadquery.Shape.cast(b[path].shape())
                     self.assertTrue(old.isValid() and new.isValid())
                     self.assertEqual(new.cut(old).Volume(), 0)
                     self.assertGreater(old.cut(new).Volume(), 0)

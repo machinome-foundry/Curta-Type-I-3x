@@ -64,7 +64,7 @@ def main():
             print(json.dumps(dict(kind='enclosure-progress', start=a, end=b, depth=depth,
                                   checks=checks, certified_intervals=len(accepted))), flush=True)
         try:
-            common = intersect_shapes(capsule, bell, 'conservative ball capsule', BELL)
+            common = cq.Shape.cast(intersect_shapes(capsule, bell, 'conservative ball capsule', BELL))
             valid = common.isValid()
             refusal = None if valid else 'invalid Boolean'
         except RuntimeError as error:

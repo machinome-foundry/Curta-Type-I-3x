@@ -56,7 +56,7 @@ def probe():
     fixed = world_solids(model, selected={'Curta.frame.main_body',
         'Curta.first.tens_slide_bearing', 'Curta.second.tens_slide_bearing'})
     # The approval gate concerns the source land, not its subsequent fit.
-    frame = MainBody().shape()
+    frame = cq.Shape.cast(MainBody().shape())
     result = dict(kind='protected-guide-seat-clearance-gate', requested_gap_mm=.05,
                   witness_offset_mm=.025, stations={})
     figure, axes = plt.subplots(1, 2, figsize=(13, 7))

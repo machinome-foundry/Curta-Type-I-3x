@@ -12,6 +12,7 @@ from itertools import product
 
 import manifold3d as manifold
 
+import cadquery
 from simulation.higher_lockout import HigherLockoutBench
 from simulation.tools.ancestor_lockout_contact import mesh_solid
 from simulation.tools.interference import rigid_leaves, world_solids
@@ -51,7 +52,7 @@ def component_shapes(carry, crank, shaft, node_type=HigherLockoutBench, *,
         chain = [node]
         for part in parts:
             chain.append(getattr(chain[-1], part))
-        shape = chain[-1].shape()
+        shape = cadquery.Shape.cast(chain[-1].shape())
         for body in reversed(chain):
             for operation in body.operations:
                 if hasattr(operation, 'angle'):

@@ -4,6 +4,7 @@ import argparse
 import logging
 from pathlib import Path
 
+import cadquery
 from simulation.carry_bank_frame import CarryBankFrameBench, stations
 from simulation.carry_bank_regions import maximally_relieved, RESULT_ANGLES, COUNTER_ANGLES
 from simulation.standard.parts import MainBody
@@ -33,7 +34,7 @@ def main():
             angle = (COUNTER_ANGLES if counter else RESULT_ANGLES)[index-1]
             chosen[name] = ('Curta.'+path+'.'+slider, -angle)
     native = world_solids(model, selected={path for path, angle in chosen.values()})
-    maximum = CarryBankPassageFrame().shape() if args.candidate else maximally_relieved(MainBody().shape())
+    maximum = cadquery.Shape.cast(CarryBankPassageFrame().shape()) if args.candidate else maximally_relieved(cadquery.Shape.cast(MainBody().shape()))
     label = 'candidate' if args.candidate else 'max-region'
     passed = True
     for name in args.station:

@@ -7,6 +7,7 @@ import math
 import time
 
 import numpy as np
+import cadquery
 from simulation.carry_bank_frame import CarryBankFrameBench, stations
 from simulation.standard.parts import MainBody
 from simulation.test_frame_fits import registration_lands
@@ -36,7 +37,7 @@ def main():
     model = CarryBankFrameBench()
     model.set_state(drop_mm=0)
     model.assemble()
-    source = MainBody().shape()
+    source = cadquery.Shape.cast(MainBody().shape())
     frames = world_frames(model, include_assemblies=True)
     first = frames['Curta.result_carries.results_tens_lever_assembly_1.tens_slide_bearing']
     shapes = world_solids(model, include_flexible=True)

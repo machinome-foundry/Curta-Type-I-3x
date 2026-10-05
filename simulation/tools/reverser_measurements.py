@@ -2,6 +2,7 @@
 
 import json
 from OCP.BRepAdaptor import BRepAdaptor_Surface
+import cadquery
 from simulation.standard.parts import ReversingShaft, ReversingActuator, TransmissionGear0_5
 
 
@@ -10,7 +11,7 @@ def probe():
     for part_type in (ReversingShaft, ReversingActuator, TransmissionGear0_5):
         part = part_type()
         part.assemble()
-        shapes[part_type.__name__] = part.shape()
+        shapes[part_type.__name__] = cadquery.Shape.cast(part.shape())
     cones = sorted((face for face in shapes['ReversingShaft'].Faces()
                     if face.geomType() == 'CONE'), key=lambda face: face.Center().z)
     detents = [BRepAdaptor_Surface(face.wrapped).Cone().Location().Z()

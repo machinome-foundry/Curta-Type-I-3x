@@ -1,5 +1,6 @@
 """A correct dial needs room to rotate inside its visible housing."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.covers import CoverClearanceBench
 from simulation.standard.parts import ResultsDialType1, ResultsDialType2
@@ -123,8 +124,8 @@ class CoverClearanceTest(TestCase):
     def test_axle_fit_only_lengthens_its_retaining_flat(self):
         import cadquery as cq
         from simulation.standard.parts import DigitsAxle
-        current = self.node.carriage.registers.carrier.upper_carriage_body_1.digits_axle_1.shape()
-        source = DigitsAxle().shape()
+        current = cadquery.Shape.cast(self.node.carriage.registers.carrier.upper_carriage_body_1.digits_axle_1.shape())
+        source = cadquery.Shape.cast(DigitsAxle().shape())
         removed = source.cut(current)
         self.assertTrue(current.isValid())
         self.assertEqual(len(current.Solids()), 1)

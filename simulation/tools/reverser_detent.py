@@ -16,7 +16,7 @@ from simulation.tools.carry_phase import solid
 
 
 def probe(native=False, z_seam=False, ball_radius=2.7):
-    shaft = ReversingShaft().shape()
+    shaft = cq.Shape.cast(ReversingShaft().shape())
     print_mesh = trimesh.load_mesh(Path(__file__).resolve().parents[2] /
         'STLs/27 - Assemble Reversing Lever/reversing shaft.stl')
     printed = solid(print_mesh)

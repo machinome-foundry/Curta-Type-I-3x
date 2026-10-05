@@ -59,7 +59,7 @@ def main():
                             frame_rotation_degrees=angle)
             common = None
             try:
-                common = intersect_shapes(body, guide, *names)
+                common = cq.Shape.cast(intersect_shapes(body, guide, *names))
                 measured['native_mm3'] = common.Volume()
                 measured['common_world_bounds'] = bounds(common) if common.Solids() else None
             except RuntimeError as error:

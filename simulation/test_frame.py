@@ -1,5 +1,6 @@
 """Spring wire stays in its measured holes and outside the printed supports."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.frame import LowerFrame
 
@@ -18,7 +19,7 @@ class SpringMountTest(TestCase):
         # Both legs occupy the mounting bores, not merely a nearby free space.
         from simulation.flexibles import FIXED_PIN, LEVER_PIN
         import numpy as np
-        shape = self.node.documented_spring.shape()
+        shape = cadquery.Shape.cast(self.node.documented_spring.shape())
         centers = [np.array(face.Center().toTuple()) + FIXED_PIN
                    for face in shape.Faces() if face.geomType() == 'PLANE']
         self.assertEqual(len(centers), 2)

@@ -16,7 +16,7 @@ from simulation.standard.parts import TensSliderForTurnsCounter
 
 @lru_cache(maxsize=2)
 def counter_shoulder(lowered=False):
-    source = in_first_result_station(TensSliderForTurnsCounter().shape(), counter=True)
+    source = in_first_result_station(cq.Shape.cast(TensSliderForTurnsCounter().shape()), counter=True)
     # That shared source-placement helper lowers the fork by 14.7 mm for
     # comparing its sleeve fit. Restore the actual frame-contact height.
     source = source.translate((0, 0, 14.7))

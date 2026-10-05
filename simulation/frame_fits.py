@@ -18,7 +18,7 @@ def box(low, high):
 @lru_cache(maxsize=1)
 def raised_shoulder():
     """The original slider's measured shoulder face, not a fitted-frame copy."""
-    slider = in_first_result_station(TensSliderForResults().shape())
+    slider = in_first_result_station(cq.Shape.cast(TensSliderForResults().shape()))
     faces = [face for face in slider.Faces() if face.geomType() == 'PLANE'
              and abs(face.Center().z + 21.6) < 1e-6
              and abs(face.normalAt().z) > .999999]

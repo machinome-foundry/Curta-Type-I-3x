@@ -33,7 +33,7 @@ def render():
     model = CarryFrameBench()
     model.set_state(drop_mm=0)
     model.assemble()
-    source, fitted = MainBody().shape(), model.frame.main_body.shape()
+    source, fitted = cq.Shape.cast(MainBody().shape()), cq.Shape.cast(model.frame.main_body.shape())
     records = []
     for station, angle in (('first', 0), ('second', 20)):
         figure, axes = plt.subplots(3, 2, figsize=(13, 15))

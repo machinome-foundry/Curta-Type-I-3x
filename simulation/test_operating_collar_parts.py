@@ -51,7 +51,7 @@ class CollarSeatFacingTest(unittest.TestCase):
                 self.assertLess(distances.max(), .00001)
 
     def test_washer_seat_facings_preserve_its_radial_profile_and_middle(self):
-        source = CrankCollarWasher().shape()
+        source = cq.Shape.cast(CrankCollarWasher().shape())
         fitted = SeatedCollarWasher().adjust(source)
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)

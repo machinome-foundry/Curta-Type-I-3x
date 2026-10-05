@@ -2,6 +2,7 @@
 
 import unittest
 
+import cadquery
 from simulation.counter_lockout_parts import ContactCounterOnesUpper
 from simulation.counter_operating_trial import TrialCounterOnesUpper
 
@@ -12,8 +13,8 @@ class CounterOnesPartsTest(unittest.TestCase):
         candidate = ContactCounterOnesUpper()
         reference.assemble()
         candidate.assemble()
-        expected = reference.shape()
-        actual = candidate.shape()
+        expected = cadquery.Shape.cast(reference.shape())
+        actual = cadquery.Shape.cast(candidate.shape())
         for shape in (expected, actual):
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)

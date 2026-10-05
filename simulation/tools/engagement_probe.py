@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import cadquery
 from simulation.engagement import Engagement
 
 
@@ -10,7 +11,7 @@ def ingredients(node, ancestors=(), path=''):
     operations = [*node.operations, *ancestors]
     if node.children:
         return [part for child in node.children for part in ingredients(child, operations, path)]
-    shape = node.shape()
+    shape = cadquery.Shape.cast(node.shape())
     for operation in operations:
         if hasattr(operation, 'angle'):
             shape = shape.rotate((0, 0, 0), operation.axis, operation.angle)

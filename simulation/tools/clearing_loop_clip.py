@@ -8,12 +8,13 @@ import json
 import logging
 from math import cos, sin, radians, hypot
 import numpy as np
+import cadquery
 from simulation.standard.parts import ClearingRing
 
 
 def main():
     logging.disable(logging.INFO)
-    loop = ClearingRing().shape()
+    loop = cadquery.Shape.cast(ClearingRing().shape())
     assert loop.isValid() and len(loop.Solids()) == 1
     arcs = {}
     for edge in loop.Edges():

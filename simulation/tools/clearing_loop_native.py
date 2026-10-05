@@ -1,12 +1,13 @@
 """Native circle inventory for the unmodified loop, rivet and cover."""
 
 import json
+import cadquery
 from simulation.standard.parts import ClearingRing, ClearingRingRivet, ClearingCover
 
 
 if __name__ == '__main__':
     for part_type in (ClearingRing, ClearingRingRivet, ClearingCover):
-        shape = part_type().shape()
+        shape = cadquery.Shape.cast(part_type().shape())
         box = shape.BoundingBox()
         circles = sorted({(round(edge.radius(), 6),
                            tuple(round(v, 6) for v in edge.arcCenter().toTuple()))

@@ -16,8 +16,8 @@ def describe(name, shape):
 
 
 if __name__ == '__main__':
-    original = CounterBody().shape()
-    fitted = FittedCounterBody().shape()
+    original = cq.Shape.cast(CounterBody().shape())
+    fitted = cq.Shape.cast(FittedCounterBody().shape())
     zone = cq.Solid.makeCylinder(34.25, .05, cq.Vector(0, 0, 14.05)).cut(
         cq.Solid.makeCylinder(21.9, .05, cq.Vector(0, 0, 14.05)))
     shifted = original.translate((0, 0, -.05))

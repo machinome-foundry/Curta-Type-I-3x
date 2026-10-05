@@ -18,8 +18,8 @@ def main():
     parser.add_argument('--image', type=Path, required=True)
     args = parser.parse_args()
     sim = Sim(MechanisticCurta(), dt=.1, meshes=True)
-    fitted = sim.node.main_drive.crank.crank_handle_1.crank_handle.shape()
-    source = CrankHandle().shape()
+    fitted = cadquery.Shape.cast(sim.node.main_drive.crank.crank_handle_1.crank_handle.shape())
+    source = cadquery.Shape.cast(CrankHandle().shape())
     # Source assembly placements, expressed in the grip's source frame.
     pin = cadquery.Shape.cast(CrankHandlePinScrew().shape()).rotate((0, 0, 0), (0, 1, 0), 90)
     pin = pin.translate((50.720609937 - 49.319648043, 0, 115.35 - 94.35))

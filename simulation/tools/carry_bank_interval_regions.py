@@ -4,6 +4,7 @@ import argparse
 import logging
 from pathlib import Path
 
+import cadquery
 from simulation.carry_bank_frame import CarryBankFrameBench, stations
 from simulation.carry_bank_regions import maximally_relieved
 from simulation.standard.parts import MainBody
@@ -19,7 +20,7 @@ def main():
     if not args.output_dir.is_dir():
         parser.error('output directory must already exist')
     model = CarryBankFrameBench()
-    maximum = CarryBankPassageFrame().shape() if args.candidate else maximally_relieved(MainBody().shape())
+    maximum = cadquery.Shape.cast(CarryBankPassageFrame().shape()) if args.candidate else maximally_relieved(cadquery.Shape.cast(MainBody().shape()))
     label = 'candidate' if args.candidate else 'max-region'
     passed = True
     for path, node, slider in stations(model):

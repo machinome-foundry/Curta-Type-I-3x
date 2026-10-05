@@ -1,6 +1,7 @@
 """Production-facing shoulder shape gate, red before the isolated fit lands."""
 
 import unittest
+import cadquery
 from machinome.simulation import Sim
 from simulation.mechanistic import MechanisticCurta
 from simulation.counter_guide_shoulder import ShoulderClearedTurnsSlider
@@ -11,11 +12,11 @@ class OperatingCounterShoulderTest(unittest.TestCase):
     def test_every_production_counter_uses_the_verified_shoulder(self):
         sim = Sim(MechanisticCurta(), dt=.1)
         self.assertEqual(len(sim.state), 216)
-        expected = ShoulderClearedTurnsSlider().shape()
+        expected = cadquery.Shape.cast(ShoulderClearedTurnsSlider().shape())
         carries = sim.node.carry_mechanism.turns_carries
         for index in range(1, 6):
             lever = getattr(carries, f'turns_tens_lever_assembly_{index}')
-            actual = lever.tens_slider_for_turns_counter.shape()
+            actual = cadquery.Shape.cast(lever.tens_slider_for_turns_counter.shape())
             with self.subTest(station=index):
                 self.assertTrue(actual.isValid())
                 self.assertEqual(len(actual.Solids()), 1)

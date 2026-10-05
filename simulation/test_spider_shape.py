@@ -1,5 +1,6 @@
 """A moving tapered finger must retain its source shape and continuous body."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.spider_shape import SpiderShapeBench
 from simulation.standard.parts import SpiderSpring
@@ -22,7 +23,7 @@ class SpiderShapeTest(TestCase):
 
     def test_unloaded_finger_preserves_source_except_thin_cone_skin(self):
         self.node.set_state(rise=0)
-        original = SpiderSpring().shape()
+        original = cadquery.Shape.cast(SpiderSpring().shape())
         reconstructed = self.physical_spring()
         self.assertEqual(reconstructed.cut(original).Volume(), 0)
         missing = original.cut(reconstructed)

@@ -12,7 +12,7 @@ class CarryHeadTest(TestCase):
     counter = False
 
     def test_one_valid_slider_with_only_the_contact_tip_changed(self):
-        original, fitted = self.original().shape(), self.node.shape()
+        original, fitted = cq.Shape.cast(self.original().shape()), cq.Shape.cast(self.node.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertEqual(fitted.cut(original).Volume(), 0)

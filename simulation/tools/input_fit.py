@@ -17,10 +17,10 @@ def relieved(shape, amount):
 def probe():
     tooth = solid(OneToothStepDrumSegment()).rotate((0, 0, 170.104082802))
     tooth = tooth.translate((0, 0, -70.8))
-    source = TransmissionGear0_5().shape()
+    source = cq.Shape.cast(TransmissionGear0_5().shape())
     class Sample:
         def shape(self):
-            return relieved(source, relief)
+            return relieved(source, relief).wrapped
     for relief in (.1, .15, .2, .25, .3, .35, .4):
         gear = solid(Sample())
         for home in (0, 4, 8, 12, 16):

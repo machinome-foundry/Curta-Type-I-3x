@@ -3,6 +3,7 @@
 import json
 import logging
 from OCP.BRepAdaptor import BRepAdaptor_Surface
+import cadquery
 from simulation.standard.parts import SelectorKnobSpring, ReversingLeverKnob
 
 
@@ -14,7 +15,7 @@ def bounds(shape):
 def main():
     logging.disable(logging.INFO)
     for cls in (SelectorKnobSpring, ReversingLeverKnob):
-        shape = cls().shape()
+        shape = cadquery.Shape.cast(cls().shape())
         print(json.dumps({'part': cls.__name__, 'bounds': bounds(shape),
                           'volume': shape.Volume(), 'valid': shape.isValid()}), flush=True)
         for face in shape.Faces():

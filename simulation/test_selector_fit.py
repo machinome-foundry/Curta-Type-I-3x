@@ -5,6 +5,7 @@ from math import pi
 from pathlib import Path
 
 import numpy as np
+import cadquery
 from machinome.test import TestCase
 from simulation.posed import PosedCurta
 from simulation.selector_fit import SelectorFitBench
@@ -37,7 +38,7 @@ class SelectedInputFitTest(TestCase):
         self.assertNotIntersecting(part(self.node, first), part(self.node, second))
 
     def test_manual_ball_is_five_mm(self):
-        sphere = part(self.node, 'ball').shape()
+        sphere = cadquery.Shape.cast(part(self.node, 'ball').shape())
         self.assertTrue(sphere.isValid())
         self.assertEqual(len(sphere.Solids()), 1)
         self.assertAlmostEqual((3*sphere.Volume()/(4*pi))**(1/3)*2, 5., delta=1e-6)
@@ -45,7 +46,7 @@ class SelectedInputFitTest(TestCase):
     def test_selected_parts_are_valid_connected_solids(self):
         self.node.set_state(setting=0, postcarry=0)
         for name in NAMES:
-            shape = part(self.node, name).shape()
+            shape = cadquery.Shape.cast(part(self.node, name).shape())
             self.assertTrue(shape.isValid(), name)
             self.assertEqual(len(shape.Solids()), 1, name)
 

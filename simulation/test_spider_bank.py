@@ -1,5 +1,6 @@
 """The analytic patches remain one original spring, including at maximum bend."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.spider_bank import SpiderBankBench
 from simulation.standard.parts import SpiderSpring
@@ -22,7 +23,7 @@ class SpiderBankTest(TestCase):
 
     def test_unloaded_bank_retains_native_ring_and_tips(self):
         self.node.set_state(rise=0)
-        original = SpiderSpring().shape()
+        original = cadquery.Shape.cast(SpiderSpring().shape())
         reconstructed = self.physical_spring()
         self.assertEqual(reconstructed.cut(original).Volume(), 0)
         missing = original.cut(reconstructed)

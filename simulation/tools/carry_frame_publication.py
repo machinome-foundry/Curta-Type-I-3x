@@ -6,6 +6,7 @@ import logging
 import os
 from pathlib import Path
 
+import cadquery
 from simulation.posed import PosedCurta
 
 
@@ -42,7 +43,7 @@ def inspect():
     assert (build/published['model']).resolve() == Path(frame.stl_file).resolve()
     assert type(frame).__name__ == 'CarryPassageFrame'
     assert frame.running_gap == .05
-    shape = frame.shape()
+    shape = cadquery.Shape.cast(frame.shape())
     assert shape.isValid() and len(shape.Solids()) == 1
     assert abs(shape.Volume()-199441.6249710615) < 1e-6
     result = dict(kind='carry-frame-root-publication', document=str(document_path),

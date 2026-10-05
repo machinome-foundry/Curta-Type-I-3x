@@ -80,20 +80,20 @@ class FrameFitTest(TestCase):
                 CarryPassageFrame(running_gap=gap)
 
     def test_one_valid_frame_no_added_material(self):
-        original, fitted = MainBody().shape(), self.node.shape()
+        original, fitted = cq.Shape.cast(MainBody().shape()), cq.Shape.cast(self.node.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertEqual(fitted.cut(original).Volume(), 0)
         self.assertGreater(original.Volume() - fitted.Volume(), 0)
 
     def test_no_removed_material_outside_independent_passage_bounds(self):
-        outside = forbidden_removal(MainBody().shape(), self.node.shape())
+        outside = forbidden_removal(cq.Shape.cast(MainBody().shape()), cq.Shape.cast(self.node.shape()))
         self.assertTrue(outside.isValid())
         self.assertEqual(outside.Volume(), 0)
 
     def test_fresh_adjustment_matches_built_geometry(self):
-        fresh = self.node.adjust(MainBody().shape())
-        built = self.node.shape()
+        fresh = self.node.adjust(cq.Shape.cast(MainBody().shape()))
+        built = cq.Shape.cast(self.node.shape())
         self.assertTrue(fresh.isValid())
         self.assertEqual(len(fresh.Solids()), 1)
         self.assertAlmostEqual(fresh.Volume(), built.Volume(), delta=1e-7)
@@ -106,7 +106,7 @@ class FrameFitTest(TestCase):
         model.assemble()
         guides = world_solids(model, selected={'Curta.first.tens_slide_bearing',
                                                'Curta.second.tens_slide_bearing'})
-        original, fitted = MainBody().shape(), self.node.shape()
+        original, fitted = cq.Shape.cast(MainBody().shape()), cq.Shape.cast(self.node.shape())
         for station, angle in (('first', 0), ('second', -20)):
             total, retained, protected = 0, 0, 0
             for land in registration_lands(original, guides['Curta.'+station+'.tens_slide_bearing']):
@@ -129,7 +129,7 @@ class FrameFitTest(TestCase):
         # Native distances at independent source surface points, not cutter
         # extents or a comparison against a second call to the fitter.
         for gap in (.04, .05, .06):
-            fitted = CarryPassageFrame(running_gap=gap).shape()
+            fitted = cq.Shape.cast(CarryPassageFrame(running_gap=gap).shape())
             for angle in (0, -20):
                 for point in ((52.725, -7.155, -16.35), (50.5, -7.2, -21.6)):
                     site = cq.Vertex.makeVertex(*point).rotate((0, 0, 0), (0, 0, 1), angle)

@@ -3,6 +3,7 @@
 import numpy as np
 from math import pi
 import manifold3d as manifold
+import cadquery
 from machinome.test import TestCase
 from simulation.reverser_following import ReverserFollowerTrial, RADIAL
 from simulation.reverser_detent_motion import ball_radius_at, SOURCE_BALL_Z
@@ -66,7 +67,7 @@ class ReverserFollowerTest(TestCase):
     def test_spring_preserves_one_source_sized_wire_through_travel(self):
         for height in (-6.9425, -4.9425, 0, 3.9075):
             self.node.set_state(knob_height=height)
-            shape = self.node.lever.selector_knob_spring.wire.shape()
+            shape = cadquery.Shape.cast(self.node.lever.selector_knob_spring.wire.shape())
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)
             caps = [f.Area() for f in shape.Faces() if f.geomType() == 'PLANE']

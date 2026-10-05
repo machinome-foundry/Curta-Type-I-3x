@@ -42,7 +42,7 @@ def report():
     relevant = {'Curta.'+station+'.'+part for station in ('first', 'second')
                 for part in ('tens_slide_bearing', 'carry_lever_spring.wire')}
     bodies = world_solids(bench, include_flexible=True, selected=relevant)
-    original, fitted = MainBody().shape(), bench.frame.main_body.shape()
+    original, fitted = cq.Shape.cast(MainBody().shape()), cq.Shape.cast(bench.frame.main_body.shape())
     result = dict(kind='carry-frame-dimensional-and-negative-controls',
                   frame_original_mm3=original.Volume(), frame_fitted_mm3=fitted.Volume(),
                   removed_mm3=original.Volume()-fitted.Volume(), seats={}, gaps=[], mutations=[])
@@ -61,7 +61,7 @@ def report():
         result['seats'][station] = dict(lands=lands, original_mm2=sum(p['source_mm2'] for p in lands),
                                        retained_mm2=sum(p['retained_mm2'] for p in lands))
     for gap in (.04, .05, .06):
-        frame = CarryPassageFrame(running_gap=gap).shape()
+        frame = cq.Shape.cast(CarryPassageFrame(running_gap=gap).shape())
         for station, angle in (('first', 0), ('second', 20)):
             aligned = frame.rotate((0, 0, 0), (0, 0, 1), angle)
             wire = bodies['Curta.'+station+'.carry_lever_spring.wire'].rotate((0, 0, 0), (0, 0, 1), angle)

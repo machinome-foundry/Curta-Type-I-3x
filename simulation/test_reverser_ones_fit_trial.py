@@ -20,7 +20,7 @@ class OnesFlankFidelityTest(unittest.TestCase):
     def test_inner_flanks_leave_room_for_both_outward_contact_covers(self):
         from simulation.standard.parts import NineToothTurnsStepDrumSegment
 
-        source = TrialOnesPinion().shape()
+        source = cadquery.Shape.cast(TrialOnesPinion().shape())
         drum = cadquery.Shape.cast(NineToothTurnsStepDrumSegment().shape()).rotate(
             (0, 0, 0), (0, 0, 1), 2.604082802).translate(
                 (-.016356142, .223394941, 0))
@@ -37,8 +37,8 @@ class OnesFlankFidelityTest(unittest.TestCase):
         import cadquery as cq
         from simulation.fit import FittedCounterPinion
 
-        original = FittedCounterPinion().shape()
-        fitted = TrialOnesPinion().shape()
+        original = cadquery.Shape.cast(FittedCounterPinion().shape())
+        fitted = cadquery.Shape.cast(TrialOnesPinion().shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         box = original.BoundingBox()

@@ -20,7 +20,7 @@ class CarryBankFitMaterialTest(CarryBankRegionTest):
         super().setUpClass()
         # Run the independently mapped support/bore checks on the actual
         # candidate, not just on the larger prospective removal witness.
-        cls.maximum = CarryBankPassageFrame().shape()
+        cls.maximum = cq.Shape.cast(CarryBankPassageFrame().shape())
 
     def test_removal_is_positive_and_inside_independent_bounds(self):
         self.assertGreater(self.original.cut(self.maximum).Volume(), 0)
@@ -29,14 +29,14 @@ class CarryBankFitMaterialTest(CarryBankRegionTest):
         self.assertEqual(forbidden.Volume(), 0)
 
     def test_fresh_adjustment_equals_built_geometry(self):
-        fresh = CarryBankPassageFrame().adjust(MainBody().shape())
+        fresh = CarryBankPassageFrame().adjust(cq.Shape.cast(MainBody().shape()))
         self.assertTrue(fresh.isValid())
         self.assertEqual(fresh.cut(self.maximum).Volume(), 0)
         self.assertEqual(self.maximum.cut(fresh).Volume(), 0)
 
     def test_gap_changes_each_independently_measured_shoulder_distance(self):
         for gap in (.04, .05, .06):
-            fitted = CarryBankPassageFrame(running_gap=gap).shape()
+            fitted = cq.Shape.cast(CarryBankPassageFrame(running_gap=gap).shape())
             for counter, angles in ((False, RESULT_ANGLES), (True, COUNTER_ANGLES)):
                 points = ((50.5, -7.2, -21.6), (50.5, -7.2, -15.9)) if counter else (
                     (50.5, -7.2, -21.6), (52.725, -7.155, -16.35))

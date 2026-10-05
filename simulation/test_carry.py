@@ -1,6 +1,7 @@
 """Carry motion is vertical travel within a fixed bearing, not an axle rotation."""
 
 import numpy as np
+import cadquery
 from machinome.test import TestCase
 from simulation.carry import CarryBench, TurnsCarryBench
 
@@ -45,7 +46,7 @@ class CarryBenchTest(TestCase):
         self.assertGreater(held.sum(), 20)
         for engaged in (0, .25, .5, .75, 1):
             self.node.set_state(engaged=engaged)
-            shape = wire.shape()
+            shape = cadquery.Shape.cast(wire.shape())
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)
             self.assertLess(len(wire.mesh.faces), 20000)

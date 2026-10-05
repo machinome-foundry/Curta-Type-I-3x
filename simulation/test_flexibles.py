@@ -16,7 +16,7 @@ class ZeroSpringTest(TestCase):
         self.assertGreater(mesh.volume / cadquery.Shape.cast(self.node.shape()).Volume(), .98)
 
     def test_valid_single_wire(self):
-        shape = self.node.shape()
+        shape = cadquery.Shape.cast(self.node.shape())
         self.assertTrue(shape.isValid())
         self.assertEqual(len(shape.Solids()), 1)
 

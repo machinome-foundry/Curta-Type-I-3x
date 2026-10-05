@@ -2,6 +2,7 @@
 
 import unittest
 
+import cadquery
 from simulation.counter_bank_lockout_parts import contact_counter_channel
 from simulation.counter_bank_operating_trial import trial_counter_channel, COUNTER_TRIAL_STATIONS
 
@@ -22,7 +23,7 @@ class CounterBankPartsTest(unittest.TestCase):
             candidate = getattr(contact_counter_channel(station)(), upper_name)
             reference.assemble()
             candidate.assemble()
-            expected, actual = reference.shape(), candidate.shape()
+            expected, actual = cadquery.Shape.cast(reference.shape()), cadquery.Shape.cast(candidate.shape())
             with self.subTest(station=station):
                 self.assertTrue(actual.isValid())
                 self.assertEqual(len(actual.Solids()), 1)

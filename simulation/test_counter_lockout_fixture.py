@@ -31,14 +31,14 @@ class CounterLockoutFixtureTest(unittest.TestCase):
                 node.assemble()
                 node.build_stls()
             original, fitted = [getattr(node.shaft, upper_name) for node in nodes]
-            before, after = original.shape(), fitted.shape()
+            before, after = cq.Shape.cast(original.shape()), cq.Shape.cast(fitted.shape())
             with self.subTest(station=station):
                 self.assertTrue(after.isValid())
                 self.assertEqual(len(after.Solids()), 1)
                 assert_connected_material(fitted.mesh)
                 self.assertEqual(after.cut(before).Volume(), 0)
                 removed = before.cut(after)
-                lockout = original.pentagonal_lockout.shape()
+                lockout = cq.Shape.cast(original.pentagonal_lockout.shape())
                 self.assertGreater(removed.Volume(), 0)
                 self.assertLessEqual(removed.Volume(), lockout.Area()*.01)
                 box = lockout.BoundingBox()

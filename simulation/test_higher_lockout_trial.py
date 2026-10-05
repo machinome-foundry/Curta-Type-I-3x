@@ -41,8 +41,8 @@ class HigherLockoutFitTest(TestCase):
         self.assertNotIntersecting(stack, self.node.bell)
 
     def test_bounded_skin_preserves_keyway_and_axial_extent(self):
-        before = FittedCarryLockout().shape()
-        after = self.node.tens.p_10220_410003_1_419227.pentagonal_lockout.shape()
+        before = cq.Shape.cast(FittedCarryLockout().shape())
+        after = cq.Shape.cast(self.node.tens.p_10220_410003_1_419227.pentagonal_lockout.shape())
         self.assertTrue(after.isValid())
         self.assertEqual(len(after.Solids()), 1)
         self.assertEqual(after.cut(before).Volume(), 0)
@@ -64,7 +64,7 @@ class HigherLockoutFitTest(TestCase):
     def test_bell_refinement_changes_no_native_material(self):
         source = TensBell1()
         source.assemble()
-        before, after = source.shape(), self.node.bell.shape()
+        before, after = cq.Shape.cast(source.shape()), cq.Shape.cast(self.node.bell.shape())
         self.assertEqual(before.cut(after).Volume(), 0)
         self.assertEqual(after.cut(before).Volume(), 0)
         self.assertTrue(after.isValid())

@@ -1,5 +1,6 @@
 """The clearing cam and fixed frame must admit the same pin position."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.clearing_interlock import ClearingSeatBench
 
@@ -10,7 +11,7 @@ class ClearingSeatTest(TestCase):
     def test_facing_removes_only_the_lower_tip_and_preserves_the_follower(self):
         from simulation.standard.parts import ClearingPin
         pin = self.node.carriage.carrier.upper_carriage_body_1.clearing_pin
-        original, fitted = ClearingPin().shape(), pin.shape()
+        original, fitted = cadquery.Shape.cast(ClearingPin().shape()), cadquery.Shape.cast(pin.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertAlmostEqual(fitted.cut(original).Volume(), 0, places=7)

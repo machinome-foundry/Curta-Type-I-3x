@@ -12,14 +12,14 @@ class CarryFitTest(TestCase):
     counter = False
 
     def test_slider_remains_one_valid_body_without_added_material(self):
-        original, fitted = self.original().shape(), self.node.shape()
+        original, fitted = cq.Shape.cast(self.original().shape()), cq.Shape.cast(self.node.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertEqual(fitted.cut(original).Volume(), 0)
         self.assertGreater(original.Volume() - fitted.Volume(), 0)
 
     def test_built_shape_matches_the_current_adjustment(self):
-        direct = self.node.adjust(self.original().shape())
+        direct = self.node.adjust(cq.Shape.cast(self.original().shape()))
         self.assertAlmostEqual(cq.Shape.cast(self.node.shape()).Volume(), direct.Volume(), places=7)
 
     def test_removal_is_confined_to_the_documented_contact_regions(self):

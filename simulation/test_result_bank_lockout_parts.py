@@ -2,6 +2,7 @@
 
 import unittest
 
+import cadquery
 from simulation.result_bank_lockout_parts import contact_result_channel
 from simulation.tools.result_bank_lockout_probe import STATIONS, station_channel
 
@@ -23,8 +24,8 @@ class ResultBankPartsTest(unittest.TestCase):
             candidate = getattr(contact_result_channel(station)(), upper)
             reference.assemble()
             candidate.assemble()
-            expected = reference.shape()
-            actual = candidate.shape()
+            expected = cadquery.Shape.cast(reference.shape())
+            actual = cadquery.Shape.cast(candidate.shape())
             with self.subTest(station=station):
                 self.assertTrue(actual.isValid())
                 self.assertEqual(len(actual.Solids()), 1)

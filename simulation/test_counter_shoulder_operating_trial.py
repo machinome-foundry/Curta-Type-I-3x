@@ -3,6 +3,7 @@
 import numpy as np
 import unittest
 
+import cadquery
 from machinome.simulation import Sim
 from simulation.counter_guide_regions import maximum_shoulder_removal
 from simulation.counter_guide_trial import CounterShoulderTrial
@@ -61,7 +62,7 @@ class CounterShoulderOperatingIdentityTest(unittest.TestCase):
             changed = set()
             for path in a:
                 if path.endswith('.tens_slider_for_turns_counter'):
-                    old, new = a[path].shape(), b[path].shape()
+                    old, new = cadquery.Shape.cast(a[path].shape()), cadquery.Shape.cast(b[path].shape())
                     self.assertEqual(new.cut(old).Volume(), 0)
                     removed = old.cut(new)
                     self.assertGreater(removed.Volume(), 0)

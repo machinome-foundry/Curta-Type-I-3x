@@ -4,6 +4,7 @@ import json
 import logging
 import time
 
+import cadquery
 from machinome.simulation import Sim
 from machinome.engine.brep import intersect_shapes
 from simulation.mechanistic import MechanisticCurta
@@ -39,7 +40,7 @@ def main():
             row = dict(kind=kind, value=value, offset=offset, native_mm3={}, world64_mm3={})
             for name, shape in ((BELL, native[BELL].rotate((0, 0, 0), (0, 0, 1), -angle)),
                                 (FRAME, native[FRAME])):
-                common = intersect_shapes(ball, shape, BALL, name)
+                common = cadquery.Shape.cast(intersect_shapes(ball, shape, BALL, name))
                 assert common.isValid(), (kind, value, name, 'invalid native common')
                 row['native_mm3'][name] = common.Volume()
             for name in (BELL, FRAME, COLLAR):

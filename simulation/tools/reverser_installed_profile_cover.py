@@ -87,7 +87,7 @@ def probe(source_profiles, *, axial_allowance_mm=None, drum_allowance_mm=.005, m
             self.value = shape
 
         def shape(self):
-            return self.value
+            return self.value.wrapped
 
     for path in (*paths, *DRUMS):
         source = native[path]

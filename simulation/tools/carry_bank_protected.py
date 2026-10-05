@@ -4,6 +4,7 @@ import json
 import logging
 import time
 
+import cadquery
 from machinome.simulation import Sim
 from simulation.mechanistic import MechanisticCurta
 from simulation.carry_bank_regions import maximally_relieved
@@ -26,7 +27,7 @@ def main():
             protected.add(path)
     shapes = world_solids(sim.node, selected=protected)
     assert set(shapes) == protected, ('missing native protected body', protected-set(shapes))
-    source = MainBody().shape()
+    source = cadquery.Shape.cast(MainBody().shape())
     removed = source.cut(maximally_relieved(source))
     assert removed.isValid() and removed.Volume() > 0
     failures = []

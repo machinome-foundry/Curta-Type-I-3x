@@ -10,6 +10,7 @@ import json
 import logging
 from pathlib import Path
 
+import cadquery
 from simulation.posed import PosedCurta
 from simulation.standard.parts import MainBody
 from simulation.test_frame_fits import forbidden_removal
@@ -44,7 +45,7 @@ def report():
     native = world_solids(root, selected=set(groups) | {frame_path})
     if set(native) != set(groups) | {frame_path}:
         raise ValueError('A named protection reference is missing native geometry')
-    original, fitted = MainBody().shape(), native[frame_path]
+    original, fitted = cadquery.Shape.cast(MainBody().shape()), native[frame_path]
     removed = original.cut(fitted)
     outside = forbidden_removal(original, fitted)
     assert removed.isValid() and removed.Volume() > 0

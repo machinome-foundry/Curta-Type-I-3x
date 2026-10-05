@@ -4,6 +4,7 @@ import json
 import unittest
 import manifold3d as manifold
 
+import cadquery
 from machinome.engine.brep import intersect_shapes
 from simulation.carry_heads import TurnsSlider
 from simulation.carry_bank_frame import FittedCarryBankFrameBench, stations
@@ -20,7 +21,7 @@ from simulation.tools.interference import world_solids
 class CounterShoulderRegionTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.original = TurnsSlider().shape()
+        cls.original = cadquery.Shape.cast(TurnsSlider().shape())
         cls.maximum = maximum_relieved(cls.original)
 
     def test_maximum_removal_preserves_valid_connected_material(self):
@@ -96,7 +97,7 @@ class CounterGuideShoulderTest(unittest.TestCase):
                 continue
             names = ('Curta.'+path+'.'+slider, 'Curta.'+path+'.tens_slide_bearing')
             shapes = world_solids(self.root, selected=set(names))
-            native = intersect_shapes(shapes[names[0]], shapes[names[1]], *names).Volume()
+            native = cadquery.Shape.cast(intersect_shapes(shapes[names[0]], shapes[names[1]], *names)).Volume()
             body_mesh = mesh_solid(getattr(node, slider).mesh)
             guide_mesh = mesh_solid(node.tens_slide_bearing.mesh)
             mesh = faceted_common_volume(body_mesh ^ guide_mesh)
@@ -106,9 +107,9 @@ class CounterGuideShoulderTest(unittest.TestCase):
             # remain explicit even when this localized interface clears.
             window = region((60.30, -8, -17.30), (61.90, -6.30, -16.70)).rotate(
                 (0, 0, 0), (0, 0, 1), angle)
-            ledge = intersect_shapes(shapes[names[1]], window, names[1], 'ledge window')
-            ledge_native = intersect_shapes(shapes[names[0]], ledge,
-                                            names[0], 'guide ledge').Volume()
+            ledge = cadquery.Shape.cast(intersect_shapes(shapes[names[1]], window, names[1], 'ledge window'))
+            ledge_native = cadquery.Shape.cast(intersect_shapes(shapes[names[0]], ledge,
+                                            names[0], 'guide ledge')).Volume()
             mesh_window = manifold.Manifold.cube((1.60, 1.70, .60)).translate(
                 (60.30, -8, -17.30)).rotate((0, 0, angle))
             ledge_mesh = faceted_common_volume(body_mesh ^ guide_mesh ^ mesh_window)
@@ -140,8 +141,8 @@ class InsufficientCounterGuideNegativeTest(CounterGuideShoulderTest):
 
 class CounterShoulderMaterialTest(unittest.TestCase):
     def test_fitted_material_is_only_removed_inside_the_independent_allowance(self):
-        original = TurnsSlider().shape()
-        fitted = ShoulderClearedTurnsSlider().shape()
+        original = cadquery.Shape.cast(TurnsSlider().shape())
+        fitted = cadquery.Shape.cast(ShoulderClearedTurnsSlider().shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertEqual(fitted.cut(original).Volume(), 0)
@@ -162,10 +163,10 @@ class CounterShoulderMaterialTest(unittest.TestCase):
             shapes = world_solids(root, selected=set(names))
             body, guide = (shapes[name].rotate((0, 0, 0), (0, 0, 1), -angle)
                            for name in names)
-            shoulder = intersect_shapes(body, region((60.30, -8, -30), (61.90, -6.30, 35)),
-                                        names[0], 'full-height shoulder window')
-            ledge = intersect_shapes(guide, region((60.30, -8, -17.30), (61.90, -6.30, -16.70)),
-                                     names[1], 'guide ledge window')
+            shoulder = cadquery.Shape.cast(intersect_shapes(body, region((60.30, -8, -30), (61.90, -6.30, 35)),
+                                        names[0], 'full-height shoulder window'))
+            ledge = cadquery.Shape.cast(intersect_shapes(guide, region((60.30, -8, -17.30), (61.90, -6.30, -16.70)),
+                                     names[1], 'guide ledge window'))
             self.assertGreater(shoulder.Volume(), 0)
             self.assertGreater(ledge.Volume(), 0)
             moving, fixed = shoulder.BoundingBox(), ledge.BoundingBox()
@@ -175,8 +176,8 @@ class CounterShoulderMaterialTest(unittest.TestCase):
                            (moving.xmax, moving.ymax, moving.zmax))
             with self.subTest(station=path):
                 self.assertGreater(moving.zmin-4.2, fixed.zmax)
-                self.assertEqual(intersect_shapes(swept, ledge,
-                                 'continuous shoulder enclosure', names[1]).Volume(), 0)
+                self.assertEqual(cadquery.Shape.cast(intersect_shapes(swept, ledge,
+                                 'continuous shoulder enclosure', names[1])).Volume(), 0)
 
     def test_world64_shoulder_sweep_has_a_strict_ledge_gap(self):
         root = CounterShoulderTrial()
@@ -205,7 +206,7 @@ class CounterShoulderMaterialTest(unittest.TestCase):
         root.set_state(drop_mm=4.2)
         root.assemble()
         insufficient = in_counter_station(
-            ShoulderClearedTurnsSlider(shoulder_relief=.2).shape()).translate((0, 0, -4.2))
+            cadquery.Shape.cast(ShoulderClearedTurnsSlider(shoulder_relief=.2).shape())).translate((0, 0, -4.2))
         for path, node, slider in stations(root):
             if not path.startswith('turns_carries'):
                 continue
@@ -214,5 +215,5 @@ class CounterShoulderMaterialTest(unittest.TestCase):
             guide = world_solids(root, selected={name})[name]
             body = insufficient.rotate((0, 0, 0), (0, 0, 1), angle)
             with self.subTest(station=path):
-                self.assertGreater(intersect_shapes(body, guide,
-                                   'insufficient .2 mm relief', name).Volume(), 0)
+                self.assertGreater(cadquery.Shape.cast(intersect_shapes(body, guide,
+                                   'insufficient .2 mm relief', name)).Volume(), 0)

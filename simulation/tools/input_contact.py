@@ -9,11 +9,12 @@ import argparse
 import manifold3d as manifold
 import numpy as np
 import trimesh
+import cadquery
 from simulation.standard.parts import OneToothStepDrumSegment, TransmissionGear0_5
 
 
 def solid(node):
-    vertices, triangles = node.shape().tessellate(0.01, 0.05)
+    vertices, triangles = cadquery.Shape.cast(node.shape()).tessellate(0.01, 0.05)
     mesh = trimesh.Trimesh([vertex.toTuple() for vertex in vertices], triangles)
     value = manifold.Manifold(manifold.Mesh(
         np.asarray(mesh.vertices, dtype=np.float32),
@@ -30,7 +31,7 @@ def probe(relief=0):
         from simulation.tools.input_fit import relieved
         class Sample:
             def shape(self):
-                return relieved(gear_node.shape(), relief)
+                return relieved(cadquery.Shape.cast(gear_node.shape()), relief).wrapped
         gear = solid(Sample())
     else:
         gear = solid(gear_node)

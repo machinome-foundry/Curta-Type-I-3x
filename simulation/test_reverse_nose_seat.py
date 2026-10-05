@@ -41,7 +41,7 @@ class ReverseNoseSeatTest(unittest.TestCase):
 
     def test_relief_is_limited_to_the_source_drum_seat(self):
         part = self.sim.node.frame.lower_bearing_plate.reverse_nose_plate
-        source, fitted = ReverseNosePlate().shape(), part.shape()
+        source, fitted = cq.Shape.cast(ReverseNosePlate().shape()), cq.Shape.cast(part.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         assert_connected_material(part.mesh)

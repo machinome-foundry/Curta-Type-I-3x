@@ -13,6 +13,7 @@ from pathlib import Path
 
 import trimesh
 
+import cadquery
 from simulation.carry import CarryBench
 from simulation.standard.parts import MainBody
 from simulation.tools.carry_phase import solid
@@ -27,7 +28,7 @@ def probe():
     printed_solid = solid(printed)
     frame = MainBody()
     frame.assemble()
-    exact = frame.shape()
+    exact = cadquery.Shape.cast(frame.shape())
     assert exact.isValid()
     frame.build_stls()
     records = []

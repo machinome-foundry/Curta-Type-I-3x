@@ -5,6 +5,7 @@ import unittest
 
 import numpy as np
 
+import cadquery
 from machinome.simulation import Sim
 from simulation.carry_bank_trial import CarryBankOperatingTrial, FirstPairOperatingReference
 from simulation.carry_bank_regions import forbidden_removal
@@ -40,7 +41,7 @@ class CarryBankOperatingIdentityTest(unittest.TestCase):
             unchanged = 0
             for path in a:
                 if path == 'Curta.frame.upper_frame.main_body':
-                    old, new = a[path].shape(), b[path].shape()
+                    old, new = cadquery.Shape.cast(a[path].shape()), cadquery.Shape.cast(b[path].shape())
                     self.assertEqual(new.cut(old).Volume(), 0)
                     self.assertEqual(forbidden_removal(old, new).Volume(), 0)
                     self.assertGreater(old.cut(new).Volume(), 0)

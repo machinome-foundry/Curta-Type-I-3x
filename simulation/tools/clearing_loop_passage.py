@@ -21,7 +21,7 @@ def second_peg_position(angle):
 
 def main():
     logging.disable(logging.INFO)
-    loop = SeatedLoop().shape()
+    loop = cq.Shape.cast(SeatedLoop().shape())
     for angle in (-90, -89, -87, -84, -80, -75, -70, -67, -63, -60):
         x, y = second_peg_position(angle)
         peg = cq.Solid.makeCylinder(3.75, 5.46, cq.Vector(x, y, 0))

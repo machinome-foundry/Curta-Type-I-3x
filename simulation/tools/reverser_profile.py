@@ -2,6 +2,7 @@
 
 import json
 import logging
+import cadquery
 from simulation.reverser_seat_trial import ReverserSeatTrial
 from simulation.reverser_assembly import counter_passage
 from simulation.fit import FittedCounterPinion
@@ -18,7 +19,7 @@ def main():
     drum = world_solids(bench, selected={path})[path]
     angle = counter_passage(2)(None, None)(123, 1, 0)
     for relief in (.36, .37, .38, .39, .4, .42):
-        gear = FittedCounterPinion(flank_relief=relief).shape()
+        gear = cadquery.Shape.cast(FittedCounterPinion(flank_relief=relief).shape())
         gear = gear.rotate((0, 0, 0), (0, 0, 1), angle).translate((0, 40.5, -40.85))
         common = gear.intersect(drum)
         assert common.isValid()

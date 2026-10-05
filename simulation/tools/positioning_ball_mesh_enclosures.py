@@ -85,7 +85,7 @@ def main():
         (radial[0], 0, 30), (1, 0, 0)).fuse(
             cq.Solid.makeSphere(3.751, (radial[0], 0, 30), angleDegrees1=-90),
             cq.Solid.makeSphere(3.751, (radial[1], 0, 30), angleDegrees1=-90)).clean()
-    native_common = intersect_shapes(native_frame, native_sweep, FRAME, 'conservative ball sweep')
+    native_common = cq.Shape.cast(intersect_shapes(native_frame, native_sweep, FRAME, 'conservative ball sweep'))
     assert native_common.isValid() and native_common.Volume() == 0
     print(json.dumps(dict(kind='frame-and-ring', whole_radial_domain=radial,
         ring_lift_domain=[0, 6], sphere_encloser_outer_radius_mm=outer,

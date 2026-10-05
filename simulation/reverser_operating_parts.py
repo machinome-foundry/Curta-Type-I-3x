@@ -23,7 +23,7 @@ class ProtectedOnesPinion(FittedCounterPinion):
 
     def adjust(self, shape):
         outer = super().adjust(shape)
-        relieved = FittedCounterPinion(flank_relief=self.inner_flank_relief).shape()
+        relieved = cq.Shape.cast(FittedCounterPinion(flank_relief=self.inner_flank_relief).shape())
         box = shape.BoundingBox()
         inner = cq.Solid.makeCylinder(self.preserved_tip_radius, box.zlen+2,
                                       (0, 0, box.zmin-1))

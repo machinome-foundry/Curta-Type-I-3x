@@ -13,13 +13,13 @@ class ReplacementLoopMountTest(TestCase):
     node = ReplacementLoopBench
 
     def test_material_is_connected_and_finger_loop_is_unchanged(self):
-        original = ClearingRing().shape()
-        fitted = self.node.loop.clearing_ring.shape()
+        original = cq.Shape.cast(ClearingRing().shape())
+        fitted = cq.Shape.cast(self.node.loop.clearing_ring.shape())
         allowed = cq.Solid.makeCylinder(8, 5.66, cq.Vector(40.5, 0, -.1))
         for part in (self.node.loop.clearing_ring,
                      self.node.loop.clearing_ring_rivet_1,
                      self.node.loop.clearing_ring_rivet_2):
-            shape = part.shape()
+            shape = cq.Shape.cast(part.shape())
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)
         # Equivalence tolerance here concerns BREP identity, never clearance.
@@ -30,7 +30,7 @@ class ReplacementLoopMountTest(TestCase):
                                fitted.intersect(finger).Volume(), delta=1e-8)
 
     def test_source_stem_material_is_preserved_at_the_new_hole_datums(self):
-        original = ClearingRingRivet().shape()
+        original = cq.Shape.cast(ClearingRingRivet().shape())
         lower = cq.Solid.makeBox(20, 20, 6.4, cq.Vector(-10, -10, -.1))
         expected = original.intersect(lower).translate((-.132055617, -.364362148, 0))
         for part in (self.node.loop.clearing_ring_rivet_1,

@@ -5,12 +5,13 @@ import json
 import numpy as np
 import trimesh
 from OCP.BRepAdaptor import BRepAdaptor_Surface
+import cadquery
 from simulation.print_parts import PRINTS
 from simulation.standard.parts import ClearingCover
 
 
 def probe():
-    shape = ClearingCover().shape()
+    shape = cadquery.Shape.cast(ClearingCover().shape())
     for face in shape.Faces():
         if face.geomType() == 'CYLINDER':
             cylinder = BRepAdaptor_Surface(face.wrapped).Cylinder()

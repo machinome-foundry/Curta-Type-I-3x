@@ -8,6 +8,7 @@ from math import cos, radians, sin
 from pathlib import Path
 from time import process_time
 
+import cadquery
 from machinome.engine.brep import intersect_shapes
 from simulation.fit import FittedCounterPinion
 from simulation.standard.parts import (OneToothTurnsStepDrumSegment,
@@ -16,17 +17,17 @@ from simulation.tools.reverser_profile_cover import posed_polygons, profiles_ove
 
 
 def probe(reports):
-    gear = FittedCounterPinion().shape()
+    gear = cadquery.Shape.cast(FittedCounterPinion().shape())
     axis = (-26.032898192, 31.024799946)
     for cls in (OneToothTurnsStepDrumSegment, NineToothTurnsStepDrumSegment):
-        drum = cls().shape()
+        drum = cadquery.Shape.cast(cls().shape())
         for crank, shaft in ((90, 134), (90, 231.6), (167.5, 283.63498306274414), (0, 134)):
             c, s = cos(radians(-crank)), sin(radians(-crank))
             x, y = -.016356142, .223394941
             center = (c*x-s*y, s*x+c*y)
             first = gear.rotate((0, 0, 0), (0, 0, 1), shaft).translate((*axis, 0))
             second = drum.rotate((0, 0, 0), (0, 0, 1), 2.604082802-crank).translate((*center, 0))
-            common = intersect_shapes(first, second, 'ones-pinion-profile', cls.__name__)
+            common = cadquery.Shape.cast(intersect_shapes(first, second, 'ones-pinion-profile', cls.__name__))
             volume = common.Volume()
             if not common.isValid() or not 0 <= volume < float('inf'):
                 raise ValueError(f'Unresolved native profile common: {cls.__name__}, '

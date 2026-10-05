@@ -7,6 +7,7 @@ from time import monotonic
 
 import numpy as np
 
+import cadquery
 from simulation.carry_bank_frame import FittedCarryBankFrameBench, stations
 from simulation.cover_fits import mesh_solid
 from simulation.detents import RESULTS, TURNS
@@ -37,7 +38,7 @@ def main():
     chosen = [(path, node, slider) for path, node, slider in stations(model)
               if args.bank == 'both' or path.startswith('result' if args.bank == 'result' else 'turns')]
     initial = {path: getattr(node, slider).mesh.vertices.copy() for path, node, slider in chosen}
-    frame = model.frame.main_body.shape()
+    frame = cadquery.Shape.cast(model.frame.main_body.shape())
     require_frame(frame)
     frame_mesh = mesh_solid(model.frame.main_body.mesh)
     paths = {'Curta.'+path+'.'+suffix for path, _, slider in chosen

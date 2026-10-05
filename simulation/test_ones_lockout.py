@@ -18,8 +18,8 @@ class OnesLockoutBenchTest(TestCase):
                 self.assertNotIntersecting(self.node.ones, self.node.bell)
 
     def test_only_a_bounded_outer_skin_changes_and_the_keyway_is_unchanged(self):
-        before = FittedCarryLockout().shape()
-        after = self.node.ones.pentagonal_lockout.shape()
+        before = cq.Shape.cast(FittedCarryLockout().shape())
+        after = cq.Shape.cast(self.node.ones.pentagonal_lockout.shape())
         self.assertTrue(after.isValid())
         self.assertEqual(len(after.Solids()), 1)
         self.assertEqual(after.cut(before).Volume(), 0)

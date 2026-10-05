@@ -1,6 +1,7 @@
 """The cam turns, its retained height stays fixed, and the roller follows it."""
 
 import numpy as np
+import cadquery
 from machinome.test import TestCase
 from simulation.zero import ZeroCamBench
 from simulation.flexibles import FIXED_PIN, LEVER_PIN, ZERO_PIVOT
@@ -94,7 +95,7 @@ class ZeroCamTest(TestCase):
             expected = (FIXED_PIN, (*point, LEVER_PIN[2]))
             caps = wire.mesh.vertices[-2:]
             self.assertLess(np.max(np.abs(caps - expected)), .001)
-            shape = wire.shape()
+            shape = cadquery.Shape.cast(wire.shape())
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)
             self.assertNotIntersecting(wire, mechanism.follower.zero_positioning_lever)

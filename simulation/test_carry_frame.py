@@ -1,6 +1,7 @@
 """Named frame failures first; no collision-volume tolerance or hidden frame."""
 
 import numpy as np
+import cadquery
 from machinome.test import TestCase
 from simulation.carry_frame import CarryFrameBench
 from simulation.posed import PosedCurta
@@ -79,7 +80,7 @@ class CarryFrameTest(TestCase):
                                        getattr(b.BoundingBox(), attribute), delta=1e-5, msg=path)
 
     def test_frame_is_one_valid_solid(self):
-        shape = self.node.frame.main_body.shape()
+        shape = cadquery.Shape.cast(self.node.frame.main_body.shape())
         self.assertTrue(shape.isValid())
         self.assertEqual(len(shape.Solids()), 1)
 

@@ -24,11 +24,11 @@ def sphere(x, radius=3.75):
 class ThrustRingMaterialTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.source = ThrustRing().shape()
+        cls.source = cq.Shape.cast(ThrustRing().shape())
         cls.part = BallPassageThrustRing()
         cls.part.assemble()
         cls.part.build_stls()
-        cls.fitted = cls.part.shape()
+        cls.fitted = cq.Shape.cast(cls.part.shape())
 
     def test_only_independently_bounded_material_is_removed(self):
         source, fitted = self.source, self.fitted
@@ -55,7 +55,7 @@ class ThrustRingMaterialTest(unittest.TestCase):
 
     def test_gap_has_measurable_effect_at_outer_radial_limit(self):
         for gap in (.04, .05, .06):
-            fitted = BallPassageThrustRing(running_gap=gap).shape()
+            fitted = cq.Shape.cast(BallPassageThrustRing(running_gap=gap).shape())
             self.assertEqual(self.source.cut(fitted).cut(permitted_local()).Volume(), 0)
             self.assertAlmostEqual(world(fitted).distance(sphere(11.949090957641602)),
                                    gap, delta=1e-7)

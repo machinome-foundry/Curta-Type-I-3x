@@ -60,7 +60,7 @@ class PawlTest(TestCase):
             point = turn(PAWL_SPRING_HOLE[:2], pawl.turn.value, about=PAWL_PIVOT[:2])
             expected = (PAWL_SPRING_ANCHOR, (*point, PAWL_SPRING_HOLE[2]))
             self.assertLess(np.max(np.abs(wire.mesh.vertices[-2:] - expected)), .001)
-            shape = wire.shape()
+            shape = cadquery.Shape.cast(wire.shape())
             self.assertTrue(shape.isValid())
             self.assertEqual(len(shape.Solids()), 1)
             self.assertNotIntersecting(wire, pawl)

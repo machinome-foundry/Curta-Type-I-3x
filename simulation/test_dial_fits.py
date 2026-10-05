@@ -11,8 +11,8 @@ class DialFitTest(TestCase):
     original = ResultsDialType1
 
     def test_one_valid_body_with_only_material_removed(self):
-        current = self.node.shape()
-        original = self.original().shape()
+        current = cq.Shape.cast(self.node.shape())
+        original = cq.Shape.cast(self.original().shape())
         self.assertTrue(current.isValid())
         self.assertEqual(len(current.Solids()), 1)
         self.assertGreater(original.Volume(), current.Volume())

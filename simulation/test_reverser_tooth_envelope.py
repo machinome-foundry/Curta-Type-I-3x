@@ -3,6 +3,7 @@
 import unittest
 
 import numpy as np
+import cadquery
 from machinome.engine.brep import intersect_shapes
 from machinome.simulation import Sim
 from simulation.cover_fits import mesh_solid
@@ -54,8 +55,8 @@ class ReverserToothEnvelopeTest(unittest.TestCase):
                         volumes = reader.volumes(*coordinates, kernel=kernel)
                         for drum in DRUMS:
                             if kernel == 'native':
-                                common = intersect_shapes(native[reader.gear], native[drum],
-                                                          reader.gear, drum)
+                                common = cadquery.Shape.cast(intersect_shapes(native[reader.gear], native[drum],
+                                                          reader.gear, drum))
                                 self.assertTrue(common.isValid())
                                 actual = common.Volume()
                             else:

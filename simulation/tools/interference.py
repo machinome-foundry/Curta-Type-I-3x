@@ -16,6 +16,7 @@ import sys
 from itertools import combinations
 import manifold3d as manifold
 import numpy as np
+import cadquery
 
 
 def rigid_leaves(node, path='Curta'):
@@ -35,7 +36,7 @@ def world_solids(root, include_flexible=False, selected=None):
         if node.brep and (node.rigid or include_flexible and not node.children):
             if selected is not None and path not in selected:
                 return
-            shape = node.shape()
+            shape = cadquery.Shape.cast(node.shape())
             for operation in operations:
                 if hasattr(operation, 'angle'):
                     shape = shape.rotate((0, 0, 0), operation.axis, operation.angle)

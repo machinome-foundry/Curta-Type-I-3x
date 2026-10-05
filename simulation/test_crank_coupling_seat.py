@@ -39,7 +39,7 @@ class CrankCouplingSeatTest(TestCase):
 
     def test_only_internal_pocket_roof_has_bounded_relief(self):
         part = self.node.main_drive.crank.crank_handle_1.main_crank
-        source, fitted = MainCrank().shape(), part.shape()
+        source, fitted = cq.Shape.cast(MainCrank().shape()), cq.Shape.cast(part.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         assert_connected_material(part.mesh)

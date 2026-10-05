@@ -1,5 +1,6 @@
 """Seating must clear the bearing bosses without removing the indexing keys."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.carriage_frame import CarriageFrameBench
 
@@ -27,8 +28,8 @@ class CarriageFrameTest(TestCase):
     def test_only_the_measured_underside_regions_are_relieved(self):
         import cadquery as cq
         from simulation.standard.parts import CounterBody
-        original = CounterBody().shape()
-        fitted = self.node.carrier.upper_carriage_body_1.counter_body.shape()
+        original = cadquery.Shape.cast(CounterBody().shape())
+        fitted = cadquery.Shape.cast(self.node.carrier.upper_carriage_body_1.counter_body.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertAlmostEqual(fitted.cut(original).Volume(), 0, places=6)

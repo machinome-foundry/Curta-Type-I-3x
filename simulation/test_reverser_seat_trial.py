@@ -28,8 +28,8 @@ class ReverserSeatTrialTest(TestCase):
                                  along=(0, 0, 1), directions='forward')
 
     def test_only_upper_mounting_region_changes(self):
-        original = ReversingShaft().shape()
-        fitted = self.node.lever.reversing_shaft.shape()
+        original = cq.Shape.cast(ReversingShaft().shape())
+        fitted = cq.Shape.cast(self.node.lever.reversing_shaft.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         self.assertAlmostEqual(fitted.cut(original).Volume(), 0, delta=1e-8)
@@ -98,8 +98,8 @@ class ReverserSeatTrialTest(TestCase):
         self.check_knob(3.9075)
 
     def test_fork_fit_is_local_and_one_body(self):
-        source = ReversingActuator().shape()
-        fitted = self.node.lever.reversing_lever_knob_1.reversing_actuator.shape()
+        source = cq.Shape.cast(ReversingActuator().shape())
+        fitted = cq.Shape.cast(self.node.lever.reversing_lever_knob_1.reversing_actuator.shape())
         allowed = cq.Solid.makeCylinder(3.9, 4.5, cq.Vector(*SIXTH_LOCAL, -2.25))
         allowed = allowed.fuse(cq.Solid.makeCylinder(6.28, 1.685,
                                                     cq.Vector(*SIXTH_LOCAL, -.8425)))

@@ -31,9 +31,9 @@ class ClearingCarrierSeatTest(TestCase):
                          'ea39d95d50f06580db66c894f5b3f700ab6ed930cee113b2b9ffe4689935f5b7')
 
     def test_only_the_measured_outer_top_land_is_relieved(self):
-        original = FittedCounterBody().shape()
+        original = cq.Shape.cast(FittedCounterBody().shape())
         body = self.node.carriage.registers.carrier.upper_carriage_body_1.counter_body
-        fitted = body.shape()
+        fitted = cq.Shape.cast(body.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         assert_connected_material(body.mesh)

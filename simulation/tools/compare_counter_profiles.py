@@ -8,6 +8,7 @@ compared ingredients on one measuring plane.
 
 import json
 
+import cadquery
 from simulation.standard import parts
 
 
@@ -20,8 +21,8 @@ PAIRS = (
 
 def main():
     for label, result_name, counter_name in PAIRS:
-        result = getattr(parts, result_name)().shape()
-        counter = getattr(parts, counter_name)().shape()
+        result = cadquery.Shape.cast(getattr(parts, result_name)().shape())
+        counter = cadquery.Shape.cast(getattr(parts, counter_name)().shape())
         dz = result.BoundingBox().zmin-counter.BoundingBox().zmin
         for angle in (0, 180, 181.25, 182):
             aligned = counter.rotate((0, 0, 0), (0, 0, 1), angle).translate((0, 0, dz))

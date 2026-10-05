@@ -46,8 +46,8 @@ class LowerFrameSeatTest(TestCase):
 
     def test_only_declared_key_flank_and_bearing_seat_have_bounded_relief(self):
         body = self.node.enclosure.lower_housing_1.bottom_housing
-        original = BottomHousing().shape()
-        fitted = body.shape()
+        original = cq.Shape.cast(BottomHousing().shape())
+        fitted = cq.Shape.cast(body.shape())
         self.assertTrue(fitted.isValid())
         self.assertEqual(len(fitted.Solids()), 1)
         assert_connected_material(body.mesh)

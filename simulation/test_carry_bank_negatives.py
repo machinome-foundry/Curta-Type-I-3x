@@ -21,8 +21,8 @@ class CarryBankNegativeTest(unittest.TestCase):
         cls.model.set_state(drop_mm=0)
         cls.model.assemble()
         cls.model.build_stls()
-        cls.original = MainBody().shape()
-        cls.fitted = cls.model.frame.main_body.shape()
+        cls.original = cq.Shape.cast(MainBody().shape())
+        cls.fitted = cq.Shape.cast(cls.model.frame.main_body.shape())
 
     def native_part(self, counter, spring, drop):
         self.model.set_state(drop_mm=drop)
@@ -52,7 +52,7 @@ class CarryBankNegativeTest(unittest.TestCase):
                     self.assertGreater(common.Volume(), 0)
 
     def test_misplaced_additional_passages_do_not_clear_the_slider(self):
-        wrong = CarryPassageFrame().shape()
+        wrong = cq.Shape.cast(CarryPassageFrame().shape())
         for _, _, _, tool in additional_passages(.05, rotation_error=1):
             wrong = wrong.cut(tool)
         require_frame(wrong)

@@ -1,5 +1,6 @@
 """Clearance and follower motion of the documented clearing-ring stop."""
 
+import cadquery
 from machinome.test import TestCase
 from simulation.clearing_stop import ClearingStopBench
 
@@ -84,7 +85,7 @@ class ClearingStopTest(TestCase):
         spring = self.node.carriage.registers.carrier.upper_carriage_body_1.clearing_pin_spring.wire
         for clear in (0, .25, .5, .75, 1):
             self.node.set_state(clear=clear)
-            native = spring.shape()
+            native = cadquery.Shape.cast(spring.shape())
             self.assertTrue(native.isValid())
             self.assertEqual(len(native.Solids()), 1)
             caps = [face.Area() for face in native.Faces() if face.geomType() == 'PLANE']

@@ -35,7 +35,7 @@ def probe():
     shapes = world_solids(model, include_flexible=True)
     # This historical feasibility probe always measures the original frame,
     # even after the operating bench has adopted the fitted adapter.
-    frame = MainBody().shape()
+    frame = cq.Shape.cast(MainBody().shape())
     records = dict(kind='native-frame-support-map', frame=describe(frame),
                    rigid_world_frames={k: v.tolist() for k, v in world_frames(model).items()},
                    stations={})

@@ -4,6 +4,7 @@ import json
 import logging
 import unittest
 
+import cadquery
 from simulation.carry_bank_frame import CarryBankFrameBench, stations
 from simulation.carry_bank_regions import (maximally_relieved, seat_edge_regions,
                                            RESULT_ANGLES, COUNTER_ANGLES)
@@ -15,7 +16,7 @@ from simulation.tools.interference import world_solids
 class CarryBankRegionTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.original = MainBody().shape()
+        cls.original = cadquery.Shape.cast(MainBody().shape())
         cls.maximum = maximally_relieved(cls.original)
         cls.bench = CarryBankFrameBench()
         cls.bench.set_state(drop_mm=0)

@@ -23,7 +23,7 @@ class ReverserDetentMotionTest(unittest.TestCase):
         for cone in cones:
             self.assertAlmostEqual(cone.Apex().X(), .81, places=7)
             self.assertAlmostEqual(degrees(cone.SemiAngle()), 63, places=7)
-        spring = SelectorKnobSpring().shape()
+        spring = cadquery.Shape.cast(SelectorKnobSpring().shape())
         caps = [f for f in spring.Faces() if f.geomType() == 'PLANE']
         self.assertEqual(len(caps), 2)
         for cap in caps:

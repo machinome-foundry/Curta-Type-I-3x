@@ -33,7 +33,7 @@ def probe():
     for name, cls in inspect.getmembers(parts, inspect.isclass):
         if cls.__module__ != parts.__name__ or cls is parts.SourcePart:
             continue
-        shape = cls().shape()
+        shape = cadquery.Shape.cast(cls().shape())
         reading = measure(shape)
         if not reading["valid"]:
             reading["automatic_fix_diagnostic_only"] = measure(shape.fix())
