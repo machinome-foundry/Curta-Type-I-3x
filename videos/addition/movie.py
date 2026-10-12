@@ -5,7 +5,7 @@ source excerpts are declared beside it in takes.py; the look is stage.tsx
 and stage.css; spec.md says what each shot is written to prove.
 """
 
-from machinome_movie import (Movie, Chapter, Shot, Narration, Cue, View, Source, Title,
+from machinome.movie import (Movie, Chapter, Shot, Narration, Cue, View, Source, Title,
     Set, Slot, Element, Action, Dissolve, Reframe, FadeIn, FadeOut, Format, Narrator, Style,
     Credits, Release, Evidence)
 

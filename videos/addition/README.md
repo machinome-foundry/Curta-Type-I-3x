@@ -37,16 +37,15 @@ evaluation and the viewer both check its identity).
 
 ## Produce it
 
-From a Videomaker checkout that films clocked takes, with the workspace's
-Python and `machinome_movie` from that checkout, and the speech key
-available to the `speech` command:
+With `machinome[movie]` installed (`machinome movie setup` for its Node
+side) and the speech key available to the `speech` command:
 
 ```sh
-python -m machinome_movie evaluate <this project> addition
-node bin/videomaker.mjs speech  <this project>/videos/addition/_build/movie.json
-node bin/videomaker.mjs check   <this project>/videos/addition/_build/movie.json --viewer <bundle>
-node bin/videomaker.mjs preview <this project>/videos/addition/_build/movie.json --viewer <bundle>
-node bin/videomaker.mjs render  <this project>/videos/addition/_build/movie.json --viewer <bundle>
+machinome movie evaluate <this project> addition
+machinome movie speech <this project>/videos/addition/_build/movie.json
+machinome movie check <this project>/videos/addition/_build/movie.json
+machinome movie preview <this project>/videos/addition/_build/movie.json
+machinome movie render <this project>/videos/addition/_build/movie.json
 ```
 
 `evaluate` runs the take's steps once through the framework's `Sim` of

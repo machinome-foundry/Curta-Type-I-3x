@@ -9,7 +9,7 @@ request, the bank at every mark and the export's identity. Nothing here
 poses the machine; the steps only ask it.
 """
 
-from machinome_movie import Camera, Layer, Mark, Move, Source, Take, Trigger
+from machinome.movie import Camera, Layer, Mark, Move, Source, Take, Trigger
 
 from simulation.event_driven import EventDrivenCurta
 
