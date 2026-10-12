@@ -102,7 +102,7 @@ def main():
                 [['reverser_height', -3], ['crank_rotation', 160+shift],
                  ['crank_rotation', 170+shift], ['reverser_height', 3.9075]])
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = {'errors': [], 'cases': [], 'station': args.station, 'validation': 'pending',
               'coordinate_ids': list(document['program']['coordinates']),

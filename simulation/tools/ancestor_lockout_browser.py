@@ -42,7 +42,7 @@ def main():
     assert document['program']['coordinates'] == baseline['program']['coordinates']
     assert document['version'] == baseline['version'] == 7
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     # Hold the tested bytes even if an independent viewer cycle rebuilds later.
     bundle = Path(viewer['path']).read_bytes()
     report = {'viewer': viewer,

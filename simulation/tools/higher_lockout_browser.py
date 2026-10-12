@@ -31,7 +31,7 @@ def main():
         assert sim.move('crank_angle', to=170).status == 'blocked'
         expected[str(carry)] = sim.state['crank_angle']
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = {'python_stops': expected, 'cases': [], 'errors': [],
               'bundle_sha256': hashlib.sha256(bundle).hexdigest(),

@@ -13,7 +13,7 @@ from playwright.sync_api import sync_playwright
 def main():
     build = Path('_build/reverser_inspection').resolve()
     description = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     errors = []
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True, args=[

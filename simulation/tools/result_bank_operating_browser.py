@@ -84,7 +84,7 @@ def main():
     document = json.loads(manifest)
     expected = json.loads(args.python_report.read_text()) if args.python_report else None
     description = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(description['path']).read_bytes()
     report = {'errors': [], 'prepared': [], 'cases': [], 'validation': 'pending',
               'coordinate_ids': list(document['program']['coordinates']),

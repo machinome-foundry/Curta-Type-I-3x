@@ -24,7 +24,7 @@ def main():
     build = args.build.resolve()
     expected = json.loads(args.python_report.read_text()) if args.python_report else None
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = {'errors': [], 'bundle_sha256': hashlib.sha256(bundle).hexdigest(),
               'document_sha256': hashlib.sha256((build/'manifest.json').read_bytes()).hexdigest()}

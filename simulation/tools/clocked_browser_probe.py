@@ -23,7 +23,7 @@ def main():
     args = parser.parse_args()
     build = args.build.resolve()
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     assert 8 in viewer['documentVersions'], viewer
     errors = []
     oracle = json.loads(Path(__file__).parents[1].joinpath('clocked_oracle.json').read_text())

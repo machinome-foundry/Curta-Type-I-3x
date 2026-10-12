@@ -84,7 +84,7 @@ def main():
     else:
         from simulation.mechanistic import MechanisticCurta as model
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = dict(validation='pending', errors=[], cases=[], pointer_attempts=[],
         model=model.__name__, viewer=viewer, coverage='hosted retained requests and wrong-order pointer',

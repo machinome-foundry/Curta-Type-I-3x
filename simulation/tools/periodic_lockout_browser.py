@@ -37,7 +37,7 @@ def main():
     build = args.build.resolve()
     manifest = build / 'manifest.json'
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path']).read_bytes()
     report = {
         'viewer': viewer,

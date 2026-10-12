@@ -28,7 +28,7 @@ def main():
     build = args.build.resolve()
     document = json.loads((build / 'viewer.json').read_text())
     viewer = json.loads(subprocess.check_output(
-        [sys.executable, '-m', 'machinome_viewer', 'describe'], text=True))
+        [sys.executable, '-m', 'machinome.viewer.web', 'describe'], text=True))
     bundle = Path(viewer['path'])
     errors = []
     report = {'viewer': viewer, 'bundle_sha256': hashlib.sha256(bundle.read_bytes()).hexdigest(),
